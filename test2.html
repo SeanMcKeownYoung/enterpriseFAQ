@@ -1,0 +1,84 @@
+
+<style>
+    /* Persistent styles for your navbar layout */
+.navbar {
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+}
+
+/* Base style for nav links */
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+/* Active class applied by JavaScript */
+.nav-link.active {
+  color: #0070f3;
+  font-weight: bold;
+  border-bottom: 2px solid #0070f3;
+}
+
+section {
+  height: 100vh; /* Gives sections height for testing scroll behavior */
+  padding-top: 80px; /* Prevents fixed header from blocking headers */
+}
+
+</style>
+
+<nav class="navbar">
+  <a href="#section1" class="nav-link active">Section 1</a>
+  <a href="#section2" class="nav-link">Section 2</a>
+  <a href="#section3" class="nav-link">Section 3</a>
+</nav>
+
+<main>
+  <section id="section1"><h2>Content 1</h2></section>
+  <section id="section2"><h2>Content 2</h2></section>
+  <section id="section3"><h2>Content 3</h2></section>
+</main>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  const observerOptions = {
+    root: null, // Defaults to the browser viewport
+    rootMargin: "-20% 0px -60% 0px", // Limits detection area to the top-middle part of the viewport
+    threshold: 0, // Triggers as soon as the element hits the margin target
+  };
+
+  const observerCallback = (entries) => {
+    entries.forEach((entry) => {
+      // Check if the section has stepped into the specified viewport zone
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+
+        // Clear existing active state from all links
+        navLinks.forEach((link) => link.classList.remove("active"));
+
+        // Add active state to the matching link
+        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+        if (activeLink) {
+          activeLink.classList.add("active");
+        }
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  // Instruct the observer to start tracking all sections
+  sections.forEach((section) => observer.observe(section));
+});
+
+</script>

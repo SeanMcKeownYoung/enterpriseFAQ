@@ -81,6 +81,31 @@ li {
         }
   }
   
+.headerLogo {
+  fill: #003649;
+}
+
+.headerTrad {
+  fill: #003649;
+}
+
+.mobHide {
+  display: inline-block;
+}
+@media screen and (max-width: 600px) {
+.mobHide {
+  display: none;
+}
+}
+
+.AdvRed:hover {
+  fill: light-dark(#ff0000, #ff0000) !important;
+}
+.AdvFill {
+  fill: light-dark(black, white);
+}
+
+
 .tradLogo svg {
   fill: light-dark(black, white);
   height: 18px;
@@ -558,13 +583,76 @@ margin: 0 !important; padding: 0 !important;
 .dropdown-toggle:not(:focus) {
   outline: 0;
 }
-.navONP a {
-font-family:Inter,Arial,sans-serif;
-font-size:1.4rem;
-font-weight:600;
-color: #2A2A2A;
-}
 
 [id] {
   scroll-margin-top: 100px; 
+}
+#Home {
+  scroll-margin-top: 500px; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base style for nav links */
+.nav-link {
+  text-decoration: none;
+  font-family:Inter,Arial,sans-serif;
+  font-size:1.4rem;
+  font-weight:normal;
+  color: #003649;
+  transition: color 0.3s ease;
+}
+
+/* Active class applied by JavaScript */
+.nav-link.active {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #003649 !important;
+  border-radius: 0 !important;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .scroll-navbar {
+  display: flex;                 /* Aligns items in a single row */
+  overflow-x: scroll;              /* Enables horizontal scrolling when content overflows */
+  overflow-y: hidden;             /* Prevents accidental vertical shifting */
+  white-space: nowrap;           /* Keeps links strictly on one line */
+  background-color: #1a1a1a;     /* Dark background color */
+  padding: 10px 15px;            /* Padding inside the navbar */
+  box-sizing: border-box;
+  width: 100%;                   /* Spans the full screen width */
+  
+  /* Smooth momentum scrolling on mobile devices */
+  -webkit-overflow-scrolling: touch; 
+}
+.onpNav .navONPgroup, .containerONP {
+  display: flex !important;                 /* Aligns items in a single row */
+  overflow-x: scroll;              /* Enables horizontal scrolling when content overflows */
+  overflow-y: hidden !important;             /* Prevents accidental vertical shifting */
+  white-space: nowrap !important;           /* Keeps links strictly on one line */
+  padding: 10px 15px;            /* Padding inside the navbar */
+  box-sizing: border-box;
+  width: 100%;                   /* Spans the full screen width */
+  
+  /* Smooth momentum scrolling on mobile devices */
+  -webkit-overflow-scrolling: touch; 
+}
+
+/* Individual link styling */
+.nav-item {
+  display: inline-block !important;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-right: 8px;
+  font-family: sans-serif;
+  font-size: 14px;
+  border-radius: 20px;
+  background-color: #333333;
+  transition: background-color 0.2s ease;
+}
 }
