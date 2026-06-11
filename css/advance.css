@@ -20,7 +20,7 @@ li {
 .liTop {
     margin-top: 10px !important;
 }
-.bi {
+.biLogo {
         vertical-align: -.125em;
         fill: currentColor;
       }
@@ -526,3 +526,45 @@ overflow-y: scroll !important ;
 
 }
 
+.padReset {
+margin: 0 !important; padding: 0 !important;
+}
+
+.footerColumn {
+
+}
+
+.siteLogo {
+    width: calc(100px + 4vw) !important;
+    height: calc(100px + 4vw) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    fill: #4a4a4a !important;
+}
+
+
+.form-control-dark {
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle:not(:focus) {
+  outline: 0;
+}
+.navONP a {
+font-family:Inter,Arial,sans-serif;
+font-size:1.4rem;
+font-weight:600;
+color: #2A2A2A;
+}
+
+[id] {
+  scroll-margin-top: 100px; 
+}

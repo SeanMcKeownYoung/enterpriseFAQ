@@ -1,10 +1,6 @@
 
 
-.siteLogo {
-    width: calc(100px + 4vw) !important;
-    height: calc(100px + 4vw) !important;
-    min-width: 400px !important;
-}
+
 .siteLogoG {
     width: 10vw !important;
 
@@ -68,7 +64,7 @@ transform: rotate(180deg);
 }
 
 .panel {
-  padding: 20px 0px 0px 0px !important;
+  padding: 10px 0px 0px 0px !important;
   display: none;
   background-color: transparent !important;
   overflow: hidden;
@@ -128,3 +124,35 @@ transform: rotate(180deg);
 .logoTest{
     background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")}
 
+.qHighlight:hover {
+    color: #0086ff !important;
+}
+
+.Advform-control {
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #0086ff !important;
+}
+.rotate {
+    transform: rotate(-90deg);
+}
+
+.footer_cookies_ad_settings_list li a {
+    font-size: 14px !important;
+}
+.noUnderline  {
+  border: 0px !important;
+}
+.spaceUnderline {
+    border-bottom: 2px solid !important;
+    padding-bottom: 4px !important;
+    text-decoration: none !important;
+}
+
+.list-bar {
+    color: #cecece !important;
+}
+
+.padReset {
+padding: 0 !important;
+margin: 0 !important;
+}
