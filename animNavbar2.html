@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom to Top Sticky Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Core resetting styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+      overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+
+#navbar {
+  position: fixed;
+  text-align: center;
+  top: calc(100vh - 100px);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Use will-change for smoother animation rendering */
+  will-change: transform; 
+box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+background-color: beige;
+}
+/* Hero element covering the initial view height */
+.hero-section {
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* INITIAL STATE: Fixed to the bottom of the screen */
+#navbars {
+    width: 100%;
+    background-color: #007bff;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000; /* Keeps it above content layers */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+#navbar.bottom-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* SCROLLED STATE: Sticks to the very top edge of the viewport */
+#navbar.top-sticky {
+    position: sticky;
+    top: 0;
+    bottom: auto; /* Overrides the previous bottom rule */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Basic styling for inner nav links */
+#navbar a {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+#navbar a:hover {
+    background-color: #0056b3;
+}
+
+.main-content {
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero / Top Section -->
+    <div class="hero-section">
+        <h1>Welcome to My Website</h1>
+        <p>Scroll down to see the navbar behavior.</p>
+    </div>
+
+    <!-- The Navbar -->
+    <nav id="navbar" class="bottom-sticky">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h2>Main Content Area</h2>
+        <p>This is where your regular page content goes. Keep scrolling to watch the navbar stick to the top edge.</p>
+        <!-- Dummy spacing content -->
+        <div style="height: 1500px;"></div> 
+    </div>
+<script>
+ const navbar = document.getElementById('navbar');
+
+// Adjust this value to control the "speed" of the navbar
+// 0.2 means the navbar moves at 20% of the page scroll speed
+const scrollLagFactor = 0.2; 
+
+let currentY = 0;
+let targetY = 0;
+
+function animateNavbar() {
+  // Calculate the lerp (linear interpolation) distance
+  currentY += (targetY- currentY) * scrollLagFactor;
+  
+  // Apply the slower movement to the navbar
+  navbar.style.transform = `translateY(-${currentY}px)`;
+  
+  requestAnimationFrame(animateNavbar);
+}
+
+window.addEventListener('scroll', () => {
+  // Capture how far down the page the user has scrolled
+  targetY = window.pageYOffset || document.documentElement.scrollTop;
+});
+
+// Start the animation loop
+animateNavbar();
+
+
+
+
+</script>
+    <script src="script.js"></script>
+</body>
+</html>

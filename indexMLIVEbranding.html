@@ -1207,8 +1207,8 @@
 </head>
 
 <style>
-    		/* Outlines the grids, remove when sending
-		div { border: 1px solid cyan !important}*/
+    		/* Outlines the grids, remove when sending*/
+		div { border: 1px solid cyan !important}
 </style>
 
 <body class="body__mlive page-type__piano sticky-toprail" data-affiliate="mlive" data-page-type="piano">
@@ -1254,6 +1254,7 @@
 </svg>
 
     <div id="fusion-app">
+    <link href="css/benefitsrowdesc.css" rel="stylesheet">
       <!-- NAV TOPPER  -->
         <div class="toprail" id="toprail">
             <div id="toprailContainer">
@@ -1360,96 +1361,8 @@
                             </div>
                         </div>
                     </header>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-<body>
-<!-- MAIN CONTENT  -->
-        <div class="empty-layout">
 
-
-    <style>
-        /* Core resetting styles */
-
-
-/* Hero element covering the initial view height */
-.hero-section {
-    height: 100vh;
-    display: flex;
-
-}
-
-/* INITIAL STATE: Fixed to the bottom of the screen */
-#navbar {
-    width: 100%;
-    background-color: #007bff;
-    padding: 15px 0;
-    text-align: center;
-    z-index: 1000; /* Keeps it above content layers */
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-}
-
-#navbar.bottom-sticky {
-    position: relative;
-
-    bottom: 0;
-    left: 0;
-}
-
-/* SCROLLED STATE: Sticks to the very top edge of the viewport */
-#navbar.top-sticky {
-    position: sticky;
-    top: 0;
-    bottom: auto; /* Overrides the previous bottom rule */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* Basic styling for inner nav links */
-#navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-weight: bold;
-}
-
-#navbar a:hover {
-    background-color: #0056b3;
-}
-
-.main-content {
-    padding: 40px;
-    background-color: #f4f4f4;
-}
-
-    </style>
-
-
-
-            <div class="landingpageWrapperHeader "> 
-                <section class="BannerContainer" id="Home">
-                    <div class="BannerLeft">
-                        <div class="BannerMessage">
-                            <div class="MessageHeader">Navigating your<br> <span>online newspaper</span></div>
-                            <div class="MessageDetails">
-                                <div class="DetailsHeader">
-                                    Subscriber-Exclusive Content. 
-                                </div>
-                                <div class="DetailsHeader">
-                                    <span style="font-weight: 300;">Your subscription includes more than just daily news. You also receive access to a wide range of digital benefits designed to help you stay informed, entertained, and connected.</span>
-                                </div>
-                            </div>
-                            <button class="MessageButton" aria-label="Subscribe Now">Scroll down</button>
-                        </div>
-                    </div>
-                    <div class="BannerRight" style="background-color: rgb(246, 137, 32);padding:0px 0px;">
-                        <img class="" style="object-fit: contain; width: 100%; height: 100%;" alt="ScreenShots" src="images/site_banner.gif">
-                    </div>
-                </section>
-            </div>
-    <!-- ONLINE NP NAV CONTENT  -->    
-                <nav id="navbar" class="bottom-sticky">
+        <!-- ONLINE NP NAV CONTENT  -->    
                     <header class="" style="z-index: 10;">
                         <div class="">
                           <header class="d-flex justify-content-center py-3 border-top mt-3 border-bottom">
@@ -1470,26 +1383,40 @@
                           </header>
                         </div>
                     </header>
-                </nav>
 
-<script>
-    // Select the navbar element
-const navbar = document.getElementById('navbar');
-// Get the exact trigger threshold (height of the hero section minus navbar height)
-const triggerPoint = 300 - navbar.offsetHeight;
 
-window.addEventListener('scroll', () => {
-    // Check if user has scrolled past the calculated initial bottom placement
-    if (window.scrollY >= triggerPoint) {
-        navbar.classList.remove('bottom-sticky');
-        navbar.classList.add('top-sticky');
-    } else {
-        navbar.classList.remove('top-sticky');
-        navbar.classList.add('bottom-sticky');
-    }
-});
+                </div>
+            </div>
 
-</script>
+        </div>
+
+
+        
+
+        <!-- MAIN CONTENT  -->
+        <div class="empty-layout">
+            <div class="landingpageWrapperHeader">
+                <section class="BannerContainer" id="Home">
+                    <div class="BannerLeft">
+                        <div class="BannerMessage">
+                            <div class="MessageHeader">Navigating your<br> <span>online newspaper</span></div>
+                            <div class="MessageDetails">
+                                <div class="DetailsHeader">
+                                    Subscriber-Exclusive Content. 
+                                </div>
+                                <div class="DetailsHeader">
+                                    <span style="font-weight: 300;">Your subscription includes more than just daily news. You also receive access to a wide range of digital benefits designed to help you stay informed, entertained, and connected.</span>
+                                </div>
+                            </div>
+                            <button class="MessageButton" aria-label="Subscribe Now">Scroll down</button>
+                        </div>
+                    </div>
+                    <div class="BannerRight" style="background-color: rgb(246, 137, 32);padding:0px 0px;">
+                        <img class="" style="object-fit: contain; width: 100%; height: 100%;" alt="ScreenShots" src="images/site_banner.gif">
+                    </div>
+                </div>
+              </section>
+
 
 
             <div class="landingpageWrapper">
@@ -2042,9 +1969,12 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
     </div>
+    
+
+
+
     <iframe id="li_sync_frame" title="data" src="https://i.liadm.com/sync-container?duid=94c49eadf2ac--01kfk9kmwye7z4dz51kghvawze&amp;ds=did-00ab&amp;euns=1&amp;s=CgA&amp;version=v3.14.0&amp;cd=.mlive.com&amp;pv=d67f79c1-8e89-4775-a91b-5bfe6c34c43e" style="opacity: 0; width: 0px; height: 0px; border: 0px; position: absolute; top: 0px; left: 0px; z-index: -1000;"></iframe>
 </body>
     <script src="js/advance.js"></script>
     <script src="js/advancebootstrap.js"></script>
-    
 </html>

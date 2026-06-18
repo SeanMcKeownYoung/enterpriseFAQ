@@ -1,0 +1,1030 @@
+/* ONLINE NEWSPAPER CSS ADDITIONS FOR FAQ PAGE */
+
+
+/* BASE LEVEL STYLES */
+body {
+    scroll-behavior: smooth !important;
+        text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html {
+  scroll-behavior: smooth;
+}   
+.html-embed .custom-html
+            {padding:0 5%}
+body.page-type__piano .custom-html
+            {padding:0}@keyframes pulse
+            {0%
+            {opacity:1;scale:1}10%
+            {opacity:.5;scale:1.1}50%
+            {opacity:1;scale:1}to
+            {opacity:1;scale:1}}
+
+.pulse {
+    animation-duration:4s;animation-iteration-count:infinite;animation-name:pulse
+}
+
+.advtoprail {
+    margin-bottom:0!important
+}            
+
+
+/* FAQ NAVBAR STYLES */
+#faqNavBar {
+    width: 100%;
+    background-color: #f8f8f8;
+    z-index: 1000;
+    height: 100px;
+    will-change: transform; 
+    align-items: center;
+}
+
+#faqNavBar.bottom-sticky {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding-top: 10px;
+    height: 120px;  
+    box-shadow: 0 0px 0px rgb(255, 255, 255);
+    transition: all 0.2s ease-out;
+}
+
+#faqNavBar.bottom-sticky ul {
+    padding-top: 10px;
+    border-top: 1px solid #7d7d7d;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7d7d7d;
+}
+
+#faqNavBar.top-sticky {
+    position: sticky !important;
+    top: 0px;
+    left: 0;
+    bottom: auto; /* Overrides the previous bottom rule */
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    height: auto;
+    background-color: #fff;
+    transition: all 1s ease-in-out;
+}
+
+#faqNavBar.top-sticky header {
+    border-bottom: 1px solid #fff;
+}
+
+#faqNavBar.top-sticky ul {
+    padding-top: 10px;
+    border-top: 1px solid #7d7d7d;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #7d7d7d;
+}
+
+#faqNavBar header {
+margin-top: 0 !important;
+}
+
+#faqNavBar header ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: start;
+    margin:0 auto;
+    max-width:1280px;
+    padding:0
+}
+
+#faqNavBar div {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: clamp(1em, 1.4vw, 4rem);
+  font-weight:600;
+  color: #868686;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+#faqNavBar.bottom-sticky div {
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#faqNavBar.top-sticky div {
+  display: flex;
+  transition: all 2s ease-in-out;
+}
+
+.nav-link {
+  text-decoration: none;
+  letter-spacing:0.4px !important;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight:600 !important;
+  color: #003649;
+  border: 1px solid transparent;
+  transition: all 0.3s ease !important;
+}
+
+.nav-link.active { /* Active class applied by JavaScript */
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  background-color: #003649 !important;
+  border: 1px solid #003649;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  border: 1px solid #2a2a2a;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link.static {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  background-color: #003649 !important;
+  border: 1px solid #003649;
+  transition: all 0.3s ease;
+}
+
+/* Online NewsPaper CSS Media Queries - Screen Sizes */
+/* Extra Small */
+@media screen and (max-width: 576px)  {
+.nav-link {
+  padding: 0px 0px !important;
+  font-size:10px !important;
+}
+.nav-link.active, .nav-link.static {
+  padding: 10px 20px !important;
+}
+}
+
+/* Small */
+@media screen and (min-width: 576px) {
+.nav-link {
+  padding: 1px 0px !important;
+  font-size:14px !important;
+}
+.nav-link.active, .nav-link.static {
+  padding: 10px 10px !important;
+}
+}
+
+/* Medium */
+@media screen and (min-width: 768px) {
+.nav-link {
+  padding: 10px 0px !important;
+  font-size:14px !important;
+}
+.nav-link.active, .nav-link.static {
+  padding: 10px 20px !important;
+}
+}
+
+/* Large */
+@media screen and (min-width: 992px) {
+.nav-link {
+  padding: 10px 0px !important;
+
+  
+}
+.nav-link.active, .nav-link.static {
+  padding: 10px 20px !important;
+}
+}
+
+/* Extra Large */
+@media screen and (min-width: 1200px) {
+.nav-link {
+  padding: 10px 0px !important;
+  font-size:17.5px!important;
+  font-weight: 500 !important;
+}
+.nav-link.active, .nav-link.static {
+  padding: 10px 20px !important;
+}
+}
+
+/* Extra Extra Large */
+@media screen and (min-width: 1400px) {
+.nav-link {
+  padding: 10px 0px !important;
+  font-size:20px !important;
+}
+.nav-link.active, .nav-link.static {
+  padding: 10px 20px !important;
+}
+}
+
+
+
+/* FAQ HERO AND SECTION STYLES */
+
+.faqPageWrapper {
+    display:flex;
+    flex-direction:column;
+    margin:0 auto;
+    padding:0;
+}
+
+.faqHeroContainer {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(275px,1fr));
+    margin-top:60px
+}
+
+.faqHeroContainer .faqBannerText {
+    align-items:left;
+    justify-content:center;
+    padding:32px 16px;
+    position:relative; 
+}
+
+.faqHeroContainer .faqBannerText,.faqHeroContainer .faqBannerText .faqMSGcontainer {
+    display:flex;
+    flex-direction:column;
+}
+
+.faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGheader {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size:2.8rem;
+    letter-spacing:0;
+    line-height:1.2;
+}
+            
+.faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGtext {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 400;
+    letter-spacing:0;
+    line-height:1.6;
+    position:relative;
+}
+
+.faqList {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing:0;
+    line-height:1.6;
+    position:relative;
+    text-wrap: balance;
+}
+
+.faqList span {
+    padding-right: 4px;
+}
+
+.faqSeeMore {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing:0;
+    line-height:1.4;
+    text-wrap: balance;
+}
+
+.faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGtext  strong {
+    font-weight:600
+}
+                   
+.faqHeroContainer .faqBannerText .faqMSGcontainer .BannerImgLogo {
+    margin-bottom:32px;
+}
+            
+.faqHeroContainer .faqBannerText .faqMSGcontainer .BannerImgLogo img {
+    width:250px
+}
+               
+.faqHeroContainer .faqBannerText .faqMSGcontainer .MessageButton {
+    background-color:#2a2a2a;
+    border-radius:32px;
+    color:#fff;
+    cursor:pointer;
+    font-family:Inter,serif;
+    font-size:1.4rem;
+    font-weight:700;
+    gap:8px;
+    height:50px;
+    margin:32px 0 0;
+    padding:16px 24px;
+    width:100%
+}
+            
+.faqHeroContainer .BannerRight {
+    align-items:center;
+    background-color:#f6ca15;
+    display:flex;
+    flex-grow:1;
+    justify-content:center;
+    max-height:354px;
+    padding:14px 58px;
+    position:relative
+}
+            
+.faqBannerImage {
+     display: flex;       /* Use flexbox to center content */
+     justify-content: center; /* Centers horizontally */
+     align-items: center;     /* Centers vertically */
+}
+.faqBannerImage img {
+    width: 100%;         /* Let the image expand to the width */
+    height: 100%;        /* Let the image expand to the height */
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: center;
+}
+
+/* Advance - dotcom CSS Media Queries - Screen Sizes */
+/* X-Small */            
+    @media(max-width: 549px)
+            { 
+        .faqHeroContainer {
+            display:grid; 
+            grid-template-columns:repeat(auto-fit,minmax(275px,1fr)) 
+        }
+
+        .faqPageWrapper {
+            max-width:100%;
+        }    
+
+        .faqHeroContainer .faqBannerText {
+            padding:32px 16px;
+        }
+
+        .faqList {
+            font-size: 14px;
+            padding: 0px 10px;
+        }
+
+        .faqList span {
+            padding-right: 4px;
+        }
+
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGheader {
+            font-size:2.4rem;
+            text-align: center;
+            padding-bottom: 4px;
+        }
+            
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGtext {
+            position:relative;
+            font-size:1.6rem;
+            text-align:center;
+        }
+        }
+
+/* Small */            
+    @media(min-width: 549px)
+            {
+        .faqHeroContainer {
+            display:grid; 
+            grid-template-columns:repeat(auto-fit,minmax(275px,1fr)) 
+        }
+
+        .faqPageWrapper {
+            max-width:549px;
+        }    
+
+        .faqHeroContainer .faqBannerText {
+            padding:32px 16px
+        }
+
+        .faqList {
+            font-size: 14px;
+            padding: 0px 10px;
+        }
+
+        .faqList span {
+            padding-right: 4px;
+        }
+
+        .faqSeeMore {
+            padding-top: 10px;
+        }
+
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGheader {
+            font-size:2.6rem;
+            text-align: center;
+            padding-bottom: 6px;
+        }
+            
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGtext {
+            position:relative;
+            font-size:1.6rem;
+            text-align:center;
+        }
+
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .MessageButton {
+            background-color:#2a2a2a;border-radius:32px;color:#fff;cursor:pointer;font-family:Inter,serif;font-size:1.4rem;font-weight:700;gap:8px;height:50px;margin:32px 0 0;padding:16px 24px;width:100%}
+            
+        .faqHeroContainer .BannerRight {
+            align-items:center;
+            display:flex;
+            flex-grow:1;
+            justify-content:center;
+            max-height:354px;padding:14px 58px;
+            position:relative
+        }
+        }
+
+/* Medium */           
+    @media(min-width: 768px)
+            {
+        .faqHeroContainer {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(188px,1fr));
+        }
+
+        .faqPageWrapper {
+            max-width:768px;
+        }        
+
+        .faqHeroContainer .faqBannerText {
+          padding:32px 26px
+        }
+        
+        .faqList {
+            font-size: 16px;
+            padding: 0px 0px;
+        }
+
+        .faqList span {
+            padding-right: 4px;
+        }
+
+        .faqSeeMore {
+            font-size:16px;
+            padding-top: 10px;
+        }
+
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGheader {
+            font-size:2.8rem;
+            text-align: left;
+            padding-bottom: 8px;
+        }
+            
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGtext {
+            font-size:2rem;
+            text-align:left;
+            position:relative
+        }
+                        
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .MessageButton {
+            background-color:#2a2a2a;
+            border-radius:32px;
+            color:#fff;
+            cursor:pointer;
+            font-family:Inter,serif;
+            font-size:1.4rem;
+            font-weight:700;
+            gap:8px;height:50px;
+            margin:22px auto auto;
+            padding:16px 24px;
+            width:196px
+        }
+            
+        .faqHeroContainer .BannerRight {
+            align-items:center;
+            display:flex;
+            flex-grow:1;
+            justify-content:center;
+            max-height:363px;
+            padding:64px 21px;
+            position:relative
+        }       
+        }
+
+
+/* Large */           
+    @media(min-width: 1024px)
+            {
+        .faqHeroContainer {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(188px,1fr));
+            max-height:fit-content;
+            margin-bottom:inherit!important
+        }
+
+        .faqPageWrapper {
+            max-width:1024px;
+        }            
+            
+        .faqHeroContainer .faqBannerText {
+            padding:7% 5%
+        }
+        
+        .faqList {
+            font-size: 18px;
+        }
+
+        .faqList span {
+            padding-right: 4px;
+        }
+
+        .faqSeeMore {
+            font-size:20px;
+            padding-top: 10px;
+        }
+
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGheader {
+            font-size:4rem;
+            text-align: left;
+            padding-bottom: 10px;
+        }
+            
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGtext {
+            font-size:2.4rem;
+            text-align:left;
+            position:relative
+        }
+
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .MessageButton {
+            background-color:#2a2a2a;
+            border-radius:32px;
+            color:#fff;
+            cursor:pointer;
+            font-family:Inter,serif;
+            font-size:1.4rem;
+            font-weight:700;
+            gap:8px;
+            height:50px;
+            margin:32px auto auto;
+            padding:16px 24px;
+            width:196px
+        }
+            
+        .faqHeroContainer .BannerRight {
+            align-items:center;
+            display:flex;
+            flex-grow:1;
+            justify-content:center;
+            min-height:484px;
+            min-width:512px;
+            padding:48px 117px;
+            position:relative
+        }
+        }
+
+        
+
+/* X-Large */           
+    @media(min-width: 1280px)
+            {
+        .faqHeroContainer {
+            display:grid;grid-template-columns:repeat(auto-fit,minmax(188px,1fr));
+            max-height:fit-content
+            }
+
+        .faqPageWrapper {
+            max-width:1280px;
+        }    
+            
+        .faqHeroContainer .faqBannerText {
+            padding:7% 5%
+            }
+        
+        .faqList {
+            font-size: 20px;
+        }
+
+        .faqList span {
+            padding-right: 4px;
+        }
+
+        .faqSeeMore {
+            font-size:2.4rem;
+            padding-top: 10px;
+        }
+
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGheader {
+            font-size:4rem;
+            text-align: left;
+            padding-bottom: 12px;
+            }
+  
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .faqMSGtext {
+            font-size:2.4rem;
+            text-align:left;
+            position:relative
+            }
+            
+        .faqHeroContainer .faqBannerText .faqMSGcontainer .MessageButton {
+            background-color:#2a2a2a;
+            border-radius:32px;
+            color:#fff;
+            cursor:pointer;
+            font-family:Inter,serif;
+            font-size:1.4rem;
+            font-weight:700;
+            gap:8px;
+            height:50px;
+            margin:32px auto auto;
+            padding:16px 24px;
+            width:196px
+            }
+            
+        .faqHeroContainer .BannerRight {
+            align-items:center;
+            display:flex;
+            flex-grow:1;
+            justify-content:center;
+            min-height:604px;min-width:640px;
+            padding:48px 117px;
+            position:relative
+            }
+    }
+
+
+        .BenefitsContainer
+            {position:relative}
+            
+        .BenefitsContainer .BenefitsRow
+            {display:grid;grid-template-columns:repeat(auto-fit,minmax(188px,1fr))}
+            
+        .BenefitsContainer .BenefitsRow_One
+            {background-color:#f8f8f8;margin-bottom:24px}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px 24px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:236.66px;max-width:327px;min-height:236.66px;min-width:327px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_One 
+
+        .BenefitsRowdescription 
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:400;letter-spacing:0;line-height:1.3;padding:0 24px 24px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px 24px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:236.66px;max-width:327px;min-height:236.66px;min-width:327px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:400;grid-row:2;letter-spacing:0;line-height:1.3;padding:0 24px 24px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Three
+            {background-color:#f8f8f8}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px 24px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:236.66px;max-width:327px;min-height:236.66px;min-width:327px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:400;letter-spacing:0;line-height:1.3;padding:0 24px 24px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px 24px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:236.66px;max-width:327px;min-height:236.66px;min-width:327px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:400;grid-row:2;letter-spacing:0;line-height:1.3;padding:0 24px 24px;text-align:left}
+
+
+            
+    @media(min-width: 414px)
+            {
+        .BenefitsContainer
+            {position:relative}
+            
+        .BenefitsContainer .BenefitsRow
+            {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+            
+        .BenefitsContainer .BenefitsRow_One
+            {background-color:#f8f8f8;margin-bottom:24px}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px 24px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:236.66px;max-width:327px;min-height:236.66px;min-width:327px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:400;letter-spacing:0;line-height:1.3;padding:0 24px 24px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px 24px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:236.66px;max-width:327px;min-height:236.66px;min-width:327px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:400;grid-row:2;letter-spacing:0;line-height:1.3;padding:0 24px 24px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Three
+            {background-color:#f8f8f8}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px 24px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:236.66px;max-width:327px;min-height:236.66px;min-width:327px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:400;letter-spacing:0;line-height:1.3;padding:0 24px 24px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px 24px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:236.66px;max-width:327px;min-height:236.66px;min-width:327px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:400;grid-row:2;letter-spacing:0;line-height:1.3;padding:0 24px 24px;text-align:left}}
+
+
+            
+    @media(min-width: 600px)
+            {
+        .BenefitsContainer
+            {position:relative}
+            
+        .BenefitsContainer .BenefitsRow
+            {display:flex}
+            
+        .BenefitsContainer .BenefitsRow_One
+            {background-color:#f8f8f8;margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:180px;max-width:250px;min-height:180px;min-width:250px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.6rem;font-weight:500;letter-spacing:0;line-height:1.3;padding:16px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Two
+            {margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:180px;max-width:250px;min-height:180px;min-width:250px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.6rem;font-weight:500;grid-row:1;letter-spacing:0;line-height:1.3;padding:16px;text-align:right}
+            
+        .BenefitsContainer .BenefitsRow_Three
+            {background-color:#f8f8f8;margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:180px;max-width:250px;min-height:180px;min-width:250px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.6rem;font-weight:500;letter-spacing:0;line-height:1.3;padding:16px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Four
+            {margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:16px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:180px;max-width:250px;min-height:180px;min-width:250px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.6rem;font-weight:500;grid-row:1;letter-spacing:0;line-height:1.3;padding:16px;text-align:right}}
+
+
+            
+    @media(min-width: 768px)
+            {
+        .BenefitsContainer
+            {position:relative}
+            
+        .BenefitsContainer .BenefitsRow
+            {display:flex}
+            
+        .BenefitsContainer .BenefitsRow_One
+            {background-color:#f8f8f8;margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:24px 12px 24px 32px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:217.12px;max-width:300px;min-height:217.12px;min-width:300px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:500;letter-spacing:0;line-height:1.3;padding:24px 32px 24px 12px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Two
+            {margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:24px 32px 24px 12px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:217.12px;max-width:300px;min-height:217.12px;min-width:300px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:500;grid-row:1;letter-spacing:0;line-height:1.3;padding:24px 12px 24px 32px;text-align:right}
+            
+        .BenefitsContainer .BenefitsRow_Three
+            {background-color:#f8f8f8;margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:24px 12px 24px 32px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:217.12px;max-width:300px;min-height:217.12px;min-width:300px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:500;letter-spacing:0;line-height:1.3;padding:24px 32px 24px 12px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Four
+            {margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:24px 32px 24px 12px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:217.12px;max-width:300px;min-height:217.12px;min-width:300px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:1.8rem;font-weight:500;grid-row:1;letter-spacing:0;line-height:1.3;padding:24px 12px 24px 32px;text-align:right}}
+
+
+            
+    @media(min-width: 1024px)
+            {
+        .BenefitsContainer
+            {padding:0;position:relative}
+            
+        .BenefitsContainer .BenefitsRow
+            {display:flex}
+            
+        .BenefitsContainer .BenefitsRow_One
+            {background-color:#f8f8f8;margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:24px 12px 24px 48px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:241px;max-width:333px;min-height:241px;min-width:333px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:2.6rem;font-weight:500;letter-spacing:0;line-height:1.3;padding:24px 48px 24px 12px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Two
+            {margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:24px 48px 24px 12px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:241px;max-width:333px;min-height:241px;min-width:333px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:2.6rem;font-weight:500;letter-spacing:0;line-height:1.3;padding:24px 12px 24px 48px;text-align:right}
+            
+        .BenefitsContainer .BenefitsRow_Three
+            {background-color:#f8f8f8;margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:24px 12px 24px 48px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:241px;max-width:333px;min-height:241px;min-width:333px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:2.6rem;font-weight:500;letter-spacing:0;line-height:1.3;padding:24px 48px 24px 12px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Four
+            {margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:24px 48px 24px 12px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:241px;max-width:333px;min-height:241px;min-width:333px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:2.6rem;font-weight:500;letter-spacing:0;line-height:1.3;padding:24px 12px 24px 48px;text-align:right}}
+
+
+            
+    @media(min-width: 1280px)
+            {
+        .BenefitsContainer
+            {padding:0;position:relative}
+            
+        .BenefitsContainer .BenefitsRow
+            {display:flex}
+            
+        .BenefitsContainer .BenefitsRow_One
+            {background-color:#f8f8f8;margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:32px 12px 32px 48px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:361.8px;max-width:500px;min-height:361.8px;min-width:500px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_One .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:3rem;font-weight:500;letter-spacing:0;line-height:1.3;padding:32px 48px 32px 12px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Two
+            {margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:32px 48px 32px 12px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:361.8px;max-width:500px;min-height:361.8px;min-width:500px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Two .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:3rem;font-weight:500;grid-row:1;letter-spacing:0;line-height:1.3;padding:32px 12px 32px 48px;text-align:right}
+            
+        .BenefitsContainer .BenefitsRow_Three
+            {background-color:#f8f8f8;margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:32px 12px 32px 48px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:361.8px;max-width:500px;min-height:361.8px;min-width:500px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Three .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:3rem;font-weight:500;letter-spacing:0;line-height:1.3;padding:32px 48px 32px 12px;text-align:left}
+            
+        .BenefitsContainer .BenefitsRow_Four
+            {margin-bottom:0}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer
+            {align-items:center;display:flex;flex-grow:1;justify-content:center;padding:32px 48px 32px 12px;position:relative}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowImgContianer .BenefitsRowImg
+            {max-height:361.8px;max-width:500px;min-height:361.8px;min-width:500px;width:100%}
+            
+        .BenefitsContainer .BenefitsRow_Four .BenefitsRowdescription
+            {align-items:center;display:flex;font-family:"Noto Serif",Georgia,serif;font-size:2.8rem;font-weight:500;grid-row:1;letter-spacing:0;line-height:1.3;padding:32px 12px 32px 48px;text-align:right}}
+            
+        .no-offer-title
+            {font-size:3rem;font-style:normal;font-weight:700;letter-spacing:0;line-height:1.2;padding:4% 0;text-align:left;width:100%}
+
+.landingpageWrapper,.no-offer-title
+            {font-family:"Noto Serif",Georgia,serif}
+            
+        .landingpageWrapperfff
+            {display:flex;flex-direction:column;margin:0 auto;max-width:1280px;padding:0}
+
+
+            
+    @media(min-width: 768px)
+            {
+        .landingpageWrapperfff
+            {display:flex;flex-direction:column;font-family:"Noto Serif",Georgia,serif}}
+
+
+            
+    @media(min-width: 1024px)
+            {
+        .landingpageWrapperfff
+            {display:flex;flex-direction:column;font-family:"Noto Serif",Georgia,serif}}
+
+
+
+/* Hold - unused - but might be */
+
+/* Smooth momentum scrolling on mobile devices */
+@media screen and (max-width: 600px) {
+  .scroll-navbar {
+  display: flex;                 /* Aligns items in a single row */
+  overflow-x: scroll;              /* Enables horizontal scrolling when content overflows */
+  overflow-y: hidden;             /* Prevents accidental vertical shifting */
+  white-space: nowrap;           /* Keeps links strictly on one line */
+  background-color: #1a1a1a;     /* Dark background color */
+  padding: 10px 15px;            /* Padding inside the navbar */
+  box-sizing: border-box;
+  width: 100%;                   /* Spans the full screen width */
+  
+  /* Smooth momentum scrolling on mobile devices */
+  -webkit-overflow-scrolling: touch; 
+}
+.onpNav .navONPgroup, .containerONPzzz {
+  display: flex !important;                 /* Aligns items in a single row */
+  overflow-x: scroll;              /* Enables horizontal scrolling when content overflows */
+  overflow-y: hidden !important;             /* Prevents accidental vertical shifting */
+  white-space: nowrap !important;           /* Keeps links strictly on one line */
+  padding: 10px 15px;            /* Padding inside the navbar */
+  box-sizing: border-box;
+  width: 100%;                   /* Spans the full screen width */
+  
+  /* Smooth momentum scrolling on mobile devices */
+  -webkit-overflow-scrolling: touch; 
+}
+
+/* Individual link styling */
+
+}
+
+

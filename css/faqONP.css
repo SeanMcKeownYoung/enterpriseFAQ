@@ -1,0 +1,1200 @@
+/* ONLINE NEWSPAPER CSS ADDITIONS FOR FAQ PAGE */
+
+
+
+/* BASE LEVEL STYLES */
+body {
+    scroll-behavior: smooth !important;
+        text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html {
+  scroll-behavior: smooth;
+}   
+.html-embed .custom-html
+            {padding:0 5%}
+body.page-type__piano .custom-html
+            {padding:0}@keyframes pulse
+            {0%
+            {opacity:1;scale:1}10%
+            {opacity:.5;scale:1.1}50%
+            {opacity:1;scale:1}to
+            {opacity:1;scale:1}}
+
+.pulse {
+    animation-duration:4s;animation-iteration-count:infinite;animation-name:pulse
+}
+
+.advtoprail {
+    margin-bottom:0!important
+}            
+
+/* FAQ JAVA STYLES */
+.accordion {
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  background-color: transparent !important;
+}
+
+.faqQcontainer {
+  padding: 10px 0px 0px 0px !important;
+  display: none;
+  background-color: transparent !important;
+  overflow: hidden;
+  font-size: 1em !important;
+  font-weight: 200 !important;
+}
+
+
+/* FAQ NAVBAR STYLES */
+#faqNavBar {
+    width: 100%;
+    background-color: #f8f8f8;
+    z-index: 1000;
+    height: 100px;
+    will-change: transform; 
+    align-items: center;
+}
+
+#faqNavBar.bottom-sticky {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding-top: 10px;
+    height: 120px;  
+    box-shadow: 0 0px 0px rgb(255, 255, 255);
+    transition: all 0.2s ease-out;
+}
+
+#faqNavBar.bottom-sticky ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#faqNavBar.top-sticky {
+    position: sticky !important;
+    top: 0px;
+    left: 0;
+    bottom: auto; /* Overrides the previous bottom rule */
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    height: auto;
+    background-color: #fff;
+    transition: all 1s ease-in-out;
+}
+
+#faqNavBar.top-sticky header {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+
+#faqNavBar.top-sticky ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#faqNavBar header {
+margin-top: 0 !important;
+}
+
+#faqNavBar header ul{
+    display: flex;
+    justify-content: stretch;
+    align-items: start;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    list-style-type: none;
+    margin:0 0;
+    max-width:1280px;
+    padding:0
+}
+
+#faqNavBar div {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: clamp(2em, 1.4vw, 4rem);
+  font-weight:600;
+  color: #868686;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+#faqNavBar.bottom-sticky div {
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#faqNavBar.top-sticky div {
+  display: flex;
+  transition: all 2s ease-in-out;
+}
+
+.nav-item {
+    border-bottom: 1px solid #7d7d7d;
+    border-top: 1px solid #7d7d7d;
+    padding: 14px 0px;
+    margin: 0px !important;
+}
+
+.nav-item:first-child {
+
+}
+
+.navFAQlink {
+  text-decoration: none !;
+  letter-spacing:0.4px !important;
+  font-family: "neue-haas-grotesk-display", sans-serif !important;
+  font-weight:600 !important;
+  color: #003649 !important;
+  border: 1px solid transparent !important;
+  padding: 10px 10px !important;
+  margin: 0px !important;
+  transition: all 0.3s ease !important;
+  display: flexr !important;
+}
+
+.navFAQlink.active { /* Active class applied by JavaScript */
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  background-color: #003649 !important;
+  border: 1px solid #003649 !important;
+  padding: 10px 10px !important;
+  margin: 0px !important;
+  transition: all 0.3s ease;
+}
+
+.navFAQlink:hover {
+  border: 1px solid #2a2a2a !important;
+  padding: 10px 10px !important;
+  transition: all 0.3s ease;
+}
+
+.nav-static {
+  text-decoration: none !;
+  letter-spacing:0.4px !important;
+  font-family: "neue-haas-grotesk-display", sans-serif !important;
+  font-weight:600 !important;
+  color: #ffffff !important;
+  background-color: #003649 !important;
+  border: 1px solid transparent !important;
+  padding: 10px 20px 10px 15px !important;
+  margin: 0px !important;
+  transition: all 0.3s ease !important;
+  display: inline !important;
+  margin: 0px 10px 0px 0px !important;
+}
+
+.faqNavWrapper {
+    display:block;
+    margin:0 auto;
+    padding:0;
+}
+
+.faqNavWrapper ul  {
+    display: flex;                 /* Aligns items in a single row */
+    overflow-x: scroll;              /* Enables horizontal scrolling when content overflows */
+    overflow-y: hidden;             /* Prevents accidental vertical shifting */
+    white-space: nowrap;           /* Keeps links strictly on one line */
+    width: 100%;                   /* Spans the full screen width */
+            /* Smooth momentum scrolling on mobile devices */
+    -webkit-overflow-scrolling: touch; 
+
+        }      
+        /* width */
+        ::-webkit-scrollbar {
+        width: 6px;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: #888; 
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+        }
+
+
+/* FAQ HERO AND SECTION STYLES */
+.faqPageWrapper {
+    display:flex;
+    flex-direction:column;
+    margin:0 auto;
+    padding:0;
+}
+.faqFillShaded {
+        background-color: #f8f8f8;
+}
+
+.faqFillNone {
+        background-color: #fff;
+}
+
+.faqFillNone .faqPageWrapper {
+    display:flex;
+    flex-direction:row-reverse !important;
+    margin:0 auto;
+    padding:0;
+}
+
+.faqFillShaded .faqPageWrapper {
+    display:flex;
+    flex-direction:row !important;
+    margin:0 auto;
+    padding:0;
+}
+
+.faqHeroContainer .faqBannerText  {
+    display:flex;
+    flex-direction:column;
+    align-items:left;
+    justify-content:center;
+    color: #2A2A2A;
+    text-align: left !important;
+    padding: 5% 0% 5% 5%;
+}
+
+.faqFillNone .faqBannerText  {
+    padding: 5% 5% 5% 0%;
+}
+
+@media(max-width: 549px){
+.faqFillNone .faqPageWrapper, .faqFillShaded .faqPageWrapper {
+    display:flex;
+    flex-direction:column !important;
+    justify-content: start;
+    align-items: start;
+    margin:0;
+    padding: 0px 0px 26px 0px;
+    width: 100%;
+    border-top: 1px solid #7d7d7d;
+}
+
+.faqFillShaded:first-of-type .faqPageWrapper {
+    border-top: 1px solid #ffffff;
+}
+
+.faqHeroContainer {
+    display:flex;
+    flex-direction:column !important;
+    justify-content: start;
+    align-items: start;
+    margin: 0px !important;
+    padding:0 !important;
+    width: 100%;
+}
+.faqFillNone .faqBannerText, .faqFillShaded .faqBannerText  {
+    padding: 0% 5% 0% 5%;
+}
+.faqBodyheader, .faqQuestionRow button {
+    text-align: left !important;
+}
+.faqBodyheader {
+    margin: 16px 0px 10px 0px;
+}
+.faqQuestionRow button {
+    font-size: 20px !important;
+}
+            }
+
+.faqHeroContainer {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(275px,1fr));
+    margin:30px 0px;
+    width: 100%;
+}
+
+
+
+.faqHeroContainer .faqBannerText .faqMSGheader {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size:2.8rem;
+    letter-spacing:0;
+    line-height:1.2;
+}
+            
+.faqHeroContainer .faqBannerText .faqMSGtext {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 400;
+    letter-spacing:0;
+    line-height:1.6;
+    position:relative;
+}
+
+.faqList {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing:0;
+    line-height:1.6;
+    position:relative;
+    text-wrap: balance;
+}
+
+.faqList span {
+    padding-right: 4px;
+}
+
+.faqSeeMore {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing:0;
+    line-height:1.4;
+    text-wrap: balance;
+}
+
+.faqHeroContainer .faqBannerText .faqMSGtext  strong {
+    font-weight:600
+}
+                   
+.faqHeroContainer .faqBannerText .BannerImgLogo {
+    margin-bottom:32px;
+}
+            
+.faqHeroContainer .faqBannerText .BannerImgLogo img {
+    width:250px
+}
+               
+.faqHeroContainer .faqBannerText .MessageButton {
+    background-color:#2a2a2a;
+    border-radius:32px;
+    color:#fff;
+    cursor:pointer;
+    font-family:Inter,serif;
+    font-size:1.4rem;
+    font-weight:700;
+    gap:8px;
+    height:50px;
+    margin:32px 0 0;
+    padding:16px 24px;
+    width:100%
+}
+            
+.faqHeroContainer .BannerRight {
+    align-items:center;
+    background-color:#f6ca15;
+    display:flex;
+    flex-grow:1;
+    justify-content:center;
+    max-height:354px;
+    padding:14px 58px;
+    position:relative
+}
+            
+.faqBannerImage {
+     display: flex;       /* Use flexbox to center content */
+     justify-content: center; /* Centers horizontally */
+     align-items: center;     /* Centers vertically */
+}
+.faqBannerImage img {
+    width: 100%;         /* Let the image expand to the width */
+    height: 100%;        /* Let the image expand to the height */
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: center;
+}
+
+/* Advance - dotcom CSS Media Queries - Screen Sizes */
+/* X-Small */            
+    @media(max-width: 549px)
+            { 
+       .faqNavWrapper {
+            max-width:100%;
+        }   
+
+       .navFAQlink {
+            font-size:16px !important;
+        }
+       .nav-static {
+            font-size:16px !important;
+        }
+       .navFAQlink.active {
+            padding: 10px 20px !important;
+        }
+
+       .faqPageWrapper {
+            max-width:100%;
+        }    
+
+
+
+       .faqList {
+            font-size: 14px;
+            padding: 0px 10px;
+        }
+
+       .faqList span {
+            padding-right: 4px;
+        }
+
+       .faqHeroContainer .faqBannerText .faqMSGheader {
+            font-size:2.4rem;
+            text-align: center;
+            padding-bottom: 4px;
+        }
+            
+       .faqHeroContainer .faqBannerText .faqMSGtext {
+            position:relative;
+            font-size:1.6rem;
+            text-align:center;
+        }
+        }
+
+
+/* Small */            
+    @media(min-width: 549px)
+            {
+       .faqNavWrapper {
+            max-width:100vw;
+        }     
+
+       .navFAQlink {
+            font-size:16px !important;
+        }
+       .nav-static {
+            font-size:16px !important;
+        }
+       .navFAQlink.active {
+            padding: 10px 20px !important;
+        }
+
+       .faqPageWrapper {
+            max-width:549px;
+            display:flex;
+            flex-direction:column !important;
+            margin:0 auto;
+            padding:0;
+        }   
+
+.faqFillNone .faqPageWrapper
+
+
+       .faqList {
+            font-size: 14px;
+            padding: 0px 10px;
+        }
+
+       .faqList span {
+            padding-right: 4px;
+        }
+
+       .faqSeeMore {
+            padding-top: 10px;
+        }
+
+       .faqHeroContainer .faqBannerText .faqMSGheader {
+            font-size:2.6rem;
+            text-align: center;
+            padding-bottom: 6px;
+        }
+            
+       .faqHeroContainer .faqBannerText .faqMSGtext {
+            position:relative;
+            font-size:1.6rem;
+            text-align:center;
+        }
+
+       .faqHeroContainer .faqBannerText .MessageButton {
+            background-color:#2a2a2a;border-radius:32px;color:#fff;cursor:pointer;font-family:Inter,serif;font-size:1.4rem;font-weight:700;gap:8px;height:50px;margin:32px 0 0;padding:16px 24px;width:100%}
+            
+       .faqHeroContainer .BannerRight {
+            align-items:center;
+            display:flex;
+            flex-grow:1;
+            justify-content:center;
+            max-height:354px;padding:14px 58px;
+            position:relative
+        }
+        }
+
+/* Medium */           
+    @media(min-width: 768px)
+            {
+       .faqNavWrapper {
+            max-width:768px;
+        }      
+
+       .navFAQlink {
+            font-size:18px !important;
+        }
+       .nav-static {
+            font-size:18px !important;
+        }
+       .navFAQlink span {
+            display: none;
+        }
+
+       .faqPageWrapper {
+            max-width:768px;
+        }        
+
+        
+       .faqList {
+            font-size: 16px;
+            padding: 0px 0px;
+        }
+
+       .faqList span {
+            padding-right: 4px;
+        }
+
+       .faqSeeMore {
+            font-size:16px;
+            padding-top: 10px;
+        }
+
+       .faqHeroContainer .faqBannerText .faqMSGheader {
+            font-size:2.8rem;
+            text-align: left;
+            padding-bottom: 8px;
+        }
+            
+       .faqHeroContainer .faqBannerText .faqMSGtext {
+            font-size:2rem;
+            text-align:left;
+            position:relative
+        }
+                        
+       .faqHeroContainer .faqBannerText .MessageButton {
+            background-color:#2a2a2a;
+            border-radius:32px;
+            color:#fff;
+            cursor:pointer;
+            font-family:Inter,serif;
+            font-size:1.4rem;
+            font-weight:700;
+            gap:8px;height:50px;
+            margin:22px auto auto;
+            padding:16px 24px;
+            width:196px
+        }
+            
+       .faqHeroContainer .BannerRight {
+            align-items:center;
+            display:flex;
+            flex-grow:1;
+            justify-content:center;
+            max-height:363px;
+            padding:64px 21px;
+            position:relative
+        }       
+        }
+
+
+/* Large */           
+    @media(min-width: 1024px)
+            {
+       .faqNavWrapper {
+            max-width:1024px;
+        }   
+
+       .navFAQlink {
+            font-size:20px !important;
+        }
+       .nav-static {
+            font-size:20px !important;
+        }
+       .navFAQlink span {
+            display: contents;
+        }
+
+       .faqPageWrapper {
+            max-width:1024px;
+        }            
+            
+        
+       .faqList {
+            font-size: 17px;
+        }
+
+       .faqList span {
+            padding-right: 4px;
+        }
+
+       .faqSeeMore {
+            font-size:20px;
+            padding-top: 10px;
+        }
+
+       .faqHeroContainer .faqBannerText .faqMSGheader {
+            font-size:4rem;
+            text-align: left;
+            padding-bottom: 10px;
+        }
+            
+       .faqHeroContainer .faqBannerText .faqMSGtext {
+            font-size:2.4rem;
+            text-align:left;
+            position:relative
+        }
+
+       .faqHeroContainer .faqBannerText .MessageButton {
+            background-color:#2a2a2a;
+            border-radius:32px;
+            color:#fff;
+            cursor:pointer;
+            font-family:Inter,serif;
+            font-size:1.4rem;
+            font-weight:700;
+            gap:8px;
+            height:50px;
+            margin:32px auto auto;
+            padding:16px 24px;
+            width:196px
+        }
+            
+       .faqHeroContainer .BannerRight {
+            align-items:center;
+            display:flex;
+            flex-grow:1;
+            justify-content:center;
+            min-height:484px;
+            min-width:512px;
+            padding:48px 117px;
+            position:relative
+        }
+        }
+
+        
+
+/* X-Large */           
+    @media(min-width: 1280px)
+            {
+       .faqNavWrapper {
+            max-width:1280px;
+        }  
+
+       .navFAQlink {
+            font-size:20px !important;
+        }
+       .nav-static {
+            font-size:20px !important;
+        }
+       .navFAQlink span {
+            display: contents;
+        }
+
+       .faqPageWrapper {
+            max-width:1280px;
+        }    
+            
+
+        
+       .faqList {
+            font-size: 20px;
+        }
+
+       .faqList span {
+            padding-right: 4px;
+        }
+
+       .faqSeeMore {
+            font-size:2.4rem;
+            padding-top: 10px;
+        }
+
+       .faqHeroContainer .faqBannerText .faqMSGheader {
+            font-size:4rem;
+            text-align: left;
+            padding-bottom: 12px;
+            }
+  
+       .faqHeroContainer .faqBannerText .faqMSGtext {
+            font-size:2.4rem;
+            text-align:left;
+            position:relative
+            }
+            
+       .faqHeroContainer .faqBannerText .MessageButton {
+            background-color:#2a2a2a;
+            border-radius:32px;
+            color:#fff;
+            cursor:pointer;
+            font-family:Inter,serif;
+            font-size:1.4rem;
+            font-weight:700;
+            gap:8px;
+            height:50px;
+            margin:32px auto auto;
+            padding:16px 24px;
+            width:196px
+            }
+            
+       .faqHeroContainer .BannerRight {
+            align-items:center;
+            display:flex;
+            flex-grow:1;
+            justify-content:center;
+            min-height:604px;min-width:640px;
+            padding:48px 117px;
+            position:relative
+            }
+    }
+
+/* FAQ BODY STYLES */
+
+.faqFillShade {
+    background-color: #f8f8f8 !important;
+    color: #2A2A2A !important;
+}
+.faqFillNone {
+    background-color: #fff !important;
+    color: #2A2A2A !important;
+}
+
+.faqBodyContainer {
+    padding: 50px 0px;
+    position:relative
+}
+            
+.faqBodyImage {
+     display: flex;       /* Use flexbox to center content */
+     justify-content: center; /* Centers horizontally */
+     align-items: center;     /* Centers vertically */
+}
+
+.faqBodyImage img {
+    width: 100%;         /* Let the image expand to the width */
+    height: 100%;        /* Let the image expand to the height */
+    object-fit: contain; /* Scales image while maintaining aspect ratio */
+    object-position: center;
+}
+
+.faqBodyContainer .faqBodyHeader {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size:2.8rem;
+    letter-spacing:0;
+    line-height:1.2;
+    margin-bottom: 20px;
+}
+
+.faqHeroContainer .faqQuestionRow {
+    margin-bottom: 10px
+}
+
+.faqHeroContainer .faqBannerText .faqBodyheader {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size:2.8rem;
+    letter-spacing:0;
+    line-height:1.2;
+    text-wrap: balance;
+}
+
+.faqQuestionRow p {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing:0.5px;
+    line-height:1.4;
+    color: #2A2A2A;
+}
+
+.faqQuestionRow img {
+    padding: 6px 0px;
+}
+
+.faqQdouble {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+}
+
+.faqQdouble div {
+    width: 48%;
+    height: 100%;
+    position: relative;
+}
+
+
+.faqQdouble div img {
+    width: 100%;         /* Let the image expand to the width */
+    height: 100%;        /* Let the image expand to the height */
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: center !important; 
+}
+
+
+.faqQuestionRow button {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    letter-spacing:0;
+    line-height:1.2;
+    position:relative;
+    color: #868686;
+    background-color: transparent !important;
+    text-wrap: balance;
+    transition: all 0.2s ease-in-out;
+}
+
+.carret {
+    fill:none;
+    stroke:#868686 !important;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:2.5px;
+    padding: 4px 0px;
+}
+
+.faqQuestionRow:hover button {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    color:#2A2A2A;
+    transition: all 0.2s ease-in-out;
+}
+
+.faqQuestionRow:hover button .carret {
+    stroke:#2A2A2A !important;
+    stroke-width:3px
+}
+
+.faqQcontainer {
+    border-bottom: 1px solid #7d7d7d;
+    padding-bottom: 2px !important;
+}
+.accordian:active {
+    color:#2A2A2A;
+    transition: all 0.2s ease-in-out;
+}
+
+.faqAccordian:first-child.active {
+    border-top: 1px solid #7d7d7d;
+    padding-top: 14px !important;
+}
+
+.faqAccordian.active {
+    border-top: 1px solid transparent !important;
+    padding-top: 4px !important;
+}
+
+.active  {
+    color: #2A2A2A !important;
+}
+
+.active .carret {
+    transform: rotate(180deg);
+    stroke:#2A2A2A !important;
+    stroke-width:3px
+}
+
+.faqQuestionRow:hover .FAQcarret {
+    fill:none;
+    stroke:#2A2A2A;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:2.5px
+}
+.bLink {
+    color: inherit !important;
+    font-weight: 500;
+}
+
+
+
+/* Advance - dotcom CSS Media Queries - Screen Sizes */
+/* X-Small */            
+    @media(max-width: 549px)
+            {  
+       .faqHeroContainer .faqBannerText .faqBodyheader {
+            font-size:2.4rem;
+            text-align: center;
+            padding-bottom: 4px;
+        }
+
+       .faqQuestionRow button{
+            font-size:1.6rem;
+            text-align:center;
+        }
+        }
+
+
+/* Small */            
+    @media(min-width: 549px)
+            {
+       .faqHeroContainer .faqBannerText .faqBodyheader {
+            font-size:2.6rem;
+            text-align: center;
+            padding-bottom: 6px;
+        }
+
+       .faqQuestionRow button {
+            position:relative;
+            font-size:1.6rem;
+            text-align:center;
+        }
+        }
+
+/* Medium */           
+    @media(min-width: 768px)
+            { 
+       .faqHeroContainer .faqBannerText .faqBodyheader {
+            font-size:2.8rem;
+            text-align: left;
+            padding-bottom: 8px;
+        }
+       .faqQuestionRow button {
+            font-size:2rem;
+            text-align:left;
+        }        
+        }
+
+
+/* Large */           
+    @media(min-width: 1024px)
+            {
+       .faqHeroContainer .faqBannerText .faqBodyheader {
+            font-size:4rem;
+            text-align: left;
+            padding-bottom: 10px;
+        }
+       .faqQuestionRow button {
+            font-size:2.4rem;
+            text-align:left;
+        }
+        }
+
+        
+
+/* X-Large */           
+    @media(min-width: 1280px)
+            {
+
+       .faqHeroContainer .faqBannerText .faqBodyheader {
+            font-size:4rem;
+            text-align: left;
+            padding-bottom: 12px;
+            }
+
+       .faqQuestionRow button {
+            font-size:2.4rem;
+            text-align:left;
+            }
+    }
+
+
+
+/* FAQ CONTACTS STYLES */
+
+
+  .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapA, .faqContactWrapB, .faqContactWrapC {
+        width: 100%;
+    }
+.faqContactItem {
+    display: block;
+    min-width: 50%;
+    margin-bottom: 3rem !important;
+
+}
+
+.faqContactItem h4 {
+    margin: 10px 0px 6px !important;
+    padding: 0 20px 0 0 !important;
+    text-wrap: balance !important;
+}
+
+.faqContactItem .siteLogo {
+     display: flex;  
+     justify-content: start; 
+     align-items: left;    
+     width: 8rem;    
+     height: 8rem;  
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: top;
+    fill: #868686 !important;
+    margin-bottom: 1.4rem !important;
+}
+
+.faqContactIcons svg {
+    fill: #bdbdbd;
+    padding-right: 6px;
+    width: 3.2rem;
+    height: 3.2rem;
+      transition: all 0.2s ease !important;
+}
+
+.faqContactAddress div {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 1.2rem;
+    color: #868686;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing:0;
+    line-height:1.4;
+    text-wrap: balance;
+    transition: all 0.2s ease !important;
+}
+
+.faqContactAddress {
+    margin-top: 10px;
+}
+
+.faqContactIcons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.faqContactIcons div:hover a, .faqContactURL:hover a {
+    color: #4a4a4a !important;
+      transition: all 0.2s ease !important;
+}
+
+.faqContactIcons div:hover svg {
+    fill: #4a4a4a;
+      transition: all 0.2s ease !important;
+}
+
+.faqContactURL a {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 1.6rem;
+    color: #868686 !important;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing:0;
+    line-height:1.4;
+    text-wrap: balance;
+    transition: all 0.2s ease !important;
+}
+
+.faqContactContainer:hover .faqContactItem {
+opacity: 50%;
+}
+
+.faqContactContainer .faqContactItem:hover {
+opacity: 100%;
+background-color: rgba(255, 255, 255, 0.736);
+z-index: 1000;
+filter: drop-shadow(5px 5px 10px #37373718);
+outline: 7px solid  rgba(255, 255, 255, 0.736);
+transform: scale(1.25)translate(10%, 10%)
+}
+
+.faqContactContainer .faqContactItem {
+opacity: 100%;
+outline: 7px solid  rgba(255, 255, 255, 0);
+transition: all 0.3s ease !important;
+}
+
+/* Advance - dotcom CSS Media Queries - Screen Sizes */
+/* X-Small */            
+    @media(max-width: 549px)
+            {  
+
+        }
+
+
+/* Small */            
+    @media(min-width: 549px)
+            {
+  .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapA {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapB {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapC {
+        display: flex; 
+        flex-direction:column
+    }
+    .faqContactItemh {
+        display: flex ;
+    }
+        }
+
+/* Medium */           
+    @media(min-width: 768px)
+            {
+  .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapA {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapB {
+        display: flex; 
+        flex-direction:row;
+    }
+
+  .faqContactWrapC {
+        display: flex; 
+        flex-direction:column
+    }
+        }
+
+
+/* Large */           
+    @media(min-width: 1024px)
+            {
+  .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapA {
+        display: flex; 
+        flex-direction:row
+    }
+
+  .faqContactWrapB {
+        display: flex; 
+        flex-direction:row;
+
+    }
+
+  .faqContactWrapC {
+        display: flex; 
+        flex-direction:column
+    }
+        }
+
+
+/* X-Large */           
+    @media(min-width: 1280px)
+            {
+  .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapA {
+        display: flex; 
+        flex-direction:row
+    }
+
+  .faqContactWrapB {
+        display: flex; 
+        flex-direction:row
+    }
+
+  .faqContactWrapC {
+        display: flex; 
+        flex-direction:row;
+    }
+    }
