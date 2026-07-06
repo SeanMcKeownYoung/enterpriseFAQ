@@ -103,3 +103,20 @@ function highlightActiveBookmark() {
 });
 
 
+
+    // Select the faqBannerImage element
+const faqBannerImage = document.getElementById('.faqBannerImage');
+
+// Get the exact trigger threshold (height of the hero section minus faqBannerImage height)
+const trigger = 200 - faqBannerImage.offsetHeight;
+
+window.addEventListener('scroll', () => {
+    // Check if user has scrolled past the calculated initial bottom placement
+    if (window.scrollY >= trigger) {
+        faqNavBar.classList.remove('containerStart');
+        faqNavBar.classList.add('containerEnd');
+    } else {
+        faqNavBar.classList.remove('containerEnd');
+        faqNavBar.classList.add('containerStart');
+    }
+});

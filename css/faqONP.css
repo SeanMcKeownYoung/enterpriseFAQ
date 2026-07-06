@@ -262,6 +262,15 @@ margin-top: 0 !important;
     padding: 5% 5% 5% 0%;
 }
 
+.faqFillContacts .faqBannerText  {
+    padding: 0%;
+}
+
+.faqFillContacts .faqBannerText {
+    margin-bottom: 6vw; 
+    margin-top: 1vw;
+}
+
 @media(max-width: 549px){
 .faqFillNone .faqPageWrapper, .faqFillShaded .faqPageWrapper {
     display:flex;
@@ -287,7 +296,7 @@ margin-top: 0 !important;
     padding:0 !important;
     width: 100%;
 }
-.faqFillNone .faqBannerText, .faqFillShaded .faqBannerText  {
+.faqFillNone .faqBannerText, .faqFillShaded .faqBannerText, .faqFillContacts .faqBannerText  {
     padding: 0% 5% 0% 5%;
 }
 .faqBodyheader, .faqQuestionRow button {
@@ -296,7 +305,7 @@ margin-top: 0 !important;
 .faqBodyheader {
     margin: 16px 0px 10px 0px;
 }
-.faqQuestionRow button {
+.faqQuestionRow button, .faqQuestionRowStatic div  {
     font-size: 20px !important;
 }
             }
@@ -776,7 +785,7 @@ margin-top: 0 !important;
     margin-bottom: 20px;
 }
 
-.faqHeroContainer .faqQuestionRow {
+.faqQuestionRow button, .faqQuestionRowStatic div  {
     margin-bottom: 10px
 }
 
@@ -790,7 +799,7 @@ margin-top: 0 !important;
     text-wrap: balance;
 }
 
-.faqQuestionRow p {
+.faqQuestionRow p, .staticWrap p {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 500;
     font-size: 1.8rem;
@@ -798,6 +807,16 @@ margin-top: 0 !important;
     line-height:1.4;
     color: #2A2A2A;
 }
+/* X-Small */ @media(max-width: 549px){  
+.faqQuestionRow p, .staticWrap p {font-size: 12px;}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){  
+.faqQuestionRow p, .staticWrap p  {font-size: 14px;}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
+.faqQuestionRow p, .staticWrap p  {font-size: 16px;}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
+.faqQuestionRow p, .staticWrap p  {font-size: 1.6rem;}}
+/* X-Large */ @media(min-width: 1280px) {  
+.faqQuestionRow p, .staticWrap p  {font-size: 1.8rem;}}
 
 .faqQuestionRow img {
     padding: 6px 0px;
@@ -825,19 +844,22 @@ margin-top: 0 !important;
     object-position: center !important; 
 }
 
-
-.faqQuestionRow button {
+.faqQuestionRow button, .faqQuestionRowStatic div  {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 600;
     letter-spacing:0;
     line-height:1.2;
     position:relative;
-    color: #868686;
     background-color: transparent !important;
     text-wrap: balance;
     transition: all 0.2s ease-in-out;
 }
-
+.faqQuestionRow button  {
+    color: #868686;
+}
+.faqQuestionRowStatic div  {
+    color: #2A2A2A;
+}
 .carret {
     fill:none;
     stroke:#868686 !important;
@@ -908,13 +930,18 @@ margin-top: 0 !important;
        .faqHeroContainer .faqBannerText .faqBodyheader {
             font-size:2.4rem;
             text-align: center;
-            padding-bottom: 4px;
+            padding-bottom: 8px;
         }
 
-       .faqQuestionRow button{
+.faqQuestionRow button  {
             font-size:1.6rem;
             text-align:center;
         }
+.faqQuestionRowStatic div  {
+            font-size:1.6rem;
+            text-align:left;
+        }
+
         }
 
 
@@ -924,13 +951,18 @@ margin-top: 0 !important;
        .faqHeroContainer .faqBannerText .faqBodyheader {
             font-size:2.6rem;
             text-align: center;
-            padding-bottom: 6px;
+            padding-bottom: 14px;
         }
 
-       .faqQuestionRow button {
+.faqQuestionRow button {
             position:relative;
             font-size:1.6rem;
             text-align:center;
+        }
+.faqQuestionRowStatic div  {
+            position:relative;
+            font-size:1.6rem;
+            text-align:left;
         }
         }
 
@@ -940,9 +972,9 @@ margin-top: 0 !important;
        .faqHeroContainer .faqBannerText .faqBodyheader {
             font-size:2.8rem;
             text-align: left;
-            padding-bottom: 8px;
+            padding-bottom: 16px;
         }
-       .faqQuestionRow button {
+.faqQuestionRow button, .faqQuestionRowStatic div  {
             font-size:2rem;
             text-align:left;
         }        
@@ -955,12 +987,20 @@ margin-top: 0 !important;
        .faqHeroContainer .faqBannerText .faqBodyheader {
             font-size:4rem;
             text-align: left;
-            padding-bottom: 10px;
+            padding-bottom: 18px;
         }
-       .faqQuestionRow button {
+.faqQuestionRow button, .faqQuestionRowStatic div  {
             font-size:2.4rem;
             text-align:left;
         }
+.staticWrap {
+    display: flex; 
+    flex-direction: row;
+}
+.staticWrap .faqQuestionRowStatic {
+    width: 50%;
+    padding-right: 5%;
+}
         }
 
         
@@ -972,10 +1012,10 @@ margin-top: 0 !important;
        .faqHeroContainer .faqBannerText .faqBodyheader {
             font-size:4rem;
             text-align: left;
-            padding-bottom: 12px;
+            padding-bottom: 20px;
             }
 
-       .faqQuestionRow button {
+.faqQuestionRow button, .faqQuestionRowStatic div  {
             font-size:2.4rem;
             text-align:left;
             }
@@ -988,7 +1028,8 @@ margin-top: 0 !important;
 
   .faqContactContainer {
         display: flex; 
-        flex-direction:column
+        flex-direction:column;
+        padding-bottom: 10px;
     }
 
   .faqContactWrapA, .faqContactWrapB, .faqContactWrapC {
@@ -1020,7 +1061,6 @@ margin-top: 0 !important;
      display: flex;  
      justify-content: start; 
      align-items: left;    
-
     object-fit: cover; /* Scales image while maintaining aspect ratio */
     object-position: top;
     fill: #868686 !important;
@@ -1037,12 +1077,12 @@ margin-top: 0 !important;
 
 .faqContactAddress div {
     font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 1.2rem;
-    color: #868686;
-    font-weight: 600;
+    font-size: 1.4rem;
+    color: #6a6a6a;
+    font-weight: 500;
     font-style: normal;
     letter-spacing:0;
-    line-height:1.4;
+    line-height:1.8;
     text-wrap: balance;
     transition: all 0.2s ease !important;
 }
@@ -1069,7 +1109,7 @@ margin-top: 0 !important;
 
 .faqContactURL a {
     font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #868686 !important;
     font-weight: 600;
     font-style: normal;
@@ -1260,7 +1300,7 @@ margin-bottom: 10px;
 }
 .faqContactAddress div {
     display: block;
-    padding-right: 40px;
+    padding-right: 10px;
 }
 
 
@@ -1290,3 +1330,80 @@ margin-bottom: 10px;
         flex-direction:row;
     }
     }
+
+    .subButton a {
+        display: flex;
+        background-color: transparent;
+        text-decoration: none;    
+        border-radius: 30px;  
+        transition: all 0.2s ease-out;
+    }
+    .subButton p {
+        margin: 0 !important;
+        padding: 10px 20px;
+        border-radius: 30px;  
+        background-color: #e3e1e1; 
+    }
+    .subButton a:hover {
+        background-color: #e3e1e1; 
+        transition: all 0.2s ease-out;
+    }
+    .subButton a:hover p {
+        background-color: #e3e1e1; 
+    }
+
+
+
+/* TOP LOGO ANIMATION STYLES */
+            .faqBannerImage .containerHero {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr)); 
+            gap: 6px;
+            padding: 10%;
+            }
+            .faqBannerImage .containerHero div {
+            aspect-ratio: 1 / 1; 
+            background-color: #0066ff;
+            width: 100%;
+            height: 100%;
+            }
+
+            .faqBannerImage .containerHero div svg {
+            width: 101%;
+            height: 101%;
+            object-fit: cover; /* Scales image while maintaining aspect ratio */
+            object-position: center;
+            fill: #fff;
+            }
+            .item9 {background-color: #585858 !important;}
+
+            .containerEnd .item1 {order: 1; transform: translateY(-60vh) translateX(-50vw) scale(2.5); transition: all 1s easy-in;}
+            .containerEnd .item2 {order: 2; transform: translateY(-80vh) translateX(1vw); transition: all 1s easy-in;}
+            .containerEnd .item3 {order: 3; transform: translateY(-70vh) translateX(70vw) scale(1.5); transition: all 1s easy-in;}
+            .containerEnd .item4 {order: 4; transform: translateY(-20vh) translateX(-50vw); transition: all 1s easy-in;}
+            .containerEnd .item5 {order: 5; transform: translateY(-70vh) translateX(20vw) scale(1.2); transition: all 1s easy-in;}
+            .containerEnd .item6 {order: 6; transform: translateY(-20vh) translateX(90vw) scale(2.0); transition: all 1s easy-in;}
+            .containerEnd .item7 {order: 7; transform: translateY(15vh) translateX(-40vw) scale(1.5); transition: all 1s easy-in;}
+            .containerEnd .item8 {order: 8; transform: translateY(-70vh) translateX(-10vw) scale(1.5); transition: all 1s easy-in;}
+            .containerEnd .item9 {order: 9; transform: translateY(10vh) translateX(80vw); transition: all 1s easy-in;}
+
+
+  
+
+
+    @keyframes slideOut {
+    from {
+      transform: translateX(-10vw) translateY(-10vh);
+    }
+    to {
+      transform: translateX(0%) translateY(0%);
+    }
+  }
+
+  .item1 {
+    animation: slideOut  ;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    animation-timeline: view();
+    animation-range: contain;
+  }
+
