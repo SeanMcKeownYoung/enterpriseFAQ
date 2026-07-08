@@ -63,33 +63,42 @@ body.page-type__piano .custom-html
     position: sticky;
     bottom: 0;
     left: 0;
-    padding-top: 20px;
-    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.0));
-        background-color: #ededed;
-        background-image: linear-gradient(180deg, #fff, #ededed, #f8f8f8);
-    transition: all 0.2s ease-out;
+    filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.14));
+    background-color: #fff;
+    transition: all 0.5s ease-out;
 }
 
 #faqNavBar.top-sticky {
     position: sticky !important;
     top: 0px;
     left: 0;
-    padding-top: 20px;
     bottom: auto; /* Overrides the previous bottom rule */
     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.14));
     height: auto;
     background-color: #fff;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
+#faqNavBar.bottom-sticky {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    transition: all 0.1s ease-out;
+}
 
-
+#faqNavBar.top-sticky {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 100px;
+    transition: all 1.5s ease-in-out;
+}
 
 #faqNavBar.bottom-sticky .faqHeroContainer {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(275px,1fr));
     margin:30px 0px;
     width: 100%;
+
 }
 
 #faqNavBar.bottom-sticky .faqHeroContainer .faqBannerImage {
@@ -139,6 +148,7 @@ body.page-type__piano .custom-html
 #faqNavBar.top-sticky .faqHeroContainer {
     display:flex;
     width: 48%;
+    transition: all 0.5s ease-in-out;
 }
 
 #faqNavBar.top-sticky .faqHeroContainer .faqBannerImage {
@@ -179,6 +189,7 @@ body.page-type__piano .custom-html
 
 #faqNavBar.top-sticky .nav-static {
     display: none;
+  transition: all 0.2s ease;
 }
 
 #faqNavBar .faqNavWrapper .nav-item .navFAQlink {
@@ -189,12 +200,12 @@ body.page-type__piano .custom-html
   font-weight: 900;
   border: 0 !important;
   padding-right: 6px;
-  transition: all 0.2s ease !important;
+  transition: all 0.2s ease;
 }
 
 #faqNavBar.top-sticky .faqNavWrapper .nav-item .navFAQlink {
   font-size: 26px;
-  transition: all 0.2s ease !important;
+  transition: all 0.2s ease;
 }
 
 #faqNavBar.top-sticky .faqNavWrapper .nav-item .navFAQlink div {
@@ -204,7 +215,7 @@ body.page-type__piano .custom-html
 #faqNavBar.top-sticky .faqNavWrapper .nav-item .navFAQlink.active { /* Active class applied by JavaScript */
   color: #2A2A2A !important;
   z-index: 10;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 #faqNavBar.top-sticky .faqNavWrapper .nav-item .navFAQlink.active div {
@@ -219,7 +230,7 @@ body.page-type__piano .custom-html
 #faqNavBar.bottom-sticky .faqNavWrapper .nav-item .navFAQlink.active { /* Active class applied by JavaScript */
   color: #a0a0a0 !important;
   z-index: 10;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 #faqNavBar.bottom-sticky .faqNavWrapper .nav-item .navFAQlink.active div {
@@ -247,6 +258,7 @@ body.page-type__piano .custom-html
 
 #faqNavBar.bottom-sticky .nav-static  {
     display: flex !important;
+    transition: all 0.2s ease;
 }
 #faqNavBar.bottom-sticky .nav-static .navFAQlink {
     color: #2a2a2a !important;
@@ -317,6 +329,22 @@ body.page-type__piano .custom-html
     margin:0 auto;
     padding:0;
 }
+
+.faqSnglShaded {
+        background-color: #f8f8f8;
+}
+
+.faqSnglShaded .faqPageWrapper {
+    display:flex;
+    flex-direction:row !important;
+    margin:0 auto;
+    padding:0;
+}
+
+.faqSnglShaded .faqBannerText  {
+    padding: 5% 5% 5% 0%;
+}
+
 .faqFillShaded {
         background-color: #f8f8f8;
 }
@@ -814,7 +842,7 @@ body.page-type__piano .custom-html
     object-position: center;
 }
 
-.faqBodyContainer .faqBodyHeader {
+.faqBodyHeader {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -828,7 +856,7 @@ body.page-type__piano .custom-html
     margin-bottom: 10px
 }
 
-.faqBodyContainer .faqBannerText .faqBodyheader {
+.faqBodyheader {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -838,7 +866,7 @@ body.page-type__piano .custom-html
     text-wrap: balance;
 }
 
-.faqQuestionRow p, .staticWrap p {
+.staticWrap p {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 500;
     font-size: 1.8rem;
@@ -846,6 +874,37 @@ body.page-type__piano .custom-html
     line-height:1.4;
     color: #2A2A2A;
 }
+
+.faqQuestionRow p {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing:0.5px;
+    line-height:1.4;
+    color: #2A2A2A;
+
+}
+.faqQuestionRow ul {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing:0.5px;
+    line-height:1.4;
+    color: #2A2A2A;
+    margin: 0;
+    padding: 0;
+}
+.faqQuestionRow ul li {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing:0.5px;
+    line-height:1.4;
+    color: #2A2A2A;
+    margin: 0;
+    padding: 0;
+}
+
 /* X-Small */ @media(max-width: 549px){  
 .faqQuestionRow p, .staticWrap p {font-size: 12px;}}
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
@@ -898,6 +957,21 @@ body.page-type__piano .custom-html
 }
 .faqQuestionRowStatic div  {
     color: #2A2A2A;
+    margin-bottom: 6px;
+}
+.faqQuestionRowStatic p  {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    letter-spacing:0;
+    line-height:1.4;
+    position:relative;
+    color: #4a4a4a;
+    text-wrap: balance;
+    transition: all 0.2s ease-in-out;
+}
+.faqQuestionRowStatic p strong  {
+        font-weight: 600;
+    color: #616161;
 }
 .carret {
     fill:none;
@@ -966,7 +1040,7 @@ body.page-type__piano .custom-html
 /* X-Small */            
     @media(max-width: 549px)
             {  
-       .faqBodyContainer .faqBannerText .faqBodyheader {
+       .faqBodyheader {
             font-size:2.4rem;
             text-align: center;
             padding-bottom: 8px;
@@ -980,6 +1054,10 @@ body.page-type__piano .custom-html
             font-size:1.6rem;
             text-align:left;
         }
+.faqQuestionRowStatic p  {
+            font-size:1.4rem;
+            text-align:left;
+            }
 
         }
 
@@ -987,7 +1065,7 @@ body.page-type__piano .custom-html
 /* Small */            
     @media(min-width: 549px)
             {
-       .faqBodyContainer .faqBannerText .faqBodyheader {
+       .faqBodyheader {
             font-size:2.6rem;
             text-align: center;
             padding-bottom: 14px;
@@ -1008,7 +1086,7 @@ body.page-type__piano .custom-html
 /* Medium */           
     @media(min-width: 768px)
             { 
-       .faqBodyContainer .faqBannerText .faqBodyheader {
+       .faqBodyheader {
             font-size:2.8rem;
             text-align: left;
             padding-bottom: 16px;
@@ -1016,14 +1094,18 @@ body.page-type__piano .custom-html
 .faqQuestionRow button, .faqQuestionRowStatic div  {
             font-size:2rem;
             text-align:left;
-        }        
+        }     
+.faqQuestionRowStatic p  {
+            font-size:1.5rem;
+            text-align:left;
+            }   
         }
 
 
 /* Large */           
     @media(min-width: 1024px)
             {
-       .faqBodyContainer .faqBannerText .faqBodyheader {
+       .faqBodyheader {
             font-size:4rem;
             text-align: left;
             padding-bottom: 18px;
@@ -1048,7 +1130,7 @@ body.page-type__piano .custom-html
     @media(min-width: 1280px)
             {
 
-       .faqBodyContainer .faqBannerText .faqBodyheader {
+       .faqBodyheader {
             font-size:4rem;
             text-align: left;
             padding-bottom: 20px;
@@ -1056,6 +1138,10 @@ body.page-type__piano .custom-html
 
 .faqQuestionRow button, .faqQuestionRowStatic div  {
             font-size:2.4rem;
+            text-align:left;
+            }
+.faqQuestionRowStatic p  {
+            font-size:2.0rem;
             text-align:left;
             }
     }
@@ -1111,7 +1197,7 @@ body.page-type__piano .custom-html
     padding-right: 6px;
     width: 3.2rem;
     height: 3.2rem;
-      transition: all 0.2s ease !important;
+      transition: all 0.2s ease;
 }
 
 .faqContactAddress div {
@@ -1123,7 +1209,7 @@ body.page-type__piano .custom-html
     letter-spacing:0;
     line-height:1.8;
     text-wrap: balance;
-    transition: all 0.2s ease !important;
+    transition: all 0.2s ease;
 }
 
 .faqContactAddress {
@@ -1138,12 +1224,12 @@ body.page-type__piano .custom-html
 
 .faqContactIcons div:hover a, .faqContactURL:hover a {
     color: #4a4a4a !important;
-      transition: all 0.2s ease !important;
+      transition: all 0.2s ease;
 }
 
 .faqContactIcons div:hover svg {
     fill: #4a4a4a;
-      transition: all 0.2s ease !important;
+      transition: all 0.2s ease;
 }
 
 .faqContactURL a {
@@ -1155,7 +1241,7 @@ body.page-type__piano .custom-html
     letter-spacing:0;
     line-height:1.4;
     text-wrap: balance;
-    transition: all 0.2s ease !important;
+    transition: all 0.2s ease;
 }
 
 .faqContactContainer:hover .faqContactItem {
@@ -1410,4 +1496,3 @@ margin-bottom: 10px;
             .containerEnd .item9 {order: 9; transform: translateY(10vh) translateX(80vw); transition: all 1s easy-in;}
 
 
-  
