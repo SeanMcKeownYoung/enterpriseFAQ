@@ -54,169 +54,260 @@ body.page-type__piano .custom-html
     width: 100%;
     background-color: #f8f8f8;
     z-index: 1000;
-    height: 100px;
+
     will-change: transform; 
     align-items: center;
 }
 
 #faqNavBar.bottom-sticky {
-    position: relative;
+    position: sticky;
     bottom: 0;
     left: 0;
-    padding-top: 10px;
-    height: 120px;  
-    box-shadow: 0 0px 0px rgb(255, 255, 255);
+    padding-top: 20px;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.0));
+        background-color: #ededed;
+        background-image: linear-gradient(180deg, #fff, #ededed, #f8f8f8);
     transition: all 0.2s ease-out;
-}
-
-#faqNavBar.bottom-sticky ul {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
 }
 
 #faqNavBar.top-sticky {
     position: sticky !important;
     top: 0px;
     left: 0;
+    padding-top: 20px;
     bottom: auto; /* Overrides the previous bottom rule */
-    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.14));
     height: auto;
     background-color: #fff;
-    transition: all 1s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
+#faqNavBar.bottom-sticky .faqHeroContainer {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(275px,1fr));
+    margin:30px 0px;
+    width: 100%;
+}
+
+#faqNavBar.bottom-sticky .faqHeroContainer .faqBannerImage {
+     display: flex;       /* Use flexbox to center content */
+     justify-content: center; /* Centers horizontally */
+     align-items: center;     /* Centers vertically */
+}
+#faqNavBar.bottom-sticky .faqHeroContainer .faqBannerImage img {
+    width: 100%;         /* Let the image expand to the width */
+    height: 100%;        /* Let the image expand to the height */
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: center;
+}
+
+#faqNavBar.bottom-sticky .faqHeroContainer .faqBannerImage .containerHero {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    gap: 6px;
+    padding: 10%;
+}
+#faqNavBar.bottom-sticky .faqHeroContainer .faqBannerImage .containerHero div {
+    aspect-ratio: 1 / 1; 
+    background-color: #0066ff;
+    width: 100%;
+    height: 100%;
+}
+
+#faqNavBar.bottom-sticky .faqHeroContainer .faqBannerImage .containerHero div svg {
+    width: 101%;
+    height: 101%;
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: center;
+    fill: #fff;
+}
+#faqNavBar.bottom-sticky .faqHeroContainer .item9 {background-color: #585858 !important;}
+
+.faqHeroContainer .faqBannerText  {
+    display:flex;
+    flex-direction:column;
+    align-items:left;
+    justify-content:center;
+    color: #2A2A2A;
+    text-align: left !important;
+    padding: 5% 0% 5% 5%;
+}
+
+#faqNavBar.top-sticky .faqHeroContainer {
+    display:flex;
+    width: 48%;
+}
+
+#faqNavBar.top-sticky .faqHeroContainer .faqBannerImage {
+    display: flex;   
+}
+
+#faqNavBar.top-sticky .faqHeroContainer .faqBannerImage .containerHero {
+    display: flex;
+    flex-direction: row;
+    padding: 0%;
+}
+#faqNavBar.top-sticky .faqHeroContainer .faqBannerImage .containerHero div {
+    aspect-ratio: 1 / 1; 
+    background-color: #0066ff;
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+}
+
+#faqNavBar.top-sticky .faqHeroContainer .faqBannerImage .containerHero div svg {
+    width: 101%;
+    height: 101%;
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: center;
+    fill: #fff;
+}
+#faqNavBar.top-sticky .faqHeroContainer .item9 {background-color: transparent !important;}
+
+
+#faqNavBar.top-sticky .faqHeroContainer .faqBannerText  {
+    display: none !important;
 }
 
 #faqNavBar.top-sticky header {
+        padding-top: 20px;
     border-bottom: 1px solid #fff;
-    padding-bottom: 10px;
 }
 
-#faqNavBar.top-sticky ul {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+#faqNavBar.top-sticky .nav-static {
+    display: none;
 }
 
-#faqNavBar header {
-margin-top: 0 !important;
+#faqNavBar .faqNavWrapper .nav-item .navFAQlink {
+  text-decoration: none;
+  font-family: "neue-haas-grotesk-display", sans-serif !important;
+  color: #a0a0a0;
+  font-size: 40px;
+  font-weight: 900;
+  border: 0 !important;
+  padding-right: 6px;
+  transition: all 0.2s ease !important;
 }
 
-#faqNavBar header ul{
+#faqNavBar.top-sticky .faqNavWrapper .nav-item .navFAQlink {
+  font-size: 26px;
+  transition: all 0.2s ease !important;
+}
+
+#faqNavBar.top-sticky .faqNavWrapper .nav-item .navFAQlink div {
+    display: none;
+}
+
+#faqNavBar.top-sticky .faqNavWrapper .nav-item .navFAQlink.active { /* Active class applied by JavaScript */
+  color: #2A2A2A !important;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+#faqNavBar.top-sticky .faqNavWrapper .nav-item .navFAQlink.active div {
+    display: inline;
+}
+
+
+#faqNavBar.bottom-sticky .faqNavWrapper .nav-item .navFAQlink div {
+    display: none;
+}
+
+#faqNavBar.bottom-sticky .faqNavWrapper .nav-item .navFAQlink.active { /* Active class applied by JavaScript */
+  color: #a0a0a0 !important;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+#faqNavBar.bottom-sticky .faqNavWrapper .nav-item .navFAQlink.active div {
+    display: none;
+}
+
+
+#faqNavBar .faqNavWrapper ul {
     display: flex;
-    justify-content: stretch;
-    align-items: start;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    list-style-type: none;
-    margin:0 0;
-    max-width:1280px;
-    padding:0
+    list-style-type: none !important;
+}
+#faqNavBar.top-sticky .faqNavWrapper ul {
+    display: inline-flex;
+    width: 100vw;
+    list-style-type: none !important;
+}
+#faqNavBar.top-sticky .faqNavWrapper ul .nav-item {
+    border-bottom: 14px solid #ffffff;
+    padding-bottom: 8px;
+}
+#faqNavBar.top-sticky .faqNavWrapper ul .nav-item:hover {
+    border-bottom: 14px solid #0066ff !important;
+    padding-bottom: 8px;
 }
 
-#faqNavBar div {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-size: clamp(2em, 1.4vw, 4rem);
-  font-weight:600;
-  color: #868686;
-  padding-bottom: 20px;
-  padding-top: 30px;
+#faqNavBar.bottom-sticky .nav-static  {
+    display: flex !important;
+}
+#faqNavBar.bottom-sticky .nav-static .navFAQlink {
+    color: #2a2a2a !important;
 }
 
-#faqNavBar.bottom-sticky div {
-  display: none;
-  transition: all 0.2s ease-in-out;
+#faqNavBar.bottom-sticky .faqNavWrapper ul .nav-item:hover .navFAQlink {
+    color:  #2a2a2a;
+}
+#faqNavBar.bottom-sticky .faqNavWrapper ul .nav-item:hover .navFAQlink div {
+    display: inline !important;
+}
+#faqNavBar.bottom-sticky .faqNavWrapper ul:hover .nav-item .navFAQlink.active {
+    color:  #a0a0a0 !important;
+}
+#faqNavBar.bottom-sticky .faqNavWrapper ul:hover .nav-item .navFAQlink.active div {
+    display: none;
+}
+#faqNavBar.bottom-sticky .faqNavWrapper ul .nav-item:hover .navFAQlink.active {
+    color:  #2a2a2a !important;
+}
+#faqNavBar.bottom-sticky .faqNavWrapper ul:hover .nav-static {
+    display: none !important;
+}
+#faqNavBar.bottom-sticky.faqNavWrapper ul .nav-item:hover .navFAQlink {
+    color:  #2a2a2a;
 }
 
-#faqNavBar.top-sticky div {
-  display: flex;
-  transition: all 2s ease-in-out;
+#faqNavBar.top-sticky .faqNavWrapper ul .nav-item:hover .navFAQlink {
+    color:  #0066ff;
+}
+#faqNavBar.top-sticky .faqNavWrapper ul .nav-item:hover .navFAQlink div {
+    display: inline !important;
+}
+#faqNavBar.top-sticky .faqNavWrapper ul:hover .nav-item .navFAQlink.active {
+    color:  #a0a0a0 !important;
+}
+#faqNavBar.top-sticky .faqNavWrapper ul:hover .nav-item .navFAQlink.active div {
+    display: none;
+}
+#faqNavBar.top-sticky .faqNavWrapper ul .nav-item:hover .navFAQlink.active {
+    color:  #0066ff !important;
+}
+#faqNavBar.top-sticky .faqNavWrapper ul:hover .nav-static {
+    display: none !important;
+}
+#faqNavBar.top-sticky .faqNavWrapper ul .nav-item:hover .navFAQlink {
+    color:  #0066ff;
 }
 
-.nav-item {
-    border-bottom: 1px solid #7d7d7d;
-    border-top: 1px solid #7d7d7d;
-    padding: 14px 0px;
-    margin: 0px !important;
-}
-
-.nav-item:first-child {
-
-}
-
-.navFAQlink {
-  text-decoration: none !;
-  letter-spacing:0.4px !important;
-  font-family: "neue-haas-grotesk-display", sans-serif !important;
-  font-weight:600 !important;
-  color: #003649 !important;
-  border: 1px solid transparent !important;
-  padding: 10px 10px !important;
-  margin: 0px !important;
-  transition: all 0.3s ease !important;
-  display: flexr !important;
-}
-
-.navFAQlink.active { /* Active class applied by JavaScript */
-  color: #ffffff !important;
-  font-weight: 600 !important;
-  background-color: #003649 !important;
-  border: 1px solid #003649 !important;
-  padding: 10px 10px !important;
-  margin: 0px !important;
-  transition: all 0.3s ease;
-}
-
-.navFAQlink:hover {
-  border: 1px solid #2a2a2a !important;
-  padding: 10px 10px !important;
-  transition: all 0.3s ease;
-}
-
-.nav-static {
-  text-decoration: none !;
-  letter-spacing:0.4px !important;
-  font-family: "neue-haas-grotesk-display", sans-serif !important;
-  font-weight:600 !important;
-  color: #ffffff !important;
-  background-color: #003649 !important;
-  border: 1px solid transparent !important;
-  padding: 10px 20px 10px 15px !important;
-  margin: 0px !important;
-  transition: all 0.3s ease !important;
-  display: inline !important;
-  margin: 0px 10px 0px 0px !important;
-}
-
-.faqNavWrapper {
+#faqNavBar .faqNavWrapper {
     display:block;
-    margin:0 auto;
-    padding:0;
+    margin: auto;
 }
 
-.faqNavWrapper ul  {
-    display: flex;                 /* Aligns items in a single row */
-    overflow-x: scroll;              /* Enables horizontal scrolling when content overflows */
-    overflow-y: hidden;             /* Prevents accidental vertical shifting */
-    white-space: nowrap;           /* Keeps links strictly on one line */
-    width: 100%;                   /* Spans the full screen width */
-            /* Smooth momentum scrolling on mobile devices */
-    -webkit-overflow-scrolling: touch; 
-
+#faqNavBar .faqNavWrapper ul  {
+        display: inline-flex;
+    list-style-type: none;
+        margin: 0 !important;
+        padding: 0 !important;
         }      
-        /* width */
-        ::-webkit-scrollbar {
-        width: 6px;
-        }
-        
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-        background: #888; 
-        }
 
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-        background: #555; 
-        }
 
 
 /* FAQ HERO AND SECTION STYLES */
@@ -248,7 +339,7 @@ margin-top: 0 !important;
     padding:0;
 }
 
-.faqHeroContainer .faqBannerText  {
+.faqBodyContainer .faqBannerText  {
     display:flex;
     flex-direction:column;
     align-items:left;
@@ -257,6 +348,7 @@ margin-top: 0 !important;
     text-align: left !important;
     padding: 5% 0% 5% 5%;
 }
+
 
 .faqFillNone .faqBannerText  {
     padding: 5% 5% 5% 0%;
@@ -287,7 +379,7 @@ margin-top: 0 !important;
     border-top: 1px solid #ffffff;
 }
 
-.faqHeroContainer {
+.faqBodyContainer {
     display:flex;
     flex-direction:column !important;
     justify-content: start;
@@ -310,25 +402,24 @@ margin-top: 0 !important;
 }
             }
 
-.faqHeroContainer {
+
+
+.faqBodyContainer {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(275px,1fr));
     margin:30px 0px;
     width: 100%;
 }
-
-
-
-.faqHeroContainer .faqBannerText .faqMSGheader {
+.faqBodyContainer .faqBannerText .faqMSGheader, .faqHeroContainer .faqBannerText .faqMSGheader {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 900;
     font-style: normal;
-    font-size:2.8rem;
+    font-size: 40px;
     letter-spacing:0;
     line-height:1.2;
 }
             
-.faqHeroContainer .faqBannerText .faqMSGtext {
+.faqBodyContainer .faqBannerText .faqMSGtext, .faqHeroContainer .faqBannerText .faqMSGtext {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 400;
     letter-spacing:0;
@@ -359,19 +450,19 @@ margin-top: 0 !important;
     text-wrap: balance;
 }
 
-.faqHeroContainer .faqBannerText .faqMSGtext  strong {
+.faqBodyContainer .faqBannerText .faqMSGtext, .faqHeroContainer .faqBannerText .faqMSGtext  strong {
     font-weight:600
 }
                    
-.faqHeroContainer .faqBannerText .BannerImgLogo {
+.faqBodyContainer .faqBannerText .BannerImgLogo {
     margin-bottom:32px;
 }
             
-.faqHeroContainer .faqBannerText .BannerImgLogo img {
+.faqBodyContainer .faqBannerText .BannerImgLogo img {
     width:250px
 }
                
-.faqHeroContainer .faqBannerText .MessageButton {
+.faqBodyContainer .faqBannerText .MessageButton {
     background-color:#2a2a2a;
     border-radius:32px;
     color:#fff;
@@ -386,7 +477,7 @@ margin-top: 0 !important;
     width:100%
 }
             
-.faqHeroContainer .BannerRight {
+.faqBodyContainer .BannerRight {
     align-items:center;
     background-color:#f6ca15;
     display:flex;
@@ -397,17 +488,6 @@ margin-top: 0 !important;
     position:relative
 }
             
-.faqBannerImage {
-     display: flex;       /* Use flexbox to center content */
-     justify-content: center; /* Centers horizontally */
-     align-items: center;     /* Centers vertically */
-}
-.faqBannerImage img {
-    width: 100%;         /* Let the image expand to the width */
-    height: 100%;        /* Let the image expand to the height */
-    object-fit: cover; /* Scales image while maintaining aspect ratio */
-    object-position: center;
-}
 
 /* Advance - dotcom CSS Media Queries - Screen Sizes */
 /* X-Small */            
@@ -416,16 +496,6 @@ margin-top: 0 !important;
        .faqNavWrapper {
             max-width:100%;
         }   
-
-       .navFAQlink {
-            font-size:16px !important;
-        }
-       .nav-static {
-            font-size:16px !important;
-        }
-       .navFAQlink.active {
-            padding: 10px 20px !important;
-        }
 
        .faqPageWrapper {
             max-width:100%;
@@ -442,13 +512,13 @@ margin-top: 0 !important;
             padding-right: 4px;
         }
 
-       .faqHeroContainer .faqBannerText .faqMSGheader {
-            font-size:2.4rem;
+       .faqBodyContainer .faqBannerText .faqMSGheader {
+
             text-align: center;
             padding-bottom: 4px;
         }
             
-       .faqHeroContainer .faqBannerText .faqMSGtext {
+       .faqBodyContainer .faqBannerText .faqMSGtext, .faqHeroContainer .faqBannerText .faqMSGtext {
             position:relative;
             font-size:1.6rem;
             text-align:center;
@@ -462,16 +532,6 @@ margin-top: 0 !important;
        .faqNavWrapper {
             max-width:100vw;
         }     
-
-       .navFAQlink {
-            font-size:16px !important;
-        }
-       .nav-static {
-            font-size:16px !important;
-        }
-       .navFAQlink.active {
-            padding: 10px 20px !important;
-        }
 
        .faqPageWrapper {
             max-width:549px;
@@ -497,22 +557,22 @@ margin-top: 0 !important;
             padding-top: 10px;
         }
 
-       .faqHeroContainer .faqBannerText .faqMSGheader {
-            font-size:2.6rem;
+       .faqBodyContainer .faqBannerText .faqMSGheader {
+
             text-align: center;
             padding-bottom: 6px;
         }
             
-       .faqHeroContainer .faqBannerText .faqMSGtext {
+       .faqBodyContainer .faqBannerText .faqMSGtext, .faqHeroContainer .faqBannerText .faqMSGtext {
             position:relative;
             font-size:1.6rem;
             text-align:center;
         }
 
-       .faqHeroContainer .faqBannerText .MessageButton {
+       .faqBodyContainer .faqBannerText .MessageButton {
             background-color:#2a2a2a;border-radius:32px;color:#fff;cursor:pointer;font-family:Inter,serif;font-size:1.4rem;font-weight:700;gap:8px;height:50px;margin:32px 0 0;padding:16px 24px;width:100%}
             
-       .faqHeroContainer .BannerRight {
+       .faqBodyContainer .BannerRight {
             align-items:center;
             display:flex;
             flex-grow:1;
@@ -529,12 +589,6 @@ margin-top: 0 !important;
             max-width:768px;
         }      
 
-       .navFAQlink {
-            font-size:18px !important;
-        }
-       .nav-static {
-            font-size:18px !important;
-        }
        .navFAQlink span {
             display: none;
         }
@@ -558,19 +612,19 @@ margin-top: 0 !important;
             padding-top: 10px;
         }
 
-       .faqHeroContainer .faqBannerText .faqMSGheader {
-            font-size:2.8rem;
+       .faqBodyContainer .faqBannerText .faqMSGheader {
+
             text-align: left;
             padding-bottom: 8px;
         }
             
-       .faqHeroContainer .faqBannerText .faqMSGtext {
+       .faqBodyContainer .faqBannerText .faqMSGtext, .faqHeroContainer .faqBannerText .faqMSGtext {
             font-size:2rem;
             text-align:left;
             position:relative
         }
                         
-       .faqHeroContainer .faqBannerText .MessageButton {
+       .faqBodyContainer .faqBannerText .MessageButton {
             background-color:#2a2a2a;
             border-radius:32px;
             color:#fff;
@@ -584,7 +638,7 @@ margin-top: 0 !important;
             width:196px
         }
             
-       .faqHeroContainer .BannerRight {
+       .faqBodyContainer .BannerRight {
             align-items:center;
             display:flex;
             flex-grow:1;
@@ -603,12 +657,6 @@ margin-top: 0 !important;
             max-width:1024px;
         }   
 
-       .navFAQlink {
-            font-size:20px !important;
-        }
-       .nav-static {
-            font-size:20px !important;
-        }
        .navFAQlink span {
             display: contents;
         }
@@ -631,19 +679,19 @@ margin-top: 0 !important;
             padding-top: 10px;
         }
 
-       .faqHeroContainer .faqBannerText .faqMSGheader {
-            font-size:4rem;
+       .faqBodyContainer .faqBannerText .faqMSGheader {
+
             text-align: left;
             padding-bottom: 10px;
         }
             
-       .faqHeroContainer .faqBannerText .faqMSGtext {
+       .faqBodyContainer .faqBannerText .faqMSGtext, .faqHeroContainer .faqBannerText .faqMSGtext {
             font-size:2.4rem;
             text-align:left;
             position:relative
         }
 
-       .faqHeroContainer .faqBannerText .MessageButton {
+       .faqBodyContainer .faqBannerText .MessageButton {
             background-color:#2a2a2a;
             border-radius:32px;
             color:#fff;
@@ -658,7 +706,7 @@ margin-top: 0 !important;
             width:196px
         }
             
-       .faqHeroContainer .BannerRight {
+       .faqBodyContainer .BannerRight {
             align-items:center;
             display:flex;
             flex-grow:1;
@@ -678,13 +726,6 @@ margin-top: 0 !important;
        .faqNavWrapper {
             max-width:1280px;
         }  
-
-       .navFAQlink {
-            font-size:20px !important;
-        }
-       .nav-static {
-            font-size:20px !important;
-        }
        .navFAQlink span {
             display: contents;
         }
@@ -692,8 +733,6 @@ margin-top: 0 !important;
        .faqPageWrapper {
             max-width:1280px;
         }    
-            
-
         
        .faqList {
             font-size: 20px;
@@ -708,19 +747,19 @@ margin-top: 0 !important;
             padding-top: 10px;
         }
 
-       .faqHeroContainer .faqBannerText .faqMSGheader {
-            font-size:4rem;
+       .faqBodyContainer .faqBannerText .faqMSGheader {
+
             text-align: left;
             padding-bottom: 12px;
             }
   
-       .faqHeroContainer .faqBannerText .faqMSGtext {
+       .faqBodyContainer .faqBannerText .faqMSGtext, .faqHeroContainer .faqBannerText .faqMSGtext {
             font-size:2.4rem;
             text-align:left;
             position:relative
             }
             
-       .faqHeroContainer .faqBannerText .MessageButton {
+       .faqBodyContainer .faqBannerText .MessageButton {
             background-color:#2a2a2a;
             border-radius:32px;
             color:#fff;
@@ -735,7 +774,7 @@ margin-top: 0 !important;
             width:196px
             }
             
-       .faqHeroContainer .BannerRight {
+       .faqBodyContainer .BannerRight {
             align-items:center;
             display:flex;
             flex-grow:1;
@@ -789,7 +828,7 @@ margin-top: 0 !important;
     margin-bottom: 10px
 }
 
-.faqHeroContainer .faqBannerText .faqBodyheader {
+.faqBodyContainer .faqBannerText .faqBodyheader {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -927,7 +966,7 @@ margin-top: 0 !important;
 /* X-Small */            
     @media(max-width: 549px)
             {  
-       .faqHeroContainer .faqBannerText .faqBodyheader {
+       .faqBodyContainer .faqBannerText .faqBodyheader {
             font-size:2.4rem;
             text-align: center;
             padding-bottom: 8px;
@@ -948,7 +987,7 @@ margin-top: 0 !important;
 /* Small */            
     @media(min-width: 549px)
             {
-       .faqHeroContainer .faqBannerText .faqBodyheader {
+       .faqBodyContainer .faqBannerText .faqBodyheader {
             font-size:2.6rem;
             text-align: center;
             padding-bottom: 14px;
@@ -969,7 +1008,7 @@ margin-top: 0 !important;
 /* Medium */           
     @media(min-width: 768px)
             { 
-       .faqHeroContainer .faqBannerText .faqBodyheader {
+       .faqBodyContainer .faqBannerText .faqBodyheader {
             font-size:2.8rem;
             text-align: left;
             padding-bottom: 16px;
@@ -984,7 +1023,7 @@ margin-top: 0 !important;
 /* Large */           
     @media(min-width: 1024px)
             {
-       .faqHeroContainer .faqBannerText .faqBodyheader {
+       .faqBodyContainer .faqBannerText .faqBodyheader {
             font-size:4rem;
             text-align: left;
             padding-bottom: 18px;
@@ -1009,7 +1048,7 @@ margin-top: 0 !important;
     @media(min-width: 1280px)
             {
 
-       .faqHeroContainer .faqBannerText .faqBodyheader {
+       .faqBodyContainer .faqBannerText .faqBodyheader {
             font-size:4rem;
             text-align: left;
             padding-bottom: 20px;
@@ -1063,7 +1102,7 @@ margin-top: 0 !important;
      align-items: left;    
     object-fit: cover; /* Scales image while maintaining aspect ratio */
     object-position: top;
-    fill: #868686 !important;
+    fill: #868686;
     margin-bottom: 1.4rem !important;
 }
 
@@ -1120,17 +1159,20 @@ margin-top: 0 !important;
 }
 
 .faqContactContainer:hover .faqContactItem {
-opacity: 50%;
+opacity: 10%;
 }
 
 .faqContactContainer .faqContactItem:hover {
 opacity: 100%;
-background-color: rgba(255, 255, 255, 0.736);
-z-index: 1000;
-filter: drop-shadow(5px 5px 10px #37373718);
-outline: 7px solid  rgba(255, 255, 255, 0.736);
-transform: scale(1.25)translate(10%, 10%)
+z-index: 10;
 }
+.faqContactContainer .faqContactItem:hover .siteLogo {
+background-color: #003649;
+fill: #f8f8f8;
+}
+
+
+
 
 .faqContactContainer .faqContactItem {
 opacity: 100%;
@@ -1138,7 +1180,7 @@ outline: 7px solid  rgba(255, 255, 255, 0);
 transition: all 0.3s ease !important;
 }
 
-.faqFillContacts .faqHeroContainer {
+.faqFillContacts .faqBodyContainer {
     margin-top: 6vw; 
     margin-bottom: 0;
 }
@@ -1355,27 +1397,7 @@ margin-bottom: 10px;
 
 
 /* TOP LOGO ANIMATION STYLES */
-            .faqBannerImage .containerHero {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr)); 
-            gap: 6px;
-            padding: 10%;
-            }
-            .faqBannerImage .containerHero div {
-            aspect-ratio: 1 / 1; 
-            background-color: #0066ff;
-            width: 100%;
-            height: 100%;
-            }
 
-            .faqBannerImage .containerHero div svg {
-            width: 101%;
-            height: 101%;
-            object-fit: cover; /* Scales image while maintaining aspect ratio */
-            object-position: center;
-            fill: #fff;
-            }
-            .item9 {background-color: #585858 !important;}
 
             .containerEnd .item1 {order: 1; transform: translateY(-60vh) translateX(-50vw) scale(2.5); transition: all 1s easy-in;}
             .containerEnd .item2 {order: 2; transform: translateY(-80vh) translateX(1vw); transition: all 1s easy-in;}
@@ -1389,21 +1411,3 @@ margin-bottom: 10px;
 
 
   
-
-
-    @keyframes slideOut {
-    from {
-      transform: translateX(-10vw) translateY(-10vh);
-    }
-    to {
-      transform: translateX(0%) translateY(0%);
-    }
-  }
-
-  .item1 {
-    animation: slideOut  ;
-    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
-    animation-timeline: view();
-    animation-range: contain;
-  }
-
