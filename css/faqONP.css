@@ -40,7 +40,8 @@ body.page-type__piano .custom-html
 }
 
 .faqQcontainer {
-  padding: 10px 0px 0px 0px !important;
+  padding: 10px 0px 10px 0px !important;
+  margin-bottom: 20px;
   display: none;
   background-color: transparent !important;
   overflow: hidden;
@@ -48,13 +49,216 @@ body.page-type__piano .custom-html
   font-weight: 200 !important;
 }
 
+.faqSectionHed {
+       font-family: "neue-haas-grotesk-display", sans-serif;
+       font-size: 60px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 1.1; 
+}
 
-/* FAQ NAVBAR STYLES */
+
+/* FAQ NAVBAR STYLES - BASE */
+#faqNav {
+    width: 100%;
+    background-color: #1a1a1a;
+    z-index: 500;
+    will-change: transform; 
+    align-items: center;
+}
+#faqNav .faqNavContainr {
+    max-width:1280px; 
+}
+.navTXTbx ul {
+    margin: 0;
+}
+.navTXTbx ul a {
+    border: 0;
+}
+.navTXTbx ul .navTXT .navFAQli {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 1.1;
+    color: #2A2A2A;
+}
+
+/* FAQ NAVBAR STYLES - BOTTOM STICKY */
+#faqNav.bottom-sticky {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    transition: all 0.5s ease-out;
+}
+#faqNav.bottom-sticky .faqNavContainr {
+    display:flex; 
+    flex-direction: column; 
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin:0 auto;
+    height: 100vh; 
+    padding: 5% 5% 5% 10%;
+}
+#faqNav.bottom-sticky .navIMGbx {
+padding-right: 0rem;
+}
+#faqNav.bottom-sticky .navTXTbx {
+    padding-top: 20px;
+}
+
+#faqNav.bottom-sticky .navLOGOcontainer {
+    width: 60rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    gap: 20px;
+    transition: all 0.2s ease-in-out;
+}
+#faqNav.bottom-sticky .navLOGOcontainer div {
+    aspect-ratio: 1 / 1; 
+}
+
+#faqNav.bottom-sticky .navLOGOcontainer div svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: center;
+    fill:#00b7ff;
+    background-color: transparent;
+}
+#faqNav.bottom-sticky .navTXTbx ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: left;
+}
+
+#faqNav.bottom-sticky .navTXTbx ul .navTXT .navFAQli {
+    font-size: 60px;
+    color:  #808080;
+}
+#faqNav.bottom-sticky .navTXTbx ul .navTXTstatic .navFAQli {
+    color:  #fff;
+    display: inline-block;
+}
+
+
+
+/* FAQ NAVBAR STYLES - TOP STICKY */
+#faqNav.top-sticky {
+    position: sticky !important;
+    top: 0px;
+    left: 0;
+    bottom: auto; /* Overrides the previous bottom rule */
+    background-color: #f8f8f8;
+    transition: all 0.5s ease-in-out;
+}
+#faqNav.top-sticky .faqNavContainr {
+    width: 100%;
+    display:flex; 
+    flex-direction:row; 
+    align-items: flex-end;
+    margin:0 auto;
+    margin-bottom: calc(100vh - 400px);
+    padding-bottom: 20px;
+    height: 180px; 
+}
+#faqNav.top-sticky .navIMGbx {
+}
+#faqNav.top-sticky .navTXTbx {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#faqNav.top-sticky .navLOGOcontainer {
+    width: 6rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    gap: 1px;
+    transition: all 0.2s ease-in-out;
+}
+#faqNav.top-sticky .navLOGOcontainer div {
+    aspect-ratio: 1 / 1; 
+}
+
+#faqNav.top-sticky .navLOGOcontainer div svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: center;
+    fill:#00b7ff;
+    background-color:#00b7ff;
+}
+#faqNav.top-sticky .navTXTbx ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    text-align: left;
+}
+#faqNav.top-sticky .navTXTbx ul li {
+    width: 100%;
+    white-space: nowrap;
+    margin: 0 1rem;
+}
+#faqNav.top-sticky .faqNavContainr .navTXTbx ul .navTXT .navFAQli {
+    font-size: 1em;
+    color:  #808080;
+
+}
+#faqNav.top-sticky .navTXTbx ul .navTXTstatic .navFAQli {
+    display: none;
+}
+
+
+#faqNav.bottom-sticky .faqOverlayImg {
+    position: absolute;
+    width: calc(50% + -640px + 570px); 
+    height: 100%;
+    max-height: 100vh;
+    pointer-events: none;
+}
+#faqNav.bottom-sticky .faqOverlayImg img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover !important;
+object-position: right bottom;
+filter: drop-shadow(30px 10px 14px #141414);
+  transition: all 0.3s ease-in-out;
+  will-change: transform;
+      transform: rotateZ(0deg) translate(0px, -17%);
+}
+
+#faqNav.top-sticky .faqOverlayImg {
+    position: absolute;
+    width: calc(50% + -640px + 570px); 
+    height: 100%;
+    max-height: 100vh;
+    top: 0;
+    pointer-events: none;
+}
+#faqNav.top-sticky .faqOverlayImg img {
+  width: 40%;
+  height: 30vh;
+  object-fit: cover !important;
+object-position: right top;
+filter: drop-shadow(30px 10px 14px #14141448);
+  transition: all 0.3s ease-in-out;
+  will-change: transform;
+      transform: rotateZ(60deg) translate(-60px, 0%);
+}
+
+
+
+
+
 #faqNavBar {
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: #1a1a1a;
     z-index: 1000;
-
     will-change: transform; 
     align-items: center;
 }
@@ -64,7 +268,7 @@ body.page-type__piano .custom-html
     bottom: 0;
     left: 0;
     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.14));
-    background-color: #fff;
+    background-color: #1a1a1a;
     transition: all 0.5s ease-out;
 }
 
@@ -75,7 +279,7 @@ body.page-type__piano .custom-html
     bottom: auto; /* Overrides the previous bottom rule */
     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.14));
     height: auto;
-    background-color: #fff;
+    background-color: #434343;
     transition: all 0.5s ease-in-out;
 }
 
@@ -106,12 +310,6 @@ body.page-type__piano .custom-html
      justify-content: center; /* Centers horizontally */
      align-items: center;     /* Centers vertically */
 }
-#faqNavBar.bottom-sticky .faqHeroContainer .faqBannerImage img {
-    width: 100%;         /* Let the image expand to the width */
-    height: 100%;        /* Let the image expand to the height */
-    object-fit: cover; /* Scales image while maintaining aspect ratio */
-    object-position: center;
-}
 
 #faqNavBar.bottom-sticky .faqHeroContainer .faqBannerImage .containerHero {
     display: grid;
@@ -121,7 +319,7 @@ body.page-type__piano .custom-html
 }
 #faqNavBar.bottom-sticky .faqHeroContainer .faqBannerImage .containerHero div {
     aspect-ratio: 1 / 1; 
-    background-color: #0066ff;
+    background-color: transparent;
     width: 100%;
     height: 100%;
 }
@@ -131,7 +329,7 @@ body.page-type__piano .custom-html
     height: 101%;
     object-fit: cover; /* Scales image while maintaining aspect ratio */
     object-position: center;
-    fill: #fff;
+    fill:#0066ff;
 }
 #faqNavBar.bottom-sticky .faqHeroContainer .item9 {background-color: #585858 !important;}
 
@@ -140,7 +338,7 @@ body.page-type__piano .custom-html
     flex-direction:column;
     align-items:left;
     justify-content:center;
-    color: #2A2A2A;
+    color: #fff;
     text-align: left !important;
     padding: 5% 0% 5% 5%;
 }
@@ -195,7 +393,7 @@ body.page-type__piano .custom-html
 #faqNavBar .faqNavWrapper .nav-item .navFAQlink {
   text-decoration: none;
   font-family: "neue-haas-grotesk-display", sans-serif !important;
-  color: #a0a0a0;
+  color: #fff;
   font-size: 40px;
   font-weight: 900;
   border: 0 !important;
@@ -222,11 +420,6 @@ body.page-type__piano .custom-html
     display: inline;
 }
 
-
-#faqNavBar.bottom-sticky .faqNavWrapper .nav-item .navFAQlink div {
-    display: none;
-}
-
 #faqNavBar.bottom-sticky .faqNavWrapper .nav-item .navFAQlink.active { /* Active class applied by JavaScript */
   color: #a0a0a0 !important;
   z-index: 10;
@@ -237,9 +430,9 @@ body.page-type__piano .custom-html
     display: none;
 }
 
-
 #faqNavBar .faqNavWrapper ul {
     display: flex;
+    flex-direction: column;
     list-style-type: none !important;
 }
 #faqNavBar.top-sticky .faqNavWrapper ul {
@@ -314,7 +507,6 @@ body.page-type__piano .custom-html
 }
 
 #faqNavBar .faqNavWrapper ul  {
-        display: inline-flex;
     list-style-type: none;
         margin: 0 !important;
         padding: 0 !important;
@@ -362,7 +554,7 @@ body.page-type__piano .custom-html
 
 .faqFillShaded .faqPageWrapper {
     display:flex;
-    flex-direction:row !important;
+    flex-direction:row-reverse !important;
     margin:0 auto;
     padding:0;
 }
@@ -541,7 +733,6 @@ body.page-type__piano .custom-html
         }
 
        .faqBodyContainer .faqBannerText .faqMSGheader {
-
             text-align: center;
             padding-bottom: 4px;
         }
@@ -586,7 +777,6 @@ body.page-type__piano .custom-html
         }
 
        .faqBodyContainer .faqBannerText .faqMSGheader {
-
             text-align: center;
             padding-bottom: 6px;
         }
@@ -641,7 +831,6 @@ body.page-type__piano .custom-html
         }
 
        .faqBodyContainer .faqBannerText .faqMSGheader {
-
             text-align: left;
             padding-bottom: 8px;
         }
@@ -708,7 +897,6 @@ body.page-type__piano .custom-html
         }
 
        .faqBodyContainer .faqBannerText .faqMSGheader {
-
             text-align: left;
             padding-bottom: 10px;
         }
@@ -776,7 +964,6 @@ body.page-type__piano .custom-html
         }
 
        .faqBodyContainer .faqBannerText .faqMSGheader {
-
             text-align: left;
             padding-bottom: 12px;
             }
@@ -825,7 +1012,6 @@ body.page-type__piano .custom-html
 }
 
 .faqBodyContainer {
-    padding: 50px 0px;
     position:relative
 }
             
@@ -914,7 +1100,7 @@ body.page-type__piano .custom-html
 /* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
 .faqQuestionRow p, .staticWrap p  {font-size: 1.6rem;}}
 /* X-Large */ @media(min-width: 1280px) {  
-.faqQuestionRow p, .staticWrap p  {font-size: 1.8rem;}}
+.faqQuestionRow p, .staticWrap p  {font-size: 24px;}}
 
 .faqQuestionRow img {
     padding: 6px 0px;
@@ -932,6 +1118,81 @@ body.page-type__piano .custom-html
     width: 48%;
     height: 100%;
     position: relative;
+}
+.faqSectionContentsWrap:hover .faqSectionItem .faqHow a svg {
+    fill: #fff;
+    background-color: #d2d2d2;
+    border-radius: 50%;
+    border: 2px solid #d2d2d2;
+    transition: all 0.2s ease-in-out;
+} 
+
+.faqSectionContentsWrap .faqSectionItem:hover .faqHow a svg {
+    fill: #fff;
+    background-color: #000000;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    transition: all 0.2s ease-in-out;
+}
+
+.faqHow {
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+width: 100%;
+}
+
+.faqHow .faqHowItem {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.faqHow {
+    margin: 10px 0 20px 0;
+}
+
+.faqHow svg {
+    flex-direction: row;
+    align-self: center;
+}
+
+.faqHow a svg {
+    fill: #fff;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+    border: 2px solid #2a2a2a;
+    transition: all 0.1s ease-in-out;
+}
+
+.faqHowText {
+  display: inline-block; /* Keeps the container bound to text width */
+  overflow: hidden;      /* Prevents any layout bleeding */
+}
+
+.faqHowText span {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    position:relative;
+    color:  #555555;
+    margin: 0 10px;
+  display: none;
+  white-space: nowrap;   /* Ensures text stays on a single line */
+  /* Shorthand: name | duration | timing | delay | fill-mode */
+  animation: clippath 1.5s ease-in-out 4s forwards;
+}
+.faqHow a:hover svg {
+    fill: #2a2a2a !important;
+    background-color: #fff !important;
+    border-radius: 50%;
+    border: 0px solid #2a2a2a !important;
+    transition: all 0.1s ease-in-out;
+}
+
+.faqHow .faqHowItem:hover .faqHowText span{
+    display: inline;
+  animation: clippath 1.0s ease-in-out;
 }
 
 
@@ -1137,7 +1398,9 @@ body.page-type__piano .custom-html
             }
 
 .faqQuestionRow button, .faqQuestionRowStatic div  {
-            font-size:2.4rem;
+            font-size:40px;
+            line-height: 1.2;
+            padding-top: 4px;
             text-align:left;
             }
 .faqQuestionRowStatic p  {

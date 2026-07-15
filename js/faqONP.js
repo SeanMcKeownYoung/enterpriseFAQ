@@ -16,20 +16,20 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-    // Select the faqNavBar element
-const faqNavBar = document.getElementById('faqNavBar');
+    // Select the faqNav element
+const faqNav = document.getElementById('faqNav');
 
-// Get the exact trigger threshold (height of the hero section minus faqNavBar height)
-const triggerPoint = 1000 - faqNavBar.offsetHeight;
+// Get the exact trigger threshold (height of the hero section minus faqNav height)
+const triggerPoint = 1770 - faqNav.offsetHeight;
 
 window.addEventListener('scroll', () => {
     // Check if user has scrolled past the calculated initial bottom placement
     if (window.scrollY >= triggerPoint) {
-        faqNavBar.classList.remove('bottom-sticky');
-        faqNavBar.classList.add('top-sticky');
+        faqNav.classList.remove('bottom-sticky');
+        faqNav.classList.add('top-sticky');
     } else {
-        faqNavBar.classList.remove('top-sticky');
-        faqNavBar.classList.add('bottom-sticky');
+        faqNav.classList.remove('top-sticky');
+        faqNav.classList.add('bottom-sticky');
     }
 });
 
@@ -95,10 +95,10 @@ const trigger = 200 - faqBannerImage.offsetHeight;
 window.addEventListener('scroll', () => {
     // Check if user has scrolled past the calculated initial bottom placement
     if (window.scrollY >= trigger) {
-        faqNavBar.classList.remove('containerStart');
-        faqNavBar.classList.add('containerEnd');
+        faqNav.classList.remove('containerStart');
+        faqNav.classList.add('containerEnd');
     } else {
-        faqNavBar.classList.remove('containerEnd');
-        faqNavBar.classList.add('containerStart');
+        faqNav.classList.remove('containerEnd');
+        faqNav.classList.add('containerStart');
     }
 });
