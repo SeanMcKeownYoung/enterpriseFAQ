@@ -4,15 +4,14 @@ var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var faqQcontainer = this.nextElementSibling;
-    if (faqQcontainer.style.display === "block") {
-      faqQcontainer.style.display = "none";
+    var faqQuestion = this.nextElementSibling;
+    if (faqQuestion.style.display === "block") {
+      faqQuestion.style.display = "none";
     } else {
-      faqQcontainer.style.display = "block";
+      faqQuestion.style.display = "block";
     }
   });
 }
-
 
 
 
@@ -32,6 +31,7 @@ window.addEventListener('scroll', () => {
         faqNav.classList.add('bottom-sticky');
     }
 });
+
 
 function highlightActiveBookmark() {
   const currentHash = window.location.hash; // Extracts "#about", "#contact", etc.
@@ -102,3 +102,5 @@ window.addEventListener('scroll', () => {
         faqNav.classList.add('containerStart');
     }
 });
+
+

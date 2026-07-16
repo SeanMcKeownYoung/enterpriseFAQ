@@ -666,7 +666,7 @@
 
  <div style="display: none;">
   <svg xmlns="http://www.w3.org/2000/svg">
-        <!-- TOGGLE CARRET -->   
+        <!-- TOGGLE faqCarret -->   
         <symbol id="ToggleCarret"  viewBox="0 0 19.5 11.5" >
             <defs></defs><polyline points="17.75 1.75 9.75 9.75 1.75 1.75"/>
         </symbol>
@@ -745,43 +745,45 @@
                 </div>
 
         </nav>
+        <div class="faqSectionImg">
+            <div>
+                <img src="images/magGlassWorked.png" alt="Magnifying Glass">
+            </div>
+        </div>
     </header>
+
+
+
 
 <!-- ONLINE NP BODY 001 -->  
  <section class="faqFillShaded" id="Register" style="padding: 12rem 0 6rem 0;">
+
     <div class="faqPageWrapper"> 
-        <div class="faqBodyContainer">
-            <div class="faqSectionHed">How do I register/sign in?</div>
+        <div class="faqBodyContainer faqSectionHed">
+            <h2>How do I register/sign in?</h2>
         </div>
     </div>
-    <div class="faqPageWrapper"> 
-        <div class="faqBodyContainer"style="padding: 0; margin: 0;">
-            <div class="faqBodyImage" >
-                <img src="https://placehold.co/600x600?text=FAQ illo" alt="...">
-            </div>
-        </div>
+    <div class="faqPageWrapper" > 
         <div class="faqBodyContainer">
-            <div class="faqBannerText">
-                <div class="faqMSGcontainer"style="padding: 0; margin: 0;">
+            <div class="faqTextContainer">
 
-                    <div class="faqQuestionRow"><!-- QUESTION 1 SINGLE--> 
+
+                    <div class="faqQuestion"><!-- QUESTION 1--> 
                         <button class="accordion faqAccordian">Do I need to sign in?
-                            <svg class="carret" width="20" height="20" aria-hidden="true">
+                            <svg class="faqCarret" width="20" height="20" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
-                            <div class="faqQsingle">
-                                <div class=""><p><strong>You may be asked to sign in. </strong>Use the same email address and password you created for your subscription. Once signed in, your newspaper will open.</p></div>
-                            </div>
+                        <div class="faqAnswer ">
+                            <p><strong>You may be asked to sign in. </strong>Use the same email address and password you created for your subscription. Once signed in, your newspaper will open.</p>
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow"><!-- QUESTION 2 DOUBLE CLICKY--> 
+                    <div class="faqQuestion"><!-- QUESTION 2--> 
                         <button class="accordion faqAccordian">How do I get access to the online newspaper with my subscription account?
-                            <svg class="carret" width="20" height="20" aria-hidden="true">
+                            <svg class="faqCarret" width="20" height="20" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             <div class="faqHow">
                                 <div class="faqHowItem" style="margin-right: 10px;">
@@ -800,12 +802,12 @@
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow"><!-- QUESTION 3 DOUBLE CLICKY--> 
+                    <div class="faqQuestion"><!-- QUESTION 3--> 
                         <button class="accordion faqAccordian">How do I log in?
-                            <svg class="carret" width="20" height="20" aria-hidden="true">
+                            <svg class="faqCarret" width="20" height="20" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                                     <p> <strong>Through the browser,</strong> please ensure you sign in at the top-right corner of the webpage with your subscription email address and password.</p>
                                     <p><strong>Through the App,</strong> click on the menu  on the top-right corner to sign in under “Account”. </p>
                             <div class="faqHow">
@@ -825,12 +827,12 @@
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow"><!-- QUESTION 2 DOUBLE CLICKY--> 
+                    <div class="faqQuestion"><!-- QUESTION 4--> 
                         <button class="accordion faqAccordian">How do I get access to the online newspaper with my subscription account?
-                            <svg class="carret" width="20" height="20" aria-hidden="true">
+                            <svg class="faqCarret" width="20" height="20" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             <div class="faqHow">
                                 <div class="faqHowItem" style="margin-right: 10px;">
@@ -849,9 +851,16 @@
                         </div>
                     </div> 
 
-                </div>
+
             </div>
         </div>
+
+        <div class="faqBodyContainer"style="padding: 0; margin: 0;">
+            <div class="faqBodyImage">
+                <img src="https://placehold.co/600x600?text=FAQ illo" alt="...">
+            </div>
+        </div>
+        
     </div>
 </section>
 
@@ -865,16 +874,16 @@
             </div>
             </div>
         <div class="faqBodyContainer">
-            <div class="faqBannerText">
+            <div class="faqTextContainer">
                 <div class="faqMSGcontainer">
                     <div class="faqBodyheader">How do I access the paper?</div>
 
-                    <div class="faqQuestionRow"><!-- QUESTION 1 SINGLE--> 
+                    <div class="faqQuestion"><!-- QUESTION 1 SINGLE--> 
                         <button class="accordion faqAccordian">Do I need to sign in?
-                            <svg class="carret" width="16" height="16" aria-hidden="true">
+                            <svg class="faqCarret" width="16" height="16" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                             <div class="faqQsingle">
                                 <div class=""><img src="https://placehold.co/600x200" class="img-fluid" alt="..."></div>
                                 <div class=""><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
@@ -882,12 +891,12 @@
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow"><!-- QUESTION 2 DOUBLE CLICKY--> 
+                    <div class="faqQuestion"><!-- QUESTION 2 DOUBLE CLICKY--> 
                         <button class="accordion faqAccordian">How do I get access to the online newspaper with my subscription account?
-                            <svg class="carret" width="16" height="16" aria-hidden="true">
+                            <svg class="faqCarret" width="16" height="16" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                             <div class="faqQdouble">
                                 <div class="flex-item1"><img src="https://placehold.co/600x800" class="" alt="..."></div>
                                 <div class="flex-item2">
@@ -898,12 +907,12 @@
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow"><!-- QUESTION 3 DOUBLE STATIC--> 
+                    <div class="faqQuestion"><!-- QUESTION 3 DOUBLE STATIC--> 
                         <button class="accordion faqAccordian">How do I log in?
-                            <svg class="carret" width="16" height="16" aria-hidden="true">
+                            <svg class="faqCarret" width="16" height="16" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                             <div class="faqQdouble">
                                 <div class="flex-item1"><img src="https://placehold.co/600x800" class="" alt="..."></div>
                                 <div class="flex-item2">
@@ -912,11 +921,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
-
-                    <div class="faqQuestionRow" style="padding-top: 3rem;"><!-- QUESTION 4--> 
-                        <button style="color: #2a2a2a;">Still having trouble? <a href="#Home" class="bLink">Click here.</a>
-                        </button>
                     </div> 
 
                 </div>
@@ -935,16 +939,16 @@
             </div>
             </div>
         <div class="faqBodyContainer">
-            <div class="faqBannerText">
+            <div class="faqTextContainer">
                 <div class="faqMSGcontainer">
                     <div class="faqBodyheader">How do I navigate the paper?</div>
 
-                    <div class="faqQuestionRow"><!-- QUESTION 1 SINGLE--> 
+                    <div class="faqQuestion"><!-- QUESTION 1 SINGLE--> 
                         <button class="accordion faqAccordian">Do I need to sign in?
-                            <svg class="carret" width="16" height="16" aria-hidden="true">
+                            <svg class="faqCarret" width="16" height="16" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                             <div class="faqQsingle">
                                 <div class=""><img src="https://placehold.co/600x200" class="img-fluid" alt="..."></div>
                                 <div class=""><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
@@ -952,12 +956,12 @@
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow"><!-- QUESTION 2 DOUBLE CLICKY--> 
+                    <div class="faqQuestion"><!-- QUESTION 2 DOUBLE CLICKY--> 
                         <button class="accordion faqAccordian">How do I get access to the online newspaper with my subscription account?
-                            <svg class="carret" width="16" height="16" aria-hidden="true">
+                            <svg class="faqCarret" width="16" height="16" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                             <div class="faqQdouble">
                                 <div class="flex-item1"><img src="https://placehold.co/600x800" class="" alt="..."></div>
                                 <div class="flex-item2">
@@ -968,12 +972,12 @@
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow"><!-- QUESTION 3 DOUBLE STATIC--> 
+                    <div class="faqQuestion"><!-- QUESTION 3 DOUBLE STATIC--> 
                         <button class="accordion faqAccordian">How do I log in?
-                            <svg class="carret" width="16" height="16" aria-hidden="true">
+                            <svg class="faqCarret" width="16" height="16" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                             <div class="faqQdouble">
                                 <div class="flex-item1"><img src="https://placehold.co/600x800" class="" alt="..."></div>
                                 <div class="flex-item2">
@@ -984,8 +988,8 @@
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow" style="padding-top: 3rem;"><!-- QUESTION 4--> 
-                        <button style="color: #2a2a2a;">Still having trouble? <a href="#Home" class="bLink">Click here.</a>
+                    <div class="faqQuestion" style="padding-top: 3rem;"><!-- QUESTION 4--> 
+                        <button style="color: #2a2a2a;">Still having trouble? <a href="#Home" class="">Click here.</a>
                         </button>
                     </div> 
 
@@ -1005,16 +1009,16 @@
             </div>
             </div>
         <div class="faqBodyContainer">
-            <div class="faqBannerText">
+            <div class="faqTextContainer">
                 <div class="faqMSGcontainer">
                     <div class="faqBodyheader">How do I manage my account/billing?</div>
 
-                    <div class="faqQuestionRow"><!-- QUESTION 1 SINGLE--> 
+                    <div class="faqQuestion"><!-- QUESTION 1 SINGLE--> 
                         <button class="accordion faqAccordian">Do I need to sign in?
-                            <svg class="carret" width="16" height="16" aria-hidden="true">
+                            <svg class="faqCarret" width="16" height="16" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                             <div class="faqQsingle">
                                 <div class=""><img src="https://placehold.co/600x200" class="img-fluid" alt="..."></div>
                                 <div class=""><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
@@ -1022,12 +1026,12 @@
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow"><!-- QUESTION 2 DOUBLE CLICKY--> 
+                    <div class="faqQuestion"><!-- QUESTION 2 DOUBLE CLICKY--> 
                         <button class="accordion faqAccordian">How do I get access to the online newspaper with my subscription account?
-                            <svg class="carret" width="16" height="16" aria-hidden="true">
+                            <svg class="faqCarret" width="16" height="16" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                             <div class="faqQdouble">
                                 <div class="flex-item1"><img src="https://placehold.co/600x800" class="" alt="..."></div>
                                 <div class="flex-item2">
@@ -1038,12 +1042,12 @@
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow"><!-- QUESTION 3 DOUBLE STATIC--> 
+                    <div class="faqQuestion"><!-- QUESTION 3 DOUBLE STATIC--> 
                         <button class="accordion faqAccordian">How do I log in?
-                            <svg class="carret" width="16" height="16" aria-hidden="true">
+                            <svg class="faqCarret" width="16" height="16" aria-hidden="true">
                             <use xlink:href="#ToggleCarret"></use></svg>
                         </button>
-                        <div class="faqQcontainer">
+                        <div class="faqAnswer">
                             <div class="faqQdouble">
                                 <div class="flex-item1"><img src="https://placehold.co/600x800" class="" alt="..."></div>
                                 <div class="flex-item2">
@@ -1054,8 +1058,8 @@
                         </div>
                     </div> 
 
-                    <div class="faqQuestionRow" style="padding-top: 3rem;"><!-- QUESTION 4--> 
-                        <button style="color: #2a2a2a;">Still having trouble? <a href="#Home" class="bLink">Click here.</a>
+                    <div class="faqQuestion" style="padding-top: 3rem;"><!-- QUESTION 4--> 
+                        <button style="color: #2a2a2a;">Still having trouble? <a href="#Home" class="">Click here.</a>
                         </button>
                     </div> 
 
@@ -1072,7 +1076,7 @@
 <section class="faqFillShade faqFillContacts" id="Contacts" >
     <div class="faqPageWrapper">
         <div class="faqBodyContainer">
-            <div class="faqBannerText">
+            <div class="faqTextContainer">
                 <div class="faqMSGcontainer">
                     <div class="faqBodyheader">How do I contact customer service?</div>
                 </div>
