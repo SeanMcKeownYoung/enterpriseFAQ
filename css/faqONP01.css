@@ -166,7 +166,7 @@ padding-right: 6px;
     color: #ffffff !important;
 }
 .navFAQlink.active { /* Active class applied by JavaScript */
-  color: #00b7ff !important;
+  color: #ffffff;
   z-index: 10;
   transition: all 0.3s ease;
 }
@@ -179,7 +179,11 @@ padding-right: 6px;
   border-bottom: 10px solid #00b7ff;
   transition: all 0.3s ease;
 }
-
+#faqNavBar.bottom-sticky .navFAQlink.active { /* Active class applied by JavaScript */
+  z-index: 10;
+  border-bottom: 0px solid transparent;
+  transition: all 0.3s ease;
+}
 
 .faqNavWrapper {
     display:block;
@@ -1753,6 +1757,33 @@ filter: drop-shadow(30px 10px 14px #14141448);
     border-bottom: 10px solid #ff8819 !important;
 }
 
+
+#faqNavBar.bottom-sticky .hoverBlue .navFAQlink.active {
+    color: #00b7ff !important;
+}
+
+#faqNavBar.bottom-sticky .hoverGold .navFAQlink.active {
+    color: #ffca2b !important;
+}
+
+#faqNavBar.bottom-sticky .hoverRed .navFAQlink.active {
+    color: #ff5e5e ;
+}
+
+#faqNavBar.bottom-sticky .hoverGreen .navFAQlink.active {
+    color: #92ff5c ;
+}
+
+#faqNavBar.bottom-sticky .hoverViolet .navFAQlink.active {
+    color: #bc69ff ;
+}
+
+#faqNavBar.bottom-sticky .hoverOrange .navFAQlink.active {
+    color: #ff8819 ;
+}
+#faqNavBar.bottom-sticky .hoverOrange .navFAQlink {
+    color: #535353 ;
+}
 
 .bodyBlue .accordionFAQbutton:not(.collapsed) {
       color: #007bab !important;
