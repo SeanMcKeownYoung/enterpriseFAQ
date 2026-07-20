@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const faqNavBar = document.getElementById('faqNavBar');
 
 // Get the exact trigger threshold (height of the hero section minus faqNavBar height)
-const triggerPoint = 900 - faqNavBar.offsetHeight;
+const triggerPoint = 800 - faqNavBar.offsetHeight;
 
 window.addEventListener('scroll', () => {
     // Check if user has scrolled past the calculated initial bottom placement
@@ -49,6 +49,14 @@ window.addEventListener('scroll', () => {
     }
 });
 
+window.onscroll = function(ev) {
+	if (window.scrollY > 500) {
+		document.getElementById("faqNavBar").classList.add("scrollToBottom");
+	}
+	else{
+		document.getElementById("faqNavBar").classList.remove("scrollToBottom");
+	}
+};
 
 
 function highlightActiveBookmark() {

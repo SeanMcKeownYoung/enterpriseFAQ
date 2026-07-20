@@ -195,7 +195,8 @@ padding-right: 6px;
 
         }      
 
-
+: none;
+}
 
 /* FAQ HERO AND SECTION STYLES */
 .faqHeroFull .faqPageWrapper {
@@ -1704,27 +1705,27 @@ filter: drop-shadow(30px 10px 14px #14141448);
 }
 
 
-.hoverBlue .navFAQlink.active {
+#faqNavBar.top-sticky .hoverBlue .navFAQlink.active {
     color: #00b7ff !important;
     border-bottom: 10px solid #00b7ff !important;
 }
 
-.hoverGold .navFAQlink.active {
+#faqNavBar.top-sticky .hoverGold .navFAQlink.active {
     color: #ffca2b !important;
     border-bottom: 10px solid #ffca2b !important;
 }
 
-.hoverRed .navFAQlink.active {
+#faqNavBar.top-sticky .hoverRed .navFAQlink.active {
     color: #ff5e5e !important;
     border-bottom: 10px solid #ff5e5e !important;
 }
 
-.hoverGreen .navFAQlink.active {
+#faqNavBar.top-sticky .hoverGreen .navFAQlink.active {
     color: #92ff5c !important;
     border-bottom: 10px solid #92ff5c !important;
 }
 
-.hoverOrange .navFAQlink.active {
+#faqNavBar.top-sticky .hoverOrange .navFAQlink.active {
     color: #ff8819 !important;
     border-bottom: 10px solid #ff8819 !important;
 }
