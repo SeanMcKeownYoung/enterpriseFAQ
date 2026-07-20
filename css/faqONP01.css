@@ -1347,7 +1347,7 @@ margin-bottom: 10px;
     padding-bottom: 30px;
 } 
 .textFAQbox .faqHeaderBig .headerUnderline {
-    display: inline; 
+    display: inline !important; 
     border-bottom: 10px solid #787878
 }
 
@@ -2090,27 +2090,27 @@ filter: drop-shadow(30px 10px 14px #14141448);
 }
 
 .bodyGold .textFAQbox .faqHeaderBig .headerUnderline {
-    display: inline; 
+    display: inline !important; 
     border-bottom: 10px solid #ab871d
 }
 
 .bodyRed .textFAQbox .faqHeaderBig .headerUnderline {
-    display: inline; 
+    display: inline !important; 
     border-bottom: 10px solid #ab3f3f
 }
 
 .bodyGreen .textFAQbox .faqHeaderBig .headerUnderline {
-    display: inline; 
+    display: inline !important; 
     border-bottom: 10px solid #62ab3e
 }
 
 .bodyViolet .textFAQbox .faqHeaderBig .headerUnderline {
-    display: inline; 
+    display: inline !important; 
     border-bottom: 10px solid #652b9e
 }
 
 .bodyOrange .headerUnderline {
-    display: inline; 
+    display: inline !important; 
     border-bottom: 10px solid #ab5b11;
     margin-bottom: 40px;
 }
