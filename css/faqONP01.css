@@ -1611,7 +1611,7 @@ color: #00b7ff;
     top: 0;
     pointer-events: none;
     overflow: hidden; /* Recommended to prevent accidental layout spill */
-    transition: all 0.8s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
     @media(max-width: 549px){  
         .faqSectionImg div {padding-top: 70px; width: 85%; height: 100vw;}}
@@ -1620,9 +1620,9 @@ color: #00b7ff;
     @media(min-width: 768px) and (max-width: 1024px){  
         .faqSectionImg div {padding-top: 154px; width: 53%; height: 80vw;}}
     @media(min-width: 1024px) and (max-width: 1280px){  
-        .faqSectionImg div {padding-top: 154px; width: 53%; height: 80%;}}
+        .faqSectionImg div {padding-top: 14px; width: 60%; height: 85%;}}
     @media(min-width: 1280px) {  
-        .faqSectionImg div {padding-top: 154px; width: 53%; height: 100vh;}}
+        .faqSectionImg div {padding-top: 154px; width: 50%; height: 100vh;}}
 
 
 .faqSectionImg div img {
@@ -1633,10 +1633,9 @@ color: #00b7ff;
     filter: drop-shadow(-30px 10px 14px #1414145f);
     transform: scaleX(-1);
     will-change: transform;
-    translate: 80px 10px; /* Moves 50px right and 20px down */
-  transition: all 0.8s ease-in-out;
+    translate: 90px 10px; /* Moves 50px right and 20px down */
+  transition: all 0.3s ease-in-out;
 }
-
 
 
 .faqOverlayImgZZ {
