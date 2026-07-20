@@ -1344,7 +1344,12 @@ margin-bottom: 10px;
 .textFAQbox .faqHeaderBig {
   text-wrap: balance;
     padding-top: 2rem;
+    padding-bottom: 30px;
 } 
+.textFAQbox .faqHeaderBig .headerUnderline {
+    display: inline; 
+    border-bottom: 10px solid #787878
+}
 
 .faqCarret {
     fill:none;
@@ -2082,4 +2087,30 @@ filter: drop-shadow(30px 10px 14px #14141448);
 }
 .faqFillContacts .faqHeaderBig {
     padding-top: 20px;
+}
+
+.bodyGold .textFAQbox .faqHeaderBig .headerUnderline {
+    display: inline; 
+    border-bottom: 10px solid #ab871d
+}
+
+.bodyRed .textFAQbox .faqHeaderBig .headerUnderline {
+    display: inline; 
+    border-bottom: 10px solid #ab3f3f
+}
+
+.bodyGreen .textFAQbox .faqHeaderBig .headerUnderline {
+    display: inline; 
+    border-bottom: 10px solid #62ab3e
+}
+
+.bodyViolet .textFAQbox .faqHeaderBig .headerUnderline {
+    display: inline; 
+    border-bottom: 10px solid #652b9e
+}
+
+.bodyOrange .headerUnderline {
+    display: inline; 
+    border-bottom: 10px solid #ab5b11;
+    margin-bottom: 40px;
 }
