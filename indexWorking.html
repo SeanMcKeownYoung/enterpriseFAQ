@@ -742,6 +742,69 @@
 
 <!-- ONLINE NP FAQ HERO -->  
 <div><!-- THIS DIV MAKES THE FAQ BREADCRUMBS DISAPPEAR AT THE END -->  
+<section class="sectionFAQmag">
+        <div class="sectionFAQImg">
+          <div></div>
+            <div>
+                <img src="images/magGlassWorked.png" alt="Magnifying Glass">
+            </div>
+        </div>
+</section>
+<style>
+
+.sectionFAQmag {
+  position: fixed; 
+  z-index: 1000; 
+  top: 0;
+  pointer-events: none;
+}
+
+.sectionFAQImg {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+
+.sectionFAQImg div {
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+
+}
+.sectionFAQImg div img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: left bottom;
+    filter: drop-shadow(-30px 10px 14px #1414145f);
+    transform: scaleX(-1);
+}
+
+  .faqSectionImg div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right bottom;
+    filter: drop-shadow(-30px 10px 14px #1414145f);
+    transform: scaleX(-1);
+    will-change: transform;
+    translate: 80px 10px; /* Moves 50px right and 20px down */
+  transition: all 0.8s ease-in-out;
+}
+.faqSectionImg div {
+    position: absolute;
+    z-index: 500;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+    overflow: hidden; /* Recommended to prevent accidental layout spill */
+    transition: all 0.8s ease-in-out;
+}
+
+</style>
 <header class="faqHeroFull">
     <div class="faqPageWrapper"> 
         <section class="faqHeroContainer" id="Home">
