@@ -1,7 +1,7 @@
 /* ONLINE NEWSPAPER CSS ADDITIONS FOR FAQ PAGE */
 
     		/* Outlines the grids, remove when sending
-		div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
+		div, section, header, nav { border: 1px solid cyan !important}*/
 
 /* BASE LEVEL STYLES */
 body {
@@ -39,20 +39,31 @@ body.page-type__piano .custom-html
   background-color: transparent !important;
 }
 
-
+.faqQcontainer {
+  padding: 10px 0px 0px 0px !important;
+  display: none;
+  background-color: transparent !important;
+  overflow: hidden;
+  font-size: 1em !important;
+  font-weight: 200 !important;
+}
 
 .faqHeroFull {
     background-image: linear-gradient(165deg, #0d0d0d, #1d1d1d, #262626); 
     width: 100%;
+    height: 100%;
     margin-top: 50px;
-    padding: 10vh 0 0 0;
+    padding: 10vh 0 5vh 0;
     z-index: 550;
-
+    /* Syntax: filter: drop-shadow(horizontal-offset vertical-offset blur-radius color); */
+filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.3));
+border-bottom: 1px solid #fff;
 }
 
+
 .faqHeroFull .faqHeroContainer {
-    margin-bottom: 0 ; 
     display:block;
+    margin:30px 0px;
     width: 100%;
 }
 .faqHeroFull .faqHeroContainer .faqBannerText {
@@ -82,137 +93,126 @@ padding-right: 0rem;
     background-color: transparent;
 }
 
-
-body:has(.faqBannerText .hoverHome:hover) .navLOGOcontainer div svg {
-    fill:#ffffff;
-
-}
-body:has(.faqBannerText .hoverGold:hover) .navLOGOcontainer div svg {
-    fill:#00b7ff;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverGold:hover) .navLOGOcontainer div svg {
-    fill:#ffca2b;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverRed:hover) .navLOGOcontainer div svg {
-    fill:#ff5e5e;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverGreen:hover) .navLOGOcontainer div svg {
-    fill:#92ff5c;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverViolet:hover) .navLOGOcontainer div svg {
-    fill:#bc69ff;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverOrange:hover) .navLOGOcontainer div svg {
-    fill:#ff8819;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText:hover) .item9 {
-    background-color: #383838 !important;
-    transition: all 0.2s ease-in-out;
-}
-
-
-
-.faqBannerText div a {
-    color: #676767;
-}
-.hoverHome {
-    color: #00b7ff; 
-    text-shadow: 0 0 30px #00b7ffb5; 
-}
-.faqBannerText:hover .hoverHome {
-    color: #ffffff;
-    transition: all 0.3s ease-in-out;
-    text-shadow: 0 0 0px #00b7ff00; /* X-offset Y-offset Blur Color */
-}
 /* FAQ NAVBAR STYLES */
 #faqNavBar {
     width: 100%;
-    height: 80px;
+    height: 120px;
     will-change: transform; 
-    background-image: linear-gradient(165deg, #1e1e1e, #262626); 
-    border-bottom: 1px solid #ffffff;
-    z-index: 500;
+    align-items: center;
 }
+
 #faqNavBar.bottom-sticky {
     position: relative;
     bottom: 0;
     left: 0;
-    filter: drop-shadow(0px 26px 22px rgba(0, 0, 0, 0.48));
-    transition: filter 0.2s ease !important;
+    height: 0;
+    transform: translateY(-52px);
 }
 
 #faqNavBar.top-sticky {
     position: sticky !important;
+    z-index: 500;
+    padding-top: 46px;
+    display: inline-block;
     top: 0px;
     left: 0;
     bottom: auto; /* Overrides the previous bottom rule */
+    height: auto;
+    translate: 0px -2px; /* Moves 50px right and 20px down */
+    background-image: linear-gradient(165deg, #1e1e1e, #262626, #262626); 
     filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.3));
-    transition: filter 0.2s ease !important;
 }
 
-#faqNavBar .faqNavWrapper {
-    margin:0 auto;
-    padding:0 2rem;
-    max-width: 1280px;
+#faqNavBar.top-sticky {
+    border-bottom: 1px solid #fff;
 }
 
-#faqNavBar .navFAQul {
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: end;
-  height: 80px;
-  padding-bottom: 1px;
+#faqNavBar.top-sticky {
+margin-bottom: 0 !important; padding-bottom: 0 !important;
 }
-#faqNavBar .navFAQli {
-    align-items: end;
-    display: flex;
-    margin-right: 20px;
+#faqNavBar.top-sticky .faqNavWrapper {
+margin-bottom: 0 !important; padding-bottom: 0 !important;
 }
-#faqNavBar .navFAQlink {
-    text-decoration: none;
-    font-family: "neue-haas-grotesk-display", sans-serif !important;
-    color: #535353;
-    font-size: 16px;
-    font-weight: 600;
-    border: 0;
-    text-align: left;
-    padding-bottom: 10px;
-    border-bottom: 10px solid transparent !important;  
-    transition: all 0.2s ease !important;
+#faqNavBar.top-sticky .faqNavItems {
+margin-bottom: 6px !important;
+}
+.navFAQitem {
+padding-right: 6px;
+}
+
+.nav-static {
+  text-decoration: none;
+  font-family: "neue-haas-grotesk-display", sans-serif !important;
+  color: #2A2A2A;
+  font-size: 40px;
+  font-weight: 900;
+  padding-right: 6px;
+} 
+
+.navItemGroup {
+    display: inline !important;
+}
+.navFAQlink {
+  text-decoration: none;
+  font-family: "neue-haas-grotesk-display", sans-serif !important;
+  color: #535353;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+  padding: 0 4px 10px 4px;
+  transition: all 0.2s ease !important;
+}
+.navFAQhome .navFAQlink {
+    color: #ffffff !important;
+}
+.navFAQlink.active { /* Active class applied by JavaScript */
+  color: #ffffff;
+  z-index: 10;
+  transition: all 0.3s ease;
 }
 #faqNavBar.top-sticky .navFAQlink {
-    color: #b0aeae;
-    transition: all 0.2s ease !important;
+  color: #a1a1a1;
 }
-#faqNavBar .navFAQlink.active {
-    color: #ffffff !important;
-    border-bottom: 10px solid transparent !important;  
-    transition: all 0.2s ease !important;
+#faqNavBar.top-sticky .navFAQlink.active { /* Active class applied by JavaScript */
+  color: #00b7ff;
+  z-index: 10;
+  border-bottom: 10px solid #00b7ff;
+  transition: all 0.3s ease;
 }
-#faqNavBar .navFAQul:hover .navFAQlink.active {
-    color: #535353 !important;
-    border-bottom: 10px solid #535353 !important;  
-    transition: all 0.2s ease !important;
+#faqNavBar.bottom-sticky .navFAQlink.active { /* Active class applied by JavaScript */
+  z-index: 10;
+  border-bottom: 0px solid transparent;
+  transition: all 0.3s ease;
 }
-#faqNavBar .navFAQul .navFAQlink:hover {
-    color: #ffffff;
-    border-bottom: 10px solid #ffffff;  
-    transition: all 0.2s ease !important;
+
+.faqNavWrapper {
+    display:block;
+    margin:0 auto;
+    padding:0 20px;
 }
+
+.faqNavWrapper ul  {
+    display: flex;                 /* Aligns items in a single row */
+    white-space: nowrap;           /* Keeps links strictly on one line */
+    width: 100%;                   /* Spans the full screen width */
+    list-style-type: none;
+
+        }      
 
 
 
 /* FAQ HERO AND SECTION STYLES */
 .faqHeroFull .faqPageWrapper {
     display:block;
-    padding:0 2rem;
+    padding:0 20px;
 }
+/* KEEP 
+.faqFillShaded {
+    background-color: #ced1d1;
+}
+.faqFillNone {
+    background-color: #d8dada;
+}*/
 
 .faqFillShaded {
     background-color: #ece9e1;
@@ -241,9 +241,6 @@ body:has(.faqBannerText:hover) .item9 {
     margin:0 auto;
     padding:2rem;
 }
-        .faqFillShaded .faqPageWrapper, .faqFillNone .faqPageWrapper {
-            padding: 10vh 0;
-        }
 
 .faqHeroContainer .faqBannerText  {
     display:flex;
@@ -407,20 +404,31 @@ grid-template-columns: auto auto;
 /* X-Small */            
     @media(max-width: 549px)
             { 
+       .faqNavWrapper {
+            max-width:100%;
+        }   
+
        .faqPageWrapper {
             max-width:100%;
         }    
+
+
+
        .faqList {
             font-size: 14px;
             padding: 0px 10px;
         }
+
        .faqList span {
             padding-right: 4px;
         }
+
        .faqHeroContainer .faqBannerText .faqMSGheader {
+
             text-align: center;
             padding-bottom: 4px;
         }
+            
        .faqHeroContainer .faqBannerText .faqMSGtext {
             position:relative;
             font-size:1.6rem;
@@ -432,6 +440,9 @@ grid-template-columns: auto auto;
 /* Small */            
     @media(min-width: 549px)
             {
+       .faqNavWrapper {
+            max-width:100vw;
+        }     
 
        .faqPageWrapper {
             max-width:549px;
@@ -440,29 +451,38 @@ grid-template-columns: auto auto;
             margin:0 auto;
             padding:0;
         }   
+
+
+
+
        .faqList {
             font-size: 14px;
             padding: 0px 10px;
         }
+
        .faqList span {
             padding-right: 4px;
         }
+
        .faqSeeMore {
             padding-top: 10px;
         }
+
        .faqHeroContainer .faqBannerText .faqMSGheader {
 
             text-align: center;
             padding-bottom: 6px;
         }
-        
+            
        .faqHeroContainer .faqBannerText .faqMSGtext {
             position:relative;
             font-size:1.6rem;
             text-align:center;
         }
+
        .faqHeroContainer .faqBannerText .MessageButton {
-            background-color:#2a2a2a;border-radius:32px;color:#fff;cursor:pointer;font-family:Inter,serif;font-size:1.4rem;font-weight:700;gap:8px;height:50px;margin:32px 0 0;padding:16px 24px;width:100%}  
+            background-color:#2a2a2a;border-radius:32px;color:#fff;cursor:pointer;font-family:Inter,serif;font-size:1.4rem;font-weight:700;gap:8px;height:50px;margin:32px 0 0;padding:16px 24px;width:100%}
+            
        .faqHeroContainer .BannerRight {
             align-items:center;
             display:flex;
@@ -476,13 +496,20 @@ grid-template-columns: auto auto;
 /* Medium */           
     @media(min-width: 768px)
             {
+       .faqNavWrapper {
+            max-width:768px;
+        }      
+
        .faqPageWrapper {
             max-width:768px;
         }        
+
+        
        .faqList {
             font-size: 16px;
             padding: 0px 0px;
         }
+
        .faqList span {
             padding-right: 4px;
         }
@@ -491,16 +518,19 @@ grid-template-columns: auto auto;
             font-size:16px;
             padding-top: 10px;
         }
+
        .faqHeroContainer .faqBannerText .faqMSGheader {
 
             text-align: left;
             padding-bottom: 8px;
         }
+            
        .faqHeroContainer .faqBannerText .faqMSGtext {
             font-size:2rem;
             text-align:left;
             position:relative
-        }           
+        }
+                        
        .faqHeroContainer .faqBannerText .MessageButton {
             background-color:#2a2a2a;
             border-radius:32px;
@@ -514,6 +544,7 @@ grid-template-columns: auto auto;
             padding:16px 24px;
             width:196px
         }
+            
        .faqHeroContainer .BannerRight {
             align-items:center;
             display:flex;
@@ -529,28 +560,40 @@ grid-template-columns: auto auto;
 /* Large */           
     @media(min-width: 1024px)
             {
+       .faqNavWrapper {
+            max-width:1024px;
+        }   
+
        .faqPageWrapper {
             max-width:1024px;
         }            
+            
+        
        .faqList {
             font-size: 17px;
         }
+
        .faqList span {
             padding-right: 4px;
         }
+
        .faqSeeMore {
             font-size:20px;
             padding-top: 10px;
         }
+
        .faqHeroContainer .faqBannerText .faqMSGheader {
+
             text-align: left;
             padding-bottom: 10px;
         }
+            
        .faqHeroContainer .faqBannerText .faqMSGtext {
             font-size:2.4rem;
             text-align:left;
             position:relative
         }
+
        .faqHeroContainer .faqBannerText .MessageButton {
             background-color:#2a2a2a;
             border-radius:32px;
@@ -564,7 +607,8 @@ grid-template-columns: auto auto;
             margin:32px auto auto;
             padding:16px 24px;
             width:196px
-        }  
+        }
+            
        .faqHeroContainer .BannerRight {
             align-items:center;
             display:flex;
@@ -578,22 +622,33 @@ grid-template-columns: auto auto;
         }
 
         
+
 /* X-Large */           
     @media(min-width: 1280px)
             {
+       .faqNavWrapper {
+            max-width:1280px;
+        }  
+
        .faqPageWrapper {
             max-width:1280px;
         }    
+        .faqFillShaded .faqPageWrapper, .faqFillNone .faqPageWrapper {
+            padding: 10vh 0;
+        }
        .faqList {
             font-size: 20px;
         }
+
        .faqList span {
             padding-right: 4px;
         }
+
        .faqSeeMore {
             font-size:2.4rem;
             padding-top: 10px;
         }
+
        .faqHeroContainer .faqBannerText .faqMSGheader {
             text-align: left;
             padding-bottom: 12px;
@@ -632,6 +687,8 @@ grid-template-columns: auto auto;
     }
 
 /* FAQ BODY STYLES */
+
+
 
 .faqBodyContainer {
     padding: 50px 0px;
@@ -1234,20 +1291,15 @@ margin-bottom: 10px;
     font-style: normal;
     letter-spacing:0;
     line-height:1.2;
+    color: #2A2A2A;
 }
-
-
-.textFAQbox .faqHeaderBig {
-  text-wrap: balance;
-    padding-top: 2rem;
-    padding-bottom: 30px;
-} 
-.textFAQbox .faqHeaderBig .headerUnderline {
-    display: inline !important; 
-    border-bottom: 10px solid #787878
+.faqHeroContainer .faqHeaderBig {
+    
 }
-
-
+.faqHeaderBig a {
+    text-decoration: none;
+        color: #777;
+}
 /* X-Small */ @media(max-width: 549px){  
     .faqHeaderBig {font-size: 32px;}}
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
@@ -1265,7 +1317,7 @@ margin-bottom: 10px;
   align-items: flex-start;
   width: 100%;
   height: auto;
-  padding: 10rem 0 4rem 0;
+  padding: 10rem 20px;
 }
 .faqFillShaded .containerFAQbody {
   flex-direction: row-reverse;
@@ -1296,7 +1348,12 @@ margin-bottom: 10px;
 .textFAQbox .faqHeaderBig {
   text-wrap: balance;
     padding-top: 2rem;
+    padding-bottom: 30px;
 } 
+.textFAQbox .faqHeaderBig .headerUnderline {
+    display: inline !important; 
+    border-bottom: 10px solid #787878
+}
 
 .faqCarret {
     fill:none;
@@ -1547,6 +1604,13 @@ color: #000000;
     text-shadow: 0 0 50px #00b7ff00; /* X-offset Y-offset Blur Color */
 }
 
+.faqBannerText div:hover a, .faqNavItems li:hover a {
+color: #00b7ff;
+
+/* Syntax: property | duration | timing-function | delay */
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 30px #00b7ff; /* X-offset Y-offset Blur Color */
+}
 
 .faqSectionImg div {
     position: absolute;
@@ -1555,7 +1619,7 @@ color: #000000;
     top: 0;
     pointer-events: none;
     overflow: hidden; /* Recommended to prevent accidental layout spill */
-    transition: all 0.8s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
     @media(max-width: 549px){  
         .faqSectionImg div {padding-top: 70px; width: 85%; height: 100vw;}}
@@ -1564,9 +1628,9 @@ color: #000000;
     @media(min-width: 768px) and (max-width: 1024px){  
         .faqSectionImg div {padding-top: 154px; width: 53%; height: 80vw;}}
     @media(min-width: 1024px) and (max-width: 1280px){  
-        .faqSectionImg div {padding-top: 154px; width: 53%; height: 80%;}}
+        .faqSectionImg div {padding-top: 14px; width: 60%; height: 85%;}}
     @media(min-width: 1280px) {  
-        .faqSectionImg div {padding-top: 154px; width: 53%; height: 100vh;}}
+        .faqSectionImg div {padding-top: 154px; width: 50%; height: 100vh;}}
 
 
 .faqSectionImg div img {
@@ -1577,10 +1641,9 @@ color: #000000;
     filter: drop-shadow(-30px 10px 14px #1414145f);
     transform: scaleX(-1);
     will-change: transform;
-    translate: 80px 10px; /* Moves 50px right and 20px down */
-  transition: all 0.8s ease-in-out;
+    translate: 90px 10px; /* Moves 50px right and 20px down */
+  transition: all 0.3s ease-in-out;
 }
-
 
 
 .faqOverlayImgZZ {
@@ -1616,13 +1679,13 @@ filter: drop-shadow(30px 10px 14px #141414);
   width: 100%;
   height: 100%;
   object-fit: contain !important;
-  filter: drop-shadow(30px 10px 14px #14141448);
+
+
+filter: drop-shadow(30px 10px 14px #14141448);
   transition: all 0.3s ease-in-out;
   will-change: transform;
       transform: rotateZ(0deg) translate(30%, 0%);
 }
-
-
 
 .hoverBlue:hover, .hoverBlue:hover a {
     color: #00b7ff !important;
@@ -1654,42 +1717,33 @@ filter: drop-shadow(30px 10px 14px #141414);
     text-shadow: 0 0 30px #ff8819 !important; /* X-offset Y-offset Blur Color */
 }
 
-#faqNavBar.top-sticky .navFAQul:hover .navFAQlink.active  {
-    color: #b0aeae !important;
-    border-bottom: 10px solid #b0aeae !important;  
-    transition: all 0.2s ease !important;
-}
-#faqNavBar.bottom-sticky .navFAQul:hover .navFAQlink.active  {
-    color: #b0aeae !important;
-    border-bottom: 10px solid transparent !important;  
-}
 
-#faqNavBar.top-sticky .hoverBlue .navFAQlink.active, #faqNavBar.top-sticky .hoverBlue .navFAQlink:hover, #faqNavBar.top-sticky .hoverBlue .navFAQlink.active:hover  {
+#faqNavBar.top-sticky .hoverBlue .navFAQlink.active {
     color: #00b7ff !important;
     border-bottom: 10px solid #00b7ff !important;
 }
 
-#faqNavBar.top-sticky .hoverGold .navFAQlink.active, #faqNavBar.top-sticky .hoverGold .navFAQlink:hover, #faqNavBar.top-sticky .hoverGold .navFAQlink.active:hover  {
+#faqNavBar.top-sticky .hoverGold .navFAQlink.active {
     color: #ffca2b !important;
     border-bottom: 10px solid #ffca2b !important;
 }
 
-#faqNavBar.top-sticky .hoverRed .navFAQlink.active, #faqNavBar.top-sticky .hoverRed .navFAQlink:hover, #faqNavBar.top-sticky .hoverRed .navFAQlink.active:hover {
+#faqNavBar.top-sticky .hoverRed .navFAQlink.active {
     color: #ff5e5e !important;
     border-bottom: 10px solid #ff5e5e !important;
 }
 
-#faqNavBar.top-sticky .hoverGreen .navFAQlink.active, #faqNavBar.top-sticky .hoverGreen .navFAQlink:hover, #faqNavBar.top-sticky .hoverGreen .navFAQlink.active:hover  {
+#faqNavBar.top-sticky .hoverGreen .navFAQlink.active {
     color: #92ff5c !important;
     border-bottom: 10px solid #92ff5c !important;
 }
 
-#faqNavBar.top-sticky .hoverViolet .navFAQlink.active, #faqNavBar.top-sticky .hoverViolet .navFAQlink:hover, #faqNavBar.top-sticky .hoverViolet .navFAQlink.active:hover  {
+#faqNavBar.top-sticky .hoverViolet .navFAQlink.active {
     color: #bc69ff !important;
     border-bottom: 10px solid #bc69ff !important;
 }
 
-#faqNavBar.top-sticky .hoverOrange .navFAQlink.active, #faqNavBar.top-sticky .hoverOrange .navFAQlink:hover, #faqNavBar.top-sticky .hoverOrange .navFAQlink.active:hover  {
+#faqNavBar.top-sticky .hoverOrange .navFAQlink.active {
     color: #ff8819 !important;
     border-bottom: 10px solid #ff8819 !important;
 }
