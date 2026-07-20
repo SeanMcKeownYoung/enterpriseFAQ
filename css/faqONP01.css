@@ -1290,7 +1290,7 @@ margin-bottom: 10px;
     color: #2A2A2A;
 }
 .faqHeroContainer .faqHeaderBig {
-    color: #fff;
+    
 }
 .faqHeaderBig a {
     text-decoration: none;
@@ -1602,8 +1602,16 @@ color: #00b7ff;
   transition: all 0.3s ease-in-out;
   text-shadow: 0 0 30px #00b7ff; /* X-offset Y-offset Blur Color */
 }
-
-
+.hoverHome {
+  color: #00b7ff; 
+  text-shadow: 0 0 30px #00b7ffb5; 
+}
+.faqBannerText:hover .hoverHome {
+color: #ffffff;
+/* Syntax: property | duration | timing-function | delay */
+  transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 0px #00b7ff00; /* X-offset Y-offset Blur Color */
+}
 .faqSectionImg div {
     position: absolute;
     z-index: 500;
