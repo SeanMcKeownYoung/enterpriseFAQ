@@ -1707,6 +1707,11 @@ filter: drop-shadow(30px 10px 14px #14141448);
     text-shadow: 0 0 30px #92ff5c !important; /* X-offset Y-offset Blur Color */
 }
 
+.hoverViolet:hover, .hoverViolet:hover a {
+    color: #bc69ff !important;
+    text-shadow: 0 0 30px #bc69ff !important; /* X-offset Y-offset Blur Color */
+}
+
 .hoverOrange:hover, .hoverOrange:hover a {
     color: #ff8819 !important;
     text-shadow: 0 0 30px #ff8819 !important; /* X-offset Y-offset Blur Color */
@@ -1731,6 +1736,11 @@ filter: drop-shadow(30px 10px 14px #14141448);
 #faqNavBar.top-sticky .hoverGreen .navFAQlink.active {
     color: #92ff5c !important;
     border-bottom: 10px solid #92ff5c !important;
+}
+
+#faqNavBar.top-sticky .hoverViolet .navFAQlink.active {
+    color: #bc69ff !important;
+    border-bottom: 10px solid #bc69ff !important;
 }
 
 #faqNavBar.top-sticky .hoverOrange .navFAQlink.active {
@@ -1854,6 +1864,36 @@ filter: drop-shadow(30px 10px 14px #14141448);
         }
 .bodyGreen .faqHowText span {
     color:  #62ab3e !important;
+}
+
+
+
+.bodyViolet .accordionFAQbutton:not(.collapsed) {
+      color: #652b9e !important;
+}
+.bodyViolet .accordionFAQbutton:not(.collapsed)::before {
+  background: #652b9e !important;
+}
+.bodyViolet .accordionFAQbutton:not(.collapsed) .faqCarret{
+     stroke:#652b9e !important;
+}
+.bodyViolet .accordionFAQbody {
+    color: #652b9e !important;
+}
+.bodyViolet .faqHow  {
+    border-bottom: 1px solid #652b9e !important;
+}
+.bodyViolet .faqHow a svg {
+    background-color: #652b9e !important;
+    border: 2px solid #652b9e !important;
+}
+.bodyViolet .faqHow a:hover svg {
+    fill: #652b9e !important;
+    background-image: radial-gradient(circle, #ece9e1 60%, #652b9e 70%) !important;
+    border: 2px solid #652b9e !important;
+        }
+.bodyViolet .faqHowText span {
+    color:  #652b9e !important;
 }
 
 
