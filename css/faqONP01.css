@@ -39,97 +39,6 @@ body.page-type__piano .custom-html
   background-color: transparent !important;
 }
 
-
-
-.faqHeroFull {
-    background-image: linear-gradient(165deg, #0d0d0d, #1d1d1d, #262626); 
-    width: 100%;
-    margin-top: 50px;
-    padding: 10vh 0 0 0;
-    z-index: 550;
-
-}
-
-.faqHeroFull .faqHeroContainer {
-    margin-bottom: 0 ; 
-    display:block;
-    width: 100%;
-}
-.faqHeroFull .faqHeroContainer .faqBannerText {
-    margin: 0;
-    padding: 0;
-}
-.navIMGbx {
-padding-right: 0rem;
-}
-.navLOGOcontainer {
-    width: 30rem;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr)); 
-    gap: 1rem;
-    transition: all 0.2s ease-in-out;
-}
-.navLOGOcontainer div {
-    aspect-ratio: 1 / 1; 
-}
-
-.navLOGOcontainer div svg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Scales image while maintaining aspect ratio */
-    object-position: center;
-    fill:#00b7ff;
-    background-color: transparent;
-}
-
-
-body:has(.faqBannerText .hoverHome:hover) .navLOGOcontainer div svg {
-    fill:#ffffff;
-
-}
-body:has(.faqBannerText .hoverGold:hover) .navLOGOcontainer div svg {
-    fill:#00b7ff;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverGold:hover) .navLOGOcontainer div svg {
-    fill:#ffca2b;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverRed:hover) .navLOGOcontainer div svg {
-    fill:#ff5e5e;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverGreen:hover) .navLOGOcontainer div svg {
-    fill:#92ff5c;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverViolet:hover) .navLOGOcontainer div svg {
-    fill:#bc69ff;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverOrange:hover) .navLOGOcontainer div svg {
-    fill:#ff8819;
-    transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText:hover) .item9 {
-    background-color: #383838 !important;
-    transition: all 0.2s ease-in-out;
-}
-
-
-
-.faqBannerText div a {
-    color: #676767;
-}
-.hoverHome {
-    color: #00b7ff; 
-    text-shadow: 0 0 30px #00b7ffb5; 
-}
-.faqBannerText:hover .hoverHome {
-    color: #ffffff;
-    transition: all 0.3s ease-in-out;
-    text-shadow: 0 0 0px #00b7ff00; /* X-offset Y-offset Blur Color */
-}
 /* FAQ NAVBAR STYLES */
 #faqNavBar {
     width: 100%;
@@ -158,9 +67,17 @@ body:has(.faqBannerText:hover) .item9 {
 
 #faqNavBar .faqNavWrapper {
     margin:0 auto;
-    padding:0 2rem;
-    max-width: 1280px;
 }
+/* X-Small */ @media(max-width: 549px){  
+    .faqNavWrapper {max-width: 100%; padding: 0 2rem}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){  
+    .faqNavWrapper {max-width: 549; padding: 0 2rem}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
+    .faqNavWrapper {max-width: 768px; padding: 0 2rem}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqNavWrapper {max-width: 1024px; padding: 0 2rem}}
+/* X-Large */ @media(min-width: 1280px) {  
+    .faqNavWrapper {max-width: 1280px; padding: 0 2rem}}
 
 #faqNavBar .navFAQul {
   display: flex;
@@ -209,7 +126,99 @@ body:has(.faqBannerText:hover) .item9 {
 
 
 /* FAQ HERO AND SECTION STYLES */
+
+.faqHeroFull {
+    background-image: linear-gradient(165deg, #0d0d0d, #1d1d1d, #262626); 
+    width: 100%;
+    margin-top: 50px;
+    padding: 10vh 0 0 0;
+    z-index: 550;
+}
 .faqHeroFull .faqPageWrapper {
+    display:flex;
+    flex-direction:row!important;
+    margin:0 auto;
+    padding: 0 2rem;
+}
+
+.faqHeroFull .faqHeroContainer {
+    margin-bottom: 0; 
+    display:block;
+    width: 100%;
+}
+.faqHeroFull .faqHeroContainer .faqBannerText {
+    margin: 0;
+    padding: 0;
+}
+.navIMGbx {
+    padding-right: 0rem;
+}
+.navLOGOcontainer {
+    width: 30rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    gap: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+.navLOGOcontainer div {
+    aspect-ratio: 1 / 1; 
+}
+.navLOGOcontainer div svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: center;
+    fill:#00b7ff;
+    background-color: transparent;
+}
+body:has(.faqBannerText .hoverHome:hover) .navLOGOcontainer div svg {
+    fill:#ffffff;
+
+}
+body:has(.faqBannerText .hoverGold:hover) .navLOGOcontainer div svg {
+    fill:#00b7ff;
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverGold:hover) .navLOGOcontainer div svg {
+    fill:#ffca2b;
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverRed:hover) .navLOGOcontainer div svg {
+    fill:#ff5e5e;
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverGreen:hover) .navLOGOcontainer div svg {
+    fill:#92ff5c;
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverViolet:hover) .navLOGOcontainer div svg {
+    fill:#bc69ff;
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverOrange:hover) .navLOGOcontainer div svg {
+    fill:#ff8819;
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText:hover) .item9 {
+    background-color: #383838 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.faqBannerText div a {
+    color: #676767;
+}
+.hoverHome {
+    color: #00b7ff; 
+    text-shadow: 0 0 30px #00b7ffb5; 
+}
+.faqBannerText:hover .hoverHome {
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 0px #00b7ff00; /* X-offset Y-offset Blur Color */
+}
+
+
+#faqNavBar .faqNavWrapper {
     display:block;
     padding:0 2rem;
 }
@@ -232,18 +241,15 @@ body:has(.faqBannerText:hover) .item9 {
     display:flex;
     flex-direction:row-reverse !important;
     margin:0 auto;
-    padding:2rem;
+    padding: 10vh 2rem;
 }
 
 .faqFillShaded .faqPageWrapper {
     display:flex;
     flex-direction:row !important;
     margin:0 auto;
-    padding:2rem;
+    padding: 10vh 2rem;
 }
-        .faqFillShaded .faqPageWrapper, .faqFillNone .faqPageWrapper {
-            padding: 10vh 0;
-        }
 
 .faqHeroContainer .faqBannerText  {
     display:flex;
@@ -268,49 +274,10 @@ body:has(.faqBannerText:hover) .item9 {
     margin-top: 1vw;
 }
 
-@media(max-width: 549px){
-.faqFillNone .faqPageWrapper, .faqFillShaded .faqPageWrapper {
-    display:flex;
-    flex-direction:column !important;
-    justify-content: start;
-    align-items: start;
-    margin:0;
-    padding: 0px 0px 26px 0px;
-    width: 100%;
-    border-top: 1px solid #7d7d7d;
-}
-
-.faqFillShaded:first-of-type .faqPageWrapper {
-    border-top: 1px solid #ffffff;
-}
-
-.faqHeroContainer {
-    display:flex;
-    flex-direction:column !important;
-    justify-content: start;
-    align-items: start;
-    margin: 0px !important;
-    padding:0 !important;
-    width: 100%;
-}
-.faqFillNone .faqBannerText, .faqFillShaded .faqBannerText, .faqFillContacts .faqBannerText  {
-    padding: 0% 5% 0% 5%;
-}
-.faqBodyheader, .faqQuestionRow button {
-    text-align: left !important;
-}
-.faqBodyheader {
-    margin: 16px 0px 10px 0px;
-}
-.faqQuestionRow button, .faqQuestionRowStatic div  {
-    font-size: 20px !important;
-}
-            }
-
 .faqHeroContainer {
     display:grid;
     margin:4rem 0px;
-grid-template-columns: auto auto;
+    grid-template-columns: auto auto;
 }
 
 .faqHeroContainer .faqBannerText .faqMSGheader {
@@ -342,15 +309,6 @@ grid-template-columns: auto auto;
 
 .faqList span {
     padding-right: 4px;
-}
-
-.faqSeeMore {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    letter-spacing:0;
-    line-height:1.4;
-    text-wrap: balance;
 }
 
 .faqHeroContainer .faqBannerText .faqMSGtext  strong {
@@ -404,10 +362,10 @@ grid-template-columns: auto auto;
 }
 
 /* Advance - dotcom CSS Media Queries - Screen Sizes */
+
 /* X-Small */            
-    @media(max-width: 549px)
-            { 
-       .faqPageWrapper {
+@media(max-width: 549px){ 
+        .faqPageWrapper {
             max-width:100%;
         }    
        .faqList {
@@ -430,9 +388,7 @@ grid-template-columns: auto auto;
 
 
 /* Small */            
-    @media(min-width: 549px)
-            {
-
+    @media(min-width: 549px){
        .faqPageWrapper {
             max-width:549px;
             display:flex;
@@ -447,11 +403,7 @@ grid-template-columns: auto auto;
        .faqList span {
             padding-right: 4px;
         }
-       .faqSeeMore {
-            padding-top: 10px;
-        }
        .faqHeroContainer .faqBannerText .faqMSGheader {
-
             text-align: center;
             padding-bottom: 6px;
         }
@@ -486,13 +438,7 @@ grid-template-columns: auto auto;
        .faqList span {
             padding-right: 4px;
         }
-
-       .faqSeeMore {
-            font-size:16px;
-            padding-top: 10px;
-        }
        .faqHeroContainer .faqBannerText .faqMSGheader {
-
             text-align: left;
             padding-bottom: 8px;
         }
@@ -538,10 +484,6 @@ grid-template-columns: auto auto;
        .faqList span {
             padding-right: 4px;
         }
-       .faqSeeMore {
-            font-size:20px;
-            padding-top: 10px;
-        }
        .faqHeroContainer .faqBannerText .faqMSGheader {
             text-align: left;
             padding-bottom: 10px;
@@ -577,7 +519,6 @@ grid-template-columns: auto auto;
         }
         }
 
-        
 /* X-Large */           
     @media(min-width: 1280px)
             {
@@ -590,21 +531,15 @@ grid-template-columns: auto auto;
        .faqList span {
             padding-right: 4px;
         }
-       .faqSeeMore {
-            font-size:2.4rem;
-            padding-top: 10px;
-        }
        .faqHeroContainer .faqBannerText .faqMSGheader {
             text-align: left;
             padding-bottom: 12px;
             }
-  
        .faqHeroContainer .faqBannerText .faqMSGtext {
             font-size:2.4rem;
             text-align:left;
             position:relative
             }
-            
        .faqHeroContainer .faqBannerText .MessageButton {
             background-color:#2a2a2a;
             border-radius:32px;
@@ -619,7 +554,6 @@ grid-template-columns: auto auto;
             padding:16px 24px;
             width:196px
             }
-            
        .faqHeroContainer .BannerRight {
             align-items:center;
             display:flex;
@@ -1580,8 +1514,6 @@ color: #000000;
     translate: 80px 10px; /* Moves 50px right and 20px down */
   transition: all 0.8s ease-in-out;
 }
-
-
 
 .faqOverlayImgZZ {
     position: absolute;

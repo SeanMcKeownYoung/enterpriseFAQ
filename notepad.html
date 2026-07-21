@@ -34,6 +34,175 @@ margin-bottom: 6px !important;
 .navFAQitem {
 padding-right: 6px;
 }
+
+
+.faqHeroFull .faqPageWrapper {
+    display:block;
+    padding:0 20px;
+}
+
+.faqFillNone .faqPageWrapper {
+    display:flex;
+    flex-direction:row-reverse !important;
+    margin:0 auto;
+    padding:2rem;
+}
+
+.faqFillShaded .faqPageWrapper {
+    display:flex;
+    flex-direction:row !important;
+    margin:0 auto;
+    padding:2rem;
+}
+
+@media(max-width: 549px){
+.faqFillNone .faqPageWrapper, .faqFillShaded .faqPageWrapper {
+    display:flex;
+    flex-direction:column !important;
+    justify-content: start;
+    align-items: start;
+    margin:0;
+    padding: 0px 0px 26px 0px;
+    width: 100%;
+    border-top: 1px solid #7d7d7d;
+}}
+
+.faqFillShaded:first-of-type .faqPageWrapper {
+    border-top: 1px solid #ffffff;
+}
+/* X-Small */            
+    @media(max-width: 549px)
+            { 
+       .faqNavWrapper {
+            max-width:100%;
+        }   
+
+       .faqPageWrapper {
+            max-width:100%;
+        }    
+    }
+    /* Small */            
+    @media(min-width: 549px)
+            {
+       .faqNavWrapper {
+            max-width:100vw;
+        }     
+
+       .faqPageWrapper {
+            max-width:549px;
+            display:flex;
+            flex-direction:column !important;
+            margin:0 auto;
+            padding:0;
+        }   
+
+    }
+    /* Medium */           
+    @media(min-width: 768px)
+            {
+       .faqNavWrapper {
+            max-width:768px;
+        }      
+
+       .faqPageWrapper {
+            max-width:768px;
+        }     }
+
+        /* Large */           
+    @media(min-width: 1024px)
+            {
+       .faqNavWrapper {
+            max-width:1024px;
+        }   
+
+       .faqPageWrapper {
+            max-width:1024px;
+        }    }
+        /* X-Large */           
+    @media(min-width: 1280px)
+            {
+       .faqNavWrapper {
+            max-width:1280px;
+        }  
+
+       .faqPageWrapper {
+            max-width:1280px;
+        }    
+        .faqFillShaded .faqPageWrapper, .faqFillNone .faqPageWrapper {
+            padding: 10vh 0;
+        }}
+
+
+@media(max-width: 549px){
+.faqFillNone .faqPageWrapper, .faqFillShaded .faqPageWrapper {
+    display:flex;
+    flex-direction:column !important;
+    justify-content: start;
+    align-items: start;
+    margin:0;
+    padding: 0px 0px 26px 0px;
+    width: 100%;
+    border-top: 1px solid #7d7d7d;
+}
+
+.faqFillShaded:first-of-type .faqPageWrapper {
+    border-top: 1px solid #ffffff;
+}
+
+.faqHeroContainer {
+    display:flex;
+    flex-direction:column !important;
+    justify-content: start;
+    align-items: start;
+    margin: 0px !important;
+    padding:0 !important;
+    width: 100%;
+}
+.faqFillNone .faqBannerText, .faqFillShaded .faqBannerText, .faqFillContacts .faqBannerText  {
+    padding: 0% 5% 0% 5%;
+}
+.faqBodyheader, .faqQuestionRow button {
+    text-align: left !important;
+}
+.faqBodyheader {
+    margin: 16px 0px 10px 0px;
+}
+.faqQuestionRow button, .faqQuestionRowStatic div  {
+    font-size: 20px !important;
+}
+            }
+
+
+
+#faqNavBar .faqNavWrapper {
+    margin:0 auto;
+}
+/* X-Small */ @media(max-width: 549px){  
+    .faqNavWrapper {max-width: 100%; padding: 0 2rem}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){  
+    .faqNavWrapper {max-width: 549; padding: 0 2rem}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
+    .faqNavWrapper {max-width: 768px; padding: 0 2rem}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqNavWrapper {max-width: 1024px; padding: 0 2rem}}
+/* X-Large */ @media(min-width: 1280px) {  
+    .faqNavWrapper {max-width: 1280px; padding: 0 2rem}}
+
+
+
+/* X-Small */ @media(max-width: 549px){  
+    .faqHeaderBig {font-size: 32px;}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){  
+    .faqHeaderBig {font-size: 36px;}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
+    .faqHeaderBig {font-size: 48px;}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqHeaderBig {font-size: 54px;}}
+/* X-Large */ @media(min-width: 1280px) {  
+    .faqHeaderBig {font-size: 54px;}}
+
+
+
 </style>
 
 
@@ -895,3 +1064,4 @@ hoverBlueZ"><a href="#Register" class="navFAQlinkZ">How do I register/sign in?</
     border-bottom: 10px solid #ab5b11;
     margin-bottom: 40px;
 }
+
