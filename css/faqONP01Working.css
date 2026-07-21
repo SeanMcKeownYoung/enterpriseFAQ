@@ -1951,15 +1951,16 @@ filter: drop-shadow(30px 10px 14px #141414);
 }
 
 .bodyOrange .faqContactItem .siteLogo {
-    fill: #ab5b11 !important;
+    background-color: #ff8819;
+    fill: #f8f8f8 !important;
 }
 .bodyOrange .faqContactContainer:hover .faqContactItem .siteLogo {
     background-color: transparent;
     fill: #6a6a6a !important;
 }
 .bodyOrange .faqContactContainer .faqContactItem:hover .siteLogo {
-    background-color: #ab5b11;
-    fill: #f8f8f8 !important;
+    background-color: #f3f1ed;
+    fill: #ab5b11 !important;
 }
 
 .bodyOrange .faqContactIcons svg {
