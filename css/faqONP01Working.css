@@ -152,8 +152,19 @@ body:has(.navli06 .navFAQlink.active) .navli03 {order: 3;transition: all 0.2s ea
 body:has(.navli06 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ease-in-out !important;}
 
 
+#faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink {
+    color: #ffffff !important;
+    transition: all 0.15s ease-in-out;
+}
+#faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink.active {
+    color: #00b7ff;
+    transition: all 0.15s ease-in-out;
+}
 
-
+#faqNavBar.top-sticky .navFAQhome {
+    color: #ffffff !important;
+    transition: all 0.15s ease-in-out;
+}
 
 
 #faqNavBar.top-sticky .navFAQlink {
@@ -268,30 +279,50 @@ box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58);;
 }
 body:has(.faqBannerText .hoverHome:hover) .navLOGOcontainer div svg {
     fill:#ffffff;
-
 }
 body:has(.faqBannerText .hoverGold:hover) .navLOGOcontainer div svg {
     fill:#00b7ff;
     transition: all 0.2s ease-in-out;
 }
+
 body:has(.faqBannerText .hoverGold:hover) .navLOGOcontainer div svg {
     fill:#ffca2b;
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverGold:hover) #faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink {
+    color: #ffca2b !important;
     transition: all 0.2s ease-in-out;
 }
 body:has(.faqBannerText .hoverRed:hover) .navLOGOcontainer div svg {
     fill:#ff5e5e;
     transition: all 0.2s ease-in-out;
 }
+body:has(.faqBannerText .hoverRed:hover) #faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink {
+    color: #ff5e5e !important;
+    transition: all 0.2s ease-in-out;
+}
 body:has(.faqBannerText .hoverGreen:hover) .navLOGOcontainer div svg {
     fill:#92ff5c;
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverGreen:hover) #faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink {
+    color: #92ff5c !important;
     transition: all 0.2s ease-in-out;
 }
 body:has(.faqBannerText .hoverViolet:hover) .navLOGOcontainer div svg {
     fill:#bc69ff;
     transition: all 0.2s ease-in-out;
 }
+body:has(.faqBannerText .hoverViolet:hover) #faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink {
+    color: #bc69ff !important;
+    transition: all 0.2s ease-in-out;
+}
 body:has(.faqBannerText .hoverOrange:hover) .navLOGOcontainer div svg {
     fill:#ff8819;
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverOrange:hover) #faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink {
+    color: #ff8819 !important;
     transition: all 0.2s ease-in-out;
 }
 body:has(.faqBannerText:hover) .item9 {
@@ -2099,16 +2130,4 @@ filter: drop-shadow(30px 10px 14px #141414);
     display: inline !important; 
     border-bottom: 10px solid #ab5b11;
     margin-bottom: 40px;
-}
-#faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink {
-    color: #ffffff !important;
-        transition: all 0.15s ease-in-out;
-}
-#faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink.active {
-    color: #00b7ff !important;
-        transition: all 0.15s ease-in-out;
-}
-#faqNavBar.top-sticky .navFAQhome {
-    color: #ffffff !important;
-        transition: all 0.15s ease-in-out;
 }
