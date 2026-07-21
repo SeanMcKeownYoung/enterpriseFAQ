@@ -2106,28 +2106,35 @@ filter: drop-shadow(30px 10px 14px #141414);
     padding-top: 20px;
 }
 
+
+
+.bodyBlue .textFAQbox .faqHeaderBig .headerUnderline {
+    display: inline !important; 
+    border-bottom: 10px solid #00b7ff
+}
+
 .bodyGold .textFAQbox .faqHeaderBig .headerUnderline {
     display: inline !important; 
-    border-bottom: 10px solid #ab871d
+    border-bottom: 10px solid #ffca2b
 }
 
 .bodyRed .textFAQbox .faqHeaderBig .headerUnderline {
     display: inline !important; 
-    border-bottom: 10px solid #ab3f3f
+    border-bottom: 10px solid #ff5e5e
 }
 
 .bodyGreen .textFAQbox .faqHeaderBig .headerUnderline {
     display: inline !important; 
-    border-bottom: 10px solid #62ab3e
+    border-bottom: 10px solid #92ff5c
 }
 
 .bodyViolet .textFAQbox .faqHeaderBig .headerUnderline {
     display: inline !important; 
-    border-bottom: 10px solid #652b9e
+    border-bottom: 10px solid #bc69ff
 }
 
 .bodyOrange .headerUnderline {
     display: inline !important; 
-    border-bottom: 10px solid #ab5b11;
+    border-bottom: 10px solid #ff8819;
     margin-bottom: 40px;
 }
