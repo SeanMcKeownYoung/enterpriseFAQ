@@ -45,14 +45,13 @@ body.page-type__piano .custom-html
     height: 80px;
     will-change: transform; 
     background-image: linear-gradient(165deg, #1e1e1e, #262626); 
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
     z-index: 500;
 }
 #faqNavBar.bottom-sticky {
     position: relative;
     bottom: 0;
     left: 0;
-    filter: drop-shadow(0px 26px 22px rgba(0, 0, 0, 0.48));
     transition: filter 0.2s ease !important;
 }
 
@@ -61,7 +60,6 @@ body.page-type__piano .custom-html
     top: 0px;
     left: 0;
     bottom: auto; /* Overrides the previous bottom rule */
-    filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.3));
     transition: filter 0.2s ease !important;
 }
 
@@ -79,63 +77,12 @@ body.page-type__piano .custom-html
 /* X-Large */ @media(min-width: 1280px) {  
     .faqNavWrapper {max-width: 1280px; padding: 0 2rem}}
 
-
-.navFAQulZZ  {
-    display:flex;
-    flex-direction: row;   
-    white-space: nowrap;        
-    width: 100%; 
-    height: 100%;  
-    background-color: #ab3f3f;         
-    list-style-type: none;
-    overflow-x: scroll;              /* Enables horizontal scrolling when content overflows */
-    overflow-y: hidden;             /* Prevents accidental vertical shifting */
-    white-space: nowrap;           /* Keeps links strictly on one line */
-    -webkit-overflow-scrolling: touch; 
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
-}
-
-.navFAQul  {
-    display: flex;                 /* Aligns items in a single row */
-    overflow-x: scroll;              /* Enables horizontal scrolling when content overflows */
-    overflow-y: hidden;             /* Prevents accidental vertical shifting */
-    white-space: nowrap;           /* Keeps links strictly on one line */
-    width: 100%;                   /* Spans the full screen width */
-            /* Smooth momentum scrolling on mobile devices */
-    -webkit-overflow-scrolling: touch; 
-      overflow: auto;
-  scrollbar-gutter: stable;
-
-
-        }      
-
-
-.navFAQulZZ {
-    overflow-x: scroll;              /* Enables horizontal scrolling when content overflows */
-    overflow-y: hidden;             /* Prevents accidental vertical shifting */
-    white-space: nowrap; /* Keeps links strictly on one line */
-}
-/* HIDE
-.navFAQul::-webkit-scrollbar {
-  width: 3em;
-}
-
-.navFAQul::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-.navFAQul::-webkit-scrollbar-thumb {
-  background-color: dodgerblue;
-  outline: 1px solid #333333;
-} */
-
-
 #faqNavBar .navFAQul {
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: end;
-    height: 80px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: end;
+  height: 80px;
+  padding-bottom: 1px;
 }
 #faqNavBar .navFAQli {
     align-items: end;
@@ -148,27 +95,130 @@ body.page-type__piano .custom-html
     color: #535353;
     font-size: 16px;
     font-weight: 600;
+    border: 0;
     text-align: left;
+    padding-bottom: 4px;
+    border-bottom: 10px solid transparent !important;  
     transition: all 0.2s ease !important;
+    will-change: transform; 
 }
+
+.navli00 {
+    order: 0;
+}
+.navli02 {
+    order: 2;
+}
+.navli03 {
+    order: 3;
+}
+.navli04 {
+    order: 4;
+}
+.navli05 {
+    order: 5;
+}
+.navli06 {
+    order: 6;
+}
+body:has(.navli02 .navFAQlink.active) .navli02 {order: 1;transition: all 0.2s ease-in-out !important;}
+body:has(.navli02 .navFAQlink.active) .navli03 {order: 3;transition: all 0.2s ease-in-out !important;}
+body:has(.navli02 .navFAQlink.active) .navli04 {order: 4;transition: all 0.2s ease-in-out !important;}
+body:has(.navli02 .navFAQlink.active) .navli05 {order: 5;transition: all 0.2s ease-in-out !important;}
+body:has(.navli02 .navFAQlink.active) .navli06 {order: 6;transition: all 0.2s ease-in-out !important;}
+
+body:has(.navli03 .navFAQlink.active) .navli03 {order: 1;transition: all 0.2s ease-in-out !important;}
+body:has(.navli03 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ease-in-out !important;}
+body:has(.navli03 .navFAQlink.active) .navli04 {order: 4;transition: all 0.2s ease-in-out !important;}
+body:has(.navli03 .navFAQlink.active) .navli05 {order: 5;transition: all 0.2s ease-in-out !important;}
+body:has(.navli03 .navFAQlink.active) .navli06 {order: 6;transition: all 0.2s ease-in-out !important;}
+
+body:has(.navli04 .navFAQlink.active) .navli04 {order: 1;transition: all 0.2s ease-in-out !important;}
+body:has(.navli04 .navFAQlink.active) .navli03 {order: 3;transition: all 0.2s ease-in-out !important;}
+body:has(.navli04 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ease-in-out !important;}
+body:has(.navli04 .navFAQlink.active) .navli05 {order: 5;transition: all 0.2s ease-in-out !important;}
+body:has(.navli04 .navFAQlink.active) .navli06 {order: 6;transition: all 0.2s ease-in-out !important;}
+
+body:has(.navli05 .navFAQlink.active) .navli05 {order: 1;transition: all 0.2s ease-in-out !important;}
+body:has(.navli05 .navFAQlink.active) .navli03 {order: 3;transition: all 0.2s ease-in-out !important;}
+body:has(.navli05 .navFAQlink.active) .navli04 {order: 4;transition: all 0.2s ease-in-out !important;}
+body:has(.navli05 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ease-in-out !important;}
+body:has(.navli05 .navFAQlink.active) .navli06 {order: 6;transition: all 0.2s ease-in-out !important;}
+
+body:has(.navli06 .navFAQlink.active) .navli06 {order: 1;transition: all 0.2s ease-in-out !important;}
+body:has(.navli06 .navFAQlink.active) .navli05 {order: 5;transition: all 0.2s ease-in-out !important;}
+body:has(.navli06 .navFAQlink.active) .navli04 {order: 4;transition: all 0.2s ease-in-out !important;}
+body:has(.navli06 .navFAQlink.active) .navli03 {order: 3;transition: all 0.2s ease-in-out !important;}
+body:has(.navli06 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ease-in-out !important;}
+
+
+
+
+
+
 #faqNavBar.top-sticky .navFAQlink {
     color: #b0aeae;
     transition: all 0.2s ease !important;
 }
 #faqNavBar .navFAQlink.active {
     color: #ffffff !important;
+    border-bottom: 10px solid transparent !important;  
     transition: all 0.2s ease !important;
 }
-#faqNavBar .navFAQul:hover .navFAQlink.active {
-    color: #535353 !important;
-    transition: all 0.2s ease !important;
-}
+
+
 #faqNavBar .navFAQul .navFAQlink:hover {
     color: #ffffff;
+    border-bottom: 10px solid #ffffff;  
     transition: all 0.2s ease !important;
 }
+.navFAQul  {
+    display: flex;                 /* Aligns items in a single row */
+    overflow-x: scroll;              /* Enables horizontal scrolling when content overflows */
+    overflow-y: hidden;             /* Prevents accidental vertical shifting */
+    white-space: nowrap;           /* Keeps links strictly on one line */
+    height: 100%;
+        translate: 0px 9px; /* Moves 50px right and 20px down */
+        }    
+        /* width */
+        ::-webkit-scrollbar {
+        width: 6px;
+        height: 11px;
+        }
 
+        /* width */
+        ::-webkit-scrollbar-track {
+        height: 100%;
+        }
 
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        height: 100%;
+        background-image: linear-gradient(0deg, #ffffff, #ffffff, #c3c3c3); 
+        transition: all 0.1s ease !important;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background-image: linear-gradient(0deg, #ffffff, #ffffff); 
+        transition: all 0.1s ease !important;
+        }
+#faqNavBar .navShadow {
+    width: 120%; 
+    background-color: transparent; 
+    height: 100%; 
+    position: absolute;
+    margin-left: -20%; 
+        color: #ffffff;
+    border-bottom: 1px solid #ffffff;  
+}
+#faqNavBar.bottom-sticky .navShadow {
+    -webkit-box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58); 
+box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58);; 
+}
+#faqNavBar.top-sticky .navShadow {
+    -webkit-box-shadow: 0px 19px 29px -4px rgba(0,0,0,0.52); box-shadow: 0px 19px 29px -4px rgba(0,0,0,0.52);
+}
 
 /* FAQ HERO AND SECTION STYLES */
 
@@ -1631,36 +1681,36 @@ filter: drop-shadow(30px 10px 14px #141414);
     text-shadow: 0 0 30px #ff8819 !important; /* X-offset Y-offset Blur Color */
 }
 
-#faqNavBar.top-sticky .navFAQul:hover .navFAQlink.active  {
-    color: #b0aeae !important;
-    transition: all 0.2s ease !important;
-}
-#faqNavBar.bottom-sticky .navFAQul:hover .navFAQlink.active  {
-    color: #b0aeae !important;
-}
+
 
 #faqNavBar.top-sticky .hoverBlue .navFAQlink.active, #faqNavBar.top-sticky .hoverBlue .navFAQlink:hover, #faqNavBar.top-sticky .hoverBlue .navFAQlink.active:hover  {
     color: #00b7ff !important;
+    border-bottom: 10px solid #00b7ff !important;
 }
 
 #faqNavBar.top-sticky .hoverGold .navFAQlink.active, #faqNavBar.top-sticky .hoverGold .navFAQlink:hover, #faqNavBar.top-sticky .hoverGold .navFAQlink.active:hover  {
     color: #ffca2b !important;
+    border-bottom: 10px solid #ffca2b !important;
 }
 
 #faqNavBar.top-sticky .hoverRed .navFAQlink.active, #faqNavBar.top-sticky .hoverRed .navFAQlink:hover, #faqNavBar.top-sticky .hoverRed .navFAQlink.active:hover {
     color: #ff5e5e !important;
+    border-bottom: 10px solid #ff5e5e !important;
 }
 
 #faqNavBar.top-sticky .hoverGreen .navFAQlink.active, #faqNavBar.top-sticky .hoverGreen .navFAQlink:hover, #faqNavBar.top-sticky .hoverGreen .navFAQlink.active:hover  {
     color: #92ff5c !important;
+    border-bottom: 10px solid #92ff5c !important;
 }
 
 #faqNavBar.top-sticky .hoverViolet .navFAQlink.active, #faqNavBar.top-sticky .hoverViolet .navFAQlink:hover, #faqNavBar.top-sticky .hoverViolet .navFAQlink.active:hover  {
     color: #bc69ff !important;
+    border-bottom: 10px solid #bc69ff !important;
 }
 
 #faqNavBar.top-sticky .hoverOrange .navFAQlink.active, #faqNavBar.top-sticky .hoverOrange .navFAQlink:hover, #faqNavBar.top-sticky .hoverOrange .navFAQlink.active:hover  {
     color: #ff8819 !important;
+    border-bottom: 10px solid #ff8819 !important;
 }
 
 

@@ -94,6 +94,7 @@ function highlightActiveBookmark() {
 
         // Clear existing active state from all links
         navLinks.forEach((link) => link.classList.remove("active"));
+        navLinks.forEach((link) => link.classList.add("inactive"));
 
         // Add active state to the matching link
         const activeLink = document.querySelector(`.navFAQlink[href="#${id}"]`);
@@ -104,6 +105,10 @@ function highlightActiveBookmark() {
     });
   };
 
+
+
+
+  
   const observer = new IntersectionObserver(observerCallback, observerOptions);
 
   // Instruct the observer to start tracking all sections

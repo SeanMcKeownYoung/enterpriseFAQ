@@ -1065,3 +1065,30 @@ hoverBlueZ"><a href="#Register" class="navFAQlinkZ">How do I register/sign in?</
     margin-bottom: 40px;
 }
 
+
+
+
+        /* width */
+        ::-webkit-scrollbar {
+        width: 6px;
+        height: 80px;
+        }
+
+        /* width */
+        ::-webkit-scrollbar-track {
+        background: transparent;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: transparent; 
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: transparent; 
+        }
+/* Targets the global body, checking if .target-item is hovered, then modifies .anywhere-else */
+body:has(.target-item:hover) .anywhere-else {
+  display: block;
+}
