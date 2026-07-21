@@ -1683,6 +1683,7 @@ filter: drop-shadow(30px 10px 14px #141414);
 
 
 
+
 #faqNavBar.top-sticky .hoverBlue .navFAQlink.active, #faqNavBar.top-sticky .hoverBlue .navFAQlink:hover, #faqNavBar.top-sticky .hoverBlue .navFAQlink.active:hover  {
     color: #00b7ff !important;
     border-bottom: 10px solid #00b7ff !important;
@@ -1991,8 +1992,6 @@ filter: drop-shadow(30px 10px 14px #141414);
     border: 2px solid #ab5b11;
 }
 
-
-
 .bodyBlue .containerFAQbody:hover .textFAQbox .magIcon {
     fill: #00b7ff;
     width: 8rem;
@@ -2100,4 +2099,16 @@ filter: drop-shadow(30px 10px 14px #141414);
     display: inline !important; 
     border-bottom: 10px solid #ab5b11;
     margin-bottom: 40px;
+}
+#faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink {
+    color: #ffffff !important;
+        transition: all 0.15s ease-in-out;
+}
+#faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink.active {
+    color: #00b7ff !important;
+        transition: all 0.15s ease-in-out;
+}
+#faqNavBar.top-sticky .navFAQhome {
+    color: #ffffff !important;
+        transition: all 0.15s ease-in-out;
 }
