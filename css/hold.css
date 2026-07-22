@@ -474,12 +474,7 @@ body:has(.faqBannerText:hover) .item9 {
   padding: 0 2rem ;
   gap: 20px;
 }
-.faqFillShaded .containerFAQbody {
-  flex-direction: row-reverse;
-}
-.faqFillNone .containerFAQbody {
-  flex-direction: row;
-}
+
 /* X-Small */ @media(max-width: 549px){  
     .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
         flex-direction: column; padding-top: 20px;}}
@@ -493,9 +488,9 @@ body:has(.faqBannerText:hover) .item9 {
     .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
         flex-direction: row-reverse; 
         padding-top: 0px;}}
-
 /* X-Large */ @media(min-width: 1280px) {  
-    .zz {font-size: 54px;}}
+    .faqFillShaded .containerFAQbody {flex-direction: row-reverse;}
+    .faqFillNone .containerFAQbody {flex-direction: row;}}
 
 
 

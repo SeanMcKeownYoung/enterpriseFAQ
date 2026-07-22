@@ -1116,30 +1116,66 @@ margin-bottom: 10px;
 
 .textFAQheader {
     position: absolute; 
-    width: calc(1280px - 4rem); 
-    height: 120px;
 }
-.textFAQtext {
-    margin-top: 120px;
-}
+
 
 /* X-Small */ @media(max-width: 549px){  
     .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
-        flex-direction: column; padding-top: 20px;}.imageFAQbox  {width: 60%;}}
+        flex-direction: column; padding-top: 20px;}
+    .imageFAQbox  {width: 60%;}
+    .textFAQheader {
+        position: absolute; 
+        width: calc(100% - 4rem); 
+        height: 90px;}
+    .textFAQtext {
+        margin-top: 90px;}
+    }
+
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
     .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
         flex-direction: column; padding-top: 20px;}
-    .imageFAQbox  {width: 60%;}}
+    .imageFAQbox  {width: 60%;}
+    .textFAQheader {
+        position: absolute; 
+        width: calc(549px - 4rem); 
+        height: 100px;}
+    .textFAQtext {
+        margin-top: 100px;}
+}
+
 /* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
     .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
-        flex-direction: row-reverse; padding-top: 0px;}}
+        flex-direction: row-reverse; padding-top: 0px;}
+    .textFAQheader {
+        position: absolute; 
+        width: calc(768px - 4rem); 
+        height: 120px;}
+    .textFAQtext {
+        margin-top: 120px;}
+    }
+    
 /* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
     .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
         flex-direction: row-reverse; 
-        padding-top: 0px;}}
+        padding-top: 0px;}
+    .textFAQheader {
+        position: absolute; 
+        width: calc(1024px - 4rem); 
+        height: 120px;}
+    .textFAQtext {
+        margin-top: 120px;}
+    }
+
 /* X-Large */ @media(min-width: 1280px) {  
     .faqFillShaded .containerFAQbody {flex-direction: row-reverse;}
-    .faqFillNone .containerFAQbody {flex-direction: row;}}
+    .faqFillNone .containerFAQbody {flex-direction: row;}
+    .textFAQheader {
+        position: absolute; 
+        width: calc(1280px - 4rem); 
+        height: 120px;}
+    .textFAQtext {
+        margin-top: 120px;}
+}
 
     
 
