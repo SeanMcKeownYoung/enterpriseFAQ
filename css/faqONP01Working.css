@@ -1,7 +1,7 @@
 /* ONLINE NEWSPAPER CSS ADDITIONS FOR FAQ PAGE */
 
-    		/* Outlines the grids, remove when sending
-		div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
+    		/* Outlines the grids, remove when sending*/*/
+		div, section, header, nav, ul, li { border: 1px solid cyan !important}
 
 /* BASE LEVEL STYLES */
 body {
@@ -363,19 +363,19 @@ body:has(.faqBannerText:hover) .item9 {
     border-bottom: 1px solid #ffffff;
 }
 
-.faqFillNone .faqPageWrapper {
+.faqBodyContainer .faqPageWrapper {
     display:flex;
-    flex-direction:row-reverse !important;
-    margin:0 auto;
-    padding: 10vh 2rem;
+    margin: 0 auto;
+    padding: 10% 2rem;
 }
 
-.faqFillShaded .faqPageWrapper {
-    display:flex;
-    flex-direction:row !important;
-    margin:0 auto;
-    padding: 10vh 2rem;
-}
+
+/* X-Small */ @media(max-width: 549px){.faqPageWrapper {max-width:100%;}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){.faqPageWrapper {max-width:549px;}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){.faqPageWrapper {max-width:768px;}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){.faqPageWrapper {max-width:1024px;}}
+/* X-Large */ @media(min-width: 1280px) {.faqPageWrapper {max-width:1280px;}}
+
 
 .faqHeroContainer .faqBannerText  {
     display:flex;
@@ -487,216 +487,10 @@ body:has(.faqBannerText:hover) .item9 {
     object-position: center;
 }
 
-/* Advance - dotcom CSS Media Queries - Screen Sizes */
 
-/* X-Small */            
-@media(max-width: 549px){ 
-        .faqPageWrapper {
-            max-width:100%;
-        }    
-       .faqList {
-            font-size: 14px;
-            padding: 0px 10px;
-        }
-       .faqList span {
-            padding-right: 4px;
-        }
-       .faqHeroContainer .faqBannerText .faqMSGheader {
-            text-align: center;
-            padding-bottom: 4px;
-        }
-       .faqHeroContainer .faqBannerText .faqMSGtext {
-            position:relative;
-            font-size:1.6rem;
-            text-align:center;
-        }
-        }
-
-
-/* Small */            
-    @media(min-width: 549px){
-       .faqPageWrapper {
-            max-width:549px;
-            display:flex;
-            flex-direction:column !important;
-            margin:0 auto;
-            padding:0;
-        }   
-       .faqList {
-            font-size: 14px;
-            padding: 0px 10px;
-        }
-       .faqList span {
-            padding-right: 4px;
-        }
-       .faqHeroContainer .faqBannerText .faqMSGheader {
-            text-align: center;
-            padding-bottom: 6px;
-        }
-        
-       .faqHeroContainer .faqBannerText .faqMSGtext {
-            position:relative;
-            font-size:1.6rem;
-            text-align:center;
-        }
-       .faqHeroContainer .faqBannerText .MessageButton {
-            background-color:#2a2a2a;border-radius:32px;color:#fff;cursor:pointer;font-family:Inter,serif;font-size:1.4rem;font-weight:700;gap:8px;height:50px;margin:32px 0 0;padding:16px 24px;width:100%}  
-       .faqHeroContainer .BannerRight {
-            align-items:center;
-            display:flex;
-            flex-grow:1;
-            justify-content:center;
-            max-height:354px;padding:14px 58px;
-            position:relative
-        }
-        }
-
-/* Medium */           
-    @media(min-width: 768px)
-            {
-       .faqPageWrapper {
-            max-width:768px;
-        }        
-       .faqList {
-            font-size: 16px;
-            padding: 0px 0px;
-        }
-       .faqList span {
-            padding-right: 4px;
-        }
-       .faqHeroContainer .faqBannerText .faqMSGheader {
-            text-align: left;
-            padding-bottom: 8px;
-        }
-       .faqHeroContainer .faqBannerText .faqMSGtext {
-            font-size:2rem;
-            text-align:left;
-            position:relative
-        }           
-       .faqHeroContainer .faqBannerText .MessageButton {
-            background-color:#2a2a2a;
-            border-radius:32px;
-            color:#fff;
-            cursor:pointer;
-            font-family:Inter,serif;
-            font-size:1.4rem;
-            font-weight:700;
-            gap:8px;height:50px;
-            margin:22px auto auto;
-            padding:16px 24px;
-            width:196px
-        }
-       .faqHeroContainer .BannerRight {
-            align-items:center;
-            display:flex;
-            flex-grow:1;
-            justify-content:center;
-            max-height:363px;
-            padding:64px 21px;
-            position:relative
-        }       
-        }
-
-
-/* Large */           
-    @media(min-width: 1024px)
-            {
-       .faqPageWrapper {
-            max-width:1024px;
-        }            
-       .faqList {
-            font-size: 17px;
-        }
-       .faqList span {
-            padding-right: 4px;
-        }
-       .faqHeroContainer .faqBannerText .faqMSGheader {
-            text-align: left;
-            padding-bottom: 10px;
-        }
-       .faqHeroContainer .faqBannerText .faqMSGtext {
-            font-size:2.4rem;
-            text-align:left;
-            position:relative
-        }
-       .faqHeroContainer .faqBannerText .MessageButton {
-            background-color:#2a2a2a;
-            border-radius:32px;
-            color:#fff;
-            cursor:pointer;
-            font-family:Inter,serif;
-            font-size:1.4rem;
-            font-weight:700;
-            gap:8px;
-            height:50px;
-            margin:32px auto auto;
-            padding:16px 24px;
-            width:196px
-        }  
-       .faqHeroContainer .BannerRight {
-            align-items:center;
-            display:flex;
-            flex-grow:1;
-            justify-content:center;
-            min-height:484px;
-            min-width:512px;
-            padding:48px 117px;
-            position:relative
-        }
-        }
-
-/* X-Large */           
-    @media(min-width: 1280px)
-            {
-       .faqPageWrapper {
-            max-width:1280px;
-        }    
-       .faqList {
-            font-size: 20px;
-        }
-       .faqList span {
-            padding-right: 4px;
-        }
-       .faqHeroContainer .faqBannerText .faqMSGheader {
-            text-align: left;
-            padding-bottom: 12px;
-            }
-       .faqHeroContainer .faqBannerText .faqMSGtext {
-            font-size:2.4rem;
-            text-align:left;
-            position:relative
-            }
-       .faqHeroContainer .faqBannerText .MessageButton {
-            background-color:#2a2a2a;
-            border-radius:32px;
-            color:#fff;
-            cursor:pointer;
-            font-family:Inter,serif;
-            font-size:1.4rem;
-            font-weight:700;
-            gap:8px;
-            height:50px;
-            margin:32px auto auto;
-            padding:16px 24px;
-            width:196px
-            }
-       .faqHeroContainer .BannerRight {
-            align-items:center;
-            display:flex;
-            flex-grow:1;
-            justify-content:center;
-            min-height:604px;min-width:640px;
-            padding:48px 117px;
-            position:relative
-            }
-    }
 
 /* FAQ BODY STYLES */
 
-.faqBodyContainer {
-    padding: 50px 0px;
-    position:relative
-}
             
 .faqBodyImage {
      display: flex;       /* Use flexbox to center content */
@@ -711,15 +505,6 @@ body:has(.faqBannerText:hover) .item9 {
     object-position: center;
 }
 
-.faqBodyContainer .faqBodyHeader {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    font-size:2.8rem;
-    letter-spacing:0;
-    line-height:1.2;
-    margin-bottom: 20px;
-}
 
 .faqQuestionRow button, .faqQuestionRowStatic div  {
     margin-bottom: 10px
@@ -1325,7 +1110,7 @@ margin-bottom: 10px;
   align-items: flex-start;
   width: 100%;
   height: auto;
-  padding: 10rem 0 4rem 0;
+  gap: 20px;
 }
 .faqFillShaded .containerFAQbody {
   flex-direction: row-reverse;

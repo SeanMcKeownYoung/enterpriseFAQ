@@ -1,6 +1,6 @@
 /* ONLINE NEWSPAPER CSS ADDITIONS FOR FAQ PAGE */
 
-    		/* Outlines the grids, remove when sending*/*/
+    		/* Outlines the grids, remove when sending*/
 		div, section, header, nav, ul, li { border: 1px solid cyan !important}
 
 /* BASE LEVEL STYLES */
@@ -177,7 +177,6 @@ body:has(.navli06 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ea
     transition: all 0.2s ease !important;
 }
 
-
 #faqNavBar .navFAQul .navFAQlink:hover {
     color: #ffffff;
     border-bottom: 10px solid #ffffff;  
@@ -231,31 +230,6 @@ box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58);;
     -webkit-box-shadow: 0px 19px 29px -4px rgba(0,0,0,0.52); box-shadow: 0px 19px 29px -4px rgba(0,0,0,0.52);
 }
 
-/* FAQ HERO AND SECTION STYLES */
-
-.faqHeroFull {
-    background-image: linear-gradient(165deg, #0d0d0d, #1d1d1d, #262626); 
-    width: 100%;
-    margin-top: 50px;
-    padding: 10vh 0 0 0;
-    z-index: 550;
-}
-.faqHeroFull .faqPageWrapper {
-    display:flex;
-    flex-direction:row!important;
-    margin:0 auto;
-    padding: 0 2rem;
-}
-
-.faqHeroFull .faqHeroContainer {
-    margin-bottom: 0; 
-    display:block;
-    width: 100%;
-}
-.faqHeroFull .faqHeroContainer .faqBannerText {
-    margin: 0;
-    padding: 0;
-}
 .navIMGbx {
     padding-right: 0rem;
 }
@@ -343,10 +317,35 @@ body:has(.faqBannerText:hover) .item9 {
     text-shadow: 0 0 0px #00b7ff00; /* X-offset Y-offset Blur Color */
 }
 
-
 #faqNavBar .faqNavWrapper {
     display:block;
     padding:0 2rem;
+}
+
+
+/* FAQ HERO AND SECTION STYLES */
+
+.faqHeroFull {
+    background-image: linear-gradient(165deg, #0d0d0d, #1d1d1d, #262626); 
+    width: 100%;
+    margin-top: 50px;
+    padding: 10vh 0 0 0;
+    z-index: 550;
+}
+.faqHeroFull .faqPageWrapper {
+    display:flex;
+    flex-direction:row!important;
+    margin:0 auto;
+    padding: 0 2rem;
+}
+.faqHeroFull .faqHeroContainer {
+    margin-bottom: 0; 
+    display:block;
+    width: 100%;
+}
+.faqHeroFull .faqHeroContainer .faqBannerText {
+    margin: 0;
+    padding: 0;
 }
 
 .faqFillShaded {
@@ -362,20 +361,6 @@ body:has(.faqBannerText:hover) .item9 {
     background-image: linear-gradient(180deg, #ece9e1, #fff); 
     border-bottom: 1px solid #ffffff;
 }
-
-.faqBodyContainer .faqPageWrapper {
-    display:flex;
-    margin: 0 auto;
-    padding: 10% 2rem;
-}
-
-
-/* X-Small */ @media(max-width: 549px){.faqPageWrapper {max-width:100%;}}
-/* Small */ @media(min-width: 549px) and (max-width: 768px){.faqPageWrapper {max-width:549px;}}
-/* Medium */ @media(min-width: 768px) and (max-width: 1024px){.faqPageWrapper {max-width:768px;}}
-/* Large */ @media(min-width: 1024px) and (max-width: 1280px){.faqPageWrapper {max-width:1024px;}}
-/* X-Large */ @media(min-width: 1280px) {.faqPageWrapper {max-width:1280px;}}
-
 
 .faqHeroContainer .faqBannerText  {
     display:flex;
@@ -448,32 +433,6 @@ body:has(.faqBannerText:hover) .item9 {
 .faqHeroContainer .faqBannerText .BannerImgLogo img {
     width:250px
 }
-               
-.faqHeroContainer .faqBannerText .MessageButton {
-    background-color:#2a2a2a;
-    border-radius:32px;
-    color:#fff;
-    cursor:pointer;
-    font-family:Inter,serif;
-    font-size:1.4rem;
-    font-weight:700;
-    gap:8px;
-    height:50px;
-    margin:32px 0 0;
-    padding:16px 24px;
-    width:100%
-}
-            
-.faqHeroContainer .BannerRight {
-    align-items:center;
-    background-color:#f6ca15;
-    display:flex;
-    flex-grow:1;
-    justify-content:center;
-    max-height:354px;
-    padding:14px 58px;
-    position:relative
-}
             
 .faqBannerImage {
      display: flex;       /* Use flexbox to center content */
@@ -488,24 +447,84 @@ body:has(.faqBannerText:hover) .item9 {
 }
 
 
-
 /* FAQ BODY STYLES */
+/* MAIN FULL WRAP AND INSET WRAPS */
+.faqPageWrapper {
+    display:flex;
+    margin:0 auto;
+}
+/* X-Small */ @media(max-width: 549px){.faqPageWrapper {max-width:100%;}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){.faqPageWrapper {max-width:549px;}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){.faqPageWrapper {max-width:768px;}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){.faqPageWrapper {max-width:1024px;}}
+/* X-Large */ @media(min-width: 1280px) {.faqPageWrapper {max-width:1280px;}}
 
-            
-.faqBodyImage {
-     display: flex;       /* Use flexbox to center content */
-     justify-content: center; /* Centers horizontally */
-     align-items: center;     /* Centers vertically */
+/* X-Small */ @media(max-width: 549px){.faqFillShaded .faqPageWrapper, .faqFillNone .faqPageWrapper {height: 100vh;}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){.faqFillShaded .faqPageWrapper, .faqFillNone .faqPageWrapper {height: 100vh;}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){.faqFillShaded .faqPageWrapper, .faqFillNone .faqPageWrapper {height: 60vh;}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){.faqFillShaded .faqPageWrapper, .faqFillNone .faqPageWrapper {height: 60vh;}}
+/* X-Large */ @media(min-width: 1280px) {.faqFillShaded .faqPageWrapper, .faqFillNone .faqPageWrapper {height: 90vh;}}
+
+/* MAIN WRAP Q & A STYLES */
+.containerFAQbody {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0 2rem ;
+  gap: 20px;
+}
+.faqFillShaded .containerFAQbody {
+  flex-direction: row-reverse;
+}
+.faqFillNone .containerFAQbody {
+  flex-direction: row;
+}
+/* X-Small */ @media(max-width: 549px){  
+    .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
+        flex-direction: column; padding-top: 20px;}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){  
+    .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
+        flex-direction: column; padding-top: 20px;}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
+    .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
+        flex-direction: row-reverse; 
+        padding-top: 0px;}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
+    .zz {font-size: 54px;}}
+/* X-Large */ @media(min-width: 1280px) {  
+    .zz {font-size: 54px;}}
+
+.imageFAQbox {
+  flex: 1;
+}
+.textFAQbox {
+  flex: 2;
+  width: 100%;
 }
 
-.faqBodyImage img {
-    width: 100%;         /* Let the image expand to the width */
-    height: 100%;        /* Let the image expand to the height */
-    object-fit: contain; /* Scales image while maintaining aspect ratio */
-    object-position: center;
+.imageFAQbox img {
+  width: 100%;
+  height: auto;
+}
+.textFAQheader {
+    position: absolute; 
+    width: calc(1280px - 4rem); 
+    height: 120px;
+}
+.textFAQtext {
+    margin-top: 120px;
 }
 
+.textFAQbox .faqHeaderBig {
+  text-wrap: balance;
+    padding-top: 2rem;
+} 
 
+
+
+
+/* Eliminate faqQuestionRow. It's only used on the Contacts section, replace with something from body but static */ 
 .faqQuestionRow button, .faqQuestionRowStatic div  {
     margin-bottom: 10px
 }
@@ -543,27 +562,6 @@ body:has(.faqBannerText:hover) .item9 {
     padding: 6px 0px;
 }
 
-.faqQdouble {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    width: 100%;
-}
-
-.faqQdouble div {
-    width: 48%;
-    height: 100%;
-    position: relative;
-}
-
-
-.faqQdouble div img {
-    width: 100%;         /* Let the image expand to the width */
-    height: 100%;        /* Let the image expand to the height */
-    object-fit: cover; /* Scales image while maintaining aspect ratio */
-    object-position: center !important; 
-}
 
 .faqQuestionRow button, .faqQuestionRowStatic div  {
     font-family: "neue-haas-grotesk-display", sans-serif;
@@ -1081,7 +1079,6 @@ margin-bottom: 10px;
     line-height:1.2;
 }
 
-
 .textFAQbox .faqHeaderBig {
   text-wrap: balance;
     padding-top: 2rem;
@@ -1091,7 +1088,6 @@ margin-bottom: 10px;
     display: inline !important; 
     border-bottom: 10px solid #787878
 }
-
 
 /* X-Small */ @media(max-width: 549px){  
     .faqHeaderBig {font-size: 32px;}}
@@ -1104,44 +1100,6 @@ margin-bottom: 10px;
 /* X-Large */ @media(min-width: 1280px) {  
     .faqHeaderBig {font-size: 54px;}}
 
-/* UPDATED BODY Q & A STYLES */
-.containerFAQbody {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  height: auto;
-  gap: 20px;
-}
-.faqFillShaded .containerFAQbody {
-  flex-direction: row-reverse;
-}
-.faqFillNone .containerFAQbody {
-  flex-direction: row;
-}
-
-.imageFAQbox {
-  flex: 1;
-}
-
-.textFAQbox {
-  flex: 2;
-}
-.faqFillShaded .textFAQbox {
-  padding-right: 2rem;
-}
-.faqFillNone .textFAQbox {
-  padding-left: 2rem;
-}
-
-.imageFAQbox img {
-  width: 100%;
-  height: auto;
-}
-
-.textFAQbox .faqHeaderBig {
-  text-wrap: balance;
-    padding-top: 2rem;
-} 
 
 .faqCarret {
     fill:none;
@@ -1249,7 +1207,7 @@ margin-bottom: 10px;
 }
 
 .accordionFAQitem {
-    padding-bottom: 1px;
+    padding-bottom: 10px;
     margin-bottom: 1px;
 
 }
