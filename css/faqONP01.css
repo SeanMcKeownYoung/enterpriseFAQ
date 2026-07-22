@@ -1,7 +1,7 @@
 /* ONLINE NEWSPAPER CSS ADDITIONS FOR FAQ PAGE */
 
-    		/* Outlines the grids, remove when sending*/*/
-		div, section, header, nav, ul, li { border: 1px solid cyan !important}
+    		/* Outlines the grids, remove when sending
+		div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 
 /* BASE LEVEL STYLES */
 body {
@@ -230,6 +230,10 @@ box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58);;
 #faqNavBar.top-sticky .navShadow {
     -webkit-box-shadow: 0px 19px 29px -4px rgba(0,0,0,0.52); box-shadow: 0px 19px 29px -4px rgba(0,0,0,0.52);
 }
+#faqNavBar .faqNavWrapper {
+    display:block;
+    padding:0 2rem;
+}
 
 /* FAQ HERO AND SECTION STYLES */
 
@@ -343,12 +347,8 @@ body:has(.faqBannerText:hover) .item9 {
     text-shadow: 0 0 0px #00b7ff00; /* X-offset Y-offset Blur Color */
 }
 
-
-#faqNavBar .faqNavWrapper {
-    display:block;
-    padding:0 2rem;
-}
-
+/* FAQ BODY STYLES */
+/* MAIN FULL WRAP AND INSET WRAPS */
 .faqFillShaded {
     background-color: #ece9e1;
     border-bottom: 1px solid #ffffff;
@@ -357,24 +357,17 @@ body:has(.faqBannerText:hover) .item9 {
     background-color: #f8f5f0;
     border-bottom: 1px solid #ffffff;
 }
-.faqFillContacts {
-    background-color: #ece9e1;
-    background-image: linear-gradient(180deg, #ece9e1, #fff); 
-    border-bottom: 1px solid #ffffff;
-}
-
 .faqBodyContainer .faqPageWrapper {
     display:flex;
     margin: 0 auto;
-    padding: 10% 2rem;
 }
 
 
-/* X-Small */ @media(max-width: 549px){.faqPageWrapper {max-width:100%;}}
-/* Small */ @media(min-width: 549px) and (max-width: 768px){.faqPageWrapper {max-width:549px;}}
-/* Medium */ @media(min-width: 768px) and (max-width: 1024px){.faqPageWrapper {max-width:768px;}}
-/* Large */ @media(min-width: 1024px) and (max-width: 1280px){.faqPageWrapper {max-width:1024px;}}
-/* X-Large */ @media(min-width: 1280px) {.faqPageWrapper {max-width:1280px;}}
+/* X-Small */ @media(max-width: 549px){.faqPageWrapper {max-width:100%;padding: 30px 2rem 50px 2rem;}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){.faqPageWrapper {max-width:549px;padding: 40px 2rem 60px 2rem;}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){.faqPageWrapper {max-width:768px;padding: 10% 2rem;}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){.faqPageWrapper {max-width:1024px;padding: 10% 2rem;}}
+/* X-Large */ @media(min-width: 1280px) {.faqPageWrapper {max-width:1280px;padding: 10% 2rem;}}
 
 
 .faqHeroContainer .faqBannerText  {
@@ -637,10 +630,6 @@ body:has(.faqBannerText:hover) .item9 {
     stroke-linejoin:round;
     stroke-width:2.5px
 }
-.bLink {
-    color: inherit !important;
-    font-weight: 500;
-}
 
 
 
@@ -690,11 +679,6 @@ body:has(.faqBannerText:hover) .item9 {
 /* Medium */           
     @media(min-width: 768px)
             { 
-       .faqHeroContainer .faqBannerText .faqBodyheader {
-            font-size:2.8rem;
-            text-align: left;
-            padding-bottom: 16px;
-        }
 .faqQuestionRow button, .faqQuestionRowStatic div  {
             font-size:2rem;
             text-align:left;
@@ -705,11 +689,6 @@ body:has(.faqBannerText:hover) .item9 {
 /* Large */           
     @media(min-width: 1024px)
             {
-       .faqHeroContainer .faqBannerText .faqBodyheader {
-            font-size:4rem;
-            text-align: left;
-            padding-bottom: 18px;
-        }
 .faqQuestionRow button, .faqQuestionRowStatic div  {
             font-size:2.4rem;
             text-align:left;
@@ -745,7 +724,11 @@ body:has(.faqBannerText:hover) .item9 {
 
 
 /* FAQ CONTACTS STYLES */
-
+.faqFillContacts {
+    background-color: #ece9e1;
+    background-image: linear-gradient(180deg, #ece9e1, #fff); 
+    border-bottom: 1px solid #ffffff;
+}
 
   .faqContactContainer {
         display: flex; 
@@ -1112,12 +1095,6 @@ margin-bottom: 10px;
   height: auto;
   gap: 20px;
 }
-.faqFillShaded .containerFAQbody {
-  flex-direction: row-reverse;
-}
-.faqFillNone .containerFAQbody {
-  flex-direction: row;
-}
 
 .imageFAQbox {
   flex: 1;
@@ -1125,12 +1102,6 @@ margin-bottom: 10px;
 
 .textFAQbox {
   flex: 2;
-}
-.faqFillShaded .textFAQbox {
-  padding-right: 2rem;
-}
-.faqFillNone .textFAQbox {
-  padding-left: 2rem;
 }
 
 .imageFAQbox img {
@@ -1142,6 +1113,37 @@ margin-bottom: 10px;
   text-wrap: balance;
     padding-top: 2rem;
 } 
+
+.textFAQheader {
+    position: absolute; 
+    width: calc(1280px - 4rem); 
+    height: 120px;
+}
+.textFAQtext {
+    margin-top: 120px;
+}
+
+/* X-Small */ @media(max-width: 549px){  
+    .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
+        flex-direction: column; padding-top: 20px;}.imageFAQbox  {width: 60%;}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){  
+    .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
+        flex-direction: column; padding-top: 20px;}
+    .imageFAQbox  {width: 60%;}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
+    .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
+        flex-direction: row-reverse; padding-top: 0px;}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
+        flex-direction: row-reverse; 
+        padding-top: 0px;}}
+/* X-Large */ @media(min-width: 1280px) {  
+    .faqFillShaded .containerFAQbody {flex-direction: row-reverse;}
+    .faqFillNone .containerFAQbody {flex-direction: row;}}
+
+    
+
+
 
 .faqCarret {
     fill:none;
@@ -1809,90 +1811,9 @@ filter: drop-shadow(30px 10px 14px #141414);
     border: 2px solid #ab5b11;
 }
 
-.bodyBlue .containerFAQbody:hover .textFAQbox .magIcon {
-    fill: #00b7ff;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-.bodyGold .containerFAQbody:hover .textFAQbox .magIcon {
-    fill: #ffca2b;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-.bodyRed .containerFAQbody:hover .textFAQbox .magIcon {
-    fill: #ff5e5e;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-
-
-.bodyGreen .containerFAQbody:hover .textFAQbox .magIcon {
-    fill: #62ab3e;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-
-
-.bodyOrange .containerFAQbody:hover .textFAQbox .magIcon {
-    fill: #ff8819;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-
-.bodyBlue .containerFAQbody .textFAQbox:hover .magIcon {
-    fill: #00b7ff;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-.bodyGold .containerFAQbody .textFAQbox:hover .magIcon {
-    fill: #ffca2b;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-.bodyRed .containerFAQbody .textFAQbox:hover .magIcon {
-    fill: #ff5e5e;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-.bodyGreen .containerFAQbody .textFAQbox:hover .magIcon {
-    fill: #92ff5c;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-.bodyOrange .containerFAQbody .textFAQbox:hover .magIcon {
-    fill: #ff8819;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-.magIcon {
-    fill: #fff;
-    width: 8rem;
-    height: 8rem;
-        transition: all 0.2s ease !important;
-}
-.faqFillContacts .magIcon {
-    fill: #fff;
-    width: 16rem;
-    height: 16rem;
-    position: absolute;
-    transform: translate(-10px, -100%);
-    z-index: 0;
-}
 .faqFillContacts .faqHeaderBig {
     padding-top: 20px;
 }
-
-
 
 .bodyBlue .textFAQbox .faqHeaderBig .headerUnderline {
     display: inline !important; 
