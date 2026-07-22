@@ -1,17 +1,4 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var faqQcontainer = this.nextElementSibling;
-    if (faqQcontainer.style.display === "block") {
-      faqQcontainer.style.display = "none";
-    } else {
-      faqQcontainer.style.display = "block";
-    }
-  });
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Get current date and format it as YYYY-MM-DD

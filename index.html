@@ -746,57 +746,6 @@
 </section>
 <style>
 
-.sectionFAQmag {
-  position: fixed; 
-  z-index: 1000; 
-  top: 0;
-  pointer-events: none;
-}
-
-.sectionFAQImg {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-}
-
-.sectionFAQImg div {
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-
-}
-.sectionFAQImg div img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: left bottom;
-    filter: drop-shadow(-30px 10px 14px #1414145f);
-    transform: scaleX(-1);
-}
-
-  .faqSectionImg div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right bottom;
-    filter: drop-shadow(-30px 10px 14px #1414145f);
-    transform: scaleX(-1);
-    will-change: transform;
-    translate: 80px 10px; /* Moves 50px right and 20px down */
-  transition: all 0.8s ease-in-out;
-}
-.faqSectionImg div {
-    position: absolute;
-    z-index: 500;
-    right: 0;
-    top: 0;
-    pointer-events: none;
-    overflow: hidden; /* Recommended to prevent accidental layout spill */
-    transition: all 0.8s ease-in-out;
-}
 
 </style>
 <header class="faqHeroFull">
@@ -858,7 +807,7 @@
     <div class="faqPageWrapper bodyGold"> 
         <div class="containerFAQbody">
         <div class="imageFAQbox">
-            <img src="images/dummyillo.png" alt="...">
+            <img style="display: none;" src="" alt="...">
         </div>
         <div class="textFAQbox">
             <div class="textFAQheader">
@@ -877,7 +826,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse01One" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse01One" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>You may be asked to sign in. </strong>Use the same email address and password you created for your subscription. Once signed in, your newspaper will open.
                       </div>
@@ -906,14 +855,19 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse01Two" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse01Two" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
-                        <strong>If you're a Subscriber, follow these simple steps:<br></strong>               
-                        1. On your device, open the internet, (like Safari, Chrome, or Edge) <br>
-                        2. At the top of the screen, tap the long white bar<br>
-                        3. Type: myaccount.mlive.com (or your local newspaper myAccount page listed here...)<br>
-                        4. Tap Go or Enter to open the page.<br>
-                        5. Click on “REGISTER.” Once registered, your subscription will be activated and you’ll have immediate access to the online newspaper. Remember you can add up to four additional family or friends email addresses! 
+                        <strong>If you're a Subscriber,</strong> follow these simple steps:  
+                        <ol>
+                          <li>1. On your device, open the internet, (like Safari, Chrome, or Edge)</li>
+                          <li>2. At the top of the screen, tap the long white bar </li>
+                          <li>3. Type: myaccount.mlive.com (or your local newspaper myAccount page listed here...)</li>
+                          <li>4. Tap Go or Enter to open the page.</li>
+                          <li>5. Click on “REGISTER.” Once registered, your subscription will be activated and you’ll have immediate access to the online newspaper. Remember you can add up to four additional family or friends email addresses!</li>
+                        </ol>                          
+                      </div>
+                      <div class="accordionFAQbody">
+                        <span style="display: inline; font-weight: 600;">Not a subscriber?</span> Call or email xxxxx
                       </div>
 
                       <div class="faqHow" style="border: 0;">
@@ -930,10 +884,6 @@
                             </div>
                         </div>
                       </div> 
-                      <div class="faqHow accordionFAQbody">
-                        <strong>Not a subscriber?</strong>               
-                         Call or email xxxxx
-                      </div>
                     </div>
                   </div>
 
@@ -945,7 +895,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse01Three" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse01Three" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Through the browser,</strong> please ensure you sign in at the top-right corner of the webpage with your subscription email address and password. <br>
                         <strong>Through the App,</strong> click on the menu  on the top-right corner to sign in under “Account”. 
@@ -975,7 +925,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse01Four" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse01Four" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>If accessing through the browser,</strong> please ensure you sign in at the top-right corner of the webpage (blue sign in button) with your subscription email address and password.<br>
                         <strong>If accessing through the App,</strong> click on the menu (insert hamburger image) on the top-right corner to sign in under “Account”.<br>
@@ -1031,7 +981,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse02One" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse02One" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Follow these simple steps: </strong><br>
                             1. On your device, open the internet (like Safari, Chrome, or Edge)<br>
@@ -1065,7 +1015,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse02Two" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse02Two" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Yes—this is the easiest option!<br></strong>               
                             Ask a family member or follow these steps:
@@ -1099,7 +1049,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse02Three" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse02Three" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Please visit the App Store on your device and search</strong>  for our online newspaper app. Simply download the app and sign in to enjoy the best reading experience!
                         <br>App not available on Amazon Fire devices.. 
@@ -1129,7 +1079,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse02Four" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse02Four" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Yes—you can always read today’s newspaper, even without the email.</strong> 
                             Go directly to:
@@ -1163,7 +1113,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse02Five" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse02Five" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>The email is a helpful reminder that your newspaper is ready.</strong>         
                             <br>• It includes a shortcut link
@@ -1194,7 +1144,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse02Six" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse02Six" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>No problem. Simply go to:</strong> 
                             •Open your newspaper
@@ -1225,7 +1175,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse02Seven" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse02Seven" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>We sincerely apologize for the inconvenience.</strong> 
                              Please be assured that our team is aware of the technical issue and is working to resolve it as quickly as possible. We take pride in delivering a seamless experience, though we recognize that unexpected technical issues can occasionally occur. 
@@ -1281,7 +1231,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse03One" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse03One" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1310,7 +1260,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse03Two" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse03Two" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1340,7 +1290,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse03Three" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse03Three" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1369,7 +1319,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse03Four" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse03Four" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1399,7 +1349,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse03Five" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse03Five" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1428,7 +1378,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse03Six" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse03Six" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1457,7 +1407,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="#collapse03Seven" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="#collapse03Seven" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1486,7 +1436,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse03Eight" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse03Eight" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1540,7 +1490,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04One" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04One" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1569,7 +1519,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04Two" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04Two" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1599,7 +1549,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04Three" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04Three" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1628,7 +1578,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04Four" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04Four" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1657,7 +1607,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04Five" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04Five" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1686,7 +1636,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04Six" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04Six" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1715,7 +1665,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04Seven" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04Seven" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1744,7 +1694,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04Eight" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04Eight" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1773,7 +1723,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04Nine" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04Nine" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1802,7 +1752,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04Ten" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04Ten" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -1831,7 +1781,7 @@
                             <use xlink:href="#ToggleCarret"></use></svg>
                       </button>
                     </h4>
-                    <div id="collapse04Eleven" class="accordionFAQ-collapse collapse accordianAnswer" data-bs-parent="#accordianFAQtrack">
+                    <div id="collapse04Eleven" class="collapse" data-bs-parent="#accordianFAQtrack">
                       <div class="accordionFAQbody">
                         <strong>Lorem ipsum dolor sit amet.</strong> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
                       </div>
@@ -8346,7 +8296,14 @@
 
 }));
 //# sourceMappingURL=bootstrap.bundle.js.map
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 
+// Fallback to instantly scroll to top on load/reload
+window.onload = function () {
+  window.scrollTo(0, 0);
+};
 
 </script>
 
