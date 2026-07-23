@@ -51,6 +51,11 @@ body.page-type__piano .custom-html
   background-color: transparent !important;
 }
 
+a[href^="tel"] {
+  color: #ab5b11;
+}
+
+
 /* FAQ NAVBAR STYLES */
 #faqNavBar {
     width: 100%;
