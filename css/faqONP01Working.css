@@ -333,6 +333,31 @@ body:has(.faqBannerText:hover) .item9 {
     background-color: #383838 !important;
     transition: all 0.2s ease-in-out;
 }
+body:has(.faqBannerText .hoverHome:hover) .magGlassShifter{
+    filter: grayscale(1) brightness(110%) contrast(105%);
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverGold:hover) .magGlassShifter{
+    filter: hue-rotate(220deg) saturate(2);
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverRed:hover) .magGlassShifter{
+    filter: hue-rotate(160deg);
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverGreen:hover) .magGlassShifter{
+    filter: hue-rotate(-70deg);
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverViolet:hover) .magGlassShifter{
+    filter: hue-rotate(90deg);
+    transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
+    filter: hue-rotate(180deg);
+    transition: all 0.2s ease-in-out;
+}
+
 
 .faqBannerText div a {
     color: #676767;
