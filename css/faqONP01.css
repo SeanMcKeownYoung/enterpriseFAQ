@@ -16,7 +16,7 @@ html {
 
 html, body {
   max-width: 100vw !important;
-  background-color: crimson;
+  background-color: chartreuse;
   overflow-x: hidden !important;
   padding: 0 !important; 
   margin:0 !important;
@@ -245,7 +245,7 @@ box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58);;
     padding-top: calc(50px + 10vh);
     z-index: 550;
     border-top: 30px solid #ffffff; 
-    overflow-x: clip;
+  overflow-x: hidden !important;
 }
 
 
@@ -373,7 +373,7 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 /* FAQ BODY STYLES */
 /* MAIN FULL WRAP AND INSET WRAPS */
 .faqBodyContainer  {
-    overflow-x: clip;
+  overflow-x: hidden !important;
 }
 .faqFillShaded {
     background-color: #ece9e1;
