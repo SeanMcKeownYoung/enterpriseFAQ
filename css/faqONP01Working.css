@@ -1331,6 +1331,7 @@ text-wrap: balance;
 
 .accordionFAQbutton:hover {
   z-index: 2;
+  color: #2A2A2A !important;
 }
 .accordionFAQbutton:focus {
   z-index: 3;
