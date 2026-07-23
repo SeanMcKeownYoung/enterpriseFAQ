@@ -1103,9 +1103,9 @@ margin-bottom: 10px;
 
 
 /* X-Small */ @media(max-width: 549px){  
-    .faqHeaderBig {font-size: 32px;}}
+    .faqHeaderBig {font-size: 28px;}}
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
-    .faqHeaderBig {font-size: 36px;}}
+    .faqHeaderBig {font-size: 30px;}}
 /* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
     .faqHeaderBig {font-size: 48px;}}
 /* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
@@ -1771,12 +1771,11 @@ color: #000000;
   z-index: 1000; 
   top: 0;
   pointer-events: none;
-transition: all 2s ease;
+  transition: all 2s ease;
 }
 
 .sectionFAQImg {
   display: grid;
-  grid-template-columns: 50% 50%;
   width: 100vw;
   height: 100vh;
   align-items: center;
@@ -1787,7 +1786,6 @@ transition: all 2s ease;
     top: 0;
     width: 100%;
     height: auto;
-
 }
 .sectionFAQImg div img {
     width: 100%;
@@ -1799,7 +1797,46 @@ transition: all 2s ease;
     transition: all 0.7s ease;
 }
 .sectionFAQmag.scrolled-past .sectionFAQImg div img {
-  transform: scaleX(-1) rotate(90deg) scale(1);
-  translate: 80px 120px; /* Moves 50px right and 20px down */
-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+
+/* X-Small */ @media(max-width: 549px){  
+    .sectionFAQImg {grid-template-columns: 0% 100%;}
+    .sectionFAQImg div img {translate: 20% -40%;}
+    .sectionFAQmag.scrolled-past .sectionFAQImg div img {
+        transform: scaleX(-1) rotate(180deg) scale(1.3);
+        translate: -40% -55%; /* Moves right and down */}
+}
+
+/* Small */ @media(min-width: 549px) and (max-width: 768px){  
+    .sectionFAQImg {grid-template-columns: 10% 90%;}
+    .sectionFAQImg div img {translate: 180px -180px;}
+    .sectionFAQmag.scrolled-past .sectionFAQImg div img {
+        transform: scaleX(-1) rotate(180deg) scale(1.3);
+        translate: -54% -60%; /* Moves right and down */}
+}
+
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
+    .sectionFAQImg {grid-template-columns: 20% 80%;}
+    .sectionFAQImg div img {translate: 220px -110px;}
+    .sectionFAQmag.scrolled-past .sectionFAQImg div img {
+        transform: scaleX(-1) rotate(90deg) scale(1.6);
+        translate: -20% -50%; /* Moves right and down */}
+}
+
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
+    .sectionFAQImg {grid-template-columns: 30% 70%;}
+    .sectionFAQImg div img {translate: 200px -100px;}
+    .sectionFAQmag.scrolled-past .sectionFAQImg div img {
+        transform: scaleX(-1) rotate(90deg) scale(1.2);
+        translate: 20% -80px; /* Moves right and down */}
+}
+
+/* X-Large */ @media(min-width: 1280px) {  
+    .sectionFAQImg {grid-template-columns: 50% 50%;}
+    .sectionFAQImg div img {translate: 0px 100px;}
+    .sectionFAQmag.scrolled-past .sectionFAQImg div img {
+        transform: scaleX(-1) rotate(90deg) scale(1);
+        translate: 80px 120px; /* Moves right and down */}
 }
