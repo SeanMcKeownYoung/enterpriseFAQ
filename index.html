@@ -784,7 +784,7 @@
 
 
     <nav id="faqNavBar" class="bottom-sticky">
-      <div id="moving-box" style="background-image: linear-gradient(165deg, #1e1e1e, #262626); ">
+      <div id="movingFAQbox" style="background-color: #262626; ">
         <div class="navShadow"></div>
         <header class="faqNavWrapper">
             <ul class="faqNavContainer">
@@ -804,7 +804,7 @@
     </nav>
 <script>
   let lastScrollTop = 0;
-const movingBox = document.getElementById('moving-box');
+const movingBox = document.getElementById('movingFAQbox');
 const triggerHeight = window.innerHeight * 0.90;
 window.addEventListener('scroll', () => {
   // Get current vertical scroll position
@@ -825,7 +825,7 @@ window.addEventListener('scroll', () => {
 
 </script>
 <style>
-  #faqNavBar.bottom-sticky #moving-box {
+  #faqNavBar.bottom-sticky #movingFAQbox {
   padding-top: 0 !important;
   transition: transform 0.3s ease; 
 }
@@ -1854,16 +1854,14 @@ window.addEventListener('scroll', () => {
 
 
 
-
 <!-- ONLINE NP BODY 005 -->   
-<section class="faqFillShade faqFillContacts faqBodyContainer" id="Contacts" >
+<section class="faqFillShade faqFillContacts" id="Contacts" >
     <div class="faqPageWrapper bodyOrange">
-        <div class="containerFAQbody" style="padding: 100px 2rem 0 2rem;">
-            <div class="">
-                <div class="faqMSGcontainer">
-
-                    <h2 class="faqHeaderBig" style="padding-bottom: 2rem;"><div class="headerUnderline"style="display: inline">How do I</div> get help?</h2>
-                </div>
+        <div class="containerFAQbody">
+          <div class="textFAQbox">
+              <div class="textFAQheader" >
+              <h2 class="faqHeaderBig"><div class="headerUnderline" style="display: inline">How do I</div> get help?</h2>
+              </div>
 
                 <div class="faqContactContainer" style="margin-top: 20px;">
                     <div class="faqContactWrapA">

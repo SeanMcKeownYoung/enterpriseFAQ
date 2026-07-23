@@ -54,14 +54,28 @@ a[href^="tel"] {
 
 
 /* FAQ NAVBAR STYLES */
+
+
+.faqHeroFull {
+    background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626); 
+    width: 100vw;
+    padding-top: calc(50px + 10vh);
+    z-index: 550;
+    border-top: 30px solid #ffffff; 
+  overflow-x: scroll;
+}
+
+
 #faqNavBar {
     width: 100%;
     height: 80px;
     will-change: transform; 
-    background-image: linear-gradient(165deg, #1e1e1e, #262626); 
+    background-color: #262626;
     border-bottom: 2px solid #ffffff;
     z-index: 500;
 }
+
+
 #faqNavBar.bottom-sticky {
     position: relative;
     bottom: 0;
@@ -235,16 +249,6 @@ box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58);;
 
 
 /* FAQ HERO AND SECTION STYLES */
-
-.faqHeroFull {
-    background-image: linear-gradient(165deg, #0d0d0d, #1d1d1d, #262626); 
-    width: 100vw;
-    padding-top: calc(50px + 10vh);
-    z-index: 550;
-    border-top: 30px solid #ffffff; 
-  overflow-x: scroll;
-}
-
 
 .faqHeroFull .faqHeroContainer {
     margin-bottom: 0; 
@@ -1685,11 +1689,6 @@ color: #000000;
     border-bottom: 10px solid #bc69ff
 }
 
-.bodyOrange .headerUnderline {
-    display: inline !important; 
-    border-bottom: 10px solid #ff8819;
-    margin-bottom: 40px;
-}
 
 
 
@@ -1890,4 +1889,43 @@ color: #000000;
         height: 120px;}
     .textFAQtext {
         margin-top: 130px;}
+}
+
+.faqFillContacts .textFAQheader {
+    position: relative;
+}
+
+.faqFillContacts .textFAQheader .headerUnderline {
+    display: inline !important; 
+    border-bottom: 10px solid #ff8819;
+}
+
+.faqFillContacts {
+    width: 100vw;
+  overflow-x: scroll;
+}
+
+.faqFillContacts .faqPageWrapper {
+    display:flex;
+    margin: 0 auto;
+    padding: 10% 2rem;
+}
+
+/* X-Small */ @media(max-width: 549px){
+    .faqFillContacts .faqPageWrapper {max-width:100%;padding: 6% 2rem;}
+}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){
+    .faqFillContacts .faqPageWrapper {max-width:549px;padding: 8% 2rem;}
+}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){
+    .faqFillContacts .faqPageWrapper {max-width:768px;padding: 10% 2rem;}
+}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){
+    .faqFillContacts .faqPageWrapper {max-width:1024px;padding: 10% 2rem;}
+}
+/* X-Large */ @media(min-width: 1280px) {
+    .faqFillContacts .faqPageWrapper {max-width:1280px;padding: 10% 2rem;}
+}
+.adfasdf {
+    padding: 10% 2rem;
 }
