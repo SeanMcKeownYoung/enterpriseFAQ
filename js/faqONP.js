@@ -1,4 +1,19 @@
+// Select the element you want to add/remove the class on
+const element = document.querySelector('.sectionFAQmag'); 
 
+const handleScroll = () => {
+  // window.innerHeight gets the current height of the viewport (100vh)
+  const scrolledPast100vh = window.scrollY >= window.innerHeight / 5;
+  
+  // classList.toggle adds the class if true, removes it if false
+  element.classList.toggle('scrolled-past', scrolledPast100vh);
+};
+
+// Listen for scroll events and run the check
+window.addEventListener('scroll', handleScroll, { passive: true });
+
+// Optional: Run it once immediately in case the page loads already scrolled down
+handleScroll();
 
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Get current date and format it as YYYY-MM-DD

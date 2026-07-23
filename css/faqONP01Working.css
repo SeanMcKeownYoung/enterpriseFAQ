@@ -1211,7 +1211,6 @@ margin-bottom: 10px;
     position: relative;
     display: inline;
     width: 100%;
-    color: #2A2A2A;
     text-align: left;
     background-color: var(--bs-accordionFAQ-btn-bg);
     border: 0;
@@ -1261,6 +1260,8 @@ font-weight: 600;
 
 .accordionFAQbody div {
 display: block;
+padding: 10px 0;
+text-wrap: balance;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1275,9 +1276,126 @@ display: block;
   }
 }
 
+.accordionFAQbody ol {
+  list-style-position: outside; /* Keeps marker outside text block (Default) */
+  padding-left: 4rem;         /* Ensures space for double/triple digit numbers */
+}
+.accordionFAQbody ol li::marker {
+  text-align: left;       
+}
+.accordionFAQbody ol li {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    letter-spacing:0;
+    line-height:1.4; 
+}
+.accordionFAQbody ol li:first-child {
+    padding-top: 14px;
+}
+    @media(max-width: 549px){  
+    .accordionFAQbody ol li {font-size: 14px; padding-top: 4px;}}
+    @media(min-width: 549px) and (max-width: 768px){  
+    .accordionFAQbody ol li {font-size: 16px; padding-top: 4px;}}
+    @media(min-width: 768px) and (max-width: 1024px){  
+    .accordionFAQbody ol li {font-size: 16px; padding-top: 4px;}}
+    @media(min-width: 1024px) and (max-width: 1280px){  
+    .accordionFAQbody ol li {font-size: 18px; padding-top: 4px;}}
+    @media(min-width: 1280px) {  
+    .accordionFAQbody ol li {font-size: 20px; padding-top: 4px;}}
+
+
+.accordionFAQbutton:hover {
+  z-index: 2;
+}
+.accordionFAQbutton:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: var(--bs-accordionFAQ-btn-focus-box-shadow);
+}
+.accordionFAQitem:first-of-type {
+  border-top-left-radius: var(--bs-accordionFAQ-border-radius);
+  border-top-right-radius: var(--bs-accordionFAQ-border-radius);
+}
+.accordionFAQitem:first-of-type > .accordionFAQheader .accordionFAQbutton {
+  border-top-left-radius: var(--bs-accordionFAQ-inner-border-radius);
+  border-top-right-radius: var(--bs-accordionFAQ-inner-border-radius);
+}
+
+.accordionFAQitem:last-of-type {
+  border-bottom-right-radius: var(--bs-accordionFAQ-border-radius);
+  border-bottom-left-radius: var(--bs-accordionFAQ-border-radius);
+}
+.accordionFAQitem:last-of-type > .accordionFAQheader .accordionFAQbutton.collapsed {
+  border-bottom-right-radius: var(--bs-accordionFAQ-inner-border-radius);
+  border-bottom-left-radius: var(--bs-accordionFAQ-inner-border-radius);
+}
+.accordionFAQitem:last-of-type > .accordionFAQ-collapse {
+  border-bottom-right-radius: var(--bs-accordionFAQ-border-radius);
+  border-bottom-left-radius: var(--bs-accordionFAQ-border-radius);
+}
+
+.accordionFAQbody {
+  padding-top: 1px;
+}
+
+.accordionFAQ {
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  background-color: transparent !important;
+}
+
+.firstAccordion .accordionFAQbutton:not(.collapsed)::before {
+  height: 0px !important;
+}
+.firstAccordion .accordionFAQbutton:not(.collapsed) {
+  margin-top: 0;
+  padding-top: 0;
+}
+.accordionFAQ {
+  --bs-accordionFAQ-transition: all 0.15s ease-in-out;
+  --bs-accordionFAQ-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+
+}
+/* FAQ ANSWER BUTTONS */
+.accordionFAQbutton:not(.collapsed)::before {
+  content: "";
+  background: #2A2A2A !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px !important;
+  width: 70%;
+    transition: var(--bs-accordionFAQ-transition);
+}
+/* FAQ ANSWER BUTTONS */
+.collapse .faqHow {
+    border-bottom: 1px solid #2A2A2A !important;
+}
+
+.accordionFAQitem:last-child .faqHow {
+    border-bottom: 0px solid #2A2A2A !important;
+}
+
+.faqBodyContainer:has(.accordionFAQitem .accordionFAQbutton:not(.collapsed)) .accordionFAQbutton {
+    color: #a4a4a4;
+}
+.faqBodyContainer:has(.accordionFAQitem .accordionFAQbutton:not(.collapsed)) .faqCarret {
+    stroke: #a4a4a4;
+}
+.accordionFAQitem .accordionFAQbutton:not(.collapsed) {
+    color: #2A2A2A !important;
+    padding-top: 30px;
+    position: relative;
+    transition: var(--bs-accordionFAQ-transition);
+}
+.accordionFAQitem:first-child .accordionFAQbutton:not(.collapsed) {
+    padding-top: 0px;
+    transition: var(--bs-accordionFAQ-transition);
+}
 .faqCarret {
     fill:none;
-    stroke:#2A2A2A !important;
+    stroke:#2A2A2A;
     stroke-linecap:round;
     stroke-linejoin:round;
     stroke-width:2.5px;
@@ -1286,11 +1404,10 @@ display: block;
 }
 
 .accordionFAQbutton:not(.collapsed) .faqCarret{
+    stroke:#2A2A2A !important;
     transform: rotate(180deg);
     transition: all 0.15s ease-in-out;
 }
-
-
         .faqHow {
             display: flex;
             flex-direction: row;
@@ -1301,9 +1418,7 @@ display: block;
             padding-bottom: 2rem;
         }
 
-        .faqHow  {
-            border-bottom: 1px solid #2A2A2A;
-        }
+
         .faqHow .faqHowItem {
             display: flex;
             flex-direction: row;
@@ -1346,27 +1461,40 @@ display: block;
         }
 
         .faqHowText {
-            width: 0vw;
+            display: inline-block; /* Keeps the container bound to text width */
+            overflow: hidden;      /* Prevents any layout bleeding */
         }
 
         .faqHowText span {
-            opacity: 0;
             font-family: "neue-haas-grotesk-display", sans-serif;
             font-weight: 600;
             font-size: 1.6rem;
             position:relative;
             color:  #2A2A2A;
-            margin-left: 8px;
-            white-space: nowrap;  
+            margin: 0 10px;
+            display: inline-block;
+            white-space: nowrap;   /* Ensures text stays on a single line */
+            /* Shorthand: name | duration | timing | delay | fill-mode */
+            animation: clippath 1.5s ease-in-out 4s forwards;
         }
+/* FAQ ANSWER BUTTONS */
+.accordionFAQheader .collapsed {
+    color: #2A2A2A;
+}
 
-        .faqHow .faqHowItem:hover .faqHowText {
-            width: 100%;
-        }
+.faqBannerText div a {
+  transition: all  0.3s ease-in-out;
+    text-shadow: 0 0 10px #00b7ff00; /* X-offset Y-offset Blur Color */
+}
 
-        .faqHow .faqHowItem:hover .faqHowText span {
-            opacity: 100;
-        }
+.faqBannerText:hover div a {
+color: #000000;
+/* Syntax: property | duration | timing-function | delay */
+  transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 50px #00b7ff00; /* X-offset Y-offset Blur Color */
+}
+
+
 
 
 /* BRANDING STATES */
@@ -1600,12 +1728,24 @@ display: block;
 }
 
 
+
+/* This class gets applied automatically via JS past 100vh */
+
+
 /* New write */
 .sectionFAQmag {
   position: fixed; 
   z-index: 1000; 
   top: 0;
   pointer-events: none;
+  transition: all 2s ease;
+}
+.sectionFAQmag.scrolled-past {
+  position: absolute; 
+  z-index: 1000; 
+  top: 0;
+  pointer-events: none;
+transition: all 2s ease;
 }
 
 .sectionFAQImg {
@@ -1630,25 +1770,10 @@ display: block;
     object-position: left bottom;
     filter: drop-shadow(-30px 10px 14px #1414145f);
     transform: scaleX(-1);
+    transition: all 0.7s ease;
 }
-
-  .faqSectionImg div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right bottom;
-    filter: drop-shadow(-30px 10px 14px #1414145f);
-    transform: scaleX(-1);
-    will-change: transform;
-    translate: 80px 10px; /* Moves 50px right and 20px down */
-  transition: all 0.8s ease-in-out;
-}
-.faqSectionImg div {
-    position: absolute;
-    z-index: 500;
-    right: 0;
-    top: 0;
-    pointer-events: none;
-    overflow: hidden; /* Recommended to prevent accidental layout spill */
-    transition: all 0.8s ease-in-out;
+.sectionFAQmag.scrolled-past .sectionFAQImg div img {
+  transform: scaleX(-1) rotate(90deg) scale(1);
+  translate: 80px 120px; /* Moves 50px right and 20px down */
+transition: all 0.7s ease;
 }
