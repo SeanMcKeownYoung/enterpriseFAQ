@@ -1,7 +1,7 @@
 /* ONLINE NEWSPAPER CSS ADDITIONS FOR FAQ PAGE */
 
-    		/* Outlines the grids, remove when sending*/
-		div, section, header, nav, ul, li { border: 1px solid cyan !important}
+    		/* Outlines the grids, remove when sending
+		div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 
 /* BASE LEVEL STYLES */
 body {
@@ -13,6 +13,13 @@ body {
 html {
   scroll-behavior: smooth;
 }   
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 .html-embed .custom-html
             {padding:0 5%}
 body.page-type__piano .custom-html
@@ -1082,11 +1089,11 @@ margin-bottom: 10px;
 
 
 /* X-Small */ @media(max-width: 549px){  
-    .faqHeaderBig {font-size: 28px;}}
+    .faqHeaderBig {font-size: 24px;}}
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
     .faqHeaderBig {font-size: 30px;}}
 /* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
-    .faqHeaderBig {font-size: 48px;}}
+    .faqHeaderBig {font-size: 44px;}}
 /* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
     .faqHeaderBig {font-size: 54px;}}
 /* X-Large */ @media(min-width: 1280px) {  
@@ -1153,9 +1160,9 @@ margin-bottom: 10px;
     transition: all 0.15s ease-in-out;
 }
     @media(max-width: 549px){  
-    .accordionFAQbutton {font-size: 20px;}}
+    .accordionFAQbutton {font-size: 16px;}}
     @media(min-width: 549px) and (max-width: 768px){  
-    .accordionFAQbutton {font-size: 22px;}}
+    .accordionFAQbutton {font-size: 20px;}}
     @media(min-width: 768px) and (max-width: 1024px){  
     .accordionFAQbutton {font-size: 24px;}}
     @media(min-width: 1024px) and (max-width: 1280px){  
@@ -1178,18 +1185,35 @@ margin-bottom: 10px;
     padding-bottom: 4px !important;
 }
     @media(max-width: 549px){  
-    .accordionFAQbody {font-size: 14px;}}
+    .accordionFAQbody, .faqHowText span {font-size: 14px;}}
     @media(min-width: 549px) and (max-width: 768px){  
-    .accordionFAQbody {font-size: 16px;}}
+    .accordionFAQbody, .faqHowText span {font-size: 16px;}}
     @media(min-width: 768px) and (max-width: 1024px){  
-    .accordionFAQbody {font-size: 18px;}}
+    .accordionFAQbody, .faqHowText span {font-size: 18px;}}
     @media(min-width: 1024px) and (max-width: 1280px){  
-    .accordionFAQbody {font-size: 20px;}}
+    .accordionFAQbody, .faqHowText span {font-size: 20px;}}
     @media(min-width: 1280px) {  
-    .accordionFAQbody {font-size: 22px;}}
+    .accordionFAQbody, .faqHowText span {font-size: 22px;}}
 
 .accordionFAQbody strong {
 font-weight: 600;
+}
+
+.faqHowText {
+    display: inline-block; /* Keeps the container bound to text width */
+    overflow: hidden;      /* Prevents any layout bleeding */
+}
+
+.faqHowText span {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    position:relative;
+    color:  #2A2A2A;
+    margin: 0 10px;
+    display: inline-block;
+    white-space: nowrap;   /* Ensures text stays on a single line */
+    /* Shorthand: name | duration | timing | delay | fill-mode */
+    animation: clippath 1.5s ease-in-out 4s forwards;
 }
 
 .accordionFAQbody div {
@@ -1395,23 +1419,12 @@ text-wrap: balance;
             transition: all 0.1s ease-in-out;
         }
 
-        .faqHowText {
-            display: inline-block; /* Keeps the container bound to text width */
-            overflow: hidden;      /* Prevents any layout bleeding */
-        }
 
-        .faqHowText span {
-            font-family: "neue-haas-grotesk-display", sans-serif;
-            font-weight: 600;
-            font-size: 1.6rem;
-            position:relative;
-            color:  #2A2A2A;
-            margin: 0 10px;
-            display: inline-block;
-            white-space: nowrap;   /* Ensures text stays on a single line */
-            /* Shorthand: name | duration | timing | delay | fill-mode */
-            animation: clippath 1.5s ease-in-out 4s forwards;
-        }
+
+
+
+
+
 /* FAQ ANSWER BUTTONS */
 .accordionFAQheader .collapsed {
     color: #2A2A2A;
