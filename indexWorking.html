@@ -784,11 +784,13 @@
 
 
     <nav id="faqNavBar" class="bottom-sticky">
-      <div class="navShadow"></div>
+      <div id="moving-box" style="background-image: linear-gradient(165deg, #1e1e1e, #262626); ">
+        <div class="navShadow"></div>
         <header class="faqNavWrapper faqPageWrapper">
             <ul class="faqNavContainer">
 
                 <ul class="navFAQul" >
+
                     <li class="navFAQli navli00 navFAQhome"><a href="#Home" class="navFAQlink navFAQhome">Home.</a></li>
                     <li class="navFAQli navli02 hoverGold"><a href="#Register" class="navFAQlink">How do I register/sign in?</a></li>
                     <li class="navFAQli navli03 hoverRed"><a href="#Access" class="navFAQlink">How do I access the paper?</a></li>
@@ -798,9 +800,37 @@
                 </ul>
             </ul>
         </header>
+      </div>
     </nav>
+<script>
+  let lastScrollTop = 0;
+const movingBox = document.getElementById('moving-box');
+const triggerHeight = window.innerHeight * 0.90;
+window.addEventListener('scroll', () => {
+  // Get current vertical scroll position
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
+  // Check if the user is scrolling UP
+  if (currentScroll < lastScrollTop) {
+    // Move the div down 50px from its original spot
+    movingBox.style.paddingTop = '80px';
+  } else {
+    // Reset position when scrolling down
+    movingBox.style.paddingTop = '0px';
+  }
 
+  // Update last scroll position, ensuring it doesn't go below 0
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+</script>
+<style>
+  #faqNavBar.bottom-sticky #moving-box {
+  padding-top: 0 !important;
+  transition: transform 0.3s ease; 
+}
+
+</style>
 
 
 

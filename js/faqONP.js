@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const faqNavBar = document.getElementById('faqNavBar');
 
 // Get the exact trigger threshold (height of the hero section minus faqNavBar height)
-const triggerPoint = 800 - faqNavBar.offsetHeight;
+const triggerPoint = 1000 - faqNavBar.offsetHeight;
 
 window.addEventListener('scroll', () => {
     // Check if user has scrolled past the calculated initial bottom placement
