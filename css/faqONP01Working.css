@@ -1803,17 +1803,17 @@ color: #000000;
 
 /* X-Small */ @media(max-width: 549px){  
     .sectionFAQImg {grid-template-columns: 0% 100%;}
-    .sectionFAQImg div img {translate: 20% -40%;}
+    .sectionFAQImg div img {translate: 3% -15%; transform: rotate(250deg) scale(1.3);}
     .sectionFAQmag.scrolled-past .sectionFAQImg div img {
-        transform: scaleX(-1) rotate(180deg) scale(1.3);
-        translate: -40% -55%; /* Moves right and down */}
+        transform: rotate(160deg) scale(1.3);
+        translate: 3% -185%; /* Moves right and down */}
 }
 
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
     .sectionFAQImg {grid-template-columns: 10% 90%;}
-    .sectionFAQImg div img {translate: 180px -180px;}
+    .sectionFAQImg div img {translate: 180px -20%;}
     .sectionFAQmag.scrolled-past .sectionFAQImg div img {
-        transform: scaleX(-1) rotate(180deg) scale(1.3);
+        transform: scaleX(-1) rotate(180deg) scale(1);
         translate: -54% -60%; /* Moves right and down */}
 }
 
@@ -1821,22 +1821,22 @@ color: #000000;
     .sectionFAQImg {grid-template-columns: 20% 80%;}
     .sectionFAQImg div img {translate: 220px -110px;}
     .sectionFAQmag.scrolled-past .sectionFAQImg div img {
-        transform: scaleX(-1) rotate(90deg) scale(1.6);
-        translate: -20% -50%; /* Moves right and down */}
+        transform: scaleX(-1) rotate(90deg) scale(1);
+        translate: -35% -60%; /* Moves right and down */}
 }
 
 /* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
     .sectionFAQImg {grid-template-columns: 30% 70%;}
     .sectionFAQImg div img {translate: 200px -100px;}
     .sectionFAQmag.scrolled-past .sectionFAQImg div img {
-        transform: scaleX(-1) rotate(90deg) scale(1.2);
-        translate: 20% -80px; /* Moves right and down */}
+        transform: scaleX(-1) rotate(90deg) scale(1);
+        translate: 20% -100%; /* Moves right and down */}
 }
 
 /* X-Large */ @media(min-width: 1280px) {  
     .sectionFAQImg {grid-template-columns: 50% 50%;}
-    .sectionFAQImg div img {translate: 0px 100px;}
+    .sectionFAQImg div img {translate: 0px 10px;}
     .sectionFAQmag.scrolled-past .sectionFAQImg div img {
         transform: scaleX(-1) rotate(90deg) scale(1);
-        translate: 80px 120px; /* Moves right and down */}
+        translate: -200px -150%; /* Moves right and down */}
 }

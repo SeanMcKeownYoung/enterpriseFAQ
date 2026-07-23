@@ -3,7 +3,7 @@ const element = document.querySelector('.sectionFAQmag');
 
 const handleScroll = () => {
   // window.innerHeight gets the current height of the viewport (100vh)
-  const scrolledPast100vh = window.scrollY >= window.innerHeight / 5;
+  const scrolledPast100vh = window.scrollY >= window.innerHeight / 100;
   
   // classList.toggle adds the class if true, removes it if false
   element.classList.toggle('scrolled-past', scrolledPast100vh);
