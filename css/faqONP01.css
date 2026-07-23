@@ -753,337 +753,6 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 
 
 
-/* FAQ CONTACTS STYLES */
-.faqFillContacts {
-    width: 100vw;
-    background-color: #ece9e1;
-    background-image: linear-gradient(180deg, #ece9e1, #fff); 
-    border-bottom: 1px solid #ffffff;
-}
-
-  .faqContactContainer {
-        display: flex; 
-        flex-direction:column;
-        padding-bottom: 10px;
-    }
-
-  .faqContactWrapA, .faqContactWrapB, .faqContactWrapC {
-        width: 100%;
-    }
-.faqContactItem {
-    min-width: 50%;
-    margin-bottom: 3rem !important;
-
-}
-
-.faqContactItem .faqContactSite {
-    margin: 10px 0px 6px;
-    padding: 0 50px 0 0;
-    text-wrap: balance !important;
-}
-.faqContactSite {
-     font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 1.6rem;
-    color: #2A2A2A;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing:0;
-    line-height:1.2;
-    text-wrap: balance;   
-}
-
-.faqContactItem .siteLogo {
-     display: flex;  
-     justify-content: start; 
-     align-items: left;    
-    object-fit: cover; /* Scales image while maintaining aspect ratio */
-    object-position: top;
-    fill: #868686;
-    margin-bottom: 1.4rem !important;
-}
-
-
-.faqContactIcons svg {
-    fill: #bdbdbd;
-    width: 3.2rem;
-    height: 3.2rem;
-      transition: all 0.2s ease !important;
-}
-
-.faqContactAddress div {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 1.4rem;
-    color: #6a6a6a;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing:0;
-    line-height:1.4;
-    text-wrap: balance;
-    transition: all 0.2s ease !important;
-}
-
-.faqContactAddress {
-    margin-top: 10px;
-}
-
-.faqContactIcons {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-.faqContactURL a {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 1.4rem;
-    color: #868686 !important;
-    font-weight: 600;
-    font-style: normal;
-    letter-spacing:0;
-    line-height:1.4;
-    text-wrap: balance;
-    transition: all 0.2s ease !important;
-}
-
-.faqContactContainer:hover .faqContactItem {
-opacity: 10%;
-}
-
-.faqContactContainer .faqContactItem:hover {
-opacity: 100%;
-z-index: 10;
-}
-.faqContactContainer .faqContactItem:hover .siteLogo {
-background-color: #003649;
-fill: #f8f8f8;
-}
-
-
-
-
-.faqContactContainer .faqContactItem {
-opacity: 100%;
-outline: 7px solid  rgba(255, 255, 255, 0);
-transition: all 0.3s ease !important;
-}
-
-.faqFillContacts .faqHeroContainer {
-    margin-top: 6vw; 
-    margin-bottom: 0;
-}
-
-.faqFillContacts .faqBodyheader {
-text-align: left !important;
-margin-bottom: 10px;
-}
-
-
-
-
-/* Advance - dotcom CSS Media Queries - Screen Sizes */
-/* X-Small */            
-    @media(max-width: 549px)
-            {  
-
-        }
-
-
-/* Small */            
-    @media(max-width: 767px)
-            {
-.faqFillContacts .faqBannerText {
-
-}
-
-  .faqContactContainer {
-        display: flex; 
-        flex-direction:column
-    }
-
-  .faqContactWrapA {
-        display: flex; 
-        flex-direction:column
-    }
-
-  .faqContactWrapB {
-        display: flex; 
-        flex-direction:column
-    }
-
-  .faqContactWrapC {
-        display: flex; 
-        flex-direction:column
-    }
-
-    .faqContactItem {
-        display: block;
-        padding-left: calc(10rem + 20px);
-    }
-.siteLogo {
-        position: absolute;
-        margin-left: calc(-10rem + -20px);
-        width: 10rem;
-        height: 10rem;
-}
-.faqContactSite, .faqContactURL, .faqContactAddress {
-        position: relative;
-        margin-top: 0 !important;
-}
-.faqContactAddress div {
-    display: inline-block;
-    padding-right: 1px;
-}
-.faqCustHead {
-    padding: 1rem 0px 2rem 0px !important;
-    margin: 0 !important;
-    text-align: left !important;
-}
-
-        }
-
-/* Medium */           
-    @media(min-width: 768px)
-            {
-  .faqContactContainer {
-        display: flex; 
-        flex-direction:column
-    }
-
-  .faqContactWrapA {
-        display: flex; 
-        flex-direction:column
-    }
-
-  .faqContactWrapB {
-        display: flex; 
-        flex-direction:row;
-    }
-
-  .faqContactWrapC {
-        display: flex; 
-        flex-direction:column
-    }
-
-    .faqContactItem {
-        display: block;
-        padding-left: calc(7rem + 20px);
-    }
-.siteLogo {
-        position: absolute;
-        margin-left: calc(-7rem + -20px);
-        width: 7rem;
-        height: 7rem;
-}
-.faqContactSite, .faqContactURL, .faqContactAddress {
-        position: relative;
-        margin-top: 0 !important;
-}
-.faqContactAddress div {
-    display: inline-block;
-    padding-right: 1px;
-}
-.faqContactAddress div:nth-child(3) {
-      display: block;
-}
-
-        }
-
-
-/* Large */           
-    @media(min-width: 1024px)
-            {
-  .faqContactContainer {
-        display: flex; 
-        flex-direction:column
-    }
-
-  .faqContactWrapA {
-        display: flex; 
-        flex-direction:row
-    }
-
-  .faqContactWrapB {
-        display: flex; 
-        flex-direction:row;
-
-    }
-
-  .faqContactWrapC {
-        display: flex; 
-        flex-direction:column
-    }
-
-    .faqContactItem {
-        display: block;
-        padding-left: 0;
-    }
-.siteLogo {
-        position: relative;
-        margin-left: 0;
-        width: 8rem ;
-        height: 8rem;
-}
-.faqContactSite, .faqContactURL, .faqContactAddress {
-        position: relative;
-        margin-top: 0 !important;
-}
-.faqContactAddress div {
-    display: block;
-    padding-right: 10px;
-}
-
-
-        }
-
-
-/* X-Large */           
-    @media(min-width: 1280px)
-            {
-  .faqContactContainer {
-        display: flex; 
-        flex-direction:column
-    }
-
-  .faqContactWrapA {
-        display: flex; 
-        flex-direction:row
-    }
-
-  .faqContactWrapB {
-        display: flex; 
-        flex-direction:row
-    }
-
-  .faqContactWrapC {
-        display: flex; 
-        flex-direction:row;
-    }
-    }
-
-    .subButton a {
-        display: flex;
-        background-color: transparent;
-        text-decoration: none;    
-        border-radius: 30px;  
-        transition: all 0.2s ease-out;
-    }
-    .subButton p {
-        margin: 0 !important;
-        padding: 10px 20px;
-        border-radius: 30px;  
-        background-color: #e3e1e1; 
-    }
-    .subButton a:hover {
-        background-color: #e3e1e1; 
-        transition: all 0.2s ease-out;
-    }
-    .subButton a:hover p {
-        background-color: #e3e1e1; 
-    }
-
-
-
 
 
 /* TEXT STYLES */
@@ -1586,84 +1255,6 @@ color: #000000;
     color:  #ab5b11 !important;
 }
 
-.bodyOrange .faqContactItem .siteLogo {
-    background-color: #ff8819;
-    fill: #f8f8f8 !important;
-}
-.bodyOrange .faqContactContainer:hover .faqContactItem .siteLogo {
-    background-color: transparent;
-    fill: #6a6a6a !important;
-}
-.bodyOrange .faqContactContainer .faqContactItem:hover .siteLogo {
-    background-color: #f3f1ed;
-    fill: #ab5b11 !important;
-}
-
-.bodyOrange .faqContactIcons svg {
-    fill: #bdbdbd;
-}
-
-.bodyOrange .faqContactIcons div:hover a, .bodyOrange .faqContactURL:hover a {
-    color: #ab5b11 !important;
-      transition: all 0.2s ease !important;
-}
-
-.faqContactIcons div:hover svg {
-    fill: #ab5b11;
-      transition: all 0.2s ease !important;
-}
-
-.faqContactURL a {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 1.4rem;
-    color: #868686 !important;
-    font-weight: 600;
-    font-style: normal;
-    letter-spacing:0;
-    line-height:1.4;
-    text-wrap: balance;
-    transition: all 0.2s ease !important;
-}
-.faqContactContainer .faqContactItem .faqContactIcons svg{
-            fill: #fff;
-            background-color: #868686;
-            border-radius: 50%;
-            border: 2px solid #868686;
-            transition: all 0.1s ease-in-out;
-}
-
-.faqContactIcons div {
-    margin-right: 6px !important;
-}
-
-.bodyOrange .faqContactContainer .faqContactItem:hover .faqContactSite{
-    color: #ab5b11 !important;
-}
-
-.bodyOrange .faqContactContainer .faqContactItem:hover .faqContactURL a{
-    color: #ab5b11 !important;
-}
-
-.bodyOrange .faqContactContainer .faqContactItem:hover .faqContactAddress div{
-    color: #ab5b11 !important;
-}
-
-.bodyOrange .faqContactContainer .faqContactItem:hover .faqContactIcons svg{
-    fill: #fff;
-    background-color: #ab5b11;
-    border: 2px solid #ab5b11;
-}
-
-.bodyOrange .faqContactContainer .faqContactItem .faqContactIcons div:hover svg{
-    fill: #ab5b11;
-    background-image: radial-gradient(circle, #ece9e1 60%, #ab5b11 70%) !important;
-    border: 2px solid #ab5b11;
-}
-
-.faqFillContacts .faqHeaderBig {
-    padding-top: 20px;
-}
-
 .bodyBlue .textFAQbox .faqHeaderBig .headerUnderline {
     display: inline !important; 
     border-bottom: 10px solid #00b7ff
@@ -1688,8 +1279,6 @@ color: #000000;
     display: inline !important; 
     border-bottom: 10px solid #bc69ff
 }
-
-
 
 
 /* This class gets applied automatically via JS past 100vh */
@@ -1926,6 +1515,400 @@ color: #000000;
 /* X-Large */ @media(min-width: 1280px) {
     .faqFillContacts .faqPageWrapper {max-width:1280px;padding: 10% 2rem;}
 }
-.adfasdf {
-    padding: 10% 2rem;
+
+
+/* FAQ CONTACTS STYLES */
+.faqFillContacts {
+    width: 100vw;
+    background-color: #ece9e1;
+    background-image: linear-gradient(180deg, #ece9e1, #fff); 
+    border-bottom: 1px solid #ffffff;
+}
+
+.faqContactContainer {
+    display: flex; 
+    flex-direction:column;
+    padding-bottom: 10px;
+}
+
+.faqContactWrapA, .faqContactWrapB, .faqContactWrapC {
+    width: 100%;
+}
+.faqContactItem {
+    min-width: 50%;
+    margin-bottom: 3rem !important;
+}
+
+.faqContactItem .faqContactSite {
+    margin: 10px 0px 6px;
+    padding: 0 50px 0 0;
+    text-wrap: balance !important;
+}
+.faqContactSite {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 1.6rem;
+    color: #2A2A2A;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing:0;
+    line-height:1.2;
+    text-wrap: balance;   
+}
+
+.faqContactIcons div {
+    margin-right: 4px !important;
+}
+
+.faqContactIcons svg {
+    fill: #bdbdbd;
+    width: 3.2rem;
+    height: 3.2rem;
+    transition: all 0.2s ease !important;
+}
+
+.faqContactAddress div {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 1.4rem;
+    color: #6a6a6a;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing:0;
+    line-height:1.4;
+    text-wrap: balance;
+    transition: all 0.2s ease !important;
+}
+
+.faqContactAddress {
+    margin-top: 10px;
+}
+
+.faqContactIcons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.faqContactURL a {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 1.4rem;
+    color: #868686 !important;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing:0;
+    line-height:1.4;
+    text-wrap: balance;
+    transition: all 0.2s ease !important;
+}
+
+.faqContactContainer:hover .faqContactItem {
+    opacity: 10%;
+}
+
+.faqContactContainer .faqContactItem:hover {
+    opacity: 100%;
+    z-index: 10;
+}
+
+.faqContactContainer .faqContactItem {
+    opacity: 100%;
+    outline: 7px solid  rgba(255, 255, 255, 0);
+    transition: all 0.3s ease !important;
+}
+
+.faqFillContacts .faqHeroContainer {
+    margin-top: 6vw; 
+    margin-bottom: 0;
+}
+
+.faqFillContacts .faqBodyheader {
+    text-align: left !important;
+    margin-bottom: 10px;
+}
+
+/* Advance - dotcom CSS Media Queries - Screen Sizes */
+/* X-Small */            
+    @media(max-width: 549px)
+            {  
+
+        }
+
+
+/* Small */            
+    @media(max-width: 767px)
+            {
+.faqFillContacts .faqBannerText {
+
+}
+
+  .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapA {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapB {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapC {
+        display: flex; 
+        flex-direction:column
+    }
+
+    .faqContactItem {
+        display: block;
+        padding-left: calc(10rem + 20px);
+    }
+.siteLogo {
+        position: absolute;
+        margin-left: calc(-10rem + -20px);
+        width: 10rem;
+        height: 10rem;
+}
+.faqContactSite, .faqContactURL, .faqContactAddress {
+        position: relative;
+        margin-top: 0 !important;
+}
+.faqContactAddress div {
+    display: inline-block;
+    padding-right: 1px;
+}
+.faqCustHead {
+    padding: 1rem 0px 2rem 0px !important;
+    margin: 0 !important;
+    text-align: left !important;
+}
+
+        }
+
+/* Medium */           
+    @media(min-width: 768px)
+            {
+  .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapA {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapB {
+        display: flex; 
+        flex-direction:row;
+    }
+
+  .faqContactWrapC {
+        display: flex; 
+        flex-direction:column
+    }
+
+    .faqContactItem {
+        display: block;
+        padding-left: calc(7rem + 20px);
+    }
+.siteLogo {
+        position: absolute;
+        margin-left: calc(-7rem + -20px);
+        width: 7rem;
+        height: 7rem;
+}
+.faqContactSite, .faqContactURL, .faqContactAddress {
+        position: relative;
+        margin-top: 0 !important;
+}
+.faqContactAddress div {
+    display: block;
+    padding-right: 1px;
+}
+.faqContactAddress div:nth-child(3) {
+      display: block;
+}
+
+        }
+
+
+/* Large */           
+    @media(min-width: 1024px)
+            {
+  .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapA {
+        display: flex; 
+        flex-direction:row
+    }
+
+  .faqContactWrapB {
+        display: flex; 
+        flex-direction:row;
+
+    }
+
+  .faqContactWrapC {
+        display: flex; 
+        flex-direction:column
+    }
+
+    .faqContactItem {
+        display: block;
+        padding-left: 0;
+    }
+.siteLogo {
+        position: relative;
+        margin-left: 0;
+        width: 8rem ;
+        height: 8rem;
+}
+.faqContactSite, .faqContactURL, .faqContactAddress {
+        position: relative;
+        margin-top: 0 !important;
+}
+.faqContactAddress div {
+    display: block;
+    padding-right: 10px;
+}
+
+
+        }
+
+
+/* X-Large */           
+    @media(min-width: 1280px)
+            {
+  .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+
+  .faqContactWrapA {
+        display: flex; 
+        flex-direction:row
+    }
+
+  .faqContactWrapB {
+        display: flex; 
+        flex-direction:row
+    }
+
+  .faqContactWrapC {
+        display: flex; 
+        flex-direction:row;
+    }
+    }
+
+    .subButton a {
+        display: flex;
+        background-color: transparent;
+        text-decoration: none;    
+        border-radius: 30px;  
+        transition: all 0.2s ease-out;
+    }
+    .subButton p {
+        margin: 0 !important;
+        padding: 10px 20px;
+        border-radius: 30px;  
+        background-color: #e3e1e1; 
+    }
+    .subButton a:hover {
+        background-color: #e3e1e1; 
+        transition: all 0.2s ease-out;
+    }
+    .subButton a:hover p {
+        background-color: #e3e1e1; 
+    }
+
+.faqContactItem .siteLogo {
+    display: flex;  
+    justify-content: start; 
+    align-items: left;    
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: top;
+    margin-bottom: 1.4rem !important;
+}
+.siteLogoGroup {
+  position: relative; 
+}
+.siteLogoGroup .siteLogo01 {
+    fill: #868686;
+    opacity: 1;
+    transition: all 0.2s ease-out;
+}
+
+.siteLogoGroup .siteLogo02 {
+    fill: #ff8819;
+    opacity: 0;
+    position: absolute;
+    top: 0;     
+    left: 0;
+    transition: all 0.2s ease-out;
+}
+
+.faqContactContainer .faqContactItem:hover .siteLogo01 {
+    opacity: 0;
+}
+.faqContactContainer .faqContactItem:hover .siteLogo02 {
+    opacity: 1;
+}
+
+.siteCallGroup  {
+    display: flex;  
+    justify-content: start; 
+    align-items: left;    
+    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-position: top;
+    margin-bottom: 1.4rem !important;
+}
+.siteCallGroup svg {
+    position: absolute;
+
+}
+
+.faqIconContainer {
+  position: relative; 
+}
+.faqIconContainer .faqContIconSVG01 {
+    opacity: 1;
+        transition: all 0.2s ease-out;
+}
+
+.faqIconContainer .faqContIconSVG02 {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;     
+    left: 0;
+        transition: all 0.2s ease-out;
+}
+
+.faqContactContainer .faqContactItem:hover .faqContIconSVG01  {
+    fill: #414141;
+        transition: all 0.2s ease-out;
+}
+.faqContactContainer .faqContactItem:hover .faqContIconSVG02 {
+    fill: #414141;
+        transition: all 0.2s ease-out;
+}
+
+.faqIconContainer:hover {
+  position: relative; 
+}
+.faqIconContainer:hover .faqContIconSVG01 {
+    opacity: 0;
+        transition: all 0.2s ease-out;
+}
+.faqIconContainer:hover .faqContIconSVG02 {
+    opacity: 1;
+    fill: #414141;
+    position: absolute;
+    bottom: 0;     
+    left: 0;
+        transition: all 0.2s ease-out;
 }
