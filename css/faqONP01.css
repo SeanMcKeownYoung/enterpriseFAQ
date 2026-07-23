@@ -22,9 +22,10 @@ html, body {
   margin:0 !important;
 }
 
-.sticky-toprail, .body__mlive {
-    width: 100vw !important;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
+
 .html-embed .custom-html
             {padding:0 5%}
 body.page-type__piano .custom-html
