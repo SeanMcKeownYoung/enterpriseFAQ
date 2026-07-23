@@ -16,8 +16,6 @@ html {
 
 html, body {
   max-width: 100vw !important;
-  background-color: chartreuse;
-  overflow-x: hidden !important;
   padding: 0 !important; 
   margin:0 !important;
 }
@@ -240,7 +238,7 @@ box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58);;
 
 .faqHeroFull {
     background-image: linear-gradient(165deg, #0d0d0d, #1d1d1d, #262626); 
-    width: 100%;
+    width: 100vw;
     padding-top: calc(50px + 10vh);
     z-index: 550;
     border-top: 30px solid #ffffff; 
@@ -372,13 +370,16 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 /* FAQ BODY STYLES */
 /* MAIN FULL WRAP AND INSET WRAPS */
 .faqBodyContainer  {
+    width: 100vw;
   overflow-x: scroll;
 }
 .faqFillShaded {
+    width: 100vw;
     background-color: #ece9e1;
     border-bottom: 1px solid #ffffff;
 }
 .faqFillNone {
+    width: 100vw;
     background-color: #f8f5f0;
     border-bottom: 1px solid #ffffff;
 }
@@ -387,7 +388,7 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     margin: 0 auto;
 }
 
-/* X-Small */ @media(max-width: 549px){.faqBodyContainer .faqPageWrapper {max-width:100%;padding: 30px 2rem 50px 2rem;}}
+/* X-Small */ @media(max-width: 549px){.faqBodyContainer .faqPageWrapper {max-width:100%;padding: 0px 2rem 14px 2rem;}}
 /* Small */ @media(min-width: 549px) and (max-width: 768px){.faqBodyContainer .faqPageWrapper {max-width:549px;padding: 40px 2rem 60px 2rem;}}
 /* Medium */ @media(min-width: 768px) and (max-width: 1024px){.faqBodyContainer .faqPageWrapper {max-width:768px;padding: 10% 2rem;}}
 /* Large */ @media(min-width: 1024px) and (max-width: 1280px){.faqBodyContainer .faqPageWrapper {max-width:1024px;padding: 10% 2rem;}}
@@ -544,6 +545,7 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     letter-spacing:0.5px;
     line-height:1.4;
     color: #2A2A2A;
+    text-wrap: balance;
 }
 /* X-Small */ @media(max-width: 549px){  
 .faqQuestionRow p, .staticWrap p {font-size: 12px;}}
@@ -749,6 +751,7 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 
 /* FAQ CONTACTS STYLES */
 .faqFillContacts {
+    width: 100vw;
     background-color: #ece9e1;
     background-image: linear-gradient(180deg, #ece9e1, #fff); 
     border-bottom: 1px solid #ffffff;
@@ -1826,7 +1829,7 @@ color: #000000;
 
 /* X-Small */ @media(max-width: 549px){  
     .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
-        flex-direction: column; padding-top: 20px;}
+        flex-direction: column; padding-top: 0px;}
     .imageFAQbox  {width: 60%;}
     .textFAQheader {
         position: absolute; 
@@ -1838,7 +1841,7 @@ color: #000000;
 
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
     .faqFillShaded .containerFAQbody, .faqFillNone .containerFAQbody {
-        flex-direction: column; padding-top: 20px;}
+        flex-direction: column; padding-top: 0px;}
     .imageFAQbox  {width: 60%;}
     .textFAQheader {
         position: absolute; 
