@@ -1226,35 +1226,6 @@ color: #000000;
     color: #535353 ;
 }
 
-
-.bodyOrange .accordionFAQbutton:not(.collapsed) {
-      color: #ab5b11 !important;
-}
-.bodyOrange .accordionFAQbutton:not(.collapsed)::before {
-  background: #ab5b11 !important;
-}
-.bodyOrange .accordionFAQbutton:not(.collapsed) .faqCarret{
-     stroke:#ab5b11 !important;
-}
-.bodyOrange .accordionFAQbody {
-    color: #ab5b11 !important;
-}
-.bodyOrange .faqHow  {
-    border-bottom: 1px solid #ab5b11 !important;
-}
-.bodyOrange .faqHow a svg {
-    background-color: #ab5b11 !important;
-    border: 2px solid #ab5b11 !important;
-}
-.bodyOrange .faqHow a:hover svg {
-    fill: #ab5b11 !important;
-    background-image: radial-gradient(circle, #ece9e1 60%, #ab5b11 70%) !important;
-    border: 2px solid #ab5b11 !important;
-        }
-.bodyOrange .faqHowText span {
-    color:  #ab5b11 !important;
-}
-
 .bodyBlue .textFAQbox .faqHeaderBig .headerUnderline {
     display: inline !important; 
     border-bottom: 10px solid #00b7ff
@@ -1636,9 +1607,6 @@ color: #000000;
 /* Small */            
     @media(max-width: 767px)
             {
-.faqFillContacts .faqBannerText {
-
-}
 
   .faqContactContainer {
         display: flex; 
@@ -1663,25 +1631,49 @@ color: #000000;
     .faqContactItem {
         display: block;
         padding-left: calc(10rem + 20px);
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
     }
-.siteLogo {
+    .siteLogo {
         position: absolute;
         margin-left: calc(-10rem + -20px);
         width: 10rem;
         height: 10rem;
-}
-.faqContactSite, .faqContactURL, .faqContactAddress {
+    }
+    .siteLogo01 {
+        fill: #ff8819 !important;
+    }
+    .faqContactSite, .faqContactURL, .faqContactAddress {
         position: relative;
         margin-top: 0 !important;
+    }
+    .faqContactAddress div {
+        display: inline-block;
+        padding-right: 1px;
+    }
+.faqContactAddress div:nth-child(3) {
+      display: block;
+}
+.faqContactSite {
+    font-size: 20px;
+}
+.faqContactURL a {
+    font-size: 19px ;
 }
 .faqContactAddress div {
-    display: inline-block;
-    padding-right: 1px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500 !important;
 }
-.faqCustHead {
-    padding: 1rem 0px 2rem 0px !important;
-    margin: 0 !important;
-    text-align: left !important;
+.faqContactIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    translate: -100px -114px; /* Moves 50px right and 20px down */
+}
+.faqContactIcons div {
+    justify-content: flex-end;
+
 }
 
         }
@@ -1911,4 +1903,70 @@ color: #000000;
     bottom: 0;     
     left: 0;
         transition: all 0.2s ease-out;
+}
+
+.faqStaticContainer {
+    
+}
+.faqStatic {
+    margin-bottom: 20px;
+}
+
+    @media(max-width: 549px){  
+    .faqStaticContainer {display: block;}
+}
+
+@media(min-width: 549px) and (max-width: 768px){  
+    .faqStaticContainer {display: block;}
+}
+
+@media(min-width: 768px) and (max-width: 1024px){  
+    .faqStaticContainer {display: block;}
+}
+
+@media(min-width: 1024px) and (max-width: 1280px){  
+    .faqStaticContainer {display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(1, 1fr);}
+    .faqStatic {grid-column: span 2 / span 2;}
+    .faqStatic:last-child {grid-column: span 2 / span 2;}
+}
+
+@media(min-width: 1280px) {  
+    .faqStaticContainer {display: grid; gap: 20px; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(1, 1fr);}
+    .faqStatic {grid-column: span 3 / span 3;}
+    .faqStatic:last-child {grid-column: span 4 / span 4;}
+}
+
+.faqStatic  .accordionFAQbutton {
+      color: #2a2a2a !important;
+}
+.faqStatic .accordionFAQbutton::before {
+  all: unset;
+}
+.faqStatic .accordionFAQbody {
+    color: #2a2a2a !important;
+        text-wrap: balance;
+}
+.faqStatic .faqHowText span {
+    color: #2a2a2a !important;
+}
+
+.faqStatic .faqHow a svg {
+    fill: #ffffff !important;
+    background-color: #2a2a2a !important;
+    border: 2px solid #2a2a2a !important;
+    border-radius: 50%;
+}
+.faqStatic .faqClicky a:hover svg {
+    fill: #2a2a2a !important;
+    background-image: radial-gradient(circle, #ece9e1 60%, #2a2a2a 70%) !important;
+    border: 2px solid #2a2a2a !important;
+animation: moveShadow 0.5s infinite alternate ease-in-out;
+}
+@keyframes moveShadow {
+  0% {
+    box-shadow: 0px 0px 0px 0px #c4c4c4;;
+  }
+  100% {
+    box-shadow: 5px 10px 0px 0px #c4c4c4;;
+  }
 }
