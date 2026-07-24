@@ -550,18 +550,23 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     padding-bottom: 4px !important;
 }
     @media(max-width: 549px){  
-    .accordionFAQbody, .faqHowText span {font-size: 14px;}}
+    .accordionFAQbody {font-size: 14px;}
+    .faqHowText span {font-size: 12px;}}
     @media(min-width: 549px) and (max-width: 768px){  
-    .accordionFAQbody, .faqHowText span {font-size: 16px;}}
+    .accordionFAQbody {font-size: 16px;}
+    .faqHowText span {font-size: 14px;}}
     @media(min-width: 768px) and (max-width: 1024px){  
-    .accordionFAQbody, .faqHowText span {font-size: 18px;}}
+    .accordionFAQbody {font-size: 18px;}
+    .faqHowText span {font-size: 16px;}}
     @media(min-width: 1024px) and (max-width: 1280px){  
-    .accordionFAQbody, .faqHowText span {font-size: 20px;}}
+    .accordionFAQbody {font-size: 20px;}
+    .faqHowText span {font-size: 18px;}}
     @media(min-width: 1280px) {  
-    .accordionFAQbody, .faqHowText span {font-size: 22px;}}
+    .accordionFAQbody {font-size: 22px;}
+    .faqHowText span {font-size: 18px;}}
 
 .accordionFAQbody strong {
-font-weight: 600;
+    font-weight: 600;
 }
 
 .faqHowText {
@@ -600,31 +605,52 @@ font-weight: 600;
 }
 
 .accordionFAQbody ol {
-  list-style-position: outside; /* Keeps marker outside text block (Default) */
-  padding-left: 4rem;         /* Ensures space for double/triple digit numbers */
+  list-style-position: outside; 
+  padding-left: 4rem;    
 }
-.accordionFAQbody ol li::marker {
+.accordionFAQbody ul {
+  list-style-position: outside; 
+  padding-left: 2.5rem;     
+}
+.accordionFAQbody .faqULinner {
+  list-style: none;
+    padding-left: 0; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+.accordionFAQbody .faqULinner span {
+    color: #2A2A2A;
+    text-decoration: none;
+    margin-left: 4px;
+}
+.accordionFAQbody .faqULinner li {
+    border: 0 !important;
+    margin: 0 !important;
+}
+
+.accordionFAQbody ol li::marker, .accordionFAQbody ul li::marker  {
   text-align: left;       
 }
-.accordionFAQbody ol li {
+.accordionFAQbody ol li, .accordionFAQbody ul li {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 500;
     letter-spacing:0;
     line-height:1.4; 
 }
-.accordionFAQbody ol li:first-child {
+.accordionFAQbody ol li:first-child, .accordionFAQbody ul li:first-child {
     padding-top: 14px;
 }
     @media(max-width: 549px){  
-    .accordionFAQbody ol li {font-size: 14px; padding-top: 4px;}}
+    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 14px; padding-top: 4px;}}
     @media(min-width: 549px) and (max-width: 768px){  
-    .accordionFAQbody ol li {font-size: 16px; padding-top: 4px;}}
+    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 16px; padding-top: 4px;}}
     @media(min-width: 768px) and (max-width: 1024px){  
-    .accordionFAQbody ol li {font-size: 16px; padding-top: 4px;}}
+    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 16px; padding-top: 4px;}}
     @media(min-width: 1024px) and (max-width: 1280px){  
-    .accordionFAQbody ol li {font-size: 18px; padding-top: 4px;}}
+    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 18px; padding-top: 4px;}}
     @media(min-width: 1280px) {  
-    .accordionFAQbody ol li {font-size: 20px; padding-top: 4px;}}
+    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 20px; padding-top: 4px;}}
 
 .accordionFAQbutton:hover {
   z-index: 2;
@@ -753,6 +779,128 @@ font-weight: 600;
     transition: all 0.1s ease-in-out;
 }
 
+.faqACCLinkContainer {
+    display: flex !important;
+    padding: 10px 0px 6px 0 !important;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #c1c1c1;
+}
+.faqACCLinkContainer:first-of-type {
+    border: 0;
+    margin-top: 10px;
+}
+.faqACCLinkContainer h4 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.faqACCLinkContainer h4 span {
+    margin-right: 10px;
+    color: #2a2a2a;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}   
+
+.faqACCLinkContainer h4 svg {
+    margin-right: 10px;
+    fill:#ff5e5e;
+    background-color: #f8f5f0;
+    width: 45px;
+    height: 45px;
+    clip-path: circle(50%);
+}   
+
+.faqACCLinkContainer .faqACCLinkWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 !important;
+    padding: 0 !important;
+} 
+
+.faqACCLinkContainer .faqACCLinkWrapper div {
+    margin-right: 20px;
+    display: inline;
+} 
+.faqACCLinkContainer .faqACCLinkWrapper a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    border: 0 !important;
+}
+
+.faqACCLinkContainer .faqACCLinkWrapper a svg {
+    fill:#f8f5f0;
+    background-image: radial-gradient(circle, #2A2A2A 60%, #f8f5f0 70%);
+    border: 2px solid #2a2a2a;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    clip-path: circle(50%);
+    transition: all 0.15s ease-in-out;
+}
+
+.faqACCLinkContainer .faqACCLinkWrapper a span {
+    margin-left: 10px;
+    color: #2a2a2a;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    letter-spacing:0;
+    line-height:1.4; 
+    font-size: 18px;
+}
+
+.faqACCLinkContainer .faqACCLinkWrapper a:hover svg {
+    fill:#2a2a2a;
+    background-image: radial-gradient(circle, #f8f5f0 60%, #2A2A2A 70%);
+    border: 2px solid #2a2a2a;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    clip-path: circle(50%);
+    transition: all 0.15s ease-in-out;
+}
+
+.faqACCLinkContainer .faqACCLinkWrapper:hover a {
+    opacity: 50%;
+}
+.faqACCLinkContainer .faqACCLinkWrapper a:hover {
+    opacity: 100%;
+}
+
+/* X-Small */ @media(max-width: 549px){  
+    .faqACCLinkContainer h4 span {font-size: 12px;}   
+    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}
+    .faqACCLinkContainer h4 svg {width: 0px; height: 0px; display: none;}}
+/* Small */ @media(min-width: 549px) and (max-width: 768px){  
+    .faqACCLinkContainer h4 span {font-size: 16px;}   
+    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}
+    .faqACCLinkContainer h4 svg {width: 30px; height: 30px;}}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
+    .faqACCLinkContainer h4 span {font-size: 16px;}   
+    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 14px;}
+    .faqACCLinkContainer h4 svg {width: 45px; height: 45px;}}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqACCLinkContainer h4 span {font-size: 18px;}   
+    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 16px;}
+    .faqACCLinkContainer h4 svg {width: 34px; height: 34px;border: 2px solid #ff5e5e;
+    border-radius: 50%;}}
+/* X-Large */ @media(min-width: 1280px) {  
+    .faqACCLinkContainer h4 span {font-size: 20px;}   
+    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 18px;}
+    .faqACCLinkContainer h4 svg {width: 45px; height: 45px;}}
+
+
+
+
+
+
 
 /* FAQ ANSWER BUTTONS */
 .accordionFAQheader .collapsed {
@@ -765,12 +913,11 @@ font-weight: 600;
 }
 
 .faqBannerText:hover div a {
-color: #000000;
-
+    color: #000000;
     transition: all 0.3s ease-in-out;
     text-shadow: 0 0 50px #00b7ff00; 
 }
-
+ 
 
 /* BRANDING STATES */
 .hoverBlue:hover, .hoverBlue:hover a {
@@ -1311,19 +1458,28 @@ color: #000000;
     border-radius: 50%;
 }
 
-.faqStatic .faqClicky a:hover svg {
+.faqClicky a:hover svg {
     fill: #2a2a2a !important;
     background-image: radial-gradient(circle, #ece9e1 60%, #2a2a2a 70%) !important;
-    border: 2px solid #2a2a2a !important;
-    animation: moveShadow 0.5s infinite alternate ease-in-out;
+    border: 2px solid #2a2a2a !important; 
+    animation: moveShadow 0.7s infinite ease-in-out;
 }
 
 @keyframes moveShadow {
   0% {
-    box-shadow: 0px 0px 0px 0px #c4c4c4;;
+    filter: drop-shadow(1px 1px 0px #c4c4c4); translate: 0px 0px; transform: scale(100%);
+  }
+  25% {
+    filter: drop-shadow(4px 4px 2px #c4c4c4); translate: 2px 2px; transform: scale(110%);
+  }
+  50% {
+    filter: drop-shadow(8px 8px 4px #959595); translate: 4px 4px; transform: scale(120%);
+  }
+  75% {
+    filter: drop-shadow(4px 4px 2px #c4c4c4); translate: 2px 2px; transform: scale(110%);
   }
   100% {
-    box-shadow: 5px 10px 0px 0px #c4c4c4;;
+    filter: drop-shadow(1px 1px 0px #c4c4c4); translate: 0px 0px; transform: scale(100%);
   }
 }
 

@@ -550,18 +550,23 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     padding-bottom: 4px !important;
 }
     @media(max-width: 549px){  
-    .accordionFAQbody, .faqHowText span {font-size: 14px;}}
+    .accordionFAQbody {font-size: 14px;}
+    .faqHowText span {font-size: 12px;}}
     @media(min-width: 549px) and (max-width: 768px){  
-    .accordionFAQbody, .faqHowText span {font-size: 16px;}}
+    .accordionFAQbody {font-size: 16px;}
+    .faqHowText span {font-size: 14px;}}
     @media(min-width: 768px) and (max-width: 1024px){  
-    .accordionFAQbody, .faqHowText span {font-size: 18px;}}
+    .accordionFAQbody {font-size: 18px;}
+    .faqHowText span {font-size: 16px;}}
     @media(min-width: 1024px) and (max-width: 1280px){  
-    .accordionFAQbody, .faqHowText span {font-size: 20px;}}
+    .accordionFAQbody {font-size: 20px;}
+    .faqHowText span {font-size: 18px;}}
     @media(min-width: 1280px) {  
-    .accordionFAQbody, .faqHowText span {font-size: 22px;}}
+    .accordionFAQbody {font-size: 22px;}
+    .faqHowText span {font-size: 18px;}}
 
 .accordionFAQbody strong {
-font-weight: 600;
+    font-weight: 600;
 }
 
 .faqHowText {
@@ -1311,19 +1316,28 @@ color: #000000;
     border-radius: 50%;
 }
 
-.faqStatic .faqClicky a:hover svg {
+.faqClicky a:hover svg {
     fill: #2a2a2a !important;
     background-image: radial-gradient(circle, #ece9e1 60%, #2a2a2a 70%) !important;
-    border: 2px solid #2a2a2a !important;
-    animation: moveShadow 0.5s infinite alternate ease-in-out;
+    border: 2px solid #2a2a2a !important; 
+    animation: moveShadow 0.7s infinite ease-in-out;
 }
 
 @keyframes moveShadow {
   0% {
-    box-shadow: 0px 0px 0px 0px #c4c4c4;;
+    filter: drop-shadow(1px 1px 0px #c4c4c4); translate: 0px 0px; transform: scale(100%);
+  }
+  25% {
+    filter: drop-shadow(4px 4px 2px #c4c4c4); translate: 2px 2px; transform: scale(110%);
+  }
+  50% {
+    filter: drop-shadow(8px 8px 4px #959595); translate: 4px 4px; transform: scale(120%);
+  }
+  75% {
+    filter: drop-shadow(4px 4px 2px #c4c4c4); translate: 2px 2px; transform: scale(110%);
   }
   100% {
-    box-shadow: 5px 10px 0px 0px #c4c4c4;;
+    filter: drop-shadow(1px 1px 0px #c4c4c4); translate: 0px 0px; transform: scale(100%);
   }
 }
 
