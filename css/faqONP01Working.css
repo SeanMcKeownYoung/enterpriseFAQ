@@ -67,7 +67,7 @@ a[href^="tel"] {
     position: relative;
     bottom: 0;
     left: 0;
-    transition: filter 0.2s ease !important;
+    transition: filter 0.2s ease;
 }
 
 #faqNavBar.top-sticky {
@@ -75,7 +75,7 @@ a[href^="tel"] {
     top: 0;
     left: 0;
     bottom: auto; 
-    transition: filter 0.2s ease !important;
+    transition: filter 0.2s ease;
 }
 
 #faqNavBar.bottom-sticky #movingFAQbox {
@@ -176,18 +176,17 @@ body:has(.navli06 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ea
 
 #faqNavBar.top-sticky .navFAQlink {
     color: #b0aeae;
-    transition: all 0.2s ease !important;
+    transition: all 0.2s ease;
 }
 #faqNavBar .navFAQlink.active {
     color: #ffffff !important;
     border-bottom: 10px solid transparent !important;  
-    transition: all 0.2s ease !important;
+    transition: all 0.2s ease;
 }
 
 #faqNavBar .navFAQul .navFAQlink:hover {
-    color: #ffffff;
-    border-bottom: 10px solid #ffffff;  
-    transition: all 0.2s ease !important;
+    color: #ffffff;  
+    transition: all 0.2s ease;
 }
 .navFAQul  {
     display: flex;
@@ -904,7 +903,7 @@ color: #000000;
     object-fit: cover; /* Forces the image to fill the container and crop */
     object-position: left top; /* Optional: Centers the crop area (default) */
     filter: drop-shadow(-30px 10px 14px #1414145f);
-        transition: all 0.2s ease !important;
+        transition: all 0.2s ease;
 }
 
 
@@ -1138,7 +1137,7 @@ color: #000000;
     fill: #bdbdbd;
     width: 3.2rem;
     height: 3.2rem;
-    transition: all 0.2s ease !important;
+    transition: all 0.2s ease;
 }
 
 .faqContactAddress div {
@@ -1150,7 +1149,7 @@ color: #000000;
     letter-spacing:0;
     line-height:1.4;
     text-wrap: balance;
-    transition: all 0.2s ease !important;
+    transition: all 0.2s ease;
 }
 
 .faqContactAddress {
@@ -1166,7 +1165,7 @@ color: #000000;
     letter-spacing:0;
     line-height:1.4;
     text-wrap: balance;
-    transition: all 0.2s ease !important;
+    transition: all 0.2s ease;
 }
 
 .faqContactContainer:hover .faqContactItem {
@@ -1181,7 +1180,7 @@ color: #000000;
 .faqContactContainer .faqContactItem {
     opacity: 100%;
     outline: 7px solid  rgba(255, 255, 255, 0);
-    transition: all 0.3s ease !important;
+    transition: all 0.3s ease;
 }
 
 .faqFillContacts .faqHeroContainer {
