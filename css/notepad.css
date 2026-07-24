@@ -1,0 +1,28 @@
+/* Outlines the grids, remove when sending
+div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
+
+
+/* X-Small */ @media(max-width: 549px){  
+    .sectionFAQImg {grid-template-columns: 0% 100%;}
+    .sectionFAQImg div img {translate: 10% -47%; transform: rotate(0deg) scale(1.3);}
+}
+
+/* Small */ @media(min-width: 549px) and (max-width: 768px){  
+    .sectionFAQImg {grid-template-columns: 10% 90%;}
+    .sectionFAQImg div img {translate: 180px -20%;}
+}
+
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
+    .sectionFAQImg {grid-template-columns: 20% 80%;}
+    .sectionFAQImg div img {translate: 220px -10%;}
+}
+
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
+    .sectionFAQImg {grid-template-columns: 30% 70%;}
+    .sectionFAQImg div img {translate: 5% -10%;}
+}
+
+/* X-Large */ @media(min-width: 1280px) {  
+    .sectionFAQImg {grid-template-columns: 40% 60%; }
+    .sectionFAQImg div img {translate: 5% 10% ;transform: rotate(5deg) scale(1)}
+}
