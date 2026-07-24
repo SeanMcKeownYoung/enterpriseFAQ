@@ -1631,8 +1631,6 @@ color: #000000;
     .faqContactItem {
         display: block;
         padding-left: calc(10rem + 20px);
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
     }
     .siteLogo {
         position: absolute;
@@ -1668,8 +1666,7 @@ color: #000000;
 .faqContactIcons {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    translate: -100px -114px; /* Moves 50px right and 20px down */
+
 }
 .faqContactIcons div {
     justify-content: flex-end;
