@@ -657,8 +657,8 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 0 0px 0 !important;
-    width: 70%;
+    padding: 0 !important;
+    width: 60%;
 }
 
 .faqInput span, .faqInput input {
@@ -686,6 +686,7 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 }
 
 .faqInput button {
+    display: none;
     translate: -10x 0px; 
     margin-left: 0 !important;
     color: #f8f5f0;
@@ -695,7 +696,7 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     border: 1px solid #ccc;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 
@@ -710,10 +711,11 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 }
 
 .faqInputContainer .faqInput:hover button {
+    display: block;
     color: #ffffff;
     background-color: #2a2a2a;
     border: 1px solid #181818;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 
