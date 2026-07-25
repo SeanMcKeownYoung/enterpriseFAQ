@@ -1117,10 +1117,10 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 }
 
 .sectionFAQImg div {
-    width: 1280px;  /* Set your desired width */
+    width: 1080px;  /* Set your desired width */
 }
 .sectionFAQImg div img {
-    translate: 600px 20px; 
+    translate: 400px 180px; 
     transform: rotate(5deg);
 }
 }
