@@ -728,6 +728,21 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     transition: all 0.15s ease-in-out;
 }
 
+.accordionFAQ:hover .accordionFAQbutton {
+    color: #a4a4a4;
+}
+.accordionFAQ:hover .accordionFAQbutton .faqCarret {
+    stroke: #a4a4a4;
+}
+.accordionFAQ .accordionFAQbutton:hover {
+    color: #2A2A2A;
+}
+.accordionFAQ .accordionFAQbutton:hover .faqCarret {
+    stroke: #2A2A2A;
+}
+
+.accordionFAQ 
+
 .faqHow {
     display: flex;
     flex-direction: row;
