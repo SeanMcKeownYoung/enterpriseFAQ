@@ -1,3 +1,17 @@
+  // COPY TO DESKTOP FUNCTION //
+ 
+ function copyInputText() {
+  // Select the text field
+  const copyText = document.getElementById("faqInput");
+  
+  // Copy the value inside the text field to the clipboard
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Optional: Provide quick feedback to the user
+  alert("Copied: " + copyText.value);
+}
+ 
+ 
  // DROP NAV BREADCRUMBS WHEN DOTCOM BRANDING COMES TO VIEW ON UP SCROLL //
  
  let lastScrollTop = 0;
