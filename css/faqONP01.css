@@ -562,6 +562,8 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 .faqDropMenuContainer {
 margin-bottom: 20px;
 }
+
+
 .faqDropMenu::after {
   content: '';
   display: block;
@@ -571,8 +573,17 @@ margin-bottom: 20px;
   border-bottom: 1px solid #2a2a2a; /* Change color and thickness here */
 }
 .faqDropMenu div {
+    display: flex;
     list-style: none;
     padding: 10px 0;
+}
+
+.faqDropMenu div .dropdownFAQitem {
+    display: flex;
+    align-items: center;
+}
+.faqDropMenu div:first-child .dropdownFAQitem {
+    padding-top: 10px;
 }
 
 .faqDropMenu hr {
@@ -594,8 +605,11 @@ margin-bottom: 20px;
     .faqDropMenu .dropdownFAQitem span {font-size: 18px;}}
 
 .faqDropMenu div .dropdownFAQitem svg {
-    fill:#fff;
+    fill:#f8f5f0;
     background-color: #5c5b5b;
+    border: 2px solid #5c5b5b;
+    outline: 2px solid #5c5b5b;
+    outline-offset: 4px;
     border-radius: 50%;
     clip-path: circle(50%);
     transition: all 0.15s ease-in-out;
@@ -607,8 +621,11 @@ margin-bottom: 20px;
 }
 
 .faqDropMenu:hover div .dropdownFAQitem svg {
-    fill:#fff;
+    fill:#f8f5f0;
     background-color: #a2a2a2;
+    outline: 2px solid #f8f5f0;
+    outline-offset: -1px;
+    border: 2px solid #a2a2a2;
     transition: all 0.15s ease-in-out;
 }
 
@@ -618,8 +635,11 @@ margin-bottom: 20px;
 }
 
 .faqDropMenu div:hover .dropdownFAQitem svg, .faqDropMenu div .dropdownFAQitem:hover svg {
-    fill:#fff;
-    background-color: #2a2a2a !important;
+    fill:#2a2a2a;
+    outline: 2px solid #2a2a2a;
+    border: 2px solid #2a2a2a;
+    outline-offset: -2px;
+    background-color: #f8f5f0 !important;
     transition: all 0.15s ease-in-out;
 }
 
@@ -837,6 +857,10 @@ margin-bottom: 20px;
 .accordionFAQbody {
   padding-top: 1px;
 }
+.resett {
+    all: unset;
+}
+
 
 .accordionFAQ {
   cursor: pointer;
@@ -864,6 +888,11 @@ margin-bottom: 20px;
   width: 70%;
     transition: var(--bs-accordionFAQ-transition);
 }
+.reset.accordionFAQbutton:not(.collapsed)::before, .reset.accordionFAQbutton.collapsed::before  {
+  content: "";
+  height: 0px !important;
+}
+
 /* FAQ ANSWER BUTTONS */
 .collapse .faqHow {
     border-bottom: 1px solid #2A2A2A !important;
@@ -871,6 +900,15 @@ margin-bottom: 20px;
 
 .accordionFAQitem:last-child .faqHow {
     border-bottom: 0px solid #2A2A2A !important;
+}
+.nudgeLeft {
+    padding-left: 2rem;
+}
+.nudgeDown {
+    padding-top: 2rem;
+}
+.nudgeUp {
+    padding-bottom: 2rem;
 }
 
 .faqBodyContainer:has(.accordionFAQitem .accordionFAQbutton:not(.collapsed)) .accordionFAQbutton {
@@ -885,6 +923,10 @@ margin-bottom: 20px;
     position: relative;
     transition: var(--bs-accordionFAQ-transition);
 }
+.reset.accordionFAQbutton:not(.collapsed) {
+    padding-top: 10px !important;
+}
+
 .accordionFAQitem:first-child .accordionFAQbutton:not(.collapsed) {
     padding-top: 0px;
     transition: var(--bs-accordionFAQ-transition);
