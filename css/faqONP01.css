@@ -1902,6 +1902,7 @@ margin-bottom: 20px;
   width: 90%;
   max-width: 900px;
   height: 400px;
+  margin: 15px 0 40px 0;
 }
 
 /* Individual Card Defaults */
@@ -1909,7 +1910,7 @@ margin-bottom: 20px;
   flex: 1; /* Equal initial widths */
   background-color: #386123;
   border-radius: 16px;
-  color: #fff;
+  color: #ece9e1;
   cursor: pointer;
   overflow: hidden;
   position: relative;
@@ -1934,69 +1935,54 @@ box-shadow: 2px 2px 14px 4px rgba(0,0,0,0.20);
 }
 
 /* Content Layout Alignment */
-.cardFAQcontent {
+.toggleFAQcard .cardFAQcontent {
   position: absolute;
   left: 20px;
   right: 20px;
+  top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   height: 100%;
   gap: 10px;
 }
 
-.toggleFAQcard.active .cardFAQcontent {
-  justify-content: space-between;
-}
-
-.cardFAQcontent .cardFAQcontentTOP {
-    padding-top: 20px;
-} 
-.cardFAQcontent .cardFAQcontentBTTM {
-    padding-bottom: 10px;
-} 
 .cardFAQcontent h2 {
     opacity: 0.3;
 }
-.cardFAQcontent h3 {
 
-}
 
 /* Hide descriptions inside collapsed cards */
 .cardFAQcontent p {
-  font-size: 0.95rem;
-  line-height: 1.4;
   opacity: 0;
-  text-wrap: balance;
-  transform: translateY(20px);
+  transform: translateY(200px);
   transition: opacity 0.3s ease, transform 0.4s ease;
 }
 
 /* Fade in description text after card expands */
 .toggleFAQcard.active .cardFAQcontent p {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0px);
   transition-delay: 0.3s;
 }
-
-
+.cardFAQcontent p {line-height: 1.4;}
+.cardFAQcontent h3 {font-weight: 700;}
     @media(max-width: 549px){  
         .cardFAQcontent h2 {font-size: 24px;}  
         .cardFAQcontent h3 {font-size: 14px;}
-        .cardFAQcontent p {font-size: 12px;}}
+        .cardFAQcontent p {font-size: 14px;}}
     @media(min-width: 549px) and (max-width: 768px){ 
         .cardFAQcontent h2 {font-size: 30px;}   
         .cardFAQcontent h3 {font-size: 16px;}
-        .cardFAQcontent p {font-size: 14px;}}
+        .cardFAQcontent p {font-size: 16px;}}
     @media(min-width: 768px) and (max-width: 1024px){  
         .cardFAQcontent h2 {font-size: 44px;}  
         .cardFAQcontent h3AQbody {font-size: 18px;}
-        .cardFAQcontent p {font-size: 16px;}}
+        .cardFAQcontent p {font-size: 18px;}}
     @media(min-width: 1024px) and (max-width: 1280px){
         .cardFAQcontent h2 {font-size: 54px;}  
         .cardFAQcontent h3 {font-size: 20px;}
-        .cardFAQcontent p {font-size: 18px;}}
+        .cardFAQcontent p {font-size: 20px;}}
     @media(min-width: 1280px) {  
         .cardFAQcontent h2 {font-size: 54px;}
         .cardFAQcontent h3 {font-size: 22px;}
-        .cardFAQcontent p {font-size: 18px;}}
+        .cardFAQcontent p {font-size: 22px;}}
