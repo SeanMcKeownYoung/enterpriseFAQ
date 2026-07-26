@@ -26,3 +26,28 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
     .sectionFAQImg {grid-template-columns: 40% 60%; }
     .sectionFAQImg div img {translate: 5% 10% ;transform: rotate(5deg) scale(1)}
 }
+
+
+
+
+
+    @media(max-width: 549px){  
+        .cardFAQcontent h2 {font-size: 24px;}  
+        .cardFAQcontent h3 {font-size: 14px;}
+        .cardFAQcontent p {font-size: 12px;}}
+    @media(min-width: 549px) and (max-width: 768px){ 
+        .cardFAQcontent h2 {font-size: 30px;}   
+        .cardFAQcontent h3 {font-size: 16px;}
+        .cardFAQcontent p {font-size: 14px;}}
+    @media(min-width: 768px) and (max-width: 1024px){  
+        .cardFAQcontent h2 {font-size: 44px;}  
+        .cardFAQcontent h3AQbody {font-size: 18px;}
+        .cardFAQcontent p {font-size: 16px;}}
+    @media(min-width: 1024px) and (max-width: 1280px){
+        .cardFAQcontent h2 {font-size: 54px;}  
+        .cardFAQcontent h3 {font-size: 20px;}
+        .cardFAQcontent p {font-size: 18px;}}
+    @media(min-width: 1280px) {  
+        .cardFAQcontent h2 {font-size: 54px;}
+        .cardFAQcontent h3 {font-size: 22px;}
+        .cardFAQcontent p {font-size: 18px;}}

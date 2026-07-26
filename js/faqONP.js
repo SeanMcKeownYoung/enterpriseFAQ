@@ -1,3 +1,22 @@
+    // Target all toggle cards in the document
+const cards = document.querySelectorAll('.toggleFAQcard');
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    // Terminate early if the card is already expanded
+    if (card.classList.contains('active')) return;
+
+    // Remove active status from all other cards
+    cards.forEach(c => c.classList.remove('active'));
+
+    // Apply active status to the selected card
+    card.classList.add('active');
+  });
+});
+
+
+
+
 // Source - https://stackoverflow.com/a/77817374
 // Posted by Unmitigated
 // Retrieved 2026-07-25, License - CC BY-SA 4.0
