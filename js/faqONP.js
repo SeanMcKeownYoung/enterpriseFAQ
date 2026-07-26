@@ -6,8 +6,6 @@ document.addEventListener('click', e => {
   if (e.target.matches('button') && e.target.previousElementSibling?.matches('p'))
     navigator.clipboard.writeText(e.target.previousElementSibling.textContent)
       .then(() => console.log('copied text'), error => console.error('failed to copy', error));
-        // Optional: Provide quick feedback to the user
-  alert("Copied: " + p);
 });
 
 
