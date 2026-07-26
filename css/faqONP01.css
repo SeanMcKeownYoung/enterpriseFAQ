@@ -1299,9 +1299,9 @@ margin-bottom: 20px;
     width: 800px;  /* Set your desired width */
 }
 .sectionFAQImg div img {
-    translate: 40px 120px; 
-    transform: rotate(0deg);
-    backdrop-filter: blur()
+    translate: 20px -180px; 
+    transform: rotate(-90deg);
+    filter: none;
 }
 }
 
