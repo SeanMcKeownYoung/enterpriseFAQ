@@ -3,12 +3,14 @@
 /* BASE LEVEL STYLES */
 body {
     scroll-behavior: smooth !important;
-        text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch; 
 }
 html {
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }   
 
 html, body {
@@ -1284,7 +1286,7 @@ margin-bottom: 20px;
     object-fit: cover; /* Forces the image to fill the container and crop */
     object-position: left top; /* Optional: Centers the crop area (default) */
     filter: drop-shadow(-30px 10px 14px #1414145f);
-        transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 
@@ -1298,7 +1300,8 @@ margin-bottom: 20px;
 }
 .sectionFAQImg div img {
     translate: 40px 120px; 
-    transform: rotate(10deg);
+    transform: rotate(0deg);
+    backdrop-filter: blur()
 }
 }
 
@@ -1348,6 +1351,7 @@ margin-bottom: 20px;
 .sectionFAQmag {
     justify-content: center;
     align-items: flex-end;
+    
 }
 
 .sectionFAQImg div {
