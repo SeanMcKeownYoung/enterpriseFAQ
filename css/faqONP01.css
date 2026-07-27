@@ -2041,7 +2041,8 @@ transform: translateY(10px);
     @media(max-width: 549px){  
         .cardFAQcontent h2 {font-size: 16px;}  
         .cardFAQcontent h3 {font-size: 14px;}
-        .cardFAQcontent p {font-size: 14px;}}
+        .cardFAQcontent p {font-size: 14px;}
+        .cardFAQcontainerH .toggleFAQcard.active {flex: 2;}}
     @media(min-width: 549px) and (max-width: 768px){ 
         .cardFAQcontent h2 {font-size: 20px;}   
         .cardFAQcontent h3 {font-size: 16px;}
