@@ -1,4 +1,5 @@
-    // Target all toggle cards in the document
+
+ // Target all toggle cards in the document
 const cards = document.querySelectorAll('.toggleFAQcard');
 
 cards.forEach(card => {
@@ -54,7 +55,7 @@ window.addEventListener('scroll', () => {
 
 // MAGNIFYING GLASS 2 //
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() { passive: true 
   // Get how much the user scrolled
   let scrollTop = window.scrollY;
   
