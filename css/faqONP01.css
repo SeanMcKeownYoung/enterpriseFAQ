@@ -1290,20 +1290,7 @@ margin-bottom: 20px;
 }
 
 
-/* X-Small */ @media(max-width: 549px){  
-.sectionFAQmag {
-    justify-content: center;
-    align-items: flex-start;
-}
-.sectionFAQImg div {
-    width: 800px;  /* Set your desired width */
-}
-.sectionFAQImg div img {
-    translate: 20px -180px; 
-    transform: rotate(-90deg);
-    filter: none;
-}
-}
+
 
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
 .sectionFAQmag {
@@ -1350,20 +1337,17 @@ margin-bottom: 20px;
 /* X-Large */ @media(min-width: 1280px) {  
 .sectionFAQmag {
     justify-content: center;
-    align-items: flex-end;
-    
+    align-items: flex-start;
 }
 
 .sectionFAQImg div {
     width: 1080px;  /* Set your desired width */
 }
 .sectionFAQImg div img {
-    translate: 400px 180px; 
+    translate: 400px 80px; 
     transform: rotate(5deg);
 }
 }
-
-
 
 .faqHeroFull .faqPageWrapper {
     display:flex;

@@ -55,7 +55,7 @@ window.addEventListener('scroll', () => {
 
 // MAGNIFYING GLASS 2 //
 
-window.addEventListener('scroll', function() { passive: true 
+window.addEventListener('scroll', function() {
   // Get how much the user scrolled
   let scrollTop = window.scrollY;
   
