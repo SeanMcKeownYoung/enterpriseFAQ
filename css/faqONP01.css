@@ -1270,7 +1270,7 @@ margin-bottom: 20px;
 }
 
 .sectionFAQmag {
-    position: fixed; 
+position: absolute;
     z-index: 70;
     width: 100vw;
     height: 100vh;
@@ -1291,7 +1291,19 @@ margin-bottom: 20px;
 }
 
 
-
+/* X-Small */ @media(max-width: 549px){  
+.sectionFAQmag {
+    justify-content: center;
+    align-items: flex-start;
+}
+.sectionFAQImg div {
+    width: 620px;  /* Set your desired width */
+}
+.sectionFAQImg div img {
+    translate: 96px 30px; 
+    transform: rotate(15deg);
+}
+}
 
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
 .sectionFAQmag {
@@ -1299,11 +1311,11 @@ margin-bottom: 20px;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 800px;  /* Set your desired width */
+    width: 700px;  /* Set your desired width */
 }
 .sectionFAQImg div img {
-    translate: 40px 120px; 
-    transform: rotate(10deg);
+    translate: 30px -30px; 
+    transform: rotate(5deg);
 }
 }
 
@@ -1316,8 +1328,8 @@ margin-bottom: 20px;
     width: 900px;  /* Set your desired width */
 }
 .sectionFAQImg div img {
-    translate: 320px 140px; 
-    transform: rotate(20deg);
+    translate: 0 -20%; 
+    transform: rotate(0deg);
 }
 }
 
@@ -1330,7 +1342,7 @@ margin-bottom: 20px;
     width: 1024px;  /* Set your desired width */
 }
 .sectionFAQImg div img {
-    translate: 400px 120px; 
+    translate: 40% -80px; 
     transform: rotate(20deg);
 }
 }
@@ -1340,13 +1352,12 @@ margin-bottom: 20px;
     justify-content: center;
     align-items: flex-start;
 }
-
 .sectionFAQImg div {
     width: 1080px;  /* Set your desired width */
 }
 .sectionFAQImg div img {
-    translate: 400px 80px; 
-    transform: rotate(5deg);
+    translate: 40% -100px; 
+    transform: rotate(10deg);
 }
 }
 
@@ -1888,7 +1899,7 @@ margin-bottom: 20px;
 .cardFAQcontainerH {
   display: flex;
   gap: 15px;
-  width: 90%;
+  width: 100%;
   max-width: 900px;
   height: 400px;
   margin: 15px 0 40px 0;
@@ -1899,7 +1910,7 @@ margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 90%;
+  width: 100%;
   max-width: 900px;
   height: 500px;
   margin: 15px 0 40px 0;
