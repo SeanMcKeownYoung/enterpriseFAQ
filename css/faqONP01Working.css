@@ -1429,7 +1429,7 @@ margin-bottom: 20px;
     .faqHeroWrapper, .faqNavWrapper {
         padding-left: calc((100vw - 1280px) / 2);}
     .faqFillShaded .containerFAQbody {flex-direction: row-reverse;}
-    .faqFillNone .containerFAQbody {flex-direction: row;}
+    .faqFillNone .containerFAQbody {flex-direction: row-reverse;}
     .textFAQheader {
         position: absolute; 
         width: calc(1280px - 2rem); 
