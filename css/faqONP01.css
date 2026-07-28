@@ -519,8 +519,7 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     display: inline;
     width: 100%;
     text-align: left;
-    background-color: var(--bs-accordionFAQ-btn-bg);
-    border: 0;
+    background-color: transparent;
     border-radius: 0;
     overflow-anchor: none;
     transition: all 0.15s ease-in-out;
@@ -536,30 +535,6 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     @media(min-width: 1280px) {  
     .accordionFAQbutton {font-size: 26px;}}
 
-.faqListButton {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 500;
-    position: relative;
-    text-wrap: balance;
-    display: inline;
-    width: 100%;
-    text-align: left;
-    background-color: transparent !important;
-    border: 0 !important;
-    border-radius: 0;
-    overflow-anchor: none;
-    transition: all 0.15s ease-in-out;
-}
-    @media(max-width: 549px){  
-    .accordionFAQbutton {font-size: 16px;}}
-    @media(min-width: 549px) and (max-width: 768px){  
-    .accordionFAQbutton {font-size: 20px;}}
-    @media(min-width: 768px) and (max-width: 1024px){  
-    .accordionFAQbutton {font-size: 24px;}}
-    @media(min-width: 1024px) and (max-width: 1280px){  
-    .accordionFAQbutton {font-size: 26px;}}
-    @media(min-width: 1280px) {  
-    .faqListButton  {font-size: 20px;}}
 
 .faqDropMenuContainer {
 margin-bottom: 20px;
@@ -705,7 +680,6 @@ margin-bottom: 20px;
     transition: all 0.25s ease-in-out;
 }
 
-
 .faqInputContainer .faqInput:hover span, .faqInputContainer .faqInput:hover input {
     color: #181818;
     transition: all 0.15s ease-in-out;
@@ -734,6 +708,30 @@ margin-bottom: 20px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+.accordionFAQ .accordianFAQancontainer {
+    padding-top: 10px;
+    padding-bottom: 26px;
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.accordionFAQ .accordianFAQancontainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 1px;
+  background-color: #2a2a2a; 
+  margin: 0 auto;
+}
+
+.accordionFAQ .accordionFAQitem:last-child .accordianFAQancontainer::after {
+  content: "";
+  height: 0px;
+}
+
+
 
 .accordionFAQbody {
     font-family: "neue-haas-grotesk-display", sans-serif;
@@ -743,52 +741,27 @@ margin-bottom: 20px;
     position:relative;
     color: #2A2A2A;
     background-color: transparent !important;
-    text-wrap: pretty;
     text-align: left;
-    padding-top: 10px !important;
-    padding-bottom: 4px !important;
     text-wrap: balance;
 }
     @media(max-width: 549px){  
-    .accordionFAQbody {font-size: 14px;}
-    .faqHowText span {font-size: 12px;}}
+    .accordionFAQbody {font-size: 14px;}}
     @media(min-width: 549px) and (max-width: 768px){  
-    .accordionFAQbody {font-size: 16px;}
-    .faqHowText span {font-size: 14px;}}
+    .accordionFAQbody {font-size: 16px;}}
     @media(min-width: 768px) and (max-width: 1024px){  
-    .accordionFAQbody {font-size: 18px;}
-    .faqHowText span {font-size: 16px;}}
+    .accordionFAQbody {font-size: 18px;}}
     @media(min-width: 1024px) and (max-width: 1280px){  
-    .accordionFAQbody {font-size: 20px;}
-    .faqHowText span {font-size: 18px;}}
+    .accordionFAQbody {font-size: 20px;}}
     @media(min-width: 1280px) {  
-    .accordionFAQbody {font-size: 22px;}
-    .faqHowText span {font-size: 18px;}}
+    .accordionFAQbody {font-size: 22px;}}
 
 .accordionFAQbody strong {
     font-weight: 600;
 }
 
-.faqHowText {
-    display: inline-block; /* Keeps the container bound to text width */
-    overflow: hidden;      /* Prevents any layout bleeding */
-}
-
-.faqHowText span {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 600;
-    position:relative;
-    color:  #2A2A2A;
-    margin: 0 10px;
-    display: inline-block;
-    white-space: nowrap;   /* Ensures text stays on a single line */
-    /* Shorthand: name | duration | timing | delay | fill-mode */
-    animation: clippath 1.5s ease-in-out 4s forwards;
-}
-
 .accordionFAQbody div {
     display: block;
-    padding: 10px 0;
+    padding: 14px 0;
     text-wrap: balance;
 }
 
@@ -857,14 +830,6 @@ margin-bottom: 20px;
   color: #2A2A2A !important;
 }
 
-.accordionFAQbody {
-  padding-top: 1px;
-}
-.resett {
-    all: unset;
-}
-
-
 .accordionFAQ {
   cursor: pointer;
   width: 100%;
@@ -880,7 +845,6 @@ margin-bottom: 20px;
   padding-top: 0;
 }
 
-/* FAQ ANSWER BUTTONS */
 .accordionFAQbutton:not(.collapsed)::before {
   content: "";
   background: #2A2A2A !important;
@@ -889,21 +853,33 @@ margin-bottom: 20px;
   left: 0;
   height: 1px !important;
   width: 70%;
+  transition: var(--bs-accordionFAQ-transition);
+}
+
+.accordionFAQitem:first-child .accordionFAQbutton:not(.collapsed) {
+    padding-top: 0px;
     transition: var(--bs-accordionFAQ-transition);
 }
+
+.accordionFAQbutton:is(.collapse)::after {
+  content: "";
+  background: #2A2A2A !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px !important;
+  width: 70%;
+  background-color: #00b7ff;
+  transition: var(--bs-accordionFAQ-transition);
+}
+
 .reset.accordionFAQbutton:not(.collapsed)::before, .reset.accordionFAQbutton.collapsed::before  {
   content: "";
   height: 0px !important;
 }
 
 /* FAQ ANSWER BUTTONS */
-.collapse .faqHow {
-    border-bottom: 1px solid #2A2A2A !important;
-}
 
-.accordionFAQitem:last-child .faqHow {
-    border-bottom: 0px solid #2A2A2A !important;
-}
 .nudgeLeft {
     padding-left: 2rem;
 }
@@ -963,58 +939,8 @@ margin-bottom: 20px;
     stroke: #2A2A2A;
 }
 
-.accordionFAQ 
 
-.faqHow {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 70%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-bottom: 2rem;
-}
 
-.faqHow .faqHowItem {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.faqHow svg {
-    flex-direction: row;
-    align-self: center;
-}
-
-.faqFillShaded .faqHow a svg {
-    fill: #ece9e1;
-    background-color: #2A2A2A;
-    border-radius: 50%;
-    border: 2px solid #2A2A2A;
-    transition: all 0.1s ease-in-out;
-}
-
-.faqFillNone .faqHow a svg {
-    fill: #f8f5f0;
-    background-color: #2A2A2A;
-    border-radius: 50%;
-    border: 2px solid #2A2A2A;
-    transition: all 0.1s ease-in-out;
-}
-
-.faqFillNone .faqHow a:hover svg {
-    fill: #2A2A2A;
-    background-image: radial-gradient(circle, #f8f5f0 60%, #2A2A2A 70%);
-    border: 2px solid #2A2A2A;
-    transition: all 0.1s ease-in-out;
-}
-
-.faqFillShaded .faqHow a:hover svg {
-    fill: #2A2A2A;
-    background-image: radial-gradient(circle, #ece9e1 60%, #2A2A2A 70%);
-    border: 2px solid #2A2A2A;
-    transition: all 0.1s ease-in-out;
-}
 
 .faqACCLinkContainer {
     display: flex !important;
@@ -1681,15 +1607,59 @@ position: absolute;
         text-wrap: balance;
 }
 
-.faqStatic .faqHowText span {
-    color: #2a2a2a !important;
+.faqAssets {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 16px;
+    gap: 16px;
 }
 
-.faqStatic .faqHow a svg {
-    fill: #ffffff !important;
-    background-color: #2a2a2a !important;
-    border: 2px solid #2a2a2a !important;
-    border-radius: 50%;
+.faqAssets div a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.faqAssets span {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    position:relative;
+    color:  #2A2A2A;
+    white-space: nowrap; 
+}
+    @media(max-width: 549px){  
+    .faqAssets span {font-size: 12px;}}
+    @media(min-width: 549px) and (max-width: 768px){  
+    .faqAssets span {font-size: 14px;}}
+    @media(min-width: 768px) and (max-width: 1024px){  
+    .faqAssets span {font-size: 16px;}}
+    @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqAssets span {font-size: 18px;}}
+    @media(min-width: 1280px) {  
+    .faqAssets span {font-size: 18px;}}
+
+.faqAssets svg {
+    fill: #2A2A2A !important;
+}
+
+.faqAssets:hover div a span, .faqAssets:hover div a svg {
+    opacity: 0.5;
+}
+
+.faqAssets div a:hover span, .faqAssets div a:hover svg {
+    opacity: 1;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.faqAssets div a svg {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center; /* Crucial for SVG transforms */
+}
+
+.faqAssets div a:hover svg {
+  transform: scale(1.18);
+  animation: bounce 0.5s ease-in-out 4s;
 }
 
 .faqClicky a:hover svg {
@@ -2091,5 +2061,3 @@ transform: translateY(10px);
         .cardFAQcontent h2 {font-size: 34px;}
         .cardFAQcontent h3 {font-size: 22px;}
         .cardFAQcontent p {font-size: 22px;}}
-
-
