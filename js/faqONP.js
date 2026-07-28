@@ -15,16 +15,6 @@ cards.forEach(card => {
   });
 });
 
-const observer = new MutationObserver((mutations) => {
-  mutations.forEach((mutation) => {
-    if (mutation.attributeName === 'class') {
-      const isClosed = parentDiv.classList.contains('collapsed');
-      if (isClosed) resetToInitialState();
-    }
-  });
-});
-
-observer.observe(parentDiv, { attributes: true });
 
 
 

@@ -1960,6 +1960,12 @@ position: absolute;
   opacity: 1;
   transition-delay: 0.3s;
 }
+.inactiveHide {
+display: none;
+}
+.active .inactiveHide {
+display: block;
+}
 
 .cardFAQcontainerV .toggleImgcontainer img {
   width: 100%;
@@ -1967,6 +1973,29 @@ position: absolute;
   object-fit: cover;      /* Crops the image to fill the div without stretching */
   object-position: bottom; /* Aligns the image to the bottom, cropping the top */
 }
+
+
+.cardFAQcontainerH .toggleFAQcard .toggleImgcontainer {
+width: 100%;
+position: absolute;
+right: 0;
+bottom: 0;
+filter: grayscale(1);
+opacity: 30%;
+transition: opacity 0.3s ease, filter 0.4s ease;
+}
+.cardFAQcontainerH .toggleFAQcard:hover .toggleImgcontainer {
+filter: grayscale(1);
+opacity: 90%;
+transition: opacity 0.3s ease, filter 0.4s ease;
+}
+.cardFAQcontainerH .toggleFAQcard.active .toggleImgcontainer {
+width: 55%;
+filter: grayscale(0);
+opacity: 100%;
+}
+
+
 .toggleFAQcard.active:hover {
 -webkit-box-shadow: 2px 2px 14px 4px rgba(0,0,0,0.20); 
 box-shadow: 2px 2px 14px 4px rgba(0,0,0,0.20);
@@ -1985,6 +2014,9 @@ box-shadow: 2px 2px 14px 4px rgba(0,0,0,0.20);
 
 .cardFAQcontainerH .toggleFAQcard .cardFAQcontent {
   flex-direction: column;
+}
+.narrower60 {
+  width: 60% !important;
 }
 .cardFAQcontainerV .toggleFAQcard.active .cardFAQcontent {
   flex-direction: column;
@@ -2059,3 +2091,5 @@ transform: translateY(10px);
         .cardFAQcontent h2 {font-size: 34px;}
         .cardFAQcontent h3 {font-size: 22px;}
         .cardFAQcontent p {font-size: 22px;}}
+
+
