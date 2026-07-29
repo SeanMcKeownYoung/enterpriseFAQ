@@ -555,11 +555,13 @@ margin-bottom: 20px;
   padding-top: 10px;
   border-bottom: 1px solid #2a2a2a; /* Change color and thickness here */
 }
+
 .faqDropMenu div {
     display: flex;
     list-style: none;
     padding: 10px 0;
 }
+
 .faqDropMenu.Glossary div {
     display: flex;
     list-style: none;
@@ -574,6 +576,25 @@ margin-bottom: 20px;
 .faqDropMenu.Glossary div svg:hover {
   transform: scale(1.68);
   margin-right: 10px;
+}
+
+
+#linkFAQlist li {
+    display: flex;
+    flex-direction: row;
+}
+
+#linkFAQlist li .linkHide {
+  transform-origin: center; /* Crucial for SVG transforms */
+  transform: scale(0);
+  width: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#linkFAQlist li:hover .linkHide {
+  transform: scale(1);
+width: 30px;
+margin: 0 5px;
 }
 
 
