@@ -578,20 +578,72 @@ margin-bottom: 20px;
   margin-right: 10px;
 }
 
+
+.accordionFAQbody.Inset div {
+    padding: 0 0 10px 0 !important;
+}
+
+.accordionFAQbody.Inset ul {
+    list-style: none;
+    padding-left: 0 !important;
+}
+
+.accordionFAQbody.Inset ul li {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.accordionFAQbody.Inset ul li div {
+
+}
+.narrowerHR {
+    width: 70%;
+}
+
+.accordionFAQbody.Inset ul li div svg {
+    fill:#5c5b5b;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center; 
+}
+.accordionFAQbody.Inset ul li div svg:hover {
+    fill:#2a2a2a !important;
+    transform: scale(1.68);
+    transition: all 0.15s ease-in-out;
+}
+.searchBar {
+    height: 30px; 
+    text-align: center; 
+    border-radius: 15px;
+    display: inline;
+    margin-bottom: -20px;
+}
+
+@media(max-width: 768px){  
+    .searchBar {width: 30px; background-color: transparent;}
+    .searchBar span {display: none;}
+    .searchBar svg {display: block; fill: #2a2a2a;}
+}
+@media(min-width: 768px){  
+    .searchBar {width: 100px; background-color: #ccc; }
+    .searchBar span {width: 100px;}
+    .searchBar svg {display: none;}
+}
+
+
 #linkFAQlist li {
     display: flex;
     flex-direction: row;
     align-self: flex-start;
     border-radius: 0;
-
-  transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 #linkFAQlist li:hover {
     display: flex;
     flex-direction: row;
     background-color: #fff;
     translate: -15px 0px;
-        padding-left: 15px;
+    padding-left: 15px;
     padding-right: 40px;
     border-radius: 50px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -606,8 +658,8 @@ margin-bottom: 20px;
 
 #linkFAQlist li:hover .linkHide {
   transform: scale(1);
-width: 30px;
-margin: 0 5px;
+    width: 30px;
+    margin: 0 5px;
 }
 
 #linkFAQlist li .copyHide {
@@ -928,6 +980,9 @@ display: none;
 }
 .accordionFAQbody ol li:first-child, .accordionFAQbody ul li:first-child {
     padding-top: 14px;
+}
+.accordionFAQbody.Inset ul li:first-child {
+    padding-top: 0px;
 }
     @media(max-width: 549px){  
     .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 14px; padding-top: 4px;}}
