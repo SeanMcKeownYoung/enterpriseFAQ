@@ -1,5 +1,6 @@
 /* ONLINE NEWSPAPER CSS ADDITIONS FOR FAQ PAGE */
-
+/* Outlines the grids, remove when sending
+div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 /* BASE LEVEL STYLES */
 body {
     scroll-behavior: smooth !important;
@@ -535,6 +536,12 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     @media(min-width: 1280px) {  
     .accordionFAQbutton {font-size: 26px;}}
 
+.accordionFAQbody svg {
+    transform-origin: center; 
+    clip-path: circle(50%);
+    border-radius: 50%;
+}   
+
 
 .faqDropMenuContainer {
 margin-bottom: 20px;
@@ -546,13 +553,15 @@ margin-bottom: 20px;
   width: 50%;
   margin: 10px 0 0 0;
   padding-top: 10px;
-  border-bottom: 1px solid #2a2a2a; /* Change color and thickness here */
+  border-bottom: 1px solid #2a2a2a; 
 }
+
 .faqDropMenu div {
     display: flex;
     list-style: none;
     padding: 10px 0;
 }
+
 .faqDropMenu.Glossary div {
     display: flex;
     list-style: none;
@@ -561,7 +570,7 @@ margin-bottom: 20px;
 
 .faqDropMenu.Glossary div svg {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transform-origin: center; /* Crucial for SVG transforms */
+  transform-origin: center; 
 }
 
 .faqDropMenu.Glossary div svg:hover {
@@ -570,7 +579,78 @@ margin-bottom: 20px;
 }
 
 
+.accordionFAQbody.Inset div {
+    padding: 0 0 10px 0 !important;
+}
 
+.accordionFAQbody.Inset ul {
+    list-style: none;
+    padding-left: 0 !important;
+}
+
+.accordionFAQbody.Inset ul li {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.accordionFAQbody.Inset ul li div {
+
+}
+.narrowerHR {
+    width: 70%;
+}
+
+.accordionFAQbody.Inset ul li div svg {
+    fill:#5c5b5b;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center; 
+}
+.accordionFAQbody.Inset ul li div svg:hover {
+    fill:#2a2a2a !important;
+    transform: scale(1.68);
+    transition: all 0.15s ease-in-out;
+}
+
+
+#linkFAQlist li {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+}
+#linkFAQlist li:hover {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    translate: -15px 0px;
+    padding-left: 15px;
+    padding-right: 40px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+#linkFAQlist li .linkHide {
+  transform-origin: center; 
+  transform: scale(0);
+  width: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#linkFAQlist li:hover .linkHide {
+  transform: scale(1);
+    width: 30px;
+    margin: 0 5px;
+}
+
+#linkFAQlist li .copyHide {
+display: none;
+}
+
+#linkFAQlist li:hover .copyHide {
+    display: inline;
+}
 
 .faqDropMenu div .dropdownFAQitem {
     display: flex;
@@ -832,20 +912,44 @@ margin-bottom: 20px;
 }
 .accordionFAQbody .faqULinner {
   list-style: none;
-    padding-left: 0; 
+    padding: 10px 0 0 0; 
     display: flex; 
     flex-direction: column;
     justify-content: flex-start; 
 }
-.accordionFAQbody .faqULinner span {
-    color: #2A2A2A;
+
+.accordionFAQbody .faqULinner li span {
+    color: #5c5b5b;
     text-decoration: none;
     margin-left: 4px;
 }
+
 .accordionFAQbody .faqULinner li {
     border: 0 !important;
     margin: 0 !important;
+    padding: 10px 0;
 }
+
+.accordionFAQbody .faqULinner li svg {
+    fill: #5c5b5b;
+}
+
+.accordionFAQbody .faqULinner:hover li span {
+    color: #a2a2a2;
+}
+
+.accordionFAQbody .faqULinner:hover li svg {
+    fill: #a2a2a2;
+}
+
+.accordionFAQbody .faqULinner li:hover span {
+    color: #2a2a2a;
+}
+
+.accordionFAQbody .faqULinner li:hover svg {
+    fill: #2a2a2a;
+}
+
 
 .accordionFAQbody ol li::marker, .accordionFAQbody ul li::marker  {
   text-align: left;       
@@ -858,6 +962,9 @@ margin-bottom: 20px;
 }
 .accordionFAQbody ol li:first-child, .accordionFAQbody ul li:first-child {
     padding-top: 14px;
+}
+.accordionFAQbody.Inset ul li:first-child {
+    padding-top: 0px;
 }
     @media(max-width: 549px){  
     .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 14px; padding-top: 4px;}}
@@ -984,46 +1091,43 @@ margin-bottom: 20px;
     stroke: #2A2A2A;
 }
 
-
-
-
-.faqACCLinkContainer {
+.faqACCLinkContainWrap .faqACCLinkContainer {
     display: flex !important;
-    padding: 10px 0px 6px 0 !important;
+    padding: 0 !important;
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
-    border-top: 1px solid #c1c1c1;
 }
-.faqACCLinkContainer:first-of-type {
+.faqACCLinkContainWrap  {
     border: 0;
     margin-top: 10px;
 }
-.faqACCLinkContainer h4 {
+.faqACCLinkContainWrap .faqACCLinkContainer h4 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-right: 10px;
 }
 
-.faqACCLinkContainer h4 span {
+.faqACCLinkContainWrap .faqACCLinkContainer h4 span {
     margin-right: 10px;
-    color: #2a2a2a;
+    color: #5c5b5b;
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 600;
     font-size: 20px;
 }   
 
-.faqACCLinkContainer h4 svg {
+.faqACCLinkContainWrap .faqACCLinkContainer h4 svg {
     margin-right: 10px;
-    fill:#ff5e5e;
+    fill:#5c5b5b;
+    border: 2px solid #5c5b5b;
     background-color: #f8f5f0;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     clip-path: circle(50%);
 }   
 
-.faqACCLinkContainer .faqACCLinkWrapper {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1031,11 +1135,11 @@ margin-bottom: 20px;
     padding: 0 !important;
 } 
 
-.faqACCLinkContainer .faqACCLinkWrapper div {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper div {
     margin-right: 20px;
     display: inline;
 } 
-.faqACCLinkContainer .faqACCLinkWrapper a {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1043,10 +1147,10 @@ margin-bottom: 20px;
     border: 0 !important;
 }
 
-.faqACCLinkContainer .faqACCLinkWrapper a svg {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a svg {
     fill:#f8f5f0;
-    background-image: radial-gradient(circle, #2A2A2A 60%, #f8f5f0 70%);
-    border: 2px solid #2a2a2a;
+    background-image: radial-gradient(circle, #5c5b5b 60%, #f8f5f0 70%);
+    border: 2px solid #5c5b5b;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -1054,9 +1158,9 @@ margin-bottom: 20px;
     transition: all 0.15s ease-in-out;
 }
 
-.faqACCLinkContainer .faqACCLinkWrapper a span {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {
     margin-left: 10px;
-    color: #2a2a2a;
+    color: #5c5b5b;
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 500;
     letter-spacing:0;
@@ -1064,10 +1168,10 @@ margin-bottom: 20px;
     font-size: 18px;
 }
 
-.faqACCLinkContainer .faqACCLinkWrapper a:hover svg {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a:hover svg {
     fill:#2a2a2a;
     background-image: radial-gradient(circle, #f8f5f0 60%, #2A2A2A 70%);
-    border: 2px solid #2a2a2a;
+    border: 2px solid #5c5b5b;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -1075,34 +1179,29 @@ margin-bottom: 20px;
     transition: all 0.15s ease-in-out;
 }
 
-.faqACCLinkContainer .faqACCLinkWrapper:hover a {
+.faqACCLinkContainWrap:hover .faqACCLinkContainer {
     opacity: 50%;
-}
-.faqACCLinkContainer .faqACCLinkWrapper a:hover {
-    opacity: 100%;
-}
+}   
+.faqACCLinkContainWrap .faqACCLinkContainer:hover {
+    opacity: 1;
+}   
 
 /* X-Small */ @media(max-width: 549px){  
-    .faqACCLinkContainer h4 span {font-size: 12px;}   
-    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}
-    .faqACCLinkContainer h4 svg {width: 0px; height: 0px; display: none;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 12px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 svg {width: 0px; height: 0px; display: none;}}
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
-    .faqACCLinkContainer h4 span {font-size: 16px;}   
-    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}
-    .faqACCLinkContainer h4 svg {width: 30px; height: 30px;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 16px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}}
 /* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
-    .faqACCLinkContainer h4 span {font-size: 16px;}   
-    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 14px;}
-    .faqACCLinkContainer h4 svg {width: 45px; height: 45px;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 16px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 14px;}}
 /* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
-    .faqACCLinkContainer h4 span {font-size: 18px;}   
-    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 16px;}
-    .faqACCLinkContainer h4 svg {width: 34px; height: 34px;border: 2px solid #ff5e5e;
-    border-radius: 50%;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 18px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 16px;}}
 /* X-Large */ @media(min-width: 1280px) {  
-    .faqACCLinkContainer h4 span {font-size: 20px;}   
-    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 18px;}
-    .faqACCLinkContainer h4 svg {width: 45px; height: 45px;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 20px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 18px;}}
 
 
 
@@ -1249,14 +1348,14 @@ position: absolute;
 }
 
 .sectionFAQImg div {
-    height: auto; /* Set your desired height */
+    height: auto; 
 }
 
 .sectionFAQImg div img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Forces the image to fill the container and crop */
-    object-position: left top; /* Optional: Centers the crop area (default) */
+    object-fit: cover;
+    object-position: left top; 
     filter: drop-shadow(-30px 10px 14px #1414145f);
     transition: all 0.2s ease;
 }
@@ -1268,7 +1367,7 @@ position: absolute;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 620px;  /* Set your desired width */
+    width: 620px; 
 }
 .sectionFAQImg div img {
     translate: 96px 30px; 
@@ -1282,7 +1381,7 @@ position: absolute;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 700px;  /* Set your desired width */
+    width: 700px; 
 }
 .sectionFAQImg div img {
     translate: 30px -30px; 
@@ -1296,7 +1395,7 @@ position: absolute;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 900px;  /* Set your desired width */
+    width: 900px; 
 }
 .sectionFAQImg div img {
     translate: 0 -20%; 
@@ -1310,7 +1409,7 @@ position: absolute;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 1024px;  /* Set your desired width */
+    width: 1024px;  
 }
 .sectionFAQImg div img {
     translate: 40% -80px; 
@@ -1324,7 +1423,7 @@ position: absolute;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 1080px;  /* Set your desired width */
+    width: 1080px; 
 }
 .sectionFAQImg div img {
     translate: 40% -100px; 
@@ -1549,7 +1648,7 @@ position: absolute;
     display: flex;  
     justify-content: start; 
     align-items: left;    
-    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-fit: cover;
     object-position: top;
     margin-bottom: 1.4rem !important;
 }
@@ -1583,7 +1682,7 @@ position: absolute;
     display: flex;  
     justify-content: start; 
     align-items: left;    
-    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-fit: cover; 
     object-position: top;
     margin-bottom: 1.4rem !important;
 }
@@ -1699,7 +1798,7 @@ position: absolute;
 
 .faqAssets div a svg {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transform-origin: center; /* Crucial for SVG transforms */
+  transform-origin: center; 
 }
 
 .faqAssets div a:hover svg {
@@ -1888,7 +1987,6 @@ position: absolute;
     .faqStatic:last-child {grid-column: span 4 / span 4;}      
 }
 
-/* Horizontal Row Settings */
 .cardFAQcontainerH {
   display: flex;
   gap: 15px;
@@ -1898,7 +1996,6 @@ position: absolute;
   margin: 15px 0 40px 0;
 }
 
-/* Vertical Row Settings */
 .cardFAQcontainerV {
   display: flex;
   flex-direction: column;
@@ -1909,10 +2006,9 @@ position: absolute;
   margin: 15px 0 40px 0;
 }
 
-/* Individual Card Defaults */
 .toggleFAQcard {
     display: flex;
-  flex: 1; /* Equal initial widths */
+  flex: 1; 
   background-color: #b6b4b4;
   border-radius: 16px;
   color: #ece9e1;
@@ -1927,22 +2023,22 @@ position: absolute;
   background-color: #888888;
 }
 
-/* Expanded Card Width State */
+
 .cardFAQcontainerH .toggleFAQcard.active {
-  flex: 3; /* Expands to three times the base size */
+  flex: 3; 
   background-color: #92ff5c;
   color: #2a2a2a;
 }
-/* Expanded Card Height State */
+
 .cardFAQcontainerV .toggleFAQcard.active {
-  flex: 3; /* Expands to three times the base size */
+  flex: 3; 
   background-color: #92ff5c;
   color: #2a2a2a;
 }
 .cardFAQcontainerV .toggleFAQcard .toggleImgcontainer {
-  width: 100%;       /* Set your desired container width */
-  height: 33%;     /* Set your desired container height */
-  overflow: hidden;  /* Prevents any potential visual leaks */
+  width: 100%; 
+  height: 33%;   
+  overflow: hidden; 
   margin-top: auto;
   transform: translateY(100px);
   opacity: 0;
@@ -1963,8 +2059,8 @@ display: block;
 .cardFAQcontainerV .toggleImgcontainer img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* Crops the image to fill the div without stretching */
-  object-position: bottom; /* Aligns the image to the bottom, cropping the top */
+  object-fit: cover;     
+  object-position: bottom; 
 }
 
 
@@ -2034,15 +2130,42 @@ box-shadow: 2px 2px 14px 4px rgba(0,0,0,0.20);
   color: #fff;
 }
 
+.cardFAQcontent p svg {
+    fill:#ece9e1;
+    float:left; 
+    margin-right:8px;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px #ece9e1;
+    border: 1.5px solid #ece9e1;
+}
 
-/* Hide descriptions inside collapsed cards */
+.cardFAQcontent p svg {
+    fill:#ece9e1;
+    float:left; 
+    margin-right:8px;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px #ece9e1;
+    border: 1.5px solid #ece9e1;
+}
+
+.cardFAQcontent p svg {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center; 
+}
+
+.cardFAQcontent p svg:hover {
+  transform: scale(1.68);
+  margin-right: 10px;
+}
+
 .cardFAQcontent p {
   opacity: 0;
   transform: translateY(200px);
   transition: opacity 0.3s ease, transform 0.4s ease;
 }
 
-/* Fade in description text after card expands */
 .toggleFAQcard.active .cardFAQcontent p {
   opacity: 1;
   transform: translateY(0px);
@@ -2084,3 +2207,106 @@ transform: translateY(10px);
         .cardFAQcontent h2 {font-size: 34px;}
         .cardFAQcontent h3 {font-size: 22px;}
         .cardFAQcontent p {font-size: 22px;}}
+
+
+
+
+/* MODAL */
+
+
+.openFAQbtn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Modal Overlay (Hidden by Default) */
+.modalFAQoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  
+  /* Hide properties */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Transparent backdrop link to close when clicking outside */
+.modalFAQbackdrop-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+/* Modal Box Container */
+.modalFAQbox {
+  position: relative;
+  background-color: #fff;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  
+  /* Animation scale effect */
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+/* Close Button (X) */
+.closeFAQbtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #333;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.closeFAQbtn:hover {
+  color: #ff0000;
+}
+
+/* Responsive iframe container wrapper */
+.iframeFAQcontainer {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  margin-top: 20px;
+}
+
+.iframeFAQcontainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* The Secret Sauce: Triggered when the anchor link matches #iframeFAQmodal */
+.modalFAQoverlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modalFAQoverlay:target .modalFAQbox {
+  transform: scale(1);
+}
