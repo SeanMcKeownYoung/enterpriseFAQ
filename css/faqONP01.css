@@ -553,7 +553,7 @@ margin-bottom: 20px;
   width: 50%;
   margin: 10px 0 0 0;
   padding-top: 10px;
-  border-bottom: 1px solid #2a2a2a; /* Change color and thickness here */
+  border-bottom: 1px solid #2a2a2a; 
 }
 
 .faqDropMenu div {
@@ -570,7 +570,7 @@ margin-bottom: 20px;
 
 .faqDropMenu.Glossary div svg {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transform-origin: center; /* Crucial for SVG transforms */
+  transform-origin: center; 
 }
 
 .faqDropMenu.Glossary div svg:hover {
@@ -578,14 +578,27 @@ margin-bottom: 20px;
   margin-right: 10px;
 }
 
-
 #linkFAQlist li {
     display: flex;
     flex-direction: row;
-}
+    align-self: flex-start;
+    border-radius: 0;
 
+  transition: all 0.3s ease-in-out;
+}
+#linkFAQlist li:hover {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    translate: -15px 0px;
+        padding-left: 15px;
+    padding-right: 40px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
 #linkFAQlist li .linkHide {
-  transform-origin: center; /* Crucial for SVG transforms */
+  transform-origin: center; 
   transform: scale(0);
   width: 0;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -597,8 +610,13 @@ width: 30px;
 margin: 0 5px;
 }
 
+#linkFAQlist li .copyHide {
+display: none;
+}
 
-
+#linkFAQlist li:hover .copyHide {
+    display: inline;
+}
 
 .faqDropMenu div .dropdownFAQitem {
     display: flex;
@@ -1293,14 +1311,14 @@ position: absolute;
 }
 
 .sectionFAQImg div {
-    height: auto; /* Set your desired height */
+    height: auto; 
 }
 
 .sectionFAQImg div img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Forces the image to fill the container and crop */
-    object-position: left top; /* Optional: Centers the crop area (default) */
+    object-fit: cover;
+    object-position: left top; 
     filter: drop-shadow(-30px 10px 14px #1414145f);
     transition: all 0.2s ease;
 }
@@ -1312,7 +1330,7 @@ position: absolute;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 620px;  /* Set your desired width */
+    width: 620px; 
 }
 .sectionFAQImg div img {
     translate: 96px 30px; 
@@ -1326,7 +1344,7 @@ position: absolute;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 700px;  /* Set your desired width */
+    width: 700px; 
 }
 .sectionFAQImg div img {
     translate: 30px -30px; 
@@ -1340,7 +1358,7 @@ position: absolute;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 900px;  /* Set your desired width */
+    width: 900px; 
 }
 .sectionFAQImg div img {
     translate: 0 -20%; 
@@ -1354,7 +1372,7 @@ position: absolute;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 1024px;  /* Set your desired width */
+    width: 1024px;  
 }
 .sectionFAQImg div img {
     translate: 40% -80px; 
@@ -1368,7 +1386,7 @@ position: absolute;
     align-items: flex-start;
 }
 .sectionFAQImg div {
-    width: 1080px;  /* Set your desired width */
+    width: 1080px; 
 }
 .sectionFAQImg div img {
     translate: 40% -100px; 
@@ -1593,7 +1611,7 @@ position: absolute;
     display: flex;  
     justify-content: start; 
     align-items: left;    
-    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-fit: cover;
     object-position: top;
     margin-bottom: 1.4rem !important;
 }
@@ -1627,7 +1645,7 @@ position: absolute;
     display: flex;  
     justify-content: start; 
     align-items: left;    
-    object-fit: cover; /* Scales image while maintaining aspect ratio */
+    object-fit: cover; 
     object-position: top;
     margin-bottom: 1.4rem !important;
 }
@@ -1743,7 +1761,7 @@ position: absolute;
 
 .faqAssets div a svg {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transform-origin: center; /* Crucial for SVG transforms */
+  transform-origin: center; 
 }
 
 .faqAssets div a:hover svg {
@@ -1932,7 +1950,6 @@ position: absolute;
     .faqStatic:last-child {grid-column: span 4 / span 4;}      
 }
 
-/* Horizontal Row Settings */
 .cardFAQcontainerH {
   display: flex;
   gap: 15px;
@@ -1942,7 +1959,6 @@ position: absolute;
   margin: 15px 0 40px 0;
 }
 
-/* Vertical Row Settings */
 .cardFAQcontainerV {
   display: flex;
   flex-direction: column;
@@ -1953,10 +1969,9 @@ position: absolute;
   margin: 15px 0 40px 0;
 }
 
-/* Individual Card Defaults */
 .toggleFAQcard {
     display: flex;
-  flex: 1; /* Equal initial widths */
+  flex: 1; 
   background-color: #b6b4b4;
   border-radius: 16px;
   color: #ece9e1;
@@ -1971,22 +1986,22 @@ position: absolute;
   background-color: #888888;
 }
 
-/* Expanded Card Width State */
+
 .cardFAQcontainerH .toggleFAQcard.active {
-  flex: 3; /* Expands to three times the base size */
+  flex: 3; 
   background-color: #92ff5c;
   color: #2a2a2a;
 }
-/* Expanded Card Height State */
+
 .cardFAQcontainerV .toggleFAQcard.active {
-  flex: 3; /* Expands to three times the base size */
+  flex: 3; 
   background-color: #92ff5c;
   color: #2a2a2a;
 }
 .cardFAQcontainerV .toggleFAQcard .toggleImgcontainer {
-  width: 100%;       /* Set your desired container width */
-  height: 33%;     /* Set your desired container height */
-  overflow: hidden;  /* Prevents any potential visual leaks */
+  width: 100%; 
+  height: 33%;   
+  overflow: hidden; 
   margin-top: auto;
   transform: translateY(100px);
   opacity: 0;
@@ -2007,8 +2022,8 @@ display: block;
 .cardFAQcontainerV .toggleImgcontainer img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* Crops the image to fill the div without stretching */
-  object-position: bottom; /* Aligns the image to the bottom, cropping the top */
+  object-fit: cover;     
+  object-position: bottom; 
 }
 
 
@@ -2108,16 +2123,12 @@ box-shadow: 2px 2px 14px 4px rgba(0,0,0,0.20);
   margin-right: 10px;
 }
 
-
-
-/* Hide descriptions inside collapsed cards */
 .cardFAQcontent p {
   opacity: 0;
   transform: translateY(200px);
   transition: opacity 0.3s ease, transform 0.4s ease;
 }
 
-/* Fade in description text after card expands */
 .toggleFAQcard.active .cardFAQcontent p {
   opacity: 1;
   transform: translateY(0px);
