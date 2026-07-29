@@ -1015,43 +1015,43 @@ margin-bottom: 20px;
     stroke: #2A2A2A;
 }
 
-.faqACCLinkContainer {
+.faqACCLinkContainWrap .faqACCLinkContainer {
     display: flex !important;
-    padding: 10px 0px 6px 0 !important;
+    padding: 0 !important;
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
-    border-top: 1px solid #c1c1c1;
 }
-.faqACCLinkContainer:first-of-type {
+.faqACCLinkContainWrap  {
     border: 0;
     margin-top: 10px;
 }
-.faqACCLinkContainer h4 {
+.faqACCLinkContainWrap .faqACCLinkContainer h4 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-right: 10px;
 }
 
-.faqACCLinkContainer h4 span {
+.faqACCLinkContainWrap .faqACCLinkContainer h4 span {
     margin-right: 10px;
-    color: #2a2a2a;
+    color: #5c5b5b;
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 600;
     font-size: 20px;
 }   
 
-.faqACCLinkContainer h4 svg {
+.faqACCLinkContainWrap .faqACCLinkContainer h4 svg {
     margin-right: 10px;
-    fill:#ff5e5e;
+    fill:#5c5b5b;
+    border: 2px solid #5c5b5b;
     background-color: #f8f5f0;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     clip-path: circle(50%);
 }   
 
-.faqACCLinkContainer .faqACCLinkWrapper {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1059,11 +1059,11 @@ margin-bottom: 20px;
     padding: 0 !important;
 } 
 
-.faqACCLinkContainer .faqACCLinkWrapper div {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper div {
     margin-right: 20px;
     display: inline;
 } 
-.faqACCLinkContainer .faqACCLinkWrapper a {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1071,10 +1071,10 @@ margin-bottom: 20px;
     border: 0 !important;
 }
 
-.faqACCLinkContainer .faqACCLinkWrapper a svg {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a svg {
     fill:#f8f5f0;
-    background-image: radial-gradient(circle, #2A2A2A 60%, #f8f5f0 70%);
-    border: 2px solid #2a2a2a;
+    background-image: radial-gradient(circle, #5c5b5b 60%, #f8f5f0 70%);
+    border: 2px solid #5c5b5b;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -1082,9 +1082,9 @@ margin-bottom: 20px;
     transition: all 0.15s ease-in-out;
 }
 
-.faqACCLinkContainer .faqACCLinkWrapper a span {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {
     margin-left: 10px;
-    color: #2a2a2a;
+    color: #5c5b5b;
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 500;
     letter-spacing:0;
@@ -1092,10 +1092,10 @@ margin-bottom: 20px;
     font-size: 18px;
 }
 
-.faqACCLinkContainer .faqACCLinkWrapper a:hover svg {
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a:hover svg {
     fill:#2a2a2a;
     background-image: radial-gradient(circle, #f8f5f0 60%, #2A2A2A 70%);
-    border: 2px solid #2a2a2a;
+    border: 2px solid #5c5b5b;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -1103,34 +1103,29 @@ margin-bottom: 20px;
     transition: all 0.15s ease-in-out;
 }
 
-.faqACCLinkContainer .faqACCLinkWrapper:hover a {
+.faqACCLinkContainWrap:hover .faqACCLinkContainer {
     opacity: 50%;
-}
-.faqACCLinkContainer .faqACCLinkWrapper a:hover {
-    opacity: 100%;
-}
+}   
+.faqACCLinkContainWrap .faqACCLinkContainer:hover {
+    opacity: 1;
+}   
 
 /* X-Small */ @media(max-width: 549px){  
-    .faqACCLinkContainer h4 span {font-size: 12px;}   
-    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}
-    .faqACCLinkContainer h4 svg {width: 0px; height: 0px; display: none;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 12px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 svg {width: 0px; height: 0px; display: none;}}
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
-    .faqACCLinkContainer h4 span {font-size: 16px;}   
-    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}
-    .faqACCLinkContainer h4 svg {width: 30px; height: 30px;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 16px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}}
 /* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
-    .faqACCLinkContainer h4 span {font-size: 16px;}   
-    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 14px;}
-    .faqACCLinkContainer h4 svg {width: 45px; height: 45px;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 16px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 14px;}}
 /* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
-    .faqACCLinkContainer h4 span {font-size: 18px;}   
-    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 16px;}
-    .faqACCLinkContainer h4 svg {width: 34px; height: 34px;border: 2px solid #ff5e5e;
-    border-radius: 50%;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 18px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 16px;}}
 /* X-Large */ @media(min-width: 1280px) {  
-    .faqACCLinkContainer h4 span {font-size: 20px;}   
-    .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 18px;}
-    .faqACCLinkContainer h4 svg {width: 45px; height: 45px;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 20px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 18px;}}
 
 
 
