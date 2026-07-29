@@ -53,31 +53,6 @@ window.addEventListener('scroll', () => {
 
 
 
-// MAGNIFYING GLASS 2 //
-
-window.addEventListener('scroll', function() {
-  // Get how much the user scrolled
-  let scrollTop = window.scrollY;
-  
-  // Get total scrollable height
-  let docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  
-  // Get scroll progress as a decimal (0 to 1)
-  let scrollPercent = scrollTop / docHeight;
-  
-  // Choose maximum percentage to move up (e.g., 50%)
-  let moveUpPercent = scrollPercent * 840;
-  
-  // Choose maximum percentage to move up (e.g., 50%)
-  let moveUpDegrees = scrollPercent * 140;
-
-  // Select the div and move it up
-  let myDiv = document.getElementById('sectionFAQImg');
-  myDiv.style.transform = 'translateY(-' + moveUpPercent + '%) rotate(' + moveUpDegrees + 'deg)';
-});
-
-
-
 // BREADCRUMBS SCROLL DOWN //
 
     // Select the faqNavBar element
