@@ -1,4 +1,8 @@
 
+
+
+
+
  // Target all toggle cards in the document
 const cards = document.querySelectorAll('.toggleFAQcard');
 
@@ -146,3 +150,30 @@ window.addEventListener('scroll', () => {
 });
 
 
+const modal = document.getElementById('iframeModal');
+const iframe = document.getElementById('modalIframe');
+const openBtn = document.getElementById('openModalBtn');
+const closeBtn = document.getElementById('closeModalBtn');
+
+// The specific URL you want to embed inside the modal
+const targetUrl = 'https://example.com'; 
+
+// Opens the modal window
+openBtn.addEventListener('click', () => {
+  iframe.src = targetUrl; // Delays content loading until click
+  modal.showModal(); // Standard HTML dialog open method
+});
+
+// Closes the modal window
+closeBtn.addEventListener('click', () => {
+  modal.close(); // Standard HTML dialog close method
+  iframe.src = ''; // Stops processing the page instantly
+});
+
+// Closes modal if clicking the backdrop overlay area
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.close();
+    iframe.src = '';
+  }
+});

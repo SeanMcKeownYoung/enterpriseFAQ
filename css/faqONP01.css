@@ -611,24 +611,6 @@ margin-bottom: 20px;
     transform: scale(1.68);
     transition: all 0.15s ease-in-out;
 }
-.searchBar {
-    height: 30px; 
-    text-align: center; 
-    border-radius: 15px;
-    display: inline;
-    margin-bottom: -20px;
-}
-
-@media(max-width: 768px){  
-    .searchBar {width: 30px; background-color: transparent;}
-    .searchBar span {display: none;}
-    .searchBar svg {display: block; fill: #2a2a2a;}
-}
-@media(min-width: 768px){  
-    .searchBar {width: 100px; background-color: #ccc; }
-    .searchBar span {width: 100px;}
-    .searchBar svg {display: none;}
-}
 
 
 #linkFAQlist li {
@@ -2225,3 +2207,106 @@ transform: translateY(10px);
         .cardFAQcontent h2 {font-size: 34px;}
         .cardFAQcontent h3 {font-size: 22px;}
         .cardFAQcontent p {font-size: 22px;}}
+
+
+
+
+/* MODAL */
+
+
+.openFAQbtn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Modal Overlay (Hidden by Default) */
+.modalFAQoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  
+  /* Hide properties */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Transparent backdrop link to close when clicking outside */
+.modalFAQbackdrop-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+/* Modal Box Container */
+.modalFAQbox {
+  position: relative;
+  background-color: #fff;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  
+  /* Animation scale effect */
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+/* Close Button (X) */
+.closeFAQbtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #333;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.closeFAQbtn:hover {
+  color: #ff0000;
+}
+
+/* Responsive iframe container wrapper */
+.iframeFAQcontainer {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  margin-top: 20px;
+}
+
+.iframeFAQcontainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* The Secret Sauce: Triggered when the anchor link matches #iframeFAQmodal */
+.modalFAQoverlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modalFAQoverlay:target .modalFAQbox {
+  transform: scale(1);
+}
