@@ -5505,8 +5505,18 @@
   const NAME$3 = 'popover';
   const SELECTOR_TITLE = '.popover-header';
   const SELECTOR_CONTENT = '.popover-body';
- 
-
+  const Default$2 = {
+    ...Tooltip.Default,
+    content: '',
+    offset: [0, 8],
+    placement: 'right',
+    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>',
+    trigger: 'click'
+  };
+  const DefaultType$2 = {
+    ...Tooltip.DefaultType,
+    content: '(null|string|element|function)'
+  };
 
   /**
    * Class definition
@@ -6085,10 +6095,6 @@
       Tab.getOrCreateInstance(element);
     }
   });
-
-
-
-  
   /**
    * jQuery
    */
@@ -6303,4 +6309,12 @@
   return index_umd;
 
 }));
+//# sourceMappingURL=bootstrap.bundle.js.map
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 
+// Fallback to instantly scroll to top on load/reload
+window.onload = function () {
+  window.scrollTo(0, 0);
+};

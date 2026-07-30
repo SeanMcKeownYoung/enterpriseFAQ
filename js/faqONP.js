@@ -1,8 +1,63 @@
+document.addEventListener('click', function (event) {
+// ACCORDIAN CLOSE ALL OTHER ON PAGE //
+  
+  // Replace '#myAccordion' with the actual ID of your Bootstrap accordion container
+  const accordionContainer01 = document.querySelector('#accordianFAQtrack01');
 
+  // Check if the click happened outside of the accordion container
+  const isClickInside = accordionContainer01.contains(event.target);
 
+  if (!isClickInside) {
+    // Find all active/expanded collapse elements within this accordion
+    const openPanels = accordionContainer01.querySelectorAll('.collapse.show');
+    
+    openPanels.forEach(panel => {
+      // Get or create the Bootstrap Collapse instance for the panel
+      const collapseInstance = bootstrap.Collapse.getOrCreateInstance(panel);
+      // Programmatically hide the open panel
+      collapseInstance.hide();
+    });
+  }
+});
+document.addEventListener('click', function (event) {
+  const accordionContainer02 = document.querySelector('#accordianFAQtrack02');
+  const isClickInside = accordionContainer02.contains(event.target);
 
+  if (!isClickInside) {
+    const openPanels = accordionContainer02.querySelectorAll('.collapse.show');
+    
+    openPanels.forEach(panel => {
+      const collapseInstance = bootstrap.Collapse.getOrCreateInstance(panel);
+      collapseInstance.hide();
+    });
+  }
+});
+document.addEventListener('click', function (event) {
+  const accordionContainer03 = document.querySelector('#accordianFAQtrack03');
+  const isClickInside = accordionContainer03.contains(event.target);
 
+  if (!isClickInside) {
+    const openPanels = accordionContainer03.querySelectorAll('.collapse.show');
+    
+    openPanels.forEach(panel => {
+      const collapseInstance = bootstrap.Collapse.getOrCreateInstance(panel);
+      collapseInstance.hide();
+    });
+  }
+});
+document.addEventListener('click', function (event) {
+  const accordionContainer04 = document.querySelector('#accordianFAQtrack04');
+  const isClickInside = accordionContainer04.contains(event.target);
 
+  if (!isClickInside) {
+    const openPanels = accordionContainer04.querySelectorAll('.collapse.show');
+    
+    openPanels.forEach(panel => {
+      const collapseInstance = bootstrap.Collapse.getOrCreateInstance(panel);
+      collapseInstance.hide();
+    });
+  }
+});
 
  // DROP NAV BREADCRUMBS WHEN DOTCOM BRANDING COMES TO VIEW ON UP SCROLL //
  
