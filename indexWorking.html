@@ -657,7 +657,7 @@
 <!-- START ONLINE NEWSPAPER FAQ. -->   
 <!-- START ONLINE NEWSPAPER FAQ  -->  
 <!-- START ONLINE NEWSPAPER FAQ  Copy from here to line 2117 -->  
-    <link href="css/faqONP01.css" rel="stylesheet">
+    <link href="css/faqONP.css" rel="stylesheet">
     <link href="css/advancebootstrap.css" rel="stylesheet">
 <!-- ONLINE NP FAQ SVGS -->   
 <div style="display: none;"> 
@@ -902,9 +902,8 @@
       </div>
     </nav>
 
-
 <!-- ONLINE NP BODY 001-->  
-<section class="faqFillShaded faqBodyContainer" id="Register" style="padding-top: 30px">
+<section class="faqBodyContainer faqFillShaded " id="Register" style="padding-top: 30px">
     <div class="faqPageWrapper bodyGold"> 
         <div class="containerFAQbody">
             <div class="imageFAQbox">
@@ -917,7 +916,6 @@
                 <div class="textFAQtext">
                     <div class="m-0 border-0">
                         <div class="accordionFAQ" id="accordianFAQtrack01" >
-
                             <div class="accordionFAQitem firstAccordion">
                                 <h4 class="accordionFAQheader">
                                 <button
@@ -934,16 +932,33 @@
                                         </div>
                                         <div class="faqAssets">
                                             <div>
-                                                <a href="#iframeFAQmodal" aria-label="See Video How to"> <svg width="30" height="30" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg><span><strong>Video.</strong> How to.</span></a>
-                                                    <div id="iframeFAQmodal" class="modalFAQoverlay">
-                                                    <a href="#" class="modalFAQbackdrop-close"></a>
-                                                    <div class="modalFAQbox">
-                                                        <a href="#" class="closeFAQbtn">&times;</a>
-                                                        <div class="iframeFAQcontainer">
-                                                        <iframe src="https://example.com" frameborder="0" allowfullscreen></iframe>
+
+                                                    <!-- The Trigger Button -->
+                                                    <label for="modal-toggle" class="open-btn">
+                                                        <svg width="30" height="30" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                                        <span><strong>Video.</strong> How to.</span>
+                                                    </label>
+
+                                                    <!-- The Hidden Checkbox -->
+                                                    <input type="checkbox" id="modal-toggle" class="modal-state" />
+
+                                                    <!-- The Modal Backdrop and Content -->
+                                                    <div class="modal-overlay">
+                                                    <div class="modal-box">
+                                                        <div class="modalFAQheader">
+                                                            <h2>Modal Title</h2>
+                                                              <label for="modal-toggle" class="close-btn">&times</label>
                                                         </div>
+                                                        <div class="modalFAQbody">
+                                                            <p>Background scrolling is disabled while this is open.</p>
+                                                            <div class="iframeFAQcontainer">
+                                                            <iframe src="https://example.com" frameborder="0" allowfullscreen></iframe>
+                                                            </div>
+                                                        </div>
+  
                                                     </div>
                                                     </div>
+
                                             </div>
                                             <div>
                                                 <a href="https://example.com" aria-label="See Print How to" target="_blank"> <svg width="30" height="30" aria-hidden="true"><use xlink:href="#ICONSdownload"></use></svg><span><strong>Print.</strong> How to.</span></a>
@@ -952,7 +967,6 @@
                                     </div>
                                 </div>
                             </div>
-
 
                             <div class="accordionFAQitem">
                                 <h4 class="accordionFAQheader">
@@ -1053,10 +1067,8 @@
     </div>
 </section>
 
-
-
 <!-- ONLINE NP BODY 002-->  
-<section class="faqFillNone faqBodyContainer" id="Access">
+<section class="faqFillNone faqBodyContainer " id="Access">
     <div class="faqPageWrapper bodyRed" > 
         <div class="containerFAQbody">
             <div class="imageFAQbox">
@@ -1475,6 +1487,10 @@
     </div>
 </section>
 
+
+
+
+
 <!-- ONLINE NP BODY 003-->  
 <section class="faqFillShaded faqBodyContainer" id="Navigate">
     <div class="faqPageWrapper bodyGreen" > 
@@ -1489,8 +1505,6 @@
                 <div class="textFAQtext">
                     <div class="m-0 border-0">
                         <div class="accordionFAQ" id="accordianFAQtrack03" >
-
-
                             <div class="accordionFAQitem firstAccordion">
                                 <h4 class="accordionFAQheader">
                                 <button
@@ -1579,8 +1593,6 @@
                                                             <div>
                                                                 <div class="dropdownFAQitem" aria-label="Icon"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#ICONshare"></use></svg><span><strong>Share.</strong>&nbsp; Texttext. <i>&nbsp; Italics.</i></span></div>
                                                             </div>
-
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1858,10 +1870,8 @@
     </div>
 </section>
 
-
-
 <!-- ONLINE NP BODY 004-->  
-<section class="faqFillNone faqBodyContainer" id="Account">
+<section class="faqFillNone faqBodyContainer " id="Account">
     <div class="faqPageWrapper bodyViolet" > 
         <div class="containerFAQbody">
             <div class="imageFAQbox">
@@ -1871,7 +1881,6 @@
                 <div class="textFAQheader">
                 <h2 class="faqHeaderBig"><div class="headerUnderline" style="display: inline">How do I</div> manage my account?</h2>
                 </div>
-
                 <div class="textFAQtext">
                 <div class="m-0 border-0">
                     <div class="accordionFAQ" id="accordianFAQtrack04" >
@@ -1902,44 +1911,33 @@
                                                         <div>
                                                             <a class="dropdownFAQitem" href="https://myaccount.mlive.com/aa/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg><span><strong>The Ann Arbor News.</strong> myaccount.mlive.com/aa</span></a>
                                                         </div>
-
                                                         <div>
                                                             <a class="dropdownFAQitem" href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#BayCityTimesSolid"></use></svg><span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span></a>
                                                         </div>
-
                                                         <div>
                                                             <a class="dropdownFAQitem" href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#FlintJournalSolid"></use></svg><span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span></a>
                                                         </div>
-
                                                         <div>
                                                             <a class="dropdownFAQitem" href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#GrandRapidsPressSolid"></use></svg><span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span></a>
                                                         </div>
-
                                                         <div>
                                                             <a class="dropdownFAQitem" href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg><span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span></a>
                                                         </div>
-
                                                         <div>
                                                             <a class="dropdownFAQitem" href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#KalamazooGazetteSolid"></use></svg><span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span></a>
                                                         </div>
-
                                                         <div>
                                                             <a class="dropdownFAQitem" href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#MuskegonChronicleSolid"></use></svg><span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span></a>
                                                         </div>
-
                                                         <div>
                                                             <a class="dropdownFAQitem" href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#SaginawNewsSolid"></use></svg><span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span></a>
                                                         </div>
-                    
                                                         <hr class="faqHR"/>
-
                                                         <div>
                                                             <a class="dropdownFAQitem" href="https://myaccount.mlive.com/mi/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#MLiveSolid"></use></svg><span><strong>MLive.</strong>myaccount.mlive.com</span></a>
                                                         </div>
-
                                                 </div>
                                             </div>
-
                                         </div>
 
                                         <h4 class="accordionFAQheader">
@@ -1955,8 +1953,6 @@
                                                     <li>On your device, open the internet, (like Safari, Chrome, or Edge)</li>
                                                     <li>At the top of the screen, tap the long white bar </li>
                                                     <li>Type your myAccount page from the list below, or hover over the selection and then tap 'Copy.'</li>
-                                                
-
                                                 <ul class="faqULinner" id="linkFAQlist">
                                                     <li><a href="https://myaccount.mlive.com/aa/home" target="_blank"  aria-label="myaccount.mlive.com/aa/home">
                                                         <svg width="30" height="30" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
@@ -2022,15 +2018,11 @@
                                                     });
                                                 });
                                                 </script>
-                                                
                                                 <li style="padding-bottom: 10px;">Tap Go or Enter to open the page.</li>
-                                                
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="faqAssets">
                                     <div>
                                         <a href="https://example.com" aria-label="See Video How to" target="_blank"> <svg width="30" height="30" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg><span><strong>Video.</strong> How to.</span></a>
@@ -2261,37 +2253,28 @@
                                                     <div>
                                                         <a class="dropdownFAQitem" href="https://myaccount.mlive.com/aa/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg><span><strong>The Ann Arbor News.</strong> myaccount.mlive.com/aa</span></a>
                                                     </div>
-
                                                     <div>
                                                         <a class="dropdownFAQitem" href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#BayCityTimesSolid"></use></svg><span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span></a>
                                                     </div>
-
                                                     <div>
                                                         <a class="dropdownFAQitem" href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#FlintJournalSolid"></use></svg><span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span></a>
                                                     </div>
-
                                                     <div>
                                                         <a class="dropdownFAQitem" href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#GrandRapidsPressSolid"></use></svg><span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span></a>
                                                     </div>
-
                                                     <div>
                                                         <a class="dropdownFAQitem" href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg><span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span></a>
                                                     </div>
-
                                                     <div>
                                                         <a class="dropdownFAQitem" href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#KalamazooGazetteSolid"></use></svg><span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span></a>
                                                     </div>
-
                                                     <div>
                                                         <a class="dropdownFAQitem" href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#MuskegonChronicleSolid"></use></svg><span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span></a>
                                                     </div>
-
                                                     <div>
                                                         <a class="dropdownFAQitem" href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#SaginawNewsSolid"></use></svg><span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span></a>
                                                     </div>
-                
                                                     <hr class="faqHR"/>
-
                                                     <div>
                                                         <a class="dropdownFAQitem" href="https://myaccount.mlive.com/mi/home" target="_blank" aria-label="myAccount"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#MLiveSolid"></use></svg><span><strong>MLive.</strong>myaccount.mlive.com</span></a>
                                                     </div>
@@ -2340,7 +2323,6 @@
                             </div>
                         </div>
                     </div>
-
                     </div>
                 </div>
                 </div>
@@ -2348,11 +2330,11 @@
         </div>
     </div>
 </section>
-
+</div>
 
 
 <!-- ONLINE NP BODY 005 -->   
-<section class="faqFillShade faqFillContacts" id="Contacts" >
+<section class="faqFillContacts " id="Contacts" >
     <div class="faqPageWrapper bodyOrange">
         <div class="containerFAQbody">
           <div class="textFAQbox">

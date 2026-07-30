@@ -132,35 +132,35 @@ a[href^="tel"] {
 .navli06 {
     order: 6;
 }
-body:has(.navli02 .navFAQlink.active) .navli02 {order: 1;transition: all 0.2s ease-in-out !important;}
-body:has(.navli02 .navFAQlink.active) .navli03 {order: 3;transition: all 0.2s ease-in-out !important;}
-body:has(.navli02 .navFAQlink.active) .navli04 {order: 4;transition: all 0.2s ease-in-out !important;}
-body:has(.navli02 .navFAQlink.active) .navli05 {order: 5;transition: all 0.2s ease-in-out !important;}
-body:has(.navli02 .navFAQlink.active) .navli06 {order: 6;transition: all 0.2s ease-in-out !important;}
+body:has(.navli02 .navFAQlink.active) .navli02 {order: 2;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli02 .navFAQlink.active) .navli03 {order: 3;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli02 .navFAQlink.active) .navli04 {order: 4;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli02 .navFAQlink.active) .navli05 {order: 5;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli02 .navFAQlink.active) .navli06 {order: 6;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
 
-body:has(.navli03 .navFAQlink.active) .navli03 {order: 1;transition: all 0.2s ease-in-out !important;}
-body:has(.navli03 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ease-in-out !important;}
-body:has(.navli03 .navFAQlink.active) .navli04 {order: 4;transition: all 0.2s ease-in-out !important;}
-body:has(.navli03 .navFAQlink.active) .navli05 {order: 5;transition: all 0.2s ease-in-out !important;}
-body:has(.navli03 .navFAQlink.active) .navli06 {order: 6;transition: all 0.2s ease-in-out !important;}
+body:has(.navli03 .navFAQlink.active) .navli03 {order: 2;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli03 .navFAQlink.active) .navli04 {order: 3;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli03 .navFAQlink.active) .navli05 {order: 4;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli03 .navFAQlink.active) .navli06 {order: 5;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli03 .navFAQlink.active) .navli02 {order: 6;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
 
-body:has(.navli04 .navFAQlink.active) .navli04 {order: 1;transition: all 0.2s ease-in-out !important;}
-body:has(.navli04 .navFAQlink.active) .navli03 {order: 3;transition: all 0.2s ease-in-out !important;}
-body:has(.navli04 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ease-in-out !important;}
-body:has(.navli04 .navFAQlink.active) .navli05 {order: 5;transition: all 0.2s ease-in-out !important;}
-body:has(.navli04 .navFAQlink.active) .navli06 {order: 6;transition: all 0.2s ease-in-out !important;}
+body:has(.navli04 .navFAQlink.active) .navli04 {order: 2;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli04 .navFAQlink.active) .navli05 {order: 3;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli04 .navFAQlink.active) .navli06 {order: 4;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli04 .navFAQlink.active) .navli02 {order: 5;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli04 .navFAQlink.active) .navli03 {order: 6;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
 
-body:has(.navli05 .navFAQlink.active) .navli05 {order: 1;transition: all 0.2s ease-in-out !important;}
-body:has(.navli05 .navFAQlink.active) .navli03 {order: 3;transition: all 0.2s ease-in-out !important;}
-body:has(.navli05 .navFAQlink.active) .navli04 {order: 4;transition: all 0.2s ease-in-out !important;}
-body:has(.navli05 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ease-in-out !important;}
-body:has(.navli05 .navFAQlink.active) .navli06 {order: 6;transition: all 0.2s ease-in-out !important;}
+body:has(.navli05 .navFAQlink.active) .navli05 {order: 2;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli05 .navFAQlink.active) .navli05 {order: 3;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli05 .navFAQlink.active) .navli02 {order: 4;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli05 .navFAQlink.active) .navli03 {order: 5;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli05 .navFAQlink.active) .navli04 {order: 6;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
 
-body:has(.navli06 .navFAQlink.active) .navli06 {order: 1;transition: all 0.2s ease-in-out !important;}
-body:has(.navli06 .navFAQlink.active) .navli05 {order: 5;transition: all 0.2s ease-in-out !important;}
-body:has(.navli06 .navFAQlink.active) .navli04 {order: 4;transition: all 0.2s ease-in-out !important;}
-body:has(.navli06 .navFAQlink.active) .navli03 {order: 3;transition: all 0.2s ease-in-out !important;}
-body:has(.navli06 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ease-in-out !important;}
+body:has(.navli06 .navFAQlink.active) .navli06 {order: 2;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli06 .navFAQlink.active) .navli02 {order: 3;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli06 .navFAQlink.active) .navli03 {order: 4;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli06 .navFAQlink.active) .navli04 {order: 5;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
+body:has(.navli06 .navFAQlink.active) .navli05 {order: 6;transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);}
 
 
 #faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink {
@@ -225,12 +225,35 @@ body:has(.navli06 .navFAQlink.active) .navli02 {order: 2;transition: all 0.2s ea
     color: #ffffff;
     border-bottom: 1px solid #ffffff;  
 }
+
 #faqNavBar.bottom-sticky .navShadow {
-    -webkit-box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58); box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58);; 
+    -webkit-box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58); 
+    box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58); 
 }
 #faqNavBar.top-sticky .navShadow {
-    -webkit-box-shadow: 0px 19px 29px -4px rgba(0,0,0,0.52); box-shadow: 0px 19px 29px -4px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.32); 
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.32);
 }
+
+#faqNavBar .navShadow {
+    -webkit-box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58); 
+    box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58); 
+    animation: shadow-on-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 80%;
+}
+
+@keyframes shadow-on-scroll {
+  from {
+    -webkit-box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58); 
+    box-shadow: 0px 29px 34px -4px rgba(0,0,0,0.58); 
+  }
+  to {
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.32); 
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.32);
+  }
+}
+
 
 
 /* FAQ HERO AND SECTION STYLES */
@@ -1223,7 +1246,6 @@ display: none;
     transition: all 0.2s ease;
 }
 
-
 /* X-Small */ @media(max-width: 549px){  
 .sectionFAQmag {
     justify-content: center;
@@ -1292,6 +1314,36 @@ display: none;
     translate: 40% -100px; 
     transform: rotate(10deg);
 }
+}
+
+.sectionFAQImg div {
+    animation: mag-onscroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 130vh;
+}
+@keyframes mag-onscroll {
+  from {
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+  to {
+    transform: translateY(-200px) scale(1.86);
+    filter: blur(3px);
+  }
+}
+
+.sectionFAQImg div img {
+    animation: shado-onscroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 130vh;
+}
+@keyframes shado-onscroll {
+  from {
+    filter: drop-shadow(-30px 10px 14px #1414145f);
+  }
+  to {
+    filter: drop-shadow(-60px 100px 4px #14141493);
+  }
 }
 
 .faqHeroFull .faqPageWrapper {
@@ -1381,7 +1433,6 @@ display: none;
     .textFAQtext {
         margin-top: 130px;}
     }
-
 
 /* FAQ CONTACTS STYLES */
 .faqFillContacts {
@@ -1656,7 +1707,7 @@ display: none;
 
 .faqAssets div a:hover span, .faqAssets div a:hover svg {
     opacity: 1;
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .faqAssets div a svg {
@@ -1667,10 +1718,6 @@ display: none;
 .faqAssets div a:hover svg {
   transform: scale(1.18);
 }
-
-
-
-
 
 /* X-Small */ @media(max-width: 549px){
     .faqFillContacts .faqPageWrapper {max-width:100%;padding: 6% 2rem;}
@@ -1854,34 +1901,93 @@ display: none;
 /* MODAL */
 
 
-.openFAQbtn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+/* THE IMPROVED MODAL */
+/* 1. Freeze the background scroll without layout shift */
+html:has(.modal-state:checked) body {
+  overflow: hidden;
+  padding-right: var(--scrollbar-width, 0px); /* Prevents layout twitching */
 }
 
-/* Modal Overlay (Hidden by Default) */
-.modalFAQoverlay {
+/* 2. Hide the checkbox controller */
+.modal-state {
+  display: none;
+}
+
+/* 3. Backdrop Setup (Hidden by default) */
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Dim background */
-  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 9999;
   
-  /* Hide properties */
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+/* 4. Display modal when checkbox is checked */
+.modal-state:checked ~ .modal-overlay {
+  display: flex;
+}
+
+/* 5. Modal Box Styling */
+.modal-box {
+  background: white;
+  padding: 0 0 24px 24px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.modalFAQheader {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+.modalFAQheader h2 {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #2a2a2a;
+}
+ 
+.modalFAQbody {
+  padding-right: 24px;
+}
+
+/* 6. Basic Button UI */
+.open-btn {
+  display: inline-block;
+  cursor: pointer;
+}
+.close-btn {
+    width: 60px;
+    height: 60px;
+    padding-right: 24px;
+    font-size: 38px;
+    text-align: right;
+    color: #c3c3c3;
+    cursor: pointer;
+    margin: 0 !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.close-btn:hover {
+    color: #888888;
+}
+.iframeFAQcontainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+}
 /* Transparent backdrop link to close when clicking outside */
 .modalFAQbackdrop-close {
   position: absolute;
@@ -1891,38 +1997,6 @@ display: none;
   height: 100%;
   cursor: default;
 }
-
-/* Modal Box Container */
-.modalFAQbox {
-  position: relative;
-  background-color: #fff;
-  width: 80%;
-  max-width: 800px;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  z-index: 10000;
-  
-  /* Animation scale effect */
-  transform: scale(0.8);
-  transition: transform 0.3s ease;
-}
-
-/* Close Button (X) */
-.closeFAQbtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  color: #333;
-  text-decoration: none;
-  line-height: 1;
-}
-
-.closeFAQbtn:hover {
-  color: #ff0000;
-}
-
 /* Responsive iframe container wrapper */
 .iframeFAQcontainer {
   position: relative;
@@ -1930,60 +2004,4 @@ display: none;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   height: 0;
   margin-top: 20px;
-}
-
-.iframeFAQcontainer iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* The Secret Sauce: Triggered when the anchor link matches #iframeFAQmodal */
-.modalFAQoverlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.modalFAQoverlay:target .modalFAQbox {
-  transform: scale(1);
-}
-
-
-/* Structural spacer styles for scrolling testing */
-.spacer {
-  height: 100vh;
-  display: grid;
-  place-content: center;
-  background: #f4f4f4;
-  font-size: 1.5rem;
-}
-
-/* The element we want to reveal */
-.faqReveal {
-
-  
-  /* Link the keyframes to viewport scrolling entry/exit */
-  animation: reveal-on-scroll linear both;
-  animation-timeline: view();
-  
-  /* Restrict animation window: triggers when element enters 
-     the bottom 10% and exits when it reaches top 40% of viewport */
-  animation-range: entry 10% cover 40%;
-}
-
-/* Define the look of your transition */
-@keyframes reveal-on-scroll {
-  from {
-    opacity: 0;
-    transform: translateY(100px) scale(0.95);
-    filter: blur(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
 }
