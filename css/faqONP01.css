@@ -547,7 +547,16 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 margin-bottom: 20px;
 }
 
-
+.faqDropMenu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 1px;
+  background-color: #2a2a2a; 
+  margin: 10px 0 0 0;
+}
 
 .faqDropMenu div {
     display: flex;
@@ -2163,4 +2172,32 @@ transform: translateY(10px);
 
 .modalFAQoverlay:target .modalFAQbox {
   transform: scale(1);
+}
+
+
+/* The element we want to reveal */
+.faqReveal {
+
+  
+  /* Link the keyframes to viewport scrolling entry/exit */
+  animation: reveal-on-scroll linear both;
+  animation-timeline: view();
+  
+  /* Restrict animation window: triggers when element enters 
+     the bottom 10% and exits when it reaches top 40% of viewport */
+  animation-range: entry 10% cover 20%;
+}
+
+/* Define the look of your transition */
+@keyframes reveal-on-scroll {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.25);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
 }
