@@ -3,35 +3,6 @@
 
 
 
- // Target all toggle cards in the document
-const cards = document.querySelectorAll('.toggleFAQcard');
-
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    // Terminate early if the card is already expanded
-    if (card.classList.contains('active')) return;
-
-    // Remove active status from all other cards
-    cards.forEach(c => c.classList.remove('active'));
-
-    // Apply active status to the selected card
-    card.classList.add('active');
-  });
-});
-
-
-
-
-// Source - https://stackoverflow.com/a/77817374
-// Posted by Unmitigated
-// Retrieved 2026-07-25, License - CC BY-SA 4.0
-
-document.addEventListener('click', e => {
-  if (e.target.matches('button') && e.target.previousElementSibling?.matches('p'))
-    navigator.clipboard.writeText(e.target.previousElementSibling.textContent)
-      .then(() => console.log('copied text'), error => console.error('failed to copy', error));
-});
-
 
  // DROP NAV BREADCRUMBS WHEN DOTCOM BRANDING COMES TO VIEW ON UP SCROLL //
  
@@ -147,33 +118,4 @@ window.addEventListener('scroll', () => {
         faqNavBar.classList.remove('containerEnd');
         faqNavBar.classList.add('containerStart');
     }
-});
-
-
-const modal = document.getElementById('iframeModal');
-const iframe = document.getElementById('modalIframe');
-const openBtn = document.getElementById('openModalBtn');
-const closeBtn = document.getElementById('closeModalBtn');
-
-// The specific URL you want to embed inside the modal
-const targetUrl = 'https://example.com'; 
-
-// Opens the modal window
-openBtn.addEventListener('click', () => {
-  iframe.src = targetUrl; // Delays content loading until click
-  modal.showModal(); // Standard HTML dialog open method
-});
-
-// Closes the modal window
-closeBtn.addEventListener('click', () => {
-  modal.close(); // Standard HTML dialog close method
-  iframe.src = ''; // Stops processing the page instantly
-});
-
-// Closes modal if clicking the backdrop overlay area
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.close();
-    iframe.src = '';
-  }
 });

@@ -547,14 +547,7 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 margin-bottom: 20px;
 }
 
-.faqDropMenu::after {
-  content: '';
-  display: block;
-  width: 50%;
-  margin: 10px 0 0 0;
-  padding-top: 10px;
-  border-bottom: 1px solid #2a2a2a; 
-}
+
 
 .faqDropMenu div {
     display: flex;
@@ -577,30 +570,24 @@ margin-bottom: 20px;
   transform: scale(1.68);
   margin-right: 10px;
 }
-
-
 .accordionFAQbody.Inset div {
     padding: 0 0 10px 0 !important;
 }
-
 .accordionFAQbody.Inset ul {
     list-style: none;
     padding-left: 0 !important;
 }
-
 .accordionFAQbody.Inset ul li {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
-
 .accordionFAQbody.Inset ul li div {
 
 }
-.narrowerHR {
+.faqHR {
     width: 70%;
 }
-
 .accordionFAQbody.Inset ul li div svg {
     fill:#5c5b5b;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -611,7 +598,6 @@ margin-bottom: 20px;
     transform: scale(1.68);
     transition: all 0.15s ease-in-out;
 }
-
 
 #linkFAQlist li {
     display: flex;
@@ -637,13 +623,11 @@ margin-bottom: 20px;
   width: 0;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-
 #linkFAQlist li:hover .linkHide {
   transform: scale(1);
     width: 30px;
     margin: 0 5px;
 }
-
 #linkFAQlist li .copyHide {
 display: none;
 }
@@ -658,10 +642,6 @@ display: none;
 }
 .faqDropMenu div:first-child .dropdownFAQitem {
     padding-top: 10px;
-}
-
-.faqDropMenu hr {
-    width: 50%;
 }
 
 .faqDropMenu .dropdownFAQitem span {
@@ -732,12 +712,10 @@ display: none;
     clip-path:none;
     transition: all 0.15s ease-in-out;
 }
-
 .faqDropMenu div:hover .dropdownFAQitem span {
     color: #2a2a2a;
     transition: all 0.15s ease-in-out;
 }
-
 .faqDropMenu div:hover .dropdownFAQitem svg, .faqDropMenu div .dropdownFAQitem:hover svg {
     fill:#2a2a2a;
     outline: 2px solid #2a2a2a;
@@ -746,7 +724,6 @@ display: none;
     background-color: #f8f5f0 !important;
     transition: all 0.15s ease-in-out;
 }
-
 .faqListDrop button .faqListCarret {
     fill:none;
     stroke:#2A2A2A;
@@ -759,89 +736,12 @@ display: none;
 .accordionFAQbody:has(.dropdown-menu.show) .faqListCarret{
   transform: rotate(180deg);
 }
-
-
-.faqInputContainer .faqInput {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 !important;
-    width: 60%;
-}
-
-.faqInput span, .faqInput input {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    color: #5c5b5b;
-    transition: all 0.15s ease-in-out;
-
-}
-.faqInput input {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 500;
-    color: #5c5b5b;
-    flex: 1;
-    padding: 6px;
-    border: 1px solid #f8f5f0;
-    background-color: #f8f5f0;
-    border-right: none;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-    transition: all 0.15s ease-in-out;
-}
-.faqInputContainer .faqInput span {
-    margin-right: 10px;
-    font-weight: 600;
-}
-
-.faqInput button {
-    display: none;
-    translate: -10x 0px; 
-    margin-left: 0 !important;
-    color: #f8f5f0;
-    padding: 6px 12px;
-    border-left: none;
-    background-color: #ccc;
-    border: 1px solid #ccc;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    transition: all 0.25s ease-in-out;
-}
-
-.faqInputContainer .faqInput:hover span, .faqInputContainer .faqInput:hover input {
-    color: #181818;
-    transition: all 0.15s ease-in-out;
-}
-.faqInputContainer .faqInput:hover input {
-    border: 1px solid #2a2a2a;
-    background-color: #ffffff;
-    transition: all 0.15s ease-in-out;
-}
-
-.faqInputContainer .faqInput:hover button {
-    display: block;
-    color: #ffffff;
-    background-color: #2a2a2a;
-    border: 1px solid #181818;
-    transition: all 0.25s ease-in-out;
-}
-
-
-
-
-.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
-.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
-.input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control,
-.input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
 .accordionFAQ .accordianFAQancontainer {
     padding-top: 10px;
     padding-bottom: 26px;
     margin-bottom: 14px;
     position: relative;
 }
-
 .accordionFAQ .accordianFAQancontainer::after {
   content: "";
   position: absolute;
@@ -883,7 +783,6 @@ display: none;
 .accordionFAQbody strong {
     font-weight: 600;
 }
-
 .accordionFAQbody div {
     display: block;
     padding: 14px 0;
@@ -895,13 +794,11 @@ display: none;
     transition: none;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   .accordionFAQbutton::after {
     transition: none;
   }
 }
-
 .accordionFAQbody ol {
   list-style-position: outside; 
   padding-left: 4rem;    
@@ -917,40 +814,31 @@ display: none;
     flex-direction: column;
     justify-content: flex-start; 
 }
-
 .accordionFAQbody .faqULinner li span {
     color: #5c5b5b;
     text-decoration: none;
     margin-left: 4px;
 }
-
 .accordionFAQbody .faqULinner li {
     border: 0 !important;
     margin: 0 !important;
     padding: 10px 0;
 }
-
 .accordionFAQbody .faqULinner li svg {
     fill: #5c5b5b;
 }
-
 .accordionFAQbody .faqULinner:hover li span {
     color: #a2a2a2;
 }
-
 .accordionFAQbody .faqULinner:hover li svg {
     fill: #a2a2a2;
 }
-
 .accordionFAQbody .faqULinner li:hover span {
     color: #2a2a2a;
 }
-
 .accordionFAQbody .faqULinner li:hover svg {
     fill: #2a2a2a;
 }
-
-
 .accordionFAQbody ol li::marker, .accordionFAQbody ul li::marker  {
   text-align: left;       
 }
@@ -981,14 +869,12 @@ display: none;
   z-index: 2;
   color: #2A2A2A !important;
 }
-
 .accordionFAQ {
   cursor: pointer;
   width: 100%;
   outline: none;
   background-color: transparent !important;
 }
-
 .firstAccordion .accordionFAQbutton:not(.collapsed)::before {
   height: 0px !important;
 }
@@ -996,7 +882,6 @@ display: none;
   margin-top: 0;
   padding-top: 0;
 }
-
 .accordionFAQbutton:not(.collapsed)::before {
   content: "";
   background: #2A2A2A !important;
@@ -1007,22 +892,9 @@ display: none;
   width: 70%;
   transition: var(--bs-accordionFAQ-transition);
 }
-
 .accordionFAQitem:first-child .accordionFAQbutton:not(.collapsed) {
     padding-top: 0px;
     transition: var(--bs-accordionFAQ-transition);
-}
-
-.accordionFAQbutton:is(.collapse)::after {
-  content: "";
-  background: #2A2A2A !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1px !important;
-  width: 70%;
-  background-color: #00b7ff;
-  transition: var(--bs-accordionFAQ-transition);
 }
 
 .reset.accordionFAQbutton:not(.collapsed)::before, .reset.accordionFAQbutton.collapsed::before  {
@@ -1035,13 +907,6 @@ display: none;
 .nudgeLeft {
     padding-left: 2rem;
 }
-.nudgeDown {
-    padding-top: 2rem;
-}
-.nudgeUp {
-    padding-bottom: 2rem;
-}
-
 .faqBodyContainer:has(.accordionFAQitem .accordionFAQbutton:not(.collapsed)) .accordionFAQbutton {
     color: #a4a4a4;
 }
@@ -1057,7 +922,6 @@ display: none;
 .reset.accordionFAQbutton:not(.collapsed) {
     padding-top: 10px !important;
 }
-
 .accordionFAQitem:first-child .accordionFAQbutton:not(.collapsed) {
     padding-top: 0px;
     transition: var(--bs-accordionFAQ-transition);
@@ -1071,13 +935,11 @@ display: none;
     padding: 4px 0px;
     transition: all 0.15s ease-in-out;
 }
-
 .accordionFAQbutton:not(.collapsed) .faqCarret{
     stroke:#2A2A2A !important;
     transform: rotate(180deg);
     transition: all 0.15s ease-in-out;
 }
-
 .accordionFAQ:hover .accordionFAQbutton {
     color: #a4a4a4;
 }
@@ -1090,7 +952,6 @@ display: none;
 .accordionFAQ .accordionFAQbutton:hover .faqCarret {
     stroke: #2A2A2A;
 }
-
 .faqACCLinkContainWrap .faqACCLinkContainer {
     display: flex !important;
     padding: 0 !important;
@@ -1108,7 +969,6 @@ display: none;
     align-items: center;
     margin-right: 10px;
 }
-
 .faqACCLinkContainWrap .faqACCLinkContainer h4 span {
     margin-right: 10px;
     color: #5c5b5b;
@@ -1116,7 +976,6 @@ display: none;
     font-weight: 600;
     font-size: 20px;
 }   
-
 .faqACCLinkContainWrap .faqACCLinkContainer h4 svg {
     margin-right: 10px;
     fill:#5c5b5b;
@@ -1202,11 +1061,6 @@ display: none;
 /* X-Large */ @media(min-width: 1280px) {  
     .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 20px;}   
     .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 18px;}}
-
-
-
-
-
 
 
 /* FAQ ANSWER BUTTONS */
@@ -1340,7 +1194,7 @@ display: none;
 }
 
 .sectionFAQmag {
-position: absolute;
+    position: absolute;
     z-index: 70;
     width: 100vw;
     height: 100vh;
