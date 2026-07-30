@@ -1850,229 +1850,6 @@ display: none;
     .faqStatic:last-child {grid-column: span 4 / span 4;}      
 }
 
-.cardFAQcontainerH {
-  display: flex;
-  gap: 15px;
-  width: 100%;
-  max-width: 900px;
-  height: 400px;
-  margin: 15px 0 40px 0;
-}
-
-.cardFAQcontainerV {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-  max-width: 900px;
-  height: 500px;
-  margin: 15px 0 40px 0;
-}
-
-.toggleFAQcard {
-    display: flex;
-  flex: 1; 
-  background-color: #b6b4b4;
-  border-radius: 16px;
-  color: #ece9e1;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s;
-}
-
-.toggleFAQcard:hover {
-  background-color: #888888;
-}
-
-
-.cardFAQcontainerH .toggleFAQcard.active {
-  flex: 3; 
-  background-color: #92ff5c;
-  color: #2a2a2a;
-}
-
-.cardFAQcontainerV .toggleFAQcard.active {
-  flex: 3; 
-  background-color: #92ff5c;
-  color: #2a2a2a;
-}
-.cardFAQcontainerV .toggleFAQcard .toggleImgcontainer {
-  width: 100%; 
-  height: 33%;   
-  overflow: hidden; 
-  margin-top: auto;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.4s ease;
-}
-.cardFAQcontainerV .toggleFAQcard.active .toggleImgcontainer {
-  transform: translateY(0px);
-  opacity: 1;
-  transition-delay: 0.3s;
-}
-.inactiveHide {
-display: none;
-}
-.active .inactiveHide {
-display: block;
-}
-
-.cardFAQcontainerV .toggleImgcontainer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     
-  object-position: bottom; 
-}
-
-
-.cardFAQcontainerH .toggleFAQcard .toggleImgcontainer {
-width: 100%;
-position: absolute;
-right: 0;
-bottom: 0;
-filter: grayscale(1);
-opacity: 30%;
-transition: opacity 0.3s ease, filter 0.4s ease;
-}
-.cardFAQcontainerH .toggleFAQcard:hover .toggleImgcontainer {
-filter: grayscale(1);
-opacity: 90%;
-transition: opacity 0.3s ease, filter 0.4s ease;
-}
-.cardFAQcontainerH .toggleFAQcard.active .toggleImgcontainer {
-width: 55%;
-filter: grayscale(0);
-opacity: 100%;
-}
-
-
-.toggleFAQcard.active:hover {
--webkit-box-shadow: 2px 2px 14px 4px rgba(0,0,0,0.20); 
-box-shadow: 2px 2px 14px 4px rgba(0,0,0,0.20);
-}
-
-/* Content Layout Alignment */
-.toggleFAQcard .cardFAQcontent {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  top: 20px;
-  display: flex;
-  height: 100%;
-  gap: 10px;
-}
-
-.cardFAQcontainerH .toggleFAQcard .cardFAQcontent {
-  flex-direction: column;
-}
-.narrower60 {
-  width: 60% !important;
-}
-.cardFAQcontainerV .toggleFAQcard.active .cardFAQcontent {
-  flex-direction: column;
-}
-.cardFAQcontainerV .toggleFAQcard .cardFAQcontent {
-  flex-direction: row;
-  justify-content: start;
-}
-.cardFAQcontainerV .toggleFAQcard:not(.active) .cardFAQcontent h3 {
-  align-content: first baseline;
-}
-.cardFAQcontainerV .toggleFAQcard:not(.active) .cardFAQcontent p {
-  display: none;
-}
-
-.cardFAQcontent h2 {
-    color: #ece9e1;
-    font-weight: 900;
-}
-
-.toggleFAQcard.active  h2 {
-  color: #fff;
-}
-
-.cardFAQcontent p svg {
-    fill:#ece9e1;
-    float:left; 
-    margin-right:8px;
-    background-color: #2a2a2a;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 2px #ece9e1;
-    border: 1.5px solid #ece9e1;
-}
-
-.cardFAQcontent p svg {
-    fill:#ece9e1;
-    float:left; 
-    margin-right:8px;
-    background-color: #2a2a2a;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 2px #ece9e1;
-    border: 1.5px solid #ece9e1;
-}
-
-.cardFAQcontent p svg {
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transform-origin: center; 
-}
-
-.cardFAQcontent p svg:hover {
-  transform: scale(1.68);
-  margin-right: 10px;
-}
-
-.cardFAQcontent p {
-  opacity: 0;
-  transform: translateY(200px);
-  transition: opacity 0.3s ease, transform 0.4s ease;
-}
-
-.toggleFAQcard.active .cardFAQcontent p {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.3s;
-}
-.cardFAQcontent p {line-height: 1.4;}
-.cardFAQcontent h3 {font-weight: 700;}
-
-.firstAccordion .accordionFAQbutton:not(.collapsed) {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.cardFAQcontainerV .toggleFAQcard:not(.active) .cardFAQcontent h3 {
-transform: translateY(10px);
-}
-.cardFAQcontainerV .toggleFAQcard.active .cardFAQcontent {
-  flex-direction: column;
-}
-
-    @media(max-width: 549px){  
-        .cardFAQcontent h2 {font-size: 16px;}  
-        .cardFAQcontent h3 {font-size: 14px;}
-        .cardFAQcontent p {font-size: 14px;}
-        .cardFAQcontainerH .toggleFAQcard.active {flex: 2;}}
-    @media(min-width: 549px) and (max-width: 768px){ 
-        .cardFAQcontent h2 {font-size: 20px;}   
-        .cardFAQcontent h3 {font-size: 16px;}
-        .cardFAQcontent p {font-size: 16px;}}
-    @media(min-width: 768px) and (max-width: 1024px){  
-        .cardFAQcontent h2 {font-size: 24px;}  
-        .cardFAQcontent h3AQbody {font-size: 18px;}
-        .cardFAQcontent p {font-size: 18px;}}
-    @media(min-width: 1024px) and (max-width: 1280px){
-        .cardFAQcontent h2 {font-size: 34px;}  
-        .cardFAQcontent h3 {font-size: 20px;}
-        .cardFAQcontent p {font-size: 20px;}}
-    @media(min-width: 1280px) {  
-        .cardFAQcontent h2 {font-size: 34px;}
-        .cardFAQcontent h3 {font-size: 22px;}
-        .cardFAQcontent p {font-size: 22px;}}
-
-
-
 
 /* MODAL */
 
@@ -2175,6 +1952,15 @@ transform: translateY(10px);
 }
 
 
+/* Structural spacer styles for scrolling testing */
+.spacer {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #f4f4f4;
+  font-size: 1.5rem;
+}
+
 /* The element we want to reveal */
 .faqReveal {
 
@@ -2185,14 +1971,14 @@ transform: translateY(10px);
   
   /* Restrict animation window: triggers when element enters 
      the bottom 10% and exits when it reaches top 40% of viewport */
-  animation-range: entry 10% cover 20%;
+  animation-range: entry 10% cover 40%;
 }
 
 /* Define the look of your transition */
 @keyframes reveal-on-scroll {
   from {
     opacity: 0;
-    transform: translateY(100px) scale(0.25);
+    transform: translateY(100px) scale(0.95);
     filter: blur(5px);
   }
   to {
