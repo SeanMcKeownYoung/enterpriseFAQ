@@ -1,0 +1,451 @@
+
+    .siteLogo {
+        position: absolute;
+        margin-left: calc(-10rem + -20px);
+        width: 10rem;
+        height: 10rem;
+    }
+    .siteLogo {
+        position: absolute;
+        margin-left: calc(-7rem + -20px);
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .siteLogo {
+        position: relative;
+        margin-left: 0;
+        width: 8rem ;
+        height: 8rem;
+    }
+
+
+.siteLogoGroup .siteLogo01 {
+    fill: #868686;
+    opacity: 1;
+    transition: all 0.2s ease-out;
+}
+
+.siteLogoGroup .siteLogo02 {
+    fill: #ff8819;
+    opacity: 0;
+    position: absolute;
+    top: 0;     
+    left: 0;
+    transition: all 0.2s ease-out;
+}
+
+
+
+
+    @media(max-width: 549px){  
+    .siteLogoGroup {
+        position: relative;
+        width: 10rem;
+        height: 10rem;
+    }
+
+}
+    @media(min-width: 549px) and (max-width: 768px){  
+    .siteLogoGroup {
+        position: relative;
+        width: 10rem;
+        height: 10rem;
+    }
+
+}
+    @media(min-width: 768px) and (max-width: 1024px){  
+    .siteLogoGroup {
+        position: relative;
+        width: 7rem;
+        height: 7rem;
+    }
+}
+    @media(min-width: 1024px) and (max-width: 1280px){  
+    .siteLogoGroup {
+        position: relative;
+        width: 8rem ;
+        height: 8rem;
+    }
+}
+    @media(min-width: 1280px) {  
+    .siteLogoGroup {
+        position: relative;
+        align-self: flex-start;
+    }
+}
+
+
+.faqContactItem .siteLogoD {
+    display: flex;  
+    justify-content: start; 
+    align-items: left;    
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 1.4rem !important;
+}
+
+
+
+
+.siteLogoGroup .siteLogo01 {
+    fill: #868686;
+    opacity: 1;
+    transition: all 0.2s ease-out;
+}
+
+.siteLogoGroup .siteLogo02 {
+    fill: #ff8819;
+    opacity: 0;
+    position: absolute;
+    top: 0;     
+    left: 0;
+    transition: all 0.2s ease-out;
+}
+
+.faqContactContainer .faqContactItem:hover .siteLogo01 {
+    opacity: 0;
+}
+.faqContactContainer .faqContactItem:hover .siteLogo02 {
+    opacity: 1;
+}
+    .siteLogo01 {
+        fill: #ff8819 !important;
+    }
+
+
+
+
+
+
+/* Small and X-Small */ @media(max-width: 767px){
+  .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+  .faqContactWrapA {
+        display: flex; 
+        flex-direction:column
+    }
+  .faqContactWrapB {
+        display: flex; 
+        flex-direction:column
+    }
+  .faqContactWrapC {
+        display: flex; 
+        flex-direction:column
+    }
+
+    .faqContactSite, .faqContactURL, .faqContactAddress {
+        position: relative;
+        margin-top: 0 !important;
+    }
+    .faqContactAddress div {
+        display: inline-block;
+        padding-right: 1px;
+    }
+    .faqContactAddress div:nth-child(3) {
+        display: block;
+    }
+    .faqContactIcons {
+        display: flex;
+        flex-direction: row;
+    }
+    .faqContactIcons div {
+        justify-content: flex-end;
+    }
+    .faqStaticContainer {
+        display: block;
+    }
+}
+
+/* Medium */ @media(min-width: 768px){
+    .faqFillContacts .faqPageWrapper {max-width:768px;padding: 10% 2rem;}
+    .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+    .faqContactWrapA {
+        display: flex; 
+        flex-direction:column
+    }
+    .faqContactWrapB {
+        display: flex; 
+        flex-direction:row;
+    }
+    .faqContactWrapC {
+        display: flex; 
+        flex-direction:column
+    }
+
+    .faqContactSite, .faqContactURL, .faqContactAddress {
+        position: relative;
+        margin-top: 0 !important;
+    }
+    .faqContactAddress div {
+        display: block;
+        padding-right: 1px;
+    }
+    .faqContactAddress div:nth-child(3) {
+        display: block;
+    }
+    .faqStaticContainer {display: block;}
+}
+
+/* Large */ @media(min-width: 1024px){
+    .faqFillContacts .faqPageWrapper {max-width:1024px;padding: 10% 2rem;}
+    .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+    .faqContactWrapA {
+        display: flex; 
+        flex-direction:row
+    }
+    .faqContactWrapB {
+        display: flex; 
+        flex-direction:row;
+    }
+    .faqContactWrapC {
+        display: flex; 
+        flex-direction:column
+    }
+    .faqContactSite, .faqContactURL, .faqContactAddress {
+        position: relative;
+        margin-top: 0 !important;
+    }
+    .faqContactAddress div {
+        display: block;
+        padding-right: 10px;
+    }
+    .faqStaticContainer {display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(1, 1fr);}
+    .faqStatic {grid-column: span 2 / span 2;}
+    .faqStatic:last-child {grid-column: span 2 / span 2;}
+}
+
+/* X-Large */ @media(min-width: 1280px) {
+    .faqFillContacts .faqPageWrapper {max-width:1280px;padding: 10% 2rem;}
+    .faqContactContainer {
+        display: flex; 
+        flex-direction:column
+    }
+    .faqContactWrapA {
+        display: flex; 
+        flex-direction:row
+    }
+    .faqContactWrapB {
+        display: flex; 
+        flex-direction:row
+    }
+    .faqContactWrapC {
+        display: flex; 
+        flex-direction:row;
+    }    
+    .faqStaticContainer {display: grid; gap: 20px; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(1, 1fr);}
+    .faqStatic {grid-column: span 3 / span 3;}
+    .faqStatic:last-child {grid-column: span 4 / span 4;}      
+}
+
+
+
+.faqContactContainer {
+    display: flex; 
+    flex-direction:column;
+    padding-bottom: 10px;
+}
+
+
+
+.faqContactWrapA, .faqContactWrapB, .faqContactWrapC {
+    width: 100%;
+}
+
+
+.faqContactItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+    background-color: chartreuse;
+    padding-left: 0;
+}
+
+.siteLogoGroup {
+    background-color: coral;
+    align-self: flex-start;
+        justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.siteLogoGroup svg {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+    background-color: #00b7ff;
+}
+
+
+.faqContactItem .faqContactSite {
+    margin: 10px 0px 6px;
+    padding: 0 50px 0 0;
+    text-wrap: balance !important;
+}
+
+.faqContactSite {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    color: #2A2A2A;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing:0;
+    line-height:1.2;
+    text-wrap: balance;   
+}
+
+    @media(max-width: 549px){  
+    .faqContactSite {font-size: 16px;}
+    .faqContactURL a, .faqContactAddress {font-size: 15px}
+}
+    @media(min-width: 549px) and (max-width: 768px){  
+    .faqContactSite {font-size: 18px;}
+    .faqContactURL a, .faqContactAddress {font-size: 16px}
+}
+    @media(min-width: 768px) and (max-width: 1024px){  
+    .faqContactSite {font-size: 20px;}
+    .faqContactURL a, .faqContactAddress {font-size: 18px}
+}
+    @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqContactSite {font-size: 22px;}
+    .faqContactURL a, .faqContactAddress {font-size: 20px}
+}
+    @media(min-width: 1280px) {  
+    .faqContactSite {font-size: 22px;}
+    .faqContactURL a, .faqContactAddress {font-size: 20px}
+}
+
+
+
+
+.faqContactAddress div {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    color: #6a6a6a;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing:0;
+    line-height:1.4;
+    text-wrap: balance;
+    transition: all 0.2s ease;
+}
+
+.faqContactAddress {
+    margin-top: 10px;
+}
+
+.faqContactURL a {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    color: #868686 !important;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing:0;
+    line-height:1.4;
+    text-wrap: balance;
+    transition: all 0.2s ease;
+}
+
+.faqContactContainer:hover .faqContactItem {
+    opacity: 10%;
+}
+
+.faqContactContainer .faqContactItem:hover {
+    opacity: 100%;
+    z-index: 10;
+}
+
+.faqContactContainer .faqContactItem {
+    opacity: 100%;
+    outline: 7px solid  rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+}
+
+.faqFillContacts .faqHeroContainer {
+    margin-top: 6vw; 
+    margin-bottom: 0;
+}
+
+.faqFillContacts .faqBodyheader {
+    text-align: left !important;
+    margin-bottom: 10px;
+}
+
+.siteCallGroup  {
+    display: flex;  
+    justify-content: start; 
+    align-items: left;    
+    object-fit: cover; 
+    object-position: top;
+    margin-bottom: 1.4rem !important;
+}
+.siteCallGroup svg {
+    position: absolute;
+}
+
+
+.faqStatic {
+    margin-bottom: 20px;
+}
+
+.faqStatic  .accordionFAQbutton {
+      color: #2a2a2a !important;
+}
+
+.faqStatic .accordionFAQbutton::before {
+  all: unset;
+}
+
+.faqStatic .accordionFAQbody {
+    color: #2a2a2a !important;
+        text-wrap: balance;
+}
+
+
+
+
+
+
+
+
+
+
+                    <hr style="width: 95%; margin-bottom: 30px;"/>
+                <div class="accordionFAQ contactsFAQquestions">
+                    <div>
+                        <div class="reset accordionFAQbutton">
+                            Waiting on a reply?
+                        </div>
+                        <div class="reset accordianFAQancontainer">
+                            <div class="accordionFAQbody">
+                                <strong>Our goal is to respond to our customers within 24-48 hours.</strong> However, some requests may require additional review. We&rsquo;ll follow up as soon as possible.
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="reset accordionFAQbutton">
+                            Want to contact our newsrooms?
+                        </div>
+                        <div class="reset accordianFAQancontainer">
+                            <div class="accordionFAQbody">
+                                <strong>Have a tip to share? </strong> Our newsrooms are always eager to hear from you.
+                            </div>
+                            <div class="faqAssets">
+                                <div>
+                                    <a href="https://www.mlive.com/mlive_contacts/page/newsrooms.html" aria-label="See More" target="_blank"> <svg aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Newsrooms.</strong>&nbsp;  Click here for Newsroom Contacts.</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

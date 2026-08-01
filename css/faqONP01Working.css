@@ -462,7 +462,6 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     padding-top: 4px !important;
 }
 
-
 /* TEXT STYLES */
 .faqHeaderBig {
     font-family: "neue-haas-grotesk-display", sans-serif;
@@ -471,11 +470,13 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     letter-spacing:0;
     line-height:1.2;
 }
+.textFAQbox .faqHeaderBig {
+    padding-bottom: 30px;
 
+}
 .textFAQbox .faqHeaderBig {
   text-wrap: balance;
     padding-top: 2rem;
-    padding-bottom: 30px;
 } 
 .textFAQbox .faqHeaderBig .headerUnderline {
     display: inline !important; 
@@ -484,7 +485,7 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
 }
 
 /* X-Small */ @media(max-width: 549px){  
-    .faqHeaderBig {font-size: 24px;}}
+    .faqHeaderBig {font-size: 28px;}}
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
     .faqHeaderBig {font-size: 30px;}}
 /* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
@@ -493,6 +494,19 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     .faqHeaderBig {font-size: 54px;}}
 /* X-Large */ @media(min-width: 1280px) {  
     .faqHeaderBig {font-size: 54px;}}
+
+
+/* X-Small 
+@media(max-width: 549px){  
+    .faqHeaderBig {color: purple;}}
+@media(min-width: 549px) and (max-width: 768px){  
+    .faqHeaderBig {color: orange;}}
+@media(min-width: 768px) and (max-width: 1024px){  
+    .faqHeaderBig {color: cyan;}}
+@media(min-width: 1024px) and (max-width: 1280px){  
+    .faqHeaderBig {color: chartreuse;}}
+@media(min-width: 1280px) {  
+    .faqHeaderBig {color: crimson;}} */
 
 /* UPDATED BODY Q & A STYLES */
 .containerFAQbody {
@@ -515,11 +529,6 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
   width: 100%;
   height: auto;
 }
-
-.textFAQbox .faqHeaderBig {
-  text-wrap: balance;
-    padding-top: 2rem;
-} 
 
 /* FAQ QUESTION AND ANSWER STYLES */
     @media(max-width: 549px){  
@@ -549,9 +558,9 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     transition: all 0.15s ease-in-out;
 }
     @media(max-width: 549px){  
-    .accordionFAQbutton {font-size: 16px;}}
-    @media(min-width: 549px) and (max-width: 768px){  
     .accordionFAQbutton {font-size: 20px;}}
+    @media(min-width: 549px) and (max-width: 768px){  
+    .accordionFAQbutton {font-size: 22px;}}
     @media(min-width: 768px) and (max-width: 1024px){  
     .accordionFAQbutton {font-size: 24px;}}
     @media(min-width: 1024px) and (max-width: 1280px){  
@@ -563,22 +572,23 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter{
     transform-origin: center; 
     clip-path: circle(50%);
     border-radius: 50%;
+    width: 30px;
+    aspect-ratio: 1;
 }   
 
-
 .faqDropMenuContainer {
-margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .faqDropMenu::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 70%;
-  height: 1px;
-  background-color: #2a2a2a; 
-  margin: 10px 0 0 0;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 1px;
+    background-color: #2a2a2a; 
+    margin: 10px 0 0 0;
 }
 
 .faqDropMenu div {
@@ -596,6 +606,7 @@ margin-bottom: 20px;
 .faqDropMenu.Glossary div svg {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-origin: center; 
+  will-change: transform;
 }
 
 .faqDropMenu.Glossary div svg:hover {
@@ -614,16 +625,23 @@ margin-bottom: 20px;
     flex-direction: row;
     gap: 10px;
 }
-.accordionFAQbody.Inset ul li div {
 
-}
-.faqHR {
-    width: 70%;
-}
+    @media(max-width: 549px){  
+    .faqHR {width: 70%;}}
+    @media(min-width: 549px) and (max-width: 768px){  
+    .faqHR {width: 200px;}}
+    @media(min-width: 768px) and (max-width: 1024px){  
+    .faqHR {width: 440px;}}
+    @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqHR {width: 70%;}}
+    @media(min-width: 1280px) {  
+    .faqHR {width: 70%;}}
+
 .accordionFAQbody.Inset ul li div svg {
     fill:#5c5b5b;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     transform-origin: center; 
+    will-change: transform;
 }
 .accordionFAQbody.Inset ul li div svg:hover {
     fill:#2a2a2a !important;
@@ -802,13 +820,13 @@ display: none;
     text-wrap: balance;
 }
     @media(max-width: 549px){  
-    .accordionFAQbody {font-size: 14px;}}
-    @media(min-width: 549px) and (max-width: 768px){  
     .accordionFAQbody {font-size: 16px;}}
-    @media(min-width: 768px) and (max-width: 1024px){  
+    @media(min-width: 549px) and (max-width: 768px){  
     .accordionFAQbody {font-size: 18px;}}
-    @media(min-width: 1024px) and (max-width: 1280px){  
+    @media(min-width: 768px) and (max-width: 1024px){  
     .accordionFAQbody {font-size: 20px;}}
+    @media(min-width: 1024px) and (max-width: 1280px){  
+    .accordionFAQbody {font-size: 22px;}}
     @media(min-width: 1280px) {  
     .accordionFAQbody {font-size: 22px;}}
 
@@ -819,21 +837,6 @@ display: none;
     display: block;
     padding: 14px 0;
     text-wrap: balance;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .accordionFAQbutton {
-    transition: none;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .accordionFAQbutton::after {
-    transition: none;
-  }
-}
-.accordionFAQbody ol {
-  list-style-position: outside; 
-  padding-left: 4rem;    
 }
 .accordionFAQbody ul {
   list-style-position: outside; 
@@ -886,16 +889,22 @@ display: none;
 .accordionFAQbody.Inset ul li:first-child {
     padding-top: 0px;
 }
+
     @media(max-width: 549px){  
-    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 14px; padding-top: 4px;}}
+    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 15px; padding-top: 4px;}
+    .accordionFAQbody ol {padding-left: 0; list-style-position: inside; }}
     @media(min-width: 549px) and (max-width: 768px){  
-    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 16px; padding-top: 4px;}}
+    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 16px; padding-top: 4px;}
+    .accordionFAQbody ol {padding-left: 0; list-style-position: inside; }}
     @media(min-width: 768px) and (max-width: 1024px){  
-    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 16px; padding-top: 4px;}}
+    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 18px; padding-top: 4px;}
+    .accordionFAQbody ol {padding-left: 3rem; list-style-position: outside; }}
     @media(min-width: 1024px) and (max-width: 1280px){  
-    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 18px; padding-top: 4px;}}
+    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 20px; padding-top: 4px;}
+    .accordionFAQbody ol {padding-left: 4rem; list-style-position: outside; }}
     @media(min-width: 1280px) {  
-    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 20px; padding-top: 4px;}}
+    .accordionFAQbody ol li, .accordionFAQbody ul li {font-size: 20px; padding-top: 4px;}
+    .accordionFAQbody ol {padding-left: 4rem; list-style-position: outside; }}
 
 .accordionFAQbutton:hover {
   z-index: 2;
@@ -984,13 +993,31 @@ display: none;
 .accordionFAQ .accordionFAQbutton:hover .faqCarret {
     stroke: #2A2A2A;
 }
+
+
 .faqACCLinkContainWrap .faqACCLinkContainer {
     display: flex !important;
     padding: 0 !important;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
 }
+
+/* Small */ @media(max-width: 768px){  
+.faqACCLinkContainWrap .faqACCLinkContainer {flex-direction: column; justify-content: flex-start; align-items: flex-start; margin-bottom: 10px !important;}
+.faqACCLinkContainer h4 {padding: 10px 0 5px 0;}
+.faqACCLinkContainWrap div {padding-top: 0 !important;padding-bottom: 0 !important;}
+.faqACCLinkContainWrap hr {width: 70%;}
+.faqACCLinkWrapper div {margin-bottom: 8px !important;}
+}
+/* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
+    .faqACCLinkContainWrap hr {width: 70%;}
+}
+/* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqACCLinkContainWrap hr {width: 70%;}
+}
+/* X-Large */ @media(min-width: 1280px) { 
+.faqACCLinkContainWrap .faqACCLinkContainer {flex-direction: row; justify-content: flex-start; align-items: center;}
+.faqACCLinkContainWrap hr {width: 70%;}
+}
+
 .faqACCLinkContainWrap  {
     border: 0;
     margin-top: 10px;
@@ -1078,15 +1105,16 @@ display: none;
 }   
 
 /* X-Small */ @media(max-width: 549px){  
-    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 12px;}   
-    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 18px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 16px;}
     .faqACCLinkContainWrap .faqACCLinkContainer h4 svg {width: 0px; height: 0px; display: none;}}
 /* Small */ @media(min-width: 549px) and (max-width: 768px){  
-    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 16px;}   
-    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 12px;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 18px;}   
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 16px;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer h4 svg {width: 0px; height: 0px; display: none;}
 /* Medium */ @media(min-width: 768px) and (max-width: 1024px){  
     .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 16px;}   
-    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 14px;}}
+    .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 16px;}}
 /* Large */ @media(min-width: 1024px) and (max-width: 1280px){  
     .faqACCLinkContainWrap .faqACCLinkContainer h4 span {font-size: 18px;}   
     .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {font-size: 16px;}}
@@ -1372,7 +1400,7 @@ display: none;
         width: calc(100% - 2rem); 
         height: 90px;}
     .textFAQtext {
-        margin-top: 100px;}
+        margin-top: 87px;}
     }
 
 /* Small */ @media(min-width: 549px) and (max-width: 768px){ 
@@ -1419,6 +1447,11 @@ display: none;
         height: 120px;}
     .textFAQtext {
         margin-top: 130px;}
+        .imageFAQbox {
+        position: absolute;
+        width: 33%;
+        right: 0;
+        z-index: 0;}
     }
 
 /* X-Large */ @media(min-width: 1280px) {  
@@ -1433,237 +1466,6 @@ display: none;
     .textFAQtext {
         margin-top: 130px;}
     }
-
-/* FAQ CONTACTS STYLES */
-.faqFillContacts {
-    width: 100vw;
-    background-color: #ece9e1;
-    background-image: linear-gradient(180deg, #ece9e1, #fff); 
-    border-bottom: 1px solid #ffffff;
-}
-
-.faqContactContainer {
-    display: flex; 
-    flex-direction:column;
-    padding-bottom: 10px;
-}
-
-.faqFillContacts .textFAQheader {
-    position: relative;
-}
-
-.faqFillContacts .textFAQheader .headerUnderline {
-    display: inline !important; 
-    border-bottom: 10px solid #ff8819;
-}
-
-.faqFillContacts .faqPageWrapper {
-    display:flex;
-    margin: 0 auto;
-    padding: 10% 2rem;
-}
-
-.faqContactWrapA, .faqContactWrapB, .faqContactWrapC {
-    width: 100%;
-}
-.faqContactItem {
-    min-width: 50%;
-    margin-bottom: 3rem !important;
-}
-
-.faqContactItem .faqContactSite {
-    margin: 10px 0px 6px;
-    padding: 0 50px 0 0;
-    text-wrap: balance !important;
-}
-
-.faqContactSite {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 1.6rem;
-    color: #2A2A2A;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing:0;
-    line-height:1.2;
-    text-wrap: balance;   
-}
-
-.faqContactIcons {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-}
-
-.faqContactIcons div {
-    margin-right: 4px !important;
-}
-
-.faqContactIcons svg {
-    fill: #bdbdbd;
-    width: 3.2rem;
-    height: 3.2rem;
-    transition: all 0.2s ease;
-}
-
-.faqContactAddress div {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 1.4rem;
-    color: #6a6a6a;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing:0;
-    line-height:1.4;
-    text-wrap: balance;
-    transition: all 0.2s ease;
-}
-
-.faqContactAddress {
-    margin-top: 10px;
-}
-
-.faqContactURL a {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 1.4rem;
-    color: #868686 !important;
-    font-weight: 600;
-    font-style: normal;
-    letter-spacing:0;
-    line-height:1.4;
-    text-wrap: balance;
-    transition: all 0.2s ease;
-}
-
-.faqContactContainer:hover .faqContactItem {
-    opacity: 10%;
-}
-
-.faqContactContainer .faqContactItem:hover {
-    opacity: 100%;
-    z-index: 10;
-}
-
-.faqContactContainer .faqContactItem {
-    opacity: 100%;
-    outline: 7px solid  rgba(255, 255, 255, 0);
-    transition: all 0.3s ease;
-}
-
-.faqFillContacts .faqHeroContainer {
-    margin-top: 6vw; 
-    margin-bottom: 0;
-}
-
-.faqFillContacts .faqBodyheader {
-    text-align: left !important;
-    margin-bottom: 10px;
-}
-
-.faqContactItem .siteLogo {
-    display: flex;  
-    justify-content: start; 
-    align-items: left;    
-    object-fit: cover;
-    object-position: top;
-    margin-bottom: 1.4rem !important;
-}
-.siteLogoGroup {
-    position: relative; 
-}
-
-.siteLogoGroup .siteLogo01 {
-    fill: #868686;
-    opacity: 1;
-    transition: all 0.2s ease-out;
-}
-
-.siteLogoGroup .siteLogo02 {
-    fill: #ff8819;
-    opacity: 0;
-    position: absolute;
-    top: 0;     
-    left: 0;
-    transition: all 0.2s ease-out;
-}
-
-.faqContactContainer .faqContactItem:hover .siteLogo01 {
-    opacity: 0;
-}
-.faqContactContainer .faqContactItem:hover .siteLogo02 {
-    opacity: 1;
-}
-
-.siteCallGroup  {
-    display: flex;  
-    justify-content: start; 
-    align-items: left;    
-    object-fit: cover; 
-    object-position: top;
-    margin-bottom: 1.4rem !important;
-}
-.siteCallGroup svg {
-    position: absolute;
-}
-
-.faqIconContainer {
-    position: relative; 
-}
-.faqIconContainer .faqContIconSVG01 {
-    opacity: 1;
-    transition: all 0.2s ease-out;
-}
-
-.faqIconContainer .faqContIconSVG02 {
-    opacity: 0;
-    position: absolute;
-    bottom: 0;     
-    left: 0;
-    transition: all 0.2s ease-out;
-}
-
-.faqContactContainer .faqContactItem:hover .faqContIconSVG01  {
-    fill: #414141;
-    transition: all 0.2s ease-out;
-}
-
-.faqContactContainer .faqContactItem:hover .faqContIconSVG02 {
-    fill: #414141;
-    transition: all 0.2s ease-out;
-}
-
-.faqIconContainer:hover {
-    position: relative; 
-}
-
-.faqIconContainer:hover .faqContIconSVG01 {
-    opacity: 0;
-    transition: all 0.2s ease-out;
-}
-
-.faqIconContainer:hover .faqContIconSVG02 {
-    opacity: 1;
-    fill: #414141;
-    position: absolute;
-    bottom: 0;     
-    left: 0;
-    transition: all 0.2s ease-out;
-}
-
-.faqStatic {
-    margin-bottom: 20px;
-}
-
-.faqStatic  .accordionFAQbutton {
-      color: #2a2a2a !important;
-}
-
-.faqStatic .accordionFAQbutton::before {
-  all: unset;
-}
-
-.faqStatic .accordionFAQbody {
-    color: #2a2a2a !important;
-        text-wrap: balance;
-}
 
 .faqAssets {
     display: flex;
@@ -1686,19 +1488,22 @@ display: none;
     color:  #2A2A2A;
     white-space: nowrap; 
 }
-    @media(max-width: 549px){  
-    .faqAssets span {font-size: 12px;}}
-    @media(min-width: 549px) and (max-width: 768px){  
-    .faqAssets span {font-size: 14px;}}
-    @media(min-width: 768px) and (max-width: 1024px){  
-    .faqAssets span {font-size: 16px;}}
-    @media(min-width: 1024px) and (max-width: 1280px){  
-    .faqAssets span {font-size: 18px;}}
-    @media(min-width: 1280px) {  
-    .faqAssets span {font-size: 18px;}}
 
 .faqAssets svg {
     fill: #2A2A2A !important;
+
+}
+@media(max-width: 768px){  
+.faqAssets svg {
+    width: 8vw;
+    height: 8vw;
+}
+}
+@media(min-width: 769px){  
+.faqAssets svg {
+    width: 30px;
+    height: 30px;
+}
 }
 
 .faqAssets:hover div a span, .faqAssets:hover div a svg {
@@ -1718,184 +1523,17 @@ display: none;
 .faqAssets div a:hover svg {
   transform: scale(1.18);
 }
+    @media(max-width: 549px){  
+    .faqAssets span {font-size: 15px;}}
+    @media(min-width: 549px) and (max-width: 768px){  
+    .faqAssets span {font-size: 16px;}}
+    @media(min-width: 768px) and (max-width: 1024px){  
+    .faqAssets span {font-size: 18px;}}
+    @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqAssets span {font-size: 20px;}}
+    @media(min-width: 1280px) {  
+    .faqAssets span {font-size: 20px;}}
 
-/* X-Small */ @media(max-width: 549px){
-    .faqFillContacts .faqPageWrapper {max-width:100%;padding: 6% 2rem;}
-}
-
-/* Small */ @media(min-width: 549px) and (max-width: 768px){
-    .faqFillContacts .faqPageWrapper {max-width:549px;padding: 8% 2rem;}
-}
-
-/* Small and X-Small */ @media(max-width: 767px){
-  .faqContactContainer {
-        display: flex; 
-        flex-direction:column
-    }
-  .faqContactWrapA {
-        display: flex; 
-        flex-direction:column
-    }
-  .faqContactWrapB {
-        display: flex; 
-        flex-direction:column
-    }
-  .faqContactWrapC {
-        display: flex; 
-        flex-direction:column
-    }
-    .faqContactItem {
-        display: block;
-        padding-left: calc(10rem + 20px);
-    }
-    .siteLogo {
-        position: absolute;
-        margin-left: calc(-10rem + -20px);
-        width: 10rem;
-        height: 10rem;
-    }
-    .siteLogo01 {
-        fill: #ff8819 !important;
-    }
-    .faqContactSite, .faqContactURL, .faqContactAddress {
-        position: relative;
-        margin-top: 0 !important;
-    }
-    .faqContactAddress div {
-        display: inline-block;
-        padding-right: 1px;
-    }
-    .faqContactAddress div:nth-child(3) {
-        display: block;
-    }
-    .faqContactSite {
-        font-size: 20px;
-    }
-    .faqContactURL a {
-        font-size: 19px ;
-    }
-    .faqContactAddress div {
-        font-size: 16px;
-        line-height: 1.5;
-        font-weight: 500 !important;
-    }
-    .faqContactIcons {
-        display: flex;
-        flex-direction: row;
-    }
-    .faqContactIcons div {
-        justify-content: flex-end;
-    }
-    .faqStaticContainer {
-        display: block;
-    }
-}
-
-/* Medium */ @media(min-width: 768px){
-    .faqFillContacts .faqPageWrapper {max-width:768px;padding: 10% 2rem;}
-    .faqContactContainer {
-        display: flex; 
-        flex-direction:column
-    }
-    .faqContactWrapA {
-        display: flex; 
-        flex-direction:column
-    }
-    .faqContactWrapB {
-        display: flex; 
-        flex-direction:row;
-    }
-    .faqContactWrapC {
-        display: flex; 
-        flex-direction:column
-    }
-    .faqContactItem {
-        display: block;
-        padding-left: calc(7rem + 20px);
-    }
-    .siteLogo {
-        position: absolute;
-        margin-left: calc(-7rem + -20px);
-        width: 7rem;
-        height: 7rem;
-    }
-    .faqContactSite, .faqContactURL, .faqContactAddress {
-        position: relative;
-        margin-top: 0 !important;
-    }
-    .faqContactAddress div {
-        display: block;
-        padding-right: 1px;
-    }
-    .faqContactAddress div:nth-child(3) {
-        display: block;
-    }
-    .faqStaticContainer {display: block;}
-}
-
-/* Large */ @media(min-width: 1024px){
-    .faqFillContacts .faqPageWrapper {max-width:1024px;padding: 10% 2rem;}
-    .faqContactContainer {
-        display: flex; 
-        flex-direction:column
-    }
-    .faqContactWrapA {
-        display: flex; 
-        flex-direction:row
-    }
-    .faqContactWrapB {
-        display: flex; 
-        flex-direction:row;
-    }
-    .faqContactWrapC {
-        display: flex; 
-        flex-direction:column
-    }
-    .faqContactItem {
-        display: block;
-        padding-left: 0;
-    }
-    .siteLogo {
-        position: relative;
-        margin-left: 0;
-        width: 8rem ;
-        height: 8rem;
-    }
-    .faqContactSite, .faqContactURL, .faqContactAddress {
-        position: relative;
-        margin-top: 0 !important;
-    }
-    .faqContactAddress div {
-        display: block;
-        padding-right: 10px;
-    }
-    .faqStaticContainer {display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(1, 1fr);}
-    .faqStatic {grid-column: span 2 / span 2;}
-    .faqStatic:last-child {grid-column: span 2 / span 2;}
-}
-
-/* X-Large */ @media(min-width: 1280px) {
-    .faqFillContacts .faqPageWrapper {max-width:1280px;padding: 10% 2rem;}
-    .faqContactContainer {
-        display: flex; 
-        flex-direction:column
-    }
-    .faqContactWrapA {
-        display: flex; 
-        flex-direction:row
-    }
-    .faqContactWrapB {
-        display: flex; 
-        flex-direction:row
-    }
-    .faqContactWrapC {
-        display: flex; 
-        flex-direction:row;
-    }    
-    .faqStaticContainer {display: grid; gap: 20px; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(1, 1fr);}
-    .faqStatic {grid-column: span 3 / span 3;}
-    .faqStatic:last-child {grid-column: span 4 / span 4;}      
-}
 
 
 /* MODAL */
@@ -2004,3 +1642,375 @@ html:has(.modal-state:checked) body {
   height: 0;
   margin-top: 20px;
 }
+
+
+@media(max-width: 1024px){  
+.faqDeskhide {display: inline-flex;}
+.faqMobilehide {display: none;}
+}
+
+@media(min-width: 1025px) {  
+.faqDeskhide {display: none;}
+.faqMobilehide {display: inline-flex;}
+}
+
+
+
+/* FAQ CONTACTS STYLES */
+
+.faqFillContacts {
+    width: 100vw;
+    background-color: #ece9e1;
+    background-image: linear-gradient(180deg, #ece9e1, #fff); 
+    border-bottom: 1px solid #ffffff;
+}
+.faqFillContacts .textFAQheader {
+    position: relative;
+}
+
+.faqFillContacts .textFAQheader .headerUnderline {
+    display: inline !important; 
+    border-bottom: 10px solid #ff8819;
+}
+
+.faqFillContacts .faqPageWrapper {
+    display:flex;
+    margin: 0 auto;
+    padding: 10% 2rem;
+}
+
+.contactsFAQquestions {
+    display: flex;
+    padding-top: 10px;
+    position: relative;
+}
+
+.contactsFAQquestions div {
+    width: 100%;
+}
+@media(max-width: 1024px){
+    .contactsFAQquestions {flex-direction: column;}
+}
+@media(min-width: 1025px){
+    .contactsFAQquestions {flex-direction: row;}
+    .contactsFAQquestions div:first-child {padding-right: 4vw;}
+}
+.contactsFAQquestions.accordionFAQ:hover .accordionFAQbutton {
+    color: #2a2a2a;
+}
+.reset.accordianFAQancontainer::after {
+    content: "";
+    height: 0px;
+}
+
+.faqContactParent {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@media(max-width: 549px){  
+.faqFillContacts .faqPageWrapper {max-width:100%;padding: 6% 2rem;}
+.faqContactParent {grid-template-columns: repeat(1, 1fr);grid-template-rows: repeat(8, 1fr);}
+.faqContactParent .faqChild1 {grid-column-start: 1; grid-row-start: 1;}
+.faqContactParent .faqChild2 {grid-column-start: 1; grid-row-start: 2;}
+.faqContactParent .faqChild3 {grid-column-start: 1; grid-row-start: 3;}
+.faqContactParent .faqChild4 {grid-column-start: 1; grid-row-start: 4;}
+.faqContactParent .faqChild5 {grid-column-start: 1; grid-row-start: 5;}
+.faqContactParent .faqChild6 {grid-column-start: 1; grid-row-start: 6;}
+.faqContactParent .faqChild7 {grid-column-start: 1; grid-row-start: 7;}      
+.faqContactParent .faqChild8 {grid-column-start: 1; grid-row-start: 8;}   
+}
+
+@media(min-width: 549px) and (max-width: 768px){  
+.faqFillContacts .faqPageWrapper {max-width:549px;padding: 8% 2rem;}
+.faqContactParent {grid-template-columns: repeat(2, 1fr);grid-template-rows: repeat(4, 1fr);}
+.faqContactParent .faqChild1 {grid-column-start: 1; grid-row-start: 1;}
+.faqContactParent .faqChild2 {grid-column-start: 1; grid-row-start: 2;}
+.faqContactParent .faqChild3 {grid-column-start: 1; grid-row-start: 3;}
+.faqContactParent .faqChild4 {grid-column-start: 1; grid-row-start: 4;}
+.faqContactParent .faqChild5 {grid-column-start: 2; grid-row-start: 1;}
+.faqContactParent .faqChild6 {grid-column-start: 2; grid-row-start: 2;}
+.faqContactParent .faqChild7 {grid-column-start: 2; grid-row-start: 3;}      
+.faqContactParent .faqChild8 {grid-column-start: 2; grid-row-start: 4;}   
+}
+
+@media(min-width: 768px) and (max-width: 1024px){  
+.faqFillContacts .faqPageWrapper {max-width:768px;padding: 10% 2rem;}
+.faqContactParent {grid-template-columns: repeat(3, 1fr);grid-template-rows: repeat(3, 1fr);}
+.faqContactParent .faqChild1 {grid-column-start: 1; grid-row-start: 1;}
+.faqContactParent .faqChild2 {grid-column-start: 1; grid-row-start: 2;}
+.faqContactParent .faqChild3 {grid-column-start: 1; grid-row-start: 3;}
+.faqContactParent .faqChild4 {grid-column-start: 2; grid-row-start: 1;}
+.faqContactParent .faqChild5 {grid-column-start: 2; grid-row-start: 2;}
+.faqContactParent .faqChild6 {grid-column-start: 2; grid-row-start: 3;}
+.faqContactParent .faqChild7 {grid-column-start: 3; grid-row-start: 1;}
+.faqContactParent .faqChild8 {grid-column-start: 3; grid-row-start: 2;}
+}
+
+@media(min-width: 1024px) and (max-width: 1280px){
+.faqFillContacts .faqPageWrapper {max-width:1024px;padding: 10% 2rem;} 
+.faqContactParent {grid-template-columns: repeat(4, 1fr);grid-template-rows: repeat(2, 1fr);}
+.faqContactParent .faqChild1 {grid-column-start: 1; grid-row-start: 1;}
+.faqContactParent .faqChild2 {grid-column-start: 1; grid-row-start: 2;}
+.faqContactParent .faqChild3 {grid-column-start: 2; grid-row-start: 1;}
+.faqContactParent .faqChild4 {grid-column-start: 2; grid-row-start: 2;}
+.faqContactParent .faqChild5 {grid-column-start: 3; grid-row-start: 1;}
+.faqContactParent .faqChild6 {grid-column-start: 3; grid-row-start: 2;}
+.faqContactParent .faqChild7 {grid-column-start: 4; grid-row-start: 1;}
+.faqContactParent .faqChild8 {grid-column-start: 4; grid-row-start: 2;}
+}
+
+@media(min-width: 1280px) { 
+.faqFillContacts .faqPageWrapper {max-width:1280px;padding: 10% 2rem;} 
+.faqContactParent {grid-template-columns: repeat(4, 1fr);grid-template-rows: repeat(2, 1fr);}
+.faqContactChild {margin-bottom: 20px;}
+.faqContactParent .faqChild1 {grid-column-start: 1; grid-row-start: 1;}
+.faqContactParent .faqChild2 {grid-column-start: 1; grid-row-start: 2;}
+.faqContactParent .faqChild3 {grid-column-start: 2; grid-row-start: 1;}
+.faqContactParent .faqChild4 {grid-column-start: 2; grid-row-start: 2;}
+.faqContactParent .faqChild5 {grid-column-start: 3; grid-row-start: 1;}
+.faqContactParent .faqChild6 {grid-column-start: 3; grid-row-start: 2;}
+.faqContactParent .faqChild7 {grid-column-start: 4; grid-row-start: 1;}
+.faqContactParent .faqChild8 {grid-column-start: 4; grid-row-start: 2;}
+}
+
+.faqContactParent {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.faqContactChild {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    will-change: transform;
+}
+
+.faqContactChild .faqContactLogoBox {
+  width: 80px; 
+  aspect-ratio: 1;
+}
+
+.faqContactChild .faqContactLogoBox svg {
+    fill: #ff8819;
+    display: block;  
+    width: 100%;     
+    height: 100%; 
+}
+
+.faqContactChild .faqContactLogoBox svg:last-of-type {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.7s cubic-bezier(0.34, 5.56, 0.64, 1);
+}
+
+.faqContactChild .faqContactTextBox {
+    margin-bottom: 20px;
+}
+
+.faqContactIcons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.faqContactIcons div {
+    margin-right: 4px !important;
+}
+
+
+.faqIconContainer {
+    position: relative; 
+}
+.faqIconContainer .faqContIconSVG01 {
+    opacity: 1;
+    transition: all 0.2s ease-out;
+}
+
+.faqIconContainer .faqContIconSVG02 {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;     
+    left: 0;
+    transition: all 0.2s ease-out;
+}
+
+.faqContactTextH2 {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    letter-spacing:0;
+    line-height:1.2;
+    font-weight: 600;
+    color: #2A2A2A;
+    text-align: left;
+    text-wrap: balance;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+    @media(max-width: 549px){  
+    .faqContactTextH2 {font-size: 16px;}}
+    @media(min-width: 549px) and (max-width: 768px){  
+    .faqContactTextH2 {font-size: 18px;}}
+    @media(min-width: 768px) and (max-width: 1024px){  
+    .faqContactTextH2 {font-size: 20px;}}
+    @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqContactTextH2 {font-size: 22px;}}
+    @media(min-width: 1280px) {  
+    .faqContactTextH2 {font-size: 22px;}}
+
+.faqContactTextH3 a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #666 !important;
+}
+.faqContactTextP {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    letter-spacing:0;
+    line-height:1.6; 
+    margin-bottom: 4px;
+    color: #666;
+}
+    @media(max-width: 549px){  
+    .faqContactTextP, .faqContactTextH3 {font-size: 15px}}
+    @media(min-width: 549px) and (max-width: 768px){  
+    .faqContactTextP, .faqContactTextH3 {font-size: 16px}}
+    @media(min-width: 768px) and (max-width: 1024px){  
+    .faqContactTextP, .faqContactTextH3 {font-size: 18px}}
+    @media(min-width: 1024px) and (max-width: 1280px){  
+    .faqContactTextP, .faqContactTextH3 {font-size: 18px}}
+    @media(min-width: 1280px) {  
+    .faqContactTextH3 {font-size: 20px;}
+    .faqContactTextP {font-size: 18px; text-wrap: balance;}
+}
+
+
+
+.faqContactParent .faqContactChild:hover, .faqContactParent .faqContactChild:active {
+    background-color: #ffffff5c;
+    margin: -20px;
+    padding: 20px;
+    height: 106%;
+    border-radius: 10px;
+    z-index: 500;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    -webkit-animation: scale-up-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-play-state: running;
+}
+
+@-webkit-keyframes scale-up-left {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+    80% {
+    -webkit-transform: scale(1.07);
+            transform: scale(1.07);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+}
+@keyframes scale-up-left {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+    80% {
+    -webkit-transform: scale(1.07);
+            transform: scale(1.07);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+}
+
+
+.faqContactParent .faqContactChild .faqContactIcons svg {
+    fill: #8f8e8b;
+    width: 3.2rem;
+    height: 3.2rem;
+    transition: all 0.2s ease;
+}
+
+.faqContactParent:hover .faqContactChild .faqContactIcons svg, .faqContactParent:active .faqContactChild .faqContactIcons svg {
+    fill: #e6e1da;
+    transition: all 0.2s ease;
+}
+
+.faqContactParent .faqContactChild:hover .faqContactIcons svg, .faqContactParent .faqContactChild:active .faqContactIcons svg {
+    fill: #8f8e8b;
+    transition: all 0.2s ease;
+}
+
+.faqContactParent .faqContactChild .faqIconContainer:hover .faqContIconSVG01, .faqContactParent .faqContactChild .faqIconContainer:active .faqContIconSVG01 {
+    opacity: 0;
+    transition: all 0.2s ease-out;
+}
+
+.faqContactParent .faqContactChild .faqIconContainer:hover .faqContIconSVG02, .faqContactParent .faqContactChild .faqIconContainer:active .faqContIconSVG02 {
+    opacity: 1;
+    fill: #8f8e8b;
+    position: absolute;
+    bottom: 0;     
+    left: 0;
+    transition: all 0.2s ease-out;
+}
+
+
+.faqContactParent:hover .faqContactChild .faqContactLogoBox svg, .faqContactParent:active .faqContactChild .faqContactLogoBox svg {
+    fill: #e6e1da;
+}
+.faqContactParent:hover .faqContactChild .faqContactTextH2, .faqContactParent:active .faqContactChild .faqContactTextH2 {
+    color: #e6e1da;
+}
+.faqContactParent:hover .faqContactChild .faqContactTextH3 a, .faqContactParent:active .faqContactChild .faqContactTextH3 a {
+    color: #e6e1da !important;
+}
+.faqContactParent:hover .faqContactChild .faqContactTextP, .faqContactParent:active .faqContactChild .faqContactTextP {
+    color: #e6e1da;
+}
+.faqContactParent .faqContactChild:hover .faqContactLogoBox svg, .faqContactParent .faqContactChild:active .faqContactLogoBox svg {
+    fill: #ff8819;
+}
+.faqContactParent .faqContactChild:hover .faqContactTextH2, .faqContactParent .faqContactChild:active .faqContactTextH2 {
+    color: #2a2a2a;
+}
+.faqContactParent .faqContactChild:hover .faqContactTextH3 a, .faqContactParent .faqContactChild:active .faqContactTextH3 a {
+    color: #ff8819 !important;
+}
+.faqContactParent .faqContactChild:hover .faqContactTextP, .faqContactParent .faqContactChild:active .faqContactTextP {
+    color: #2a2a2a;
+}
+
+.faqContactParent .faqContactChild:hover .faqContactLogoBox svg:first-of-type  {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.7s cubic-bezier(0.34, 5.56, 0.64, 1);
+}
+.faqContactParent .faqContactChild:hover .faqContactLogoBox svg:last-of-type {
+    opacity: 1;
+    display: block;
+    transition: opacity 0.7s cubic-bezier(0.34, 5.56, 0.64, 1);
+}
+
+
+
