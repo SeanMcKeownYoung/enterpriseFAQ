@@ -1,7 +1,17 @@
+document.getElementById('linkFAQlist').addEventListener('click', function(e) {
+  e.preventDefault(); 
+  const link = e.target.closest('a');
+   if (!link) return;
+                                                        
+  const href = link.getAttribute('href');
+  navigator.clipboard.writeText(href).then(() => {
+  alert('Copied: ' + href);
+  });
+});
+
+
+
 document.addEventListener('click', function (event) {
-
-
-
 
 
   // ACCORDIAN CLOSE ALL OTHER ON PAGE //
@@ -179,3 +189,5 @@ window.addEventListener('scroll', () => {
         faqNavBar.classList.add('containerStart');
     }
 });
+
+
