@@ -472,31 +472,6 @@ body:has(.faqBannerText:hover) .item9 {
   background-color: #383838 !important;
   transition: all 0.2s ease-in-out;
 }
-body:has(.faqBannerText .hoverHome:hover) .magGlassShifter {
-  filter: grayscale(1) brightness(110%) contrast(105%);
-  transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverGold:hover) .magGlassShifter {
-  filter: hue-rotate(220deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);
-  transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverRed:hover) .magGlassShifter {
-  filter: hue-rotate(160deg) drop-shadow(-30px 10px 14px #1414145f);
-  transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverGreen:hover) .magGlassShifter {
-  filter: hue-rotate(-70deg) drop-shadow(-30px 10px 14px #1414145f);
-  transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverViolet:hover) .magGlassShifter {
-  filter: hue-rotate(90deg) drop-shadow(-30px 10px 14px #1414145f);
-  transition: all 0.2s ease-in-out;
-}
-body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter {
-  filter: hue-rotate(180deg) drop-shadow(-30px 10px 14px #1414145f);
-  transition: all 0.2s ease-in-out;
-}
-
 .faqBannerText div a {
   color: #676767;
 }
@@ -1488,6 +1463,10 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter {
   border-bottom: 10px solid #ffca2b !important;
 }
 
+#faqNavBar.bottom-sticky .hoverGold .navFAQlink.active {
+  color: #ffffff !important;;
+}
+
 #faqNavBar.top-sticky .hoverRed .navFAQlink.active,
 #faqNavBar.top-sticky .hoverRed .navFAQlink:hover,
 #faqNavBar.top-sticky .hoverRed .navFAQlink.active:hover {
@@ -1585,7 +1564,6 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter {
   height: 100%;
   object-fit: cover;
   object-position: left top;
-  filter: drop-shadow(-30px 10px 14px #1414145f);
   transition: all 0.2s ease;
 }
 
@@ -1681,17 +1659,80 @@ body:has(.faqBannerText .hoverOrange:hover) .magGlassShifter {
 }
 
 .sectionFAQImg div img {
-  animation: shado-onscroll linear both;
+  animation: shado-onscrollNil linear both;
   animation-timeline: scroll();
   animation-range: 0px 130vh;
 }
-@keyframes shado-onscroll {
-  from {
-    filter: drop-shadow(-30px 10px 14px #1414145f);
-  }
-  to {
-    filter: drop-shadow(-60px 100px 4px #14141493);
-  }
+@keyframes shado-onscrollNil {
+  from {filter: hue-rotate(0deg) saturate(1) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+
+
+body:has(.faqBannerText .hoverGold:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollGold linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollGold {
+  from {filter: hue-rotate(220deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+
+body:has(.faqBannerText .hoverRed:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollRed linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollRed {
+  from {filter: hue-rotate(160deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+
+body:has(.faqBannerText .hoverGreen:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollGreen linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollGreen {
+  from {filter: hue-rotate(-70deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+
+body:has(.faqBannerText .hoverViolet:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollViolet linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollViolet {
+  from {filter: hue-rotate(90deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+
+body:has(.faqBannerText .hoverOrange:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollOrange linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollOrange {
+  from {filter: hue-rotate(180deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+
+body:has(.faqBannerText .hoverHome:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollHome linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollHome {
+  from {filter: grayscale(1) brightness(110%) contrast(105%) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
 }
 
 .faqHeroFull .faqPageWrapper {
