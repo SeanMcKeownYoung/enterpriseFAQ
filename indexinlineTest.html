@@ -1978,12 +1978,14 @@ html:has(.modalFAQstate:checked) body {
   width: 100%;
   height: 100%;
   border: none;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
 .iframeFAQcontainerPDF {
   position: relative;
-  width: 100%;
-  padding-bottom: 129%; /* 16:9 aspect ratio (9 divided by 16) */
-  height: 0;
+  width: 1000px;
+  height: 600px;
   overflow: hidden;
 }
 .iframeFAQcontainerPDF iframe {
@@ -1991,15 +1993,13 @@ html:has(.modalFAQstate:checked) body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 600px;
+  height: 100%;
   border: none;
 }
 
 
-.iframeFAQcontainerPDFz {
-  width: 100%;
+.iframeFAQcontainer {
   border: none; /* Removes the default border */
-  display: block; /* Eliminates the extra bottom whitespace of inline elements */
 }
 .iframeFAQcontainerPDFz iframe {
   position: absolute;
@@ -3132,6 +3132,8 @@ html:has(.modalFAQstate:checked) body {
       </div>
     </nav>
 
+
+
 <!-- ONLINE NP BODY 001-->  
 <section class="faqBodyContainer faqFillShaded " id="Register" style="padding-top: 30px">
     <div class="faqPageWrapper bodyGold"> 
@@ -3196,8 +3198,8 @@ html:has(.modalFAQstate:checked) body {
                                                         </div>
                                                         <div class="modalFAQbody">
                                                             <p>Background scrolling is disabled while this is open.</p>
-                                                            <div class="iframeFAQcontainerPDF">
-                                                                <iframe src="images/BASE.pdf" frameborder="0" allowfullscreen></iframe>
+                                                            <div class="iframeFAQcontainer">
+                                                                <iframe src="images/Base FAQ Page Print Template.pdf" width="100%" height="600px"></iframe>
                                                             </div>
                                                         </div>
                                                         </div>
