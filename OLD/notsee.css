@@ -1,0 +1,321 @@
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-row: span 4 / span 4;
+}
+
+.div2 {
+    grid-row-start: 5;
+}
+        
+
+
+
+
+
+
+
+
+.heroFAQwrapper {
+  background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
+  width: calc(20px + 100vw);
+  padding-top: calc(50px + 10vh);
+  margin: -8px -10px;
+  height: 100%;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+
+}
+
+.heroFAQimgwrapper {
+  position: absolute;
+  z-index: 70;
+  width: 100vw;
+  display: flex;
+}
+.heroFAQimgcontainer div {
+  height: auto;
+}
+.heroFAQimgcontainer div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  transition: all 0.2s ease;
+}
+.heroFAQimgcontainer div {
+  animation: mag-onscroll linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes mag-onscroll {
+  from {
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+  to {
+    transform: translateY(-200px) scale(1.86);
+    filter: blur(3px);
+  }
+}
+
+.faqHeroContainer {
+  width: 100%;
+  margin-top: 4rem;
+}
+.navLOGOcontainer {
+  width: 30rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.navLOGOcontainer div {
+  aspect-ratio: 1 / 1;
+}
+.navLOGOcontainer div svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  fill: #00b7ff;
+  background-color: transparent;
+}
+
+.faqHeroContainer .faqBannerText a {
+  text-decoration: none;
+  color: #686766;
+}
+.faqHeaderBig {
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+#faqNavBar {
+  width: calc(20px + 100vw);
+  height: 50px;
+  margin: -10px -12px;
+  will-change: transform;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+    animation: navScrollr linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+
+@keyframes navScroll {
+  from {
+    position: absolute;
+  }
+  to {
+    position: fixed;
+  }
+}
+
+
+.faqNavParent {
+  display: flex;          /* Places children side-by-side */
+  flex-wrap: nowrap;      /* Prevents items from wrapping to the next line */
+  overflow-x: auto;       /* Enables horizontal scrolling when content overflows */
+  overflow-y: hidden;     /* Hides accidental vertical scrolling */
+  width: 100%;            /* Defines the visible boundary */
+  gap: 0px;              /* Adds spacing between items */
+  padding: 10px;          /* Prevents scrollbar from clipping item shadows */
+}
+
+.faqNavParent div {
+  flex: 0 0 auto;         /* Crucial: prevents items from shrinking to fit */
+  width: auto;           /* Set whatever width you need for your items */
+  padding: 0 1rem;
+  height: 50px;
+  background-color: #3498db;
+  align-content: flex-end;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0;
+}
+.faqNavParent div:first-child {
+  padding: 0 1rem 0 0;
+}
+.faqNavParent div:last-child {
+  padding: 0 0 0 1rem;
+}
+.faqNavParent div a {
+    text-decoration: none;
+    color: #686766;
+}
+
+
+/* X-SMALL */
+@media (max-width: 549px) {
+  .heroFAQimgwrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .heroFAQimgcontainer div {
+    width: 620px;
+  }
+  .heroFAQimgcontainer div img {
+    translate: 96px 30px;
+    transform: rotate(15deg);
+  }
+  .faqHeroWrapper,
+  .faqNavWrapper {
+    padding-left: calc((100vw - 549px) / 2);
+  }
+  .faqHeaderBig {
+    font-size: 28px;
+  }
+.faqNavParent div {
+    font-size: 16px;
+  }
+}
+
+/* SMALL */
+@media (max-width: 768px) {
+  .heroFAQimgwrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .heroFAQimgcontainer div {
+    width: 700px;
+  }
+  .heroFAQimgcontainer div img {
+    translate: 30px -30px;
+    transform: rotate(5deg);
+  }
+  .faqHeroWrapper,
+  .faqNavWrapper {
+    padding-left: calc((100vw - 549px) / 2);
+  }
+  .faqHeaderBig {
+    font-size: 30px;
+  }
+.faqNavParent div {
+    font-size: 18px;
+  }
+}
+
+/* MEDIUM */
+@media (max-width: 1024px) {
+  .heroFAQimgwrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .heroFAQimgcontainer div {
+    width: 900px;
+  }
+  .heroFAQimgcontainer div img {
+    translate: 0 -20%;
+    transform: rotate(0deg);
+  }
+  .faqHeroWrapper,
+  .faqNavWrapper {
+    padding-left: calc((100vw - 768px) / 2);
+  }
+  .faqHeaderBig {
+    font-size: 44px;
+  }
+.faqNavParent div {
+    font-size: 20px;
+  }
+}
+
+/* LARGE */
+@media (max-width: 1280px) {
+  .heroFAQimgwrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .heroFAQimgcontainer div {
+    width: 1024px;
+  }
+  .heroFAQimgcontainer div img {
+    translate: 40% -80px;
+    transform: rotate(20deg);
+  }
+  .faqHeroWrapper,
+  .faqNavWrapper {
+    padding-left: calc((100vw - 1024px) / 2);
+  }
+  .faqHeaderBig {
+    font-size: 54px;
+  }
+.faqNavParent div{
+    font-size: 22px;
+  }
+}
+
+/* X-LARGE */
+@media (min-width: 1280px) {
+  .heroFAQimgwrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .heroFAQimgcontainer div {
+    width: 1080px;
+  }
+  .heroFAQimgcontainer div img {
+    translate: 40% -100px;
+    transform: rotate(10deg);
+  }
+  .faqHeroWrapper,
+  .faqNavWrapper {
+    padding-left: calc((100vw - 1280px) / 2);
+  }
+    .faqHeaderBig {
+    font-size: 54px;
+  }
+.faqNavParent div {
+    font-size: 22px;
+  }
+}
+
+
+/* HOVERS ETC */
+.hoverHome {
+  color: #00b7ff;
+  text-shadow: 0 0 30px #00b7ffb5;
+}
+.faqBannerText:hover .hoverHome {
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 0px #00b7ff00;
+}
+.hoverBlue:hover,
+.hoverBlue:hover a {
+  color: #00b7ff !important;
+  text-shadow: 0 0 30px #00b7ff !important;
+}
+.hoverGold:hover,
+.hoverGold:hover a {
+  color: #ffca2b !important;
+  text-shadow: 0 0 30px #ffca2b !important;
+}
+.hoverRed:hover,
+.hoverRed:hover a {
+  color: #ff5e5e !important;
+  text-shadow: 0 0 30px #ff5e5e !important;
+}
+.hoverGreen:hover,
+.hoverGreen:hover a {
+  color: #92ff5c !important;
+  text-shadow: 0 0 30px #92ff5c !important;
+}
+.hoverViolet:hover,
+.hoverViolet:hover a {
+  color: #bc69ff !important;
+  text-shadow: 0 0 30px #bc69ff !important;
+}
+.hoverOrange:hover,
+.hoverOrange:hover a {
+  color: #ff8819 !important;
+  text-shadow: 0 0 30px #ff8819 !important;
+}
