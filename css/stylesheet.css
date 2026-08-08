@@ -1,0 +1,2261 @@
+   /* FAQ ONP */
+
+.border-0 {
+  border: 0 !important;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.collapse:not(.show) {
+  display: none;
+}
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+.collapsing.collapse-horizontal {
+  width: 0;
+  height: auto;
+  transition: width 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing.collapse-horizontal {
+    transition: none;
+  }
+}
+
+a[href^="tel"] {
+  color: #ab5b11;
+}
+.faqHeroFull {
+  background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
+  width: 100vw;
+  padding-top: calc(50px + 10vh);
+  z-index: 50;
+  border-top: 30px solid #ffffff;
+}
+#faqNavBar {
+  width: 100%;
+  height: 80px;
+  will-change: transform;
+  background-color: #262626;
+  z-index: 10;
+}
+#faqNavBar.bottom-sticky {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  transition: filter 0.2s ease;
+}
+#faqNavBar.top-sticky {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  transition: filter 0.2s ease;
+}
+#faqNavBar.bottom-sticky #movingFAQbox {
+  padding-top: 0 !important;
+  transition: transform 0.3s ease;
+}
+#faqNavBar .navFAQul {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: end;
+  height: 80px;
+  padding-bottom: 1px;
+}
+#faqNavBar .navFAQli {
+  align-items: end;
+  display: flex;
+  margin-right: 20px;
+}
+#faqNavBar .navFAQlink {
+  text-decoration: none;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  color: #535353;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+  text-align: left;
+  padding-bottom: 4px;
+  border-bottom: 10px solid transparent;
+  transition: all 0.2s ease;
+  will-change: transform;
+}
+.navli00 {
+  order: 0;
+}
+.navli02 {
+  order: 2;
+}
+.navli03 {
+  order: 3;
+}
+.navli04 {
+  order: 4;
+}
+.navli05 {
+  order: 5;
+}
+.navli06 {
+  order: 6;
+}
+body:has(.navli02 .navFAQlink.active) .navli02 {
+  order: 2;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli02 .navFAQlink.active) .navli03 {
+  order: 3;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli02 .navFAQlink.active) .navli04 {
+  order: 4;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli02 .navFAQlink.active) .navli05 {
+  order: 5;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli02 .navFAQlink.active) .navli06 {
+  order: 6;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli03 .navFAQlink.active) .navli03 {
+  order: 2;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli03 .navFAQlink.active) .navli04 {
+  order: 3;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli03 .navFAQlink.active) .navli05 {
+  order: 4;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli03 .navFAQlink.active) .navli06 {
+  order: 5;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli03 .navFAQlink.active) .navli02 {
+  order: 6;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli04 .navFAQlink.active) .navli04 {
+  order: 2;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli04 .navFAQlink.active) .navli05 {
+  order: 3;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli04 .navFAQlink.active) .navli06 {
+  order: 4;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli04 .navFAQlink.active) .navli02 {
+  order: 5;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli04 .navFAQlink.active) .navli03 {
+  order: 6;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli05 .navFAQlink.active) .navli05 {
+  order: 2;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli05 .navFAQlink.active) .navli05 {
+  order: 3;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli05 .navFAQlink.active) .navli02 {
+  order: 4;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli05 .navFAQlink.active) .navli03 {
+  order: 5;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli05 .navFAQlink.active) .navli04 {
+  order: 6;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli06 .navFAQlink.active) .navli06 {
+  order: 2;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli06 .navFAQlink.active) .navli02 {
+  order: 3;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli06 .navFAQlink.active) .navli03 {
+  order: 4;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli06 .navFAQlink.active) .navli04 {
+  order: 5;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body:has(.navli06 .navFAQlink.active) .navli05 {
+  order: 6;
+  transition: order 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+#faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink {
+  color: #ffffff !important;
+  transition: all 0.15s ease-in-out;
+}
+#faqNavBar.bottom-sticky .navFAQul .navFAQhome .navFAQlink.active {
+  color: #00b7ff;
+  transition: all 0.15s ease-in-out;
+}
+#faqNavBar.top-sticky .navFAQhome {
+  color: #ffffff !important;
+  transition: all 0.15s ease-in-out;
+}
+#faqNavBar.top-sticky .navFAQlink {
+  color: #b0aeae;
+  transition: all 0.2s ease;
+}
+#faqNavBar .navFAQlink.active {
+  color: #ffffff !important;
+  border-bottom: 10px solid transparent !important;
+  transition: all 0.2s ease;
+}
+#faqNavBar .navFAQul .navFAQlink:hover {
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+.navFAQul {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 100%;
+  translate: 0px 9px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  height: 100%;
+}
+::-webkit-scrollbar-thumb {
+  height: 100%;
+  background-image: linear-gradient(0deg, #ffffff, #ffffff, #c3c3c3);
+  transition: all 0.1s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(0deg, #ffffff, #ffffff);
+  transition: all 0.1s ease;
+}
+#faqNavBar .navShadow {
+  width: 120%;
+  background-color: transparent;
+  height: 100%;
+  position: absolute;
+  margin-left: -20%;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+#faqNavBar.bottom-sticky .navShadow {
+  -webkit-box-shadow: 0px 29px 34px -4px rgba(0, 0, 0, 0.58);
+  box-shadow: 0px 29px 34px -4px rgba(0, 0, 0, 0.58);
+}
+#faqNavBar.top-sticky .navShadow {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.32);
+}
+#faqNavBar .navShadow {
+  -webkit-box-shadow: 0px 29px 34px -4px rgba(0, 0, 0, 0.58);
+  box-shadow: 0px 29px 34px -4px rgba(0, 0, 0, 0.58);
+  animation: shadow-on-scroll linear both;
+  animation-timeline: view();
+  animation-range: entry 40% cover 80%;
+}
+@keyframes shadow-on-scroll {
+  from {
+    -webkit-box-shadow: 0px 29px 34px -4px rgba(0, 0, 0, 0.58);
+    box-shadow: 0px 29px 34px -4px rgba(0, 0, 0, 0.58);
+  }
+  to {
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.32);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.32);
+  }
+}
+.faqHeroFull .faqHeroContainer {
+  margin-bottom: 0;
+  display: block;
+  width: 100%;
+}
+.faqHeroFull .faqHeroContainer .faqBannerText {
+  margin: 0;
+  padding: 0;
+}
+.navIMGbx {
+  padding-right: 0rem;
+}
+.navLOGOcontainer {
+  width: 30rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.navLOGOcontainer div {
+  aspect-ratio: 1 / 1;
+}
+.navLOGOcontainer div svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  fill: #00b7ff;
+  background-color: transparent;
+}
+body:has(.faqBannerText .hoverHome:hover) .navLOGOcontainer div svg {
+  fill: #ffffff;
+}
+body:has(.faqBannerText .hoverGold:hover) .navLOGOcontainer div svg {
+  fill: #00b7ff;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverGold:hover) .navLOGOcontainer div svg {
+  fill: #ffca2b;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverGold:hover)
+  #faqNavBar.bottom-sticky
+  .navFAQul
+  .navFAQhome
+  .navFAQlink {
+  color: #ffca2b !important;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverRed:hover) .navLOGOcontainer div svg {
+  fill: #ff5e5e;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverRed:hover)
+  #faqNavBar.bottom-sticky
+  .navFAQul
+  .navFAQhome
+  .navFAQlink {
+  color: #ff5e5e !important;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverGreen:hover) .navLOGOcontainer div svg {
+  fill: #92ff5c;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverGreen:hover)
+  #faqNavBar.bottom-sticky
+  .navFAQul
+  .navFAQhome
+  .navFAQlink {
+  color: #92ff5c !important;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverViolet:hover) .navLOGOcontainer div svg {
+  fill: #bc69ff;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverViolet:hover)
+  #faqNavBar.bottom-sticky
+  .navFAQul
+  .navFAQhome
+  .navFAQlink {
+  color: #bc69ff !important;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverOrange:hover) .navLOGOcontainer div svg {
+  fill: #ff8819;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText .hoverOrange:hover)
+  #faqNavBar.bottom-sticky
+  .navFAQul
+  .navFAQhome
+  .navFAQlink {
+  color: #ff8819 !important;
+  transition: all 0.2s ease-in-out;
+}
+body:has(.faqBannerText:hover) .item9 {
+  background-color: #383838 !important;
+  transition: all 0.2s ease-in-out;
+}
+.faqBannerText div a {
+  color: #676767;
+}
+.hoverHome {
+  color: #00b7ff;
+  text-shadow: 0 0 30px #00b7ffb5;
+}
+.faqBannerText:hover .hoverHome {
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 0px #00b7ff00;
+}
+.faqBodyContainer {
+  width: 100vw;
+  overflow-x: scroll;
+}
+.faqFillShaded {
+  width: 100vw;
+  background-color: #ece9e1;
+  border-bottom: 1px solid #ffffff;
+}
+.faqFillNone {
+  width: 100vw;
+  background-color: #f8f5f0;
+  border-bottom: 1px solid #ffffff;
+}
+.faqBodyContainer .faqPageWrapper {
+  display: flex;
+  margin: 0 auto;
+}
+.faqHeroContainer .faqBannerText {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  color: #2a2a2a;
+  text-align: left !important;
+  padding: 5% 0% 5% 5%;
+}
+.faqHeroContainer {
+  display: grid;
+  margin: 4rem 0px;
+  grid-template-columns: auto auto;
+}
+.faqHeaderBig {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+.textFAQbox .faqHeaderBig {
+  padding-bottom: 30px;
+}
+.textFAQbox .faqHeaderBig {
+  text-wrap: balance;
+  padding-top: 2rem;
+}
+.textFAQbox .faqHeaderBig .headerUnderline {
+  display: inline !important;
+  padding-bottom: 6px;
+  border-bottom: 10px solid #787878;
+}
+.containerFAQbody {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  gap: 20px;
+}
+.imageFAQbox {
+  flex: 1;
+}
+.textFAQbox {
+  flex: 2;
+}
+.imageFAQbox img {
+  width: 100%;
+  height: auto;
+}
+.accordionFAQbutton {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
+  position: relative;
+  text-wrap: balance;
+  display: inline;
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: all 0.15s ease-in-out;
+}
+.accordionFAQbody svg {
+  transform-origin: center;
+  clip-path: circle(50%);
+  border-radius: 50%;
+  width: 30px;
+  aspect-ratio: 1;
+}
+.faqDropMenuContainer {
+  margin-bottom: 20px;
+}
+.faqDropMenu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 1px;
+  background-color: #2a2a2a;
+  margin: 10px 0 0 0;
+}
+.faqDropMenu div {
+  display: flex;
+  list-style: none;
+  padding: 10px 0;
+}
+.faqDropMenu.Glossary div {
+  display: flex;
+  list-style: none;
+  padding: 4px 0;
+}
+.faqDropMenu.Glossary div svg {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center;
+  will-change: transform;
+}
+.faqDropMenu.Glossary div svg:hover {
+  transform: scale(1.68);
+  margin-right: 10px;
+}
+.accordionFAQbody.Inset div {
+  padding: 0 0 10px 0 !important;
+}
+.accordionFAQbody.Inset ul {
+  list-style: none;
+  padding-left: 0 !important;
+}
+.accordionFAQbody.Inset ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.accordionFAQbody.Inset ul li div svg {
+  fill: #5c5b5b;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center;
+  will-change: transform;
+}
+.accordionFAQbody.Inset ul li div svg:hover {
+  fill: #2a2a2a !important;
+  transform: scale(1.68);
+  transition: all 0.15s ease-in-out;
+}
+#linkFAQlist li {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+#linkFAQlist li:hover {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  translate: -15px 0px;
+  padding-left: 15px;
+  padding-right: 40px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+#linkFAQlist li .linkHide {
+  transform-origin: center;
+  transform: scale(0);
+  width: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+#linkFAQlist li:hover .linkHide {
+  transform: scale(1);
+  width: 30px;
+  margin: 0 5px;
+}
+#linkFAQlist li .copyHide {
+  display: none;
+}
+#linkFAQlist li:hover .copyHide {
+  display: inline;
+}
+.faqDropMenu div .dropdownFAQitem {
+  display: flex;
+  align-items: center;
+}
+.faqDropMenu div:first-child .dropdownFAQitem {
+  padding-top: 10px;
+}
+.faqDropMenu .dropdownFAQitem span {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  color: #5c5b5b;
+  display: inline;
+  text-align: left;
+  margin-left: 10px;
+  transition: all 0.15s ease-in-out;
+}
+.faqDropMenu div .dropdownFAQitem svg {
+  fill: #f8f5f0;
+  background-color: #5c5b5b;
+  border: 2px solid #5c5b5b;
+  outline: 2px solid #5c5b5b;
+  outline-offset: 4px;
+  border-radius: 50%;
+  clip-path: circle(50%);
+  transition: all 0.15s ease-in-out;
+}
+.faqDropMenu:hover div .dropdownFAQitem span {
+  color: #a2a2a2;
+  transition: all 0.15s ease-in-out;
+}
+.faqDropMenu:hover div .dropdownFAQitem svg {
+  fill: #f8f5f0;
+  background-color: #a2a2a2;
+  outline: 2px solid #f8f5f0;
+  outline-offset: -1px;
+  border: 2px solid #a2a2a2;
+  transition: all 0.15s ease-in-out;
+}
+.faqDropMenu.Glossary:hover div .dropdownFAQitem svg {
+  fill: #a2a2a2;
+  background-color: #ece9e1;
+  border: 0;
+  outline: 0;
+  outline-offset: 0;
+  border-radius: 0;
+  clip-path: none;
+  transition: all 0.15s ease-in-out;
+}
+.faqDropMenu.Glossary div .dropdownFAQitem svg {
+  fill: #5c5b5b;
+  background-color: #ece9e1;
+  border: 0;
+  outline: 0;
+  outline-offset: 0;
+  border-radius: 0;
+  clip-path: none;
+  transition: all 0.15s ease-in-out;
+}
+.faqDropMenu.Glossary div:hover .dropdownFAQitem svg {
+  fill: #2a2a2a !important;
+  background-color: #ece9e1;
+  border: 0;
+  outline: 0;
+  outline-offset: 0;
+  border-radius: 0;
+  clip-path: none;
+  transition: all 0.15s ease-in-out;
+}
+.faqDropMenu div:hover .dropdownFAQitem span {
+  color: #2a2a2a;
+  transition: all 0.15s ease-in-out;
+}
+.faqDropMenu div:hover .dropdownFAQitem svg,
+.faqDropMenu div .dropdownFAQitem:hover svg {
+  fill: #2a2a2a;
+  outline: 2px solid #2a2a2a;
+  border: 2px solid #2a2a2a;
+  outline-offset: -2px;
+  background-color: #f8f5f0 !important;
+  transition: all 0.15s ease-in-out;
+}
+.accordionFAQ .accordianFAQancontainer {
+  padding-top: 10px;
+  padding-bottom: 26px;
+  margin-bottom: 14px;
+  position: relative;
+}
+.accordionFAQ .accordianFAQancontainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 1px;
+  background-color: #2a2a2a;
+  margin: 0 auto;
+}
+.accordionFAQ .accordionFAQitem:last-child .accordianFAQancontainer::after {
+  content: "";
+  height: 0px;
+}
+.accordionFAQbody {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+  position: relative;
+  color: #2a2a2a;
+  background-color: transparent !important;
+  text-align: left;
+  text-wrap: balance;
+}
+.accordionFAQbody strong {
+  font-weight: 600;
+}
+.accordionFAQbody div {
+  display: block;
+  padding: 14px 0;
+  text-wrap: balance;
+}
+.accordionFAQbody ul {
+  list-style-position: outside;
+  padding-left: 2.5rem;
+}
+.accordionFAQbody .faqULinner {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.accordionFAQbody .faqULinner li span {
+  color: #5c5b5b;
+  text-decoration: none;
+  margin-left: 4px;
+}
+.accordionFAQbody .faqULinner li {
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 8px 0;
+  align-items: center;
+}
+.accordionFAQbody .faqULinner li svg {
+  fill: #5c5b5b;
+  transform: translateY(8px);
+    transform-origin: center;
+}
+.accordionFAQbody .faqULinner:hover li span {
+  color: #a2a2a2;
+}
+.accordionFAQbody .faqULinner:hover li svg {
+  fill: #a2a2a2;
+}
+.accordionFAQbody .faqULinner li:hover span {
+  color: #2a2a2a;
+}
+.accordionFAQbody .faqULinner li:hover svg {
+  fill: #2a2a2a;
+}
+.accordionFAQbody ol li::marker,
+.accordionFAQbody ul li::marker {
+  text-align: left;
+}
+.accordionFAQbody ol li,
+.accordionFAQbody ul li {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+.accordionFAQbody ol li:first-child,
+.accordionFAQbody ul li:first-child {
+  padding-top: 14px;
+}
+.accordionFAQbody.Inset ul li:first-child {
+  padding-top: 0px;
+}
+.accordionFAQbutton:hover {
+  z-index: 2;
+  color: #2a2a2a !important;
+}
+.accordionFAQ {
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  background-color: transparent !important;
+}
+.firstAccordion .accordionFAQbutton:not(.collapsed)::before {
+  height: 0px !important;
+}
+.firstAccordion .accordionFAQbutton:not(.collapsed) {
+  margin-top: 0;
+  padding-top: 0;
+}
+.accordionFAQbutton:not(.collapsed)::before {
+  content: "";
+  background: #2a2a2a !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px !important;
+  width: 70%;
+  transition: var(--bs-accordionFAQ-transition);
+}
+.accordionFAQitem:first-child .accordionFAQbutton:not(.collapsed) {
+  padding-top: 0px;
+  transition: var(--bs-accordionFAQ-transition);
+}
+.reset.accordionFAQbutton:not(.collapsed)::before,
+.reset.accordionFAQbutton.collapsed::before {
+  content: "";
+  height: 0px !important;
+}
+.nudgeLeft {
+  padding-left: 2rem;
+}
+.faqBodyContainer:has(.accordionFAQitem .accordionFAQbutton:not(.collapsed))
+  .accordionFAQbutton {
+  color: #a4a4a4;
+}
+.faqBodyContainer:has(.accordionFAQitem .accordionFAQbutton:not(.collapsed))
+  .faqCarret {
+  stroke: #a4a4a4;
+}
+.accordionFAQitem .accordionFAQbutton:not(.collapsed) {
+  color: #2a2a2a !important;
+  padding-top: 30px;
+  position: relative;
+  transition: var(--bs-accordionFAQ-transition);
+}
+.reset.accordionFAQbutton:not(.collapsed) {
+  padding-top: 10px !important;
+}
+.accordionFAQitem:first-child .accordionFAQbutton:not(.collapsed) {
+  padding-top: 0px;
+  transition: var(--bs-accordionFAQ-transition);
+}
+.faqCarret {
+  fill: none;
+  stroke: #2a2a2a;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5px;
+  padding: 4px 0px;
+  transition: all 0.15s ease-in-out;
+}
+.accordionFAQbutton:not(.collapsed) .faqCarret {
+  stroke: #2a2a2a !important;
+  transform: rotate(180deg);
+  transition: all 0.15s ease-in-out;
+}
+.accordionFAQ:hover .accordionFAQbutton {
+  color: #a4a4a4;
+}
+.accordionFAQ:hover .accordionFAQbutton .faqCarret {
+  stroke: #a4a4a4;
+}
+.accordionFAQ .accordionFAQbutton:hover {
+  color: #2a2a2a;
+}
+.accordionFAQ .accordionFAQbutton:hover .faqCarret {
+  stroke: #2a2a2a;
+}
+.faqACCLinkContainWrap .faqACCLinkContainer {
+  display: flex !important;
+  align-content: center;
+  padding: 0 !important;
+}
+.faqACCLinkContainWrap {
+  border: 0;
+  margin-top: 10px;
+}
+.faqACCLinkContainWrap .faqACCLinkContainer h4 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding-right: 10px;
+}
+.faqACCLinkContainWrap .faqACCLinkContainer h4 span {
+  margin-right: 10px;
+  color: #5c5b5b;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+.faqACCLinkContainWrap .faqACCLinkContainer h4 svg {
+  margin-right: 10px;
+  fill: #5c5b5b;
+  border: 2px solid #5c5b5b;
+  background-color: #f8f5f0;
+  width: 30px;
+  height: 30px;
+  clip-path: circle(50%);
+}
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0 !important;
+}
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper div {
+  margin-right: 20px;
+}
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  border: 0 !important;
+}
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a svg {
+  fill: #f8f5f0;
+  background-image: radial-gradient(circle, #5c5b5b 60%, #f8f5f0 70%);
+  border: 2px solid #5c5b5b;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  clip-path: circle(50%);
+  transition: all 0.15s ease-in-out;
+}
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {
+  margin-left: 10px;
+  color: #5c5b5b;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-size: 18px;
+}
+.faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a:hover svg {
+  fill: #2a2a2a;
+  background-image: radial-gradient(circle, #f8f5f0 60%, #2a2a2a 70%);
+  border: 2px solid #5c5b5b;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  clip-path: circle(50%);
+  transition: all 0.15s ease-in-out;
+}
+.faqACCLinkContainWrap:hover .faqACCLinkContainer {
+  opacity: 50%;
+}
+.faqACCLinkContainWrap .faqACCLinkContainer:hover {
+  opacity: 1;
+}
+.faqHR {
+    margin-left: 0;
+    margin-right: auto;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+.accordionFAQheader .collapsed {
+  color: #2a2a2a;
+}
+.faqBannerText div a {
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 10px #00b7ff00;
+}
+.faqBannerText:hover div a {
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 50px #00b7ff00;
+}
+.hoverBlue:hover,
+.hoverBlue:hover a {
+  color: #00b7ff !important;
+  text-shadow: 0 0 30px #00b7ff !important;
+}
+.hoverGold:hover,
+.hoverGold:hover a {
+  color: #ffca2b !important;
+  text-shadow: 0 0 30px #ffca2b !important;
+}
+.hoverRed:hover,
+.hoverRed:hover a {
+  color: #ff5e5e !important;
+  text-shadow: 0 0 30px #ff5e5e !important;
+}
+.hoverGreen:hover,
+.hoverGreen:hover a {
+  color: #92ff5c !important;
+  text-shadow: 0 0 30px #92ff5c !important;
+}
+.hoverViolet:hover,
+.hoverViolet:hover a {
+  color: #bc69ff !important;
+  text-shadow: 0 0 30px #bc69ff !important;
+}
+.hoverOrange:hover,
+.hoverOrange:hover a {
+  color: #ff8819 !important;
+  text-shadow: 0 0 30px #ff8819 !important;
+}
+#faqNavBar.top-sticky .hoverBlue .navFAQlink.active,
+#faqNavBar.top-sticky .hoverBlue .navFAQlink:hover,
+#faqNavBar.top-sticky .hoverBlue .navFAQlink.active:hover {
+  color: #00b7ff !important;
+  border-bottom: 10px solid #00b7ff !important;
+}
+#faqNavBar.top-sticky .hoverGold .navFAQlink.active,
+#faqNavBar.top-sticky .hoverGold .navFAQlink:hover,
+#faqNavBar.top-sticky .hoverGold .navFAQlink.active:hover {
+  color: #ffca2b !important;
+  border-bottom: 10px solid #ffca2b !important;
+}
+#faqNavBar.bottom-sticky .hoverGold .navFAQlink.active {
+  color: #ffffff !important;;
+}
+#faqNavBar.top-sticky .hoverRed .navFAQlink.active,
+#faqNavBar.top-sticky .hoverRed .navFAQlink:hover,
+#faqNavBar.top-sticky .hoverRed .navFAQlink.active:hover {
+  color: #ff5e5e !important;
+  border-bottom: 10px solid #ff5e5e !important;
+}
+#faqNavBar.top-sticky .hoverGreen .navFAQlink.active,
+#faqNavBar.top-sticky .hoverGreen .navFAQlink:hover,
+#faqNavBar.top-sticky .hoverGreen .navFAQlink.active:hover {
+  color: #92ff5c !important;
+  border-bottom: 10px solid #92ff5c !important;
+}
+#faqNavBar.top-sticky .hoverViolet .navFAQlink.active,
+#faqNavBar.top-sticky .hoverViolet .navFAQlink:hover,
+#faqNavBar.top-sticky .hoverViolet .navFAQlink.active:hover {
+  color: #bc69ff !important;
+  border-bottom: 10px solid #bc69ff !important;
+}
+#faqNavBar.top-sticky .hoverOrange .navFAQlink.active,
+#faqNavBar.top-sticky .hoverOrange .navFAQlink:hover,
+#faqNavBar.top-sticky .hoverOrange .navFAQlink.active:hover {
+  color: #ff8819 !important;
+  border-bottom: 10px solid #ff8819 !important;
+}
+#faqNavBar.bottom-sticky .hoverBlue .navFAQlink.active {
+  color: #00b7ff !important;
+}
+#faqNavBar.bottom-sticky .hoverGold .navFAQlink.active {
+  color: #ffca2b !important;
+}
+#faqNavBar.bottom-sticky .hoverRed .navFAQlink.active {
+  color: #ff5e5e;
+}
+#faqNavBar.bottom-sticky .hoverGreen .navFAQlink.active {
+  color: #92ff5c;
+}
+#faqNavBar.bottom-sticky .hoverViolet .navFAQlink.active {
+  color: #bc69ff;
+}
+#faqNavBar.bottom-sticky .hoverOrange .navFAQlink.active {
+  color: #ff8819;
+}
+#faqNavBar.bottom-sticky .hoverOrange .navFAQlink {
+  color: #535353;
+}
+.bodyBlue .textFAQbox .faqHeaderBig .headerUnderline {
+  display: inline !important;
+  border-bottom: 10px solid #00b7ff;
+}
+.bodyGold .textFAQbox .faqHeaderBig .headerUnderline {
+  display: inline !important;
+  border-bottom: 10px solid #ffca2b;
+}
+.bodyRed .textFAQbox .faqHeaderBig .headerUnderline {
+  display: inline !important;
+  border-bottom: 10px solid #ff5e5e;
+}
+.bodyGreen .textFAQbox .faqHeaderBig .headerUnderline {
+  display: inline !important;
+  border-bottom: 10px solid #92ff5c;
+}
+.bodyViolet .textFAQbox .faqHeaderBig .headerUnderline {
+  display: inline !important;
+  border-bottom: 10px solid #bc69ff;
+}
+.sectionFAQmag {
+  position: absolute;
+  z-index: 70;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.sectionFAQImg div {
+  height: auto;
+}
+.sectionFAQImg div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  transition: all 0.2s ease;
+}
+.sectionFAQImg div {
+  animation: mag-onscroll linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes mag-onscroll {
+  from {
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+  to {
+    transform: translateY(-200px) scale(1.86);
+    filter: blur(3px);
+  }
+}
+.sectionFAQImg div img {
+  animation: shado-onscrollNil linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollNil {
+  from {filter: hue-rotate(0deg) saturate(1) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverGold:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollGold linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollGold {
+  from {filter: hue-rotate(220deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverRed:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollRed linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollRed {
+  from {filter: hue-rotate(160deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverGreen:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollGreen linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollGreen {
+  from {filter: hue-rotate(-70deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverViolet:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollViolet linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollViolet {
+  from {filter: hue-rotate(90deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverOrange:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollOrange linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollOrange {
+  from {filter: hue-rotate(180deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverHome:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollHome linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollHome {
+  from {filter: grayscale(1) brightness(110%) contrast(105%) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+.faqHeroFull .faqPageWrapper {
+  display: flex;
+  flex-direction: row !important;
+  padding: 0 2rem;
+}
+.faqHeroContainer,
+.faqNavContainer {
+  padding-left: 2rem;
+}
+.textFAQheader {
+  position: absolute;
+}
+.faqAssets {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 16px;
+  gap: 16px;
+}
+.faqAssets div a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.faqAssets span {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  position: relative;
+  color: #2a2a2a;
+  white-space: nowrap;
+}
+.faqAssets svg {
+  fill: #2a2a2a !important;
+}
+.faqAssets:hover div a span,
+.faqAssets:hover div a svg {
+  opacity: 0.5;
+}
+.faqAssets div a:hover span,
+.faqAssets div a:hover svg {
+  opacity: 1;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.faqAssets div a svg {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center;
+}
+.faqAssets div a:hover svg {
+  transform: scale(1.18);
+}
+html:has(.modalFAQstate:checked) body {
+  overflow: hidden;
+  padding-right: var(--scrollbar-width, 0px); /* Prevents layout twitching */
+}
+.modalFAQstate {
+  display: none;
+}
+.modalFAQoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modalFAQstate:checked ~ .modalFAQoverlay {
+  display: flex;
+}
+.modalFAQbox {
+  background: white;
+  padding: 10px 0 24px 24px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.modalFAQheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-end;
+}
+.modalFAQheader h2 {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #2a2a2a;
+}
+.modalFAQbody {
+  padding-right: 24px;
+}
+.openFAQbtn {
+  display: inline-block;
+  cursor: pointer;
+}
+.closeFAQbtn {
+  width: 60px;
+  height: 60px;
+  padding-right: 24px;
+  font-size: 38px;
+  text-align: right;
+  color: #c3c3c3;
+  cursor: pointer;
+  margin: 0 !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.closeFAQbtn:hover {
+  color: #888888;
+}
+.modalFAQbackdrop-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+.iframeFAQcontainerVID {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 divided by 16) */
+  height: 0;
+  overflow: hidden;
+}
+.iframeFAQcontainerVID iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.iframeFAQcontainerPDF {
+  position: relative;
+  width: 100%;
+  padding-bottom: 129%; /* 16:9 aspect ratio (9 divided by 16) */
+  height: 0;
+  overflow: hidden;
+}
+.iframeFAQcontainerPDF iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+
+.iframeFAQcontainerPDFz {
+  width: 100%;
+  border: none; /* Removes the default border */
+  display: block; /* Eliminates the extra bottom whitespace of inline elements */
+}
+.iframeFAQcontainerPDFz iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+}
+
+.faqFillContacts {
+  width: 100vw;
+  background-color: #ece9e1;
+  background-image: linear-gradient(180deg, #ece9e1, #fff);
+  border-bottom: 1px solid #ffffff;
+}
+.faqFillContacts .textFAQheader {
+  position: relative;
+}
+.faqFillContacts .textFAQheader .headerUnderline {
+  display: inline !important;
+  border-bottom: 10px solid #ff8819;
+}
+.faqFillContacts .faqPageWrapper {
+  display: flex;
+  margin: 0 auto;
+  padding: 10% 2rem;
+}
+.reset.accordianFAQancontainer::after {
+  content: "";
+  height: 0px;
+}
+.faqContactParent {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+.faqContactParent {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+.faqContactChild {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  will-change: transform;
+}
+.faqContactChild .faqContactLogoBox {
+  width: 80px;
+  aspect-ratio: 1;
+}
+.faqContactChild .faqContactLogoBox svg {
+  fill: #ff8819;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.faqContactChild .faqContactLogoBox svg:last-of-type {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.7s cubic-bezier(0.34, 5.56, 0.64, 1);
+}
+.faqContactChild .faqContactTextBox {
+  margin-bottom: 20px;
+}
+.faqContactIcons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.faqContactIcons div {
+  margin-right: 4px !important;
+}
+.faqIconContainer {
+  position: relative;
+}
+.faqIconContainer .faqContIconSVG01 {
+  opacity: 1;
+  transition: all 0.2s ease-out;
+}
+.faqIconContainer .faqContIconSVG02 {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.2s ease-out;
+}
+.faqContactTextH2 {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #2a2a2a;
+  text-align: left;
+  text-wrap: balance;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.faqContactTextH3 a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #666 !important;
+}
+.faqContactTextP {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.6;
+  margin-bottom: 4px;
+  color: #666;
+}
+.faqContactParent .faqContactChild:hover,
+.faqContactParent .faqContactChild:active {
+  background-color: #ffffff5c;
+  margin: -20px;
+  padding: 20px;
+  height: 106%;
+  border-radius: 10px;
+  z-index: 500;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  -webkit-animation: scale-up-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-play-state: running;
+}
+
+@-webkit-keyframes scale-up-left {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+  80% {
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+}
+@keyframes scale-up-left {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+  80% {
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+}
+.faqContactParent .faqContactChild .faqContactIcons svg {
+  fill: #8f8e8b;
+  width: 3.2rem;
+  height: 3.2rem;
+  transition: all 0.2s ease;
+}
+.faqContactParent:hover .faqContactChild .faqContactIcons svg,
+.faqContactParent:active .faqContactChild .faqContactIcons svg {
+  fill: #e6e1da;
+  transition: all 0.2s ease;
+}
+.faqContactParent .faqContactChild:hover .faqContactIcons svg,
+.faqContactParent .faqContactChild:active .faqContactIcons svg {
+  fill: #8f8e8b;
+  transition: all 0.2s ease;
+}
+.faqContactParent .faqContactChild .faqIconContainer:hover .faqContIconSVG01,
+.faqContactParent .faqContactChild .faqIconContainer:active .faqContIconSVG01 {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.faqContactParent .faqContactChild .faqIconContainer:hover .faqContIconSVG02,
+.faqContactParent .faqContactChild .faqIconContainer:active .faqContIconSVG02 {
+  opacity: 1;
+  fill: #8f8e8b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.2s ease-out;
+}
+.faqContactParent:hover .faqContactChild .faqContactLogoBox svg,
+.faqContactParent:active .faqContactChild .faqContactLogoBox svg {
+  fill: #e6e1da;
+}
+.faqContactParent:hover .faqContactChild .faqContactTextH2,
+.faqContactParent:active .faqContactChild .faqContactTextH2 {
+  color: #e6e1da;
+}
+.faqContactParent:hover .faqContactChild .faqContactTextH3 a,
+.faqContactParent:active .faqContactChild .faqContactTextH3 a {
+  color: #e6e1da !important;
+}
+.faqContactParent:hover .faqContactChild .faqContactTextP,
+.faqContactParent:active .faqContactChild .faqContactTextP {
+  color: #e6e1da;
+}
+.faqContactParent .faqContactChild:hover .faqContactLogoBox svg,
+.faqContactParent .faqContactChild:active .faqContactLogoBox svg {
+  fill: #ff8819;
+}
+.faqContactParent .faqContactChild:hover .faqContactTextH2,
+.faqContactParent .faqContactChild:active .faqContactTextH2 {
+  color: #2a2a2a;
+}
+.faqContactParent .faqContactChild:hover .faqContactTextH3 a,
+.faqContactParent .faqContactChild:active .faqContactTextH3 a {
+  color: #ff8819 !important;
+}
+.faqContactParent .faqContactChild:hover .faqContactTextP,
+.faqContactParent .faqContactChild:active .faqContactTextP {
+  color: #2a2a2a;
+}
+.faqContactParent .faqContactChild:hover .faqContactLogoBox svg:first-of-type {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.7s cubic-bezier(0.34, 5.56, 0.64, 1);
+}
+.faqContactParent .faqContactChild:hover .faqContactLogoBox svg:last-of-type {
+  opacity: 1;
+  display: block;
+  transition: opacity 0.7s cubic-bezier(0.34, 5.56, 0.64, 1);
+}
+
+/* ALL MOBILE */
+@media (max-width: 768px) {
+  .faqAssets svg {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+/* ALL DESKTOP */
+@media (min-width: 769px) {
+  .faqAssets svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+/* ALL MOBILE & TABLET */
+@media (max-width: 1024px) {
+  .faqDeskhide {
+    display: inline-flex;
+  }
+  .faqMobilehide {
+    display: none;
+  }
+}
+/* ALL DESKTOP */
+@media (min-width: 1025px) {
+  .faqDeskhide {
+    display: none;
+  }
+  .faqMobilehide {
+    display: inline-flex;
+  }
+}
+/* X-SMALL */
+@media (max-width: 549px) {
+  .faqBodyContainer .faqPageWrapper {
+    max-width: 100%;
+    padding: 0px 2rem 14px 2rem;
+  }
+  #faqNavBar .navFAQlink {
+    font-size: 16px;
+  }
+  .faqHeaderBig {
+    font-size: 28px;
+  }
+  .accordionFAQitem {
+    padding-bottom: 10px;
+    margin-bottom: 1px;
+  }
+  .accordionFAQbutton {
+    font-size: 20px;
+  }
+  .faqHR {
+    width: 70%;
+  }
+  .accordionFAQbody {
+    font-size: 16px;
+  }
+  .accordionFAQbody ol li,
+  .accordionFAQbody ul li {
+    font-size: 15px;
+    padding-top: 4px;
+  }
+  .accordionFAQbody ol {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer h4 span {
+    font-size: 18px;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {
+    font-size: 16px;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer h4 svg {
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
+  .sectionFAQmag {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .sectionFAQImg div {
+    width: 620px;
+  }
+  .sectionFAQImg div img {
+    translate: 96px 30px;
+    transform: rotate(15deg);
+  }
+  .faqHeroWrapper,
+  .faqNavWrapper {
+    padding-left: calc((100vw - 549px) / 2);
+  }
+  .faqFillShaded .containerFAQbody,
+  .faqFillNone .containerFAQbody {
+    flex-direction: column;
+    padding-top: 0px;
+  }
+  .imageFAQbox {
+    width: 60%;
+  }
+  .textFAQheader {
+    position: absolute;
+    width: calc(100% - 2rem);
+    height: 90px;
+  }
+  .textFAQtext {
+    margin-top: 87px;
+  }
+  .faqAssets span {
+    font-size: 15px;
+  }
+  .faqFillContacts .faqPageWrapper {
+    max-width: 100%;
+    padding: 6% 2rem;
+  }
+  .faqContactParent {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+  .faqContactParent .faqChild1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild3 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+  .faqContactParent .faqChild4 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+  }
+  .faqContactParent .faqChild5 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+  }
+  .faqContactParent .faqChild6 {
+    grid-column-start: 1;
+    grid-row-start: 6;
+  }
+  .faqContactParent .faqChild7 {
+    grid-column-start: 1;
+    grid-row-start: 7;
+  }
+  .faqContactParent .faqChild8 {
+    grid-column-start: 1;
+    grid-row-start: 8;
+  }
+  .faqContactTextH2 {
+    font-size: 16px;
+  }
+  .faqContactTextP,
+  .faqContactTextH3 {
+    font-size: 15px;
+  }
+}
+/* SMALL */
+@media (max-width: 768px) {
+  .faqBodyContainer .faqPageWrapper {
+    max-width: 549px;
+    padding: 40px 2rem 60px 2rem;
+  }
+  #faqNavBar .navFAQlink {
+    font-size: 18px;
+  }
+  .faqHeaderBig {
+    font-size: 30px;
+  }
+  .accordionFAQitem {
+    padding-bottom: 10px;
+    margin-bottom: 1px;
+  }
+  .accordionFAQbutton {
+    font-size: 22px;
+  }
+  .faqHR {
+    width: 200px;
+  }
+  .accordionFAQbody {
+    font-size: 18px;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px !important;
+  }
+  .faqACCLinkContainer h4 {
+    padding: 10px 0 5px 0;
+  }
+  .faqACCLinkContainWrap div {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .faqACCLinkContainWrap hr {
+    width: 70%;
+  }
+  .faqACCLinkWrapper div {
+    margin-bottom: 8px !important;
+  }
+  .accordionFAQbody ol li,
+  .accordionFAQbody ul li {
+    font-size: 16px;
+    padding-top: 4px;
+  }
+  .accordionFAQbody ol {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer h4 svg {
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer h4 span {
+    font-size: 18px;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {
+    font-size: 16px;
+  }
+  .sectionFAQmag {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .sectionFAQImg div {
+    width: 700px;
+  }
+  .sectionFAQImg div img {
+    translate: 30px -30px;
+    transform: rotate(5deg);
+  }
+  .faqHeroWrapper,
+  .faqNavWrapper {
+    padding-left: calc((100vw - 549px) / 2);
+  }
+  .faqFillShaded .containerFAQbody,
+  .faqFillNone .containerFAQbody {
+    flex-direction: column;
+    padding-top: 0px;
+  }
+  .imageFAQbox {
+    width: 60%;
+  }
+  .textFAQheader {
+    position: absolute;
+    width: calc(549px - 2rem);
+    height: 100px;
+  }
+  .textFAQtext {
+    margin-top: 100px;
+  }
+  .faqAssets span {
+    font-size: 16px;
+  }
+  .faqFillContacts .faqPageWrapper {
+    max-width: 549px;
+    padding: 8% 2rem;
+  }
+  .faqContactParent {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .faqContactParent .faqChild1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild3 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+  .faqContactParent .faqChild4 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+  }
+  .faqContactParent .faqChild5 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild6 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild7 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+  .faqContactParent .faqChild8 {
+    grid-column-start: 2;
+    grid-row-start: 4;
+  }
+  .faqContactTextH2 {
+    font-size: 18px;
+  }
+  .faqContactTextP,
+  .faqContactTextH3 {
+    font-size: 16px;
+  }
+}
+/* MEDIUM */
+@media (max-width: 1024px) {
+  .faqBodyContainer .faqPageWrapper {
+    max-width: 768px;
+    padding: 10% 2rem;
+  }
+  #faqNavBar .navFAQlink {
+    font-size: 20px;
+  }
+  .accordionFAQitem {
+    padding-bottom: 10px;
+    margin-bottom: 1px;
+  }
+  .faqHeaderBig {
+    font-size: 44px;
+  }
+  .accordionFAQbutton {
+    font-size: 24px;
+  }
+  .faqHR {
+    width: 440px;
+  }
+  .accordionFAQbody {
+    font-size: 20px;
+  }
+  .faqACCLinkContainWrap hr {
+    width: 70%;
+  }
+  .accordionFAQbody ol li,
+  .accordionFAQbody ul li {
+    font-size: 18px;
+    padding-top: 4px;
+  }
+  .accordionFAQbody ol {
+    padding-left: 3rem;
+    list-style-position: outside;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer h4 span {
+    font-size: 16px;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {
+    font-size: 16px;
+  }
+  .sectionFAQmag {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .sectionFAQImg div {
+    width: 900px;
+  }
+  .sectionFAQImg div img {
+    translate: 0 -20%;
+    transform: rotate(0deg);
+  }
+  .faqHeroWrapper,
+  .faqNavWrapper {
+    padding-left: calc((100vw - 768px) / 2);
+  }
+  .faqFillShaded .containerFAQbody,
+  .faqFillNone .containerFAQbody {
+    flex-direction: row-reverse;
+    padding-top: 0px;
+  }
+  .textFAQheader {
+    position: absolute;
+    width: calc(768px - 2rem);
+    height: 120px;
+  }
+  .textFAQtext {
+    margin-top: 120px;
+  }
+  .imageFAQbox {
+    position: absolute;
+    width: 33%;
+    right: 0;
+    z-index: 0;
+  }
+  .faqDropMenu .dropdownFAQitem span {
+    font-size: 16px;
+  }
+  .faqAssets span {
+    font-size: 18px;
+  }
+  .faqFillContacts .faqPageWrapper {
+    max-width: 768px;
+    padding: 10% 2rem;
+  }
+  .faqContactParent {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .faqContactParent .faqChild1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild3 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+  .faqContactParent .faqChild4 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild5 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild6 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+  .faqContactParent .faqChild7 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild8 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+  }
+  .faqContactTextH2 {
+    font-size: 20px;
+  }
+  .faqContactTextP,
+  .faqContactTextH3 {
+    font-size: 18px;
+  }
+}
+/* LARGE */
+@media (max-width: 1280px) {
+  .faqBodyContainer .faqPageWrapper {
+    max-width: 1024px;
+    padding: 10% 2rem;
+  }
+  #faqNavBar .navFAQlink {
+    font-size: 22px;
+  }
+  .accordionFAQitem {
+    padding-bottom: 10px;
+    margin-bottom: 1px;
+  }
+  .faqHeaderBig {
+    font-size: 54px;
+  }
+  .accordionFAQbutton {
+    font-size: 26px;
+  }
+  .faqHR {
+    width: 70%;
+  }
+  .accordionFAQbody {
+    font-size: 22px;
+  }
+  .faqACCLinkContainWrap hr {
+    width: 70%;
+  }
+  .accordionFAQbody ol li,
+  .accordionFAQbody ul li {
+    font-size: 20px;
+    padding-top: 4px;
+  }
+  .accordionFAQbody ol {
+    padding-left: 4rem;
+    list-style-position: outside;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer h4 span {
+    font-size: 18px;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {
+    font-size: 16px;
+  }
+  .sectionFAQmag {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .sectionFAQImg div {
+    width: 1024px;
+  }
+  .sectionFAQImg div img {
+    translate: 40% -80px;
+    transform: rotate(20deg);
+  }
+  .faqHeroWrapper,
+  .faqNavWrapper {
+    padding-left: calc((100vw - 1024px) / 2);
+  }
+  .faqFillShaded .containerFAQbody,
+  .faqFillNone .containerFAQbody {
+    flex-direction: row-reverse;
+    padding-top: 0px;
+  }
+  .textFAQheader {
+    position: absolute;
+    width: calc(1024px - 2rem);
+    height: 120px;
+  }
+  .textFAQtext {
+    margin-top: 130px;
+  }
+  .imageFAQbox {
+    position: absolute;
+    width: 33%;
+    right: 0;
+    z-index: 0;
+  }
+  .faqDropMenu .dropdownFAQitem span {
+    font-size: 18px;
+  }
+  .faqAssets span {
+    font-size: 20px;
+  }
+  .faqFillContacts .faqPageWrapper {
+    max-width: 1024px;
+    padding: 10% 2rem;
+  }
+  .faqContactParent {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .faqContactParent .faqChild1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild3 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild4 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild5 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild6 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild7 {
+    grid-column-start: 4;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild8 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+  }
+  .faqContactTextH2 {
+    font-size: 22px;
+  }
+  .faqContactTextP,
+  .faqContactTextH3 {
+    font-size: 18px;
+  }
+}
+/* X-LARGE */
+@media (min-width: 1280px) {
+  .faqBodyContainer .faqPageWrapper {
+    max-width: 1280px;
+    padding: 10% 2rem;
+  }
+  #faqNavBar .navFAQlink {
+    font-size: 22px;
+  }
+  .accordionFAQitem {
+    padding-bottom: 16px;
+    margin-bottom: 1px;
+  }
+  .faqHeaderBig {
+    font-size: 54px;
+  }
+  .accordionFAQbutton {
+    font-size: 26px;
+  }
+  .faqHR {
+    width: 70%;
+  }
+  .accordionFAQbody {
+    font-size: 22px;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .faqACCLinkContainWrap hr {
+    width: 70%;
+  }
+  .accordionFAQbody ol li,
+  .accordionFAQbody ul li {
+    font-size: 20px;
+    padding-top: 4px;
+  }
+  .accordionFAQbody ol {
+    padding-left: 4rem;
+    list-style-position: outside;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer h4 span {
+    font-size: 20px;
+  }
+  .faqACCLinkContainWrap .faqACCLinkContainer .faqACCLinkWrapper a span {
+    font-size: 18px;
+  }
+  .sectionFAQmag {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .sectionFAQImg div {
+    width: 1080px;
+  }
+  .sectionFAQImg div img {
+    translate: 40% -100px;
+    transform: rotate(10deg);
+  }
+  .faqHeroWrapper,
+  .faqNavWrapper {
+    padding-left: calc((100vw - 1280px) / 2);
+  }
+  .faqFillShaded .containerFAQbody {
+    flex-direction: row-reverse;
+  }
+  .faqFillNone .containerFAQbody {
+    flex-direction: row-reverse;
+  }
+  .textFAQheader {
+    position: absolute;
+    width: calc(1280px - 2rem);
+    height: 120px;
+  }
+  .textFAQtext {
+    margin-top: 130px;
+  }
+  .faqAssets span {
+    font-size: 20px;
+  }
+  .faqFillContacts .faqPageWrapper {
+    max-width: 1280px;
+    padding: 10% 2rem;
+  }
+  .faqContactParent {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .faqContactChild {
+    margin-bottom: 20px;
+  }
+  .faqContactParent .faqChild1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild3 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild4 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild5 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild6 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+  }
+  .faqContactParent .faqChild7 {
+    grid-column-start: 4;
+    grid-row-start: 1;
+  }
+  .faqContactParent .faqChild8 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+  }
+  .faqContactTextH2 {
+    font-size: 22px;
+  }
+  .faqContactTextH3 {
+    font-size: 20px;
+  }
+  .faqContactTextP {
+    font-size: 18px;
+    text-wrap: balance;
+  }
+}
