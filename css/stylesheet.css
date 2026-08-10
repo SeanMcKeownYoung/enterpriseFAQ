@@ -1,5 +1,15 @@
-   /* FAQ ONP */
 
+.bodyFAQall {
+  scroll-behavior: smooth !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  box-sizing: border-box; 
+  margin: -8px -10px;
+  width: 100vw;
+}
 .border-0 {
   border: 0 !important;
 }
@@ -38,7 +48,6 @@ a[href^="tel"] {
   width: 100vw;
   padding-top: calc(50px + 10vh);
   z-index: 50;
-  border-top: 30px solid #ffffff;
 }
 #faqNavBar {
   width: 100%;
@@ -257,11 +266,10 @@ body:has(.navli06 .navFAQlink.active) .navli05 {
   transition: all 0.1s ease;
 }
 #faqNavBar .navShadow {
-  width: 120%;
+  width: 100%;
   background-color: transparent;
   height: 100%;
   position: absolute;
-  margin-left: -20%;
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
@@ -298,6 +306,9 @@ body:has(.navli06 .navFAQlink.active) .navli05 {
 .faqHeroFull .faqHeroContainer .faqBannerText {
   margin: 0;
   padding: 0;
+}
+.faqHeroFull .faqHeroContainer .faqBannerText a {
+  text-decoration: none;
 }
 .navIMGbx {
   padding-right: 0rem;

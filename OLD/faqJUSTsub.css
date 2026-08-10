@@ -1,6 +1,6 @@
 
-    /* Outlines the grids, remove when sending
-div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
+    /* Outlines the grids, remove when sending*/
+div, section, header, nav, ul, li { border: 1px solid cyan !important}
 
 
 .bodyFAQall {
@@ -13,113 +13,63 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 }
 
 .heroFAQcontainer {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 1fr auto; /* Top fills space, bottom shrinks to its content */
-    gap: 0px;
+    display: flex;
+    flex-direction: column;
     margin: -8px -10px;
     width: 100vw;
-    box-sizing: border-box; 
     height: calc(100vh - 100px);
-    background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
+    background-color: #e74c3c;
 }
     
-.heroFAQmain {
-    grid-row-start: 1;
-}
 
 .heroFAQnav {
-    grid-row-start: 2;
-    background-color: blue;
+  flex: 0 0 auto; /* Prevents stretching or shrinking */
 }
 
 
-.mainFAQcontainer {
-  display: grid;
-  height: 100%;           /* Gives the parent vertical height */
-  justify-content: start; /* Centers items horizontally */
-  align-content: center;   /* Centers the grid rows vertically */
-  grid-template-rows: auto auto; /* Two rows that fit their content */
-  color: #fff;
-}
-
-.mainFAQlogos {
-  /* Automatically expands upward as content grows */
-  width: 100%;
-    display: flex;
-  gap: 15px;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 10px;
-  border-radius: 0px;
-}
-
-/* Style the internal divs */
-.box {
+.heroFAQmain {
   flex: 1;
+  background-color: #add8e6;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: rgb(255, 0, 0);
-  border-radius: 4px;
-}
-
-.box-1 {
-  background-color: #3498db;
-}
-
-.box-2 {
-  background-color: #e74c3c;
+  align-items: flex-start;
+  height: 100px;
 }
 
 
-
-.mainFAQheads{
-  /* Automatically expands downward as content grows */
+.heroFAQlogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: aquamarine;
+  height: 100px;
+  width: 100px;
 }
 
-
-.mainFAQlogoContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+.heroFAQlogocontainer svg {
+display: block;        /* Prevents unwanted inline white-space at the bottom */
+  width: 100%;           /* Fills the width of the parent container */
+  height: 100%;          /* Fills the height of the parent container */
+  object-fit: contain;   /* Scales the SVG while maintaining its aspect ratio */
 }
 
-.mainFAQlogobox {
-width: 100px;
-height: 100px;
-background-color: aquamarine;
-}
-.mainFAQlogobox svg {
-width: 100px;
-height: 100px;
-  fill: #00b7ff;
-    object-fit: cover;
-  object-position: center;
+.heroFAQlogocontainer svg {
+  position: relative;
+display: none;        /* Prevents unwanted inline white-space at the bottom */
+  width: 100%;           /* Fills the width of the parent container */
+  height: 100%;          /* Fills the height of the parent container */
+  object-fit: contain;   /* Scales the SVG while maintaining its aspect ratio */
 }
 
-
-.parentZ div {
-  aspect-ratio: 1 / 1;
+.heroFAQtext {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: indianred;
+  height: 100px;
+  width: 100px;
 }
-.parentZ div svg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  fill: #00b7ff;
-  background-color: transparent;
-}
-
-
-
-
-        
 
 
 
