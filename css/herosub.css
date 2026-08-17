@@ -1,0 +1,227 @@
+    /* Outlines the grids, remove when sending
+div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
+
+
+/* MAIN ELEMENTS */
+.faqBODYcontainer {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+  .faqBODYwrapper {
+    width: 100%;
+  }
+.faqHeaderBig {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+.faqHeaderBig a {
+  text-decoration: none;
+
+}
+.faqHEROtext .faqHeaderBig {
+  color: #00b7ff;
+}
+.faqHEROtext .faqHeaderBig a {
+  color: #8f8e8b;
+}
+
+/* X-SMALL */
+@media (max-width: 549px) {
+  .faqBODYwrapper {
+    padding-left: calc((100vw - 549px) / 2);
+  }
+.faqHeaderBig {
+  font-size: 28px;
+}
+}
+
+/* SMALL */
+@media (550px <= width <= 767px) {
+  .faqBODYwrapper {
+    padding-left: calc((100vw - 549px) / 2);
+  }
+.faqHeaderBig {
+  font-size: 34px;
+}
+}
+
+/* MEDIUM */
+@media (768px <= width <= 1023px) {
+  .faqBODYwrapper {
+    padding-left: calc((100vw - 768px) / 2);
+  }
+.faqHeaderBig {
+  font-size: 44px;
+}
+}
+
+/* LARGE */
+@media (1024px <= width <= 1279px) {
+.faqBODYwrapper {
+    padding-left: calc((100vw - 1024px) / 2);
+  }
+.faqHeaderBig {
+  font-size: 54px;
+}
+}
+
+/* X-LARGE */
+@media (min-width: 1280px) {
+  .faqBODYwrapper {
+    margin-left: calc((100vw - 1280px) / 2);
+  }
+.faqHeaderBig {
+  font-size: 54px;
+}
+}
+
+
+
+/* HERO */
+.faqHEROback {
+    background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
+}
+.faqHEROwrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    height: calc(100dvh - 160px);;
+    overflow: hidden;
+    padding-top: 100px;
+}
+.faqHEROimg {
+    grid-row-start: 1;
+}
+
+.faqHEROtext {
+    grid-row-start: 2;
+}
+
+.faqHEROnav {
+    grid-row-start: 3;
+    align-self: end; 
+}
+        
+.faqHEROgrid {
+    display: grid;
+    width: 33%;
+    min-width: 400px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    aspect-ratio: 1 / 1;
+}
+.faqHEROgriditem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.faqHEROgriditem svg {
+    width: 100%;
+    height: 100%;
+    color: #00b7ff; 
+}
+.faqHEROgriditem:last-of-type svg {
+    width: 100%;
+    height: 100%;
+    color: #3f3f3f; 
+}
+
+.faqHEROnav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: end;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+.faqHEROnav::-webkit-scrollbar {
+  height: 16px;
+}
+::-webkit-scrollbar-track {
+  width: 30px !important;
+  height: 100%;
+}
+::-webkit-scrollbar-thumb {
+  height: 100%;
+    width: 30px !important;
+  background-image: linear-gradient(90deg,rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 20%);
+  transition: all 0.1s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: 30px;
+  background-image: linear-gradient(0deg, #ffffff, #ffffff);
+  transition: all 0.1s ease;
+}
+.faqHEROnavitem {
+  align-items: end;
+  display: flex;
+  margin-right: 20px;
+}
+.faqHEROnavitem {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  border: 0;
+  text-align: left;
+  padding-bottom: 4px;
+  height: 80px;
+}
+.faqHEROnavitem a {
+  text-decoration: none;
+  color: #535353;
+}
+.navFAQul {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 100%;
+  translate: 0px 9px;
+}
+
+
+
+
+/* X-SMALL */
+@media (max-width: 549px) {
+.faqHEROnavitem {
+    font-size: 16px;
+  }
+}
+
+/* SMALL */
+@media (550px <= width <= 767px) {
+.faqHEROnavitem {
+    font-size: 16px;
+  }
+}
+
+/* MEDIUM */
+@media (768px <= width <= 1023px) {
+.faqHEROnavitem {
+    font-size: 18px;
+  }
+}
+
+/* LARGE */
+@media (1024px <= width <= 1279px) {
+.faqHEROnavitem {
+    font-size: 20px;
+  }
+}
+
+/* X-LARGE */
+@media (min-width: 1280px) {
+.faqHEROnavitem {
+    font-size: 22px;
+  }
+}

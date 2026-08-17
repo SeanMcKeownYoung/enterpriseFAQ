@@ -1,0 +1,171 @@
+
+.bodyFAQall {
+  scroll-behavior: smooth !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  box-sizing: border-box; 
+  margin: -8px -10px;
+  width: 100vw;
+}
+
+
+.faqHeroFull .faqPageWrapper {
+  display: flex;
+  flex-direction: row !important;
+  padding: 0 2rem;
+}
+
+.faqHeroFull .faqHeroContainer {
+  margin-bottom: 0;
+  display: block;
+  width: 100%;
+}
+.faqHeroFull .faqHeroContainer .faqBannerText {
+  margin: 0;
+  padding: 0;
+}
+.faqHeroFull .faqHeroContainer .faqBannerText a {
+  text-decoration: none;
+}
+
+.heroFAQimgwrapper {
+  position: absolute;
+  z-index: 70;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+
+
+/* X-SMALL */
+@media (max-width: 549px) {
+  .faqWrapper {
+    padding-left: calc((100vw - 549px) / 2);
+  }
+  .heroFAQimgwrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .heroFAQimgcontainer div {
+    width: 620px;
+  }
+  .heroFAQimgcontainer div img {
+    translate: 96px 30px;
+    transform: rotate(15deg);
+  }
+
+  .faqHeaderBig {
+    font-size: 28px;
+  }
+.faqNavParent div {
+    font-size: 16px;
+  }
+    .sectionFAQmag {
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* SMALL */
+@media (max-width: 768px) {
+  .faqWrapper {
+    padding-left: calc((100vw - 549px) / 2);
+  }
+  .heroFAQimgwrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .heroFAQimgcontainer div {
+    width: 700px;
+  }
+  .heroFAQimgcontainer div img {
+    translate: 30px -30px;
+    transform: rotate(5deg);
+  }
+
+  .faqHeaderBig {
+    font-size: 30px;
+  }
+.faqNavParent div {
+    font-size: 18px;
+  }
+}
+
+/* MEDIUM */
+@media (max-width: 1024px) {
+  .faqWrapper {
+    padding-left: calc((100vw - 768px) / 2);
+  }
+  .heroFAQimgwrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .heroFAQimgcontainer div {
+    width: 900px;
+  }
+  .heroFAQimgcontainer div img {
+    translate: 0 -20%;
+    transform: rotate(0deg);
+  }
+
+  .faqHeaderBig {
+    font-size: 44px;
+  }
+    .faqNavParent div {
+    font-size: 20px;
+  }
+}
+
+/* LARGE */
+@media (max-width: 1280px) {
+.faqWrapper {
+    padding-left: calc((100vw - 1024px) / 2);
+  }
+  .heroFAQimgwrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .heroFAQimgcontainer div {
+    width: 1024px;
+  }
+  .heroFAQimgcontainer div img {
+    translate: 40% -80px;
+    transform: rotate(20deg);
+  }
+
+  .faqHeaderBig {
+    font-size: 54px;
+  }
+.faqNavParent div{
+    font-size: 22px;
+  }
+}
+
+/* X-LARGE */
+@media (min-width: 1280px) {
+  .faqWrapper {
+    margin-left: calc((100vw - 1280px) / 2);
+  }
+  .heroFAQimgwrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .heroFAQimgcontainer div {
+    width: 1080px;
+  }
+  .heroFAQimgcontainer div img {
+    translate: 40% -100px;
+    transform: rotate(10deg);
+  }
+
+    .faqHeaderBig {
+    font-size: 54px;
+  }
+.faqNavParent div {
+    font-size: 22px;
+  }
+}
