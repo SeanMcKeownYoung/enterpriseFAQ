@@ -8,7 +8,6 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: #f0f2f5;
 }
   .faqBODYwrapper {
     width: 100%;
@@ -92,7 +91,7 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
-    height: calc(100dvh - 160px);;
+    height: calc(100dvh - 100px);;
     overflow: hidden;
     padding-top: 100px;
 }
@@ -111,8 +110,7 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
         
 .faqHEROgrid {
     display: grid;
-    width: 33%;
-    min-width: 400px;
+    width: 333px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: repeat(3, minmax(0, 1fr));
     gap: 0.5rem;
@@ -187,9 +185,6 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
   height: 100%;
   translate: 0px 9px;
 }
-
-
-
 
 /* X-SMALL */
 @media (max-width: 549px) {
