@@ -1,10 +1,16 @@
 /* SECTIONS */
-.faqSHADEback {
+
+.faqBODYdark {
   background-color: #ece9e1;
   border-top: 1px solid #ffffff;
   padding: 10% 0;
 }
-.faqSHADEback .faqHEADbig, .faqNONEback .faqHEADbig, .faqTXTquestion, .faqTXTanswer {
+.faqBODYlight {
+  background-color: #f8f5f0;
+  border-top: 1px solid #ffffff;
+  padding: 10% 0;
+}
+.faqBODYdark .faqHEADbig, .faqBODYlight .faqHEADbig {
   color: #404041;
 }
 .faqHEADbig .faqHEADunderline {
@@ -45,34 +51,59 @@
   display: inline;
   text-align: left;
   border-radius: 0;
-  overflow-anchor: none;
-  transition: all 0.15s ease-in-out;
+
 }
-.faqTXTquestion:hover {
-  z-index: 2;
-  color: #2a2a2a !important;
+
+.faqQUESTIONwrapper details summary, 
+.faqQUESTIONwrapper details p, 
+.faqQUESTIONwrapper details div, 
+.faqQUESTIONwrapper details svg, 
+.faqQUESTIONwrapper details span {
+  color: #404041;
+  fill: #404041;
+
 }
+
+.faqQUESTIONwrapper:hover details summary, 
+.faqQUESTIONwrapper:hover details p, 
+.faqQUESTIONwrapper:hover details div, 
+.faqQUESTIONwrapper:hover details svg, 
+.faqQUESTIONwrapper:hover details span {
+  color: #a7a9ab;
+  fill: #a7a9ab;
+}
+
+.faqQUESTIONwrapper details:hover summary, 
+.faqQUESTIONwrapper details:hover p, 
+.faqQUESTIONwrapper details:hover div, 
+.faqQUESTIONwrapper details:hover svg, 
+.faqQUESTIONwrapper details:hover span {
+  color: #404041 !important;
+  fill: #404041 !important;
+}
+
+
 .faqTXTanswer {
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.4;
-  position: relative;
   text-align: left;
   text-wrap: balance;
 }
 .faqTXTanswer strong {
   font-weight: 600;
 }
+
 /* X-SMALL */
 @media (max-width: 549px) {
 .faqTXTquestion {
-    font-size: 16px;
+    font-size: 18px;
   }
 .faqTXTanswer {
     font-size: 16px;
   }
-  .faqASSETSbox span {
+.faqASSETSbox span, .faqTXTsub {
     font-size: 15px;
   }
 .faqQUESTIONwrapper {
@@ -83,12 +114,12 @@
 /* SMALL */
 @media (550px <= width <= 767px) {
 .faqTXTquestion {
-    font-size: 20px;
+    font-size: 19px;
   }
 .faqTXTanswer {
-    font-size: 16px;
+    font-size: 17px;
   }
-    .faqASSETSbox span {
+.faqASSETSbox span, .faqTXTsub {
     font-size: 16px;
   }
 .faqQUESTIONwrapper {
@@ -102,10 +133,10 @@
     font-size: 22px;
   }
 .faqTXTanswer {
-    font-size: 18px;
+    font-size: 19px;
   }
-    .faqASSETSbox span {
-    font-size: 18px;
+.faqASSETSbox span, .faqTXTsub {
+    font-size: 16px;
   }
 .faqQUESTIONwrapper {
     width: 768px;
@@ -120,8 +151,8 @@
 .faqTXTanswer {
     font-size: 20px;
   }
-    .faqASSETSbox span {
-    font-size: 20px;
+.faqASSETSbox span, .faqTXTsub {
+    font-size: 18px;
   }
 .faqQUESTIONwrapper {
     width: 1024px;
@@ -131,12 +162,12 @@
 /* X-LARGE */
 @media (min-width: 1280px) {
 .faqTXTquestion {
-    font-size: 24px;
+    font-size: 26px;
   }
 .faqTXTanswer {
     font-size: 22px;
   }
-  .faqASSETSbox span {
+.faqASSETSbox span, .faqTXTsub {
     font-size: 20px;
   }
 .faqQUESTIONwrapper {
@@ -158,7 +189,6 @@
   align-items: center;
 }
 .faqQUESTIONwrapper .faqTXTquestion svg {
-   fill: #404041; 
    padding: 0 0 0 10px;
    transition: all 0.2s ease-in-out;
 }
@@ -167,22 +197,12 @@
   transform: rotate(90deg) scale(1, 1.2);
    padding: 0 0 12px 2px;
 }
-.faqQUESTIONwrapper:hover details .faqTXTquestion svg {
-   fill: #a4a4a4; 
-   transition: all 0.2s ease-in-out;
-}
-.faqQUESTIONwrapper details:hover .faqTXTquestion svg {
-   fill: #404041; 
-   transition: all 0.2s ease-in-out;
-}
 /* Nested inner content container */
 .faqQUESTIONwrapper .faqANSWERbox {
     position: relative; /* Anchor for the pseudo-element */
    margin-bottom: 20px;
    padding-bottom: 10px;
 }
-
-
 .faqQUESTIONwrapper .faqANSWERbox::after {
   content: '';
   position: absolute;
@@ -190,8 +210,85 @@
   left: 0;
   width: 70%;    
   height: 1px;    
-  background: #000;
+  background: #58585a;
 }
+.faqTXTsub {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1%;
+  line-height: 1.4;
+  text-align: left;
+  text-wrap: balance;
+}
+.faqTXTsub strong {
+  font-weight: 600;
+}
+.faqBOXindent {
+    margin-bottom: 20px;
+}
+.faqBOXindent p {
+    margin: 4px 0 10px 1rem;
+    text-indent: -1rem;
+}
+.faqBOXpad1 {
+    padding: 20px 0;
+}
+.faqBOXpad2 {
+    padding: 20px 0 10px 0;
+}
+.faqSUBaccordian {
+    margin-bottom: 0 !important
+}
+.faqSUBaccordian summary p {
+   display: flex;
+    gap: 6px;
+}
+.faqSUBaccordian summary svg {
+   transition: all 0.2s ease-in-out;
+   align-self: center;
+}
+/* Rotate arrow when open */
+.faqSUBaccordian[open] summary svg{
+  transform: rotate(90deg) scale(1, 1.2);
+}
+.faqSUBindent {
+    margin-bottom: 20px;
+    margin: 4px 0 20px 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.faqSUBindent a {
+    text-decoration: none;
+}
+.faqSUBindent div a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.faqSUBindent div a span {
+    align-self: flex-start !important;
+}
+.faqLOGOdot {
+  transform-origin: center;
+  clip-path: circle(50%);
+  border-radius: 50%;
+  width: 24px;
+  aspect-ratio: 1;
+}
+
+.faqSUBindent:hover div a, .faqSUBindent:hover div a strong, .faqSUBindent:hover div a span, .faqSUBindent:hover div a svg {
+    color: #a7a9ab !important;
+    fill: #a7a9ab !important;
+    transition: color 0.1s ease-in-out;
+}
+
+.faqSUBindent div a:hover, .faqSUBindent div a:hover strong, .faqSUBindent div a:hover span, .faqSUBindent div a:hover svg {
+    color: #2a2a2a !important;
+    fill: #2a2a2a !important;
+    transition: color 0.1s ease-in-out;
+}
+
 .faqASSETSbox {
   display: flex;
   flex-direction: row;
@@ -211,12 +308,11 @@
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 500;
   position: relative;
-  color: #404041;
   white-space: nowrap;
   align-self: center;
 }
 .faqASSETSbox svg {
-  fill: #404041 !important;
+
 }
 .faqASSETSbox:hover div a span,
 .faqASSETSbox:hover div a svg {
