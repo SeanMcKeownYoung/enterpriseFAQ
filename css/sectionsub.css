@@ -570,13 +570,14 @@ fill: #bc69ff;
 
 
 
-
+@media (min-width: 650px) {
 .faqGRIDcontainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px 10px;
   max-width: 90%;
+}
 }
 .faqGRIDitem {
   display: flex;
@@ -783,16 +784,15 @@ fill: #bc69ff;
   display: grid;
   grid-template-columns: auto 1fr; 
   grid-template-rows: auto auto auto; 
-  gap: 10px;
+  gap: 1rem;
 }
 
 
 /* SVG constrained to its zone */
 .faqCONTACTsvgbox {
-  grid-column: 1;
-  grid-row: 1 / span 2; /* Spans both text rows on mobile */
-  width: 80px; /* Adjust size as needed */
-  height: 80px;
+    grid-row: span 2 / span 2;
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
 }
 
 .faqCONTACTsvgbox svg {
@@ -811,11 +811,12 @@ fill: #bc69ff;
 .faqCONTACTtext-2 {
   grid-column: 2;
   grid-row: 2;
+align-self: flex-end;
 }
 
 .faqCONTACTtext-3 {
-    grid-column: 2;
-    grid-row: 3;
+    grid-column: span 2 / span 2;
+    grid-row-start: 3;
   }
 /* Desktop Layout (SVG top-left, Text stacked underneath) */
 @media (min-width: 649px) {
@@ -854,6 +855,7 @@ fill: #bc69ff;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     text-decoration: none;
     color: #404041;
     gap: 0.2rem;
@@ -866,7 +868,6 @@ fill: #bc69ff;
 .faqCONTACTtext-2 p {
   display: inline-block;
 }
-
 
 .faqGRIDitem {
   display: flex;
@@ -912,3 +913,41 @@ fill: #bc69ff;
   color: #2a2a2a; fill:#2a2a2a !important;
 }
 
+/* X-SMALL */
+@media (max-width: 749px) {
+.faqCONTACTcontacts {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 0.4rem;
+    margin-top: 20px;
+}
+.faqCONTACTcontacts div a {
+    text-decoration: none;
+    color: #404041;
+    gap: 10px;
+}
+.faqCONTACTcontainer p {
+    font-size: 18px;
+}
+
+.faqCONTACTcontainer h3 a {
+    font-size: 24px;
+    color: #828286;
+}
+.faqCONTACTcontacts div a svg {
+    width: 80px !important;
+    height: 80px;
+}
+.faqCONTACTcontainer {
+  gap: 0 20px;
+}
+.faqGRIDitem {
+  width: 90%;       /* Or a fixed width like 300px */
+  margin: 0 auto;   /* Automatically splits left and right spacing */
+}
+
+.faqCONTACTcontacts > div:not(:first-child) a p {
+  display: none;
+}
+}
