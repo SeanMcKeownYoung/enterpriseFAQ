@@ -569,76 +569,281 @@ fill: #bc69ff;
 }
 
 
+
+
+.faqGRIDcontainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px 10px;
+  max-width: 90%;
+}
+.faqGRIDitem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #404041;
+  font-weight: 500;
+  padding-bottom: 2rem;
+  transition: color 0.2s ease-in-out;
+}
+.faqGRIDitem a  {
+  color: #58585a;
+  text-decoration: none;
+}
+.faqGitem1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.faqGitem2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.faqGitem3 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.faqGitem4 {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+.faqGitem5 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.faqGitem6 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.faqGitem7 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.faqGitem8 {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+/* Tablet styles */
+@media (max-width: 1280px) {
+  .faqGRIDcontainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(60px, auto));
+    gap: 10px 10px;
+  }
+  
+  .faqGitem1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .faqGitem2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  .faqGitem3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+  
+  .faqGitem4 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  
+  .faqGitem5 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  
+  .faqGitem6 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  
+  .faqGitem7 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  
+  .faqGitem8 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 900px) {
+  .faqGRIDcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, minmax(60px, auto));
+    gap: 10px 10px;
+  }
+  
+  .faqGitem1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .faqGitem2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  
+  .faqGitem3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  
+  .faqGitem4 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  
+  .faqGitem5 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  .faqGitem6 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  
+  .faqGitem7 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  
+  .faqGitem8 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 649px) {
+  .faqGRIDcontainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 10px 10px;
+  }
+  
+  .faqGitem1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  
+  .faqGitem2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  
+  .faqGitem3 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+  
+  .faqGitem4 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+  }
+  
+  .faqGitem5 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+  }
+  
+  .faqGitem6 {
+    grid-column-start: 1;
+    grid-row-start: 6;
+  }
+  
+  .faqGitem7 {
+    grid-column-start: 1;
+    grid-row-start: 7;
+  }
+  
+  .faqGitem8 {
+    grid-column-start: 1;
+    grid-row-start: 8;
+  }
+}
+
+/* Mobile First Layout (SVG left, Text stacked on the right) */
 .faqCONTACTcontainer {
-    display: flex;
-    flex-direction: row;
-
+  display: grid;
+  grid-template-columns: auto 1fr; 
+  grid-template-rows: auto auto auto; 
+  gap: 10px;
 }
 
 
-.faqCONTACTcard p {
-font-weight: 500;
-line-height: 1.4;
-}
-/* X-SMALL */
-@media (max-width: 549px) {
-.faqCONTACTcard p {
-    font-size: 14px;
-  }
+/* SVG constrained to its zone */
+.faqCONTACTsvgbox {
+  grid-column: 1;
+  grid-row: 1 / span 2; /* Spans both text rows on mobile */
+  width: 80px; /* Adjust size as needed */
+  height: 80px;
 }
 
-/* SMALL */
-@media (550px <= width <= 767px) {
-.faqCONTACTcard p {
-    font-size: 14px;
-  }
-}
-
-/* MEDIUM */
-@media (768px <= width <= 1023px) {
-.faqCONTACTcard p {
-    font-size: 15px;
-  }
-}
-
-/* LARGE */
-@media (1024px <= width <= 1279px) {
-.faqCONTACTcard p {
-    font-size: 16px;
-  }
-}
-
-/* X-LARGE */
-@media (min-width: 1280px) {
-.faqCONTACTcard p {
-    font-size: 16px;
-}
-}
-
-.faqCONTACTcard .faqCONTACTsvgbox {
-    padding-bottom: 10px;
-}
 .faqCONTACTsvgbox svg {
+  width: 100%;
+  height: 100%;
   display: block;
-  margin-right: auto;
-  margin-left: 0; /* Ensures no left offset spacing */
-  width: 100px;
-  height: 100px;
   color: #ff8819;
+  transition: color 0.2s ease-in-out;
 }
 
-.faqCONTACTtextbox a {
-    color: #58585a;
-    text-decoration: none;
-    font-weight: 600;
+.faqCONTACTtext-1 {
+  grid-column: 2;
+  grid-row: 1;
 }
-.faqCONTACTtextbox h3 {
-    display: flex;
-    flex-direction: column;
-    color: #404041;
+
+.faqCONTACTtext-2 {
+  grid-column: 2;
+  grid-row: 2;
 }
-.faqCONTACTaddress div p{
-    color: #404041;  
+
+.faqCONTACTtext-3 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+/* Desktop Layout (SVG top-left, Text stacked underneath) */
+@media (min-width: 649px) {
+  .faqCONTACTcontainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .faqCONTACTsvgbox {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 8px;
+  }
+
+  .faqCONTACTtext-1 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+.faqCONTACTtext-2 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+.faqCONTACTtext-3 {
+    grid-column: 1;
+    grid-row: 4;
+  }
 }
 .faqCONTACTcontacts {
     display: flex;
@@ -656,63 +861,54 @@ line-height: 1.4;
 .faqCONTACTcontacts svg {
     fill: #58585a;
     width: 28px;
+    transition: fill 0.2s ease-in-out;
+}
+.faqCONTACTtext-2 p {
+  display: inline-block;
 }
 
-.faqCONTACTcontainer .faqCONTACTcard {
-    width: 200px;
+
+.faqGRIDitem {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  gap: 10px;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #404041;
+  font-weight: 500;
+  padding-bottom: 2rem;
+}
+.faqGRIDitem a  {
+  color: #58585a;
+  text-decoration: none;
 }
 
-.faqCONTACTcontainer .faqCONTACTcard .faqCONTACTtextbox {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    color: #404041;
+.faqGRIDcontainer:hover .faqGRIDitem .faqCONTACTsvgbox svg, 
+.faqGRIDcontainer:hover .faqGRIDitem, 
+.faqGRIDcontainer:hover .faqGRIDitem a, 
+.faqGRIDcontainer:hover .faqGRIDitem .faqCONTACTcontacts div a svg {
+  color: #b4b3ad;
+  fill: #b4b3ad;
+  transition: color fill 0.2s ease-in-out;
 }
 
-.faqCONTACTcontainer:hover .faqCONTACTcard .faqCONTACTtextbox h3, .faqCONTACTcontainer:hover .faqCONTACTcard .faqCONTACTtextbox a, .faqCONTACTcontainer:hover .faqCONTACTcard svg {
-    color: #ababa7 !important;
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTsvgbox svg, 
+.faqGRIDcontainer .faqGRIDitem:hover, 
+.faqGRIDcontainer .faqGRIDitem:hover a, 
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts div a svg {
+  color: #2a2a2a;
+  fill: #2a2a2a;
+  transition: color fill 0.2s ease-in-out;
+}
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTsvgbox svg {
+  color: #ff8819;
+  transition: color 0.2s ease-in-out;
+}
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts:hover div a p, 
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts:hover div a svg {
+  color: #939597; fill:#939597;
 }
 
-.faqCONTACTcontainer .faqCONTACTcard:hover .faqCONTACTtextbox h3, .faqCONTACTcontainer .faqCONTACTcard:hover .faqCONTACTtextbox a {
-    color: #404041 !important;
-}
-.faqCONTACTcontainer .faqCONTACTcard:hover svg {
-    color: #ff8819 !important;
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts div:hover a p, 
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts div:hover a svg {
+  color: #2a2a2a; fill:#2a2a2a !important;
 }
 
-.faqCONTACTcontainer .faqCONTACTcard .faqCONTACTaddress {
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.faqCONTACTcontainer .faqCONTACTcard .faqCONTACTcontacts {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.faqCONTACTcontainer .faqCONTACTcard:hover {
-    width: 240px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    gap: 10px;
-}
-.faqCONTACTcontainer .faqCONTACTcard:hover .faqCONTACTaddress {
-    opacity: 1;
-    transition: opacity 0.4s ease-in-out;
-}
-
-.faqCONTACTcontainer .faqCONTACTcard:hover .faqCONTACTcontacts {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.faqBODYcontact {
-    width: 100%;
-background: linear-gradient(90deg,rgb(255, 0, 0) 20%, rgba(230, 9, 9, 0) 20%);
-}
