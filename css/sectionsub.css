@@ -1,17 +1,24 @@
 /* SECTIONS */
-
+.faqBODYcontainer h1, .faqBODYcontainer h2, .faqBODYcontainer h3, .faqBODYcontainer h4, .faqBODYcontainer h5, .faqBODYcontainer p {
+    margin: 0;
+    padding: 0;
+}
 .faqBODYdark {
   background-color: #ece9e1;
   border-top: 1px solid #ffffff;
-  padding: 10% 0;
+  padding: 5% 0 10% 0;
 }
 .faqBODYlight {
   background-color: #f8f5f0;
   border-top: 1px solid #ffffff;
-  padding: 10% 0;
+  padding: 5% 0 10% 0;
 }
+
 .faqBODYdark .faqHEADbig, .faqBODYlight .faqHEADbig {
   color: #404041;
+}
+.faqBODYcontainer .faqHEADbig  {
+    padding: 3rem 0;
 }
 .faqHEADbig .faqHEADunderline {
   display: inline !important;
@@ -51,7 +58,6 @@
   display: inline;
   text-align: left;
   border-radius: 0;
-
 }
 
 .faqQUESTIONwrapper details summary, 
@@ -62,24 +68,6 @@
   color: #404041;
   fill: #404041;
 
-}
-
-.faqQUESTIONwrapper:hover details summary, 
-.faqQUESTIONwrapper:hover details p, 
-.faqQUESTIONwrapper:hover details div, 
-.faqQUESTIONwrapper:hover details svg, 
-.faqQUESTIONwrapper:hover details span {
-  color: #a7a9ab;
-  fill: #a7a9ab;
-}
-
-.faqQUESTIONwrapper details:hover summary, 
-.faqQUESTIONwrapper details:hover p, 
-.faqQUESTIONwrapper details:hover div, 
-.faqQUESTIONwrapper details:hover svg, 
-.faqQUESTIONwrapper details:hover span {
-  color: #404041 !important;
-  fill: #404041 !important;
 }
 
 
@@ -197,11 +185,24 @@
   transform: rotate(90deg) scale(1, 1.2);
    padding: 0 0 12px 2px;
 }
+.faqQUESTIONwrapper details[open] .faqInitial {
+  transform: none;
+  padding: 0 ;
+}
+.faqInitial {
+    align-self: center;
+}
 /* Nested inner content container */
 .faqQUESTIONwrapper .faqANSWERbox {
     position: relative; /* Anchor for the pseudo-element */
-   margin-bottom: 20px;
-   padding-bottom: 10px;
+    padding: 10px 0;
+}
+.faqQUESTIONwrapper .faqANSWERbox div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.faqQUESTIONwrapper .faqANSWERbox div:first-of-type {
+
 }
 .faqQUESTIONwrapper .faqANSWERbox::after {
   content: '';
@@ -227,7 +228,7 @@
     margin-bottom: 20px;
 }
 .faqBOXindent p {
-    margin: 4px 0 10px 1rem;
+    padding-left: 2rem;
     text-indent: -1rem;
 }
 .faqBOXpad1 {
@@ -251,22 +252,20 @@
 .faqSUBaccordian[open] summary svg{
   transform: rotate(90deg) scale(1, 1.2);
 }
-.faqSUBindent {
-    margin-bottom: 20px;
-    margin: 4px 0 20px 1rem;
+.faqBODYlist {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.faqSUBindent a {
+.faqBODYlist a {
     text-decoration: none;
 }
-.faqSUBindent div a {
+.faqBODYlist div a {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
-.faqSUBindent div a span {
+.faqBODYlist div a span {
     align-self: flex-start !important;
 }
 .faqLOGOdot {
@@ -277,17 +276,29 @@
   aspect-ratio: 1;
 }
 
-.faqSUBindent:hover div a, .faqSUBindent:hover div a strong, .faqSUBindent:hover div a span, .faqSUBindent:hover div a svg {
+.faqBODYlist:hover div a, .faqBODYlist:hover div a strong, .faqBODYlist:hover div a span, .faqBODYlist:hover div a svg {
     color: #a7a9ab !important;
     fill: #a7a9ab !important;
     transition: color 0.1s ease-in-out;
 }
 
-.faqSUBindent div a:hover, .faqSUBindent div a:hover strong, .faqSUBindent div a:hover span, .faqSUBindent div a:hover svg {
+.faqBODYlist div a:hover, .faqBODYlist div a:hover strong, .faqBODYlist div a:hover span, .faqBODYlist div a:hover svg {
     color: #2a2a2a !important;
     fill: #2a2a2a !important;
     transition: color 0.1s ease-in-out;
 }
+.faqSUBindent {
+    padding-left: 20px;
+}
+
+.faqBODYlistapp {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 
 .faqASSETSbox {
   display: flex;
@@ -311,8 +322,18 @@
   white-space: nowrap;
   align-self: center;
 }
-.faqASSETSbox svg {
-
+.faqLINKextra  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+}
+.faqLINKextra div a {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 10px;
+    text-decoration: none;
 }
 .faqASSETSbox:hover div a span,
 .faqASSETSbox:hover div a svg {
@@ -372,7 +393,6 @@ html:has(.modalFAQstate:checked) body {
     padding: 20px 20px 40px 20px;
   border-radius: 8px;
   max-width: 800px;
-
   width: 90%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -465,4 +485,234 @@ html:has(.modalFAQstate:checked) body {
     align-items: center;
     gap: 10px;
     text-decoration: none;
+}
+
+.faqBODYlistitem {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-content: center;
+    transition: all 0.3s ease-in-out;
+}
+.faqBODYlistitem p {
+    margin: 0;
+    align-self: center;
+    font-weight: 600;
+}
+
+
+.faqBODYlistitem div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.faqBODYlistitem svg {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+}
+.faqBODYlistitem div a {
+    display: flex;
+    flex-direction: row;
+}
+.faqBODYlistitem div a svg {
+  fill: #939597;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.faqHIDEdescription {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.faqHIDEdescription div {
+    position: absolute;
+    padding-left: 4px;
+}
+.faqBODYlistitem div:hover .faqSHOWapple svg, .faqBODYlistitem div:hover .faqSHOWgoogle svg {
+  fill: #a7a9ab;
+}
+
+.faqBODYlistitem div .faqSHOWapple:hover svg, .faqBODYlistitem div .faqSHOWgoogle:hover svg {
+  fill: #58585a;
+}
+
+.faqHIDEapple, .faqHIDEgoogle {
+    opacity: 0;
+}
+
+.faqBODYlistitem:has(.faqSHOWapple:hover) .faqHIDEapple {
+    opacity: 1;
+}
+.faqBODYlistitem:has(.faqSHOWgoogle:hover) .faqHIDEgoogle {
+    opacity: 1;
+}
+
+.faqBOXcontactus {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.faqBOXcontactus .faqSUBaccordian summary div, .faqBOXcontactus .faqSUBaccordian div a {
+display: flex;
+gap: 10px;
+align-content: center;
+}
+
+.faqHOVERbox:hover a span {
+  color: #bc69ff;
+     transition: all 0.2s ease-in-out;
+}
+.faqHOVERbox:hover a svg {
+fill: #bc69ff;
+   transition: all 0.2s ease-in-out;
+}
+
+
+.faqCONTACTcontainer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.faqCONTACTcard p {
+font-weight: 500;
+line-height: 1.4;
+}
+/* X-SMALL */
+@media (max-width: 549px) {
+.faqCONTACTcard p {
+    font-size: 14px;
+  }
+}
+
+/* SMALL */
+@media (550px <= width <= 767px) {
+.faqCONTACTcard p {
+    font-size: 14px;
+  }
+}
+
+/* MEDIUM */
+@media (768px <= width <= 1023px) {
+.faqCONTACTcard p {
+    font-size: 15px;
+  }
+}
+
+/* LARGE */
+@media (1024px <= width <= 1279px) {
+.faqCONTACTcard p {
+    font-size: 16px;
+  }
+}
+
+/* X-LARGE */
+@media (min-width: 1280px) {
+.faqCONTACTcard p {
+    font-size: 16px;
+}
+}
+
+.faqCONTACTcard .faqCONTACTsvgbox {
+    padding-bottom: 10px;
+}
+.faqCONTACTsvgbox svg {
+  display: block;
+  margin-right: auto;
+  margin-left: 0; /* Ensures no left offset spacing */
+  width: 100px;
+  height: 100px;
+  color: #ff8819;
+}
+
+.faqCONTACTtextbox a {
+    color: #58585a;
+    text-decoration: none;
+    font-weight: 600;
+}
+.faqCONTACTtextbox h3 {
+    display: flex;
+    flex-direction: column;
+    color: #404041;
+}
+.faqCONTACTaddress div p{
+    color: #404041;  
+}
+.faqCONTACTcontacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.faqCONTACTcontacts div a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #404041;
+    gap: 0.2rem;
+}
+.faqCONTACTcontacts svg {
+    fill: #58585a;
+    width: 28px;
+}
+
+.faqCONTACTcontainer .faqCONTACTcard {
+    width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  gap: 10px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.faqCONTACTcontainer .faqCONTACTcard .faqCONTACTtextbox {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    color: #404041;
+}
+
+.faqCONTACTcontainer:hover .faqCONTACTcard .faqCONTACTtextbox h3, .faqCONTACTcontainer:hover .faqCONTACTcard .faqCONTACTtextbox a, .faqCONTACTcontainer:hover .faqCONTACTcard svg {
+    color: #ababa7 !important;
+}
+
+.faqCONTACTcontainer .faqCONTACTcard:hover .faqCONTACTtextbox h3, .faqCONTACTcontainer .faqCONTACTcard:hover .faqCONTACTtextbox a {
+    color: #404041 !important;
+}
+.faqCONTACTcontainer .faqCONTACTcard:hover svg {
+    color: #ff8819 !important;
+}
+
+.faqCONTACTcontainer .faqCONTACTcard .faqCONTACTaddress {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.faqCONTACTcontainer .faqCONTACTcard .faqCONTACTcontacts {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.faqCONTACTcontainer .faqCONTACTcard:hover {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    gap: 10px;
+}
+.faqCONTACTcontainer .faqCONTACTcard:hover .faqCONTACTaddress {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.faqCONTACTcontainer .faqCONTACTcard:hover .faqCONTACTcontacts {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.faqBODYcontact {
+    width: 100%;
+background: linear-gradient(90deg,rgb(255, 0, 0) 20%, rgba(230, 9, 9, 0) 20%);
 }
