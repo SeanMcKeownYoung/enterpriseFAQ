@@ -1,3 +1,8 @@
+    /* Outlines the grids, remove when sending
+div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
+
+
+
 /* SECTIONS */
 .faqBODYcontainer h1, .faqBODYcontainer h2, .faqBODYcontainer h3, .faqBODYcontainer h4, .faqBODYcontainer h5, .faqBODYcontainer p {
     margin: 0;
@@ -950,4 +955,68 @@ align-self: flex-end;
 .faqCONTACTcontacts > div:not(:first-child) a p {
   display: none;
 }
+}
+.faqGRIDlistcontainer {
+  display: grid;
+  /* Core responsive logic */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  /* Spacing between faqGRIDlistcards */
+  gap: 20px; 
+  /* Fills parent width */
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.faqGRIDlistcard {
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+    /* Fixed dimensions for the SVG link wrapper */
+    .faqGRIDlistICON {
+      width: 30px;
+      height: 30px;
+     transition: all 0.2s ease-in-out;
+    }
+
+    /* Ensures the SVG scales exactly to the link wrapper */
+    .faqGRIDlistICON svg {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ffffff;
+    border-radius: 50%;
+    background-color: #fff;
+     transition: all 0.2s ease-in-out;
+    }
+
+    /* Content wrapper adjustments */
+    .faqGRIDlistCONTENT {
+      flex: 1;
+    }
+    .faqGRIDlistCONTENT p {
+      line-height: 1.2;
+      width: 80%;
+      transition: all 0.2s ease-in-out;
+    }
+    .faqGRIDlistCONTENT p:first-child {
+      padding-bottom: 4px;
+      width: 100%;
+           transition: all 0.2s ease-in-out;
+    }
+    .faqGRIDlistICON:hover {
+      transform: scale(2) translate(7.5px, 2px);
+    }
+    .faqGRIDlistICON:hover svg {
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    background-color: #fff;
+    }
+.faqGRIDlistcard:has(.faqGRIDlistICON:hover) .faqGRIDlistCONTENT p:first-child {
+      transform: translate(0px, 20px);
+}
+.faqGRIDlistcard:has(.faqGRIDlistICON:hover) .faqGRIDlistCONTENT p:not(:first-child) {
+      transform: translate(0px, 10px);
+      opacity: 0.2;
 }
