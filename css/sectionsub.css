@@ -200,7 +200,7 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 /* Nested inner content container */
 .faqQUESTIONwrapper .faqANSWERbox {
     position: relative; /* Anchor for the pseudo-element */
-    padding: 10px 0;
+    padding: 20px 0;
 }
 .faqQUESTIONwrapper .faqANSWERbox div {
     padding-top: 5px;
@@ -966,6 +966,30 @@ align-self: flex-end;
   width: 100%; 
   box-sizing: border-box;
 }
+.faqGRIDlistcontainer {
+  display: grid;
+  /* Core responsive logic */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  /* Spacing between faqGRIDlistcards */
+  gap: 20px; 
+  /* Fills parent width */
+  width: 100%; 
+  box-sizing: border-box;
+}
+.faqGRIDlistcontainer02 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 400px));
+  gap: 20px; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+.faqGRIDlistcontainer04 {
+  display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px; 
+  width: 100%; 
+  box-sizing: border-box;
+}
 
 .faqGRIDlistcard {
   box-sizing: border-box; 
@@ -974,6 +998,45 @@ align-self: flex-end;
   align-items: flex-start;
 }
 
+.faqGRIDlistcontainer03 {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  gap: 0px; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.faqGRIDlistcard03head01 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  padding-right: 20px; 
+}
+.faqGRIDlistcard03head02 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.faqGRIDlistcard03box01 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  padding-right: 20px; 
+}
+
+.faqGRIDlistcard03box02 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.faqGRIDlistcard03box03 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+.rightFAQborder {
+border-right: 1px solid #939597;
+margin-right: 20px;
+}
+        
     /* Fixed dimensions for the SVG link wrapper */
     .faqGRIDlistICON {
       width: 30px;
