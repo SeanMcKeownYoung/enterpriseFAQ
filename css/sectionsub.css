@@ -182,7 +182,7 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 
 .faqQUESTIONwrapper details::details-content {
   block-size: 0;
-  overflow: hidden;
+
   opacity: 0;
   transition: 
     block-size 0.4s ease, 
@@ -257,15 +257,24 @@ details[open]::details-content {
   height: 1px; 
   background-color: #a7a9ab; 
 }
-
-Sdetails::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 70%;    
-  height: 3px;    
-  background: #58585a;
+.faqSUBaccordian::before {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 0px !important; 
+  background-color: #a7a9ab; 
+  margin: 0 !important;
 }
+.faqSUBaccordian::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 0px !important; 
+  background-color: #a7a9ab; 
+  margin: 0 !important;
+}
+
+
 .faqTXTsub {
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 500;
@@ -305,6 +314,7 @@ Sdetails::after {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: 10px 0;
 }
 .faqBODYlist a {
     text-decoration: none;
@@ -321,7 +331,7 @@ Sdetails::after {
   transform-origin: center;
   clip-path: circle(50%);
   border-radius: 50%;
-  width: 24px;
+  width: 30px;
   aspect-ratio: 1;
 }
 
@@ -337,15 +347,12 @@ Sdetails::after {
     transition: color 0.1s ease-in-out;
 }
 .faqSUBindent {
-    padding-left: 20px;
+    padding-left: 24px !important;
 }
 
 .faqBODYlistapp {
-    margin-bottom: 20px;
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 
@@ -596,24 +603,31 @@ html:has(.modalFAQstate:checked) body {
 }
 
 .faqBOXcontactus {
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
-.faqBOXcontactus .faqSUBaccordian summary div, .faqBOXcontactus .faqSUBaccordian div a {
-display: flex;
-gap: 10px;
-align-content: center;
+.faqBOXcontactus .faqSUBaccordian summary div, .faqBOXcontactus .faqSUBaccordian div a,  
+.faqBOXcontactus .faqSUBaccordian .faqHOVERbox a div {
+  display: flex;
+  gap: 10px;
+  align-content: center;
+  transition: all 0.2s ease-in-out;
 }
-
+.faqHOVERbox:hover a div {
+  outline: 1px solid #a7a9ab;
+  background-color: #ffffff;
+  outline-offset: 5px;
+  border-radius: 30px;
+  margin-left: -7px;
+  padding-left: 7px;
+  padding-right: 80px;
+  transition: all 0.2s ease-in-out;
+}
 .faqHOVERbox:hover a span {
-  color: #bc69ff;
-     transition: all 0.2s ease-in-out;
+  color: #404041;
 }
 .faqHOVERbox:hover a svg {
-fill: #bc69ff;
-   transition: all 0.2s ease-in-out;
+fill: #404041;
 }
 
 
@@ -906,11 +920,14 @@ align-self: flex-end;
     align-items: center;
     text-decoration: none;
     color: #404041;
-    gap: 0.2rem;
+    gap: 0.4rem;
+}
+.faqCONTACTcontacts div a p {
+  letter-spacing: 0.03rem;
 }
 .faqCONTACTcontacts svg {
     fill: #58585a;
-    width: 28px;
+    width: 30px;
     transition: fill 0.2s ease-in-out;
 }
 .faqCONTACTtext-2 p {
