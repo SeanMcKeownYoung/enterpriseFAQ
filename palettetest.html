@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3x3 Grid Layout</title>
+    <style>
+        /* Centering the entire grid structure on the screen */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+  background-color: #ece9e1;
+            font-family: sans-serif;
+        }
+
+        /* The main container holding the 9 boxes */
+        .grid-container {
+            display: grid;
+            /* Creates 3 columns of equal, flexible width */
+            grid-template-columns: repeat(3, 1fr); 
+            /* Creates 3 rows of equal, flexible height */
+            grid-template-rows: repeat(2, 1fr); 
+            /* Adds spacing/gap between the boxes */
+            width: 450px;
+            height: 300px;
+        }
+
+        /* Styling applied to each individual box */
+        .box {
+            background-color: #969491;
+  color: transparent;
+            font-size: 24px;
+            font-weight: bold;
+            /* Centers text content perfectly inside each box */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+        /* HIDE
+.hide {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);}        
+        */
+
+.item-1 {
+  background-color: #3b82f6;
+}
+
+.item-2 {
+  background-color: #f59e0b;
+}
+
+.item-3 {
+  background-color: #ef4444;
+}
+
+.item-4 {
+  background-color: #10b981;
+}
+
+.item-5 {
+  background-color: #8b5cf6;
+}
+
+.item-6 {
+  background-color: #f97316;
+}
+
+
+.item-11 {
+  background-color: #00b7ff;
+}
+
+.item-21 {
+  background-color: #ffca2b;
+}
+
+.item-31 {
+  background-color: #ff5e5e;
+}
+
+.item-41 {
+  background-color: #92ff5c;
+}
+
+.item-51 {
+  background-color: #bc69ff;
+}
+
+.item-61 {
+  background-color: #ff8819;
+}
+
+
+
+.item-12 {
+  background-color: #00b7ff;
+}
+
+.item-22 {
+  background-color: #f7be00;
+}
+
+.item-32 {
+  background-color: #ff5e5e;
+}
+
+.item-42 {
+  background-color: #84cc16;
+}
+
+.item-52 {
+  background-color: #bc69ff;
+}
+
+.item-62 {
+  background-color: #ff8819;
+}
+
+
+
+    </style>
+</head>
+<body>
+<main>
+<section>
+    <div class="grid-container">
+        <div class="box item-12">1</div>
+        <div class="box item-22">2</div>
+        <div class="box item-32">3</div>
+        <div class="box item-42">4</div>
+        <div class="box item-52">5</div>
+        <div class="box item-62">6</div>
+    </div>
+</section>
+<section>
+    <div class="grid-container">
+        <div class="box item-11">1</div>
+        <div class="box item-21">2</div>
+        <div class="box item-31">3</div>
+        <div class="box item-41">4</div>
+        <div class="box item-51">5</div>
+        <div class="box item-61">6</div>
+    </div>
+</section>
+<section>
+    <div class="grid-container">
+        <div class="box item-1">1</div>
+        <div class="box item-2">2</div>
+        <div class="box item-3">3</div>
+        <div class="box item-4">4</div>
+        <div class="box item-5">5</div>
+        <div class="box item-6">6</div>
+    </div>
+</section>
+</main>
+
+
+</body>
+</html>

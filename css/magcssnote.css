@@ -1,0 +1,149 @@
+
+/* X-SMALL */
+@media (max-width: 549px) {
+  .sectionFAQImg div {
+    width: 620px;
+  }
+  .sectionFAQImg div img {
+    translate: 96px 30px;
+    transform: rotate(15deg);
+  }
+}
+
+/* SMALL */
+@media (550px <= width <= 767px) {
+  .sectionFAQImg div {
+    width: 700px;
+  }
+  .sectionFAQImg div img {
+    translate: 30px -30px;
+    transform: rotate(5deg);
+  }
+}
+
+/* MEDIUM */
+@media (768px <= width <= 1023px) {
+  .sectionFAQImg div {
+    width: 900px;
+  }
+  .sectionFAQImg div img {
+    translate: 0 -20%;
+    transform: rotate(0deg);
+  }
+}
+
+/* LARGE */
+@media (1024px <= width <= 1279px) {
+  .sectionFAQImg div {
+    width: 1024px;
+  }
+  .sectionFAQImg div img {
+    translate: 40% -80px;
+    transform: rotate(20deg);
+  }
+}
+
+/* X-LARGE */
+@media (min-width: 1280px) {
+  .sectionFAQImg div {
+    width: 1080px;
+  }
+  .sectionFAQImg div img {
+    translate: 40% -100px;
+    transform: rotate(10deg);
+  }
+}
+.sectionFAQImg div {
+  height: auto;
+}
+.sectionFAQImg div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  transition: all 0.2s ease;
+}
+.sectionFAQImg div {
+  animation: mag-onscroll linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes mag-onscroll {
+  from {
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+  to {
+    transform: translateY(-200px) scale(1.86);
+    filter: blur(3px);
+  }
+}
+.sectionFAQImg div img {
+  animation: shado-onscrollNil linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollNil {
+  from {filter: hue-rotate(0deg) saturate(1) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverGold:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollGold linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollGold {
+  from {filter: hue-rotate(220deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverRed:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollRed linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollRed {
+  from {filter: hue-rotate(160deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverGreen:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollGreen linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollGreen {
+  from {filter: hue-rotate(-70deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverViolet:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollViolet linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollViolet {
+  from {filter: hue-rotate(90deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverOrange:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollOrange linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollOrange {
+  from {filter: hue-rotate(180deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}
+body:has(.faqBannerText .hoverHome:hover) .sectionFAQImg div img {
+  transition: all 0.2s ease-in-out;
+  animation: shado-onscrollHome linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+@keyframes shado-onscrollHome {
+  from {filter: grayscale(1) brightness(110%) contrast(105%) drop-shadow(-30px 10px 14px #1414145f);}
+  to {filter: drop-shadow(-60px 100px 4px #141414);}
+}

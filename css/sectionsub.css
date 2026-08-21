@@ -1,90 +1,263 @@
     /* Outlines the grids, remove when sending
 div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 
-.sectionFAQmag {
-  position: absolute;
-  z-index: 70;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
+
+
+/* MAIN ELEMENTS */
+.faqHEROcontainer {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+          font-family: "neue-haas-grotesk-display", sans-serif;
+}
+.faqHEROcontainer h1 {
+    margin: 0;
+}
+.faqBODYcontainer {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+      font-family: "neue-haas-grotesk-display", sans-serif;
+}
+  .faqBODYwrapper {
+    width: 100%;
+  }
+
+.faqHEADbig {
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+.faqHEADbig a {
+  text-decoration: none;
+}
+.faqHEROtext .faqHEADbig {
+  color: #00b7ff;
+}
+.faqHEROtext .faqHEADbig a {
+  color: #686867;
 }
 
 /* X-SMALL */
 @media (max-width: 549px) {
-  .sectionFAQmag {
-    justify-content: center;
-    align-items: flex-start;
+  .faqBODYwrapper {
+    padding-left: calc((100vw - 549px) / 2 + 5%);
   }
-  .sectionFAQImg div {
-    width: 620px;
-  }
-  .sectionFAQImg div img {
-    translate: 96px 30px;
-    transform: rotate(15deg);
-  }
+.faqHEADbig {
+  font-size: 28px;
+}
 }
 
 /* SMALL */
 @media (550px <= width <= 767px) {
-  .sectionFAQmag {
-    justify-content: center;
-    align-items: flex-start;
+  .faqBODYwrapper {
+    padding-left: calc((100vw - 549px) / 2 + 5%);
   }
-  .sectionFAQImg div {
-    width: 700px;
-  }
-  .sectionFAQImg div img {
-    translate: 30px -30px;
-    transform: rotate(5deg);
-  }
+.faqHEADbig {
+  font-size: 34px;
+}
 }
 
 /* MEDIUM */
 @media (768px <= width <= 1023px) {
-  .sectionFAQmag {
+  .faqBODYwrapper {
+    padding-left: calc((100vw - 768px) / 2 + 5%);
+  }
+.faqHEADbig {
+  font-size: 44px;
+}
+}
+
+/* LARGE */
+@media (1024px <= width <= 1279px) {
+.faqBODYwrapper {
+    padding-left: calc((100vw - 1024px) / 2 + 5%);
+  }
+.faqHEADbig {
+  font-size: 54px;
+}
+}
+
+/* X-LARGE */
+@media (min-width: 1280px) {
+  .faqBODYwrapper {
+    margin-left: calc((100cqw - 1280px) / 2 + 5%);
+  }
+.faqHEADbig {
+  font-size: 54px;
+}
+}
+
+/* HERO */
+.faqHEROback {
+    background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
+filter: drop-shadow(0px 5px 10px #00000080);
+}
+.faqHEROwrapper {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 20px;
+    overflow: hidden;
+    padding: 300px 0 100px 0;
+}
+.faqHEROimg {
+    grid-row-start: 1;
+}
+
+.faqHEROtext {
+    grid-row-start: 2;
+}
+.faqHEROgrid {
+    display: grid;
+    width: 333px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    aspect-ratio: 1 / 1;
+}
+.faqHEROgriditem {
+    display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+}
+.faqHEROgriditem svg {
+    width: 100%;
+    height: 100%;
+    color: #00b7ff; 
+}
+.faqHEROgriditem:last-of-type svg {
+    width: 100%;
+    height: 100%;
+    color: #3f3f3f; 
+}
+
+.faqBODYnav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: end;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+.faqBODYnav::-webkit-scrollbar {
+  height: 16px;
+}
+::-webkit-scrollbar-track {
+  width: 30px !important;
+  height: 100%;
+}
+::-webkit-scrollbar-thumb {
+  height: 100%;
+    width: 30px !important;
+  background-image: linear-gradient(90deg,rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 20%);
+  transition: all 0.1s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: 30px;
+  background-image: linear-gradient(0deg, #fcfaf8, #fcfaf8);
+  transition: all 0.1s ease;
+}
+.faqBODYnavitem {
+  align-items: end;
+  display: flex;
+  margin-right: 20px;
+}
+.faqBODYnavitem {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  border: 0;
+  text-align: left;
+  padding-bottom: 4px;
+  height: 80px;
+  padding-bottom: 6px;
+  border-bottom: 10px solid transparent;
+  transition: border-bottom 0.1s ease-in-out;
+}
+.faqBODYnavitem a {
+  text-decoration: none;
+  color: #969491;
+  transition: color 0.1s ease-in-out;
+}
+.faqBODYnav:hover .faqBODYnavitem {
+  border-bottom: 10px solid transparent;
+}
+.faqBODYnav:hover .faqBODYnavitem a {
+  text-decoration: none;
+  color: #c1bfb9;
+}
+
+.faqBODYnav .faqBODYnavitem:hover {
+  border-bottom: 10px solid #404041;
+}
+.faqBODYnav .faqBODYnavitem:hover a {
+  text-decoration: none;
+  color: #404041;
+}
+
+/* SMALL */
+@media (width <= 767px) {
+.faqBODYnavitem {
+    font-size: 16px;
   }
-  .sectionFAQImg div {
-    width: 900px;
-  }
-  .sectionFAQImg div img {
-    translate: 0 -20%;
-    transform: rotate(0deg);
+.faqHEROwrapper {
+    padding: 9.375rem 0 1.25rem 2.25rem;
+    gap: 5rem;
+}
+.faqQUESTIONcontainer {
+    padding-left: 2.25rem;
+}
+
+}
+
+/* MEDIUM */
+@media (768px <= width <= 1023px) {
+.faqBODYnavitem {
+    font-size: 17px;
   }
 }
 
 /* LARGE */
 @media (1024px <= width <= 1279px) {
-  .sectionFAQmag {
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .sectionFAQImg div {
-    width: 1024px;
-  }
-  .sectionFAQImg div img {
-    translate: 40% -80px;
-    transform: rotate(20deg);
+.faqBODYnavitem {
+    font-size: 18px;
   }
 }
 
 /* X-LARGE */
 @media (min-width: 1280px) {
-  .sectionFAQmag {
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .sectionFAQImg div {
-    width: 1080px;
-  }
-  .sectionFAQImg div img {
-    translate: 40% -100px;
-    transform: rotate(10deg);
+.faqBODYnavitem {
+    font-size: 18px;
   }
 }
-sectionFAQImg div {
+
+.sectionFAQmag {
+  position: absolute;
+width: 90cqw;
+overflow: hidden;
+  z-index: 70;
+}
+.sectionFAQImg {
+    transform: translateX(-5%);
+  padding: 1rem 0 0 13.875rem;
+}
+
+@media (width <= 767px) {
+.sectionFAQImg {
+  padding: 6.25rem 0 0 0;
+}
+}
+
+.sectionFAQImg div {
+  width: clamp(43.75rem, 100vw, 67.5rem);
   height: auto;
+  animation: mag-onscroll linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
 }
 .sectionFAQImg div img {
   width: 100%;
@@ -92,11 +265,6 @@ sectionFAQImg div {
   object-fit: cover;
   object-position: left top;
   transition: all 0.2s ease;
-}
-.sectionFAQImg div {
-  animation: mag-onscroll linear both;
-  animation-timeline: scroll();
-  animation-range: 0px 130vh;
 }
 @keyframes mag-onscroll {
   from {
@@ -108,75 +276,8 @@ sectionFAQImg div {
     filter: blur(3px);
   }
 }
-.sectionFAQImg div img {
-  animation: shado-onscrollNil linear both;
-  animation-timeline: scroll();
-  animation-range: 0px 130vh;
-}
-@keyframes shado-onscrollNil {
-  from {filter: hue-rotate(0deg) saturate(1) drop-shadow(-30px 10px 14px #1414145f);}
-  to {filter: drop-shadow(-60px 100px 4px #141414);}
-}
-body:has(.faqBannerText .hoverGold:hover) .sectionFAQImg div img {
-  transition: all 0.2s ease-in-out;
-  animation: shado-onscrollGold linear both;
-  animation-timeline: scroll();
-  animation-range: 0px 130vh;
-}
-@keyframes shado-onscrollGold {
-  from {filter: hue-rotate(220deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
-  to {filter: drop-shadow(-60px 100px 4px #141414);}
-}
-body:has(.faqBannerText .hoverRed:hover) .sectionFAQImg div img {
-  transition: all 0.2s ease-in-out;
-  animation: shado-onscrollRed linear both;
-  animation-timeline: scroll();
-  animation-range: 0px 130vh;
-}
-@keyframes shado-onscrollRed {
-  from {filter: hue-rotate(160deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
-  to {filter: drop-shadow(-60px 100px 4px #141414);}
-}
-body:has(.faqBannerText .hoverGreen:hover) .sectionFAQImg div img {
-  transition: all 0.2s ease-in-out;
-  animation: shado-onscrollGreen linear both;
-  animation-timeline: scroll();
-  animation-range: 0px 130vh;
-}
-@keyframes shado-onscrollGreen {
-  from {filter: hue-rotate(-70deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
-  to {filter: drop-shadow(-60px 100px 4px #141414);}
-}
-body:has(.faqBannerText .hoverViolet:hover) .sectionFAQImg div img {
-  transition: all 0.2s ease-in-out;
-  animation: shado-onscrollViolet linear both;
-  animation-timeline: scroll();
-  animation-range: 0px 130vh;
-}
-@keyframes shado-onscrollViolet {
-  from {filter: hue-rotate(90deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
-  to {filter: drop-shadow(-60px 100px 4px #141414);}
-}
-body:has(.faqBannerText .hoverOrange:hover) .sectionFAQImg div img {
-  transition: all 0.2s ease-in-out;
-  animation: shado-onscrollOrange linear both;
-  animation-timeline: scroll();
-  animation-range: 0px 130vh;
-}
-@keyframes shado-onscrollOrange {
-  from {filter: hue-rotate(180deg) saturate(2) drop-shadow(-30px 10px 14px #1414145f);}
-  to {filter: drop-shadow(-60px 100px 4px #141414);}
-}
-body:has(.faqBannerText .hoverHome:hover) .sectionFAQImg div img {
-  transition: all 0.2s ease-in-out;
-  animation: shado-onscrollHome linear both;
-  animation-timeline: scroll();
-  animation-range: 0px 130vh;
-}
-@keyframes shado-onscrollHome {
-  from {filter: grayscale(1) brightness(110%) contrast(105%) drop-shadow(-30px 10px 14px #1414145f);}
-  to {filter: drop-shadow(-60px 100px 4px #141414);}
-}
+
+
 
 /* SECTIONS */
 .faqBODYcontainer h1, .faqBODYcontainer h2, .faqBODYcontainer h3, .faqBODYcontainer h4, .faqBODYcontainer h5, .faqBODYcontainer p {
@@ -185,12 +286,12 @@ body:has(.faqBannerText .hoverHome:hover) .sectionFAQImg div img {
 }
 .faqBODYdark {
   background-color: #ece9e1;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #fcfaf8;
   padding: 5% 0 10% 0;
 }
 .faqBODYlight {
   background-color: #f8f5f0;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #fcfaf8;
   padding: 5% 0 10% 0;
 }
 .faqBODYdark .faqHEADbig, .faqBODYlight .faqHEADbig {
@@ -210,7 +311,7 @@ body:has(.faqBannerText .hoverHome:hover) .sectionFAQImg div img {
 }
 .faqBODYgold .faqHEADbig .faqHEADunderline {
   display: inline !important;
-  border-bottom: 10px solid #ffca2b;
+  border-bottom: 10px solid #f7be00;
 }
 .faqBODYred .faqHEADbig .faqHEADunderline {
   display: inline !important;
@@ -218,7 +319,7 @@ body:has(.faqBannerText .hoverHome:hover) .sectionFAQImg div img {
 }
 .faqBODYgreen .faqHEADbig .faqHEADunderline {
   display: inline !important;
-  border-bottom: 10px solid #92ff5c;
+  border-bottom: 10px solid #84cc16;
 }
 .faqBODYviolet .faqHEADbig .faqHEADunderline {
   display: inline !important;
@@ -418,7 +519,7 @@ details[open]::details-content {
   display: block;
   width: 70%;
   height: 1px; 
-  background-color: #a7a9ab; 
+  background-color: #c1bfb9; 
   margin-bottom: 24px;
 }
 .faqQUESTIONwrapper details[open]::after {
@@ -426,14 +527,14 @@ details[open]::details-content {
   display: block;
   width: 70%;
   height: 1px; 
-  background-color: #a7a9ab; 
+  background-color: #c1bfb9; 
 }
 .faqSUBaccordian::before {
   content: "";
   display: block;
   width: 70%;
   height: 0px !important; 
-  background-color: #a7a9ab; 
+  background-color: #c1bfb9; 
   margin: 0 !important;
 }
 .faqSUBaccordian::after {
@@ -441,7 +542,7 @@ details[open]::details-content {
   display: block;
   width: 70%;
   height: 0px !important; 
-  background-color: #a7a9ab; 
+  background-color: #c1bfb9; 
   margin: 0 !important;
 }
 .faqQUESTIONwrapper details:first-child[open]::before {
@@ -535,8 +636,8 @@ details[open]::details-content {
 }
 
 .faqBODYlist:hover div a, .faqBODYlist:hover div a strong, .faqBODYlist:hover div a span, .faqBODYlist:hover div a svg {
-    color: #a7a9ab !important;
-    fill: #a7a9ab !important;
+    color: #c1bfb9 !important;
+    fill: #c1bfb9 !important;
     transition: color 0.1s ease-in-out;
 }
 
@@ -553,7 +654,6 @@ details[open]::details-content {
     display: flex;
     flex-direction: column;
 }
-
 
 .faqASSETSbox {
   display: flex;
@@ -643,7 +743,7 @@ html:has(.modalFAQstate:checked) body {
   display: flex;
 }
 .modalFAQbox {
-  background: white;
+  background: #f8f5f0;
     padding: 20px 20px 40px 20px;
   border-radius: 8px;
   max-width: 800px;
@@ -664,13 +764,13 @@ html:has(.modalFAQstate:checked) body {
 .closeFAQbtn {
   font-size: 38px;
   text-align: right;
-  color: #c3c3c3;
+  color: #c1bfb9;
   cursor: pointer;
   margin: 0 !important;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .closeFAQbtn:hover {
-  color: #888888;
+  color: #6b6a69;
 }
 .modalFAQbackdrop-close {
   position: absolute;
@@ -770,7 +870,7 @@ html:has(.modalFAQstate:checked) body {
     flex-direction: row;
 }
 .faqBODYlistitem div a svg {
-  fill: #939597;
+  fill: #969491;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .faqHIDEdescription {
@@ -783,11 +883,11 @@ html:has(.modalFAQstate:checked) body {
     padding-left: 4px;
 }
 .faqBODYlistitem div:hover .faqSHOWapple svg, .faqBODYlistitem div:hover .faqSHOWgoogle svg {
-  fill: #a7a9ab;
+  fill: #c1bfb9;
 }
 
 .faqBODYlistitem div .faqSHOWapple:hover svg, .faqBODYlistitem div .faqSHOWgoogle:hover svg {
-  fill: #58585a;
+  fill: #6b6a69;
 }
 
 .faqHIDEapple, .faqHIDEgoogle {
@@ -813,8 +913,8 @@ html:has(.modalFAQstate:checked) body {
   transition: all 0.2s ease-in-out;
 }
 .faqHOVERbox:hover a div {
-  outline: 1px solid #a7a9ab;
-  background-color: #ffffff;
+  outline: 1px solid #c1bfb9;
+  background-color: #fcfaf8;
   outline-offset: 5px;
   border-radius: 30px;
   margin-left: -7px;
@@ -850,7 +950,7 @@ fill: #404041;
   transition: color 0.2s ease-in-out;
 }
 .faqGRIDitem a  {
-  color: #58585a;
+  color: #6b6a69;
   text-decoration: none;
 }
 .faqGitem1 {
@@ -1125,7 +1225,7 @@ align-self: flex-end;
   letter-spacing: 0.03rem;
 }
 .faqCONTACTcontacts svg {
-    fill: #58585a;
+    fill: #6b6a69;
     width: 30px;
     transition: fill 0.2s ease-in-out;
 }
@@ -1142,7 +1242,7 @@ align-self: flex-end;
   padding-bottom: 2rem;
 }
 .faqGRIDitem a  {
-  color: #58585a;
+  color: #6b6a69;
   text-decoration: none;
 }
 
@@ -1150,8 +1250,8 @@ align-self: flex-end;
 .faqGRIDcontainer:hover .faqGRIDitem, 
 .faqGRIDcontainer:hover .faqGRIDitem a, 
 .faqGRIDcontainer:hover .faqGRIDitem .faqCONTACTcontacts div a svg {
-  color: #b4b3ad;
-  fill: #b4b3ad;
+  color: #c1bfb9;
+  fill: #c1bfb9;
   transition: color fill 0.2s ease-in-out;
 }
 
@@ -1169,7 +1269,7 @@ align-self: flex-end;
 }
 .faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts:hover div a p, 
 .faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts:hover div a svg {
-  color: #939597; fill:#939597;
+  color: #969491; fill:#969491;
 }
 
 .faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts div:hover a p, 
@@ -1292,7 +1392,7 @@ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-row-start: 2;
 }
 .rightFAQborder {
-border-right: 1px solid #939597;
+border-right: 1px solid #969491;
 margin-right: 20px;
 }
         
@@ -1307,9 +1407,9 @@ margin-right: 20px;
     .faqGRIDlistICON svg {
       width: 100%;
       height: 100%;
-      border: 1px solid #ffffff;
+      border: 1px solid #fcfaf8;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #fcfaf8;
      transition: all 0.2s ease-in-out;
     }
 
@@ -1331,9 +1431,9 @@ margin-right: 20px;
       transform: scale(2) translate(7.5px, 2px);
     }
     .faqGRIDlistICON:hover svg {
-    border: 1px solid #ffffff;
+    border: 1px solid #fcfaf8;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #fcfaf8;
     }
 .faqGRIDlistcard:has(.faqGRIDlistICON:hover) .faqGRIDlistCONTENT p:first-child {
       transform: translate(0px, 20px);
@@ -1342,3 +1442,5 @@ margin-right: 20px;
       transform: translate(0px, 10px);
       opacity: 0.2;
 }
+
+/* COLOR BRANDING ADJUSTMENTS */
