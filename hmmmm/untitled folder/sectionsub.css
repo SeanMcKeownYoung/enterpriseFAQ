@@ -1,5 +1,5 @@
-    /* Outlines the grids, remove when sending
-div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
+    /* Outlines the grids, remove when sending*/
+div, section, header, nav, ul, li { border: 1px solid cyan !important}
 
 
 
@@ -39,6 +39,39 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 }
 .faqHEROtext .faqHEADbig a {
   color: #686867;
+}
+
+
+.faqARTcontainer {
+  position: absolute;
+  width: 100%;
+}
+.faqARTcontainer div {
+  padding-left: 13.875rem;
+
+}
+.faqARTwrapper {
+  width: 100px;        /* Set your desired width */
+  height: 100px;       /* Set your desired height */
+}
+
+.faqARTwrapper img {
+  transform: translateY(0px) translateX(0px) scale(1);
+  width: 100%;         /* Stretch to container width */
+  height: 100%;        /* Stretch to container height */
+  object-fit: cover;   /* Crop and preserve aspect ratio */
+  object-position: left top; /* Adjust focal point (e.g., top, bottom, 20% 50%) */
+  animation: scaleAndMove linear both;
+  animation-timeline: scroll(root); /* tracks the main window scroll */
+  animation-range: exit;            /* animates while the element exits the view */
+}
+@keyframes scaleAndMove {
+  from {
+  transform: translateY(0px) translateX(0px) scale(1);
+  }
+  to {
+    transform: translateY(20px) translateX(3000px) scale(3.86);
+  }
 }
 
 /* X-SMALL */
@@ -92,6 +125,7 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 }
 
 /* HERO */
+
 .faqHEROback {
     background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
 filter: drop-shadow(0px 5px 10px #00000080);
@@ -199,111 +233,6 @@ filter: drop-shadow(0px 5px 10px #00000080);
   color: #404041;
 }
 
-/* SMALL */
-@media (width <= 767px) {
-.faqBODYnavitem {
-    font-size: 16px;
-  }
-.faqHEROwrapper {
-    padding: 9.375rem 0 1.25rem 2.25rem;
-    gap: 5rem;
-}
-.faqQUESTIONcontainer {
-    padding-left: 2.25rem;
-}
-
-}
-
-/* MEDIUM */
-@media (768px <= width <= 1023px) {
-.faqBODYnavitem {
-    font-size: 17px;
-  }
-}
-
-/* LARGE */
-@media (1024px <= width <= 1279px) {
-.faqBODYnavitem {
-    font-size: 18px;
-  }
-}
-
-/* X-LARGE */
-@media (min-width: 1280px) {
-.faqBODYnavitem {
-    font-size: 18px;
-  }
-}
-
-.faqARTcontainer {
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  z-index: 200;
-}
-
-.faqARTmag {
-  padding: 4.375rem 0 0 13.875rem;
-}
-
-.faqARTmag div {
-  width: clamp(43.75rem, 80vw, 54.5rem);        /* Set your desired width */
-  aspect-ratio: 1 /1.2;
-}
-
-.faqARTmag div img {
-  transform: translateY(0px) translateX(0px) scale(1);
-  width: 100%;         /* Stretch to container width */
-  height: 100%;        /* Stretch to container height */
-  object-fit: cover;   /* Crop and preserve aspect ratio */
-  object-position: left top; /* Adjust focal point (e.g., top, bottom, 20% 50%) */
-  animation: scaleAndMove linear both;
-  animation-timeline: scroll(root); /* tracks the main window scroll */
-  animation-range: exit;            /* animates while the element exits the view */
-}
-@keyframes scaleAndMove {
-  from {
-  transform: translateY(0px) translateX(0px) scale(1);
-  }
-  to {
-    transform: translateY(20px) translateX(3000px) scale(3.86);
-  }
-}
-
-
-@media (width <= 767px) {
-.faqARTwrapper {
-  width: calc(549px + ((100cqw - 549px) / 2));
-  }
-.faqARTmag {
-  padding: 4.375rem 0 0 0;
-}
-}
-
-/* MEDIUM */
-@media (768px <= width <= 1023px) {
-.faqARTwrapper {
-  width: calc(767px + ((100cqw - 767px) / 2));
-  }
-.faqARTmag {
-  padding: 6.375rem 0 0 10rem;
-}
-}
-
-/* LARGE */
-@media (1024px <= width <= 1279px) {
-.faqARTwrapper {
-  width: calc(1024px + ((100cqw - 1024px) / 2));
-  }
-}
-
-/* X-LARGE */
-@media (min-width: 1280px) {
-.faqARTwrapper {
-  width: calc(1280px + ((100cqw - 1280px) / 2));
-  }
-}
 
 
 

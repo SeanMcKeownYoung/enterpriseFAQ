@@ -147,3 +147,94 @@ body:has(.faqBannerText .hoverHome:hover) .sectionFAQImg div img {
   from {filter: grayscale(1) brightness(110%) contrast(105%) drop-shadow(-30px 10px 14px #1414145f);}
   to {filter: drop-shadow(-60px 100px 4px #141414);}
 }
+
+<header class="faqARTcontainer faqBODYwrapper" style="pointer-events: none; touch-action: none; ">
+        <div class="faqARTwrapper">
+            <div>
+                <img src="images/magGlassWorked.png" alt="Magnifying Glass">
+            </div>
+        </div>
+</header>
+
+
+
+
+
+/* SMALL */
+@media (width <= 767px) {
+.faqBODYnavitem {
+    font-size: 16px;
+  }
+.faqHEROwrapper {
+    padding: 9.375rem 0 1.25rem 2.25rem;
+    gap: 5rem;
+}
+.faqQUESTIONcontainer {
+    padding-left: 2.25rem;
+}
+
+}
+
+/* MEDIUM */
+@media (768px <= width <= 1023px) {
+.faqBODYnavitem {
+    font-size: 17px;
+  }
+}
+
+/* LARGE */
+@media (1024px <= width <= 1279px) {
+.faqBODYnavitem {
+    font-size: 18px;
+  }
+}
+
+/* X-LARGE */
+@media (min-width: 1280px) {
+.faqBODYnavitem {
+    font-size: 18px;
+  }
+}
+
+.sectionFAQmag {
+  position: absolute;
+width: 90cqw;
+  overflow-x: clip;
+  overflow-y: visible;
+  z-index: 70;
+}
+.sectionFAQImg {
+    transform: translateX(-5%);
+  padding: 1rem 0 0 13.875rem;
+}
+
+@media (width <= 767px) {
+.sectionFAQImg {
+  padding: 6.25rem 0 0 0;
+}
+}
+
+.sectionFAQImg div {
+  width: clamp(43.75rem, 100vw, 67.5rem);
+  height: auto;
+  animation: mag-onscroll linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 130vh;
+}
+.sectionFAQImg div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  transition: all 0.2s ease;
+}
+@keyframes mag-onscroll {
+  from {
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+  to {
+    transform: translateY(20px) translateX(3000px) scale(3.86);
+    filter: blur(3px);
+  }
+}
