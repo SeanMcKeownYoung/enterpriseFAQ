@@ -1481,38 +1481,14 @@ align-self: flex-end;
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
 }
-.faqEXTRAcontainer details summary .faqCLOSEbox {
-
-    margin-left: auto;
-  font-size: 30px;
-  margin-left: auto;
-  justify-content: end;
-  align-content: end;
-  color: #c1bfb9;
-  transition: color 0.5s ease;
-  background-color: #84cc16;
-}
-
-.faqEXTRAcontainer details[open] summary .faqCLOSEbox {
-  font-size: 30px;
-  margin-left: auto;
-  justify-content: end;
-  align-content: end;
-  color: #c1bfb9;
-  transition: color 0.5s ease;
-}
-.faqEXTRAcontainer details summary{
-    background-color: #84cc16;
-}
-
 .faqEXTRAcontainer details[open] summary:hover::after {
   color: #404041;
   transition: color 0.3s ease;
 }
-.faqEXTRAcontainer .faqEXTRAvidbtn {
+.faqEXTRAcontainer details summary .faqEXTRAvidbtn {
   display: flex;
   flex-direction: row;
-width: fit-content;
+  width: fit-content;
   gap: 10px;
   padding-bottom: 20px;
   position: relative;
@@ -1530,6 +1506,26 @@ width: fit-content;
 .faqEXTRAcontainer {
     position: relative;
 }
+.faqEXTRAcontainer details summary{
+margin-bottom: 20px;
+}
+.faqEXTRAcontainer details[open] summary svg{
+background-color: #404041;
+transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRAcontainer details summary svg{
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRAcontainer details[open] summary::before {
+  content: "\2715";
+  font-size: 20px;
+  z-index: 5000;
+  color: #f8f5f0;
+  left: 357.5px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
 .faqEXTRAcontainer div, .faqEXTRAcontainer details {
     margin: 0 !important;
     padding: 0 !important;
@@ -1537,15 +1533,27 @@ width: fit-content;
 }
 .faqEXTRApdfbtn {
 position: absolute;
-transform: translateX(300px);
-z-index: 1000;
-    pointer-events: none;
-    cursor: default; 
-
 }
-.faqEXTRApdfbtn a {
+.faqEXTRApdfbtn div {
+display: flex;
+flex-direction: row;
+gap: 5px;
+}
+.faqEXTRAvidbtn {
+transform: translateX(350px);
+z-index: 1000;
+}
+.faqEXTRApdfbtn .faqEXTRApdflinks a {
     text-decoration: none;
     color: #6b6a69; 
+    padding-right: 5px;
+    transition: color 0.3s ease-in-out;
+}
+.faqEXTRApdfbtn .faqEXTRApdflinks:hover a {
+    color: #c1bfb9; 
+}
+.faqEXTRApdfbtn .faqEXTRApdflinks a:hover {
+    color: #404041; 
 }
 .faqEXTRApdfbtn svg, .faqEXTRApdfbtn p {
     pointer-events: none;
@@ -1586,20 +1594,27 @@ z-index: 1000;
                             <div class="faqTXTanswer"><p><strong>You may be asked to sign in. </strong>Use the same email address and password you created for your subscription. Once signed in, your newspaper will open.</p></div>
                             
                                     <div class="faqEXTRAcontainer">
-                                                <div class="faqEXTRApdfbtn">
-                                                    <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONSdownload"></use></svg>
-                                                    <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+
+                                        <div class="faqEXTRApdfbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONSdownload"></use></svg>
+                                            <div>
+                                                <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                                <span class="faqEXTRApdflinks">
                                                     <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
                                                     <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
-                                                </div>
+                                                </span>
+                                            </div>
+
+
+                                        </div>
 
                                         <details>
                                             <summary>
                                                 <div class="faqEXTRAvidbtn">
                                                     <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
-                                                    <p class="faqTXTanswer"><strong>Watch. </strong>Video title here.</p>
+                                                    <p class="faqTXTanswer"><strong>Watch. </strong>Video title here and here.</p>
                                                 </div>
-                                                <div class="faqCLOSEbox"> &#x2715;</div>
+
                                             </summary>
                                             <div class="faqEXTRAvidbox">
                                                 <video controls poster="thumbnail.jpg">
