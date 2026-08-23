@@ -1,0 +1,67 @@
+<style>
+.faqMOREcontainer {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  padding-bottom: 60px; /* Prevents layout collapse when full-width content opens */
+}
+
+.faqMOREcontainer details {
+  display: flex;
+  gap: 20px;
+}
+summary {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  user-select: none;
+}
+.faqMOREfullbox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-top: 60px;
+  background-color: #e0f7fa;
+  border: 1px solid #00acc1;
+}
+
+.faqMOREinDetails {
+  display: flex;
+  align-items: center;
+}
+
+.faqMOREinContent {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-left: 15px;
+}
+
+.faqMOREinContent a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+    flex-direction: row;
+}
+
+</style>
+
+<div class="faqMOREcontainer">
+  <details class="full-width-details">
+    <summary>Click for Full Width</summary>
+    <div class="faqMOREfullbox">
+      <p>This is a full-width container that expands below both summary buttons.</p>
+    </div>
+  </details>
+  <details class="faqMOREinDetails">
+    <summary>Click for Links</summary>
+    <div class="faqMOREinContent">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+    </div>
+  </details>
+</div>

@@ -10,7 +10,6 @@
 div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 .faqALL a {
     border: 0 !important;
-    color: inherit;
 }
 
 @media (width <= 767px) {
@@ -579,6 +578,57 @@ details[open]::details-content {
   height: 0px !important; 
   background-color: #c1bfb9; 
   margin: 0 !important;
+}
+.faqQUESTIONwrapper details:first-child[open]::before {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px; 
+  top: 0;
+  background-color: transparent; 
+  margin-bottom: 12px;
+}
+.faqQUESTIONwrapper details[open]:last-child::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px; 
+  bottom: 0;
+  background-color: transparent; 
+  margin-top: 12px;
+}
+.faqQUESTIONwrapper:has(details[open])
+  details:not([open]) {
+  opacity: 0.3;
+  transition: opacity 0.2s ease-in-out;
+}
+.faqQUESTIONwrapper:has(details[open])
+  .faqEXTRAScontainer details:not([open]) {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+.faqEXTRAScontainer details[open] summary::after {
+  content: "\2715";
+  font-size: 30px;
+  margin-left: auto;
+  color: #c1bfb9;
+  transition: color 0.5s ease;
+}
+.faqEXTRAScontainer details[open] summary:hover::after {
+  color: #404041;
+  transition: color 0.3s ease;
+}
+.faqEXTRAScontainer details summary {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-bottom: 20px;
+  position: relative;
+
+}
+.faqEXTRASvideo video {
+    width: 100%;
+    aspect-ratio: 1 / 0.5625;
 }
 
 .faqQUESTIONwrapper:has(details[open])
@@ -1449,120 +1499,7 @@ align-self: flex-end;
 
         </section>
     </div>
-<style>
-    .faqQUESTIONwrapper details:first-child[open]::before {
-  content: "";
-  display: block;
-  width: 70%;
-  height: 1px; 
-  top: 0;
-  background-color: transparent; 
-  margin-bottom: 12px;
-}
-.faqQUESTIONwrapper details[open]:last-child::after {
-  content: "";
-  display: block;
-  width: 70%;
-  height: 1px; 
-  bottom: 0;
-  background-color: transparent; 
-  margin-top: 12px;
-}
-.faqQUESTIONwrapper:has(details[open])
-  details:not([open]) {
-  opacity: 0.3;
-  transition: opacity 0.2s ease-in-out;
-}
-.faqQUESTIONwrapper:has(details[open])
-  .faqEXTRAcontainer details:not([open]),
-  .faqQUESTIONwrapper:has(details[open])
-  .faqEXTRASboxPDF details:not([open]) 
-  {
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-.faqEXTRAcontainer details summary .faqCLOSEbox {
 
-    margin-left: auto;
-  font-size: 30px;
-  margin-left: auto;
-  justify-content: end;
-  align-content: end;
-  color: #c1bfb9;
-  transition: color 0.5s ease;
-  background-color: #84cc16;
-}
-
-.faqEXTRAcontainer details[open] summary .faqCLOSEbox {
-  font-size: 30px;
-  margin-left: auto;
-  justify-content: end;
-  align-content: end;
-  color: #c1bfb9;
-  transition: color 0.5s ease;
-}
-.faqEXTRAcontainer details summary{
-    background-color: #84cc16;
-}
-
-.faqEXTRAcontainer details[open] summary:hover::after {
-  color: #404041;
-  transition: color 0.3s ease;
-}
-.faqEXTRAcontainer .faqEXTRAvidbtn {
-  display: flex;
-  flex-direction: row;
-width: fit-content;
-  gap: 10px;
-  padding-bottom: 20px;
-  position: relative;
-}
-.faqEXTRAvidbox video {
-    width: 100%;
-    aspect-ratio: 1 / 0.5625;
-}
-.faqEXTRAvidbtn, .faqEXTRApdfbtn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-.faqEXTRAcontainer {
-    position: relative;
-}
-.faqEXTRAcontainer div, .faqEXTRAcontainer details {
-    margin: 0 !important;
-    padding: 0 !important;
-    align-content: start;
-}
-.faqEXTRApdfbtn {
-position: absolute;
-transform: translateX(300px);
-z-index: 1000;
-    pointer-events: none;
-    cursor: default; 
-
-}
-.faqEXTRApdfbtn a {
-    text-decoration: none;
-    color: #6b6a69; 
-}
-.faqEXTRApdfbtn svg, .faqEXTRApdfbtn p {
-    pointer-events: none;
-    cursor: default; 
-    z-index: 100;
-}
-
-.faqEXTRAcontainer details::before, .faqEXTRAcontainer details::after, .faqEXTRAcontainer details[open]::before, .faqEXTRAcontainer details[open]::after, .faqEXTRAcontainer details:first-child[open]::before, .faqEXTRAcontainer details[open]:last-child::after {
-  content: "";
-  display: none;
-  width: 0;
-  height: 0; 
-  margin: 0;
-  padding: 0;
-}
-
-</style>           
 
 <!-- FAQ SECTION 001  -->   
     <div class="faqBODYcontainer faqBODYdark faqBODYgold">
@@ -1583,35 +1520,23 @@ z-index: 1000;
                             <svg width="20px" height="20px" aria-hidden="true"><use xlink:href="#faqCaret"></use></svg>
                         </summary>
                         <div class="faqANSWERbox">
-                            <div class="faqTXTanswer"><p><strong>You may be asked to sign in. </strong>Use the same email address and password you created for your subscription. Once signed in, your newspaper will open.</p></div>
+                            <div class="faqTXTanswer"><p><strong>You may be asked to sign in. </strong>Use the same email address and password you created for your subscription. Once signed in, your newspaper will open.</p></div> 
                             
-                                    <div class="faqEXTRAcontainer">
-                                                <div class="faqEXTRApdfbtn">
-                                                    <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONSdownload"></use></svg>
-                                                    <p class="faqTXTanswer"><strong>Instructions. </strong></p>
-                                                    <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
-                                                    <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
-                                                </div>
+                            <div class="faqEXTRAScontainer">
+                                <details>
+                                    <summary>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Watch. </strong>Video title here.</p>
+                                    </summary>
+                                    <div class="faqEXTRASvideo">
+                                        <video controls poster="thumbnail.jpg">
+                                            <source src="movie.mp4" type="video/mp4" loading="lazy">
+                                        </video>
+                                    </div>
+                                </details>   
+                            </div>
 
-                                        <details>
-                                            <summary>
-                                                <div class="faqEXTRAvidbtn">
-                                                    <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
-                                                    <p class="faqTXTanswer"><strong>Watch. </strong>Video title here.</p>
-                                                </div>
-                                                <div class="faqCLOSEbox"> &#x2715;</div>
-                                            </summary>
-                                            <div class="faqEXTRAvidbox">
-                                                <video controls poster="thumbnail.jpg">
-                                                    <source src="movie.mp4" type="video/mp4" loading="lazy">
-                                                </video>
-                                            </div>
-                                        </details>   
-
-
-                                    </div>   
-
-
+ 
                         </div>
                     </details>
 
@@ -1664,28 +1589,7 @@ z-index: 1000;
                                 </details></div>
                                 <div><p>●&nbsp; Tap Go or Enter to open the page.</p></div>
                                 <div><p>●&nbsp; Tap on “REGISTER.” Once registered, your subscription will be activated and you&rsquo;ll have immediate access to the online newspaper. Remember you can add up to four additional family or friends email addresses!</p></div>
-                            </div> 
-                                       <div class="faqEXTRAcontainer">
-                                        <details>
-                                            <summary>
-                                                <div class="faqEXTRAvidbtn">
-                                                    <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
-                                                    <p class="faqTXTanswer"><strong>Watch. </strong>Video title here.</p>
-                                                </div>
-                                                <div class="faqEXTRApdfbtn">
-                                                    <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONSdownload"></use></svg>
-                                                    <p class="faqTXTanswer"><strong>Instructions. </strong></p>
-                                                    <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
-                                                    <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
-                                                </div>
-                                            </summary>
-                                            <div class="faqEXTRAvidbox">
-                                                <video controls poster="thumbnail.jpg">
-                                                    <source src="movie.mp4" type="video/mp4" loading="lazy">
-                                                </video>
-                                            </div>
-                                        </details>   
-                                    </div>   
+                            </div>       
                         </div>
                     </details>
 

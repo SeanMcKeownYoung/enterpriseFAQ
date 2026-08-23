@@ -1,0 +1,88 @@
+<style>
+    body {
+  padding: 2rem;
+  overflow-y: scroll;
+}
+
+a {
+  color: blue;
+}
+
+.summary__summary {
+  position: relative;
+  display: inline-flex;
+  font-weight: bold;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+  
+  /* no marker for macos */
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.summary__definition {
+  opacity: 0;
+  grid-template-rows: 0fr;
+  display: none;
+
+  transition-property: grid-template-rows, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-behavior: allow-discrete;
+
+  will-change: grid-template-rows, display, opacity;
+
+  > div {
+    overflow: hidden;
+  }
+}
+
+/* open state */
+.summary__details[open] {
+  & + .summary__definition {
+    grid-template-rows: 1fr;
+    display: grid;
+    opacity: 1;
+
+    @starting-style {
+      grid-template-rows: 0fr;
+      opacity: 0;
+    }
+  }
+}
+
+</style>
+
+<h1>CSS only animated summary/details (accordion)</h1>
+<div>Words</div>
+<div class="summary">
+
+  <details class="summary__details">
+    <summary class="summary__summary" aria-details="definition-id">
+      Explore how this CSS-only accordion works
+    </summary>
+  </details>
+  <div role="definition" id="definition-id" class="summary__definition">
+    <div>
+      <p>This CSS-only summary/details implementation behaves as an accordion where the content is revealed when the summary element is clicked. The code utilizes the native HTML &lt;details&gt; and &lt;summary&gt; elements for basic functionality, ensuring it works across various browsers, including older ones.</p>
+
+      <p>The style enhancement focuses on animation achieved through changes in the grid-template-rows, display, and opacity properties of the .summary__definition class. This class initially has its opacity set to 0, grid-template-rows to 0fr, and display to none, making the content invisible and collapsed.</p>
+
+      <p>When the &lt;details&gt; element is opened (&lt;details open&gt;), the adjacent .summary__definition content becomes styled with <strong>grid-template-rows</strong> set to 1fr, display to grid, and opacity to 1, revealing and expanding the content gracefully due to the transition effects applied.</p>
+
+      <p>The <strong>@starting-style</strong> rule within the opened state uses progressive enhancement to provide improved animation transitions in supporting browsers. This rule specifies the beginning styles of the animation upon transitioning to the open state, further refining the user experience on browsers such as Chrome which fully supports this feature.</p>
+
+      <p>Overall, even though the code leverages modern CSS features for enhanced visuals and animations, it maintains functionality across different browser generations by degrading gracefully in environments that do not support advanced CSS properties.</p>
+      
+      <p>Visit <a href="https://www.svenaarts.be" target="_blank">svenaarts.be</a> to see this component in action or visit <a href="https://github.com/shven/svenaarts/tree/main/components/summary" target="_blank">github</a> to copy a <strong>React/NextJS</stong> component.</p>
+      
+      <p>Your feedback is appreciated in the comments section.<br>If you found this content useful, please show your support with a ❤️.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,164 @@
+
+.faqARTmag {
+  padding: 70px 0 0 222px;
+}
+
+.faqARTmag div {
+  width: 1080px;        /* Set your desired width */
+  aspect-ratio: 1 /1.2;
+}
+
+.faqARTmag div img {
+  transform: translateY(0px) translateX(0px) scale(1);
+  width: 100%;         /* Stretch to container width */
+  height: 100%;        /* Stretch to container height */
+  object-fit: cover;   /* Crop and preserve aspect ratio */
+  object-position: left top; /* Adjust focal point (e.g., top, bottom, 20% 50%) */
+  animation: scaleAndMove linear both;
+  animation-timeline: scroll(root); /* tracks the main window scroll */
+  animation-range: exit;            /* animates while the element exits the view */
+}
+@keyframes scaleAndMove {
+  from {
+  transform: translateY(0px) translateX(0px) scale(1);
+  }
+  to {
+    transform: translateY(20px) translateX(3000px) scale(3.86);
+  }
+}
+
+@media (width <= 767px) {
+.faqARTwrapper {
+  width: calc(549px + ((100cqw - 549px) / 2));
+  }
+.faqARTmag {
+  padding: 4.375rem 0 0 0;
+}
+}
+
+/* MEDIUM */
+@media (768px <= width <= 1023px) {
+.faqARTwrapper {
+  width: calc(767px + ((100cqw - 767px) / 2));
+  }
+.faqARTmag {
+  padding: 100px 0 0 160px;
+}
+}
+
+/* LARGE */
+@media (1024px <= width <= 1279px) {
+.faqARTwrapper {
+  width: calc(1024px + ((100cqw - 1024px) / 2));
+  }
+}
+
+/* X-LARGE */
+@media (min-width: 1280px) {
+.faqARTwrapper {
+  width: calc(1280px + ((100cqw - 1280px) / 2));
+  }
+}
+
+
+                                <div class="faqEXTRAcontain">
+                                    <!-- First Details (Controls Full-Width Content) -->
+                                    <details class="full-width-control">
+                                        <summary>Control Panel</summary>
+                                        <div class="full-width-content">
+                                            <div class="faqEXTRAvidbox">
+                                                <video controls poster="thumbnail.jpg">
+                                                        <source src="movie.mp4" type="video/mp4" loading="lazy">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </details>
+                                    <details class="standard-control">
+                                        <summary>Side Panel</summary>
+                                        <div class="standard-content">
+                                        <p>This is regular content inside the second details element.</p>
+                                        </div>
+                                    </details>
+                                </div>
+
+
+
+
+                                <div class="faqEXTRAcontainer">
+                                    <details>
+                                        <summary>
+                                            <div class="faqEXTRAvidbtn">
+                                                <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                                <p class="faqTXTanswer"><strong>Watch. </strong>Video title here.</p>
+                                            </div>
+                                        </summary>
+                                        <div class="faqEXTRAvidbox">
+                                            <video controls poster="thumbnail.jpg">
+                                                <source src="movie.mp4" type="video/mp4" loading="lazy">
+                                            </video>
+                                        </div>
+                                    </details>
+                                    <details>
+                                        <summary>
+                                            <div class="faqEXTRApdfbtn">
+                                                <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONSdownload"></use></svg>
+                                                <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                            </div>
+                                        </summary>
+                                        <div class="">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </div>  
+                                    </details>
+ 
+                                </div>      
+
+
+
+<style>
+
+.faqEXTRAcontainer details[open]::before{
+  all: unset;
+}
+.faqEXTRAcontainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.faqEXTRAcontainer details summary {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.faqXTRAboxPDF {
+    display: flex;
+    flex-direction: row;
+
+}
+.faqEXTRAvidbox video {
+    width: 100%;
+    aspect-ratio: 1 / 0.5625;
+}
+.faqEXTRAvidbtn, .faqEXTRApdfbtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.faqEXTRApdfbtn {
+    pointer-events: none; /* Disables the click action */
+    cursor: default;   
+}
+.faqEXTRApdfbtn a {
+    text-decoration: none;
+    color: #6b6a69; 
+}
+.faqEXTRApdfbtn svg, .faqEXTRApdfbtn p {
+    pointer-events: none;
+    cursor: default; 
+    z-index: 100;
+}
+
+</style>

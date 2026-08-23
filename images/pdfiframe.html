@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF First Page Thumbnail</title>
+  <style>
+    /* 1. Container controls the size of the thumbnail */
+    .pdf-thumbnail-container {
+      width: 200px;
+      height: 260px; /* Standard 8.5x11 portrait ratio aspect */
+      overflow: hidden;
+      position: relative;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 4px;
+    }
+
+    /* 2. Style the iframe to fit the container */
+    .pdf-thumbnail-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      pointer-events: none; /* Prevents users from clicking/scrolling inside */
+    }
+
+    /* 3. Transparent overlay to block all browser PDF toolbar interactions */
+    .pdf-click-shield {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background: transparent;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Thumbnail Wrapper -->
+  <div class="pdf-thumbnail-container">
+    <!-- The shield stops hover menus and toolbar activations inside the iframe -->
+    <div class="pdf-click-shield"></div>
+    
+    <!-- 
+      #page=1: Forces the viewer to page 1
+      &toolbar=0&navpanes=0&scrollbar=0: Hides native browser controls
+    -->
+    <iframe 
+      src="your-file.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0" 
+      scrolling="no">
+    </iframe>
+  </div>
+
+</body>
+</html>
