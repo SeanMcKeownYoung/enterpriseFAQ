@@ -48,13 +48,48 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 .faqHEADbig a {
   text-decoration: none;
 }
-.faqHEROtext .faqHEADbig {
-  color: #00b7ff;
-}
-.faqHEROtext .faqHEADbig a {
+.faqHEROtext .faqHEADbig a, .faqHEROtext:hover .faqHEADbig {
   color: #686867;
+    transition: color text-shadow 0.3s ease;
 }
-
+.faqHEROtext .faqHEADbig, .faqHEROtext .faqHEADbig:hover {
+  color: #00b7ff;
+  transition: all 0.3s ease;
+}
+.hoverBlue:hover,
+.hoverBlue:hover a {
+  color: #00b7ff !important;
+}
+.hoverGold:hover,
+.hoverGold:hover a {
+  color: #f7be00 !important;
+  text-shadow: 0 0 30px #f7be00 !important;
+  transition: color 0.3s ease, text-shadow 0.5s ease-in-out;
+}
+.hoverRed:hover,
+.hoverRed:hover a {
+  color: #ff5e5e !important;
+  text-shadow: 0 0 30px #ff5e5e !important;
+  transition: color 0.3s ease, text-shadow 0.5s ease-in-out;
+}
+.hoverGreen:hover,
+.hoverGreen:hover a {
+  color: #84cc16 !important;
+  text-shadow: 0 0 30px #84cc16 !important;
+  transition: color 0.3s ease, text-shadow 0.5s ease-in-out;
+}
+.hoverViolet:hover,
+.hoverViolet:hover a {
+  color: #bc69ff !important;
+  text-shadow: 0 0 30px #bc69ff !important;
+  transition: color 0.3s ease, text-shadow 0.5s ease-in-out;
+}
+.hoverOrange:hover,
+.hoverOrange:hover a {
+  color: #ff8819 !important;
+  text-shadow: 0 0 30px #ff8819 !important;
+  transition: color 0.3s ease, text-shadow 0.5s ease-in-out;
+}
 /* X-SMALL */
 @media (max-width: 549px) {
   .faqBODYwrapper {
@@ -147,7 +182,6 @@ filter: drop-shadow(0px 5px 10px #00000080);
     height: 100%;
     color: #3f3f3f; 
 }
-
 .faqBODYnav {
   display: flex;
   flex-wrap: nowrap;
@@ -822,8 +856,6 @@ details[open]::details-content {
 fill: #404041;
 }
 
-
-
 @media (min-width: 650px) {
 .faqGRIDcontainer {
   display: grid;
@@ -1439,11 +1471,11 @@ align-self: flex-end;
                 </main>
                 <main class="faqHEROtext">
                     <h1 class="faqHEADbig">How can we help you?</h1>
-                    <h1 class="faqHEADbig"><a style="text-decoration: none;" href="#Register">How do I register/sign in?</a></h1>
-                    <h1 class="faqHEADbig"><a class="faqNOTunderlined" href="#Access">How do I access the paper?</a></h1>
-                    <h1 class="faqHEADbig"><a href="#Navigate">How do I navigate the paper?</a></h1>
-                    <h1 class="faqHEADbig"><a href="#Account">How do I manage my account?</a></h1>
-                    <h1 class="faqHEADbig"><a href="#Contacts">How do I get help?</a></h1>
+                    <h1 class="faqHEADbig hoverGold"><a href="#Register">How do I register/sign in?</a></h1>
+                    <h1 class="faqHEADbig hoverRed"><a href="#Access">How do I access the paper?</a></h1>
+                    <h1 class="faqHEADbig hoverGreen"><a href="#Navigate">How do I navigate the paper?</a></h1>
+                    <h1 class="faqHEADbig hoverViolet"><a href="#Account">How do I manage my account?</a></h1>
+                    <h1 class="faqHEADbig hoverOrange"><a href="#Contacts">How do I get help?</a></h1>
                 </main>
             </div>
 
