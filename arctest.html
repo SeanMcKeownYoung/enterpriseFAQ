@@ -48,12 +48,6 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 .faqHEADbig a {
   text-decoration: none;
 }
-.faqHEROtext .faqHEADbig {
-  color: #00b7ff;
-}
-.faqHEROtext .faqHEADbig a {
-  color: #686867;
-}
 
 /* X-SMALL */
 @media (max-width: 549px) {
@@ -145,9 +139,8 @@ filter: drop-shadow(0px 5px 10px #00000080);
 .faqHEROgriditem:last-of-type svg {
     width: 100%;
     height: 100%;
-    color: #3f3f3f; 
+    color: #3f3f3f !important; 
 }
-
 .faqBODYnav {
   display: flex;
   flex-wrap: nowrap;
@@ -203,7 +196,6 @@ filter: drop-shadow(0px 5px 10px #00000080);
   text-decoration: none;
   color: #c1bfb9;
 }
-
 .faqBODYnav .faqBODYnavitem:hover {
   border-bottom: 10px solid #404041;
 }
@@ -211,6 +203,26 @@ filter: drop-shadow(0px 5px 10px #00000080);
   text-decoration: none;
   color: #404041;
 }
+
+.faqBODYnav .navBlue:hover {
+  border-bottom: 10px solid #00b7ff;
+}
+.faqBODYnav .navGold:hover {
+  border-bottom: 10px solid #f7be00;
+}
+.faqBODYnav .navRed:hover {
+  border-bottom: 10px solid #ff5e5e;
+}
+.faqBODYnav .navGreen:hover {
+  border-bottom: 10px solid #84cc16;
+}
+.faqBODYnav .navViolet:hover {
+  border-bottom: 10px solid #bc69ff;
+}
+.faqBODYnav .navOrange:hover {
+  border-bottom: 10px solid #ff8819;
+}
+
 
 /* SMALL */
 @media (width <= 767px) {
@@ -373,6 +385,83 @@ filter: drop-shadow(0px 5px 10px #00000080);
   display: inline !important;
   border-bottom: 10px solid #ff8819;
 }
+.faqHEROtext .faqHEADbig a, .faqHEROtext:hover .faqHEADbig {
+  color: #686867;
+    transition: color text-shadow 0.3s ease;
+}
+.faqHEROtext .faqHEADbig, .faqHEROtext .faqHEADbig:hover {
+  color: #00b7ff;
+  transition: all 0.3s ease;
+}
+.hoverBlue:hover,
+.hoverBlue:hover a {
+  color: #00b7ff !important;
+}
+.hoverGold:hover,
+.hoverGold:hover a {
+  color: #f7be00 !important;
+  text-shadow: 0 0 30px #f7be00 !important;
+  transition: color 0.3s ease, text-shadow 0.5s ease-in-out;
+}
+body:has(.faqHEROtext  .hoverGold:hover) .faqARTmag div img {
+    filter: hue-rotate(220deg) saturate(2);
+}
+body:has(.faqHEROtext  .hoverGold:hover) .faqHEROgriditem svg {
+    color: #f7be00;
+}
+
+.hoverRed:hover,
+.hoverRed:hover a {
+  color: #ff5e5e !important;
+  text-shadow: 0 0 30px #ff5e5e !important;
+  transition: color 0.3s ease, text-shadow 0.5s ease-in-out;
+}
+body:has(.faqHEROtext  .hoverRed:hover) .faqARTmag div img {
+    filter: hue-rotate(160deg) saturate(2);
+}
+body:has(.faqHEROtext  .hoverRed:hover) .faqHEROgriditem svg {
+    color: #ff5e5e;
+}
+
+.hoverGreen:hover,
+.hoverGreen:hover a {
+  color: #84cc16 !important;
+  text-shadow: 0 0 30px #84cc16 !important;
+  transition: color 0.3s ease, text-shadow 0.5s ease-in-out;
+}
+body:has(.faqHEROtext  .hoverGreen:hover) .faqARTmag div img {
+    filter: hue-rotate(-70deg) saturate(2);
+}
+body:has(.faqHEROtext  .hoverGreen:hover) .faqHEROgriditem svg {
+    color: #84cc16;
+}
+
+.hoverViolet:hover,
+.hoverViolet:hover a {
+  color: #bc69ff !important;
+  text-shadow: 0 0 30px #bc69ff !important;
+  transition: color 0.3s ease, text-shadow 0.5s ease-in-out;
+}
+body:has(.faqHEROtext  .hoverViolet:hover) .faqARTmag div img {
+    filter: hue-rotate(90deg) saturate(2);
+}
+body:has(.faqHEROtext  .hoverViolet:hover) .faqHEROgriditem svg {
+    color: #bc69ff;
+}
+
+.hoverOrange:hover,
+.hoverOrange:hover a {
+  color: #ff8819 !important;
+  text-shadow: 0 0 30px #ff8819 !important;
+  transition: color 0.3s ease, text-shadow 0.5s ease-in-out;
+}
+body:has(.faqHEROtext  .hoverOrange:hover) .faqARTmag div img {
+    filter: hue-rotate(180deg) saturate(2);
+}
+body:has(.faqHEROtext  .hoverOrange:hover:hover) .faqHEROgriditem svg {
+    color: #ff8819;
+}
+
 
 .faqTXTquestion {
   font-weight: 600;
@@ -822,8 +911,6 @@ details[open]::details-content {
 fill: #404041;
 }
 
-
-
 @media (min-width: 650px) {
 .faqGRIDcontainer {
   display: grid;
@@ -1072,7 +1159,7 @@ align-self: flex-end;
     grid-column: span 2 / span 2;
     grid-row-start: 3;
   }
-/* Desktop Layout (SVG top-left, Text stacked underneath) */
+
 @media (min-width: 649px) {
   .faqCONTACTcontainer {
     grid-template-columns: 1fr;
@@ -1439,11 +1526,11 @@ align-self: flex-end;
                 </main>
                 <main class="faqHEROtext">
                     <h1 class="faqHEADbig">How can we help you?</h1>
-                    <h1 class="faqHEADbig"><a style="text-decoration: none;" href="#Register">How do I register/sign in?</a></h1>
-                    <h1 class="faqHEADbig"><a class="faqNOTunderlined" href="#Access">How do I access the paper?</a></h1>
-                    <h1 class="faqHEADbig"><a href="#Navigate">How do I navigate the paper?</a></h1>
-                    <h1 class="faqHEADbig"><a href="#Account">How do I manage my account?</a></h1>
-                    <h1 class="faqHEADbig"><a href="#Contacts">How do I get help?</a></h1>
+                    <h1 class="faqHEADbig hoverGold"><a href="#Register">How do I register/sign in?</a></h1>
+                    <h1 class="faqHEADbig hoverRed"><a href="#Access">How do I access the paper?</a></h1>
+                    <h1 class="faqHEADbig hoverGreen"><a href="#Navigate">How do I navigate the paper?</a></h1>
+                    <h1 class="faqHEADbig hoverViolet"><a href="#Account">How do I manage my account?</a></h1>
+                    <h1 class="faqHEADbig hoverOrange"><a href="#Contacts">How do I get help?</a></h1>
                 </main>
             </div>
 
@@ -1576,11 +1663,11 @@ z-index: 1000;
     <div class="faqBODYcontainer faqBODYdark faqBODYgold">
         <section class="faqBODYwrapper" id="Register">
             <nav class="faqBODYnav">
-                <div class="faqBODYnavitem"><a href="#Home">Home</a></div>
-                <div class="faqBODYnavitem"><a href="#Access">How do I access the paper?</a></div>
-                <div class="faqBODYnavitem"><a href="#Navigate">How do I navigate the paper?</a></div>
-                <div class="faqBODYnavitem"><a href="#Account">How do I manage my account?</a></div>
-                <div class="faqBODYnavitem"><a href="#Contacts">How do I get help?</a></div>
+                <div class="faqBODYnavitem navBlue"><a href="#Home">Home</a></div>
+                <div class="faqBODYnavitem navRed"><a href="#Access">How do I access the paper?</a></div>
+                <div class="faqBODYnavitem navGreen"><a href="#Navigate">How do I navigate the paper?</a></div>
+                <div class="faqBODYnavitem navViolet"><a href="#Account">How do I manage my account?</a></div>
+                <div class="faqBODYnavitem navOrange"><a href="#Contacts">How do I get help?</a></div>
             </nav>
             <div class="faqQUESTIONcontainer">
             <h1 class="faqHEADbig"><div class="faqHEADunderline">How do I</div> register/sign in?</h1>
@@ -1738,11 +1825,11 @@ z-index: 1000;
     <div class="faqBODYcontainer faqBODYlight faqBODYred">
         <section class="faqBODYwrapper"  id="Access">
             <nav class="faqBODYnav">
-                <div class="faqBODYnavitem"><a href="#Home">Home</a></div>
-                <div class="faqBODYnavitem"><a href="#Register">How do I register/sign in?</a></div>
-                <div class="faqBODYnavitem"><a href="#Navigate">How do I navigate the paper?</a></div>
-                <div class="faqBODYnavitem"><a href="#Account">How do I manage my account?</a></div>
-                <div class="faqBODYnavitem"><a href="#Contacts">How do I get help?</a></div>
+                <div class="faqBODYnavitem navBlue"><a href="#Home">Home</a></div>
+                <div class="faqBODYnavitem navGold"><a href="#Register">How do I register/sign in?</a></div>
+                <div class="faqBODYnavitem navGreen"><a href="#Navigate">How do I navigate the paper?</a></div>
+                <div class="faqBODYnavitem navViolet"><a href="#Account">How do I manage my account?</a></div>
+                <div class="faqBODYnavitem navOrange"><a href="#Contacts">How do I get help?</a></div>
             </nav>
 
             <div class="faqQUESTIONcontainer">
@@ -2051,11 +2138,11 @@ z-index: 1000;
     <div class="faqBODYcontainer faqBODYdark faqBODYgreen">
         <section class="faqBODYwrapper"  id="Navigate">
             <nav class="faqBODYnav">
-                <div class="faqBODYnavitem"><a href="#Home">Home</a></div>
-                <div class="faqBODYnavitem"><a href="#Register">How do I register/sign in?</a></div>
-                <div class="faqBODYnavitem"><a href="#Access">How do I access the paper?</a></div>
-                <div class="faqBODYnavitem"><a href="#Account">How do I manage my account?</a></div>
-                <div class="faqBODYnavitem"><a href="#Contacts">How do I get help?</a></div>
+                <div class="faqBODYnavitem navBlue"><a href="#Home">Home</a></div>
+                <div class="faqBODYnavitem navGold"><a href="#Register">How do I register/sign in?</a></div>
+                <div class="faqBODYnavitem navRed"><a href="#Access">How do I access the paper?</a></div>
+                <div class="faqBODYnavitem navViolet"><a href="#Account">How do I manage my account?</a></div>
+                <div class="faqBODYnavitem navOrange"><a href="#Contacts">How do I get help?</a></div>
             </nav>
 
             <div class="faqQUESTIONcontainer">
@@ -2486,11 +2573,11 @@ z-index: 1000;
     <div class="faqBODYcontainer faqBODYlight faqBODYviolet">
         <section class="faqBODYwrapper"  id="Account">
             <nav class="faqBODYnav">
-                <div class="faqBODYnavitem"><a href="#Home">Home</a></div>
-                <div class="faqBODYnavitem"><a href="#Register">How do I register/sign in?</a></div>
-                <div class="faqBODYnavitem"><a href="#Access">How do I access the paper?</a></div>
-                <div class="faqBODYnavitem"><a href="#Navigate">How do I navigate the paper?</a></div>
-                <div class="faqBODYnavitem"><a href="#Contacts">How do I get help?</a></div>
+                <div class="faqBODYnavitem navBlue"><a href="#Home">Home</a></div>
+                <div class="faqBODYnavitem navGold"><a href="#Register">How do I register/sign in?</a></div>
+                <div class="faqBODYnavitem navRed"><a href="#Access">How do I access the paper?</a></div>
+                <div class="faqBODYnavitem navGreen"><a href="#Navigate">How do I navigate the paper?</a></div>
+                <div class="faqBODYnavitem navOrange"><a href="#Contacts">How do I get help?</a></div>
             </nav>
 
             <div class="faqQUESTIONcontainer">
@@ -2783,11 +2870,11 @@ z-index: 1000;
     <div class="faqBODYcontainer faqBODYdark faqBODYorange">
         <section class="faqBODYwrapper"  id="Contacts">
             <nav class="faqBODYnav">
-                <div class="faqBODYnavitem"><a href="#Home">Home</a></div>
-                <div class="faqBODYnavitem"><a href="#Register">How do I register/sign in?</a></div>
-                <div class="faqBODYnavitem"><a href="#Access">How do I access the paper?</a></div>
-                <div class="faqBODYnavitem"><a href="#Navigate">How do I navigate the paper?</a></div>
-                <div class="faqBODYnavitem"><a href="#Account">How do I manage my account?</a></div>
+                <div class="faqBODYnavitem navBlue"><a href="#Home">Home</a></div>
+                <div class="faqBODYnavitem navGold"><a href="#Register">How do I register/sign in?</a></div>
+                <div class="faqBODYnavitem navRed"><a href="#Access">How do I access the paper?</a></div>
+                <div class="faqBODYnavitem navGreen"><a href="#Navigate">How do I navigate the paper?</a></div>
+                <div class="faqBODYnavitem navViolet"><a href="#Account">How do I manage my account?</a></div>
             </nav>
 
             <div class="faqQUESTIONcontainer">
@@ -2798,7 +2885,6 @@ z-index: 1000;
                     <div class="faqGRIDitem faqGitem1">
                         <div class="faqCONTACTcontainer">
                             <div class="faqCONTACTsvgbox">
-                                <!-- Insert your SVG here -->
                                 <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
                             </div>
                             <div class="faqCONTACTtext-1">
@@ -2831,7 +2917,7 @@ z-index: 1000;
                     <div class="faqGRIDitem faqGitem2">                 
                         <div class="faqCONTACTcontainer">
                             <div class="faqCONTACTsvgbox">
-                                <!-- Insert your SVG here -->
+
                                 <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#BayCityTimesSolid"></use></svg>
                             </div>
                             <div class="faqCONTACTtext-1">
@@ -2864,7 +2950,7 @@ z-index: 1000;
                     <div class="faqGRIDitem faqGitem3">
                         <div class="faqCONTACTcontainer">
                             <div class="faqCONTACTsvgbox">
-                                <!-- Insert your SVG here -->
+
                                 <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#FlintJournalSolid"></use></svg>
                             </div>
                             <div class="faqCONTACTtext-1">
@@ -2897,7 +2983,7 @@ z-index: 1000;
                     <div class="faqGRIDitem faqGitem4">
                         <div class="faqCONTACTcontainer">
                             <div class="faqCONTACTsvgbox">
-                                <!-- Insert your SVG here -->
+
                                 <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
                             </div>
                             <div class="faqCONTACTtext-1">
@@ -2930,7 +3016,7 @@ z-index: 1000;
                     <div class="faqGRIDitem faqGitem5">
                         <div class="faqCONTACTcontainer">
                             <div class="faqCONTACTsvgbox">
-                                <!-- Insert your SVG here -->
+
                                 <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
                             </div>
                             <div class="faqCONTACTtext-1">
@@ -2963,7 +3049,7 @@ z-index: 1000;
                     <div class="faqGRIDitem faqGitem6">
                         <div class="faqCONTACTcontainer">
                             <div class="faqCONTACTsvgbox">
-                                <!-- Insert your SVG here -->
+
                                 <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
                             </div>
                             <div class="faqCONTACTtext-1">
@@ -2996,7 +3082,7 @@ z-index: 1000;
                     <div class="faqGRIDitem faqGitem7">
                         <div class="faqCONTACTcontainer">
                             <div class="faqCONTACTsvgbox">
-                                <!-- Insert your SVG here -->
+
                                 <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
                             </div>
                             <div class="faqCONTACTtext-1">
@@ -3029,7 +3115,7 @@ z-index: 1000;
                     <div class="faqGRIDitem faqGitem8">
                         <div class="faqCONTACTcontainer">
                             <div class="faqCONTACTsvgbox">
-                                <!-- Insert your SVG here -->
+
                                 <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#SaginawNewsSolid"></use></svg>
                             </div>
                             <div class="faqCONTACTtext-1">
