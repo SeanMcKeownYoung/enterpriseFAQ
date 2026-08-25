@@ -1,0 +1,933 @@
+ <style>
+
+
+@media (min-width: 650px) {
+.faqGRIDcontainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px 10px;
+  max-width: 90%;
+}
+}
+.faqGRIDitem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #404041;
+  font-weight: 500;
+  padding-bottom: 2rem;
+  transition: color 0.2s ease-in-out;
+}
+.faqGRIDitem a  {
+  color: #6b6a69;
+  text-decoration: none;
+}
+.faqGitem1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.faqGitem2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.faqGitem3 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.faqGitem4 {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+.faqGitem5 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.faqGitem6 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.faqGitem7 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.faqGitem8 {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+/* Tablet styles */
+@media (max-width: 1280px) {
+  .faqGRIDcontainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(60px, auto));
+    gap: 10px 10px;
+  }
+  
+  .faqGitem1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .faqGitem2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  .faqGitem3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+  
+  .faqGitem4 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  
+  .faqGitem5 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  
+  .faqGitem6 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  
+  .faqGitem7 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  
+  .faqGitem8 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 900px) {
+  .faqGRIDcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, minmax(60px, auto));
+    gap: 10px 10px;
+  }
+  
+  .faqGitem1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .faqGitem2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  
+  .faqGitem3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  
+  .faqGitem4 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  
+  .faqGitem5 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  .faqGitem6 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  
+  .faqGitem7 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  
+  .faqGitem8 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 649px) {
+  .faqGRIDcontainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 10px 10px;
+  }
+  
+  .faqGitem1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  
+  .faqGitem2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  
+  .faqGitem3 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+  
+  .faqGitem4 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+  }
+  
+  .faqGitem5 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+  }
+  
+  .faqGitem6 {
+    grid-column-start: 1;
+    grid-row-start: 6;
+  }
+  
+  .faqGitem7 {
+    grid-column-start: 1;
+    grid-row-start: 7;
+  }
+  
+  .faqGitem8 {
+    grid-column-start: 1;
+    grid-row-start: 8;
+  }
+}
+
+/* Mobile First Layout (SVG left, Text stacked on the right) */
+.faqCONTACTcontainer {
+  display: grid;
+  grid-template-columns: auto 1fr; 
+  grid-template-rows: auto auto auto; 
+  gap: 1rem;
+}
+
+
+/* SVG constrained to its zone */
+.faqCONTACTsvgbox {
+    grid-row: span 2 / span 2;
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+}
+
+.faqCONTACTsvgbox svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #ff8819;
+  transition: color 0.2s ease-in-out;
+}
+
+.faqCONTACTtext-1 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.faqCONTACTtext-2 {
+  grid-column: 2;
+  grid-row: 2;
+align-self: flex-end;
+}
+
+.faqCONTACTtext-3 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 3;
+  }
+
+@media (min-width: 649px) {
+  .faqCONTACTcontainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .faqCONTACTsvgbox {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 8px;
+  }
+
+  .faqCONTACTtext-1 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+.faqCONTACTtext-2 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+.faqCONTACTtext-3 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+.faqCONTACTcontacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.faqCONTACTcontacts div a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    color: #404041;
+    gap: 0.4rem;
+}
+.faqCONTACTcontacts div a p {
+  letter-spacing: 0.03rem;
+}
+.faqCONTACTcontacts svg {
+    fill: #6b6a69;
+    width: 30px;
+    transition: fill 0.2s ease-in-out;
+}
+.faqCONTACTtext-2 p {
+  display: inline-block;
+}
+
+.faqGRIDitem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #404041;
+  font-weight: 500;
+  padding-bottom: 2rem;
+}
+.faqGRIDitem a  {
+  color: #6b6a69;
+  text-decoration: none;
+}
+
+.faqGRIDcontainer:hover .faqGRIDitem .faqCONTACTsvgbox svg, 
+.faqGRIDcontainer:hover .faqGRIDitem, 
+.faqGRIDcontainer:hover .faqGRIDitem a, 
+.faqGRIDcontainer:hover .faqGRIDitem .faqCONTACTcontacts div a svg {
+  color: #c1bfb9;
+  fill: #c1bfb9;
+  transition: color fill 0.2s ease-in-out;
+}
+
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTsvgbox svg, 
+.faqGRIDcontainer .faqGRIDitem:hover, 
+.faqGRIDcontainer .faqGRIDitem:hover a, 
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts div a svg {
+  color: #2a2a2a;
+  fill: #2a2a2a;
+  transition: color fill 0.2s ease-in-out;
+}
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTsvgbox svg {
+  color: #ff8819;
+  transition: color 0.2s ease-in-out;
+}
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts:hover div a p, 
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts:hover div a svg {
+  color: #969491; fill:#969491;
+}
+
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts div:hover a p, 
+.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts div:hover a svg {
+  color: #2a2a2a; fill:#2a2a2a !important;
+}
+
+/* X-SMALL */
+@media (max-width: 749px) {
+.faqCONTACTcontacts {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 0.4rem;
+    margin-top: 20px;
+}
+.faqCONTACTcontacts div a {
+    text-decoration: none;
+    color: #404041;
+    gap: 10px;
+}
+.faqCONTACTcontainer p {
+    font-size: 18px;
+}
+
+.faqCONTACTcontainer h3 a {
+    font-size: 24px;
+    color: #828286;
+}
+.faqCONTACTcontacts div a svg {
+    width: 80px !important;
+    height: 80px;
+}
+.faqCONTACTcontainer {
+  gap: 0 20px;
+}
+.faqGRIDitem {
+  width: 90%;       /* Or a fixed width like 300px */
+  margin: 0 auto;   /* Automatically splits left and right spacing */
+}
+
+.faqCONTACTcontacts > div:not(:first-child) a p {
+  display: none;
+}
+}
+
+
+ </style>              
+               
+               
+               
+               
+               
+               <div class="faqGRIDcontainer">
+
+                    <div class="faqGRIDitem faqGitem1">
+                        <div class="faqCONTACTcontainer">
+                            <div class="faqCONTACTsvgbox">
+                                <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
+                            </div>
+                            <div class="faqCONTACTtext-1">
+                                <h2>The Ann Arbor News</h2>
+                                <h3><a href="https://reader.aa.mlive.com">reader.aa.mlive</a></h3>
+                            </div>
+                            <div class="faqCONTACTtext-2">
+                                <p>111 N Ashley St.</p>
+                                <p>Ann Arbor, MI 48104.</p>
+                            </div>
+                            <div class="faqCONTACTtext-3">
+                                <div class="faqCONTACTcontacts">
+                                    <div><a href="https://myaccount.mlive.com/aa/home" target="_blank" aria-label="myaccount.mlive.com/aa/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <p>myaccount.mlive.com/aa</p>
+                                    </a></div>
+                                    <div><a href="tel:7349264555" target="_blank" aria-label="Call (734) 926-4555">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <p>call (734) 926-4555</p>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Ann%20Arbor%20News%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <p>email customercare@mlive.com</p>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faqGRIDitem faqGitem2">                 
+                        <div class="faqCONTACTcontainer">
+                            <div class="faqCONTACTsvgbox">
+
+                                <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#BayCityTimesSolid"></use></svg>
+                            </div>
+                            <div class="faqCONTACTtext-1">
+                                <h2>The Bay City Times</h2>
+                                <h3><a href="https://reader.bc.mlive">reader.bc.mlive</a></h3>
+                            </div>
+                            <div class="faqCONTACTtext-2">
+                                <p>540 S. Saginaw St., Ste 101.</p>
+                                <p>Flint, MI 48502.</p>
+                            </div>
+                            <div class="faqCONTACTtext-3">
+                                <div class="faqCONTACTcontacts">
+                                    <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myaccount.mlive.com/bc/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <p>myaccount.mlive.com/bc</p>
+                                    </a></div>
+                                    <div><a href="tel:9896711201" target="_blank" aria-label="Call (989) 671-1201">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <p>call (989) 671-1201</p>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Bay%20City%20Times%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <p>email customercare@mlive.com</p>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faqGRIDitem faqGitem3">
+                        <div class="faqCONTACTcontainer">
+                            <div class="faqCONTACTsvgbox">
+
+                                <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#FlintJournalSolid"></use></svg>
+                            </div>
+                            <div class="faqCONTACTtext-1">
+                                <h2>The Flint Journal</h2>
+                                <h3><a href="https://reader.fj.mlive.com">reader.fj.mlive</a></h3>
+                            </div>
+                            <div class="faqCONTACTtext-2">
+                                <p>540 S. Saginaw St., Ste 101.</p>
+                                <p>Flint, MI 48502.</p>
+                            </div>
+                            <div class="faqCONTACTtext-3">
+                                <div class="faqCONTACTcontacts">
+                                    <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myaccount.mlive.com/fj/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <p>myaccount.mlive.com/fj</p>
+                                    </a></div>
+                                    <div><a href="tel:8107666280" target="_blank" aria-label="Call (810) 766-6280">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <p>call (810) 766-6280</p>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Flint%20Journal%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <p>email customercare@mlive.com</p>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faqGRIDitem faqGitem4">
+                        <div class="faqCONTACTcontainer">
+                            <div class="faqCONTACTsvgbox">
+
+                                <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
+                            </div>
+                            <div class="faqCONTACTtext-1">
+                                <h2>The Grand Rapids Press</h2>
+                                <h3><a href="https://reader.gr.mlive.com">reader.gr.mlive</a></h3>
+                            </div>
+                            <div class="faqCONTACTtext-2">
+                                <p>169 Monroe Ave. NW, Ste 100.</p>
+                                <p>Grand Rapids, MI 49503.</p>
+                            </div>
+                            <div class="faqCONTACTtext-3">
+                                <div class="faqCONTACTcontacts">
+                                    <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myaccount.mlive.com/gr/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <p>myaccount.mlive.com/gr</p>
+                                    </a></div>
+                                    <div><a href="tel:6162225411" target="_blank" aria-label="Call (616) 222-5411">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <p>call (616) 222-5411</p>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Grand%20Rapids%20Press%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <p>email customercare@mlive.com</p>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faqGRIDitem faqGitem5">
+                        <div class="faqCONTACTcontainer">
+                            <div class="faqCONTACTsvgbox">
+
+                                <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
+                            </div>
+                            <div class="faqCONTACTtext-1">
+                                <h2>Jackson Citizen Patriot</h2>
+                                <h3><a href="https://reader.jp.mlive.com">reader.jp.mlive</a></h3>
+                            </div>
+                            <div class="faqCONTACTtext-2">
+                                <p>111 N Ashley St.</p>
+                                <p>Ann Arbor, MI 48104.</p>
+                            </div>
+                            <div class="faqCONTACTtext-3">
+                                <div class="faqCONTACTcontacts">
+                                    <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myaccount.mlive.com/jp/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <p>myaccount.mlive.com/jp</p>
+                                    </a></div>
+                                    <div><a href="tel:5177684830" target="_blank" aria-label="Call (517) 768-4830">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <p>call (517) 768-4830</p>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Jackson%20Citizen%20Patriot%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <p>email customercare@mlive.com</p>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faqGRIDitem faqGitem6">
+                        <div class="faqCONTACTcontainer">
+                            <div class="faqCONTACTsvgbox">
+
+                                <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
+                            </div>
+                            <div class="faqCONTACTtext-1">
+                                <h2>Kalamazoo Gazette</h2>
+                                <h3><a href="https://reader.kg.mlive.com">reader.kg.mlive</a></h3>
+                            </div>
+                            <div class="faqCONTACTtext-2">
+                                <p>300 S. Kalamazoo Mall.</p>
+                                <p>Kalamazoo, MI 49007.</p>
+                            </div>
+                            <div class="faqCONTACTtext-3">
+                                <div class="faqCONTACTcontacts">
+                                    <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myaccount.mlive.com/kg/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <p>myaccount.mlive.com/kg</p>
+                                    </a></div>
+                                    <div><a href="tel:2693887789" target="_blank" aria-label="Call (269) 388-7789">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <p>call (269) 388-7789</p>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Kalamazoo%20Gazette%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <p>email customercare@mlive.com</p>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faqGRIDitem faqGitem7">
+                        <div class="faqCONTACTcontainer">
+                            <div class="faqCONTACTsvgbox">
+
+                                <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
+                            </div>
+                            <div class="faqCONTACTtext-1">
+                                <h2>Muskegon Chronicle</h2>
+                                <h3><a href="https://reader.mc.mlive.com">reader.mc.mlive</a></h3>
+                            </div>
+                            <div class="faqCONTACTtext-2">
+                                <p>379 W. Western Ave., Ste. 100.</p>
+                                <p>Muskegon, MI 49440.</p>
+                            </div>
+                            <div class="faqCONTACTtext-3">
+                                <div class="faqCONTACTcontacts">
+                                    <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myaccount.mlive.com/mc/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <p>myaccount.mlive.com/mc</p>
+                                    </a></div>
+                                    <div><a href="tel:2317289554" target="_blank" aria-label="Call (231) 728-9554">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <p>call (231) 728-9554</p>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Muskegon%20Chronicle%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <p>email customercare@mlive.com</p>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faqGRIDitem faqGitem8">
+                        <div class="faqCONTACTcontainer">
+                            <div class="faqCONTACTsvgbox">
+
+                                <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#SaginawNewsSolid"></use></svg>
+                            </div>
+                            <div class="faqCONTACTtext-1">
+                                <h2>The Saginaw News</h2>
+                                <h3><a href="https://reader.sn.mlive.com">reader.sn.mlive</a></h3>
+                            </div>
+                            <div class="faqCONTACTtext-2">
+                                <p>540 S. Saginaw St., Ste 101.</p>
+                                <p>Flint, MI 48502.</p>
+                            </div>
+                            <div class="faqCONTACTtext-3">
+                                <div class="faqCONTACTcontacts">
+                                    <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myaccount.mlive.com/sn/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <p>myaccount.mlive.com/sn</p>
+                                    </a></div>
+                                    <div><a href="tel:9896711202" target="_blank" aria-label="Call (989) 671-1202">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <p>call (989) 671-1202</p>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Saginaw%20News%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <p>email customercare@mlive.com</p>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faqGRIDitem faqGitem9" style="display: none;">
+                        Item 9
+                    </div>
+                </div>
+
+
+
+
+<!-- FAQ SECTION 005  -->   
+    <div class="faqBODYcontainer faqBODYdark faqBODYorange">
+        <section class="faqBODYwrapper"  id="Contacts">
+            <nav class="faqBODYnav">
+                <div class="faqBODYnavitem navBlue"><a href="#Home">Home</a></div>
+                <div class="faqBODYnavitem navGold"><a href="#Register">How do I register/sign in?</a></div>
+                <div class="faqBODYnavitem navRed"><a href="#Access">How do I access the paper?</a></div>
+                <div class="faqBODYnavitem navGreen"><a href="#Navigate">How do I navigate the paper?</a></div>
+                <div class="faqBODYnavitem navViolet"><a href="#Account">How do I manage my account?</a></div>
+            </nav>
+
+            <div class="faqQUESTIONcontainer">
+                <h1 class="faqHEADbig"><div class="faqHEADunderline">How do I</div> get help?</h1>
+            </div>
+            <div class="faqANSWERbox">
+                <div class="faqBODYlist faqTXTsub">
+                    <div class="faqGRIDlistcontainGrid faqGRIDcontacts">
+
+                        <div class="faqGRIDlistcard">
+                            <div class="faqGRIDcontactICON">
+                                <svg width="50px" height="50px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
+                            </div>
+                            <div class="faqGRIDcontactsCONTENT">
+                                <div>
+                                    <p class="faqTXTanswer"><strong>Sitename.</strong></p>
+                                    <p class="faqTXTsub"></p>readerurl</p>
+                                    <div>
+                                        <p class="faqTXTsub">address</p>
+                                        <p class="faqTXTsub">address</p>
+                                    </div>
+                                </div>
+                                <div class="faqGRIDcontactsLINKS faqTXTsmallprint">
+                                    <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myaccount.mlive.com/sn/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <small>myaccount.mlive.com/sn</small>
+                                    </a></div>
+                                    <div><a href="tel:9896711202" target="_blank" aria-label="Call (989) 671-1202">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <small>(989) 671-1202</small>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Saginaw%20News%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <small>customercare@mlive.com</small>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faqGRIDlistcard">
+                            <div class="faqGRIDcontactICON">
+                                <svg width="50px" height="50px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
+                            </div>
+                            <div class="faqGRIDcontactsCONTENT">
+                                <div>
+                                    <p class="faqTXTanswer"><strong>Sitename.</strong></p>
+                                    <p class="faqTXTsub"></p>readerurl</p>
+                                    <div>
+                                        <p class="faqTXTsub">address</p>
+                                        <p class="faqTXTsub">address</p>
+                                    </div>
+                                </div>
+                                <div class="faqGRIDcontactsLINKS faqTXTsmallprint">
+                                    <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myaccount.mlive.com/sn/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <small>myaccount.mlive.com/sn</small>
+                                    </a></div>
+                                    <div><a href="tel:9896711202" target="_blank" aria-label="Call (989) 671-1202">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <small>(989) 671-1202</small>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Saginaw%20News%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <small>customercare@mlive.com</small>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faqGRIDlistcard">
+                            <div class="faqGRIDcontactICON">
+                                <svg width="50px" height="50px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
+                            </div>
+                            <div class="faqGRIDcontactsCONTENT">
+                                <div>
+                                    <p class="faqTXTanswer"><strong>Sitename.</strong></p>
+                                    <p class="faqTXTsub"></p>readerurl</p>
+                                    <div>
+                                        <p class="faqTXTsub">address</p>
+                                        <p class="faqTXTsub">address</p>
+                                    </div>
+                                </div>
+                                <div class="faqGRIDcontactsLINKS faqTXTsmallprint">
+                                    <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myaccount.mlive.com/sn/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <small>myaccount.mlive.com/sn</small>
+                                    </a></div>
+                                    <div><a href="tel:9896711202" target="_blank" aria-label="Call (989) 671-1202">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <small>(989) 671-1202</small>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Saginaw%20News%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <small>customercare@mlive.com</small>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faqGRIDlistcard">
+                            <div class="faqGRIDcontactICON">
+                                <svg width="50px" height="50px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
+                            </div>
+                            <div class="faqGRIDcontactsCONTENT">
+                                <div>
+                                    <p class="faqTXTanswer"><strong>Sitename.</strong></p>
+                                    <p class="faqTXTsub"></p>readerurl</p>
+                                    <div>
+                                        <p class="faqTXTsub">address</p>
+                                        <p class="faqTXTsub">address</p>
+                                    </div>
+                                </div>
+                                <div class="faqGRIDcontactsLINKS faqTXTsmallprint">
+                                    <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myaccount.mlive.com/sn/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <small>myaccount.mlive.com/sn</small>
+                                    </a></div>
+                                    <div><a href="tel:9896711202" target="_blank" aria-label="Call (989) 671-1202">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <small>(989) 671-1202</small>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Saginaw%20News%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <small>customercare@mlive.com</small>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faqGRIDlistcard">
+                            <div class="faqGRIDcontactICON">
+                                <svg width="50px" height="50px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
+                            </div>
+                            <div class="faqGRIDcontactsCONTENT">
+                                <div>
+                                    <p class="faqTXTanswer"><strong>Sitename.</strong></p>
+                                    <p class="faqTXTsub"></p>readerurl</p>
+                                    <div>
+                                        <p class="faqTXTsub">address</p>
+                                        <p class="faqTXTsub">address</p>
+                                    </div>
+                                </div>
+                                <div class="faqGRIDcontactsLINKS faqTXTsmallprint">
+                                    <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myaccount.mlive.com/sn/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <small>myaccount.mlive.com/sn</small>
+                                    </a></div>
+                                    <div><a href="tel:9896711202" target="_blank" aria-label="Call (989) 671-1202">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <small>(989) 671-1202</small>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Saginaw%20News%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <small>customercare@mlive.com</small>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faqGRIDlistcard">
+                            <div class="faqGRIDcontactICON">
+                                <svg width="50px" height="50px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
+                            </div>
+                            <div class="faqGRIDcontactsCONTENT">
+                                <div>
+                                    <p class="faqTXTanswer"><strong>Sitename.</strong></p>
+                                    <p class="faqTXTsub"></p>readerurl</p>
+                                    <div>
+                                        <p class="faqTXTsub">address</p>
+                                        <p class="faqTXTsub">address</p>
+                                    </div>
+                                </div>
+                                <div class="faqGRIDcontactsLINKS faqTXTsmallprint">
+                                    <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myaccount.mlive.com/sn/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <small>myaccount.mlive.com/sn</small>
+                                    </a></div>
+                                    <div><a href="tel:9896711202" target="_blank" aria-label="Call (989) 671-1202">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <small>(989) 671-1202</small>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Saginaw%20News%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <small>customercare@mlive.com</small>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faqGRIDlistcard">
+                            <div class="faqGRIDcontactICON">
+                                <svg width="50px" height="50px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
+                            </div>
+                            <div class="faqGRIDcontactsCONTENT">
+                                <div>
+                                    <p class="faqTXTanswer"><strong>Sitename.</strong></p>
+                                    <p class="faqTXTsub"></p>readerurl</p>
+                                    <div>
+                                        <p class="faqTXTsub">address</p>
+                                        <p class="faqTXTsub">address</p>
+                                    </div>
+                                </div>
+                                <div class="faqGRIDcontactsLINKS faqTXTsmallprint">
+                                    <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myaccount.mlive.com/sn/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <small>myaccount.mlive.com/sn</small>
+                                    </a></div>
+                                    <div><a href="tel:9896711202" target="_blank" aria-label="Call (989) 671-1202">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <small>(989) 671-1202</small>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Saginaw%20News%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <small>customercare@mlive.com</small>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faqGRIDlistcard">
+                            <div class="faqGRIDcontactICON">
+                                <svg width="50px" height="50px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
+                            </div>
+                            <div class="faqGRIDcontactsCONTENT">
+                                <div>
+                                    <p class="faqTXTanswer"><strong>Sitename.</strong></p>
+                                    <p class="faqTXTsub"></p>readerurl</p>
+                                    <div>
+                                        <p class="faqTXTsub">address</p>
+                                        <p class="faqTXTsub">address</p>
+                                    </div>
+                                </div>
+                                <div class="faqGRIDcontactsLINKS faqTXTsmallprint">
+                                    <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myaccount.mlive.com/sn/home">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <small>myaccount.mlive.com/sn</small>
+                                    </a></div>
+                                    <div><a href="tel:9896711202" target="_blank" aria-label="Call (989) 671-1202">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                        <small>(989) 671-1202</small>
+                                    </a></div>
+                                    <div><a href="mailto:customercare@mlive.com?subject=The%20Saginaw%20News%20Customer%20Service" target="_blank" aria-label="email customercare@mlive.com">
+                                        <svg class="" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                        <small>customercare@mlive.com</small>
+                                    </a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+                
+        </section>
+    </div>
