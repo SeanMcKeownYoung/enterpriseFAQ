@@ -1,5 +1,6 @@
-.faqCONTACTcontainer .faqGRIDlistcard {
-  overflow: hidden;
+.faqGRIDcontactContainer .faqGRIDcontactcard {
+  background: linear-gradient(90deg, #ece9e1aa 50%, #ece9e1aa 100%);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .faqCONTACTicon svg {
   color: #ff8819;
@@ -196,4 +197,64 @@
 .faqCONTACThead {
   font-weight: 600;
   text-wrap: balance;
+}
+
+@media (min-width: 1024px) {
+  .faqGRIDcontactContainer:hover .faqGRIDcontactcard {
+    filter: blur(3px);
+    transform: translateY(0) scale(1);
+    color: #c1bfb9;
+    transition: filter transform color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer:hover .faqGRIDcontactcard svg {
+    color: #c1bfb9;
+    transition: filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
+    width: 90%;
+    filter: blur(0);
+    z-index: 1000;
+    transform: translate(10px, 40px) scale(1.15);
+    color: #404041;
+    margin: -20px;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
+    -webkit-box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
+    -moz-box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
+    transition:
+      color margin padding 0.2s ease,
+      filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover svg {
+    color: #ff8819;
+    transition: filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:hover
+    .faqCONTACTlinks
+    div
+    a
+    svg {
+    display: flex;
+    transform: translate(-5px, 0px) scale(0.8);
+    fill: #6b6a69;
+  }
+
+  #Contacts:has(.faqGRIDcontactContainer .faqGRIDcontactcard:hover)
+    .faqTXTquestion {
+    opacity: 0.2;
+  }
+}
+@media (min-width: 1280px) {
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
+    transform: translate(-20px, 40px) scale(1.15);
+  }
+}
+@media (min-width: 1750px) {
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
+    width: 150%;
+    transform: translate(-50px, 40px) scale(1.15);
+  }
 }
