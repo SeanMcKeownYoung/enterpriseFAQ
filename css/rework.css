@@ -46,7 +46,7 @@
   color: #404041;
   fill: #404041;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.4;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -61,7 +61,7 @@
 }
 .faqCONTACTaddress {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-weight: 500;
 }
 .faqCONTACTlinks {
@@ -74,7 +74,8 @@
   align-items: center;
 }
 .faqCONTACTlinks div a svg {
-  display: none;
+  width: 30px;
+  height: 30px;
   fill: #6b6a69;
 }
 @media (width <= 767px) {
@@ -105,59 +106,94 @@
   .faqCONTACTlinks div a {
     gap: 6px;
   }
-  .faqCONTACTlinks div a svg {
-    width: 30px;
-    height: 30px;
-    fill: #6b6a69;
-  }
   .faqCONTACTheader {
     font-size: 18px;
   }
   .faqCONTACTaddress {
     font-size: 16px;
+    flex-direction: row;
   }
 }
 @media (768px <= width <= 1023px) {
   .faqCONTACTheader {
-    font-size: 19px;
+    font-size: 22px;
   }
   .faqCONTACTaddress {
-    font-size: 14px;
+    font-size: 16px;
+    flex-direction: row;
   }
   .faqCONTACTlinks {
-    font-size: 14px;
+    font-size: 16px;
+    gap: 8px;
+  }
+  .faqCONTACTlinks div a {
+    gap: 8px;
   }
 }
 @media (1024px <= width <= 1279px) {
   .faqCONTACTheader {
-    font-size: 20px;
+    font-size: 22px;
   }
   .faqCONTACTaddress {
     font-size: 16px;
+    display: inline;
+  }
+  .faqCONTACTaddress div {
+    display: inline;
+  }
+  .faqCONTACTaddress div:first-child {
+    display: block;
   }
   .faqCONTACTlinks {
-    font-size: 14px;
+    font-size: 16px;
+    gap: 8px;
+  }
+  .faqCONTACTlinks div a {
+    gap: 8px;
   }
 }
 @media (min-width: 1280px) {
+  .faqCONTACTlinks div a svg {
+    display: none;
+    fill: #6b6a69;
+  }
   .faqCONTACTheader {
     font-size: 22px;
   }
   .faqCONTACTaddress {
     font-size: 18px;
+    display: inline;
+  }
+  .faqCONTACTaddress div {
+    display: inline;
+  }
+  .faqCONTACTaddress div:first-child {
+    display: block;
   }
   .faqCONTACTlinks {
     font-size: 16px;
   }
 }
 @media (min-width: 1750px) {
-  .faqCONTACTaddress {
-    flex-direction: column;
+  .faqCONTACTheader {
+    width: 140px;
   }
   .faqCONTACTlinks {
     font-size: 14px;
   }
+  .faqCONTACTaddress {
+    font-size: 14px;
+    display: inline;
+    text-wrap: balance;
+  }
+  .faqCONTACTaddress div {
+    display: inline;
+  }
+  .faqCONTACTaddress div:first-child {
+    display: inline;
+  }
 }
 .faqCONTACThead {
   font-weight: 600;
+  text-wrap: balance;
 }
