@@ -3,11 +3,16 @@
 <body style="margin: 0;">
     <link rel="preconnect" href="https://use.typekit.net/xud8wzw.css">
     <link rel="stylesheet" href="https://use.typekit.net/xud8wzw.css">
+<link rel="stylesheet" href="css/rework.css">
 
 <!-- START ONLINE NEWSPAPER FAQ. -->   
 <style>
     /* Outlines the grids, remove when sending
 div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
+.faqALL {
+    overflow: hidden;
+}
+
 .faqALL a {
     border: 0 !important;
     color: inherit;
@@ -15,7 +20,7 @@ div, section, header, nav, ul, li { border: 1px solid cyan !important}*/
 }
 
 @media (width <= 767px) {
-.faqMOBhid {
+.faqMOBhide {
     display: none;
 }}
 
@@ -784,19 +789,6 @@ details[open]::details-content {
   white-space: nowrap;
   align-self: center;
 }
-.faqLINKextra  {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-decoration: none;
-}
-.faqLINKextra div a {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    gap: 10px;
-    text-decoration: none;
-}
 .faqASSETSbox:hover div a span,
 .faqASSETSbox:hover div a svg {
   opacity: 0.5;
@@ -889,429 +881,7 @@ details[open]::details-content {
     opacity: 1;
 }
 
-.faqBOXcontactus {
-    display: flex;
-    flex-direction: column;
-}
-.faqBOXcontactus .faqSUBaccordian summary div, 
-.faqBOXcontactus div, .faqBOXcontactus div a, 
-.faqBOXcontactus .faqSUBaccordian div a,  
-.faqBOXcontactus .faqSUBaccordian .faqHOVERemail a div {
-  display: flex;
-  gap: 10px;
-  align-content: center;
-  transition: all 0.2s ease-in-out;
-}
 
-.faqHOVERcustserv a svg {
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transform-origin: center;
-}
-.faqHOVERcustserv:hover a svg {
-  transform: scale(1.18);
-}
-
-.faqHOVERemail:hover a div {
-  outline: 1px solid #c1bfb9;
-  background-color: #fcfaf8;
-  outline-offset: 5px;
-  border-radius: 30px;
-  margin-left: -7px;
-  padding-left: 7px;
-  padding-right: 80px;
-  transition: all 0.2s ease-in-out;
-}
-.faqHOVERemail:hover a span {
-  color: #404041;
-}
-.faqHOVERemail:hover a svg {
-fill: #404041;
-}
-
-@media (min-width: 650px) {
-.faqGRIDcontainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px 10px;
-  max-width: 90%;
-}
-}
-.faqGRIDitem {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  color: #404041;
-  font-weight: 500;
-  padding-bottom: 2rem;
-  transition: color 0.2s ease-in-out;
-}
-.faqGRIDitem a  {
-  color: #6b6a69;
-  text-decoration: none;
-}
-.faqGitem1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.faqGitem2 {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-.faqGitem3 {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-}
-
-.faqGitem4 {
-  grid-column: 4 / 5;
-  grid-row: 1 / 2;
-}
-
-.faqGitem5 {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-
-.faqGitem6 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-.faqGitem7 {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-
-.faqGitem8 {
-  grid-column: 4 / 5;
-  grid-row: 2 / 3;
-}
-
-/* Tablet styles */
-@media (max-width: 1280px) {
-  .faqGRIDcontainer {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, minmax(60px, auto));
-    gap: 10px 10px;
-  }
-  
-  .faqGitem1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  
-  .faqGitem2 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
-  
-  .faqGitem3 {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-  }
-  
-  .faqGitem4 {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-  
-  .faqGitem5 {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-  }
-  
-  .faqGitem6 {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-  }
-  
-  .faqGitem7 {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
-  
-  .faqGitem8 {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-  }
-}
-
-/* Mobile styles */
-@media (max-width: 900px) {
-  .faqGRIDcontainer {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(9, minmax(60px, auto));
-    gap: 10px 10px;
-  }
-  
-  .faqGitem1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  
-  .faqGitem2 {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-  
-  .faqGitem3 {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
-  
-  .faqGitem4 {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-  }
-  
-  .faqGitem5 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
-  
-  .faqGitem6 {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-  }
-  
-  .faqGitem7 {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-  }
-  
-  .faqGitem8 {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-  }
-}
-
-/* Mobile styles */
-@media (max-width: 649px) {
-  .faqGRIDcontainer {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    gap: 10px 10px;
-  }
-  
-  .faqGitem1 {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-  
-  .faqGitem2 {
-    grid-column-start: 1;
-    grid-row-start: 2;
-  }
-  
-  .faqGitem3 {
-    grid-column-start: 1;
-    grid-row-start: 3;
-  }
-  
-  .faqGitem4 {
-    grid-column-start: 1;
-    grid-row-start: 4;
-  }
-  
-  .faqGitem5 {
-    grid-column-start: 1;
-    grid-row-start: 5;
-  }
-  
-  .faqGitem6 {
-    grid-column-start: 1;
-    grid-row-start: 6;
-  }
-  
-  .faqGitem7 {
-    grid-column-start: 1;
-    grid-row-start: 7;
-  }
-  
-  .faqGitem8 {
-    grid-column-start: 1;
-    grid-row-start: 8;
-  }
-}
-
-/* Mobile First Layout (SVG left, Text stacked on the right) */
-.faqCONTACTcontainer {
-  display: grid;
-  grid-template-columns: auto 1fr; 
-  grid-template-rows: auto auto auto; 
-  gap: 1rem;
-}
-
-
-/* SVG constrained to its zone */
-.faqCONTACTsvgbox {
-    grid-row: span 2 / span 2;
-    width: 80px; /* Adjust size as needed */
-    height: 80px;
-}
-
-.faqCONTACTsvgbox svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  color: #ff8819;
-  transition: color 0.2s ease-in-out;
-}
-
-.faqCONTACTtext-1 {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.faqCONTACTtext-2 {
-  grid-column: 2;
-  grid-row: 2;
-align-self: flex-end;
-}
-
-.faqCONTACTtext-3 {
-    grid-column: span 2 / span 2;
-    grid-row-start: 3;
-  }
-
-@media (min-width: 649px) {
-  .faqCONTACTcontainer {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-  }
-
-  .faqCONTACTsvgbox {
-    grid-column: 1;
-    grid-row: 1;
-    margin-bottom: 8px;
-  }
-
-  .faqCONTACTtext-1 {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-.faqCONTACTtext-2 {
-    grid-column: 1;
-    grid-row: 3;
-  }
-
-.faqCONTACTtext-3 {
-    grid-column: 1;
-    grid-row: 4;
-  }
-}
-.faqCONTACTcontacts {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-.faqCONTACTcontacts div a {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    text-decoration: none;
-    color: #404041;
-    gap: 0.4rem;
-}
-.faqCONTACTcontacts div a p {
-  letter-spacing: 0.03rem;
-}
-.faqCONTACTcontacts svg {
-    fill: #6b6a69;
-    width: 30px;
-    transition: fill 0.2s ease-in-out;
-}
-.faqCONTACTtext-2 p {
-  display: inline-block;
-}
-
-.faqGRIDitem {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  color: #404041;
-  font-weight: 500;
-  padding-bottom: 2rem;
-}
-.faqGRIDitem a  {
-  color: #6b6a69;
-  text-decoration: none;
-}
-
-.faqGRIDcontainer:hover .faqGRIDitem .faqCONTACTsvgbox svg, 
-.faqGRIDcontainer:hover .faqGRIDitem, 
-.faqGRIDcontainer:hover .faqGRIDitem a, 
-.faqGRIDcontainer:hover .faqGRIDitem .faqCONTACTcontacts div a svg {
-  color: #c1bfb9;
-  fill: #c1bfb9;
-  transition: color fill 0.2s ease-in-out;
-}
-
-.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTsvgbox svg, 
-.faqGRIDcontainer .faqGRIDitem:hover, 
-.faqGRIDcontainer .faqGRIDitem:hover a, 
-.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts div a svg {
-  color: #2a2a2a;
-  fill: #2a2a2a;
-  transition: color fill 0.2s ease-in-out;
-}
-.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTsvgbox svg {
-  color: #ff8819;
-  transition: color 0.2s ease-in-out;
-}
-.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts:hover div a p, 
-.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts:hover div a svg {
-  color: #969491; fill:#969491;
-}
-
-.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts div:hover a p, 
-.faqGRIDcontainer .faqGRIDitem:hover .faqCONTACTcontacts div:hover a svg {
-  color: #2a2a2a; fill:#2a2a2a !important;
-}
-
-/* X-SMALL */
-@media (max-width: 749px) {
-.faqCONTACTcontacts {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: start;
-    gap: 0.4rem;
-    margin-top: 20px;
-}
-.faqCONTACTcontacts div a {
-    text-decoration: none;
-    color: #404041;
-    gap: 10px;
-}
-.faqCONTACTcontainer p {
-    font-size: 18px;
-}
-
-.faqCONTACTcontainer h3 a {
-    font-size: 24px;
-    color: #828286;
-}
-.faqCONTACTcontacts div a svg {
-    width: 80px !important;
-    height: 80px;
-}
-.faqCONTACTcontainer {
-  gap: 0 20px;
-}
-.faqGRIDitem {
-  width: 90%;       /* Or a fixed width like 300px */
-  margin: 0 auto;   /* Automatically splits left and right spacing */
-}
-
-.faqCONTACTcontacts > div:not(:first-child) a p {
-  display: none;
-}
-}
 .faqGRIDlistcontainGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -1398,7 +968,46 @@ align-self: flex-end;
       opacity: 0.2;
 }
 
-/* COLOR BRANDING ADJUSTMENTS */
+
+.faqBOXcontactus {
+    display: flex;
+    flex-direction: column;
+}
+.faqBOXcontactus .faqSUBaccordian summary div, 
+.faqBOXcontactus div, .faqBOXcontactus div a, 
+.faqBOXcontactus .faqSUBaccordian div a,  
+.faqBOXcontactus .faqSUBaccordian .faqHOVERemail a div {
+  display: flex;
+  gap: 10px;
+  align-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.faqHOVERcustserv a svg {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center;
+}
+.faqHOVERcustserv:hover a svg {
+  transform: scale(1.18);
+}
+
+.faqHOVERemail:hover a div {
+  outline: 1px solid #c1bfb9;
+  background-color: #fcfaf8;
+  outline-offset: 5px;
+  border-radius: 30px;
+  margin-left: -7px;
+  padding-left: 7px;
+  padding-right: 80px;
+  transition: all 0.2s ease-in-out;
+}
+.faqHOVERemail:hover a span {
+  color: #404041;
+}
+.faqHOVERemail:hover a svg {
+fill: #404041;
+}
+
 
 </style>
 <!-- ONLINE NP FAQ SVGS -->  
@@ -1623,7 +1232,6 @@ transform: rotate(180deg);
 }
 .faqEXTRApdfbtn {
 position: absolute;
-display: flex;
 }
 .faqEXTRApdfbtn div {
 display: flex;
@@ -1634,6 +1242,31 @@ gap: 5px;
 .faqEXTRAvidbtn {
 transform: translateX(350px);
 z-index: 1000;
+}
+
+@media (width <= 990px) {
+.faqEXTRApdfbtn {
+position: relative;
+}
+.faqEXTRAvidbtn {
+transform: translateX(0px);
+z-index: 1000;
+}
+.faqEXTRAcontainer details[open] summary::before {
+  left: 7.5px;
+  transition: all 0.3s ease-in-out;
+}
+}
+@media (width <= 767px) {
+.faqEXTRAcontainer details[open] .faqEXTRAvidcontainer {
+width: 100cqw;
+overflow: hidden; 
+padding-top: 61.25% !important;
+margin-left: -7%;
+padding-left: 0;
+align-items: start;
+justify-content: start;
+}
 }
 .faqEXTRApdfbtn .faqEXTRApdflinks a {
     text-decoration: none;
@@ -1758,7 +1391,7 @@ transform: rotate(-90deg);
                                             <p class="faqTXTanswer"><strong>Watch. </strong>How to register your account for online access.</p>
                                         </div>
                                     </summary>
-                                    <div style="position: relative; overflow: hidden; padding-top: 56.25%;">
+                                    <div class="faqEXTRAvidcontainer" style="position: relative; overflow: hidden; padding-top: 56.25%;">
                                         <iframe src="https://share.synthesia.io/embeds/videos/481d3d10-ee6e-420f-98fb-fa2dccdf11dd" loading="lazy" title="Synthesia video player - Michigan Online Newspapers - How to register your account for online access" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe>
                                     </div>
                                 </details>   
@@ -1839,7 +1472,7 @@ transform: rotate(-90deg);
                                     <summary>
                                         <div class="faqEXTRAvidbtn">
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
-                                            <p class="faqTXTanswer"><strong>Watch. </strong>How to register your account for online access.</p>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>How do I share access with family and friends?</p>
                                         </div>
                                     </summary>
                                     <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/79a63be3-3c0f-4f51-8e23-eea0b2677916" loading="lazy" title="Synthesia video player - Michigan Online Newspapers - How do I share access with family and friends?" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
@@ -1872,7 +1505,7 @@ transform: rotate(-90deg);
                                     <summary>
                                         <div class="faqEXTRAvidbtn">
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
-                                            <p class="faqTXTanswer"><strong>Watch. </strong>How to register your account for online access.</p>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>How to Log In.</p>
                                         </div>
                                     </summary>
                                         <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/11c04132-23c6-4303-8ebf-7dcfbad6f65f" loading="lazy" title="Synthesia video player - Michigan Online Newspapers-How to Log In" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
@@ -1892,12 +1525,12 @@ transform: rotate(-90deg);
                             <div><p class="faqTXTanswer"><strong>If you run into trouble,</strong> please call or email Customer Service and a team member will assist you. </p></div> 
                             <div class="faqTXTsub faqBOXcontactus">
                                 <div class="faqHOVERcustserv">
-                                    <a href="#Contacts" aria-label="See More" target="_blank"> 
+                                    <a href="#Contacts" aria-label="See More"> 
                                         <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
-                                        <span><strong>Customer Service.</strong> Click here to see contacts.</span></a>          
+                                        <span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>          
                                 </div>                       
                                 <div class="faqHOVERemail">
-                                    <a href="mailto:customercare@mlive.com?subject=Help%20me%20sign%20up%20for%20Easy%20Pay!&body=I'd%20like%20to%20sign%20up%20for%20Easy%20Pay%2C%20save%20money%20and%20save%20the%20hassle%20of%20paying%20my%20monthly%20bill.%0AMy%20name%20is%3A%0AMy%20account%20number%20is%3A%0APlease%20contact%20me%20at%3A" target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
+                                    <a href="mailto:customercare@mlive.com?subject=I'm%20having%20trouble%20logging%20in.%20Please%20help.&body=Please%20help%20me%20log%20in%20to%20my%20Michigan%20Online%20Newspaper.%20" target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
                                 </div>
                             </div>            
                         </div>
@@ -1972,8 +1605,30 @@ transform: rotate(-90deg);
                                         </a></div>
                                     </div>
                                 </details>
-                                <p>●&nbsp; Tap Go or Enter. That&rsquo;s it—your newspaper will open.</p>
-                            </div>      
+                                <p>●&nbsp; Tap &lsquo;Go&rsquo; or &lsquo;Enter.&rsquo; That&rsquo;s it—your newspaper will open.</p>
+                            </div>     
+                            <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <details>
+                                    <summary>
+                                        <div class="faqEXTRAvidbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>Easiest way to open the newspaper?</p>
+                                        </div>
+                                    </summary>
+                                        <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/934add1f-e65a-4140-ad03-8c0707698ab6" loading="lazy" title="Synthesia video player - Michigan Online Newspapers-Easiest way to open the newspaper?" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                                </details>   
+                            </div>                               
                         </div>
                     </details>
 
@@ -1989,6 +1644,28 @@ transform: rotate(-90deg);
                                 <p>●&nbsp; Tap it once to bookmark the page.</p>
                                 <p>●&nbsp; Next time, just tap the saved link—no typing needed.</p>
                             </div>
+                            <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <details>
+                                    <summary>
+                                        <div class="faqEXTRAvidbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>How to save the website for easy access.</p>
+                                        </div>
+                                    </summary>
+                                    <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/742cc02b-daaf-4d15-932a-5fa326dbbc8a" loading="lazy" title="Synthesia video player - Michigan Online Newspapers-How to save the website for easy access" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                                </details>   
+                            </div>   
                         </div>
                     </details>
 
@@ -2149,7 +1826,20 @@ transform: rotate(-90deg);
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#SaginawNewsSolid"></use></svg>
                                             <span><strong>The Saginaw News.</strong> reader.sn.mlive.com</span>
                                         </a></div>
-                                    </div>    
+                                    </div>   
+                            <hr class="faqHR">
+                            <div><p class="faqTXTanswer"><strong>If you'd like to start receiving the daily email to your inbox again,</strong> please contact customer service. </p></div>  
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More" target="_blank"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Click here to see contacts.</span>
+                                    </a>          
+                                </div>                       
+                                <div class="faqHOVERemail">
+                                    <a href="mailto:customercare@mlive.com?subject=Please%20restart%20my%20Daily%20email&body=I'd%20like%20to%20start%20receiving%20my%20Michigan%20Online%20Newspaper%20Daily%20email%20to%20my%20inbox%20again." target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
+                                </div>
+                            </div>    
                         </div>
                     </details>
 
@@ -2160,6 +1850,28 @@ transform: rotate(-90deg);
                         </summary>
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer" style="margin-bottom: 5px;"><strong>The email is a helpful reminder that your newspaper is ready.</strong> <br>It includes a shortcut link. But it is not required to read your newspaper</p> </div>
+                            <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <details>
+                                    <summary>
+                                        <div class="faqEXTRAvidbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>Why do I get a daily email?</p>
+                                        </div>
+                                    </summary>
+                                        <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/b54b5a81-2a46-4c4d-aacb-238ab699dd7f" loading="lazy" title="Synthesia video player - Michigan Online Newspapers-Why do I get a daily email?" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                                </details>   
+                            </div>   
                         </div>
                     </details>
 
@@ -2203,13 +1915,26 @@ transform: rotate(-90deg);
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#SaginawNewsSolid"></use></svg>
                                             <span><strong>The Saginaw News.</strong> reader.sn.mlive.com</span>
                                         </a></div>
-                                    </div>    
+                                    </div> 
+                            <hr class="faqHR">
+                            <div><p class="faqTXTanswer"><strong>If the problem persists,</strong> please contact customer service. </p></div>  
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More" target="_blank"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Click here to see contacts.</span>
+                                    </a>          
+                                </div>                       
+                                <div class="faqHOVERemail">
+                                    <a href="mailto:customercare@mlive.com?subject=My%20Daily%20email%20link%20isn't%20working.%20Please%20help.&body=My%20Michigan%20Online%20Newspaper%20Daily%20email%20is%20no%20longer%20working.%20Please%20help%20me%20fix%20the%20issue." target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
+                                </div>
+                            </div>       
                         </div>
                     </details>
 
                     <details name="bloxFAQaccordion"><!-- QUESTION 007  --> 
                         <summary class="faqTXTquestion">
-                            The online newspaper edition is missing or <span class="faqMOBhid">&nbsp;there is something &nbsp;</span> wrong.
+                            The online newspaper edition is missing or <span class="faqMOBhide">&nbsp;there is something &nbsp;</span> wrong.
                             <svg width="20px" height="20px" aria-hidden="true"><use xlink:href="#faqCaret"></use></svg>
                         </summary>
                         <div class="faqANSWERbox">
@@ -2244,7 +1969,7 @@ transform: rotate(-90deg);
                         </summary>
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer"><strong>Your newspaper, your way.</strong> You can access your newspaper through your browser or the app. See the resources below to find your way.</p></div>
-                            <div><p class="faqTXTanswer"><strong>Glossary.</strong> Click here to see the definitive guide to the buttons and what they can do. Hover over the icon to see it larger.</div>
+                            <div><p class="faqTXTanswer"><strong>Glossary.</strong> Tap here to see the definitive guide to the buttons and what they can do. Hover over the icon to see it larger.</div>
                                 <div class="faqBODYlist faqTXTsub">
                                     <div class="faqGRIDlistcontainGrid">
                                         <div class="faqGRIDlistcard">
@@ -2325,7 +2050,7 @@ transform: rotate(-90deg);
                                             </div>
                                             <div class="faqGRIDlistCONTENT faqTXTsub">
                                             <p><strong>Single or Double page.</strong></p>
-                                            <p>Texttext. <i>Italics.</i></p>
+                                            <p>Double page layout feels like an unfolded newspaper spread.</p>
                                             </div>
                                         </div>
                                         <div class="faqGRIDlistcard">
@@ -2420,11 +2145,6 @@ transform: rotate(-90deg);
                                         </div>
                                     </div>
                                 </div>
-                                <div class="faqASSETSbox faqLINKextra">
-                                    <div>
-                                        <a href="path/to/document.pdf" aria-label="Download instructions" download> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONSdownload"></use></svg><span><strong>Instructions.</strong> Tap here to download a printable version.</span></a>
-                                    </div>
-                                </div>
                         </div>
                     </details>
 
@@ -2481,6 +2201,28 @@ transform: rotate(-90deg);
 
                                 </div>    
                             </div>
+                            <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <details>
+                                    <summary>
+                                        <div class="faqEXTRAvidbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>Printing Articles and Crossword Puzzle</p>
+                                        </div>
+                                    </summary>
+                                        <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/fe8e947b-bc4e-4ec9-8000-7cad66039d46" loading="lazy" title="Synthesia video player - Michigan Online Newspapers - Printing Articles and Crossword Puzzle" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                                </details>   
+                            </div>   
                         </div>
                     </details>
 
@@ -2513,6 +2255,28 @@ transform: rotate(-90deg);
                                         </div>
                                     </div>
                                 </div>    
+                            <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <details>
+                                    <summary>
+                                        <div class="faqEXTRAvidbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>How to share articles and pages with others.</p>
+                                        </div>
+                                    </summary>
+                                    <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/2e8677a5-ab98-4a5d-b8c6-4f1f75303ed9" loading="lazy" title="Synthesia video player - Michigan Online Newspapers-How to share articles and pages with others" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>           
+                                </details>   
+                            </div>   
                         </div>
                     </details>
 
@@ -2552,7 +2316,29 @@ transform: rotate(-90deg);
                                             </div>
                                         </div>
                                     </div>
-                                </div>   
+                                </div>  
+                            <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <details>
+                                    <summary>
+                                        <div class="faqEXTRAvidbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>How to search articles.</p>
+                                        </div>
+                                    </summary>
+                                    <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/3b7ef873-61e5-4fc5-bce4-f15a798e9e63" loading="lazy" title="Synthesia video player - Michigan Online Newspapers-How to search articles" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                                </details>   
+                            </div>    
                         </div>
                     </details>
 
@@ -2571,7 +2357,7 @@ transform: rotate(-90deg);
                                             </div>
                                             <div class="faqGRIDlistCONTENT faqTXTsub">
                                             <p><strong>Saving Pages. </strong></p>
-                                            <p>In Page View, click on the 'Save' button to save a page for reference later. The button will be shaded black once the Save is complete. You can access Saved pages or articles in the Saved tab in the upper right toolbar.</p>
+                                            <p>In Page View, click on the &lsquo;Save&rsquo; button to save a page for reference later. The button will be shaded black once the Save is complete. You can access Saved pages or articles in the Saved tab in the upper right toolbar.</p>
                                             </div>
                                         </div>
                                         <div class="faqGRIDlistcard">
@@ -2580,7 +2366,7 @@ transform: rotate(-90deg);
                                             </div>
                                             <div class="faqGRIDlistCONTENT faqTXTsub">
                                             <p><strong>Saving Stories. </strong></p>
-                                            <p>With the story open, click on the 'Save' button to save the article for later. The button will be shaded black once the Save is complete. You can access Saved pages or articles in the Saved tab in the upper right toolbar.</p>
+                                            <p>With the story open, click on the &lsquo;Save&rsquo; button to save the article for later. The button will be shaded black once the Save is complete. You can access Saved pages or articles in the Saved tab in the upper right toolbar.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -2590,12 +2376,33 @@ transform: rotate(-90deg);
                                                 <svg style="fill:#939597;" aria-hidden="true"><use xlink:href="#ICONSsave"></use></svg>
                                             </div>
                                             <div class="faqGRIDlistCONTENT faqTXTsub">
-                                            <p><strong>To remove pages or articles,</strong> click on the saved button again to remove it from your Saved Content.</p>
+                                            <p><strong>To remove pages or articles,</strong> click on the &lsquo;Save&rsquo; button again to remove it from your Saved Content.</p>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>    
+                            <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <details>
+                                    <summary>
+                                        <div class="faqEXTRAvidbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>How to save articles.</p>
+                                        </div>
+                                    </summary>
+                                    <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/a692e636-19d2-470f-a710-6c956217afdb" loading="lazy" title="Synthesia video player - Michigan Online Newspapers-How to save articles" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                                </details>   
+                            </div>   
                         </div>
                     </details>
 
@@ -2605,7 +2412,7 @@ transform: rotate(-90deg);
                             <svg width="20px" height="20px" aria-hidden="true"><use xlink:href="#faqCaret"></use></svg>
                         </summary>
                         <div class="faqANSWERbox">
-                            <div><p class="faqTXTanswer"> <strong>The online newspaper features exclusive content that is not available in the printed edition.</strong> Additional content is available in the lsquoSupplements&rsquo; and &lsquo;Specials&rsquo; tabs located on the homepage of the online newspaper.</p></div>
+                            <div><p class="faqTXTanswer"> <strong>The online newspaper features exclusive content that is not available in the printed edition.</strong> Additional content is available in the &lsquo;Supplements&rsquo; and &lsquo;Specials&rsquo; tabs located on the homepage of the online newspaper.</p></div>
                                 <div class="faqBODYlist faqTXTsub">
                                     <div class="faqGRIDlistcontainFlex">
                                         <div class="faqGRIDlistcard">
@@ -2620,6 +2427,28 @@ transform: rotate(-90deg);
                                         </div>
                                     </div>
                                 </div> 
+                            <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <details>
+                                    <summary>
+                                        <div class="faqEXTRAvidbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>How to access exclusive content.</p>
+                                        </div>
+                                    </summary>
+                                    <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/4ae2b033-78ef-4084-87fb-c2a95a4c2d7d" loading="lazy" title="Synthesia video player - Michigan Online Newspapers-How to access exclusive content" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                                </details>   
+                            </div>   
                         </div>
                     </details>
 
@@ -2630,11 +2459,16 @@ transform: rotate(-90deg);
                         </summary>
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer" style="max-width: 800px;"><strong>We occasionally update formats or coverage. </strong>&nbsp; We occasionally update formats or coverage. We&rsquo;re happy to explain what changed.</p> </div> 
-                                <div class="faqASSETSbox faqLINKextra">
-                                    <div>
-                                        <a href="#Contacts" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>
-                                    </div>
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>          
+                                </div>                       
+                                <div class="faqHOVERemail">
+                                    <a href="mailto:customercare@mlive.com?subject=Did%20something%20change%20with%20my%20newspaper%20format%3F&body=Please%20explain%20what%20changed%20in%20my%20Michigan%20Online%20Newspaper." target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
                                 </div>
+                            </div>    
                         </div>
                     </details>
 
@@ -2645,11 +2479,16 @@ transform: rotate(-90deg);
                         </summary>
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer" style="max-width: 800px;"><strong>Some content moves or changes over time. </strong>&nbsp; Ask a customer service team member where to find what you're looking for.</p></div>  
-                                <div class="faqASSETSbox faqLINKextra">
-                                    <div>
-                                        <a href="#Contacts" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>
-                                    </div>
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>          
+                                </div>                       
+                                <div class="faqHOVERemail">
+                                    <a href="mailto:customercare@mlive.com?subject=Help%20me%20find%20a%20section.&body=I'm%20having%20trouble%20finding%20a%20section%20in%20my%20Michigan%20Online%20Newspaper.%20Please%20help." target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
                                 </div>
+                            </div>    
                         </div>
                     </details>
                 </div>
@@ -2686,31 +2525,31 @@ transform: rotate(-90deg);
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount.mlive.com/bc">
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#BayCityTimesSolid"></use></svg>
-                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount.mlive.com/fj">
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#FlintJournalSolid"></use></svg>
-                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount.mlive.com/gr">
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
-                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
-                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                             <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                         </a></div>
                                     </div>
                         </div>
@@ -2724,7 +2563,28 @@ transform: rotate(-90deg);
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer"><strong>Through the browser,</strong> please ensure you sign in at the top-right corner of the webpage with your subscription email address and password.</p></div>
                             <div><p class="faqTXTanswer"><strong>Through the App,</strong> click on the menu on the top-right corner to sign in under “Account”.</p></div>
-   
+                               <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <details>
+                                    <summary>
+                                        <div class="faqEXTRAvidbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>How to Log In.</p>
+                                        </div>
+                                    </summary>
+                                    <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/11c04132-23c6-4303-8ebf-7dcfbad6f65f" loading="lazy" title="Synthesia video player - Michigan Online Newspapers-How to Log In" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                                </details>   
+                            </div>   
                         </div>
                     </details>
 
@@ -2735,16 +2595,43 @@ transform: rotate(-90deg);
                         </summary>
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer"><strong>Reset your password </strong> by clicking on the “reset password” link on the sign in screen.</p></div>
-                            <div class="faqASSETSbox faqLINKextra">
-                                <div>
-                                    <a href="https://auth0.mlive.com/u/login?state=hKFo2SBsbTRlemd4YzlfSi1HZ3pNeG10T0QzZkxEX1pCamt2MaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDJ0dEk5dEFOYlY4N0N5WjcweU1lTUszQ0FVQndydEFoo2NpZNkgRWV4UDFTNW84ZHBxcExTUlNtb0VsYWNKTjJqdVIzSXE" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Sign in.</strong> Tap here to go to the sign in screen.</span></a>
+
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="https://auth0.mlive.com/u/login?state=hKFo2SBsbTRlemd4YzlfSi1HZ3pNeG10T0QzZkxEX1pCamt2MaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDJ0dEk5dEFOYlY4N0N5WjcweU1lTUszQ0FVQndydEFoo2NpZNkgRWV4UDFTNW84ZHBxcExTUlNtb0VsYWNKTjJqdVIzSXE" aria-label="See More" target="_blank"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Sign in.</strong> Tap here to go to the sign in screen.</span></a>          
+                                </div> 
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>          
+                                </div>                         
+                            </div>    
+
+                            <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTanswer"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTanswer" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                        </span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <a href="#Contacts" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>
-                                </div>
-                            </div>
+                                <details>
+                                    <summary>
+                                        <div class="faqEXTRAvidbtn">
+                                            <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#ICONvideo"></use></svg>
+                                            <p class="faqTXTanswer"><strong>Watch. </strong>How to Reset a Password.</p>
+                                        </div>
+                                    </summary>
+                                    <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/58a31f56-6164-4c3f-a559-683a49ead46f" loading="lazy" title="Synthesia video player - Michigan Online Newspapers-How to Reset a Password" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                                </details>   
+                            </div>   
                         </div>
-                        
                     </details>
 
                     <details name="bloxFAQaccordion"><!-- QUESTION 004  --> 
@@ -2753,15 +2640,17 @@ transform: rotate(-90deg);
                             <svg width="20px" height="20px" aria-hidden="true"><use xlink:href="#faqCaret"></use></svg>
                         </summary>
                         <div class="faqANSWERbox">
-                            <div><p class="faqTXTanswer"><strong>Reset your password </strong> by clicking on the “reset password” link on the sign in screen.</p></div>
-                                <div class="faqASSETSbox faqLINKextra">
-                                    <div>
-                                        <a href="https://auth0.mlive.com/u/login?state=hKFo2SBsbTRlemd4YzlfSi1HZ3pNeG10T0QzZkxEX1pCamt2MaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDJ0dEk5dEFOYlY4N0N5WjcweU1lTUszQ0FVQndydEFoo2NpZNkgRWV4UDFTNW84ZHBxcExTUlNtb0VsYWNKTjJqdVIzSXE" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Sign in.</strong> Tap here to go to the sign in screen.</span></a>
-                                    </div>
-                                    <div>
-                                        <a href="#Contacts" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>
-                                    </div>
+                            <div><p class="faqTXTanswer"><strong>Please call or email Customer Service</strong> and a team member will assist you.</p></div>
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>          
+                                </div>                       
+                                <div class="faqHOVERemail">
+                                    <a href="mailto:customercare@mlive.com?subject=How%20do%20I%20change%20my%20email%3F&body=Help%20me%20change%20the%20email%20I%20use%20to%20access%20my%20Michigan%20Online%20Newspaper." target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
                                 </div>
+                            </div>    
                         </div>
                     </details>
 
@@ -2772,11 +2661,16 @@ transform: rotate(-90deg);
                         </summary>
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer"><strong>No problem! </strong>&nbsp; Please contact one of our experienced Customer Service team members who will be happy to assist.</p></div>
-                                <div class="faqASSETSbox faqLINKextra">
-                                    <div>
-                                        <a href="#Contacts" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>
-                                    </div>
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>          
+                                </div>                       
+                                <div class="faqHOVERemail">
+                                    <a href="mailto:customercare@mlive.com?subject=How%20do%20I%20update%20my%20information%3F&body=I%20have%20a%20new%20address%2C%20phone%20number%2C%20or%20email.%20Please%20help%20me%20update%20my%20Michigan%20Online%20Newspaper%20account%20information." target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
                                 </div>
+                            </div>    
                         </div>
                     </details>
 
@@ -2787,11 +2681,16 @@ transform: rotate(-90deg);
                         </summary>
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer"><strong>Please call or email Customer Service</strong>&nbsp; and one of our experienced team members will be happy to assist!</p></div>
-                                <div class="faqASSETSbox faqLINKextra">
-                                    <div>
-                                        <a href="#Contacts" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>
-                                    </div>
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>          
+                                </div>                       
+                                <div class="faqHOVERemail">
+                                    <a href="mailto:customercare@mlive.com?subject=How%20can%20I%20convert%20from%20print%20to%20digital%3F&body=Please%20help%20me%20convert%20from%20print%20to%20the%20Michigan%20Online%20Newspaper." target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
                                 </div>
+                            </div>    
                         </div>
                     </details>
 
@@ -2812,11 +2711,16 @@ transform: rotate(-90deg);
                         </summary>
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer"><strong>We can explain or correct any billing issue,</strong>&nbsp; just ask one of our experienced Customer Service team members!</p></div>
-                                <div class="faqASSETSbox faqLINKextra">
-                                    <div>
-                                        <a href="#Contacts" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>
-                                    </div>
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>          
+                                </div>                       
+                                <div class="faqHOVERemail">
+                                    <a href="mailto:customercare@mlive.com?subject=I%20don't%20recognize%20a%20charge.&body=Please%20explain%20or%20correct%20a%20billing%20issue%20with%20my%20Michigan%20Online%20Newspaper." target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
                                 </div>
+                            </div>    
                         </div>
                     </details>
 
@@ -2827,11 +2731,16 @@ transform: rotate(-90deg);
                         </summary>
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer"><strong>You may add a tip</strong>&nbsp; when making a one-time or recurring payment online or with a Customer Service team member on the phone.</p></div>
-                                <div class="faqASSETSbox faqLINKextra">
-                                    <div>
-                                        <a href="#Contacts" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>
-                                    </div>
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>          
+                                </div>                       
+                                <div class="faqHOVERemail">
+                                    <a href="mailto:customercare@mlive.com?subject=How%20can%20I%20tip%20my%20carrier%3F&body=Please%20help%20me%20give%20a%20tip%20to%20my%20Michigan%20Online%20Newspaper%20carrier." target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
                                 </div>
+                            </div>    
                         </div>
                     </details>
 
@@ -2846,7 +2755,7 @@ transform: rotate(-90deg);
                             <div class="faqTXTsub faqBOXcontactus">
                                 <div>
                                     <details class="faqSUBaccordian"><!-- QUESTION SUB 002 001  -->
-                                        <summary><div><svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Online.</strong> at your myAccount page. Click here to find yours.</span><svg width="20px" height="20px" aria-hidden="true"><use xlink:href="#faqCaret"></use></svg></div></summary>
+                                        <summary><div><svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Online.</strong> at your myAccount page. Tap here to find yours.</span><svg width="20px" height="20px" aria-hidden="true"><use xlink:href="#faqCaret"></use></svg></div></summary>
                                         <div class="faqBODYlist faqSUBindent faqTXTsub">
                                             <div><a href="https://myaccount.mlive.com/aa/home" target="_blank" aria-label="myAccount.mlive.com/aa">
                                                 <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#AnnArborNewsSolid"></use></svg>
@@ -2854,31 +2763,31 @@ transform: rotate(-90deg);
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount.mlive.com/bc">
                                                 <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#BayCityTimesSolid"></use></svg>
-                                                <span><strong>The Bay City Times.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount.mlive.com/fj">
                                                 <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#FlintJournalSolid"></use></svg>
-                                                <span><strong>The Flint Journal.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount.mlive.com/gr">
                                                 <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
-                                                <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                                 <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                                <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                                 <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                                <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                                 <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
-                                                <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                                 <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                                <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                             </a></div>
                                         </div>
                                     </details>                            
@@ -2942,11 +2851,16 @@ transform: rotate(-90deg);
                         </summary>
                         <div class="faqANSWERbox">
                             <div><p class="faqTXTanswer"><strong>We'd love to keep you as a customer!</strong>&nbsp; Let us help you review options before making changes. Please contact one of our experienced Customer Service team members who will be happy to assist!</p></div>
-                                <div class="faqASSETSbox faqLINKextra">
-                                    <div>
-                                        <a href="#Contacts" aria-label="See More" target="_blank"> <svg width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg><span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>
-                                    </div>
+                            <div class="faqTXTsub faqBOXcontactus">
+                                <div class="faqHOVERcustserv">
+                                    <a href="#Contacts" aria-label="See More"> 
+                                        <svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
+                                        <span><strong>Customer Service.</strong> Tap here to see contacts.</span></a>          
+                                </div>                       
+                                <div class="faqHOVERemail">
+                                    <a href="mailto:customercare@mlive.com?subject=I'm%20thinking%20about%20canceling%3F&body=I'm%20thinking%20about%20stopping%20my%20subscription.%20Please%20reach%20out%20to%20me%20for%20assistance." target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;"><div><svg class="faqLOGOdot" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg><strong>By email.</strong> Send us a message by tapping this link.</div></a>
                                 </div>
+                            </div>    
                         </div>
                     </details>
                 </div>

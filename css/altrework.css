@@ -1,0 +1,88 @@
+
+
+.faqGRIDlistcontainGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  box-sizing: border-box;
+}
+.faqGRIDlistcard {
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.faqGRIDlistcontainFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: start; 
+}
+.faqGRIDlistcontainFlex .faqGRIDlistcard {
+    flex-direction: column;
+}
+.faqGRIDlistcontainFlex .faqGRIDlistcard div {
+    padding: 0 !important;
+}
+
+.faqGRIDlistcard .faqGRIDlistcardSub01 {
+    display: flex;
+    flex-direction: row;
+}
+@media (width <= 767px) {
+.faqGRIDlistcontainFlex, .faqGRIDlistcard .faqGRIDlistcardSub01 {
+    flex-direction: column;
+}
+.faqGRIDlistcard .faqGRIDlistcardSub01 div, .faqGRIDlistcardSub01 div {
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px;
+}
+}
+
+    .faqGRIDlistICON {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 10px;
+     transition: all 0.2s ease-in-out;
+    }
+
+    /* Ensures the SVG scales exactly to the link wrapper */
+    .faqGRIDlistICON svg {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #fcfaf8;
+    border-radius: 15px;
+    background-color: #fcfaf8;
+     transition: all 0.2s ease-in-out;
+    }
+
+    /* Content wrapper adjustments */
+    .faqGRIDlistCONTENT {
+      flex: 1;
+    }
+    .faqGRIDlistCONTENT p {
+      line-height: 1.2;
+      width: 80%;
+      transition: all 0.2s ease-in-out;
+    }
+    .faqGRIDlistCONTENT p:first-child {
+      padding-bottom: 4px;
+      width: 100%;
+           transition: all 0.2s ease-in-out;
+    }
+    .faqGRIDlistICON:hover {
+      transform: scale(2) translate(7.5px, 2px);
+    }
+    .faqGRIDlistICON:hover svg {
+    border: 1px solid #fcfaf8;
+    border-radius: 50%;
+    background-color: #fcfaf8;
+    }
+.faqGRIDlistcard:has(.faqGRIDlistICON:hover) .faqGRIDlistCONTENT p:first-child {
+      transform: translate(0px, 20px);
+}
+.faqGRIDlistcard:has(.faqGRIDlistICON:hover) .faqGRIDlistCONTENT p:not(:first-child) {
+      transform: translate(0px, 10px);
+      opacity: 0.2;
+}
+
