@@ -1,95 +1,154 @@
-.faqSMALL p {
-    font-size: 14px;
-    line-height: 1.2;
+.faqCONTACTcontainer .faqGRIDlistcard {
+  overflow: hidden;
 }
-
-.faqADDcontacts {
-    color: #404041;
+.faqCONTACTicon svg {
+  color: #ff8819;
+  transition: all 0.2s ease-in-out;
 }
-
-    .faqGRIDcontactICON {
-        margin-bottom: 10px;
-      width: 50px;
-      height: 50px;
-     transition: all 0.2s ease-in-out;
-    }
-    .faqGRIDcontactICON svg {
-        color: #ff8819;
-     transition: all 0.2s ease-in-out;
-    }
-
-.faqADDcontacts .faqGRIDlistCONTENT svg {
-    fill: #6b6a69;
-}
-
-.faqGRIDcontactcontainGrid {
+.faqGRIDcontactContainer {
   display: grid;
+  box-sizing: border-box;
   gap: 20px;
-}
-
-/* X-SMALL */
-@media (max-width: 549px) {
-.faqGRIDcontactcontainGrid {
+  margin-right: 5%;
+  padding-right: 2.5%;
+  @media (max-width: 549px) {
+    width: 99%;
     grid-template-columns: repeat(1, 1fr);
-  width: 90%;
-}
-}
-
-@media (550px <= width <= 767px) {
-.faqGRIDcontactcontainGrid {
+  }
+  @media (550px <= width <= 767px) {
+    width: calc(50cqw + 275px);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  @media (768px <= width <= 1023px) {
+    width: calc(50cqw + 384px);
     grid-template-columns: repeat(2, 1fr);
-  max-width: 549px;
-  width: 90%;
-}
-}
-
-/* MEDIUM */
-@media (768px <= width <= 1023px) {
-.faqGRIDcontactcontainGrid {
+  }
+  @media (1024px <= width <= 1279px) {
+    width: calc(50cqw + 512px);
     grid-template-columns: repeat(3, 1fr);
-  max-width: 768px;
-  width: 90%;
-}
+    background-color: aquamarine;
+  }
+  @media (1280px <= width <= 1749px) {
+    width: calc(50cqw + 640px);
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 1750px) {
+    width: 99%;
+    grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+  }
 }
 
-/* LARGE */
+.faqGRIDcontactcard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: #404041;
+  fill: #404041;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.faqCONTACTtext {
+  display: flex;
+  flex-direction: column;
+}
+.faqCONTACTheader {
+  display: flex;
+  flex-direction: column;
+}
+.faqCONTACTaddress {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+.faqCONTACTlinks {
+  display: flex;
+  flex-direction: column;
+}
+.faqCONTACTlinks div a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media (width <= 767px) {
+  .faqCONTACTicon svg {
+    width: 70px;
+    height: 70px;
+  }
+  .faqGRIDcontactcard {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .faqCONTACTtext {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .faqCONTACTheader {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+  }
+  .faqCONTACTaddress {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+  .faqCONTACTlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 16px;
+  }
+  .faqCONTACTlinks div a {
+    gap: 6px;
+  }
+  .faqCONTACTlinks div a svg {
+    width: 30px;
+    height: 30px;
+    fill: #6b6a69;
+  }
+  .faqCONTACTheader {
+    font-size: 18px;
+  }
+  .faqCONTACTaddress {
+    font-size: 16px;
+  }
+}
+@media (768px <= width <= 1023px) {
+  .faqCONTACTheader {
+    font-size: 19px;
+  }
+  .faqCONTACTaddress {
+    font-size: 14px;
+  }
+  .faqCONTACTlinks {
+    font-size: 14px;
+  }
+}
 @media (1024px <= width <= 1279px) {
-.faqGRIDcontactcontainGrid {
-    grid-template-columns: repeat(4, 1fr);
+  .faqCONTACTheader {
+    font-size: 20px;
+  }
+  .faqCONTACTaddress {
+    font-size: 16px;
+  }
+  .faqCONTACTlinks {
+    font-size: 14px;
+  }
 }
-}
-
-/* X-LARGE */
-@media (1280px <= width <= 1749px) {
-.faqGRIDcontactcontainGrid {
-    grid-template-columns: repeat(4, 1fr);
-  max-width: 1280px;
-  width: 90%;
-}
-}
-
-/* X-LARGE */
-@media (min-width: 1750px) {
-.faqGRIDcontactcontainGrid {
-  grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
-}
-}
-
-
-
-.faqADDcontacts .faqGRIDlistCONTENT .faqSITENAME {
-    width: 70%;
-    font-weight: 600;
-    text-wrap: balance;
+@media (min-width: 1280px) {
+  .faqCONTACTheader {
+    font-size: 22px;
+  }
+  .faqCONTACTaddress {
+    font-size: 18px;
+  }
+  .faqCONTACTlinks {
+    font-size: 16px;
+  }
 }
 
-.faqLINKS div {
-padding: 2px 0 !important;
+.faqCONTACThead {
+  font-weight: 600;
 }
-.faqLINKS div a {
-    gap: 5px;
-}
-.faqLINKS div a svg {
-    display: none;
-}
-

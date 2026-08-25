@@ -1,0 +1,112 @@
+.faqSMALL p {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.faqADDcontacts {
+  color: #404041;
+}
+
+.faqGRIDcontactICON {
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  transition: all 0.2s ease-in-out;
+}
+.faqGRIDcontactICON svg {
+  color: #ff8819;
+  transition: all 0.2s ease-in-out;
+}
+
+.faqADDcontacts .faqGRIDlistCONTENT svg {
+  fill: #6b6a69;
+}
+
+.faqGRIDcontactcontainGrid {
+  display: grid;
+  gap: 20px;
+}
+
+/* X-SMALL */
+@media (max-width: 549px) {
+  .faqGRIDcontactcontainGrid {
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+  }
+}
+
+@media (550px <= width <= 767px) {
+  .faqGRIDcontactcontainGrid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 549px;
+    width: 90%;
+  }
+}
+
+/* MEDIUM */
+@media (768px <= width <= 1023px) {
+  .faqGRIDcontactcontainGrid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 768px;
+    width: 90%;
+  }
+}
+
+/* LARGE */
+@media (1024px <= width <= 1279px) {
+  .faqGRIDcontactcontainGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* X-LARGE */
+@media (1280px <= width <= 1749px) {
+  .faqGRIDcontactcontainGrid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1280px;
+    width: 90%;
+  }
+}
+
+/* X-LARGE */
+@media (min-width: 1750px) {
+  .faqGRIDcontactcontainGrid {
+    grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+  }
+}
+
+.faqADDcontacts .faqGRIDlistCONTENT .faqSITENAME {
+  width: 70%;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.faqLINKS div {
+  padding: 2px 0 !important;
+}
+.faqLINKS div a {
+  gap: 5px;
+}
+.faqLINKS div a svg {
+  display: none;
+}
+
+@media (width <= 767px) {
+  .faqGRIDcontactcontainGrid .faqGRIDlistcard {
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .faqGRIDcontactcontainGrid .faqGRIDlistcard .faqGRIDlistCONTENT {
+    background-color: yellowgreen;
+
+    gap: 20px;
+  }
+  .faqGRIDcontactcontainGrid .faqGRIDlistcard .faqGRIDlistCONTENT p,
+  .faqGRIDcontactcontainGrid .faqGRIDlistcard .faqGRIDlistCONTENT .faqSITENAME {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+  }
+}
