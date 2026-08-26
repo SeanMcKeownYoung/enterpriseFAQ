@@ -33,7 +33,7 @@ html {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-
+  padding-bottom: clamp(80px, 10vw, 180px);
   font-family: "neue-haas-grotesk-display", sans-serif;
 }
 .faqBODYwrapper {
@@ -145,6 +145,7 @@ html {
   display: flex;
   flex-wrap: nowrap;
   align-content: end;
+  margin-bottom: clamp(50px, 5vw, 100px);
   overflow-x: auto !important;
   overflow-y: hidden;
   white-space: nowrap;
@@ -154,6 +155,9 @@ html {
   animation-timeline: scroll(x self);
   scroll-timeline-name: --nav-scroll;
   scroll-timeline-axis: inline;
+}
+.card {
+  padding-bottom: clamp(1rem, 4vw, 3rem);
 }
 
 .faqBODYnav:hover {
@@ -169,34 +173,33 @@ html {
 .faqBODYnav::-webkit-scrollbar-track {
   height: 100%;
   background-color: transparent;
-  border-top: 1px solid #c1bfb9;
+  border-top: 1px solid transparent;
+  width: 30px;
+  transition: all 0.3s ease;
 }
 .faqBODYnav::-webkit-scrollbar-track:hover {
   height: 100%;
   background-color: transparent;
-  border-top: 1px solid #6b6a69;
+  border-top: 1px solid #969491;
+  width: 30px;
+  transition: all 0.2s ease;
 }
+
 .faqBODYnav::-webkit-scrollbar-thumb {
   height: 100%;
-  background-color: transparent;
-  border-top: 1px solid #c1bfb9;
-  transition: all 0.1s ease;
+  transition: all 0.3s ease;
 }
 .faqBODYnav::-webkit-scrollbar-thumb:hover {
   height: 100%;
   background-color: transparent;
-  border-top: 1px solid #6b6a69;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
 }
-.faqBODYnav::-webkit-scrollbar-thumb:hover {
-  width: 30px;
-  transition: all 0.1s ease;
-}
+
 @keyframes intro-scroll {
   0% {
-    background: linear-gradient(#c1bfb9);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
+    background-size: 14% 10px;
     background-position: left bottom;
   }
   1% {
@@ -275,79 +278,79 @@ html {
 
 @keyframes complete-scroll {
   0% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
+    background-size: 14% 10px;
     background-position: left bottom;
   }
   1% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 10% 10px;
     background-position: 1% bottom;
   }
   10% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 14% 10px;
     background-position: 10% bottom;
   }
   20% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 28% 10px;
     background-position: 20% bottom;
   }
   30% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 40% 10px;
     background-position: 30% bottom;
   }
   40% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 45% 10px;
     background-position: 40% bottom;
   }
   50% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 50% 10px;
     background-position: 50% bottom;
   }
   60% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 45% 10px;
     background-position: 60% bottom;
   }
   70% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 40% 10px;
     background-position: 70% bottom;
   }
   80% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 28% 10px;
     background-position: 80% bottom;
   }
   90% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 14% 10px;
     background-position: 90% bottom;
   }
   99% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 10% 10px;
     background-position: 99% bottom;
   }
   100% {
-    background: linear-gradient(#6b6a69);
+    background: linear-gradient(#969491);
     background-repeat: no-repeat;
     background-size: 10% 10px;
     background-position: 100% bottom;
@@ -434,7 +437,7 @@ html {
   animation-timeline: --nav-scroll;
 }
 @keyframes navScroll01 {
-  0% {
+  0.01% {
     color: #404041;
   }
   20% {
@@ -640,12 +643,10 @@ html {
 .faqBODYdark {
   background-color: #ece9e1;
   border-top: 1px solid #fcfaf8;
-  padding: 5% 0 10% 0;
 }
 .faqBODYlight {
   background-color: #f8f5f0;
   border-top: 1px solid #fcfaf8;
-  padding: 5% 0 10% 0;
 }
 .faqBODYdark .faqHEADbig,
 .faqBODYlight .faqHEADbig {
