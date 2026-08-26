@@ -406,101 +406,141 @@ html {
   border-bottom: 10px solid #ff8819;
 }
 
-.faqBODYnav div {
-  transition: color 0.7s ease-in-out;
-}
-.faqBODYnav:hover div {
-  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.faqBODYnav:hover div:first-child a {
-  animation: navScroll01 linear;
+.navBlue a,
+.navBlue {
+  animation: navBlueScroll linear;
   animation-timeline: --nav-scroll;
 }
-.faqBODYnav:hover div:nth-child(2) a {
-  animation: navScroll02 linear;
-  animation-timeline: --nav-scroll;
-}
-.faqBODYnav:hover div:nth-child(3) a {
-  animation: navScroll03 linear;
-  animation-timeline: --nav-scroll;
-}
-.faqBODYnav:hover div:nth-child(4) a {
-  animation: navScroll04 linear;
-  animation-timeline: --nav-scroll;
-}
-.faqBODYnav:hover div:nth-child(5) a {
-  animation: navScroll05 linear;
-  animation-timeline: --nav-scroll;
-}
-@keyframes navScroll01 {
-  0% {
+@keyframes navBlueScroll {
+  1% {
+    border-bottom: 10px solid #00b7ff;
     color: #404041;
   }
-  20% {
+  10% {
+    border-bottom: 10px solid #00b7ff;
     color: #404041;
   }
-  25% {
+  15% {
+    border-bottom: 10px solid transparent;
     color: #969491;
   }
 }
-
-@keyframes navScroll02 {
+.navGold a,
+.navGold {
+  animation: navGoldScroll linear;
+  animation-timeline: --nav-scroll;
+}
+@keyframes navGoldScroll {
   1% {
+    border-bottom: 10px solid transparent;
     color: #969491;
   }
   5% {
-    color: #404041;
-  }
-  25% {
+    border-bottom: 10px solid #f7be00;
     color: #404041;
   }
   30% {
+    border-bottom: 10px solid #f7be00;
+    color: #404041;
+  }
+  35% {
+    border-bottom: 10px solid transparent;
     color: #969491;
   }
 }
-
-@keyframes navScroll03 {
-  20% {
+.navRed a,
+.navRed {
+  animation: navRedScroll linear;
+  animation-timeline: --nav-scroll;
+}
+@keyframes navRedScroll {
+  25% {
+    border-bottom: 10px solid transparent;
     color: #969491;
   }
-  25% {
+  30% {
+    border-bottom: 10px solid #ff5e5e;
+    color: #404041;
+  }
+  50% {
+    border-bottom: 10px solid #ff5e5e;
+    color: #404041;
+  }
+  55% {
+    border-bottom: 10px solid transparent;
+    color: #969491;
+  }
+}
+.navGreen a,
+.navGreen {
+  animation: navGreenScroll linear;
+  animation-timeline: --nav-scroll;
+}
+@keyframes navGreenScroll {
+  35% {
+    border-bottom: 10px solid transparent;
+    color: #969491;
+  }
+  40% {
+    border-bottom: 10px solid #84cc16;
+    color: #404041;
+  }
+  60% {
+    border-bottom: 10px solid #84cc16;
     color: #404041;
   }
   65% {
-    color: #404041;
-  }
-  70% {
+    border-bottom: 10px solid transparent;
     color: #969491;
   }
 }
-
-@keyframes navScroll04 {
-  30% {
+.navViolet a,
+.navViolet {
+  animation: navVioletScroll linear;
+  animation-timeline: --nav-scroll;
+}
+@keyframes navVioletScroll {
+  45% {
+    border-bottom: 10px solid transparent;
     color: #969491;
   }
-  35% {
+  50% {
+    border-bottom: 10px solid #bc69ff;
     color: #404041;
   }
-  85% {
+  70% {
+    border-bottom: 10px solid #bc69ff;
+    color: #404041;
+  }
+  75% {
+    border-bottom: 10px solid transparent;
+    color: #969491;
+  }
+}
+.navOrange a,
+.navOrange {
+  animation: navOrangeScroll linear;
+  animation-timeline: --nav-scroll;
+}
+@keyframes navOrangeScroll {
+  65% {
+    border-bottom: 10px solid transparent;
+    color: #969491;
+  }
+  70% {
+    border-bottom: 10px solid #ff8819;
     color: #404041;
   }
   90% {
+    border-bottom: 10px solid #ff8819;
+    color: #404041;
+  }
+  100% {
+    border-bottom: 10px solid transparent;
     color: #969491;
   }
 }
 
-@keyframes navScroll05 {
-  65% {
-    color: #969491;
-  }
-  70% {
-    color: #404041;
-  }
-  100% {
-    color: #404041;
-  }
-}
 /* SMALL */
 @media (width <= 767px) {
   .faqBODYnav {
