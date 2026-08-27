@@ -3,6 +3,9 @@
   color: inherit;
   text-decoration: none;
 }
+.faqALL:focus:not(:focus-visible) {
+  outline: none;
+}
 html {
   color-scheme: dark light;
 }
@@ -106,11 +109,21 @@ html {
   scroll-timeline-name: --navFAQscroll;
   scroll-timeline-axis: inline;
 }
-.faqBODYnav:is(:hover, :active, :focus) {
-  will-change: background-position;
-  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-  animation: faqNAVSCROLLhover linear;
-  animation-timeline: scroll(x self);
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .faqBODYnav:hover {
+    will-change: background-position;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    animation: faqNAVSCROLLhover linear;
+    animation-timeline: scroll(x self);
+  }
+}
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .faqBODYnav:is(:active, :focus) {
+    will-change: background-position;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    animation: faqNAVSCROLLhover linear;
+    animation-timeline: scroll(x self);
+  }
 }
 .faqBODYnav::-webkit-scrollbar {
   height: 10px;
@@ -122,21 +135,41 @@ html {
   width: 30px;
   transition: all 0.3s ease;
 }
-.faqBODYnav::-webkit-scrollbar-track:is(:hover, :active, :focus) {
-  height: 100%;
-  background-color: transparent;
-  border-top: 1px solid #969491;
-  width: 30px;
-  transition: all 0.2s ease;
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .faqBODYnav::-webkit-scrollbar-track:hover {
+    height: 100%;
+    background-color: transparent;
+    border-top: 1px solid #969491;
+    width: 30px;
+    transition: all 0.2s ease;
+  }
+}
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .faqBODYnav::-webkit-scrollbar-track:is(:active, :focus) {
+    height: 100%;
+    background-color: transparent;
+    border-top: 1px solid #969491;
+    width: 30px;
+    transition: all 0.2s ease;
+  }
 }
 .faqBODYnav::-webkit-scrollbar-thumb {
   height: 100%;
   transition: all 0.3s ease;
 }
-.faqBODYnav::-webkit-scrollbar-thumb:is(:hover, :active, :focus) {
-  height: 100%;
-  background-color: transparent;
-  transition: all 0.2s ease;
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .faqBODYnav::-webkit-scrollbar-thumb:hover {
+    height: 100%;
+    background-color: transparent;
+    transition: all 0.2s ease;
+  }
+}
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .faqBODYnav::-webkit-scrollbar-thumb:is(:active, :focus) {
+    height: 100%;
+    background-color: transparent;
+    transition: all 0.2s ease;
+  }
 }
 .faqBODYnavitem {
   align-items: end;
@@ -156,65 +189,131 @@ html {
   color: #969491;
   transition: color 0.1s ease-in-out;
 }
-.faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
-  .faqBODYnavitem:not(:is(:hover, :active, :focus)) {
-  border-bottom: 10px solid transparent;
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .faqBODYnav:has(.faqBODYnavitem:hover) .faqBODYnavitem:not(:hover) {
+    border-bottom: 10px solid transparent;
+  }
+  .faqBODYnav:has(.faqBODYnavitem:hover) .faqBODYnavitem:not(:hover) a {
+    color: #c1bfb9;
+  }
+  .faqBODYnav .faqBODYnavitem:hover {
+    border-bottom: 10px solid #404041;
+  }
+  .faqBODYnav .faqBODYnavitem:hover a {
+    text-decoration: none;
+    color: #404041;
+  }
+  .faqBODYnav .navBlue:hover {
+    border-bottom: 10px solid #00b7ff;
+  }
+  .faqBODYnav .navGold:hover {
+    border-bottom: 10px solid #f7be00;
+  }
+  .faqBODYnav .navRed:hover {
+    border-bottom: 10px solid #ff5e5e;
+  }
+  .faqBODYnav .navGreen:hover {
+    border-bottom: 10px solid #84cc16;
+  }
+  .faqBODYnav .navViolet:hover {
+    border-bottom: 10px solid #bc69ff;
+  }
+  .faqBODYnav .navOrange:hover {
+    border-bottom: 10px solid #ff8819;
+  }
 }
-.faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
-  .faqBODYnavitem:not(:is(:hover, :active, :focus))
-  a {
-  color: #c1bfb9;
-}
-.faqBODYnav .faqBODYnavitem:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #404041;
-}
-.faqBODYnav .faqBODYnavitem:is(:hover, :active, :focus) a {
-  text-decoration: none;
-  color: #404041;
-}
-.faqBODYnav .navBlue:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #00b7ff;
-}
-.faqBODYnav .navGold:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #f7be00;
-}
-.faqBODYnav .navRed:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #ff5e5e;
-}
-.faqBODYnav .navGreen:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #84cc16;
-}
-.faqBODYnav .navViolet:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #bc69ff;
-}
-.faqBODYnav .navOrange:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #ff8819;
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .faqBODYnav:has(.faqBODYnavitem:focus) .faqBODYnavitem:not(:active, :focus) {
+    border-bottom: 10px solid transparent;
+  }
+  .faqBODYnav:has(.faqBODYnavitem:focus)
+    .faqBODYnavitem:not(:active, :focus)
+    a {
+    color: #c1bfb9;
+  }
+  .faqBODYnav:has(.faqBODYnavitem:active) .faqBODYnavitem:not(:active, :focus) {
+    border-bottom: 10px solid transparent;
+  }
+  .faqBODYnav:has(.faqBODYnavitem:active)
+    .faqBODYnavitem:not(:active, :focus)
+    a {
+    color: #c1bfb9;
+  }
+  .faqBODYnav .faqBODYnavitem:is(:active, :focus) {
+    border-bottom: 10px solid #404041;
+  }
+  .faqBODYnav .faqBODYnavitem:is(:active, :focus) a {
+    text-decoration: none;
+    color: #404041;
+  }
+  .faqBODYnav .navBlue:is(:active, :focus) {
+    border-bottom: 10px solid #00b7ff;
+  }
+  .faqBODYnav .navGold:is(:active, :focus) {
+    border-bottom: 10px solid #f7be00;
+  }
+  .faqBODYnav .navRed:is(:active, :focus) {
+    border-bottom: 10px solid #ff5e5e;
+  }
+  .faqBODYnav .navGreen:is(:active, :focus) {
+    border-bottom: 10px solid #84cc16;
+  }
+  .faqBODYnav .navViolet:is(:active, :focus) {
+    border-bottom: 10px solid #bc69ff;
+  }
+  .faqBODYnav .navOrange:is(:active, :focus) {
+    border-bottom: 10px solid #ff8819;
+  }
 }
 .faqBODYnav div {
   transition: color 0.7s ease-in-out;
 }
-.faqBODYnav:is(:hover, :active, :focus) div {
+.faqBODYnav:hover div {
   transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
 }
-.faqBODYnav:is(:hover, :active, :focus) div:first-child a {
-  animation: navScroll01 linear;
-  animation-timeline: --navFAQscroll;
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .faqBODYnav:hover div:first-child a {
+    animation: navScroll01 linear;
+    animation-timeline: --navFAQscroll;
+  }
+  .faqBODYnav:hover div:nth-child(2) a {
+    animation: navScroll02 linear;
+    animation-timeline: --navFAQscroll;
+  }
+  .faqBODYnav:hover div:nth-child(3) a {
+    animation: navScroll03 linear;
+    animation-timeline: --navFAQscroll;
+  }
+  .faqBODYnav:hover div:nth-child(4) a {
+    animation: navScroll04 linear;
+    animation-timeline: --navFAQscroll;
+  }
+  .faqBODYnav:hover div:nth-child(5) a {
+    animation: navScroll05 linear;
+    animation-timeline: --navFAQscroll;
+  }
 }
-.faqBODYnav:is(:hover, :active, :focus) div:nth-child(2) a {
-  animation: navScroll02 linear;
-  animation-timeline: --navFAQscroll;
-}
-.faqBODYnav:is(:hover, :active, :focus) div:nth-child(3) a {
-  animation: navScroll03 linear;
-  animation-timeline: --navFAQscroll;
-}
-.faqBODYnav:is(:hover, :active, :focus) div:nth-child(4) a {
-  animation: navScroll04 linear;
-  animation-timeline: --navFAQscroll;
-}
-.faqBODYnav:is(:hover, :active, :focus) div:nth-child(5) a {
-  animation: navScroll05 linear;
-  animation-timeline: --navFAQscroll;
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .faqBODYnav:is(:active, :focus) div:first-child a {
+    animation: navScroll01 linear;
+    animation-timeline: --navFAQscroll;
+  }
+  .faqBODYnav:is(:active, :focus) div:nth-child(2) a {
+    animation: navScroll02 linear;
+    animation-timeline: --navFAQscroll;
+  }
+  .faqBODYnav:is(:active, :focus) div:nth-child(3) a {
+    animation: navScroll03 linear;
+    animation-timeline: --navFAQscroll;
+  }
+  .faqBODYnav:is(:active, :focus) div:nth-child(4) a {
+    animation: navScroll04 linear;
+    animation-timeline: --navFAQscroll;
+  }
+  .faqBODYnav:is(:active, :focus) div:nth-child(5) a {
+    animation: navScroll05 linear;
+    animation-timeline: --navFAQscroll;
+  }
 }
 .faqARTcontainer {
   position: absolute;
@@ -291,114 +390,215 @@ html {
   display: inline !important;
   border-bottom: 10px solid #ff8819;
 }
-.faqHEROtext .faqHEADbig a,
-.faqHEROtext:is(:hover, :active, :focus) .faqHEADbig {
+.faqHEROtext .faqHEADbig a {
   color: #686867;
   transition: color text-shadow 0.3s ease;
 }
-.faqHEROtext .faqHEADbig,
-.faqHEROtext .faqHEADbig:is(:hover, :active, :focus) {
+.faqHEROtext .faqHEADbig {
   color: #00b7ff;
   transition: all 0.3s ease;
 }
-.hoverBlue:is(:hover, :active, :focus),
-.hoverBlue:is(:hover, :active, :focus) a {
-  color: #00b7ff !important;
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .faqHEROtext:hover .faqHEADbig {
+    color: #686867;
+    transition: color text-shadow 0.3s ease;
+  }
+  .faqHEROtext .faqHEADbig:hover {
+    color: #00b7ff;
+    transition: all 0.3s ease;
+  }
 }
-.hoverGold:is(:hover, :active, :focus),
-.hoverGold:is(:hover, :active, :focus) a {
-  color: #f7be00 !important;
-  text-shadow: 0 0 30px #f7be00 !important;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.5s ease-in-out;
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .faqHEROtext:is(:active, :focus) .faqHEADbig {
+    color: #686867;
+    transition: color text-shadow 0.3s ease;
+  }
+  .faqHEROtext .faqHEADbig:is(:active, :focus) {
+    color: #00b7ff;
+    transition: all 0.3s ease;
+  }
 }
-body:has(.faqHEROtext .hoverGold:is(:hover, :active, :focus))
-  .faqARTmag
-  div
-  img {
-  filter: hue-rotate(220deg) saturate(2);
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .hoverBlue:hover,
+  .hoverBlue:hover a {
+    color: #00b7ff !important;
+  }
+  .hoverGold:hover,
+  .hoverGold:hover a {
+    color: #f7be00 !important;
+    text-shadow: 0 0 30px #f7be00 !important;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.5s ease-in-out;
+  }
+  body:has(.faqHEROtext .hoverGold:hover) .faqARTmag div img {
+    filter: hue-rotate(220deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverGold:hover) .faqHEROgriditem svg {
+    color: #f7be00;
+  }
+  .hoverRed:hover,
+  .hoverRed:hover a {
+    color: #ff5e5e !important;
+    text-shadow: 0 0 30px #ff5e5e !important;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.5s ease-in-out;
+  }
+  body:has(.faqHEROtext .hoverRed:hover) .faqARTmag div img {
+    filter: hue-rotate(160deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverRed:hover) .faqHEROgriditem svg {
+    color: #ff5e5e;
+  }
+  .hoverGreen:hover,
+  .hoverGreen:hover a {
+    color: #84cc16 !important;
+    text-shadow: 0 0 30px #84cc16 !important;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.5s ease-in-out;
+  }
+  body:has(.faqHEROtext .hoverGreen:hover) .faqARTmag div img {
+    filter: hue-rotate(-70deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverGreen:hover) .faqHEROgriditem svg {
+    color: #84cc16;
+  }
+  .hoverViolet:hover,
+  .hoverViolet:hover a {
+    color: #bc69ff !important;
+    text-shadow: 0 0 30px #bc69ff !important;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.5s ease-in-out;
+  }
+  body:has(.faqHEROtext .hoverViolet:hover) .faqARTmag div img {
+    filter: hue-rotate(90deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverViolet:hover) .faqHEROgriditem svg {
+    color: #bc69ff;
+  }
+  .hoverOrange:hover,
+  .hoverOrange:hover a {
+    color: #ff8819 !important;
+    text-shadow: 0 0 30px #ff8819 !important;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.5s ease-in-out;
+  }
+  body:has(.faqHEROtext .hoverOrange:hover) .faqARTmag div img {
+    filter: hue-rotate(180deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverOrange:hover:hover) .faqHEROgriditem svg {
+    color: #ff8819;
+  }
 }
-body:has(.faqHEROtext .hoverGold:is(:hover, :active, :focus))
-  .faqHEROgriditem
-  svg {
-  color: #f7be00;
-}
-.hoverRed:is(:hover, :active, :focus),
-.hoverRed:is(:hover, :active, :focus) a {
-  color: #ff5e5e !important;
-  text-shadow: 0 0 30px #ff5e5e !important;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.5s ease-in-out;
-}
-body:has(.faqHEROtext .hoverRed:is(:hover, :active, :focus))
-  .faqARTmag
-  div
-  img {
-  filter: hue-rotate(160deg) saturate(2);
-}
-body:has(.faqHEROtext .hoverRed:is(:hover, :active, :focus))
-  .faqHEROgriditem
-  svg {
-  color: #ff5e5e;
-}
-.hoverGreen:is(:hover, :active, :focus),
-.hoverGreen:is(:hover, :active, :focus) a {
-  color: #84cc16 !important;
-  text-shadow: 0 0 30px #84cc16 !important;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.5s ease-in-out;
-}
-body:has(.faqHEROtext .hoverGreen:is(:hover, :active, :focus))
-  .faqARTmag
-  div
-  img {
-  filter: hue-rotate(-70deg) saturate(2);
-}
-body:has(.faqHEROtext .hoverGreen:is(:hover, :active, :focus))
-  .faqHEROgriditem
-  svg {
-  color: #84cc16;
-}
-.hoverViolet:is(:hover, :active, :focus),
-.hoverViolet:is(:hover, :active, :focus) a {
-  color: #bc69ff !important;
-  text-shadow: 0 0 30px #bc69ff !important;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.5s ease-in-out;
-}
-body:has(.faqHEROtext .hoverViolet:is(:hover, :active, :focus))
-  .faqARTmag
-  div
-  img {
-  filter: hue-rotate(90deg) saturate(2);
-}
-body:has(.faqHEROtext .hoverViolet:is(:hover, :active, :focus))
-  .faqHEROgriditem
-  svg {
-  color: #bc69ff;
-}
-.hoverOrange:is(:hover, :active, :focus),
-.hoverOrange:is(:hover, :active, :focus) a {
-  color: #ff8819 !important;
-  text-shadow: 0 0 30px #ff8819 !important;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.5s ease-in-out;
-}
-body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
-  .faqARTmag
-  div
-  img {
-  filter: hue-rotate(180deg) saturate(2);
-}
-body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
-  .faqHEROgriditem
-  svg {
-  color: #ff8819;
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .hoverBlue:is(:active, :focus),
+  .hoverBlue:is(:active, :focus) a {
+    color: #00b7ff !important;
+  }
+  .hoverGold:is(:active, :focus),
+  .hoverGold:is(:active, :focus) a {
+    color: #f7be00 !important;
+    text-shadow: 0 0 30px #f7be00 !important;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.5s ease-in-out;
+  }
+  body:has(.faqHEROtext .hoverGold:active) .faqARTmag div img {
+    filter: hue-rotate(220deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverGold:active) .faqHEROgriditem svg {
+    color: #f7be00;
+  }
+  body:has(.faqHEROtext .hoverGold:focus) .faqARTmag div img {
+    filter: hue-rotate(220deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverGold:focus) .faqHEROgriditem svg {
+    color: #f7be00;
+  }
+  .hoverRed:is(:active, :focus),
+  .hoverRed:is(:active, :focus) a {
+    color: #ff5e5e !important;
+    text-shadow: 0 0 30px #ff5e5e !important;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.5s ease-in-out;
+  }
+  body:has(.faqHEROtext .hoverRed:active) .faqARTmag div img {
+    filter: hue-rotate(160deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverRed:active) .faqHEROgriditem svg {
+    color: #ff5e5e;
+  }
+  body:has(.faqHEROtext .hoverRed:focus) .faqARTmag div img {
+    filter: hue-rotate(160deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverRed:focus) .faqHEROgriditem svg {
+    color: #ff5e5e;
+  }
+  .hoverGreen:is(:active, :focus),
+  .hoverGreen:is(:active, :focus) a {
+    color: #84cc16 !important;
+    text-shadow: 0 0 30px #84cc16 !important;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.5s ease-in-out;
+  }
+  body:has(.faqHEROtext .hoverGreen:active) .faqARTmag div img {
+    filter: hue-rotate(-70deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverGreen:active) .faqHEROgriditem svg {
+    color: #84cc16;
+  }
+  body:has(.faqHEROtext .hoverGreen:focus) .faqARTmag div img {
+    filter: hue-rotate(-70deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverGreen:focus) .faqHEROgriditem svg {
+    color: #84cc16;
+  }
+  .hoverViolet:is(:active, :focus),
+  .hoverViolet:is(:active, :focus) a {
+    color: #bc69ff !important;
+    text-shadow: 0 0 30px #bc69ff !important;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.5s ease-in-out;
+  }
+  body:has(.faqHEROtext .hoverViolet:active) .faqARTmag div img {
+    filter: hue-rotate(90deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverViolet:active) .faqHEROgriditem svg {
+    color: #bc69ff;
+  }
+  body:has(.faqHEROtext .hoverViolet:focus) .faqARTmag div img {
+    filter: hue-rotate(90deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverViolet:focus) .faqHEROgriditem svg {
+    color: #bc69ff;
+  }
+  .hoverOrange:is(:active, :focus),
+  .hoverOrange:is(:active, :focus) a {
+    color: #ff8819 !important;
+    text-shadow: 0 0 30px #ff8819 !important;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.5s ease-in-out;
+  }
+  body:has(.faqHEROtext .hoverOrange:active) .faqARTmag div img {
+    filter: hue-rotate(180deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverOrange:hover:active) .faqHEROgriditem svg {
+    color: #ff8819;
+  }
+  body:has(.faqHEROtext .hoverOrange:focus) .faqARTmag div img {
+    filter: hue-rotate(180deg) saturate(2);
+  }
+  body:has(.faqHEROtext .hoverOrange:hover:focus) .faqHEROgriditem svg {
+    color: #ff8819;
+  }
 }
 .faqTXTquestion {
   font-weight: 600;
@@ -600,18 +800,18 @@ details[open]::details-content {
   width: 30px;
   aspect-ratio: 1;
 }
-.faqBODYlist:is(:hover, :active, :focus) div a,
-.faqBODYlist:is(:hover, :active, :focus) div a strong,
-.faqBODYlist:is(:hover, :active, :focus) div a span,
-.faqBODYlist:is(:hover, :active, :focus) div a svg {
+.faqBODYlist:hover div a,
+.faqBODYlist:hover div a strong,
+.faqBODYlist:hover div a span,
+.faqBODYlist:hover div a svg {
   color: #c1bfb9 !important;
   fill: #c1bfb9 !important;
   transition: color 0.1s ease-in-out;
 }
-.faqBODYlist div a:is(:hover, :active, :focus),
-.faqBODYlist div a:is(:hover, :active, :focus) strong,
-.faqBODYlist div a:is(:hover, :active, :focus) span,
-.faqBODYlist div a:is(:hover, :active, :focus) svg {
+.faqBODYlist div a:hover,
+.faqBODYlist div a:hover strong,
+.faqBODYlist div a:hover span,
+.faqBODYlist div a:hover svg {
   color: #2a2a2a !important;
   fill: #2a2a2a !important;
   transition: color 0.1s ease-in-out;
@@ -662,24 +862,47 @@ details[open]::details-content {
   position: absolute;
   padding-left: 4px;
 }
-.faqBODYlistitem div:is(:hover, :active, :focus) .faqSHOWapple svg,
-.faqBODYlistitem div:is(:hover, :active, :focus) .faqSHOWgoogle svg {
-  fill: #c1bfb9;
-}
-.faqBODYlistitem div .faqSHOWapple:is(:hover, :active, :focus) svg,
-.faqBODYlistitem div .faqSHOWgoogle:is(:hover, :active, :focus) svg {
-  fill: #6b6a69;
-}
 .faqHIDEapple,
 .faqHIDEgoogle {
   opacity: 0;
 }
-.faqBODYlistitem:has(.faqSHOWapple:is(:hover, :active, :focus)) .faqHIDEapple {
-  opacity: 1;
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .faqBODYlistitem div:hover .faqSHOWapple svg,
+  .faqBODYlistitem div:hover .faqSHOWgoogle svg {
+    fill: #c1bfb9;
+  }
+  .faqBODYlistitem div .faqSHOWapple:hover svg,
+  .faqBODYlistitem div .faqSHOWgoogle:hover svg {
+    fill: #6b6a69;
+  }
+  .faqBODYlistitem:has(.faqSHOWapple:hover) .faqHIDEapple {
+    opacity: 1;
+  }
+  .faqBODYlistitem:has(.faqSHOWgoogle:hover) .faqHIDEgoogle {
+    opacity: 1;
+  }
 }
-.faqBODYlistitem:has(.faqSHOWgoogle:is(:hover, :active, :focus))
-  .faqHIDEgoogle {
-  opacity: 1;
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .faqBODYlistitem div:not(:active, :focus) .faqSHOWapple svg,
+  .faqBODYlistitem div:not(:active, :focus) .faqSHOWgoogle svg {
+    fill: #c1bfb9;
+  }
+  .faqBODYlistitem div .faqSHOWapple:is(:active, :focus) svg,
+  .faqBODYlistitem div .faqSHOWgoogle:is(:active, :focus) svg {
+    fill: #6b6a69;
+  }
+  .faqBODYlistitem:has(.faqSHOWapple:active) .faqHIDEapple {
+    opacity: 1;
+  }
+  .faqBODYlistitem:has(.faqSHOWgoogle:active) .faqHIDEgoogle {
+    opacity: 1;
+  }
+  .faqBODYlistitem:has(.faqSHOWapple:focus) .faqHIDEapple {
+    opacity: 1;
+  }
+  .faqBODYlistitem:has(.faqSHOWgoogle:focus) .faqHIDEgoogle {
+    opacity: 1;
+  }
 }
 .faqGRIDlistcontainGrid {
   display: grid;
@@ -734,20 +957,18 @@ details[open]::details-content {
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
-.faqGRIDlistICON:is(:hover, :active, :focus) {
+.faqGRIDlistICON:hover {
   transform: scale(2) translate(7.5px, 2px);
 }
-.faqGRIDlistICON:is(:hover, :active, :focus) svg {
+.faqGRIDlistICON:hover svg {
   border: 1px solid #fcfaf8;
   border-radius: 50%;
   background-color: #fcfaf8;
 }
-.faqGRIDlistcard:has(.faqGRIDlistICON:is(:hover, :active, :focus))
-  .faqGRIDlistCONTENT
-  p:first-child {
+.faqGRIDlistcard:has(.faqGRIDlistICON:hover) .faqGRIDlistCONTENT p:first-child {
   transform: translate(0px, 20px);
 }
-.faqGRIDlistcard:has(.faqGRIDlistICON:is(:hover, :active, :focus))
+.faqGRIDlistcard:has(.faqGRIDlistICON:hover)
   .faqGRIDlistCONTENT
   p:not(:first-child) {
   transform: translate(0px, 10px);
@@ -777,10 +998,10 @@ details[open]::details-content {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-origin: center;
 }
-.faqHOVERcustserv:is(:hover, :active, :focus) a svg {
+.faqHOVERcustserv:hover a svg {
   transform: scale(1.18);
 }
-.faqHOVERemail:is(:hover, :active, :focus) a div {
+.faqHOVERemail:hover a div {
   outline: 1px solid #c1bfb9;
   background-color: #fcfaf8;
   outline-offset: 5px;
@@ -790,10 +1011,10 @@ details[open]::details-content {
   padding-right: 80px;
   transition: all 0.2s ease-in-out;
 }
-.faqHOVERemail:is(:hover, :active, :focus) a span {
+.faqHOVERemail:hover a span {
   color: #404041;
 }
-.faqHOVERemail:is(:hover, :active, :focus) a svg {
+.faqHOVERemail:hover a svg {
   fill: #404041;
 }
 .faqGRIDcontactContainer .faqGRIDcontactcard {
@@ -885,7 +1106,7 @@ details[open]::details-content {
   color: #404041;
   transition: all 0.3s ease-in-out;
 }
-.faqCONTACTurl:is(:hover, :active, :focus) a {
+.faqCONTACTurl:hover a {
   color: #ff8819;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
@@ -917,7 +1138,7 @@ details[open]::details-content {
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
 }
-.faqEXTRAcontainer details[open] summary:is(:hover, :active, :focus)::after {
+.faqEXTRAcontainer details[open] summary:hover::after {
   color: #404041;
   transition: color 0.3s ease;
 }
@@ -972,10 +1193,10 @@ details[open]::details-content {
   padding-right: 5px;
   transition: color 0.3s ease-in-out;
 }
-.faqEXTRApdfbtn .faqEXTRApdflinks:is(:hover, :active, :focus) a {
+.faqEXTRApdfbtn .faqEXTRApdflinks:hover a {
   color: #c1bfb9;
 }
-.faqEXTRApdfbtn .faqEXTRApdflinks a:is(:hover, :active, :focus) {
+.faqEXTRApdfbtn .faqEXTRApdflinks a:hover {
   color: #404041;
 }
 .faqEXTRApdfbtn svg,
@@ -990,12 +1211,12 @@ details[open]::details-content {
   transition: all 0.3s ease-in-out;
 }
 .faqEXTRApdfbtn:has(.faqEXTRApdflinks a:hover) svg,
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:focus) svg {
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:active) svg {
   transform: rotate(90deg);
   transition: all 0.3s ease-in-out;
 }
 .faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:hover) svg,
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:focus) svg {
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:active) svg {
   transform: rotate(-90deg);
   transition: all 0.3s ease-in-out;
 }
@@ -1206,71 +1427,6 @@ details[open]::details-content {
     gap: 8px;
   }
 }
-
-@media (max-width: 1024px) {
-  .faqGRIDcontactContainer:has(
-      .faqGRIDcontactcard:active,
-      .faqGRIDcontactcard:focus
-    )
-    .child-div:not(:active):not(:focus) {
-    opacity: 0.5;
-  }
-
-  .faqGRIDcontactcard:active,
-  .faqGRIDcontactcard:focus {
-    opacity: 1;
-  }
-
-  .faqGRIDcontactContainer:hover .faqGRIDcontactcard {
-    filter: blur(3px);
-    transform: translateY(0) scale(1);
-    color: #c1bfb9;
-    transition: filter transform color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-  .faqGRIDcontactContainer:hover .faqGRIDcontactcard svg {
-    color: #c1bfb9;
-    transition: filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-
-  .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
-    width: 90%;
-    filter: blur(0);
-    z-index: 1000;
-    transform: translate(5%, 40px) scale(1.15);
-    color: #404041;
-    margin: -20px;
-    padding: 20px;
-    position: absolute;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
-    -webkit-box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
-    -moz-box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
-    transition:
-      color margin padding 0.2s ease,
-      filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-  .faqGRIDcontactContainer .faqGRIDcontactcard:hover svg {
-    color: #ff8819;
-    transition: filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-  .faqGRIDcontactContainer
-    .faqGRIDcontactcard:hover
-    .faqCONTACTlinks
-    div
-    a
-    svg {
-    display: flex;
-    transform: translate(-5px, 0px) scale(0.8);
-    fill: #6b6a69;
-  }
-
-  #Contacts:has(.faqGRIDcontactContainer .faqGRIDcontactcard:hover)
-    .faqTXTquestion {
-    opacity: 0.2;
-  }
-}
-
 @media (1024px <= width <= 1279px) {
   .faqBODYwrapper {
     padding-left: calc((100vw - 1024px) / 2 + 5%);
@@ -1324,8 +1480,6 @@ details[open]::details-content {
   .faqCONTACTlinks div a {
     gap: 8px;
   }
-}
-@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
   .faqGRIDcontactContainer:hover .faqGRIDcontactcard {
     filter: blur(3px);
     transform: translateY(0) scale(1);
@@ -1425,12 +1579,12 @@ details[open]::details-content {
   .faqCONTACTlinks {
     font-size: 16px;
   }
-  .faqGRIDcontactContainer .faqGRIDcontactcard:is(:hover, :focus) {
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
     transform: translate(-20px, 40px) scale(1.15);
   }
 }
 @media (min-width: 1750px) {
-  .faqGRIDcontactContainer .faqGRIDcontactcard:is(:hover, :focus) {
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
     width: 150%;
     transform: translate(-50px, 40px) scale(1.15);
   }
@@ -1452,6 +1606,25 @@ details[open]::details-content {
   }
   .faqCONTACTaddress div:first-child {
     display: inline;
+  }
+}
+
+@media (1024px <= width <= 1279px) {
+}
+/* Base mobile/touch styles (No hover needed, text is always visible) */
+.card-text {
+  opacity: 1;
+}
+
+/* Desktop-only styles (Applies only to devices with a mouse/cursor) */
+@media (hover: hover) and (pointer: fine) {
+  .card-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .card:hover .card-text {
+    opacity: 1;
   }
 }
 

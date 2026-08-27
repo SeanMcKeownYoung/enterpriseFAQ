@@ -1,1 +1,17 @@
-/* THE TANK */
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  /* Your styles here */
+}
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  /* Your styles here */
+}
+.faqBODYnav:is(:active, :focus) {
+  will-change: background-position;
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  animation: faqNAVSCROLLhover linear;
+  animation-timeline: scroll(x self);
+}
+/* Your styles here
+  
+:is(:active, :focus) {
+  
+  */
