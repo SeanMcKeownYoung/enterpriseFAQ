@@ -978,8 +978,8 @@ details[open]::details-content {
 .faqEXTRAcontainer {
   position: relative;
 }
-.faqEXTRAcontainer .faqEXTRApdfbtn {
-  padding: 0 !important;
+.faqEXTRAcontainer details summary {
+  margin-bottom: 20px;
 }
 .faqEXTRAcontainer details[open] summary svg {
   background-color: #404041;
@@ -994,7 +994,7 @@ details[open]::details-content {
   font-size: 20px;
   z-index: 5000;
   color: #f8f5f0;
-  left: 7.5px;
+  left: 357.5px;
   position: absolute;
   transition: all 0.3s ease-in-out;
 }
@@ -1011,9 +1011,6 @@ details[open]::details-content {
 .faqEXTRAvidbtn {
   transform: translateX(350px);
   z-index: 1000;
-}
-.faqEXTRAcontainer details[open] summary {
-  margin-bottom: 20px;
 }
 .faqEXTRApdfbtn .faqEXTRApdflinks a {
   text-decoration: none;
@@ -1069,30 +1066,6 @@ details[open]::details-content {
   margin: 0;
   padding: 0;
 }
-
-.faqEXTRAcontainer details::before,
-.faqEXTRAcontainer div::before,
-.faqEXTRAcontainer details[open]::before {
-  content: "";
-  display: none;
-  width: 0%;
-  height: 0px;
-  top: 0;
-  background-color: transparent;
-  margin: 0;
-}
-.faqEXTRAcontainer details::after,
-.faqEXTRAcontainer div::after,
-.faqEXTRAcontainer details[open]::after {
-  content: "";
-  display: none;
-  width: 0%;
-  height: 0px;
-  bottom: 0;
-  background-color: transparent;
-  margin: 0;
-}
-
 .faqBOXcontactus details,
 .faqBOXcontactus {
   margin: 0 !important;

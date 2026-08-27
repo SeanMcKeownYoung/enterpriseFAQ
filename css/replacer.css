@@ -1,0 +1,148 @@
+.faqQUESTIONwrapper details:first-child[open]::before {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  top: 0;
+  background-color: transparent;
+  margin-bottom: 12px;
+}
+.faqQUESTIONwrapper details[open]:last-child::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  bottom: 0;
+  background-color: transparent;
+  margin-top: 12px;
+}
+.faqQUESTIONwrapper:has(details[open]) details:not([open]) {
+  opacity: 0.3;
+  transition: opacity 0.2s ease-in-out;
+}
+.faqQUESTIONwrapper:has(details[open]) .faqEXTRAcontainer details:not([open]),
+.faqQUESTIONwrapper:has(details[open]) .faqEXTRASboxPDF details:not([open]) {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+.faqEXTRAcontainer details[open] summary:hover::after {
+  color: #404041;
+  transition: color 0.3s ease;
+}
+.faqEXTRAvidbtn,
+.faqEXTRApdfbtn {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.faqEXTRAcontainer {
+  position: relative;
+}
+.faqEXTRAcontainer details summary {
+  margin-bottom: 20px;
+}
+.faqEXTRAcontainer details[open] summary svg {
+  background-color: #404041;
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRAcontainer details summary svg {
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRAcontainer details[open] summary::before {
+  content: "\2715";
+  font-size: 20px;
+  z-index: 5000;
+  color: #f8f5f0;
+  left: 357.5px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRApdfbtn {
+  position: absolute;
+}
+.faqEXTRApdfbtn div {
+  display: flex;
+  flex-direction: row;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 5px;
+}
+.faqEXTRAvidbtn {
+  transform: translateX(350px);
+  z-index: 1000;
+}
+
+@media (width <= 990px) {
+  .faqEXTRApdfbtn {
+    position: relative;
+  }
+  .faqEXTRAvidbtn {
+    transform: translateX(0px);
+    z-index: 1000;
+  }
+  .faqEXTRAcontainer details[open] summary::before {
+    left: 7.5px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+@media (width <= 767px) {
+  .faqEXTRAcontainer details[open] .faqEXTRAvidcontainer {
+    width: 100cqw;
+    overflow: hidden;
+    padding-top: 61.25% !important;
+    margin-left: -7%;
+    padding-left: 0;
+    align-items: start;
+    justify-content: start;
+  }
+}
+.faqEXTRApdfbtn .faqEXTRApdflinks a {
+  text-decoration: none;
+  color: #6b6a69;
+  padding-right: 5px;
+  transition: color 0.3s ease-in-out;
+}
+.faqEXTRApdfbtn .faqEXTRApdflinks:hover a {
+  color: #c1bfb9;
+}
+.faqEXTRApdfbtn .faqEXTRApdflinks a:hover {
+  color: #404041;
+}
+.faqEXTRApdfbtn svg,
+.faqEXTRApdfbtn p {
+  pointer-events: none;
+  cursor: default;
+  z-index: 100;
+  margin-right: 5px;
+}
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks) svg {
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:hover) svg,
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:active) svg {
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:hover) svg,
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:active) svg {
+  transform: rotate(-90deg);
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRAcontainer details::before,
+.faqEXTRAcontainer details::after,
+.faqEXTRAcontainer details[open]::before,
+.faqEXTRAcontainer details[open]::after,
+.faqEXTRAcontainer details:first-child[open]::before,
+.faqEXTRAcontainer details[open]:last-child::after {
+  content: "";
+  display: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
