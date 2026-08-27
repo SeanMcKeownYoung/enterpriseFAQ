@@ -201,6 +201,9 @@ html {
   color: #969491;
   transition: color 0.1s ease-in-out;
 }
+.faqBODYnavitem:last-child {
+  margin-right: 10%;
+}
 .faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
   .faqBODYnavitem:not(:is(:hover, :active, :focus)) {
   border-bottom: 10px solid transparent;
@@ -1727,38 +1730,38 @@ details[open]::details-content {
   60% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 45% 10px;
+    background-size: 50% 10px;
     background-position: 60% bottom;
   }
   70% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 40% 10px;
+    background-size: 45% 10px;
     background-position: 70% bottom;
   }
   80% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 28% 10px;
+    background-size: 40% 10px;
     background-position: 80% bottom;
   }
   90% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 14% 10px;
+    background-size: 35% 10px;
     background-position: 90% bottom;
   }
   99% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 99% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
   100% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 100% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
 }
 @keyframes faqNAVSCROLLhover {
@@ -1807,38 +1810,38 @@ details[open]::details-content {
   60% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 45% 10px;
+    background-size: 50% 10px;
     background-position: 60% bottom;
   }
   70% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 40% 10px;
+    background-size: 45% 10px;
     background-position: 70% bottom;
   }
   80% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 28% 10px;
+    background-size: 40% 10px;
     background-position: 80% bottom;
   }
   90% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 14% 10px;
+    background-size: 35% 10px;
     background-position: 90% bottom;
   }
   99% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 99% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
   100% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 100% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
 }
 @keyframes navScroll01 {
