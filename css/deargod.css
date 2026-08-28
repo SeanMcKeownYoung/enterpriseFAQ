@@ -2182,8 +2182,152 @@ details[open]::details-content {
 }
 
 @media (max-width: 549px) {
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:hover,
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:hover):not(:active):not(:focus) {
+    filter: blur(3px);
+    transform: translateY(0) scale(1);
+    color: #c1bfb9;
+    transition: filter transform color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:hover):not(:active):not(:focus)
+    svg {
+    color: #c1bfb9;
+    transition: color transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard {
+    background: transparent;
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
   .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
-    transform: translate(20px, 40px) scale(1);
+    width: 90%;
+    filter: blur(0);
+    z-index: 1000;
+    transform: unset;
+    color: #404041;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0px 0px 0px 0px rgba(150, 148, 145, 0);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(150, 148, 145, 0);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(150, 148, 145, 0);
+    transition:
+      color margin padding 0.2s ease,
+      filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:hover,
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:hover):not(:active):not(:focus)
+    .faqCONTACTurl
+    a {
+    color: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:hover,
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:hover):not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    a {
+    color: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:hover,
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:hover):not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    svg {
+    fill: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:has(.faqCONTACTurl :active, .faqCONTACTurl :focus)
+    .faqCONTACTurl:not(:hover):not(:active):not(:focus)
+    .faqCONTACTurl
+    a {
+    color: #404041;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:has(.faqCONTACTlinks :active, .faqCONTACTlinks :focus)
+    .faqCONTACTlinks:not(:hover):not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    a {
+    color: #6b6a69;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:has(.faqCONTACTlinks :active, .faqCONTACTlinks :focus)
+    .faqCONTACTlinks:not(:hover):not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    svg {
+    fill: #6b6a69;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks:has(div :hover, div :active, div :focus)
+    .faqCONTACTlink
+    div:not(:hover):not(:active):not(:focus)
+    .faqCONTACTlinks:hover
+    div
+    a {
+    color: #c1bfb9;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks:has(div :hover, div :active, div :focus)
+    .faqCONTACTlink
+    div:not(:hover):not(:active):not(:focus)
+    .faqCONTACTlinks:hover
+    div
+    svg {
+    fill: #c1bfb9 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTlinks:hover div svg {
+    fill: #c1bfb9 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTlinks div:hover svg {
+    fill: #404041 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTurl:hover a p {
+    color: #404041;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTlinks div:hover a {
+    color: #404041;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover svg {
+    color: #ff8819;
+    transition: filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
   .faqGRIDcontactContainer
     .faqGRIDcontactcard:hover
@@ -2191,13 +2335,41 @@ details[open]::details-content {
     div
     a
     svg {
-    transform: translate(0px, 0px) scale(1);
+    display: flex;
+    transform: unset;
+    fill: #6b6a69;
+  }
+  #Contacts:has(.faqGRIDcontactContainer .faqGRIDcontactcard:hover)
+    .faqTXTquestion,
+  #Contacts:has(.faqGRIDcontactContainer .faqGRIDcontactcard:active)
+    .faqTXTquestion,
+  #Contacts:has(.faqGRIDcontactContainer .faqGRIDcontactcard:focus)
+    .faqTXTquestion {
+    opacity: 0.2;
   }
   .faqGRIDcontactContainer {
     gap: 10px !important;
   }
+  .faqGRIDcontactcard {
+    margin: 0 !important;
+  }
   .faqCONTACTurl p {
     font-weight: 400 !important;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTaddress,
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTlinks {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover .faqCONTACTaddress,
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover .faqCONTACTlinks {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
   }
 }
 
