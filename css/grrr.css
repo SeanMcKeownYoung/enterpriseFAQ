@@ -64,19 +64,6 @@
   color: inherit;
   text-decoration: none;
 }
-
-svg:has(use[href="#faqCaret"]),
-svg:has(use[*|href="#faqCaret"]) {
-  border: 0 !important;
-  outline: unset !important;
-  fill: #969491 !important;
-}
-
-svg:has(use[href="#faqCaret"]):is(:hover, :active, :focus),
-svg:has(use[*|href="#faqCaret"]):is(:hover, :active) {
-  fill: #404041 !important;
-}
-
 html {
   color-scheme: dark light;
 }
@@ -845,7 +832,7 @@ details[open]::details-content {
 .faqBOXcontactus div,
 .faqBOXcontactus div a,
 .faqBOXcontactus .faqSUBaccordian a,
-.faqBOXcontactus .faqSUBaccordian .faqHOVERemail a span {
+.faqBOXcontactus .faqSUBaccordian .faqHOVERemail a div {
   display: flex;
   gap: 10px;
   align-content: center;
@@ -858,7 +845,7 @@ details[open]::details-content {
 .faqHOVERcustserv:is(:hover, :active, :focus) a svg {
   transform: scale(1.18);
 }
-.faqHOVERemail:is(:hover, :active, :focus) a {
+.faqHOVERemail:is(:hover, :active, :focus) a div {
   outline: 1px solid #c1bfb9;
   background-color: #fcfaf8;
   outline-offset: 5px;
@@ -1124,20 +1111,12 @@ details[open]::details-content {
   background-color: transparent;
   margin: 0;
 }
+
 .faqBOXcontactus details,
 .faqBOXcontactus {
   margin: 0 !important;
   padding: 0 !important;
   gap: 0 !important;
-}
-.faqBOXlogofirst summary span {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.faqBOXlogofirst summary span svg {
-  align-self: center !important;
-  margin-right: 4px;
 }
 @media (max-width: 549px) {
   .faqHEADbig {
@@ -1215,20 +1194,14 @@ details[open]::details-content {
   .faqQUESTIONwrapper .faqANSWERbox div {
     padding: 0;
   }
-  .faqBOXindent {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin: 6px 0;
-  }
   .faqBOXindent p {
     padding-left: 12px;
+    margin: 6px 0;
     text-indent: -12px;
   }
   .faqBOXindent details summary {
     flex-direction: row;
     padding-left: 16px;
-    width: 100%;
     margin: 0;
     text-indent: -15px;
     align-items: center;
@@ -1263,13 +1236,21 @@ details[open]::details-content {
     border-top: 1px solid #c1bfb9;
   }
   .faqEXTRAcontainer {
-    width: 100vw;
+    margin-left: -30px;
     display: flex;
     flex-direction: column !important;
     gap: 10px;
   }
+
   .faqEXTRApdfbtn {
     position: relative;
+  }
+  .faqEXTRApdfbtn div {
+    display: flex;
+    flex-direction: row;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 5px;
   }
   .faqEXTRAvidbtn {
     transform: translateX(0px);
@@ -1277,29 +1258,15 @@ details[open]::details-content {
   }
   .faqEXTRAcontainer details summary {
     flex-direction: row;
+  }
+  .faqEXTRAcontainer details summary {
     width: 100%;
-  }
-  .faqQUESTIONwrapper details[open]::before {
-    content: "";
-    display: block;
-    width: 90%;
-    height: 1px;
-    background-color: #c1bfb9;
-    margin-bottom: 24px;
-  }
-  .faqQUESTIONwrapper details[open]::after {
-    content: "";
-    display: block;
-    width: 90%;
-    height: 1px;
-    background-color: #c1bfb9;
-    margin-top: 24px;
   }
   .faqEXTRAcontainer details summary svg {
     all: unset;
   }
   .faqBOXcontactus {
-    width: 100vw;
+    margin-left: -30px !important;
     margin-top: 10px !important;
     gap: 10px !important;
   }
@@ -1309,99 +1276,24 @@ details[open]::details-content {
   }
   .faqEXTRApdfbtn svg,
   .faqEXTRAvidbtn svg,
-  .faqBOXcontactus svg,
-  .faqLOGOdot,
-  .faqBODYlistapp svg,
-  .faqGRIDlistICON svg {
+  .faqBOXcontactus svg {
     width: 24px !important;
     height: 24px !important;
   }
   .faqEXTRAcontainer *,
   .faqBOXcontactus * {
-    display: flex;
-    flex-direction: row;
-    align-items: center !important;
-    gap: 4px !important;
+    align-items: center;
+    gap: 8px !important;
     margin: 0 !important;
     padding: 0 !important;
+    width: 100%;
   }
-  .faqBOXcontactus *,
-  .faqEXTRAcontainer * {
-    font-size: 12px;
+  .faqHOVERemail a * {
+    display: inline;
+    vertical-align: middle;
   }
-  .faqBODYlistapp {
-    margin: 10px 0;
-    gap: 6px;
-  }
-  .faqBODYlistitem {
-    display: flex;
-    flex-direction: row-reverse;
-    align-self: start;
-  }
-  .faqHIDEdescription .faqHIDEapple,
-  .faqHIDEdescription .faqHIDEgoogle {
-    display: none;
-  }
-  .faqBODYlistitem > :first-child {
-    display: none;
-  }
-  .faqGRIDlistcontainGrid .faqGRIDlistcard {
-    margin: 5px 0;
-  }
-  .faqGRIDlistcontainFlex .faqGRIDlistcard {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin: 10px 0;
-  }
-  .faqGRIDlistcontainFlex .faqGRIDlistcardSub01 div {
-    margin: 2px 0 !important;
-  }
-  .faqGRIDlistcontainFlex .faqGRIDlistcard:has(.faqGRIDlistcardSub01) {
-    display: flex;
-    flex-direction: column;
-    gap: 6px !important;
-    margin: 5px 0 !important;
-  }
-  .faqBODYlist strong {
-    display: block;
-  }
-  .faqBOXlogofirst div {
-    display: flex;
-    flex-direction: column;
-    align-content: start;
-    justify-content: start;
-    align-items: start;
-  }
-  .faqBOXlogofirst {
-    margin: 10px 0;
-  }
-  .faqBOXlogofirst details summary {
-    display: flex;
-    flex-direction: row;
-    align-content: start;
-    justify-content: start;
-    align-items: start;
-    width: 90%;
-    margin: 4px 0;
-    text-wrap: pretty;
-  }
-  .faqBOXlogofirst details summary svg {
-    order: unset;
-  }
-  .faqBOXlogofirst summary span {
-    gap: 0;
-  }
-  .faqBOXlogofirst svg:has(use[href="#faqCaret"]),
-  .faqBOXlogofirst svg:has(use[*|href="#faqCaret"]) {
-    display: none;
-  }
-  .faqBOXlogofirst details summary span span {
-    display: inline-block;
-    text-wrap: wrap;
-  }
-  .faqHOVERemail:is(:hover, :active, :focus) a {
-    padding-right: 10px;
+  .faqHOVERemail a svg {
+    padding-right: 6px !important;
   }
 }
 @media (550px <= width <= 767px) {
