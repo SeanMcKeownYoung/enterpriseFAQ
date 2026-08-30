@@ -1,0 +1,388 @@
+html {
+  color-scheme: dark light;
+}
+
+.faqALL {
+  width: 105cqw;
+  display: flex;
+  flex-direction: column;
+  inset: 0; /* Modern shorthand for top/right/bottom/left: 0 */
+  transform: translateX(-5%);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.faqALL a {
+  border: 0 !important;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Caret SVG Interactions */
+svg:has(use[href="#faqCaret"]),
+svg:has(use[*|href="#faqCaret"]) {
+  border: 0 !important;
+  outline: unset !important;
+  fill: #969491 !important;
+}
+
+svg:has(use[href="#faqCaret"]):is(:hover, :active, :focus),
+svg:has(use[*|href="#faqCaret"]):is(:hover, :active) {
+  fill: #404041 !important;
+}
+
+.faqALL img,
+.faqALL svg,
+.faqALL video {
+  display: block;
+  max-width: 100%;
+}
+
+.faqNOBR {
+  white-space: nowrap;
+}
+
+/* Layout Structural Blocks */
+.faqHEROcontainer {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.faqHEROcontainer h1 {
+  margin: 0;
+}
+
+.faqBODYcontainer {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-bottom: clamp(80px, 10vw, 180px);
+}
+
+.faqBODYcontainer h1,
+.faqBODYcontainer h2,
+.faqBODYcontainer h3,
+.faqBODYcontainer h4,
+.faqBODYcontainer h5,
+.faqBODYcontainer p {
+  margin: 0;
+  padding: 0;
+}
+
+.faqBODYwrapper {
+  width: 100%;
+}
+
+.faqHEADbig {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.faqHEADbig a {
+  text-decoration: none;
+}
+
+.faqHR {
+  width: 70%;
+  margin: 10px auto 10px 0;
+  border: none;
+  border-top: 1px solid #c1bfb9;
+}
+
+/* Hero Configurations */
+.faqHEROback {
+  background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
+  filter: drop-shadow(0px 5px 10px #00000080);
+}
+
+.faqHEROwrapper {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 80px;
+  overflow: hidden;
+  padding: 300px 0 40px 0;
+}
+
+.faqHEROimg {
+  grid-row-start: 1;
+}
+.faqHEROtext {
+  grid-row-start: 2;
+}
+
+.faqHEROgrid {
+  display: grid;
+  width: 333px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  aspect-ratio: 1 / 1;
+}
+
+.faqHEROgriditem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faqHEROgriditem svg {
+  width: 100%;
+  height: 100%;
+  color: #00b7ff;
+}
+
+/* Inherits dimension rules cleanly from above */
+.faqHEROgriditem:last-of-type svg {
+  color: #3f3f3f !important;
+}
+
+/* Sticky Nav Bar Container */
+.faqBODYnav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: end;
+  margin-bottom: clamp(50px, 5vw, 100px);
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  white-space: nowrap;
+  will-change: background-position;
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  animation: faqNAVSCROLLnonhover linear;
+  animation-timeline: scroll(x self);
+  scroll-timeline-name: --navFAQscroll;
+  scroll-timeline-axis: inline;
+}
+
+.faqBODYnav:is(:hover, :active, :focus) {
+  will-change: background-position;
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  animation: faqNAVSCROLLhover linear;
+  animation-timeline: scroll(x self);
+}
+
+/* Webkit Scrollbars Performance Optimization */
+.faqBODYnav::-webkit-scrollbar {
+  height: 10px;
+}
+
+.faqBODYnav::-webkit-scrollbar-track {
+  height: 100%;
+  background-color: transparent;
+  border-top: 1px solid transparent;
+  width: 30px;
+  transition: all 0.3s ease;
+}
+
+.faqBODYnav::-webkit-scrollbar-track:is(:hover, :active, :focus) {
+  border-top-color: #969491;
+  transition-duration: 0.2s;
+}
+
+.faqBODYnav::-webkit-scrollbar-thumb {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.faqBODYnav::-webkit-scrollbar-thumb:is(:hover, :active, :focus) {
+  background-color: transparent;
+  transition-duration: 0.2s;
+}
+
+/* Nav Bar Active / Inactive states */
+.faqBODYnavitem {
+  align-items: end;
+  display: flex;
+  margin-right: 20px;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  border: 0;
+  text-align: left;
+  height: 80px;
+  padding-bottom: 10px;
+  border-bottom: 10px solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.faqBODYnavitem a {
+  text-decoration: none;
+  color: #969491;
+  transition: color 0.1s ease-in-out;
+}
+
+.faqBODYnavitem:last-child {
+  margin-right: 10%;
+}
+
+.faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
+  .faqBODYnavitem:not(:is(:hover, :active, :focus)) {
+  border-bottom-color: transparent;
+}
+
+.faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
+  .faqBODYnavitem:not(:is(:hover, :active, :focus))
+  a {
+  color: #c1bfb9;
+}
+
+.faqBODYnav .faqBODYnavitem:is(:hover, :active, :focus) {
+  border-bottom-color: #404041;
+}
+
+.faqBODYnav .faqBODYnavitem:is(:hover, :active, :focus) a {
+  color: #404041;
+}
+
+/* Nav Item Specific Color Shifts */
+.faqBODYnav .navBlue:is(:hover, :active, :focus) {
+  border-bottom-color: #00b7ff;
+}
+.faqBODYnav .navGold:is(:hover, :active, :focus) {
+  border-bottom-color: #f7be00;
+}
+.faqBODYnav .navRed:is(:hover, :active, :focus) {
+  border-bottom-color: #ff5e5e;
+}
+.faqBODYnav .navGreen:is(:hover, :active, :focus) {
+  border-bottom-color: #84cc16;
+}
+.faqBODYnav .navViolet:is(:hover, :active, :focus) {
+  border-bottom-color: #bc69ff;
+}
+.faqBODYnav .navOrange:is(:hover, :active, :focus) {
+  border-bottom-color: #ff8819;
+}
+
+.faqBODYnav div {
+  transition: color 0.7s ease-in-out;
+}
+
+.faqBODYnav:is(:hover, :active, :focus) div {
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Scroll-Driven Nav Link Target Animations */
+.faqBODYnav:is(:hover, :active, :focus) div:first-child a {
+  animation: navScroll01 linear;
+  animation-timeline: --navFAQscroll;
+}
+.faqBODYnav:is(:hover, :active, :focus) div:nth-child(2) a {
+  animation: navScroll02 linear;
+  animation-timeline: --navFAQscroll;
+}
+.faqBODYnav:is(:hover, :active, :focus) div:nth-child(3) a {
+  animation: navScroll03 linear;
+  animation-timeline: --navFAQscroll;
+}
+.faqBODYnav:is(:hover, :active, :focus) div:nth-child(4) a {
+  animation: navScroll04 linear;
+  animation-timeline: --navFAQscroll;
+}
+.faqBODYnav:is(:hover, :active, :focus) div:nth-child(5) a {
+  animation: navScroll05 linear;
+  animation-timeline: --navFAQscroll;
+}
+
+/* Visual Background Art Overlay Layer */
+.faqARTcontainer {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 200;
+  width: 100vw;
+  inset: 70px 0 0 0; /* Modern shorthand placement */
+  transform: translateX(5%);
+}
+
+.faqARTmag div img {
+  transform: translateY(0px) translateX(0px) scale(1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  animation: faqscaleAndMove linear both;
+  animation-timeline: scroll(root);
+  animation-range: exit;
+}
+
+/* Content Themes (Dark vs Light Content Modes) */
+.faqBODYdark {
+  background-color: #ece9e1;
+  border-top: 1px solid #ffffff;
+}
+
+.faqBODYlight {
+  background-color: #f8f5f0;
+  border-top: 1px solid #ffffff;
+}
+
+.faqBODYdark .faqHEADbig,
+.faqBODYlight .faqHEADbig {
+  color: #404041;
+}
+
+.faqBODYcontainer .faqHEADbig {
+  padding: 48px 0;
+}
+
+/* Target Header Underlines globally */
+.faqHEADbig .faqHEADunderline {
+  display: inline !important;
+  padding-bottom: 6px;
+  border-bottom: 10px solid #787878;
+}
+
+/* Modifying only border colors cleanly */
+.faqBODYBlue .faqHEADbig .faqHEADunderline {
+  border-bottom-color: #00b7ff;
+}
+.faqBODYgold .faqHEADbig .faqHEADunderline {
+  border-bottom-color: #f7be00;
+}
+.faqBODYred .faqHEADbig .faqHEADunderline {
+  border-bottom-color: #ff5e5e;
+}
+.faqBODYgreen .faqHEADbig .faqHEADunderline {
+  border-bottom-color: #84cc16;
+}
+.faqBODYviolet .faqHEADbig .faqHEADunderline {
+  border-bottom-color: #bc69ff;
+}
+.faqBODYorange .faqHEADbig .faqHEADunderline {
+  border-bottom-color: #ff8819;
+}
+
+/* Focus Hover Highlight Controls */
+.faqHEROtext .faqHEADbig a,
+.faqHEROtext:is(:hover, :active, :focus) .faqHEADbig {
+  color: #686867;
+  transition: color text-shadow 0.3s ease;
+}
+
+.faqHEROtext .faqHEADbig,
+.faqHEROtext .faqHEADbig:is(:hover, :active, :focus) {
+  color: #00b7ff;
+  transition: all 0.3s ease;
+}
+
+.hoverBlue:is(:hover, :active, :focus),
+.hoverBlue:is(:hover, :active, :focus) a {
+  color: #00b7ff !important;
+}
+
+.hoverGold:is(:hover, :active, :focus),
+.hoverGold:is(:hover, :active, :focus) a {
+  color: #f7be00 !important;
+  text-shadow: 0 0 30px #f7be00 !important;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.5s ease; /* Finished incomplete transition */
+}

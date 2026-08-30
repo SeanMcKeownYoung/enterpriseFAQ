@@ -1,0 +1,90 @@
+.faqEXTRAcontainer {
+  position: relative;
+}
+.faqEXTRAcontainer details::before,
+.faqEXTRAcontainer details::after,
+.faqEXTRAcontainer details[open]::before,
+.faqEXTRAcontainer details[open]::after,
+.faqEXTRAcontainer details:first-child[open]::before,
+.faqEXTRAcontainer details[open]:last-child::after,
+.faqBOXcontactus details::before,
+.faqBOXcontactus details::after,
+.faqBOXcontactus details[open]::before,
+.faqBOXcontactus details[open]::after,
+.faqBOXcontactus details:first-child[open]::before,
+.faqBOXcontactus details[open]:last-child::after {
+  content: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+.faqEXTRAcontainer details[open] summary {
+  margin-bottom: 16px;
+}
+.faqEXTRAcontainer details[open] summary svg {
+  background-color: #404041;
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRAcontainer details summary svg {
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRAcontainer details[open] summary::before {
+  content: "\2715";
+  z-index: 500;
+  color: #f8f5f0;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 549px) {
+  .faqEXTRAcontainer details[open] summary::before {
+    font-size: 12px;
+    padding-left: 4.5px;
+    padding-top: 0px;
+    margin-top: -20px;
+  }
+}
+@media (550px <= width <= 767px) {
+  .faqEXTRAcontainer details[open] summary::before {
+    font-size: 14px;
+    padding-left: 4.5px;
+    padding-top: 1px;
+  }
+}
+@media (768px <= width <= 1023px) {
+  .faqEXTRAcontainer details[open] summary::before {
+    font-size: 16px;
+    padding-left: 6px;
+    padding-top: 1px;
+  }
+}
+@media (min-width: 1024px) {
+  .faqEXTRAcontainer details[open] summary::before {
+    font-size: 21px;
+    padding-left: 7px;
+    padding-top: 1px;
+  }
+}
+
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks) svg {
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:hover) svg,
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:focus) svg {
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:hover) svg,
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:focus) svg {
+  transform: rotate(-90deg);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (550px <= width <= 767px) {
+  .faqEXTRAcontainer {
+    width: 70vw;
+    min-width: 450px;
+  }
+}

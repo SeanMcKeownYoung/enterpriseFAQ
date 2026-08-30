@@ -1,0 +1,22 @@
+.faqEXTRAvidbtn summary {
+  display: inline-flex;
+  gap: 6px;
+}
+@media (min-width: 550px) {
+  .faqEXTRAvidbtn summary {
+    gap: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .faqEXTRAvidbtn summary {
+    gap: 10px;
+  }
+}
+.faqEXTRAvidbtn summary svg {
+  display: flex;
+  align-self: start;
+}
+.faqEXTRAvidbtn summary span {
+  align-self: center;
+  display: inline-block;
+}

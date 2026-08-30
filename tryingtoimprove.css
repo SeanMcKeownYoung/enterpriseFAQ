@@ -201,6 +201,9 @@ html {
   color: #969491;
   transition: color 0.1s ease-in-out;
 }
+.faqBODYnavitem:last-child {
+  margin-right: 10%;
+}
 .faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
   .faqBODYnavitem:not(:is(:hover, :active, :focus)) {
   border-bottom: 10px solid transparent;
@@ -971,25 +974,15 @@ details[open]::details-content {
 .faqEXTRApdfbtn {
   display: flex;
   flex-direction: row;
+  align-content: center;
+  gap: 10px;
   position: relative;
 }
 .faqEXTRAcontainer {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  gap: 0 !important;
-  margin: 0 !important;
+}
+.faqEXTRAcontainer .faqEXTRApdfbtn {
   padding: 0 !important;
-  background-color: #84cc16;
-  all: unset;
-}
-.faqEXTRAcontainer details {
-  background-color: #84cc16;
-  all: unset;
-}
-.faqEXTRAcontainer details summary,
-.faqEXTRAcontainer .faqEXTRApdfbtn div {
-  background-color: #00b7ff;
 }
 .faqEXTRAcontainer details[open] summary svg {
   background-color: #404041;
@@ -1004,24 +997,26 @@ details[open]::details-content {
   font-size: 20px;
   z-index: 5000;
   color: #f8f5f0;
+  left: 7.5px;
   position: absolute;
   transition: all 0.3s ease-in-out;
 }
-
 .faqEXTRApdfbtn {
-  margin: 0 !important;
-  padding: 0 !important;
+  position: absolute;
 }
 .faqEXTRApdfbtn div {
   display: flex;
   flex-direction: row;
   margin: 0 !important;
   padding: 0 !important;
+  gap: 5px;
 }
 .faqEXTRAvidbtn {
+  transform: translateX(350px);
   z-index: 1000;
-  margin: 0 !important;
-  padding: 0 !important;
+}
+.faqEXTRAcontainer details[open] summary {
+  margin-bottom: 20px;
 }
 .faqEXTRApdfbtn .faqEXTRApdflinks a {
   text-decoration: none;
@@ -1040,6 +1035,7 @@ details[open]::details-content {
   pointer-events: none;
   cursor: default;
   z-index: 100;
+  margin-right: 5px;
 }
 .faqEXTRApdfbtn:has(.faqEXTRApdflinks) svg {
   transform: rotate(0deg);
@@ -1070,12 +1066,36 @@ details[open]::details-content {
 .faqBOXcontactus details:first-child[open]::before,
 .faqBOXcontactus details[open]:last-child::after {
   content: "";
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  display: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
+
+.faqEXTRAcontainer details::before,
+.faqEXTRAcontainer div::before,
+.faqEXTRAcontainer details[open]::before {
+  content: "";
+  display: none;
+  width: 0%;
+  height: 0px;
+  top: 0;
+  background-color: transparent;
+  margin: 0;
+}
+.faqEXTRAcontainer details::after,
+.faqEXTRAcontainer div::after,
+.faqEXTRAcontainer details[open]::after {
+  content: "";
+  display: none;
+  width: 0%;
+  height: 0px;
+  bottom: 0;
+  background-color: transparent;
+  margin: 0;
+}
+
 .faqBOXcontactus details,
 .faqBOXcontactus {
   margin: 0 !important;
@@ -1710,38 +1730,38 @@ details[open]::details-content {
   60% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 45% 10px;
+    background-size: 50% 10px;
     background-position: 60% bottom;
   }
   70% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 40% 10px;
+    background-size: 45% 10px;
     background-position: 70% bottom;
   }
   80% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 28% 10px;
+    background-size: 40% 10px;
     background-position: 80% bottom;
   }
   90% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 14% 10px;
+    background-size: 35% 10px;
     background-position: 90% bottom;
   }
   99% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 99% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
   100% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 100% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
 }
 @keyframes faqNAVSCROLLhover {
@@ -1790,38 +1810,38 @@ details[open]::details-content {
   60% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 45% 10px;
+    background-size: 50% 10px;
     background-position: 60% bottom;
   }
   70% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 40% 10px;
+    background-size: 45% 10px;
     background-position: 70% bottom;
   }
   80% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 28% 10px;
+    background-size: 40% 10px;
     background-position: 80% bottom;
   }
   90% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 14% 10px;
+    background-size: 35% 10px;
     background-position: 90% bottom;
   }
   99% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 99% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
   100% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 100% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
 }
 @keyframes navScroll01 {

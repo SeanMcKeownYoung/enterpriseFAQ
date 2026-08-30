@@ -1,16 +1,103 @@
+@import url("https://p.typekit.net/p.css?s=1&k=umq5keu&ht=tk&f=39496.39498.39502.39504.39505.39508&a=63447791&app=typekit&e=css");
+@font-face {
+  font-family: "neue-haas-grotesk-display";
+  src:
+    url("https://use.typekit.net/af/174ae3/00000000000000007735bb5a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/174ae3/00000000000000007735bb5a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/174ae3/00000000000000007735bb5a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "neue-haas-grotesk-display";
+  src:
+    url("https://use.typekit.net/af/c7a282/00000000000000007735bb62/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/c7a282/00000000000000007735bb62/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/c7a282/00000000000000007735bb62/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "neue-haas-grotesk-display";
+  src:
+    url("https://use.typekit.net/af/bbb0f9/00000000000000007735bb6e/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/bbb0f9/00000000000000007735bb6e/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/bbb0f9/00000000000000007735bb6e/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+}
+.faqALL {
+  color: #404041;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1;
+}
+.faqALL * {
+  font-variant-ligatures: inherit;
+  font-feature-settings: inherit;
+}
+.faqALL a,
+.faqALL button {
+  color: inherit;
+}
+
+.faqALL {
+  width: 105cqw;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-5%);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
 .faqALL a {
   border: 0 !important;
   color: inherit;
   text-decoration: none;
 }
+.faqALL svg,
+.faqALL svg * {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+.faqALL summary,
+.faqALL summary * {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+.faqALL a,
+.faqALL a * {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
 html {
   color-scheme: dark light;
-}
-.faqALL img,
-.faqALL svg,
-.faqALL video {
-  display: block;
-  max-width: 100%;
 }
 .faqNOBR {
   white-space: nowrap;
@@ -20,7 +107,6 @@ html {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 .faqHEROcontainer h1 {
   margin: 0;
@@ -31,12 +117,12 @@ html {
   justify-content: flex-start;
   flex-direction: column;
   padding-bottom: clamp(80px, 10vw, 180px);
-  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 .faqBODYwrapper {
   width: 100%;
 }
 .faqHEADbig {
+  font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 900;
   font-style: normal;
   letter-spacing: 0;
@@ -46,10 +132,11 @@ html {
   text-decoration: none;
 }
 .faqHR {
-  width: 70%;
-  margin: 10px auto 10px 0;
+  width: 70vw;
+  margin: clamp(10px, 1.5vw, 30px) auto clamp(10px, 1.5vw, 30px) 0;
   border: none;
-  border-top: 1px solid #c1bfb9;
+  height: 1px;
+  background-color: #cccccc;
 }
 .faqHEROback {
   background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
@@ -155,6 +242,9 @@ html {
   text-decoration: none;
   color: #969491;
   transition: color 0.1s ease-in-out;
+}
+.faqBODYnavitem:last-child {
+  margin-right: 10%;
 }
 .faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
   .faqBODYnavitem:not(:is(:hover, :active, :focus)) {
@@ -401,6 +491,7 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   color: #ff8819;
 }
 .faqTXTquestion {
+  font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0;
@@ -412,7 +503,6 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 .faqQUESTIONwrapper details summary,
 .faqQUESTIONwrapper details p,
 .faqQUESTIONwrapper details div,
-.faqQUESTIONwrapper details svg,
 .faqQUESTIONwrapper details span {
   color: #404041;
   fill: #404041;
@@ -428,34 +518,100 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 .faqTXTanswer strong {
   font-weight: 600;
 }
+
+.faqTXTextras {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-align: left;
+  text-wrap: balance;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .faqTXTextras {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .faqTXTextras {
+    font-size: 19px;
+  }
+}
+@media (min-width: 1280px) {
+  .faqTXTextras {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1750px) {
+  .faqTXTextras {
+    font-size: 22px;
+  }
+}
+
+.faqTXTextras strong {
+  font-weight: 600;
+}
 .faqQUESTIONwrapper summary {
   cursor: pointer;
   list-style: none;
   display: inline-flex;
   align-items: center;
+  gap: 6px;
+}
+.faqTOGGLEicon {
+  width: 8px;
+  height: 8px;
+}
+@media (min-width: 550px) {
+  .faqTOGGLEicon {
+    width: 12px;
+    height: 12px;
+  }
 }
 :root {
   interpolate-size: allow-keywords;
 }
-.faqQUESTIONwrapper details::details-content {
+.faqALL details::details-content {
   block-size: 0;
   opacity: 0;
   transition:
-    block-size 0.4s ease,
-    opacity 0.4s ease,
+    block-size 0.4s ease-in-out,
+    opacity 0.4s ease-in-out,
     content-visibility 0.4s ease allow-discrete;
 }
-details[open]::details-content {
+.faqALL details[open]::details-content {
   block-size: auto;
   opacity: 1;
 }
-.faqQUESTIONwrapper .faqTXTquestion svg {
-  padding: 0 0 0 10px;
-  transition: all 0.2s ease-in-out;
+.faqQUESTIONwrapper details .faqQUESTIONmain svg {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
-.faqQUESTIONwrapper details[open] .faqTXTquestion svg {
+.faqQUESTIONwrapper details[open] .faqQUESTIONmain svg {
   transform: rotate(90deg) scale(1, 1.2);
-  padding: 0 0 12px 2px;
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: transform 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+
+.faqRESETaccordian details:before,
+.faqRESETaccordian details:after {
+  margin: 0 !important;
+}
+.faqGAP {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.faqMARGINbottom {
+  margin-bottom: 1vw;
+}
+.faqSUBaccordian summary svg {
+  transition: all 0.3s ease-in-out;
+  align-self: center;
+}
+.faqSUBaccordian[open] summary svg {
+  transform: rotate(90deg) scale(1, 1.2);
 }
 .faqQUESTIONwrapper details[open] .faqInitial {
   transform: none;
@@ -466,17 +622,17 @@ details[open]::details-content {
 }
 .faqQUESTIONwrapper .faqANSWERbox {
   position: relative;
-  padding: 10px 0 5px 0;
-  margin-right: 20px;
   width: 90%;
+  margin: 1vw 0 2vw 0;
 }
-.faqQUESTIONwrapper .faqANSWERbox div {
-  padding: 5px 0;
+.faqANSWERbox span:first-child {
+  margin-bottom: 1vw;
+  display: inline-block;
 }
 .faqQUESTIONwrapper details::before {
   content: "";
   display: block;
-  width: 70%;
+  width: 70vw;
   height: 1px;
   top: 0;
   background-color: transparent;
@@ -485,7 +641,7 @@ details[open]::details-content {
 .faqQUESTIONwrapper details::after {
   content: "";
   display: block;
-  width: 70%;
+  width: 70vw;
   height: 1px;
   bottom: 0;
   background-color: transparent;
@@ -494,34 +650,35 @@ details[open]::details-content {
 .faqQUESTIONwrapper details[open]::before {
   content: "";
   display: block;
-  width: 70%;
+  width: 70vw;
   height: 1px;
   background-color: #c1bfb9;
   margin-bottom: 24px;
 }
+.faqQUESTIONwrapper details:first-of-type[open]::before {
+  content: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
 .faqQUESTIONwrapper details[open]::after {
   content: "";
   display: block;
-  width: 70%;
+  width: 70vw;
   height: 1px;
   background-color: #c1bfb9;
 }
 .faqSUBaccordian::before {
-  content: "";
-  display: block;
-  width: 70%;
-  height: 0px !important;
-  background-color: #c1bfb9;
-  margin: 0 !important;
+  content: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 .faqSUBaccordian::after {
-  content: "";
-  display: block;
-  width: 70%;
-  height: 0px !important;
-  background-color: #c1bfb9;
-  margin: 0 !important;
-  padding: 0 !important;
+  content: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
   .faqQUESTIONwrapper:has(details[open]) details:not([open]):hover {
@@ -555,10 +712,10 @@ details[open]::details-content {
   text-indent: -16px;
 }
 .faqBOXpad1 {
-  padding: 20px 0;
+  padding: 16px 0;
 }
 .faqBOXpad2 {
-  padding: 20px 0 10px 0;
+  padding-top: 16px;
 }
 .faqSUBaccordian {
   opacity: 1 !important;
@@ -567,20 +724,12 @@ details[open]::details-content {
 }
 .faqSUBaccordian summary {
   display: flex;
-  gap: 6px;
-}
-.faqSUBaccordian summary svg {
-  transition: all 0.2s ease-in-out;
-  align-self: center;
-}
-.faqSUBaccordian[open] summary svg {
-  transform: rotate(90deg) scale(1, 1.2);
 }
 .faqBODYlist {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 10px 0;
+  margin: 16px 0 0 0;
 }
 .faqBODYlist a {
   text-decoration: none;
@@ -594,26 +743,42 @@ details[open]::details-content {
   align-self: flex-start !important;
 }
 .faqLOGOdot {
+  aspect-ratio: 1 / 1;
+  height: auto;
   transform-origin: center;
   clip-path: circle(50%);
   border-radius: 50%;
-  width: 30px;
-  aspect-ratio: 1;
+  flex-shrink: 0;
+  width: 18px;
 }
+@media (min-width: 550px) {
+  .faqLOGOdot {
+    width: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .faqLOGOdot {
+    width: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .faqLOGOdot {
+    width: 30px;
+  }
+}
+
 .faqBODYlist:is(:hover, :active, :focus) div a,
 .faqBODYlist:is(:hover, :active, :focus) div a strong,
-.faqBODYlist:is(:hover, :active, :focus) div a span,
-.faqBODYlist:is(:hover, :active, :focus) div a svg {
-  color: #c1bfb9 !important;
-  fill: #c1bfb9 !important;
+.faqBODYlist:is(:hover, :active, :focus) div a span {
+  color: #c1bfb9;
+  fill: #c1bfb9;
   transition: color 0.1s ease-in-out;
 }
 .faqBODYlist div a:is(:hover, :active, :focus),
 .faqBODYlist div a:is(:hover, :active, :focus) strong,
-.faqBODYlist div a:is(:hover, :active, :focus) span,
-.faqBODYlist div a:is(:hover, :active, :focus) svg {
-  color: #2a2a2a !important;
-  fill: #2a2a2a !important;
+.faqBODYlist div a:is(:hover, :active, :focus) span {
+  color: #2a2a2a;
+  fill: #2a2a2a;
   transition: color 0.1s ease-in-out;
 }
 .faqSUBindent {
@@ -640,18 +805,9 @@ details[open]::details-content {
   flex-direction: row;
   gap: 5px;
 }
-.faqBODYlistitem svg {
-  width: 30px;
-  height: 30px;
-  align-self: center;
-}
 .faqBODYlistitem div a {
   display: flex;
   flex-direction: row;
-}
-.faqBODYlistitem div a svg {
-  fill: #969491;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .faqHIDEdescription {
   display: flex;
@@ -707,71 +863,115 @@ details[open]::details-content {
   display: flex;
   flex-direction: row;
 }
-.faqGRIDlistICON {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 10px;
-  transition: all 0.2s ease-in-out;
-}
-.faqGRIDlistICON svg {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #fcfaf8;
-  border-radius: 15px;
-  background-color: #fcfaf8;
-  transition: all 0.2s ease-in-out;
-}
 .faqGRIDlistCONTENT {
   flex: 1;
 }
 .faqGRIDlistCONTENT p {
   line-height: 1.2;
   width: 80%;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .faqGRIDlistCONTENT p:first-child {
   padding-bottom: 4px;
   width: 100%;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.faqGRIDlistICON:is(:hover, :active, :focus) {
-  transform: scale(2) translate(7.5px, 2px);
+
+.faqEXTRAcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vw;
+  gap: 6px;
 }
-.faqGRIDlistICON:is(:hover, :active, :focus) svg {
-  border: 1px solid #fcfaf8;
-  border-radius: 50%;
-  background-color: #fcfaf8;
+@media (min-width: 550px) {
+  .faqEXTRAcontainer {
+    gap: 8px;
+  }
 }
-.faqGRIDlistcard:has(.faqGRIDlistICON:is(:hover, :active, :focus))
-  .faqGRIDlistCONTENT
-  p:first-child {
-  transform: translate(0px, 20px);
+@media (min-width: 768px) {
+  .faqEXTRAcontainer {
+    gap: 10px;
+  }
 }
-.faqGRIDlistcard:has(.faqGRIDlistICON:is(:hover, :active, :focus))
-  .faqGRIDlistCONTENT
-  p:not(:first-child) {
-  transform: translate(0px, 10px);
-  opacity: 0.2;
+.faqEXTRApdfbtn div {
+  display: flex;
+  gap: 6px;
+}
+@media (min-width: 550px) {
+  .faqEXTRApdfbtn div {
+    align-items: center;
+    gap: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .faqEXTRApdfbtn div {
+    gap: 10px;
+  }
+}
+.faqEXTRAvidbtn summary {
+  display: inline-flex;
+  gap: 6px;
+}
+@media (min-width: 550px) {
+  .faqEXTRAvidbtn summary {
+    gap: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .faqEXTRAvidbtn summary {
+    gap: 10px;
+  }
+}
+.faqEXTRAvidbtn summary svg {
+  display: flex;
+  align-self: start;
+}
+.faqEXTRAvidbtn summary span {
+  align-self: center;
+  display: inline-block;
+}
+summary.faqTXTextras {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+summary.faqTXTextras .faqLOGOdot {
+  flex-shrink: 0;
+  margin-top: 0;
+}
+summary.faqTXTextras span {
+  margin-top: 0;
+  line-height: 1.2;
 }
 .faqBOXcontactus {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.faqBOXcontactus div {
-  margin: 0 0 -5px 0;
-  padding: 0;
-  gap: 0;
-}
-.faqBOXcontactus .faqSUBaccordian summary,
+
 .faqBOXcontactus div,
-.faqBOXcontactus div a,
-.faqBOXcontactus .faqSUBaccordian a,
-.faqBOXcontactus .faqSUBaccordian .faqHOVERemail a div {
+.faqBOXcontactus div a {
   display: flex;
-  gap: 10px;
-  align-content: center;
-  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 549px) {
+  .faqBOXcontactus div,
+  .faqBOXcontactus div a {
+    gap: 6px;
+  }
+}
+@media (550px <= width <= 767px) {
+  .faqBOXcontactus div,
+  .faqBOXcontactus div a {
+    gap: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .faqBOXcontactus div,
+  .faqBOXcontactus div a {
+    gap: 10px;
+  }
 }
 .faqHOVERcustserv a svg {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -780,21 +980,40 @@ details[open]::details-content {
 .faqHOVERcustserv:is(:hover, :active, :focus) a svg {
   transform: scale(1.18);
 }
-.faqHOVERemail:is(:hover, :active, :focus) a div {
-  outline: 1px solid #c1bfb9;
-  background-color: #fcfaf8;
-  outline-offset: 5px;
+.faqHOVERemail {
+  display: flex;
+  padding: 10px 0 10px 10px !important;
+  margin: -10px 0 -10px -10px;
+  width: 70vw;
+  border: 1px solid transparent;
+  background-color: transparent;
   border-radius: 30px;
-  margin-left: -7px;
-  padding-left: 7px;
-  padding-right: 80px;
-  transition: all 0.2s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
 }
-.faqHOVERemail:is(:hover, :active, :focus) a span {
-  color: #404041;
+@media (max-width: 549px) {
+  .faqHOVERemail {
+    width: 100%;
+  }
 }
-.faqHOVERemail:is(:hover, :active, :focus) a svg {
-  fill: #404041;
+
+.faqHOVERemail:hover {
+  border: 1px solid #c1bfb9;
+  background-color: #fcfaf8;
+}
+.faqHOVERemail a {
+  flex-grow: 1;
+}
+.faqHOVERemail a span,
+.faqHOVERemail a svg {
+  transition: color 0.3s ease-in-out;
+}
+.faqHOVERemail:hover a span,
+.faqHOVERemail:hover a span strong,
+.faqHOVERemail:hover a span svg {
+  color: #2a2a2a !important;
+  fill: #2a2a2a !important;
 }
 .faqGRIDcontactContainer .faqGRIDcontactcard {
   background: linear-gradient(90deg, #ece9e1aa 50%, #ece9e1aa 100%);
@@ -802,8 +1021,9 @@ details[open]::details-content {
 }
 .faqCONTACTicon svg {
   color: #ff8819;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
+
 .faqGRIDcontactContainer {
   display: grid;
   box-sizing: border-box;
@@ -860,6 +1080,7 @@ details[open]::details-content {
 .faqCONTACTaddress {
   display: flex;
   flex-direction: column;
+  font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 500;
 }
 .faqCONTACTlinks {
@@ -867,27 +1088,24 @@ details[open]::details-content {
   flex-direction: column;
 }
 .faqCONTACTlinks div a {
+  font-family: "neue-haas-grotesk-display", sans-serif;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .faqCONTACTlinks div a svg {
-  width: 30px;
-  height: 30px;
   fill: #6b6a69;
 }
 .faqCONTACThead {
+  font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 600;
   text-wrap: balance;
 }
 .faqCONTACTurl a,
 .faqCONTACTurl {
-  color: #404041;
-  transition: all 0.3s ease-in-out;
-}
-.faqCONTACTurl:is(:hover, :active, :focus) a {
-  color: #ff8819;
+  font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 600;
+  color: #404041;
   transition: all 0.3s ease-in-out;
 }
 .faqQUESTIONwrapper details:first-child[open]::before {
@@ -908,151 +1126,228 @@ details[open]::details-content {
   background-color: transparent;
   margin-top: 12px;
 }
-.faqQUESTIONwrapper:has(details[open]) details:not([open]) {
-  opacity: 0.3;
-  transition: opacity 0.2s ease-in-out;
-}
-.faqQUESTIONwrapper:has(details[open]) .faqEXTRAcontainer details:not([open]),
-.faqQUESTIONwrapper:has(details[open]) .faqEXTRASboxPDF details:not([open]) {
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-.faqEXTRAcontainer details[open] summary:is(:hover, :active, :focus)::after {
-  color: #404041;
-  transition: color 0.3s ease;
-}
-.faqEXTRAvidbtn,
-.faqEXTRApdfbtn {
+.faqBOXlogofirst summary span {
   display: flex;
-  flex-direction: row;
-  align-content: center;
-  gap: 10px;
-  position: relative;
+  align-items: center;
+  gap: 4px;
 }
-.faqEXTRAcontainer {
-  position: relative;
-}
-.faqEXTRAcontainer details summary {
-  margin-bottom: 20px;
-}
-.faqEXTRAcontainer details[open] summary svg {
-  background-color: #404041;
-  transform: rotate(180deg);
-  transition: all 0.3s ease-in-out;
-}
-.faqEXTRAcontainer details summary svg {
-  transition: all 0.3s ease-in-out;
-}
-.faqEXTRAcontainer details[open] summary::before {
-  content: "\2715";
-  font-size: 20px;
-  z-index: 5000;
-  color: #f8f5f0;
-  left: 357.5px;
-  position: absolute;
-  transition: all 0.3s ease-in-out;
-}
-.faqEXTRApdfbtn {
-  position: absolute;
-}
-.faqEXTRApdfbtn div {
-  display: flex;
-  flex-direction: row;
-  margin: 0 !important;
-  padding: 0 !important;
-  gap: 5px;
-}
-.faqEXTRAvidbtn {
-  transform: translateX(350px);
-  z-index: 1000;
-}
-.faqEXTRApdfbtn .faqEXTRApdflinks a {
-  text-decoration: none;
-  color: #6b6a69;
-  padding-right: 5px;
-  transition: color 0.3s ease-in-out;
-}
-.faqEXTRApdfbtn .faqEXTRApdflinks:is(:hover, :active, :focus) a {
-  color: #c1bfb9;
-}
-.faqEXTRApdfbtn .faqEXTRApdflinks a:is(:hover, :active, :focus) {
-  color: #404041;
-}
-.faqEXTRApdfbtn svg,
-.faqEXTRApdfbtn p {
-  pointer-events: none;
-  cursor: default;
-  z-index: 100;
-  margin-right: 5px;
-}
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks) svg {
-  transform: rotate(0deg);
-  transition: all 0.3s ease-in-out;
-}
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:hover) svg,
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:focus) svg {
-  transform: rotate(90deg);
-  transition: all 0.3s ease-in-out;
-}
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:hover) svg,
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:focus) svg {
-  transform: rotate(-90deg);
-  transition: all 0.3s ease-in-out;
-}
-.faqEXTRAcontainer details::before,
-.faqEXTRAcontainer details::after,
-.faqEXTRAcontainer details[open]::before,
-.faqEXTRAcontainer details[open]::after,
-.faqEXTRAcontainer details:first-child[open]::before,
-.faqEXTRAcontainer
-  details[open]:last-child::after
-  .faqBOXcontactus
-  details::before,
-.faqBOXcontactus details::after,
-.faqBOXcontactus details[open]::before,
-.faqBOXcontactus details[open]::after,
-.faqBOXcontactus details:first-child[open]::before,
-.faqBOXcontactus details[open]:last-child::after {
-  content: "";
-  display: none;
-  width: 0;
-  height: 0;
-  margin: 0;
-  padding: 0;
-}
-.faqBOXcontactus details,
-.faqBOXcontactus {
-  margin: 0 !important;
-  padding: 0 !important;
-  gap: 0 !important;
+.faqBOXlogofirst summary span svg {
+  align-self: center !important;
+  margin-right: 4px;
 }
 @media (max-width: 549px) {
+  .faqBODYcontainer {
+    padding-bottom: 10%;
+  }
+  .faqQUESTIONwrapper details::before,
+  .faqQUESTIONwrapper details::after {
+    margin-bottom: 2px;
+  }
+  .faqGRIDcontactContainer {
+    gap: 10px !important;
+  }
+  .faqCONTACTurl p {
+    font-weight: 400 !important;
+  }
   .faqHEADbig {
-    font-size: 32px;
+    font-size: clamp(16px, 5.7cqi, 32px);
+  }
+  .faqBODYnav {
+    margin-left: 0;
+    display: none;
   }
   .faqARTcontainer {
-    margin-left: calc(((100vw - 549px) / 2) - 111px);
-    margin-top: 65px;
+    width: 160%;
+    margin-left: -50px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  .faqHEROwrapper {
+    padding: calc(15vh + 50px) 20px 0 20px;
+    margin-bottom: -20px;
+    gap: 50px;
+  }
+  .faqBODYwrapper {
+    padding-left: 0;
+  }
+  .faqHEROgrid {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    aspect-ratio: 1 / 1;
+  }
+  .faqQUESTIONcontainer {
+    padding-left: 20px;
+  }
+  .faqQUESTIONwrapper details summary {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: start;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+    text-wrap: pretty;
+  }
+  .faqQUESTIONwrapper .faqANSWERbox details summary {
+    display: flex;
+    flex-direction: row;
+    align-content: start;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+  }
+  .faqQUESTIONwrapper .faqANSWERbox {
+    position: relative;
+    margin-left: 16px;
+    width: 80%;
+  }
+  .faqBOXindent {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 6px 0;
+  }
+  .faqBOXindent p {
+    padding-left: 12px;
+    text-indent: -12px;
+  }
+  .faqBOXindent details summary {
+    flex-direction: row;
+    padding: 0 0 0 16px;
+    width: 100%;
+    margin: 0;
+    text-indent: -15px;
+    align-items: center;
+  }
+
+  .faqSUBindent {
+    padding-left: 0 !important;
+  }
+  .faqSUBindent div a span strong {
+    display: block;
+  }
+  .faqSUBaccordian summary {
+    text-wrap: wrap !important;
   }
   .faqTXTquestion {
-    font-size: 18px;
-  }
-  .faqTXTanswer {
     font-size: 16px;
   }
-  .faqASSETSbox span,
-  .faqTXTsub {
-    font-size: 15px;
+  .faqTXTanswer {
+    font-size: 14px;
+  }
+  .faqBODYlistitem > :first-child {
+    display: none;
+  }
+  .faqGRIDlistcontainGrid .faqGRIDlistcard {
+    margin: 5px 0;
+  }
+  .faqGRIDlistcontainFlex .faqGRIDlistcard {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  .faqGRIDlistcontainFlex .faqGRIDlistcardSub01 div {
+    margin: 2px 0 !important;
+  }
+  .faqGRIDlistcontainFlex .faqGRIDlistcard:has(.faqGRIDlistcardSub01) {
+    display: flex;
+    flex-direction: column;
+    gap: 6px !important;
+    margin: 5px 0 !important;
+  }
+  .faqBODYlist strong {
+    display: block;
+  }
+  .faqBOXlogofirst div {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    justify-content: start;
+    align-items: start;
+  }
+  .faqBOXlogofirst {
+    margin: 10px 0;
+  }
+  .faqBOXlogofirst details summary {
+    display: flex;
+    flex-direction: row;
+    align-content: start;
+    justify-content: start;
+    align-items: start;
+    width: 90%;
+    margin: 4px 0;
+    text-wrap: pretty;
+  }
+  .faqBOXlogofirst summary span {
+    gap: 0;
+  }
+  .faqBOXlogofirst details summary span span {
+    display: inline-block;
+    text-wrap: wrap;
+  }
+  .faqCONTACTicon svg {
+    width: 40px;
+    height: 40px;
+  }
+  .faqGRIDcontactcard {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .faqCONTACTtext {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .faqCONTACTheader {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .faqCONTACTlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .faqCONTACTlinks div a {
+    gap: 6px;
+  }
+  .faqCONTACTheader,
+  .faqCONTACTurl,
+  .faqCONTACTurl a,
+  .faqCONTACTurl a p {
+    font-size: 16px !important;
+  }
+  .faqCONTACTaddress {
+    font-size: 12px;
+    gap: 2px;
+    flex-direction: row;
   }
 }
 @media (550px <= width <= 767px) {
+  .faqBODYwrapper {
+    padding-left: 5%;
+  }
   .faqHEADbig {
     font-size: 36px;
   }
+  .faqBODYnav {
+    margin-left: calc(5% + 35px);
+  }
   .faqARTcontainer {
-    width: 867px;
+    width: 100%;
     margin-left: calc(((100vw - 549px) / 2) - 40px);
     margin-top: 0;
+  }
+  .faqQUESTIONcontainer {
+    padding-left: 2.25rem;
+  }
+  .faqHEROwrapper {
+    padding: 150px 0 20px 36px;
+    gap: 80px;
   }
   .faqTXTquestion {
     font-size: 20px;
@@ -1061,42 +1356,9 @@ details[open]::details-content {
     font-size: 17px;
   }
   .faqASSETSbox span,
-  .faqTXTsub {
+  .faqTXTsub,
+  .faqTXTsub p {
     font-size: 16px;
-  }
-}
-@media (width <= 767px) {
-  .faqBODYwrapper {
-    padding-left: 5%;
-  }
-  .faqMOBhide {
-    display: none;
-  }
-  .faqBODYnav {
-    margin-left: calc(5% + 35px);
-  }
-  .faqBODYnavitem {
-    font-size: 16px;
-  }
-  .faqHEROwrapper {
-    padding: 150px 0 20px 36px;
-    gap: 80px;
-  }
-  .faqQUESTIONcontainer {
-    padding-left: 2.25rem;
-  }
-  .faqQUESTIONwrapper {
-    width: 100%;
-  }
-  .faqGRIDlistcontainFlex,
-  .faqGRIDlistcard .faqGRIDlistcardSub01 {
-    flex-direction: column;
-  }
-  .faqGRIDlistcard .faqGRIDlistcardSub01 div,
-  .faqGRIDlistcardSub01 div {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
   }
   .faqCONTACTicon svg {
     width: 70px;
@@ -1135,27 +1397,248 @@ details[open]::details-content {
     font-size: 16px;
     flex-direction: row;
   }
-  .faqEXTRAcontainer details[open] .faqEXTRAvidcontainer {
+}
+@media (550px <= width <= 1024px) {
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:active):not(:focus) {
+    filter: blur(3px);
+    transform: translateY(0) scale(1);
+    color: #c1bfb9;
+    transition:
+      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      filter 0.3s ease;
+  }
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:active):not(:focus)
+    svg {
+    color: #c1bfb9;
+    transition: color transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:is(:active, :focus) {
+    width: 90%;
+    filter: blur(0);
+    z-index: 1000;
+    transform: translate(10px, 40px) scale(1.15);
+    color: #404041;
+    margin: -20px;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
+    -webkit-box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
+    -moz-box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
+    transition:
+      color margin padding 0.2s ease,
+      filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:active):not(:focus)
+    .faqCONTACTurl
+    a {
+    color: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    a {
+    color: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    svg {
+    fill: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:has(.faqCONTACTurl :active, .faqCONTACTurl :focus)
+    .faqCONTACTurl:not(:active):not(:focus)
+    .faqCONTACTurl
+    a {
+    color: #404041;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:has(.faqCONTACTlinks :active, .faqCONTACTlinks :focus)
+    .faqCONTACTlinks:not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    a {
+    color: #6b6a69;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:has(.faqCONTACTlinks :active, .faqCONTACTlinks :focus)
+    .faqCONTACTlinks:not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    svg {
+    fill: #6b6a69;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks:has(div :active, div :focus)
+    .faqCONTACTlink
+    div:not(:active):not(:focus)
+    .faqCONTACTlinks:is(:hover, :active, :focus)
+    div
+    a {
+    color: #c1bfb9;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks:has(div :active, div :focus)
+    .faqCONTACTlink
+    div:not(:active):not(:focus)
+    .faqCONTACTlinks:is(:hover, :active, :focus)
+    div
+    svg {
+    fill: #c1bfb9 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks:is(:hover, :active, :focus)
+    div
+    svg {
+    fill: #c1bfb9 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks
+    div:is(:active, :focus)
+    svg {
+    fill: #404041 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTurl:is(:active, :focus)
+    a {
+    color: #ff8819;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks
+    div:is(:active, :focus)
+    a {
+    color: #404041;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:is(:active, :focus) svg {
+    color: #ff8819;
+    transition: filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:is(:active, :focus)
+    .faqCONTACTlinks
+    div
+    a
+    svg {
+    display: flex;
+    transform: translate(-5px, 0px) scale(0.8);
+    fill: #6b6a69;
+  }
+  #Contacts:has(.faqGRIDcontactContainer .faqGRIDcontactcard:active)
+    .faqTXTquestion,
+  #Contacts:has(.faqGRIDcontactContainer .faqGRIDcontactcard:focus)
+    .faqTXTquestion {
+    opacity: 0.2;
+  }
+}
+@media (width <= 767px) {
+  .faqBODYcontainer .faqHEADbig {
+    padding-top: clamp(10px, 10vh, 100px);
+    padding-bottom: clamp(10px, 10%, 40px);
+  }
+  .faqALL {
     width: 100cqw;
-    overflow: hidden;
-    padding-top: 61.25% !important;
-    margin-left: -7%;
-    padding-left: 0;
-    align-items: start;
-    justify-content: start;
+    transform: translateX(0%);
+  }
+  .faqMOBhide {
+    display: none;
+  }
+  .faqBODYnavitem {
+    font-size: 16px;
+  }
+  .faqQUESTIONwrapper {
+    width: 100%;
+  }
+  .faqGRIDlistcontainFlex,
+  .faqGRIDlistcard .faqGRIDlistcardSub01 {
+    flex-direction: column;
+  }
+  .faqGRIDlistcard .faqGRIDlistcardSub01 div,
+  .faqGRIDlistcardSub01 div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .faqQUESTIONwrapper details[open]::before {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #c1bfb9;
+    margin-bottom: 24px;
+  }
+  .faqQUESTIONwrapper details[open]::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #c1bfb9;
+    margin-top: 24px;
+  }
+  .faqASSETSbox span,
+  .faqTXTsub,
+  .faqTXTsub p {
+    font-size: 12px;
+  }
+  .faqBODYlistapp {
+    margin: 10px 0;
+    gap: 6px;
+  }
+  .faqBODYlistitem {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: start;
+  }
+  .faqHIDEdescription .faqHIDEapple,
+  .faqHIDEdescription .faqHIDEgoogle {
+    display: none;
   }
 }
 @media (width <= 990px) {
   .faqEXTRApdfbtn {
     position: relative;
-  }
-  .faqEXTRAvidbtn {
-    transform: translateX(0px);
-    z-index: 1000;
-  }
-  .faqEXTRAcontainer details[open] summary::before {
-    left: 7.5px;
-    transition: all 0.3s ease-in-out;
   }
 }
 @media (768px <= width <= 1023px) {
@@ -1182,7 +1665,8 @@ details[open]::details-content {
     font-size: 19px;
   }
   .faqASSETSbox span,
-  .faqTXTsub {
+  .faqTXTsub,
+  .faqTXTsub p {
     font-size: 16px;
   }
   .faqQUESTIONwrapper {
@@ -1206,64 +1690,181 @@ details[open]::details-content {
     gap: 8px;
   }
 }
-
 @media (max-width: 1024px) {
-  .faqCONTACTicon,
-  .faqCONTACTicon svg,
-  .faqGRIDcontactContainer,
-  .faqGRIDcontactcard,
-  .faqCONTACTtext {
-    all: unset;
-  }
-  .faqCONTACTicon {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background-color: #84cc16;
-  }
-  .faqCONTACTicon svg {
-    width: 100%;
-    height: 100%;
-    display: block; /* Removes default inline whitespace wrapping */
-  }
-  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTtext {
-    display: none;
-  }
-
-  .faqGRIDcontactContainer {
-    width: 87.5vw;
-    display: grid;
-    /* Default: 3 rows, 3 equal columns */
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:active):not(:focus) {
+    filter: blur(3px);
+    transform: translateY(0) scale(1);
+    color: #c1bfb9;
     transition:
-      grid-template-columns 0.4s ease,
-      grid-template-rows 0.4s ease;
+      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      filter 0.3s ease;
   }
-
-  /* When ANY item inside the container is hovered */
-  .faqGRIDcontactContainer:has(.faqGRIDcontactcard:focus) {
-    /* Shift to: 2 rows. Row 1 is large, Row 2 holds the other 7 items */
-    grid-template-rows: 250px 120px;
-    /* Divide the grid into 7 narrow columns for the bottom row */
-    grid-template-columns: repeat(7, 1fr);
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:active):not(:focus)
+    svg {
+    color: #c1bfb9;
+    transition: color transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
-
-  /* Force the specific hovered item to span the entire top row */
-  .faqGRIDcontactcard:focus {
-    grid-row: 1 / 2;
-    grid-column: 1 / -1;
-    background-color: #3498db; /* Optional: highlight hovered item */
+  .faqGRIDcontactContainer .faqGRIDcontactcard:is(:active, :focus) {
+    width: 90%;
+    filter: blur(0);
+    z-index: 1000;
+    transform: translate(10px, 40px) scale(1.15);
+    color: #404041;
+    margin: -20px;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
+    -webkit-box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
+    -moz-box-shadow: 0px 1px 26px 1px rgba(150, 148, 145, 0.5);
+    transition:
+      color margin padding 0.2s ease,
+      filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
-
-  /* Style for all grid items */
-  .faqGRIDcontactcard {
-    background-color: #e0e0e0;
-    border: 1px solid #ccc;
-    transition: all 0.4s ease;
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:active):not(:focus)
+    .faqCONTACTurl
+    a {
+    color: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    a {
+    color: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer:has(
+      .faqGRIDcontactcard:active,
+      .faqGRIDcontactcard:focus
+    )
+    .faqGRIDcontactcard:not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    svg {
+    fill: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:has(.faqCONTACTurl :active, .faqCONTACTurl :focus)
+    .faqCONTACTurl:not(:active):not(:focus)
+    .faqCONTACTurl
+    a {
+    color: #404041;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:has(.faqCONTACTlinks :active, .faqCONTACTlinks :focus)
+    .faqCONTACTlinks:not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    a {
+    color: #6b6a69;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:has(.faqCONTACTlinks :active, .faqCONTACTlinks :focus)
+    .faqCONTACTlinks:not(:active):not(:focus)
+    .faqCONTACTlinks
+    div
+    svg {
+    fill: #6b6a69;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks:has(div :active, div :focus)
+    .faqCONTACTlink
+    div:not(:active):not(:focus)
+    .faqCONTACTlinks:is(:active, :focus)
+    div
+    a {
+    color: #c1bfb9;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks:has(div :active, div :focus)
+    .faqCONTACTlink
+    div:not(:active):not(:focus)
+    .faqCONTACTlinks:is(:active, :focus)
+    div
+    svg {
+    fill: #c1bfb9 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks:is(:active, :focus)
+    div
+    svg {
+    fill: #c1bfb9 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks
+    div:is(:active, :focus)
+    svg {
+    fill: #404041 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTurl:is(:active, :focus)
+    a {
+    color: #ff8819;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard
+    .faqCONTACTlinks
+    div:is(:active, :focus)
+    a {
+    color: #404041;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:is(:active, :focus) svg {
+    color: #ff8819;
+    transition: filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:is(:active, :focus)
+    .faqCONTACTlinks
+    div
+    a
+    svg {
+    display: flex;
+    transform: translate(-5px, 0px) scale(0.8);
+    fill: #6b6a69;
+  }
+  #Contacts:has(.faqGRIDcontactContainer .faqGRIDcontactcard:active)
+    .faqTXTquestion,
+  #Contacts:has(.faqGRIDcontactContainer .faqGRIDcontactcard:focus)
+    .faqTXTquestion {
+    opacity: 0.2;
   }
 }
-
 @media (1024px <= width <= 1279px) {
   .faqBODYwrapper {
     padding-left: calc((100vw - 1024px) / 2 + 5%);
@@ -1288,7 +1889,8 @@ details[open]::details-content {
     font-size: 20px;
   }
   .faqASSETSbox span,
-  .faqTXTsub {
+  .faqTXTsub,
+  .faqTXTsub p {
     font-size: 18px;
   }
   .faqQUESTIONwrapper {
@@ -1318,16 +1920,19 @@ details[open]::details-content {
     gap: 8px;
   }
 }
-@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+@media ((min-width: 1025px) or (hover: hover)) and (pointer: fine) {
   .faqGRIDcontactContainer:hover .faqGRIDcontactcard {
     filter: blur(3px);
     transform: translateY(0) scale(1);
     color: #c1bfb9;
-    transition: filter transform color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition:
+      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      filter 0.3s ease;
   }
   .faqGRIDcontactContainer:hover .faqGRIDcontactcard svg {
     color: #c1bfb9;
-    transition: filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: color transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
   .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
     width: 90%;
@@ -1345,6 +1950,55 @@ details[open]::details-content {
     transition:
       color margin padding 0.2s ease,
       filter transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faqGRIDcontactContainer:hover .faqGRIDcontactcard .faqCONTACTurl a {
+    color: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover .faqCONTACTurl a {
+    color: #404041;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTurl:hover a {
+    color: #ff8819;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer:hover .faqGRIDcontactcard .faqCONTACTlinks div a {
+    color: #c1bfb9;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover .faqCONTACTlinks div a {
+    color: #6b6a69;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTlinks:hover div a {
+    color: #c1bfb9;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTlinks div:hover a {
+    color: #404041;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer:hover .faqGRIDcontactcard .faqCONTACTlinks div svg {
+    fill: #c1bfb9;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover .faqCONTACTlinks div svg {
+    fill: #6b6a69;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTlinks:hover div svg {
+    fill: #c1bfb9 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard .faqCONTACTlinks div:hover svg {
+    fill: #404041 !important;
+    transition: all 0.3s ease-in-out;
   }
   .faqGRIDcontactContainer .faqGRIDcontactcard:hover svg {
     color: #ff8819;
@@ -1389,7 +2043,8 @@ details[open]::details-content {
     font-size: 22px;
   }
   .faqASSETSbox span,
-  .faqTXTsub {
+  .faqTXTsub,
+  .faqTXTsub p {
     font-size: 20px;
   }
   .faqQUESTIONwrapper {
@@ -1427,8 +2082,6 @@ details[open]::details-content {
     width: 150%;
     transform: translate(-50px, 40px) scale(1.15);
   }
-}
-@media (min-width: 1750px) {
   .faqCONTACTheader {
     width: 140px;
   }
@@ -1446,6 +2099,43 @@ details[open]::details-content {
   .faqCONTACTaddress div:first-child {
     display: inline;
   }
+}
+@media (max-width: 549px) {
+  .faqGRIDcontactContainer .faqGRIDcontactcard:is(:hover, :active, :focus) {
+    transform: translate(20px, 40px) scale(1);
+  }
+  .faqGRIDcontactContainer
+    .faqGRIDcontactcard:is(:hover, :active, :focus)
+    .faqCONTACTlinks
+    div
+    a
+    svg {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+.faqQUESTIONwrapper:hover details summary,
+.faqQUESTIONwrapper:hover details * {
+  color: #c1bfb9 !important;
+  fill: #c1bfb9 !important;
+  transition:
+    fill 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+.faqQUESTIONwrapper details:hover summary,
+.faqQUESTIONwrapper details:hover * {
+  color: #2a2a2a !important;
+  fill: #2a2a2a !important;
+  transition:
+    color 0.3s ease-in-out,
+    fill 0.3s ease-in-out;
+}
+.faqGRIDlistICON svg {
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: transform 0.9s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.faqGRIDlistICON:hover svg {
+  transform: scale(1.4);
 }
 
 @keyframes faqNAVSCROLLnonhover {
@@ -1494,38 +2184,38 @@ details[open]::details-content {
   60% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 45% 10px;
+    background-size: 50% 10px;
     background-position: 60% bottom;
   }
   70% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 40% 10px;
+    background-size: 45% 10px;
     background-position: 70% bottom;
   }
   80% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 28% 10px;
+    background-size: 40% 10px;
     background-position: 80% bottom;
   }
   90% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 14% 10px;
+    background-size: 35% 10px;
     background-position: 90% bottom;
   }
   99% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 99% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
   100% {
     background: linear-gradient(#c1bfb9);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 100% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
 }
 @keyframes faqNAVSCROLLhover {
@@ -1574,38 +2264,38 @@ details[open]::details-content {
   60% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 45% 10px;
+    background-size: 50% 10px;
     background-position: 60% bottom;
   }
   70% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 40% 10px;
+    background-size: 45% 10px;
     background-position: 70% bottom;
   }
   80% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 28% 10px;
+    background-size: 40% 10px;
     background-position: 80% bottom;
   }
   90% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 14% 10px;
+    background-size: 35% 10px;
     background-position: 90% bottom;
   }
   99% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 99% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
   100% {
     background: linear-gradient(#969491);
     background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 100% bottom;
+    background-size: 33% 10px;
+    background-position: 98% bottom;
   }
 }
 @keyframes navScroll01 {
