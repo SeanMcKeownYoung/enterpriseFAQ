@@ -592,6 +592,20 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   transform-box: fill-box;
   transition: transform 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
 }
+.faqQUESTIONwrapper details[open] .faqQUESTIONmain {
+  padding-top: 6px;
+}
+@media (min-width: 768px) {
+.faqQUESTIONwrapper details[open] .faqQUESTIONmain {
+  padding-top: 16px;
+
+}
+}
+.faqQUESTIONwrapper details:first-of-type[open] .faqQUESTIONmain {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
 .faqQUESTIONmain {
     text-wrap: pretty;
 }
@@ -622,6 +636,7 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 }
 }
 
+
 .faqSUBaccordian summary svg {
   display: flex;
   align-self: flex-start;
@@ -630,6 +645,34 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 @media (min-width: 768px) {
 .faqSUBaccordian summary svg {
   align-self: center;
+}
+}
+
+.faqRESETaccordian details summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+@media (min-width: 550px) {
+.faqRESETaccordian details summary {
+    gap: 8px;
+  }
+}
+@media (min-width: 768px) {
+.faqRESETaccordian details summary {
+    gap: 10px;
+  }
+}
+.faqRESETaccordian details summary svg {
+  display: flex;
+  align-self: flex-start;
+    flex-shrink: 0;
+    transform: translate(0px, 4px);
+}
+@media (min-width: 768px) {
+.faqRESETaccordian details summary svg {
+  align-self: center;
+    transform: translate(0px, 0px);
 }
 }
 
@@ -646,12 +689,25 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   margin-bottom: 16px;
 }
 .faqSUBaccordian summary svg {
+  transform: translate(0px, 4px) rotate(0deg) scale(1, 1);
   transition: transform 0.3s ease-in-out;
-  align-self: center;
+  align-self: flex-start;
+  flex-shrink: 0;
 }
 .faqSUBaccordian[open] summary svg {
-  transform: rotate(90deg) scale(1, 1.2);
+  transform: translate(0px, 4px) rotate(90deg) scale(1, 1.2);
 }    
+@media (min-width: 768px) {
+.faqSUBaccordian summary svg {
+  transform: translate(0px, 0px) rotate(0deg) scale(1, 1);
+  transition: transform 0.3s ease-in-out;
+  align-self: center;
+  flex-shrink: 0;
+}
+.faqSUBaccordian[open] summary svg {
+  transform: translate(0px, 0px) rotate(90deg) scale(1, 1.2);
+}  
+}
 .faqQUESTIONwrapper details[open] .faqInitial {
   transform: none;
   padding: 0;
@@ -662,12 +718,26 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 .faqQUESTIONwrapper .faqANSWERbox {
   position: relative;
   width: 90%;
-  margin: 16px 0 26px 0;
+  margin: 16px 0 6px 0;
 }
-.faqANSWERbox span:first-child {
-  margin-bottom: 16px;
-  display: inline-block;
+
+.faqANSWERbox > :last-child {
+  padding-bottom: 16px;
 }
+@media (max-width: 767px) {
+.faqANSWERbox > :last-child {
+  padding-bottom: 0px;
+}}
+@media (min-width: 768px) {
+.faqANSWERbox > :last-child {
+  padding-bottom: 16px;
+}
+}
+@media (max-width: 767px) {
+.faqQUESTIONwrapper details[open] + details:not([open]) {
+  padding-top: 16px; 
+}}
+
 .faqQUESTIONwrapper details::before {
   content: "";
   display: block;
@@ -692,13 +762,7 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   width: 70vw;
   height: 1px;
   background-color: #c1bfb9;
-  margin-bottom: 24px;
-}
-.faqQUESTIONwrapper details:first-of-type[open]::before {
-  content: none;
-  height: 0;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 12px;
 }
 .faqQUESTIONwrapper details[open]::after {
   content: "";
@@ -706,6 +770,22 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   width: 70vw;
   height: 1px;
   background-color: #c1bfb9;
+  margin-top: 12px;
+}
+@media (max-width: 767px) {
+.faqQUESTIONwrapper details:first-of-type[open]::before {
+  content: none;
+  height: 0;
+  margin: 1px !important;
+  padding: 0;
+}}
+@media (min-width: 768px) {
+.faqQUESTIONwrapper details:first-of-type[open]::before {
+  content: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
 }
 .faqSUBaccordian::before {
   content: none;
@@ -750,10 +830,7 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   padding-left: 32px;
   text-indent: -16px;
 }
-.faqBOXpad1 {
-  padding: 16px 0;
-}
-.faqBOXpad2 {
+.faqPADDINGtop {
   padding-top: 16px;
 }
 .faqSUBaccordian {
@@ -761,9 +838,7 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   margin: 0;
   padding: 0;
 }
-.faqSUBaccordian summary {
-  display: flex;
-}
+
 .faqBODYlist {
   display: flex;
   flex-direction: column;
@@ -2620,7 +2695,7 @@ summary.faqTXTextras span {
                         </summary>
                         <div class="faqANSWERbox">
                             <span class="faqTXTanswer"><strong>If you're a Subscriber, </strong>follow these simple steps: </span>
-                            <div class="faqTXTsub faqRESETaccordian faqGAP faqMARGINbottom">
+                            <div class="faqTXTsub faqRESETaccordian faqGAP faqPADDINGtop">
                                 <div><p>●&nbsp; On your device, open the internet. (like Safari, Chrome, or Edge)</p></div>
                                 <div><p>●&nbsp; At the top of the screen, tap the long white bar.</p></div>
                                 <div><details class="faqSUBaccordian">
@@ -2693,10 +2768,10 @@ summary.faqTXTextras span {
                             <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg>
                         </summary>
                         <div class="faqANSWERbox">
-                            <div class="faqTXTanswer"><strong>With Family Share </strong>you can add up to four more individual logins at no extra cost. Here's how. </div>
-                            <div class="faqBOXindent faqTXTsub">
+                            <span class="faqTXTanswer"><strong>With Family Share </strong>you can add up to four more individual logins at no extra cost. Here's how. </span>
+                            <div class="faqTXTsub faqRESETaccordian faqGAP faqMARGINbottom faqPADDINGtop">
                                 <div><details class="faqSUBaccordian">
-                                    <summary style="padding-left: 16px">●&nbsp; Go to your myAccount page. Find yours here.   <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg></summary>
+                                    <summary>●&nbsp; Go to your myAccount page. Find yours here. Delete this after it's just to make this longer and longer and longer  <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg></summary>
                                     <div class="faqBODYlist faqSUBindent faqTXTsub">
                                         <div><a href="https://myaccount.mlive.com/aa/home" target="_blank" aria-label="myAccount.mlive.com/aa">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Ann Arbor News logo"><use xlink:href="#AnnArborNewsSolid"></use></svg>
@@ -2920,7 +2995,7 @@ summary.faqTXTextras span {
                             <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg>
                         </summary>
                         <div class="faqANSWERbox">
-                            <div class="faqTXTanswer faqBOXpad2"><p><strong>Yes—this is the easiest option!</strong> follow these simple steps:</p> </div>
+                            <div class="faqTXTanswer faqPADDINGtop"><p><strong>Yes—this is the easiest option!</strong> follow these simple steps:</p> </div>
                             <div class="faqBOXindent faqTXTsub">
                                 <p>●&nbsp; When the newspaper is open, look for a star ★ or “Save” button.</p>
                                 <p>●&nbsp; Tap it once to bookmark the page.</p>
@@ -2954,7 +3029,7 @@ summary.faqTXTextras span {
                             <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg>
                         </summary>
                         <div class="faqANSWERbox">
-                            <div class="faqTXTanswer faqBOXpad2"><p><strong>Please visit the App Store</strong> on your device and search for our online newspaper app or tap on your newspaper from the list below. Select from the Apple App Store or the Google Play Store, then download the app and sign in to enjoy the best reading experience!</p> </div>
+                            <div class="faqTXTanswer faqPADDINGtop"><p><strong>Please visit the App Store</strong> on your device and search for our online newspaper app or tap on your newspaper from the list below. Select from the Apple App Store or the Google Play Store, then download the app and sign in to enjoy the best reading experience!</p> </div>
                             <div class="faqTXTsub faqBODYlistapp">
                                 <div class="faqBODYlistitem">
                                     <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Email button"><use xlink:href="#AnnArborNewsSolid"></use></svg>
