@@ -1632,7 +1632,14 @@ summary.faqTXTextras span {
 @media (min-width: 1750px) {
   .faqGRIDcontactContainer {
     width: 99%;
-    grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(100px, 15vw, 180px), 1fr)
+  );
+  max-width: min(calc((200px * 8) + (16px * 7)), 100%);
+  margin: 0 10px 0 0;
+  width: 100%;
+  gap: clamp(10px, 1.2vw, 16px);
   }
 }
 .faqCONTACTicon svg {
@@ -1727,7 +1734,10 @@ summary.faqTXTextras span {
     font-size: 12px;
   }
   .faqCONTACTlinks div a {
-    gap: 6px;
+    gap: 4px;
+  }
+  .faqCONTACTlinks div a p, .faqCONTACTaddress div {
+    font-size: 12px;
   }
   .faqCONTACTheader,
   .faqCONTACTurl,
@@ -1738,17 +1748,16 @@ summary.faqTXTextras span {
   .faqCONTACTtext {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
   }
   .faqCONTACThead {
     font-weight: 800;
   }
   .faqCONTACTaddress {
     display: block;
-    font-size: 16px;
-    line-height: 1.4;
     text-wrap: balance;
     text-align: left;
+    margin-bottom: 2px;
   }
   .faqCONTACTaddress div {
     display: inline !important;
@@ -1866,6 +1875,10 @@ summary.faqTXTextras span {
   }
 }
 @media (min-width: 1750px) {
+  .faqCONTACTlinks div a svg {
+    display: none;
+    fill: #6b6a69;
+  }
   .faqCONTACTheader {
     width: 140px;
   }
@@ -2307,7 +2320,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="PDFs/FAQ Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="PDFs/FAQ Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="PDFs/FAQ Access The Newspaper.pdf" download="Michigan Online Newspapers FAQ. How to Access the Online Newspaper.">Download.</a>
                                         </span>
                                     </div>
@@ -2388,8 +2401,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
+                                            <a class="faqTXTextras" href="PDFs/FAQ How to Share access with family and friends.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="PDFs/FAQ How to Share access with family and friends.pdf" download="FAQ How to Share access with family and friends">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -2422,7 +2435,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
@@ -2541,7 +2554,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
@@ -2576,7 +2589,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
@@ -2770,7 +2783,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
@@ -3052,6 +3065,19 @@ summary.faqTXTextras span {
                                         </div>
                                     </div>
                                 </div>
+                            <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTextras"><strong>Save the Glossary to your files. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTextras" href="PDFs/FAQ How to Share access with family and friends.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="PDFs/FAQ How to Share access with family and friends.pdf" download="FAQ How to Share access with family and friends">Download.</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>    
                         </div>
                     </details>
                     <details>
@@ -3112,7 +3138,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
@@ -3163,7 +3189,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
@@ -3222,7 +3248,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
@@ -3283,7 +3309,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
@@ -3326,7 +3352,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
@@ -3461,7 +3487,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
@@ -3503,7 +3529,7 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.</a>
+                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
                                             <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="newfilename">Download.</a>
                                         </span>
                                     </div>
