@@ -1,0 +1,308 @@
+<style>
+  .faqBODYnav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: end;
+    margin-bottom: clamp(50px, 5%, 100px);
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    white-space: nowrap;
+    will-change: background-position;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    animation: faqNAVSCROLLnonhover linear;
+    animation-timeline: scroll(x self);
+    scroll-timeline-name: --navFAQscroll;
+    scroll-timeline-axis: inline;
+  }
+  .faqBODYnav:is(:hover, :active, :focus) {
+    will-change: background-position;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    animation: faqNAVSCROLLhover linear;
+    animation-timeline: scroll(x self);
+  }
+  .faqBODYnav::-webkit-scrollbar {
+    height: 10px;
+  }
+  .faqBODYnav::-webkit-scrollbar-track {
+    height: 100%;
+    background-color: transparent;
+    border-top: 1px solid transparent;
+    width: 30px;
+    transition: all 0.3s ease;
+  }
+  .faqBODYnav::-webkit-scrollbar-track:is(:hover, :active, :focus) {
+    height: 100%;
+    background-color: transparent;
+    border-top: 1px solid #969491;
+    width: 30px;
+    transition: all 0.2s ease;
+  }
+  .faqBODYnav::-webkit-scrollbar-thumb {
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  .faqBODYnav::-webkit-scrollbar-thumb:is(:hover, :active, :focus) {
+    height: 100%;
+    background-color: transparent;
+    transition: all 0.2s ease;
+  }
+  .faqBODYnavitem {
+    align-items: end;
+    display: flex;
+    margin-right: 20px;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    border: 0;
+    text-align: left;
+    height: 80px;
+    padding-bottom: 10px;
+    border-bottom: 10px solid transparent;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+  .faqBODYnavitem a {
+    text-decoration: none;
+    color: #969491;
+    transition: color 0.1s ease-in-out;
+  }
+  .faqBODYnavitem:last-child {
+    margin-right: 10%;
+  }
+</style>
+
+<nav class="faqBODYnav" aria-label="Section: Register">
+  <div class="faqBODYnavitem navBlue"><a href="#Home">Home</a></div>
+  <div class="faqBODYnavitem navGold">
+    <a href="#Register">How do I register/sign in?</a>
+  </div>
+  <div class="faqBODYnavitem navRed">
+    <a href="#Access">How do I access the paper?</a>
+  </div>
+  <div class="faqBODYnavitem navGreen">
+    <a href="#Navigate">How do I navigate the paper?</a>
+  </div>
+  <div class="faqBODYnavitem navViolet">
+    <a href="#Account">How do I manage my account?</a>
+  </div>
+  <div class="faqBODYnavitem navOrange">
+    <a href="#Contacts">How do I get help?</a>
+  </div>
+</nav>
+
+<!-- The hidden checkbox that tracks if the menu is open or closed -->
+<input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+
+<!-- The hamburger button wrapper -->
+<label
+  for="menu-toggle"
+  class="hamburger-label"
+  aria-label="Toggle Navigation Menu"
+>
+  <span class="hamburger-line"></span>
+  <span class="hamburger-line"></span>
+  <span class="hamburger-line"></span>
+</label>
+
+<!-- Your Nav Bar -->
+<nav class="faqBODYnav" aria-label="Section: Register">
+  <div class="faqBODYnavitem navBlue"><a href="#Home">Home</a></div>
+  <div class="faqBODYnavitem navGold">
+    <a href="#Register">How do I register/sign in?</a>
+  </div>
+  <div class="faqBODYnavitem navRed">
+    <a href="#Access">How do I access the paper?</a>
+  </div>
+  <div class="faqBODYnavitem navGreen">
+    <a href="#Navigate">How do I navigate the paper?</a>
+  </div>
+  <div class="faqBODYnavitem navViolet">
+    <a href="#Account">How do I manage my account?</a>
+  </div>
+  <div class="faqBODYnavitem navOrange">
+    <a href="#Contacts">How do I get help?</a>
+  </div>
+</nav>
+
+<style>
+  /* ==========================================================================
+     1. DESKTOP BASE STYLES (Your Original Code)
+     ========================================================================== */
+  .faqBODYnav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: end;
+    margin-bottom: clamp(50px, 5%, 100px);
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    white-space: nowrap;
+    will-change: background-position;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    animation: faqNAVSCROLLnonhover linear;
+    animation-timeline: scroll(x self);
+    scroll-timeline-name: --navFAQscroll;
+    scroll-timeline-axis: inline;
+  }
+  .faqBODYnav:is(:hover, :active, :focus) {
+    will-change: background-position;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    animation: faqNAVSCROLLhover linear;
+    animation-timeline: scroll(x self);
+  }
+  .faqBODYnav::-webkit-scrollbar {
+    height: 10px;
+  }
+  .faqBODYnav::-webkit-scrollbar-track {
+    height: 100%;
+    background-color: transparent;
+    border-top: 1px solid transparent;
+    width: 30px;
+    transition: all 0.3s ease;
+  }
+  .faqBODYnav::-webkit-scrollbar-track:is(:hover, :active, :focus) {
+    height: 100%;
+    background-color: transparent;
+    border-top: 1px solid #969491;
+    width: 30px;
+    transition: all 0.2s ease;
+  }
+  .faqBODYnav::-webkit-scrollbar-thumb {
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  .faqBODYnav::-webkit-scrollbar-thumb:is(:hover, :active, :focus) {
+    height: 100%;
+    background-color: transparent;
+    transition: all 0.2s ease;
+  }
+  .faqBODYnavitem {
+    align-items: end;
+    display: flex;
+    margin-right: 20px;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    border: 0;
+    text-align: left;
+    height: 80px;
+    padding-bottom: 10px;
+    border-bottom: 10px solid transparent;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+  .faqBODYnavitem a {
+    text-decoration: none;
+    color: #969491;
+    transition: color 0.1s ease-in-out;
+  }
+  .faqBODYnavitem:last-child {
+    margin-right: 10%;
+  }
+
+  /* Hide mobile-specific elements on desktop */
+  .menu-toggle-checkbox,
+  .hamburger-label {
+    display: none;
+  }
+
+  /* ==========================================================================
+     2. MOBILE-ONLY HAMBURGER SYSTEM (Screens under 768px)
+     ========================================================================== */
+  @media (max-width: 767px) {
+    /* Expose the hamburger click trigger */
+    .hamburger-label {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      top: 70px;
+      right: 20px;
+      width: 30px;
+      height: 21px;
+      z-index: 1001; /* Higher than the panel to stay on top */
+      cursor: pointer;
+    }
+
+    /* Hamburger Lines Styling */
+    .hamburger-line {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #969491;
+      border-radius: 2px;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* Transform navigation container into a sliding vertical panel */
+    .faqBODYnav {
+      position: fixed;
+      top: 0;
+      right: -100%; /* Hides the drawer off-screen by default */
+      width: 280px; /* Width of drawer */
+      height: 100vh;
+      background-color: #ffffff; /* Change to your design theme background */
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      align-content: flex-start;
+      justify-content: flex-start;
+      padding: 130px 24px 40px 24px; /* Starts padding safely below the button */
+      margin-bottom: 0;
+      overflow-x: hidden !important;
+      overflow-y: auto !important; /* Allow vertical list scrolling */
+      white-space: normal;
+      z-index: 1000;
+      transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* Format individual menu items for vertical layout */
+    .faqBODYnavitem {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee; /* Light divider lines instead of tabs */
+      align-items: center;
+    }
+    .faqBODYnavitem:last-child {
+      margin-right: 0;
+    }
+    .faqBODYnavitem a {
+      display: block;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    /* Hide desktop chrome-specific scrollbar rules on mobile */
+    .faqBODYnav::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* ==========================================================================
+       3. INTERACTIVE LOGIC (When Checkbox is Checked)
+       ========================================================================== */
+    /* Slide the menu in */
+    .menu-toggle-checkbox:checked ~ .faqBODYnav {
+      right: 0;
+    }
+
+    /* Turn the Hamburger into an 'X' */
+    .menu-toggle-checkbox:checked
+      + .hamburger-label
+      .hamburger-line:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle-checkbox:checked
+      + .hamburger-label
+      .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle-checkbox:checked
+      + .hamburger-label
+      .hamburger-line:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Keep checkbox completely out of layout flow */
+    .menu-toggle-checkbox {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+</style>

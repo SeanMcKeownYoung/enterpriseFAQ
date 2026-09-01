@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
 <style>
@@ -1897,6 +1898,144 @@ summary.faqTXTextras span {
     display: inline;
   }
 }
+.faqGRIDcontactContainer .faqGRIDcontactcard {
+  filter: grayscale(0);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .faqGRIDcontactContainer:hover .faqGRIDcontactcard {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .faqGRIDcontactContainer .faqGRIDcontactcard:active {
+    opacity: 0.7; 
+  }
+}
+@media (min-width: 1280px) {
+  .faqCONTACTlinks div a svg {
+    display: none;
+    fill: #c1bfb9;
+    visibility: hidden;
+    margin-right: 0px;
+    opacity: 0;
+    transition:
+      visibility 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+  }
+  .faqCONTACTlinks:hover div a p {
+    color: #c1bfb9;
+    transition: color 0.3s ease-in-out;
+  }
+  .faqCONTACTlinks div:hover a svg {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    margin-right: 4px;
+    fill: #404041;
+    transition:
+      visibility 0.3s ease-in-out,
+      opacity 0.3s ease-in-out,
+      margin 0.5s ease-in-out;
+  }
+  .faqCONTACTlinks div:hover a p {
+    color: #404041;
+    transition: color 0.3s ease-in-out;
+  }
+}
+@media (max-width: 1279px) {
+  .faqCONTACTlinks:hover div a svg {
+    fill: #c1bfb9;
+    transition: fill 0.3s ease-in-out;
+  }
+  .faqCONTACTlinks:hover div a p {
+    color: #c1bfb9;
+    transition: color 0.3s ease-in-out;
+  }
+  .faqCONTACTlinks div:hover a svg {
+    fill: #404041;
+    transition: fill 0.3s ease-in-out;
+  }
+  .faqCONTACTlinks div:hover a p {
+    color: #404041;
+    transition: color 0.3s ease-in-out;
+  }
+}
+  @media (min-width: 768px) {
+    .faqMOBnav { display: none; }
+    .toggleFAQnavcheckbox, .hamburgerFAQlabel { display: none; }
+  }
+  @media (max-width: 767px) {
+    .faqMOBnav .hamburgerFAQlabel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      top: 120px;
+      right: 20px;
+      width: 30px;
+      height: 21px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+    .faqMOBnav .hamburgerFAQline {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #969491;
+      border-radius: 2px;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .faqMOBnav .faqBODYnav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: auto;
+        background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+      flex-direction: column;
+      align-content: flex-start;
+      justify-content: flex-start;
+      padding: 130px 24px 40px 24px;
+      margin-bottom: 0;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      white-space: normal;
+      z-index: 100;
+      transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .faqMOBnav .faqBODYnavitem {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+      align-items: center;
+    }
+    .faqMOBnav .faqBODYnavitem:last-child { margin-right: 0; }
+    .faqMOBnav .faqBODYnavitem a {
+      display: block;
+      width: 100%;
+      font-size: 18px;
+    }
+    .faqMOBnav .faqBODYnav::-webkit-scrollbar { display: none; }
+    .toggleFAQnavcheckbox:checked ~ .faqBODYnav { right: 0; }
+    .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(2) { opacity: 0; }
+    .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+    .toggleFAQnavcheckbox {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 
 @keyframes faqNAVSCROLLnonhover {
   0% {
@@ -2138,9 +2277,6 @@ summary.faqTXTextras span {
     opacity: 0;
   }
 }
-
-
-
 </style>
 <div style="display: none;">
         <svg xmlns="http://www.w3.org/2000/svg">
@@ -2211,6 +2347,22 @@ summary.faqTXTextras span {
             </symbol>
         </svg>
 </div>
+<div class="faqMOBnav">
+  <input type="checkbox" id="menuFAQnavtoggler" class="toggleFAQnavcheckbox" />
+  <label for="menuFAQnavtoggler" class="hamburgerFAQlabel" aria-label="Toggle Navigation Menu">
+    <span class="hamburgerFAQline"></span>
+    <span class="hamburgerFAQline"></span>
+    <span class="hamburgerFAQline"></span>
+  </label>
+  <nav class="faqBODYnav" aria-label="Section: Register">
+    <div class="faqBODYnavitem hoverBlue" style="border: 0;"><a href="#Home">Home</a></div>
+    <div class="faqBODYnavitem hoverGold" style="border: 0;"><a href="#Register">How do I register/sign in?</a></div>
+    <div class="faqBODYnavitem hoverRed" style="border: 0;"><a href="#Access">How do I access the paper?</a></div>
+    <div class="faqBODYnavitem hoverGreen" style="border: 0;"><a href="#Navigate">How do I navigate the paper?</a></div>
+    <div class="faqBODYnavitem hoverViolet" style="border: 0;"><a href="#Account">How do I manage my account?</a></div>
+    <div class="faqBODYnavitem hoverOrange" style="border: 0;"><a href="#Contacts">How do I get help?</a></div>
+  </nav>
+</div>
 <main class="faqALL">
 <header class="faqARTcontainer" style="pointer-events: none; touch-action: none;">
     <div class="faqARTwrapper">
@@ -2248,7 +2400,6 @@ summary.faqTXTextras span {
             </div>
         </section>
     </div>
-
     <section class="faqBODYcontainer faqBODYdark faqBODYgold" id="Register">
             <nav class="faqBODYnav" aria-label="Section: Register">
                     <div class="faqBODYnavitem navBlue"><a href="#Home">Home</a></div>
@@ -2320,8 +2471,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="PDFs/01 Access.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="PDFs/01 Access.pdf" download="Michigan Online Newspapers FAQ. How to Access the Online Newspaper.">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/a01access.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/a01access.pdf" download="Michigan Online Newspapers FAQ. How to Access the Online Newspaper." rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -2401,8 +2552,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="PDFs/02 Family Share.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="PDFs/02 Family Share.pdf" download="Michigan Online Newspapers FAQ. FAQ How to Share access with family and friends">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/a02familyshare.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/a02familyshare.pdf" download="Michigan Online Newspapers FAQ. FAQ How to Share access with family and friends" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -2435,8 +2586,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="PDFs/03 Log in.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="PDFs/03 Log in.pdf" download="Michigan Online Newspapers FAQ. How to log in">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/a03login.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/a03login.pdf" download="Michigan Online Newspapers FAQ. How to log in" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -2554,8 +2705,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="Michigan Online Newspapers FAQ. How to open the online newspaper">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/b01opening.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/b01opening.pdf" download="Michigan Online Newspapers FAQ. How to open the online newspaper" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -2589,8 +2740,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="Michigan Online Newspapers FAQ. How to save your link to the online newspaper for easy access">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/b02bookmark.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/b02bookmark.pdf" download="Michigan Online Newspapers FAQ. How to save your link to the online newspaper for easy access" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -2783,8 +2934,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="Michigan Online Newspapers FAQ. The daily email">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/b03email.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/b03email.pdf" download="Michigan Online Newspapers FAQ. The daily email" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -3072,8 +3223,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Save the Glossary to your files. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="PDFs/FAQ How to Share access with family and friends.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="PDFs/FAQ How to Share access with family and friends.pdf" download="Michigan Online Newspapers FAQ. The Glossary">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c01glossary.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c01glossary.pdf" download="Michigan Online Newspapers FAQ. The Glossary" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -3138,8 +3289,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="Michigan Online Newspapers FAQ. Printing articles and crossword puzzles">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c02print.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c02print.pdf" download="Michigan Online Newspapers FAQ. Printing articles and crossword puzzles" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -3189,8 +3340,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="Michigan Online Newspapers FAQ. Sharing articles and pages">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c03share.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c03share.pdf" download="Michigan Online Newspapers FAQ. Sharing articles and pages" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -3248,8 +3399,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="Michigan Online Newspapers FAQ. How to search articles">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c04search.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c04search.pdf" download="Michigan Online Newspapers FAQ. How to search articles" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -3309,8 +3460,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="Michigan Online Newspapers FAQ. How to save articles">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c05save.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c05save.pdf" download="Michigan Online Newspapers FAQ. How to save articles" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -3352,8 +3503,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="Michigan Online Newspapers FAQ. How to access exclusive content">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c06exclusive.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/c06exclusive.pdf" download="Michigan Online Newspapers FAQ. How to access exclusive content" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -3470,6 +3621,19 @@ summary.faqTXTextras span {
                                             <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                         </a></div>
                                     </div>
+                               <hr class="faqHR">
+                            <div class="faqEXTRAcontainer">
+                                <div class="faqEXTRApdfbtn">
+                                    <div>
+                                        <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
+                                        <p class="faqTXTextras"><strong>Instructions. </strong></p>
+                                        <span class="faqEXTRApdflinks">
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/d01myAccount.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/d01myAccount.pdf" download="Michigan Online Newspapers FAQ. Your myAccount Subscriber Center." rel="noopener noreferrer" target="_blank">Download.</a>
+                                        </span>
+                                    </div>
+                                </div> 
+                            </div>   
                         </div>
                     </details>
                     <details>
@@ -3487,8 +3651,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="PDFs/03 Log in.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="PDFs/03 Log in.pdf" download="Michigan Online Newspapers FAQ. How to log in">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/a03login.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/a03login.pdf" download="Michigan Online Newspapers FAQ. How to log in" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -3529,8 +3693,8 @@ summary.faqTXTextras span {
                                         <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Instructions icon"><use xlink:href="#ICONinstrux"></use></svg>
                                         <p class="faqTXTextras"><strong>Instructions. </strong></p>
                                         <span class="faqEXTRApdflinks">
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" target="_blank">Open.&nbsp;</a>
-                                            <a class="faqTXTextras" href="images/ONP Access The Newspaper.pdf" download="Michigan Online Newspapers FAQ. How to reset a password">Download.</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/d02reset.pdf" target="_blank">Open.&nbsp;</a>
+                                            <a class="faqTXTextras" href="https://newspaper-faq.s3.us-east-2.amazonaws.com/michigan/d02reset.pdf" download="Michigan Online Newspapers FAQ. How to reset a password" rel="noopener noreferrer" target="_blank">Download.</a>
                                         </span>
                                     </div>
                                 </div>
@@ -3827,7 +3991,7 @@ summary.faqTXTextras span {
                         <div class="faqCONTACTtext">
                             <div class="faqCONTACTheader">
                                 <div class="faqCONTACThead">The Ann Arbor News</div>
-                                <div class="faqCONTACTurl"><a href="https://reader.aa.mlive.com"><p>reader.aa.mlive</p></a></div>
+                                <div class="faqCONTACTurl"><a href="https://reader.aa.mlive.com"><p>reader.aa.mlive.com</p></a></div>
                             </div>
                             <div class="faqCONTACTaddress">
                                 <div>111 N Ashley St.</div>
@@ -3848,7 +4012,7 @@ summary.faqTXTextras span {
                         <div class="faqCONTACTtext">
                             <div class="faqCONTACTheader">
                                 <div class="faqCONTACThead">The Bay City Times</div>
-                                <div class="faqCONTACTurl"><a href="https://reader.bc.mlive.com"><p>reader.bc.mlive</p></a></div>
+                                <div class="faqCONTACTurl"><a href="https://reader.bc.mlive.com"><p>reader.bc.mlive.com</p></a></div>
                             </div>
                             <div class="faqCONTACTaddress">
                                 <div>540 S. Saginaw St., Ste 101.</div>
@@ -3877,7 +4041,7 @@ summary.faqTXTextras span {
                         <div class="faqCONTACTtext">
                             <div class="faqCONTACTheader">
                                 <div class="faqCONTACThead">The Flint Journal</div>
-                                <div class="faqCONTACTurl"><a href="https://reader.fj.mlive.com"><p>reader.fj.mlive</p></a></div>
+                                <div class="faqCONTACTurl"><a href="https://reader.fj.mlive.com"><p>reader.fj.mlive.com</p></a></div>
                             </div>
                             <div class="faqCONTACTaddress">
                                 <div>540 S. Saginaw St., Ste 101.</div>
@@ -3907,7 +4071,7 @@ summary.faqTXTextras span {
                         <div class="faqCONTACTtext">
                             <div class="faqCONTACTheader">
                                 <div class="faqCONTACThead">The Grand Rapids Press</div>
-                                <div class="faqCONTACTurl"><a href="https://reader.gr.mlive.com"><p>reader.gr.mlive</p></a></div>
+                                <div class="faqCONTACTurl"><a href="https://reader.gr.mlive.com"><p>reader.gr.mlive.com</p></a></div>
                             </div>
                             <div class="faqCONTACTaddress">
                                 <div>169 Monroe Ave. NW, Ste 100.</div>
@@ -3937,7 +4101,7 @@ summary.faqTXTextras span {
                         <div class="faqCONTACTtext">
                             <div class="faqCONTACTheader">
                                 <div class="faqCONTACThead">Jackson Citizen Patriot</div>
-                                <div class="faqCONTACTurl"><a href="https://reader.jp.mlive.com"><p>reader.jp.mlive</p></a></div>
+                                <div class="faqCONTACTurl"><a href="https://reader.jp.mlive.com"><p>reader.jp.mlive.com</p></a></div>
                             </div>
                             <div class="faqCONTACTaddress">
                                 <div>111 N Ashley St.</div>
@@ -3967,7 +4131,7 @@ summary.faqTXTextras span {
                         <div class="faqCONTACTtext">
                             <div class="faqCONTACTheader">
                                 <div class="faqCONTACThead">Kalamazoo Gazette</div>
-                                <div class="faqCONTACTurl"><a href="https://reader.kg.mlive.com"><p>reader.kg.mlive</p></a></div>
+                                <div class="faqCONTACTurl"><a href="https://reader.kg.mlive.com"><p>reader.kg.mlive.com</p></a></div>
                             </div>
                             <div class="faqCONTACTaddress">
                                 <div>300 S. Kalamazoo Mall.</div>
@@ -3997,7 +4161,7 @@ summary.faqTXTextras span {
                         <div class="faqCONTACTtext">
                             <div class="faqCONTACTheader">
                                 <div class="faqCONTACThead">Muskegon Chronicle</div>
-                                <div class="faqCONTACTurl"><a href="https://reader.mc.mlive.com"><p>reader.mc.mlive</p></a></div>
+                                <div class="faqCONTACTurl"><a href="https://reader.mc.mlive.com"><p>reader.mc.mlive.com</p></a></div>
                             </div>
                             <div class="faqCONTACTaddress">
                                 <div>379 W. Western Ave., Ste. 100.</div>
@@ -4027,7 +4191,7 @@ summary.faqTXTextras span {
                         <div class="faqCONTACTtext">
                             <div class="faqCONTACTheader">
                                 <div class="faqCONTACThead">The Saginaw News</div>
-                                <div class="faqCONTACTurl"><a href="https://reader.sn.mlive.com"><p>reader.sn.mlive</p></a></div>
+                                <div class="faqCONTACTurl"><a href="https://reader.sn.mlive.com"><p>reader.sn.mlive.com</p></a></div>
                             </div>
                             <div class="faqCONTACTaddress">
                                 <div>540 S. Saginaw St., Ste 101.</div>
