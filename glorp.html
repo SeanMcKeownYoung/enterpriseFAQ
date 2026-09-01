@@ -1,0 +1,24 @@
+<style>
+  .faqMOBnav .hamburgerFAQline {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #969491;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: center;
+    animation: lineSlideIn linear both;
+    animation-timeline: scroll(root);
+    animation-range: normal 30% normal 45%;
+  }
+  @keyframes lineSlideIn {
+    0% {
+      transform: translateX(100vw);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+</style>
