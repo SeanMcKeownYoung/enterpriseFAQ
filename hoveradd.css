@@ -13,35 +13,26 @@
     blue - 00b7ff gold - f7be00 red - ff5e5e green - 84cc16 violet - bc69ff
     orange - ff8819;*/
 
-/* 1. Base state for ALL devices (Mobile-first approach) */
 .faqGRIDcontactContainer .faqGRIDcontactcard {
   filter: grayscale(0);
   opacity: 1;
   transition: all 0.3s ease;
 }
-
-/* 2. Desktop Only: Hover effects only apply to devices with a mouse pointer */
 @media (hover: hover) and (pointer: fine) {
-  /* Container hover: Dim ALL cards inside it */
   .faqGRIDcontactContainer:hover .faqGRIDcontactcard {
     filter: grayscale(100%);
     opacity: 0.5;
   }
-
-  /* Card hover: Bring the specifically hovered card back to life */
   .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
     filter: grayscale(0);
     opacity: 1;
   }
 }
-
-/* 3. Mobile Only: Active/Tap feedback (Optional) */
 @media (hover: none) {
   .faqGRIDcontactContainer .faqGRIDcontactcard:active {
-    opacity: 0.7; /* Gives a quick visual blink when tapped */
+    opacity: 0.7;
   }
 }
-
 @media (min-width: 1280px) {
   .faqCONTACTlinks div a svg {
     display: none;
