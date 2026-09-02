@@ -69,32 +69,9 @@
 .faqALL button {
   color: inherit;
 }
-.faqHEROcontainer,
-.faqBODYcontainer {
-  display: flex !important;
-  justify-content: flex-start !important;
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  position: relative !important;
-  left: 50% !important;
-  right: 50% !important;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
-  width: 100vw !important;
-  max-width: 100vw !important;
-  box-sizing: border-box !important;
-}
-.faqHEROcontainer > *,
-.faqBODYcontainer > *,
-.faqQUESTIONcontainer {
-  padding-left: clamp(16px, 5vw, 40px) !important;
-  padding-right: clamp(16px, 5vw, 40px) !important;
-  box-sizing: border-box !important;
-}
 
 .faqALL {
-  width: 100% !important;
-  max-width: 100% !important;
+  width: 105cqw;
   display: flex;
   flex-direction: column;
   left: 0;
@@ -341,61 +318,14 @@ html {
 .faqARTcontainer {
   position: absolute;
   display: flex;
-  justify-content: flex-start !important;
+  justify-content: flex-start;
   z-index: 200;
+  width: 100vw;
+  left: 0;
   top: 70px;
   bottom: 0;
-  left: 50% !important;
-  right: 50% !important;
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
-  width: 100vw !important;
-  max-width: 100vw !important;
-  border: 2px solid crimson;
-  pointer-events: none;
-}
-.faqARTwrapper {
-  border: 2px solid cyan;
-  }
-@media (max-width: 549px) {
-.faqARTwrapper {
-  margin-left: 5%;
-  margin-top: 70px;
-  }   
-}
-@media (550px <= width <= 767px) {
-.faqARTwrapper {
-  margin-left: calc(((100vw - 549px) / 2) + 5%);
-  margin-top: 50px;
-  }   
-}
-@media (768px <= width <= 1023px) {
-.faqARTwrapper {
-  margin-left: calc(((100vw - 767px) / 2)) + 5%;
-  margin-top: 50px;
-  }   
-}
-@media (1024px <= width <= 1279px) {
-.faqARTwrapper {
-  margin-left: calc(((100vw - 1024px) / 2) + 5%);
-  margin-top: 50px;
-  background-color: #84cc16;
-  }   
-}
-@media (min-width: 1280px) {
-.faqARTwrapper {
-  margin-left: calc(((100vw - 1280px) / 2) + 5%);
-  margin-top: 50px;
-  }   
-}
-
-.faqARTmag {
-  border: 2px solid greenyellow;
-}
-.faqARTmag div {
-  border: 2px solid violet;
+  right: 0;
+  transform: translateX(5vw);
 }
 .faqARTmag div img {
   transform: translateY(0px) translateX(0px) scale(1);
@@ -406,7 +336,13 @@ html {
   animation: faqscaleAndMove linear both;
   animation-timeline: scroll(root);
   animation-range: exit;
-border: 2px solid yellow;
+}
+@media (max-width: 767px) {
+.faqARTmag div img {
+  animation: faqscaleAndMoveSlower linear both;
+  animation-timeline: scroll(root);
+  animation-range: cover; 
+}
 }
 .faqBODYcontainer h1,
 .faqBODYcontainer h2,
@@ -722,7 +658,6 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   align-items: flex-start;
   gap: 6px;
 }
-
 @media (min-width: 550px) {
 .faqRESETaccordian details summary {
     gap: 8px;
@@ -804,11 +739,6 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 @media (max-width: 767px) {
 .faqQUESTIONwrapper details[open] + details:not([open]) {
   padding-top: 16px; 
-}
-.faqARTmag div img {
-  animation: faqscaleAndMoveSlower linear both;
-  animation-timeline: scroll(root);
-  animation-range: cover; 
 }}
 
 .faqQUESTIONwrapper details::before {
@@ -1026,20 +956,22 @@ color: #6b6a69;
 .faqHIDEgoogle {
   opacity: 0;
   visibility: hidden;
-    color: transparent;
+  color: transparent;
 }
 .faqBODYlistitem:has(.faqSHOWapple:is(:hover, :active, :focus)) .faqHIDEapple {
-visibility: visible;
+  visibility: visible;
   opacity: 1;
   color: #404041;
 }
-.faqBODYlistitem:has(.faqSHOWgoogle:is(:hover, :active, :focus)) .faqHIDEgoogle {
+.faqBODYlistitem:has(.faqSHOWgoogle:is(:hover, :active, :focus))
+  .faqHIDEgoogle {
   opacity: 1;
   visibility: visible;
   color: #404041;
 }
 .faqGRIDlistcontainGrid {
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   box-sizing: border-box;
 }
@@ -1047,6 +979,7 @@ visibility: visible;
 .faqGRIDlistcontainGrid {
   gap: 16px;
 }}
+
 .faqGRIDlistcard {
   box-sizing: border-box;
   display: flex;
@@ -1180,7 +1113,7 @@ summary.faqTXTextras span {
 .faqHOVERemail {
   display: flex;
   padding: 10px 0 10px 10px !important;
-  margin: -10px 0 -10px -10px !important;
+  margin: -10px 0 -10px -10px;
   width: 70vw;
   border: 1px solid transparent;
   background-color: transparent;
@@ -1190,7 +1123,6 @@ summary.faqTXTextras span {
     border 0.3s ease-in-out;
 }
 @media (max-width: 549px) {
-
   .faqHOVERemail {
     width: 100%;
   }
@@ -1244,7 +1176,6 @@ summary.faqTXTextras span {
   margin-right: 4px;
 }
 }
-
 @media (max-width: 549px) {
   .faqBODYcontainer {
     padding-bottom: 10%;
@@ -1259,6 +1190,17 @@ summary.faqTXTextras span {
   .faqBODYnav {
     margin-left: 0;
     display: none;
+  }
+  .faqARTcontainer {
+    width: 160%;
+    margin-left: -50px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  .faqHEROwrapper {
+    padding: calc(15vh + 50px) 20px 0 20px;
+    margin-bottom: -20px;
+    gap: 50px;
   }
   .faqBODYwrapper {
     padding-left: 0;
@@ -1354,7 +1296,7 @@ summary.faqTXTextras span {
   .faqBODYlist strong {
     display: block;
   }
-  .faqBOXlogofirst div {
+ .faqBOXlogofirst div {
     display: flex;
     flex-direction: column;
     align-content: start;
@@ -1396,6 +1338,11 @@ summary.faqTXTextras span {
   .faqBODYnav {
     margin-left: calc(5% + 35px);
   }
+  .faqARTcontainer {
+    width: 100%;
+    margin-left: calc(((100vw - 549px) / 2) - 40px);
+    margin-top: 0;
+  }
   .faqQUESTIONcontainer {
     padding-left: 2.25rem;
   }
@@ -1415,15 +1362,20 @@ summary.faqTXTextras span {
     font-size: 16px;
   }
 }
-@media (width <= 767px) {
+@media (max-width: 767px) {
   .faqBODYcontainer .faqHEADbig {
     padding-top: clamp(10px, 10vh, 100px);
     padding-bottom: clamp(10px, 10%, 40px);
   }
   .faqALL {
-    width: 100cqw;
+    max-width: 100vw !important;
+    width: 100% !important;
+    height: auto;
     transform: translateX(0%);
   }
+  *, *::before, *::after {
+    box-sizing: border-box;
+}
   .faqMOBhide {
     display: none;
   }
@@ -1496,6 +1448,10 @@ summary.faqTXTextras span {
   .faqBODYnavitem {
     font-size: 17px;
   }
+  .faqARTcontainer {
+    margin-left: calc(((100vw - 768px) / 2) - 100px);
+    margin-top: 85px;
+  }
   .faqTXTquestion {
     font-size: 22px;
   }
@@ -1524,6 +1480,10 @@ summary.faqTXTextras span {
   .faqBODYnavitem {
     font-size: 18px;
   }
+  .faqARTcontainer {
+    margin-left: calc(((100vw - 1024px) / 2) - 111px);
+    margin-top: 65px;
+  }
   .faqTXTquestion {
     font-size: 24px;
   }
@@ -1551,6 +1511,10 @@ summary.faqTXTextras span {
   }
   .faqBODYnavitem {
     font-size: 18px;
+  }
+  .faqARTcontainer {
+    margin-left: calc(((100vw - 1280px) / 2) - 111px);
+    margin-top: 65px;
   }
   .faqTXTquestion {
     font-size: 26px;
@@ -2035,6 +1999,13 @@ summary.faqTXTextras span {
   .faqMOBnav {
     display: none; 
   }}
+  .faqMOBnav label {
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: center;
+    animation: lineSlideIn linear both;
+    animation-timeline: scroll(root);
+    animation-range: normal 30% normal 45%;
+  }
 @media (max-width: 767px) {
   .faqMOBnav {
     display: block; 
@@ -2055,7 +2026,7 @@ summary.faqTXTextras span {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #969491;
+    background-color: #a6a49f;
     border-radius: 2px;
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   }
@@ -2088,7 +2059,6 @@ summary.faqTXTextras span {
     height: auto;
     margin-right: 0;
     padding: 15px 0;
-    border-bottom: 1px solid #eee;
     align-items: center;
   }
   .faqMOBnav .faqBODYnavitem:last-child { margin-right: 0; }
@@ -2103,12 +2073,15 @@ summary.faqTXTextras span {
   }
   .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(1) { 
     transform: translateY(9px) rotate(45deg); 
+        background-color: #00b7ff;
   }
   .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(2) { 
     opacity: 0; 
+        background-color: #00b7ff;
   }
   .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(3) { 
     transform: translateY(-9px) rotate(-45deg); 
+        background-color: #00b7ff;
   }
   .toggleFAQnavcheckbox {
     position: absolute;
@@ -2116,6 +2089,17 @@ summary.faqTXTextras span {
     pointer-events: none;
   }
 }
+  @keyframes lineSlideIn {
+    0% {
+      transform: translateX(100vw);
+      opacity: 1;
+    }
+    21% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
 @keyframes faqNAVSCROLLnonhover {
   0% {
     background: linear-gradient(#969491);
@@ -2460,8 +2444,8 @@ summary.faqTXTextras span {
   </nav>
 </div>
 <main class="faqALL">
-<header class="faqARTcontainer">
-    <div class="faqARTwrapper" style="pointer-events: none; touch-action: none;">
+<header class="faqARTcontainer" style="pointer-events: none; touch-action: none;">
+    <div class="faqARTwrapper">
         <div class="faqARTmag">
             <div>
                 <img src="https://media.sailthru.com/fss/fld6i8/a282317b-c4fc-4a62-af4c-a7a91892679b/magGlassWorked.png" alt="Magnifying Glass">
@@ -2471,7 +2455,7 @@ summary.faqTXTextras span {
 </header>
     <div class="faqHEROcontainer faqHEROback">
         <section class="faqBODYwrapper" id="Home">
-            <div class="faqHEROwrapper faqQUESTIONcontainer">
+            <div class="faqHEROwrapper">
                 <div class="faqHEROimg">
                     <div class="faqHEROgrid">
                         <div class="faqHEROgriditem"><svg aria-hidden="false" role="img" aria-label="The Ann Arbor News logo"><use href="#AnnArborNewsSolid"/></svg></div>
@@ -2504,12 +2488,12 @@ summary.faqTXTextras span {
                     <div class="faqBODYnavitem navViolet"><a href="#Account">How do I manage my account?</a></div>
                     <div class="faqBODYnavitem navOrange"><a href="#Contacts">How do I get help?</a></div>
             </nav>
-        <div class="faqBODYwrapper" style="border: 1px solid coral;">
-            <div class="faqQUESTIONcontainer" style="border: 1px solid blue;">
+        <div class="faqBODYwrapper">
+            <div class="faqQUESTIONcontainer">
                 <div> 
                     <h1 class="faqHEADbig"><span class="faqHEADunderline">How do I</span> register/sign in?</h1>
                 </div>
-                <div class="faqQUESTIONwrapper" style="border: 1px solid rgb(255, 47, 0);">
+                <div class="faqQUESTIONwrapper">
                     <details>
                         <summary class="faqTXTquestion faqQUESTIONmain">
                             How do I get access to the online newspaper? 
@@ -2545,7 +2529,7 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
+                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
@@ -2553,7 +2537,7 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
+                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
                                         </a></div>
                                     </div>
                                 </details></div>
@@ -2613,11 +2597,11 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Jackson Citizen Patriot logo"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.comjp</span>
+                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
+                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
@@ -2625,12 +2609,12 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
+                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
                                         </a></div>
                                     </div>
                                 </details></div>
                                 <div><p>●&nbsp;  If already signed in, Sign Out before proceeding.</p></div>
-                                <div><p>●&nbsp; Tap on the big &lsquo;REGISTER&rsquo; button. Once registered, your subscription will be activated and you&rsquo;ll have immediate access to the online newspaper. Remember you can add up to four additional family or friends email addresses!</p></div>
+                                <div><p>●&nbsp; Tap on &lsquo;REGISTER.&rsquo; Once registered, your subscription will be activated and you&rsquo;ll have immediate access to the online newspaper. Remember you can add up to four additional family or friends email addresses!</p></div>
                                 <div><p>●&nbsp; Tap Go or Enter to open the page.</p></div>
                                 <div><p>●&nbsp; Click the big &lsquo;ACTIVATE&rsquo; button.</p></div>
                                 <div><p>●&nbsp; Click the &lsquo;CONTINUE&rsquo; button.</p></div>
@@ -2776,7 +2760,7 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
+                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
@@ -2784,7 +2768,7 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
+                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
                                         </a></div>
                                     </div>
                                 </details></div>
@@ -3375,6 +3359,7 @@ summary.faqTXTextras span {
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>    
                             </div>
                             <hr class="faqHR">
@@ -4340,7 +4325,5 @@ summary.faqTXTextras span {
         </div>
     </section>
 </main>
-
-
 </body>
 </html>
