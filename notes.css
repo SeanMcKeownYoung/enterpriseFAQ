@@ -1,0 +1,58 @@
+.faqARTwrapper {
+  width: 160%;
+  margin-left: -50px;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+@media (max-width: 549px) {
+  .faqARTwrapper {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .faqHEROwrapper {
+    padding: calc(15vh + 50px) 20px 0 20px;
+    margin-bottom: -20px;
+    gap: 50px;
+  }
+}
+
+@media (550px <= width <= 767px) {
+  .faqARTwrapper {
+    width: 100%;
+    margin-left: calc(((100vw - 549px) / 2) - 40px);
+    margin-top: 0;
+  }
+}
+
+@media (768px <= width <= 1023px) {
+  .faqARTwrapper {
+    margin-left: calc(((100vw - 768px) / 2) - 100px);
+    margin-top: 85px;
+  }
+}
+@media (1024px <= width <= 1279px) {
+  .faqARTwrapper {
+    margin-left: calc(((100vw - 1024px) / 2) - 111px);
+    margin-top: 65px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .faqARTwrapper {
+    margin-left: calc(((100vw - 1280px) / 2) - 111px);
+    margin-top: 65px;
+  }
+}
+
+@media (max-width: 549px) {
+}
+@media (550px <= width <= 767px) {
+}
+@media (768px <= width <= 1023px) {
+}
+@media (1024px <= width <= 1279px) {
+}
+@media (min-width: 1280px) {
+}

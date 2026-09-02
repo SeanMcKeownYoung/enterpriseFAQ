@@ -1,0 +1,44 @@
+/* ========================================================
+   TARGETED FIX: REMOVE LEFT-SIDE MOBILE GAP
+======================================================== */
+
+@media (max-width: 549px) {
+  .faqALL {
+    /* Snaps the main parent frame completely square with the viewport edge */
+    width: 100% !important;
+    transform: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .faqBODYwrapper {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .faqQUESTIONcontainer {
+    /* Flushes accordion lists straight to the left border edge */
+    padding-left: 0 !important;
+    padding-right: 16px; /* Retains right padding for the caret flow */
+  }
+
+  /* Ensures child indentation nodes map properly when flush */
+  .faqBOXlogofirst details[open] .faqBODYlist div {
+    margin: 0 0 0 12px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .faqALL {
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  .faqBODYwrapper {
+    padding-left: 0 !important;
+  }
+
+  .faqQUESTIONcontainer {
+    padding-left: 0 !important;
+  }
+}

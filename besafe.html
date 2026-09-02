@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
 <style>
 @import url("https://p.typekit.net/p.css?s=1&k=umq5keu&ht=tk&f=39496.39498.39502.39504.39505.39508&a=63447791&app=typekit&e=css");
 @font-face {
@@ -60,6 +68,28 @@
 .faqALL a,
 .faqALL button {
   color: inherit;
+}
+.faqHEROcontainer,
+.faqBODYcontainer {
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
+}
+.faqHEROcontainer > *,
+.faqBODYcontainer > *,
+.faqQUESTIONcontainer {
+  padding-left: clamp(16px, 5vw, 40px) !important;
+  padding-right: clamp(16px, 5vw, 40px) !important;
+  box-sizing: border-box !important;
 }
 
 .faqALL {
@@ -310,14 +340,23 @@ html {
 .faqARTcontainer {
   position: absolute;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start !important;
   z-index: 200;
-  width: 100vw;
-  left: 0;
   top: 70px;
   bottom: 0;
-  right: 0;
-  transform: translateX(5vw);
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+}
+.faqARTcontainer  > *{
+  padding-left: clamp(16px, 5vw, 40px) !important;
+  padding-right: clamp(16px, 5vw, 40px) !important;
+  box-sizing: border-box !important;
 }
 .faqARTmag div img {
   transform: translateY(0px) translateX(0px) scale(1);
@@ -328,13 +367,6 @@ html {
   animation: faqscaleAndMove linear both;
   animation-timeline: scroll(root);
   animation-range: exit;
-}
-@media (max-width: 767px) {
-.faqARTmag div img {
-  animation: faqscaleAndMoveSlower linear both;
-  animation-timeline: scroll(root);
-  animation-range: cover; 
-}
 }
 .faqBODYcontainer h1,
 .faqBODYcontainer h2,
@@ -650,6 +682,7 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   align-items: flex-start;
   gap: 6px;
 }
+
 @media (min-width: 550px) {
 .faqRESETaccordian details summary {
     gap: 8px;
@@ -731,6 +764,11 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 @media (max-width: 767px) {
 .faqQUESTIONwrapper details[open] + details:not([open]) {
   padding-top: 16px; 
+}
+.faqARTmag div img {
+  animation: faqscaleAndMoveSlower linear both;
+  animation-timeline: scroll(root);
+  animation-range: cover; 
 }}
 
 .faqQUESTIONwrapper details::before {
@@ -947,16 +985,21 @@ color: #6b6a69;
 .faqHIDEapple,
 .faqHIDEgoogle {
   opacity: 0;
+  visibility: hidden;
+    color: transparent;
 }
 .faqBODYlistitem:has(.faqSHOWapple:is(:hover, :active, :focus)) .faqHIDEapple {
+visibility: visible;
   opacity: 1;
+  color: #404041;
 }
 .faqBODYlistitem:has(.faqSHOWgoogle:is(:hover, :active, :focus)) .faqHIDEgoogle {
   opacity: 1;
+  visibility: visible;
+  color: #404041;
 }
 .faqGRIDlistcontainGrid {
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   box-sizing: border-box;
 }
@@ -964,7 +1007,6 @@ color: #6b6a69;
 .faqGRIDlistcontainGrid {
   gap: 16px;
 }}
-
 .faqGRIDlistcard {
   box-sizing: border-box;
   display: flex;
@@ -1098,7 +1140,7 @@ summary.faqTXTextras span {
 .faqHOVERemail {
   display: flex;
   padding: 10px 0 10px 10px !important;
-  margin: -10px 0 -10px -10px;
+  margin: -10px 0 -10px -10px !important;
   width: 70vw;
   border: 1px solid transparent;
   background-color: transparent;
@@ -1108,6 +1150,7 @@ summary.faqTXTextras span {
     border 0.3s ease-in-out;
 }
 @media (max-width: 549px) {
+
   .faqHOVERemail {
     width: 100%;
   }
@@ -1147,15 +1190,21 @@ summary.faqTXTextras span {
   background-color: transparent;
   margin-top: 12px;
 }
+.faqBOXlogofirst div {
+  margin-top: 10px;
+}
 .faqBOXlogofirst summary span {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.faqBOXlogofirst summary span svg {
+@media (min-width: 550px) {
+  .faqBOXlogofirst summary span svg {
   align-self: center !important;
   margin-right: 4px;
 }
+}
+
 @media (max-width: 549px) {
   .faqBODYcontainer {
     padding-bottom: 10%;
@@ -1282,26 +1331,30 @@ summary.faqTXTextras span {
     align-content: start;
     justify-content: start;
     align-items: start;
-  }
-  .faqBOXlogofirst {
-    margin: 10px 0;
+    gap: 4px;
   }
   .faqBOXlogofirst details summary {
-    display: flex;
     flex-direction: row;
     align-content: start;
     justify-content: start;
     align-items: start;
-    width: 90%;
+    align-self: center;
+    width: 100%;
     margin: 4px 0;
     text-wrap: pretty;
   }
+  .faqBOXlogofirst summary span svg {
+  align-self: start !important;
+  margin-right: 4px;}
   .faqBOXlogofirst summary span {
     gap: 0;
   }
   .faqBOXlogofirst details summary span span {
     display: inline-block;
     text-wrap: wrap;
+  }
+  .faqBOXlogofirst details[open] .faqBODYlist div   {
+    margin: 0 0 0 16px;
   }
 }
 @media (550px <= width <= 767px) {
@@ -1338,20 +1391,15 @@ summary.faqTXTextras span {
     font-size: 16px;
   }
 }
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .faqBODYcontainer .faqHEADbig {
     padding-top: clamp(10px, 10vh, 100px);
     padding-bottom: clamp(10px, 10%, 40px);
   }
   .faqALL {
-    max-width: 100vw !important;
-    width: 100% !important;
-    height: auto;
+    width: 100cqw;
     transform: translateX(0%);
   }
-  *, *::before, *::after {
-    box-sizing: border-box;
-}
   .faqMOBhide {
     display: none;
   }
@@ -1975,13 +2023,6 @@ summary.faqTXTextras span {
   .faqMOBnav {
     display: none; 
   }}
-  .faqMOBnav label {
-            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    transform-origin: center;
-    animation: lineSlideIn linear both;
-    animation-timeline: scroll(root);
-    animation-range: normal 30% normal 45%;
-  }
 @media (max-width: 767px) {
   .faqMOBnav {
     display: block; 
@@ -2002,7 +2043,7 @@ summary.faqTXTextras span {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #a6a49f;
+    background-color: #969491;
     border-radius: 2px;
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   }
@@ -2035,6 +2076,7 @@ summary.faqTXTextras span {
     height: auto;
     margin-right: 0;
     padding: 15px 0;
+    border-bottom: 1px solid #eee;
     align-items: center;
   }
   .faqMOBnav .faqBODYnavitem:last-child { margin-right: 0; }
@@ -2049,15 +2091,12 @@ summary.faqTXTextras span {
   }
   .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(1) { 
     transform: translateY(9px) rotate(45deg); 
-        background-color: #00b7ff;
   }
   .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(2) { 
     opacity: 0; 
-        background-color: #00b7ff;
   }
   .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(3) { 
     transform: translateY(-9px) rotate(-45deg); 
-        background-color: #00b7ff;
   }
   .toggleFAQnavcheckbox {
     position: absolute;
@@ -2065,17 +2104,6 @@ summary.faqTXTextras span {
     pointer-events: none;
   }
 }
-  @keyframes lineSlideIn {
-    0% {
-      transform: translateX(100vw);
-      opacity: 1;
-    }
-    21% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
 @keyframes faqNAVSCROLLnonhover {
   0% {
     background: linear-gradient(#969491);
@@ -2489,31 +2517,31 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount.mlive.com/bc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Bay City Times logo"><use xlink:href="#BayCityTimesSolid"></use></svg>
-                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount.mlive.com/fj">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Flint Journal logo"><use xlink:href="#FlintJournalSolid"></use></svg>
-                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount.mlive.com/gr">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Grand Rapids Press logo"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
-                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Jackson Citizen Patriot logo"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
-                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                         </a></div>
                                     </div>
                                 </details></div>
@@ -2561,36 +2589,36 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount.mlive.com/bc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Bay City Times logo"><use xlink:href="#BayCityTimesSolid"></use></svg>
-                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount.mlive.com/fj">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Flint Journal logo"><use xlink:href="#FlintJournalSolid"></use></svg>
-                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount.mlive.com/gr">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Grand Rapids Press logo"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
-                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Jackson Citizen Patriot logo"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.comjp</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
-                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                         </a></div>
                                     </div>
                                 </details></div>
                                 <div><p>●&nbsp;  If already signed in, Sign Out before proceeding.</p></div>
-                                <div><p>●&nbsp; Tap on &lsquo;REGISTER.&rsquo; Once registered, your subscription will be activated and you&rsquo;ll have immediate access to the online newspaper. Remember you can add up to four additional family or friends email addresses!</p></div>
+                                <div><p>●&nbsp; Tap on the big &lsquo;REGISTER&rsquo; button. Once registered, your subscription will be activated and you&rsquo;ll have immediate access to the online newspaper. Remember you can add up to four additional family or friends email addresses!</p></div>
                                 <div><p>●&nbsp; Tap Go or Enter to open the page.</p></div>
                                 <div><p>●&nbsp; Click the big &lsquo;ACTIVATE&rsquo; button.</p></div>
                                 <div><p>●&nbsp; Click the &lsquo;CONTINUE&rsquo; button.</p></div>
@@ -2720,31 +2748,31 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount.mlive.com/bc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Bay City Times logo"><use xlink:href="#BayCityTimesSolid"></use></svg>
-                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount.mlive.com/fj">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Flint Journal logo"><use xlink:href="#FlintJournalSolid"></use></svg>
-                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount.mlive.com/gr">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Grand Rapids Press logo"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
-                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Jackson Citizen Patriot logo"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
-                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                         </a></div>
                                     </div>
                                 </details></div>
@@ -3335,7 +3363,6 @@ summary.faqTXTextras span {
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>    
                             </div>
                             <hr class="faqHR">
@@ -3888,15 +3915,15 @@ summary.faqTXTextras span {
                             How can I sign up for Easy Pay?
                             <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg>
                         </summary>
-                        <div class="faqANSWERbox">
+                        <div class="faqANSWERbox faqRESETaccordian">
                             <div class="faqTXTanswer"><strong>You can sign up for Easy Pay</strong>&nbsp; at any time online or by phone! </div>
-                            <div class="faqBOXlogofirst faqTXTsub">
+                            <div class="faqBOXlogofirst">
                                 <div>
-                                    <details class="faqSUBaccordian" style="margin: 0 !important; padding: 0 !important;">
+                                    <details class="faqSUBaccordian">
                                         <summary>
-                                            <span>
+                                            <span style="margin: 0 !important; padding: 0 !important;">
                                                 <svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
-                                                <span><strong>Online.</strong> Visit your myAccount page. <span>Tap here to find yours.</span></span>
+                                                <span class="faqTXTsub"><strong>Online.</strong> Visit your myAccount page. Tap here to find yours.</span>
                                             </span>
                                             <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg>
                                         </summary>
@@ -3907,31 +3934,31 @@ summary.faqTXTextras span {
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount.mlive.com/bc">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Bay City Times logo"><use xlink:href="#BayCityTimesSolid"></use></svg>
-                                                <span><strong>The Bay City Times.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount.mlive.com/fj">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Flint Journal logo"><use xlink:href="#FlintJournalSolid"></use></svg>
-                                                <span><strong>The Flint Journal.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount.mlive.com/gr">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Grand Rapids Press logo"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
-                                                <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Jackson Citizen Patriot logo"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                                <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                                <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
-                                                <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                                <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                             </a></div>
                                         </div>
                                     </details>
@@ -3940,8 +3967,8 @@ summary.faqTXTextras span {
                                     <details class="faqSUBaccordian"  style="margin: 0 !important; padding: 0 !important;">
                                         <summary style="margin: 0 !important; padding: 0 !important;">
                                             <span style="margin: 0 !important; padding: 0 !important;">
-                                                <svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
-                                                <span><strong>By phone.</strong> Call your customer service department from the list below.</span>
+                                                <svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                                <span class="faqTXTsub"><strong>By phone.</strong> Call your customer service department from the list below.</span>
                                             </span>
                                             <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg>
                                         </summary>
@@ -3986,17 +4013,14 @@ summary.faqTXTextras span {
                                         <summary class="faqHOVERemail">
                                             <a href="mailto:customercare@mlive.com?subject=Help%20me%20sign%20up%20for%20Easy%20Pay!&body=I'd%20like%20to%20sign%20up%20for%20Easy%20Pay%2C%20save%20money%20and%20save%20the%20hassle%20of%20paying%20my%20monthly%20bill.%0AMy%20name%20is%3A%0AMy%20account%20number%20is%3A%0APlease%20contact%20me%20at%3A" target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;">
                                                 <span>
-                                                    <svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
-                                                    <span><strong>By email.</strong> Send us a message <span>by tapping this link.</span></span>
+                                                    <svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                                    <span class="faqTXTsub"><strong>By email.</strong> Send us a message <span>by tapping this link.</span></span>
                                                 </span>
                                             </a>
                                         </summary>
                                     </details>
                                 </div>
                             </div>
-
-                            
-
                         </div>
                     </details>
                     <details>
@@ -4304,3 +4328,7 @@ summary.faqTXTextras span {
         </div>
     </section>
 </main>
+
+
+</body>
+</html>

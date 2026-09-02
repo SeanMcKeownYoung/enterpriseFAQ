@@ -1,4 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
 <style>
+
+
 @import url("https://p.typekit.net/p.css?s=1&k=umq5keu&ht=tk&f=39496.39498.39502.39504.39505.39508&a=63447791&app=typekit&e=css");
 @font-face {
   font-family: "neue-haas-grotesk-display";
@@ -42,86 +52,85 @@
   font-weight: 900;
   font-stretch: normal;
 }
+
+
+:root {
+  interpolate-size: allow-keywords;
+}
+
 .faqALL {
-  color: #404041;
+  color: var(--arc-palette-foregroundPrimary, #404041) !important;
   font-weight: 500;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
   font-variant-ligatures: common-ligatures;
   font-feature-settings:
     "kern" 1,
     "liga" 1;
-}
-.faqALL * {
-  font-variant-ligatures: inherit;
-  font-feature-settings: inherit;
-}
-.faqALL a,
-.faqALL button {
-  color: inherit;
-}
-
-.faqALL {
-  width: 105cqw;
+  width: 100% !important;
   display: flex;
   flex-direction: column;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  transform: translateX(-5%);
+  position: relative;
   overflow: hidden;
   margin: 0;
   padding: 0;
+  padding-left: 0 !important;
   box-sizing: border-box;
-  font: inherit;
+  contain: content
 }
+
+.faqALL *,
+.faqALL svg,
+.faqALL svg *,
+.faqALL summary,
+.faqALL summary * {
+  font-variant-ligatures: inherit;
+  font-feature-settings: inherit;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.faqALL a,
+.faqALL a * {
+  font-variant-ligatures: inherit;
+  font-feature-settings: inherit;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
 .faqALL a {
   border: 0 !important;
   color: inherit;
   text-decoration: none;
 }
-.faqALL svg,
-.faqALL svg * {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent !important;
-}
-.faqALL summary,
-.faqALL summary * {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent !important;
-}
-.faqALL a,
-.faqALL a * {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent !important;
-}
-html {
-  color-scheme: dark light;
+.faqALL button {
+  color: inherit;
 }
 .faqNOBR {
   white-space: nowrap;
 }
-.faqHEROcontainer {
+.faqHEROcontainer,
+.faqBODYcontainer,
+.faqMOBnav, 
+.faqARTcontainer {
   margin: 0;
   display: flex;
   justify-content: flex-start;
+}
+.faqHEROcontainer {
   align-items: center;
 }
 .faqHEROcontainer h1 {
   margin: 0;
+  font-weight: 900 !important;
 }
 .faqBODYcontainer {
-  margin: 0;
-  display: flex;
-  justify-content: flex-start;
   flex-direction: column;
   padding-bottom: clamp(80px, 10vw, 180px);
 }
 .faqBODYwrapper {
   width: 100%;
 }
+
 .faqHEADbig {
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 900;
@@ -132,17 +141,44 @@ html {
 .faqHEADbig a {
   text-decoration: none;
 }
+.faqBODYcontainer .faqHEADbig {
+  padding: 48px 0;
+}
+.faqHEADbig .faqHEADunderline {
+  display: inline !important;
+  padding-bottom: 6px;
+  border-bottom: 10px solid #787878;
+}
+/* 1. Force the heading element to look for the 900 weight file explicitly */
+.faqHEADbig, 
+h1.faqHEADbig, 
+h2.faqHEADbig {
+  font-family: "neue-haas-grotesk-display", sans-serif !important;
+  font-weight: 900 !important;
+}
+
+/* 2. Fix the inner anchor links inside the heading */
+.faqHEADbig a {
+  font-family: inherit !important;
+  font-weight: 900 !important;
+}
+
 .faqHR {
   width: 70vw;
   margin: clamp(10px, 1.5%, 30px) auto clamp(10px, 1.5%, 30px) 0;
   border: none;
   height: 1px;
-  background-color: #cccccc; 
+  background-color: #cccccc;
 }
 .faqHEROback {
-  background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
-  filter: drop-shadow(0px 5px 10px #00000080);
+  background-image: linear-gradient(
+    165deg,
+    var(--arc-palette-background, #0d0d0d),
+    var(--arc-palette-subtitle, #262626)
+  );
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
 }
+
 .faqHEROwrapper {
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -156,6 +192,7 @@ html {
 .faqHEROtext {
   grid-row-start: 2;
 }
+
 .faqHEROgrid {
   display: grid;
   width: 333px;
@@ -175,381 +212,59 @@ html {
   color: #00b7ff;
 }
 .faqHEROgriditem:last-of-type svg {
-  width: 100%;
-  height: 100%;
   color: #3f3f3f !important;
 }
-.faqBODYnav {
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: end;
-  margin-bottom: clamp(50px, 5%, 100px);
-  overflow-x: auto !important;
-  overflow-y: hidden;
-  white-space: nowrap;
-  will-change: background-position;
-  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-  animation: faqNAVSCROLLnonhover linear;
-  animation-timeline: scroll(x self);
-  scroll-timeline-name: --navFAQscroll;
-  scroll-timeline-axis: inline;
-}
-.faqBODYnav:is(:hover, :active, :focus) {
-  will-change: background-position;
-  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-  animation: faqNAVSCROLLhover linear;
-  animation-timeline: scroll(x self);
-}
-.faqBODYnav::-webkit-scrollbar {
-  height: 10px;
-}
-.faqBODYnav::-webkit-scrollbar-track {
-  height: 100%;
-  background-color: transparent;
-  border-top: 1px solid transparent;
-  width: 30px;
-  transition: all 0.3s ease;
-}
-.faqBODYnav::-webkit-scrollbar-track:is(:hover, :active, :focus) {
-  height: 100%;
-  background-color: transparent;
-  border-top: 1px solid #969491;
-  width: 30px;
-  transition: all 0.2s ease;
-}
-.faqBODYnav::-webkit-scrollbar-thumb {
-  height: 100%;
-  transition: all 0.3s ease;
-}
-.faqBODYnav::-webkit-scrollbar-thumb:is(:hover, :active, :focus) {
-  height: 100%;
-  background-color: transparent;
-  transition: all 0.2s ease;
-}
-.faqBODYnavitem {
-  align-items: end;
-  display: flex;
-  margin-right: 20px;
+
+/* --------------------------------------------------------
+   3. TYPOGRAPHY MATRIX & ACCORDION FLOW DETAILS
+-------------------------------------------------------- */
+.faqTXTquestion,
+.faqTXTanswer,
+.faqTXTextras,
+.faqTXTsub {
   font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 600;
-  border: 0;
+  letter-spacing: 0;
   text-align: left;
-  height: 80px;
-  padding-bottom: 10px;
-  border-bottom: 10px solid transparent;
-  transition: border-bottom 0.3s ease-in-out;
-}
-.faqBODYnavitem a {
-  text-decoration: none;
-  color: #969491;
-  transition: color 0.1s ease-in-out;
-}
-.faqBODYnavitem:last-child {
-  margin-right: 10%;
-}
-.faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
-  .faqBODYnavitem:not(:is(:hover, :active, :focus)) {
-  border-bottom: 10px solid transparent;
-}
-.faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
-  .faqBODYnavitem:not(:is(:hover, :active, :focus))
-  a {
-  color: #c1bfb9;
-}
-.faqBODYnav .faqBODYnavitem:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #404041;
-}
-.faqBODYnav .faqBODYnavitem:is(:hover, :active, :focus) a {
-  text-decoration: none;
-  color: #404041;
-}
-.faqBODYnav .navBlue:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #00b7ff;
-}
-.faqBODYnav .navGold:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #f7be00;
-}
-.faqBODYnav .navRed:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #ff5e5e;
-}
-.faqBODYnav .navGreen:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #84cc16;
-}
-.faqBODYnav .navViolet:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #bc69ff;
-}
-.faqBODYnav .navOrange:is(:hover, :active, :focus) {
-  border-bottom: 10px solid #ff8819;
-}
-.faqBODYnav div {
-  transition: color 0.7s ease-in-out;
-}
-.faqBODYnav:is(:hover, :active, :focus) div {
-  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-}
-.faqBODYnav:is(:hover, :active, :focus) div:first-child a {
-  animation: navScroll01 linear;
-  animation-timeline: --navFAQscroll;
-}
-.faqBODYnav:is(:hover, :active, :focus) div:nth-child(2) a {
-  animation: navScroll02 linear;
-  animation-timeline: --navFAQscroll;
-}
-.faqBODYnav:is(:hover, :active, :focus) div:nth-child(3) a {
-  animation: navScroll03 linear;
-  animation-timeline: --navFAQscroll;
-}
-.faqBODYnav:is(:hover, :active, :focus) div:nth-child(4) a {
-  animation: navScroll04 linear;
-  animation-timeline: --navFAQscroll;
-}
-.faqBODYnav:is(:hover, :active, :focus) div:nth-child(5) a {
-  animation: navScroll05 linear;
-  animation-timeline: --navFAQscroll;
-}
-.faqARTcontainer {
-  position: absolute;
-  display: flex;
-  justify-content: flex-start;
-  z-index: 200;
-  width: 100vw;
-  left: 0;
-  top: 70px;
-  bottom: 0;
-  right: 0;
-  transform: translateX(5vw);
-}
-.faqARTmag div img {
-  transform: translateY(0px) translateX(0px) scale(1);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left top;
-  animation: faqscaleAndMove linear both;
-  animation-timeline: scroll(root);
-  animation-range: exit;
-}
-@media (max-width: 767px) {
-.faqARTmag div img {
-  animation: faqscaleAndMoveSlower linear both;
-  animation-timeline: scroll(root);
-  animation-range: cover; 
-}
-}
-.faqBODYcontainer h1,
-.faqBODYcontainer h2,
-.faqBODYcontainer h3,
-.faqBODYcontainer h4,
-.faqBODYcontainer h5,
-.faqBODYcontainer p {
-  margin: 0;
-  padding: 0;
-}
-.faqBODYdark {
-  background-color: #ece9e1;
-  border-top: 1px solid #ffffff;
-}
-.faqBODYlight {
-  background-color: #f8f5f0;
-  border-top: 1px solid #ffffff;
-}
-.faqBODYdark .faqHEADbig,
-.faqBODYlight .faqHEADbig {
-  color: #404041;
-}
-.faqBODYcontainer .faqHEADbig {
-  padding: 48px 0;
-}
-.faqHEADbig .faqHEADunderline {
-  display: inline !important;
-  padding-bottom: 6px;
-  border-bottom: 10px solid #787878;
-}
-.faqBODYBlue .faqHEADbig .faqHEADunderline {
-  display: inline !important;
-  border-bottom: 10px solid #00b7ff;
-}
-.faqBODYgold .faqHEADbig .faqHEADunderline {
-  display: inline !important;
-  border-bottom: 10px solid #f7be00;
-}
-.faqBODYred .faqHEADbig .faqHEADunderline {
-  display: inline !important;
-  border-bottom: 10px solid #ff5e5e;
-}
-.faqBODYgreen .faqHEADbig .faqHEADunderline {
-  display: inline !important;
-  border-bottom: 10px solid #84cc16;
-}
-.faqBODYviolet .faqHEADbig .faqHEADunderline {
-  display: inline !important;
-  border-bottom: 10px solid #bc69ff;
-}
-.faqBODYorange .faqHEADbig .faqHEADunderline {
-  display: inline !important;
-  border-bottom: 10px solid #ff8819;
-}
-.faqHEROtext .faqHEADbig a,
-.faqHEROtext:is(:hover, :active, :focus) .faqHEADbig {
-  color: #686867;
-  transition: color text-shadow 0.3s ease;
-}
-.faqHEROtext .faqHEADbig,
-.faqHEROtext .faqHEADbig:is(:hover, :active, :focus) {
-  color: #00b7ff;
-  transition: all 0.3s ease;
-}
-.hoverBlue:is(:hover, :active, :focus),
-.hoverBlue:is(:hover, :active, :focus) a {
-  color: #00b7ff !important;
-}
-.hoverGold:is(:hover, :active, :focus),
-.hoverGold:is(:hover, :active, :focus) a {
-  color: #f7be00 !important;
-  text-shadow: 0 0 30px #f7be00 !important;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.5s ease-in-out;
-}
-body:has(.faqHEROtext .hoverGold:is(:hover, :active, :focus))
-  .faqARTmag
-  div
-  img {
-  filter: hue-rotate(220deg) saturate(2);
-}
-body:has(.faqHEROtext .hoverGold:is(:hover, :active, :focus))
-  .faqHEROgriditem
-  svg {
-  color: #f7be00;
-}
-.hoverRed:is(:hover, :active, :focus),
-.hoverRed:is(:hover, :active, :focus) a {
-  color: #ff5e5e !important;
-  text-shadow: 0 0 30px #ff5e5e !important;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.5s ease-in-out;
-}
-body:has(.faqHEROtext .hoverRed:is(:hover, :active, :focus))
-  .faqARTmag
-  div
-  img {
-  filter: hue-rotate(160deg) saturate(2);
-}
-body:has(.faqHEROtext .hoverRed:is(:hover, :active, :focus))
-  .faqHEROgriditem
-  svg {
-  color: #ff5e5e;
-}
-.hoverGreen:is(:hover, :active, :focus),
-.hoverGreen:is(:hover, :active, :focus) a {
-  color: #84cc16 !important;
-  text-shadow: 0 0 30px #84cc16 !important;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.5s ease-in-out;
-}
-body:has(.faqHEROtext .hoverGreen:is(:hover, :active, :focus))
-  .faqARTmag
-  div
-  img {
-  filter: hue-rotate(-70deg) saturate(2);
-}
-body:has(.faqHEROtext .hoverGreen:is(:hover, :active, :focus))
-  .faqHEROgriditem
-  svg {
-  color: #84cc16;
-}
-.hoverViolet:is(:hover, :active, :focus),
-.hoverViolet:is(:hover, :active, :focus) a {
-  color: #bc69ff !important;
-  text-shadow: 0 0 30px #bc69ff !important;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.5s ease-in-out;
-}
-body:has(.faqHEROtext .hoverViolet:is(:hover, :active, :focus))
-  .faqARTmag
-  div
-  img {
-  filter: hue-rotate(90deg) saturate(2);
-}
-body:has(.faqHEROtext .hoverViolet:is(:hover, :active, :focus))
-  .faqHEROgriditem
-  svg {
-  color: #bc69ff;
-}
-.hoverOrange:is(:hover, :active, :focus),
-.hoverOrange:is(:hover, :active, :focus) a {
-  color: #ff8819 !important;
-  text-shadow: 0 0 30px #ff8819 !important;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.5s ease-in-out;
-}
-body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
-  .faqARTmag
-  div
-  img {
-  filter: hue-rotate(180deg) saturate(2);
-}
-body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
-  .faqHEROgriditem
-  svg {
-  color: #ff8819;
 }
 .faqTXTquestion {
-  font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0;
   text-wrap: balance;
   display: inline;
-  text-align: left;
   border-radius: 0;
 }
+.faqTXTanswer {
+  font-weight: 500;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+.faqTXTanswer strong,
+.faqTXTextras strong,
+.faqTXTsub strong {
+  font-weight: 600;
+}
+
+.faqTXTextras {
+  font-weight: 500;
+  line-height: 1.4;
+  text-wrap: balance;
+  font-size: 14px;
+}
+.faqTXTsub {
+  font-weight: 500;
+  letter-spacing: 1%;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
 .faqQUESTIONwrapper details summary,
 .faqQUESTIONwrapper details p,
 .faqQUESTIONwrapper details div,
 .faqQUESTIONwrapper details span {
-  color: #404041;
-  fill: #404041;
+  color: inherit;
+  fill: currentColor;
 }
-.faqTXTanswer {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.4;
-  text-align: left;
-  text-wrap: balance;
-}
-.faqTXTanswer strong {
-  font-weight: 600;
-}
-.faqTXTextras {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.4;
-  text-align: left;
-  text-wrap: balance;
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  .faqTXTextras { font-size: 16px; }
-}
-@media (min-width: 1024px) {
-  .faqTXTextras { font-size: 19px; }
-}
-@media (min-width: 1280px) {
-  .faqTXTextras { font-size: 20px; }
-}
-@media (min-width: 1750px) {
-  .faqTXTextras { font-size: 22px; }
-}
-.faqTXTextras strong {
-  font-weight: 600;
-}
+
 .faqQUESTIONwrapper summary {
   cursor: pointer;
   list-style: none;
@@ -561,17 +276,9 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 .faqTOGGLEicon {
   width: 8px;
   height: 8px;
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
-@media (min-width: 550px) {
-  .faqTOGGLEicon {
-    width: 12px;
-    height: 12px;
-  }
-}
-:root {
-  interpolate-size: allow-keywords;
-}
+
 .faqALL details::details-content {
   block-size: 0;
   opacity: 0;
@@ -584,6 +291,7 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   block-size: auto;
   opacity: 1;
 }
+
 .faqQUESTIONwrapper details .faqQUESTIONmain svg {
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -596,86 +304,49 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 .faqQUESTIONwrapper details[open] .faqQUESTIONmain {
   padding-top: 6px;
 }
-@media (min-width: 768px) {
-.faqQUESTIONwrapper details[open] .faqQUESTIONmain {
-  padding-top: 16px;
-}
-}
-.faqQUESTIONwrapper details:first-of-type[open] .faqQUESTIONmain {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
 
 .faqQUESTIONmain {
-    text-wrap: pretty;
-}
-.faqQUESTIONwrapper summary {
-  display: inline-flex;
-  gap: 6px;
-}
-@media (min-width: 550px) {
-  .faqQUESTIONwrapper summary {
-    gap: 8px;
-  }
-}
-@media (min-width: 768px) {
-  .faqQUESTIONwrapper summary {
-    gap: 10px;
-  }
+  text-wrap: pretty;
 }
 .faqQUESTIONwrapper .faqQUESTIONmain svg {
   display: flex;
   align-self: flex-start;
-    flex-shrink: 0;
-    transform: translate(0px, 6px);
+  flex-shrink: 0;
+  transform: translate(0px, 6px);
 }
-@media (min-width: 768px) {
-.faqQUESTIONwrapper .faqQUESTIONmain svg {
-  align-self: center;
-    transform: translateY(0px);
-}
+
+.faqSUBaccordian {
+  opacity: 1 !important;
+  margin: 0;
+  padding: 0;
 }
 .faqSUBaccordian summary svg {
   display: flex;
   align-self: flex-start;
-    transform: translateY(0px);
+  transform: translate(0px, 4px) rotate(0deg) scale(1, 1);
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0;
 }
-@media (min-width: 768px) {
-.faqSUBaccordian summary svg {
-  align-self: center;
+.faqSUBaccordian[open] summary svg {
+  transform: translate(0px, 4px) rotate(90deg) scale(1, 1.2);
 }
-}
+
 .faqRESETaccordian details summary {
   display: flex;
   align-items: flex-start;
   gap: 6px;
 }
-@media (min-width: 550px) {
-.faqRESETaccordian details summary {
-    gap: 8px;
-  }
-}
-@media (min-width: 768px) {
-.faqRESETaccordian details summary {
-    gap: 10px;
-  }
-}
 .faqRESETaccordian details summary svg {
   display: flex;
   align-self: flex-start;
-    flex-shrink: 0;
-    transform: translate(0px, 4px);
-}
-@media (min-width: 768px) {
-.faqRESETaccordian details summary svg {
-  align-self: center;
-    transform: translate(0px, 0px);
-}
+  flex-shrink: 0;
+  transform: translate(0px, 4px);
 }
 .faqRESETaccordian details:before,
 .faqRESETaccordian details:after {
   margin: 0 !important;
 }
+
 .faqGAP {
   display: flex;
   flex-direction: column;
@@ -684,26 +355,7 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 .faqMARGINbottom {
   margin-bottom: 16px;
 }
-.faqSUBaccordian summary svg {
-  transform: translate(0px, 4px) rotate(0deg) scale(1, 1);
-  transition: transform 0.3s ease-in-out;
-  align-self: flex-start;
-  flex-shrink: 0;
-}
-.faqSUBaccordian[open] summary svg {
-  transform: translate(0px, 4px) rotate(90deg) scale(1, 1.2);
-}    
-@media (min-width: 768px) {
-.faqSUBaccordian summary svg {
-  transform: translate(0px, 0px) rotate(0deg) scale(1, 1);
-  transition: transform 0.3s ease-in-out;
-  align-self: center;
-  flex-shrink: 0;
-}
-.faqSUBaccordian[open] summary svg {
-  transform: translate(0px, 0px) rotate(90deg) scale(1, 1.2);
-}  
-}
+
 .faqQUESTIONwrapper details[open] .faqInitial {
   transform: none;
   padding: 0;
@@ -719,108 +371,57 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 .faqANSWERbox > :last-child {
   padding-bottom: 16px;
 }
-@media (max-width: 767px) {
-.faqANSWERbox > :last-child {
-  padding-bottom: 0px;
-}}
-@media (min-width: 768px) {
-.faqANSWERbox > :last-child {
-  padding-bottom: 16px;
-}
-}
-@media (max-width: 767px) {
-.faqQUESTIONwrapper details[open] + details:not([open]) {
-  padding-top: 16px; 
-}}
 
-.faqQUESTIONwrapper details::before {
+.faqQUESTIONwrapper details::before,
+.faqQUESTIONwrapper details::after,
+.faqSUBaccordian::before,
+.faqSUBaccordian::after {
   content: "";
   display: block;
   width: 70vw;
   height: 1px;
-  top: 0;
   background-color: transparent;
+}
+.faqQUESTIONwrapper details::before {
+  top: 0;
   margin-bottom: 12px;
 }
 .faqQUESTIONwrapper details::after {
-  content: "";
-  display: block;
-  width: 70vw;
-  height: 1px;
   bottom: 0;
-  background-color: transparent;
   margin-top: 12px;
 }
-.faqQUESTIONwrapper details[open]::before {
-  content: "";
-  display: block;
-  width: 70vw;
-  height: 1px;
-  background-color: #c1bfb9;
-  margin-bottom: 12px;
-}
-.faqQUESTIONwrapper details[open]::after {
-  content: "";
-  display: block;
-  width: 70vw;
-  height: 1px;
-  background-color: #c1bfb9;
-  margin-top: 12px;
-}
-@media (max-width: 767px) {
-.faqQUESTIONwrapper details:first-of-type[open]::before {
-  content: none;
-  height: 0;
-  margin: 1px !important;
-  padding: 0;
-}}
-@media (min-width: 768px) {
-.faqQUESTIONwrapper details:first-of-type[open]::before {
-  content: none;
-  height: 0;
-  margin: 0;
-  padding: 0;
-}
-}
-.faqSUBaccordian::before {
-  content: none;
-  height: 0;
-  margin: 0;
-  padding: 0;
-}
+.faqSUBaccordian::before,
 .faqSUBaccordian::after {
   content: none;
   height: 0;
   margin: 0;
   padding: 0;
 }
-@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
-  .faqQUESTIONwrapper:has(details[open]) details:not([open]):hover {
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-  }
+
+.faqQUESTIONwrapper details[open]::before,
+.faqQUESTIONwrapper details[open]::after {
+  background-color: #c1bfb9;
 }
-@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
-  .faqQUESTIONwrapper:has(details[open]) details:not([open]):active {
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-  }
-  .faqQUESTIONwrapper:has(details[open]) details:not([open]):focus {
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-  }
+.faqQUESTIONwrapper details:first-child[open]::before,
+.faqQUESTIONwrapper details:first-of-type[open]::before {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  top: 0;
+  background-color: transparent;
+  margin-bottom: 12px;
 }
-.faqTXTsub {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 500;
-  letter-spacing: 1%;
-  line-height: 1.4;
-  text-align: left;
-  text-wrap: balance;
+.faqQUESTIONwrapper details[open]:last-child::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  bottom: 0;
+  background-color: transparent;
+  margin-top: 12px;
 }
-.faqTXTsub strong {
-  font-weight: 600;
-}
+
 .faqBOXindent p {
   padding-left: 32px;
   text-indent: -16px;
@@ -828,11 +429,10 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 .faqPADDINGtop {
   padding-top: 16px;
 }
-.faqSUBaccordian {
-  opacity: 1 !important;
-  margin: 0;
-  padding: 0;
-}
+
+/* --------------------------------------------------------
+   4. LOGO IMAGES, BRANDS & SUB-LINK NODE GRID LISTS
+-------------------------------------------------------- */
 .faqBODYlist {
   display: flex;
   flex-direction: column;
@@ -850,9 +450,9 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 .faqBODYlist div a span {
   align-self: flex-start !important;
 }
+
 .faqLOGOdot {
   aspect-ratio: 1 / 1;
-  height: auto;
   transform-origin: center;
   clip-path: circle(50%);
   border-radius: 50%;
@@ -860,15 +460,7 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   width: 18px;
   height: 18px;
 }
-  @media (min-width: 550px) {
-    .faqLOGOdot {width: 20px; height: 20px;
-  }}
-  @media (min-width: 768px) {
-    .faqLOGOdot {width: 24px; height: 24px;
-  }}
-  @media (min-width: 1024px) {
-    .faqLOGOdot {width: 30px; height: 30px;
-  }}
+
 .faqBODYlist:is(:hover, :active, :focus) div a,
 .faqBODYlist:is(:hover, :active, :focus) div a strong,
 .faqBODYlist:is(:hover, :active, :focus) div a span {
@@ -879,10 +471,11 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
 .faqBODYlist div a:is(:hover, :active, :focus),
 .faqBODYlist div a:is(:hover, :active, :focus) strong,
 .faqBODYlist div a:is(:hover, :active, :focus) span {
-  color: #2a2a2a;
-  fill: #2a2a2a;
+  color: var(--arc-palette-title, #2a2a2a);
+  fill: var(--arc-palette-title, #2a2a2a);
   transition: color 0.1s ease-in-out;
 }
+
 .faqSUBindent {
   padding-left: 24px !important;
 }
@@ -920,15 +513,16 @@ body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
   position: absolute;
   padding-left: 4px;
 }
-.faqBODYlistapp svg, .faqBODYlist svg {
-fill: #6b6a69;
-color: #6b6a69;
+.faqBODYlistapp svg,
+.faqBODYlist svg {
+  fill: #6b6a69;
+  color: #6b6a69;
 }
 .faqBODYlistapp .faqBODYlistitem div a svg {
   fill: #c1bfb9;
   transition: all 0.3s ease;
 }
-  .faqBODYlistapp .faqBODYlistitem div:hover a svg {
+.faqBODYlistapp .faqBODYlistitem div:hover a svg {
   fill: #cccccc;
   transition: all 0.3s ease;
 }
@@ -947,24 +541,25 @@ color: #6b6a69;
 .faqHIDEapple,
 .faqHIDEgoogle {
   opacity: 0;
+  visibility: hidden;
+  color: transparent;
 }
 .faqBODYlistitem:has(.faqSHOWapple:is(:hover, :active, :focus)) .faqHIDEapple {
+  visibility: visible;
   opacity: 1;
+  color: #404041;
 }
-.faqBODYlistitem:has(.faqSHOWgoogle:is(:hover, :active, :focus)) .faqHIDEgoogle {
+.faqBODYlistitem:has(.faqSHOWgoogle:is(:hover, :active, :focus))
+  .faqHIDEgoogle {
   opacity: 1;
+  visibility: visible;
+  color: #404041;
 }
 .faqGRIDlistcontainGrid {
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   box-sizing: border-box;
 }
-@media (min-width: 550px) {
-.faqGRIDlistcontainGrid {
-  gap: 16px;
-}}
-
 .faqGRIDlistcard {
   box-sizing: border-box;
   display: flex;
@@ -998,51 +593,38 @@ color: #6b6a69;
   padding-bottom: 4px;
   width: 100%;
   transition: all 0.3s ease-in-out;
-}
-.faqEXTRAcontainer {
+} /* --------------------------------------------------------5. UTILITY DOWNLOAD PANELS & CONTACT US BLOCKS-------------------------------------------------------- */
+.faqEXTRAcontainer,
+.faqBOXcontactus {
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
-  gap: 6px;
+  gap: 10px;
+  position: relative;
 }
-@media (min-width: 550px) {
-  .faqEXTRAcontainer {
-    gap: 8px;
-  }
+.faqEXTRAcontainer details::before,
+.faqEXTRAcontainer details::after,
+.faqEXTRAcontainer details[open]::before,
+.faqEXTRAcontainer details[open]::after,
+.faqEXTRAcontainer details:first-child[open]::before,
+.faqEXTRAcontainer details[open]:last-child::after,
+.faqBOXcontactus details::before,
+.faqBOXcontactus details::after,
+.faqBOXcontactus details[open]::before,
+.faqBOXcontactus details[open]::after,
+.faqBOXcontactus details:first-child[open]::before,
+.faqBOXcontactus details[open]:last-child::after {
+  content: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
-@media (min-width: 768px) {
-  .faqEXTRAcontainer {
-    gap: 10px;
-  }
-}
-.faqEXTRApdfbtn div {
-  display: flex;
-  gap: 6px;
-}
-@media (min-width: 550px) {
-  .faqEXTRApdfbtn div {
-    align-items: center;
-    gap: 8px;
-  }
-}
-@media (min-width: 768px) {
-  .faqEXTRApdfbtn div {
-    gap: 10px;
-  }
-}
-.faqEXTRAvidbtn summary {
+.faqEXTRApdfbtn div,
+.faqEXTRAvidbtn summary,
+summary.faqTXTextras {
   display: inline-flex;
   gap: 6px;
-}
-@media (min-width: 550px) {
-  .faqEXTRAvidbtn summary {
-    gap: 8px;
-  }
-}
-@media (min-width: 768px) {
-  .faqEXTRAvidbtn summary {
-    gap: 10px;
-  }
+  align-items: flex-start;
+  cursor: pointer;
 }
 .faqEXTRAvidbtn summary svg {
   display: flex;
@@ -1052,41 +634,45 @@ color: #6b6a69;
   align-self: center;
   display: inline-block;
 }
-summary.faqTXTextras {
-  display: flex;
-  align-items: flex-start;
-  cursor: pointer;
-}
 summary.faqTXTextras span {
   margin-top: 0;
   line-height: 1.2;
 }
-.faqBOXcontactus {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.faqEXTRAcontainer details[open] summary {
+  margin-bottom: 16px;
+}
+.faqEXTRAcontainer details[open] summary svg {
+  background-color: #404041;
+  transform: rotate(180deg);
+}
+.faqEXTRAcontainer details[open] summary svg,
+.faqEXTRAcontainer details summary svg {
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRAcontainer details[open] summary::before {
+  content: "\2715";
+  z-index: 500;
+  color: #f8f5f0;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks) svg {
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:hover) svg,
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:focus) svg {
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:hover) svg,
+.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:focus) svg {
+  transform: rotate(-90deg);
+  transition: all 0.3s ease-in-out;
 }
 .faqBOXcontactus div,
 .faqBOXcontactus div a {
   display: flex;
-}
-@media (max-width: 549px) {
-  .faqBOXcontactus div,
-  .faqBOXcontactus div a {
-    gap: 6px;
-  }
-}
-@media (550px <= width <= 767px) {
-  .faqBOXcontactus div,
-  .faqBOXcontactus div a {
-    gap: 8px;
-  }
-}
-@media (min-width: 768px) {
-  .faqBOXcontactus div,
-  .faqBOXcontactus div a {
-    gap: 10px;
-  }
 }
 .faqHOVERcustserv a svg {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -1098,7 +684,7 @@ summary.faqTXTextras span {
 .faqHOVERemail {
   display: flex;
   padding: 10px 0 10px 10px !important;
-  margin: -10px 0 -10px -10px;
+  margin: -10px 0 -10px -10px !important;
   width: 70vw;
   border: 1px solid transparent;
   background-color: transparent;
@@ -1106,11 +692,6 @@ summary.faqTXTextras span {
   transition:
     background-color 0.3s ease-in-out,
     border 0.3s ease-in-out;
-}
-@media (max-width: 549px) {
-  .faqHOVERemail {
-    width: 100%;
-  }
 }
 .faqHOVERemail:hover {
   border: 1px solid #c1bfb9;
@@ -1126,37 +707,315 @@ summary.faqTXTextras span {
 .faqHOVERemail:hover a span,
 .faqHOVERemail:hover a span strong,
 .faqHOVERemail:hover a span svg {
-  color: #2a2a2a !important;
-  fill: #2a2a2a !important;
-}
-.faqQUESTIONwrapper details:first-child[open]::before {
-  content: "";
-  display: block;
-  width: 70%;
-  height: 1px;
-  top: 0;
-  background-color: transparent;
-  margin-bottom: 12px;
-}
-.faqQUESTIONwrapper details[open]:last-child::after {
-  content: "";
-  display: block;
-  width: 70%;
-  height: 1px;
-  bottom: 0;
-  background-color: transparent;
-  margin-top: 12px;
+  color: var(--arc-palette-title, #2a2a2a) !important;
+  fill: var(--arc-palette-title, #2a2a2a) !important;
+} /* --------------------------------------------------------6. INDACTION COMPONENT (FIRST LOGO ELEMENT FLEX FIX)-------------------------------------------------------- */
+.faqBOXlogofirst div {
+  margin-top: 10px;
 }
 .faqBOXlogofirst summary span {
   display: flex;
   align-items: center;
   gap: 4px;
+} /* --------------------------------------------------------7. CHROME HIGH-CONTRAST COLOUR PRESETS & FILTERS-------------------------------------------------------- */
+.faqBODYdark {
+  background-color: var(--arc-palette-background, #ece9e1) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
-.faqBOXlogofirst summary span svg {
-  align-self: center !important;
-  margin-right: 4px;
+.faqBODYlight {
+  background-color: var(--arc-palette-background, #f8f5f0) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+.faqBODYdark .faqHEADbig,
+.faqBODYlight .faqHEADbig {
+  color: var(--arc-palette-foregroundPrimary, #404041);
+}
+.faqBODYBlue .faqHEADbig .faqHEADunderline {
+  border-bottom: 10px solid #00b7ff;
+}
+.faqBODYgold .faqHEADbig .faqHEADunderline {
+  border-bottom: 10px solid #f7be00;
+}
+.faqBODYred .faqHEADbig .faqHEADunderline {
+  border-bottom: 10px solid #ff5e5e;
+}
+.faqBODYgreen .faqHEADbig .faqHEADunderline {
+  border-bottom: 10px solid #84cc16;
+}
+.faqBODYviolet .faqHEADbig .faqHEADunderline {
+  border-bottom: 10px solid #bc69ff;
+}
+.faqBODYorange .faqHEADbig .faqHEADunderline {
+  border-bottom: 10px solid #ff8819;
+}
+.faqHEROtext .faqHEADbig a,
+.faqHEROtext:is(:hover, :active, :focus) .faqHEADbig {
+  color: #686867;
+  transition: color text-shadow 0.3s ease;
+}
+.faqHEROtext .faqHEADbig,
+.faqHEROtext .faqHEADbig:is(:hover, :active, :focus) {
+  color: #00b7ff;
+  transition: all 0.3s ease;
+}
+.hoverBlue:is(:hover, :active, :focus),
+.hoverBlue:is(:hover, :active, :focus) a {
+  color: #00b7ff !important;
+}
+.hoverGold:is(:hover, :active, :focus),
+.hoverGold:is(:hover, :active, :focus) a {
+  color: #f7be00 !important;
+  text-shadow: 0 0 30px #f7be00 !important;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.5s ease-in-out;
+}
+.hoverRed:is(:hover, :active, :focus),
+.hoverRed:is(:hover, :active, :focus) a {
+  color: #ff5e5e !important;
+  text-shadow: 0 0 30px #ff5e5e !important;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.5s ease-in-out;
+}
+.hoverGreen:is(:hover, :active, :focus),
+.hoverGreen:is(:hover, :active, :focus) a {
+  color: #84cc16 !important;
+  text-shadow: 0 0 30px #84cc16 !important;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.5s ease-in-out;
+}
+.hoverViolet:is(:hover, :active, :focus),
+.hoverViolet:is(:hover, :active, :focus) a {
+  color: #bc69ff !important;
+  text-shadow: 0 0 30px #bc69ff !important;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.5s ease-in-out;
+}
+.hoverOrange:is(:hover, :active, :focus),
+.hoverOrange:is(:hover, :active, :focus) a {
+  color: #ff8819 !important;
+  text-shadow: 0 0 30px #ff8819 !important;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.5s ease-in-out;
+}
+body:has(.faqHEROtext .hoverGold:is(:hover, :active, :focus))
+  .faqARTmag
+  div
+  img {
+  filter: hue-rotate(220deg) saturate(2);
+}
+body:has(.faqHEROtext .hoverGold:is(:hover, :active, :focus))
+  .faqHEROgriditem
+  svg {
+  color: #f7be00;
+}
+body:has(.faqHEROtext .hoverRed:is(:hover, :active, :focus))
+  .faqARTmag
+  div
+  img {
+  filter: hue-rotate(160deg) saturate(2);
+}
+body:has(.faqHEROtext .hoverRed:is(:hover, :active, :focus))
+  .faqHEROgriditem
+  svg {
+  color: #ff5e5e;
+}
+body:has(.faqHEROtext .hoverGreen:is(:hover, :active, :focus))
+  .faqARTmag
+  div
+  img {
+  filter: hue-rotate(-70deg) saturate(2);
+}
+body:has(.faqHEROtext .hoverGreen:is(:hover, :active, :focus))
+  .faqHEROgriditem
+  svg {
+  color: #84cc16;
+}
+body:has(.faqHEROtext .hoverViolet:is(:hover, :active, :focus))
+  .faqARTmag
+  div
+  img {
+  filter: hue-rotate(90deg) saturate(2);
+}
+body:has(.faqHEROtext .hoverViolet:is(:hover, :active, :focus))
+  .faqHEROgriditem
+  svg {
+  color: #bc69ff;
+}
+body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
+  .faqARTmag
+  div
+  img {
+  filter: hue-rotate(180deg) saturate(2);
+}
+body:has(.faqHEROtext .hoverOrange:is(:hover, :active, :focus))
+  .faqHEROgriditem
+  svg {
+  color: #ff8819;
+}
+.faqARTmag div img {
+  transform: translateY(0px) translateX(0px) scale(1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  animation: faqscaleAndMove linear both;
+  animation-timeline: scroll(root);
+  animation-range: exit;
+} /* --------------------------------------------------------8. HORIZONTAL NAVIGATION TRACKS & TIMELINE HANDLERS-------------------------------------------------------- */
+.faqBODYnav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: end;
+  margin-bottom: clamp(50px, 5%, 100px);
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  white-space: nowrap;
+  will-change: background-position;
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  animation: faqNAVSCROLL linear both;
+  animation-timeline: scroll(x self);
+  scroll-timeline-name: --navFAQscroll;
+  scroll-timeline-axis: inline;
+}
+.faqBODYnav:is(:hover, :active, :focus) {
+  animation-name: faqNAVSCROLLhover;
+}
+.faqBODYnav::-webkit-scrollbar {
+  height: 10px;
+}
+.faqBODYnav::-webkit-scrollbar-track {
+  height: 100%;
+  background-color: transparent;
+  border-top: 1px solid transparent;
+  width: 30px;
+  transition: all 0.3s ease;
+}
+.faqBODYnav::-webkit-scrollbar-track:is(:hover, :active, :focus) {
+  border-top: 1px solid #969491;
+}
+.faqBODYnav::-webkit-scrollbar-thumb {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.faqBODYnav::-webkit-scrollbar-thumb:is(:hover, :active, :focus) {
+  background-color: transparent;
+}
+.faqBODYnavitem {
+  align-items: end;
+  display: flex;
+  margin-right: 20px;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  border: 0;
+  text-align: left;
+  height: 80px;
+  padding-bottom: 10px;
+  border-bottom: 10px solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+}
+.faqBODYnavitem a {
+  text-decoration: none;
+  color: #969491;
+  transition: color 0.1s ease-in-out;
+}
+.faqBODYnavitem:last-child {
+  margin-right: 10%;
+}
+.faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
+  .faqBODYnavitem:not(:is(:hover, :active, :focus)) {
+  border-bottom: 10px solid transparent;
+}
+.faqBODYnav:has(.faqBODYnavitem:is(:hover, :active, :focus))
+  .faqBODYnavitem:not(:is(:hover, :active, :focus))
+  a {
+  color: #c1bfb9;
+}
+.faqBODYnav .faqBODYnavitem:is(:hover, :active, :focus) {
+  border-bottom: 10px solid #404041;
+}
+.faqBODYnav .faqBODYnavitem:is(:hover, :active, :focus) a {
+  color: #404041;
+}
+.faqBODYnav .navBlue:is(:hover, :active, :focus) {
+  border-bottom: 10px solid #00b7ff;
+}
+.faqBODYnav .navGold:is(:hover, :active, :focus) {
+  border-bottom: 10px solid #f7be00;
+}
+.faqBODYnav .navRed:is(:hover, :active, :focus) {
+  border-bottom: 10px solid #ff5e5e;
+}
+.faqBODYnav .navGreen:is(:hover, :active, :focus) {
+  border-bottom: 10px solid #84cc16;
+}
+.faqBODYnav .navViolet:is(:hover, :active, :focus) {
+  border-bottom: 10px solid #bc69ff;
+}
+.faqBODYnav .navOrange:is(:hover, :active, :focus) {
+  border-bottom: 10px solid #ff8819;
+}
+.faqBODYnav div {
+  transition: color 0.7s ease-in-out;
+}
+.faqBODYnav:is(:hover, :active, :focus) div:first-child a {
+  animation: navScroll01 linear;
+  animation-timeline: --navFAQscroll;
+}
+.faqBODYnav:is(:hover, :active, :focus) div:nth-child(2) a {
+  animation: navScroll02 linear;
+  animation-timeline: --navFAQscroll;
+}
+.faqBODYnav:is(:hover, :active, :focus) div:nth-child(3) a {
+  animation: navScroll03 linear;
+  animation-timeline: --navFAQscroll;
+}
+.faqBODYnav:is(:hover, :active, :focus) div:nth-child(4) a {
+  animation: navScroll04 linear;
+  animation-timeline: --navFAQscroll;
+}
+.faqBODYnav:is(:hover, :active, :focus) div:nth-child(5) a {
+  animation: navScroll05 linear;
+  animation-timeline: --navFAQscroll;
+}
+.faqARTcontainer {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 200;
+  width: 100vw;
+  left: 0;
+  top: 70px;
+  bottom: 0;
+  right: 0;
+  transform: translateX(5vw);
+} 
+@media (max-width: 767px) {
+  .faqALL {
+    width: 100% !important;
+    transform: none !important;
+  }
 }
 @media (max-width: 549px) {
+      .faqALL {
+    /* Snaps the main parent frame completely square with the viewport edge */
+    width: 100% !important;
+    transform: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  .faqBODYwrapper {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  /* Ensures child indentation nodes map properly when flush */
+  .faqBOXlogofirst details[open] .faqBODYlist div {
+    margin: 0 0 0 12px !important;
+  }
   .faqBODYcontainer {
     padding-bottom: 10%;
   }
@@ -1168,7 +1027,6 @@ summary.faqTXTextras span {
     font-size: clamp(16px, 5.7cqi, 32px);
   }
   .faqBODYnav {
-    margin-left: 0;
     display: none;
   }
   .faqARTcontainer {
@@ -1186,12 +1044,8 @@ summary.faqTXTextras span {
     padding-left: 0;
   }
   .faqHEROgrid {
-    display: grid;
     width: 70%;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
     gap: 8px;
-    aspect-ratio: 1 / 1;
   }
   .faqQUESTIONcontainer {
     padding-left: 20px;
@@ -1200,22 +1054,16 @@ summary.faqTXTextras span {
   .faqQUESTIONwrapper details summary {
     display: flex;
     flex-direction: row-reverse;
-    align-content: start;
-    justify-content: start;
     align-items: center;
+    justify-content: start;
     width: 90%;
     text-wrap: pretty;
   }
   .faqQUESTIONwrapper .faqANSWERbox details summary {
-    display: flex;
     flex-direction: row;
-    align-content: start;
-    justify-content: start;
-    align-items: center;
     width: 90%;
   }
   .faqQUESTIONwrapper .faqANSWERbox {
-    position: relative;
     margin-left: 16px;
     width: 80%;
   }
@@ -1235,12 +1083,12 @@ summary.faqTXTextras span {
     width: 100%;
     margin: 0;
     text-indent: -15px;
-    align-items: center;
   }
   .faqSUBindent {
     padding-left: 0 !important;
   }
-  .faqSUBindent div a span strong {
+  .faqSUBindent div a span strong,
+  .faqBODYlist strong {
     display: block;
   }
   .faqSUBaccordian summary {
@@ -1272,29 +1120,22 @@ summary.faqTXTextras span {
     flex-direction: column;
     gap: 6px !important;
     margin: 5px 0 !important;
-  }
-  .faqBODYlist strong {
-    display: block;
-  }
+  } /* Layout adjustments for the specific first component */
   .faqBOXlogofirst div {
     display: flex;
     flex-direction: column;
-    align-content: start;
-    justify-content: start;
-    align-items: start;
-  }
-  .faqBOXlogofirst {
-    margin: 10px 0;
+    gap: 4px;
   }
   .faqBOXlogofirst details summary {
-    display: flex;
     flex-direction: row;
-    align-content: start;
-    justify-content: start;
     align-items: start;
-    width: 90%;
+    width: 100%;
     margin: 4px 0;
     text-wrap: pretty;
+  }
+  .faqBOXlogofirst summary span svg {
+    align-self: start !important;
+    margin-right: 4px;
   }
   .faqBOXlogofirst summary span {
     gap: 0;
@@ -1303,7 +1144,261 @@ summary.faqTXTextras span {
     display: inline-block;
     text-wrap: wrap;
   }
+  .faqBOXlogofirst details[open] .faqBODYlist div {
+    margin: 0 0 0 16px;
+  }
+  .faqEXTRAcontainer details[open] summary::before {
+    font-size: 12px;
+    padding-left: 4.5px;
+    padding-top: 0px;
+    margin-top: -20px;
+  }
+  .faqBOXcontactus div,
+  .faqBOXcontactus div a {
+    gap: 6px;
+  }
+  .faqGRIDcontactContainer {
+    width: 99%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px !important;
+  }
+  .faqCONTACTurl p,
+  .faqCONTACThead {
+    font-weight: 600 !important;
+  }
+  .faqCONTACTicon {
+    position: absolute;
+  }
+  .faqCONTACTicon svg {
+    width: 40px;
+    height: 40px;
+  }
+  .faqGRIDcontactcard {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .faqCONTACTtext {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .faqCONTACTheader {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    padding-left: 10px;
+    gap: 0;
+  }
+  .faqCONTACTlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .faqCONTACTlinks div a {
+    gap: 4px;
+  }
+  .faqCONTACTlinks div a p,
+  .faqCONTACTaddress div {
+    font-size: 12px;
+  }
+  .faqCONTACTheader,
+  .faqCONTACTurl,
+  .faqCONTACTurl a,
+  .faqCONTACTurl a p {
+    font-size: 16px !important;
+  }
+  .faqCONTACTaddress {
+    display: block;
+    text-wrap: balance;
+    text-align: left;
+    margin-bottom: 2px;
+  }
+  .faqCONTACTaddress div {
+    display: inline !important;
+  }
+  .faqCONTACTaddress div:not(:last-child)::after {
+    content: " ";
+  }
+  .faqHOVERemail {
+    width: 100%;
+  }
+} /* Scaling Layouts for Responsive Limits (<= 767px) */
+@media (max-width: 767px) {
+  .faqQUESTIONwrapper details[open] + details:not([open]) {
+    padding-top: 16px;
+  }
+  .faqARTmag div img {
+    animation: faqscaleAndMoveSlower linear both;
+    animation-timeline: scroll(root);
+    animation-range: cover;
+  }
+  .faqBODYcontainer .faqHEADbig {
+    padding-top: clamp(10px, 10vh, 100px);
+    padding-bottom: clamp(10px, 10%, 40px);
+  }
+  .faqALL {
+    width: 100% !important;
+    transform: translateX(0%);
+  }
+  .faqMOBhide {
+    display: none;
+  }
+  .faqBODYnavitem {
+    font-size: 16px;
+  }
+  .faqQUESTIONwrapper {
+    width: 100%;
+  }
+  .faqGRIDlistcontainFlex,
+  .faqGRIDlistcard .faqGRIDlistcardSub01 {
+    flex-direction: column;
+  }
+  .faqGRIDlistcard .faqGRIDlistcardSub01 div,
+  .faqGRIDlistcardSub01 div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .faqQUESTIONwrapper details[open]::before,
+  .faqQUESTIONwrapper details[open]::after {
+    width: 90%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .faqASSETSbox span,
+  .faqTXTsub,
+  .faqTXTsub p {
+    font-size: 12px;
+  }
+  .faqBODYlistapp {
+    margin: 10px 0;
+    gap: 6px;
+  }
+  .faqBODYlistitem {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: start;
+  }
+  .faqHIDEdescription .faqHIDEapple,
+  .faqHIDEdescription .faqHIDEgoogle {
+    display: none;
+  } /* Hamburger Sheet Overlays */
+  .faqMOBnav {
+    display: block;
+  }
+  .faqMOBnav .hamburgerFAQlabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    width: 30px;
+    height: 21px;
+    z-index: 1001;
+    cursor: pointer;
+  }
+  .faqMOBnav .hamburgerFAQline {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #969491;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .faqMOBnav .faqBODYnav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: auto;
+    background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    padding: 130px 24px 40px 24px;
+    margin-bottom: 0;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    white-space: normal;
+    z-index: 100;
+    transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .faqMOBnav .faqBODYnav a {
+    border: 0 !important;
+    outline: 0 !important;
+  }
+  .faqMOBnav .faqBODYnavitem {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+  }
+  .faqMOBnav .faqBODYnavitem:last-child {
+    margin-right: 0;
+  }
+  .faqMOBnav .faqBODYnavitem a {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+  }
+  .faqMOBnav .faqBODYnav::-webkit-scrollbar {
+    display: none;
+  }
+  .toggleFAQnavcheckbox:checked ~ .faqBODYnav {
+    right: 0 !important;
+  }
+  .toggleFAQnavcheckbox:checked
+    + .hamburgerFAQlabel
+    .hamburgerFAQline:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .toggleFAQnavcheckbox:checked
+    + .hamburgerFAQlabel
+    .hamburgerFAQline:nth-child(2) {
+    opacity: 0;
+  }
+  .toggleFAQnavcheckbox:checked
+    + .hamburgerFAQlabel
+    .hamburgerFAQline:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .toggleFAQnavcheckbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
+@media (min-width: 550px) {
+  .faqTOGGLEicon {
+    width: 12px;
+    height: 12px;
+  }
+  .faqQUESTIONwrapper summary {
+    gap: 8px;
+  }
+  .faqRESETaccordian details summary {
+    gap: 8px;
+  }
+  .faqLOGOdot {
+    width: 20px;
+    height: 20px;
+  }
+  .faqGRIDlistcontainGrid {
+    gap: 16px;
+  }
+  .faqEXTRAcontainer,
+  .faqBOXcontactus {
+    gap: 8px;
+  }
+  .faqBOXlogofirst summary span svg {
+    align-self: center !important;
+    margin-right: 4px;
+  }
+} /* Medium Tablets (550px - 767px) */
 @media (550px <= width <= 767px) {
   .faqBODYwrapper {
     padding-left: 5%;
@@ -1337,441 +1432,20 @@ summary.faqTXTextras span {
   .faqTXTsub p {
     font-size: 16px;
   }
-}
-@media (max-width: 767px) {
-  .faqBODYcontainer .faqHEADbig {
-    padding-top: clamp(10px, 10vh, 100px);
-    padding-bottom: clamp(10px, 10%, 40px);
-  }
-  .faqALL {
-    max-width: 100vw !important;
-    width: 100% !important;
-    height: auto;
-    transform: translateX(0%);
-  }
-  *, *::before, *::after {
-    box-sizing: border-box;
-}
-  .faqMOBhide {
-    display: none;
-  }
-  .faqBODYnavitem {
-    font-size: 16px;
-  }
-  .faqQUESTIONwrapper {
-    width: 100%;
-  }
-  .faqGRIDlistcontainFlex,
-  .faqGRIDlistcard .faqGRIDlistcardSub01 {
-    flex-direction: column;
-  }
-  .faqGRIDlistcard .faqGRIDlistcardSub01 div,
-  .faqGRIDlistcardSub01 div {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-  .faqQUESTIONwrapper details[open]::before {
-    content: "";
-    display: block;
-    width: 90%;
-    height: 1px;
-    background-color: #c1bfb9;
-    margin-bottom: 24px;
-  }
-  .faqQUESTIONwrapper details[open]::after {
-    content: "";
-    display: block;
-    width: 90%;
-    height: 1px;
-    background-color: #c1bfb9;
-    margin-top: 24px;
-  }
-  .faqASSETSbox span,
-  .faqTXTsub,
-  .faqTXTsub p {
-    font-size: 12px;
-  }
-  .faqBODYlistapp {
-    margin: 10px 0;
-    gap: 6px;
-  }
-  .faqBODYlistitem {
-    display: flex;
-    flex-direction: row-reverse;
-    align-self: start;
-  }
-  .faqHIDEdescription .faqHIDEapple,
-  .faqHIDEdescription .faqHIDEgoogle {
-    display: none;
-  }
-}
-@media (width <= 990px) {
-  .faqEXTRApdfbtn {
-    position: relative;
-  }
-}
-@media (768px <= width <= 1023px) {
-  .faqBODYwrapper {
-    padding-left: calc((100vw - 768px) / 2 + 5%);
-  }
-  .faqHEADbig {
-    font-size: 44px;
-  }
-  .faqBODYnav {
-    margin-left: calc((100cqw - 768px) / 2 + 5%);
-  }
-  .faqBODYnavitem {
-    font-size: 17px;
-  }
-  .faqARTcontainer {
-    margin-left: calc(((100vw - 768px) / 2) - 100px);
-    margin-top: 85px;
-  }
-  .faqTXTquestion {
-    font-size: 22px;
-  }
-  .faqTXTanswer {
-    font-size: 19px;
-  }
-  .faqASSETSbox span,
-  .faqTXTsub,
-  .faqTXTsub p {
-    font-size: 16px;
-  }
-  .faqQUESTIONwrapper {
-    width: 768px;
-  }
-}
-@media (1024px <= width <= 1279px) {
-  .faqBODYwrapper {
-    padding-left: calc((100vw - 1024px) / 2 + 5%);
-  }
-  .faqHEADbig {
-    font-size: 54px;
-  }
-  .faqBODYnav {
-    margin-left: calc((100cqw - 1024px) / 2 + 5%);
-  }
-  .faqBODYnavitem {
-    font-size: 18px;
-  }
-  .faqARTcontainer {
-    margin-left: calc(((100vw - 1024px) / 2) - 111px);
-    margin-top: 65px;
-  }
-  .faqTXTquestion {
-    font-size: 24px;
-  }
-  .faqTXTanswer {
-    font-size: 20px;
-  }
-  .faqASSETSbox span,
-  .faqTXTsub,
-  .faqTXTsub p {
-    font-size: 18px;
-  }
-  .faqQUESTIONwrapper {
-    width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-  .faqBODYwrapper {
-    margin-left: calc((100cqw - 1280px) / 2 + 5%);
-  }
-  .faqHEADbig {
-    font-size: 54px;
-  }
-  .faqBODYnav {
-    margin-left: calc((100cqw - 1280px) / 2 + 5%);
-  }
-  .faqBODYnavitem {
-    font-size: 18px;
-  }
-  .faqARTcontainer {
-    margin-left: calc(((100vw - 1280px) / 2) - 111px);
-    margin-top: 65px;
-  }
-  .faqTXTquestion {
-    font-size: 26px;
-  }
-  .faqTXTanswer {
-    font-size: 22px;
-  }
-  .faqASSETSbox span,
-  .faqTXTsub,
-  .faqTXTsub p {
-    font-size: 20px;
-  }
-  .faqQUESTIONwrapper {
-    width: 1280px;
-  }
-}
-.faqEXTRAcontainer {
-  position: relative;
-}
-.faqEXTRAcontainer details::before,
-.faqEXTRAcontainer details::after,
-.faqEXTRAcontainer details[open]::before,
-.faqEXTRAcontainer details[open]::after,
-.faqEXTRAcontainer details:first-child[open]::before,
-.faqEXTRAcontainer details[open]:last-child::after,
-.faqBOXcontactus details::before,
-.faqBOXcontactus details::after,
-.faqBOXcontactus details[open]::before,
-.faqBOXcontactus details[open]::after,
-.faqBOXcontactus details:first-child[open]::before,
-.faqBOXcontactus details[open]:last-child::after {
-  content: none;
-  height: 0;
-  margin: 0;
-  padding: 0;
-}
-.faqEXTRAcontainer details[open] summary {
-  margin-bottom: 16px;
-}
-.faqEXTRAcontainer details[open] summary svg {
-  background-color: #404041;
-  transform: rotate(180deg);
-  transition: all 0.3s ease-in-out;
-}
-.faqEXTRAcontainer details summary svg {
-  transition: all 0.3s ease-in-out;
-}
-.faqEXTRAcontainer details[open] summary::before {
-  content: "\2715";
-  z-index: 500;
-  color: #f8f5f0;
-  position: absolute;
-  transition: all 0.3s ease-in-out;
-}
-
-@media (max-width: 549px) {
-  .faqEXTRAcontainer details[open] summary::before {
-    font-size: 12px;
-    padding-left: 4.5px;
-    padding-top: 0px;
-    margin-top: -20px;
-  }
-}
-@media (550px <= width <= 767px) {
   .faqEXTRAcontainer details[open] summary::before {
     font-size: 14px;
     padding-left: 4.5px;
     padding-top: 1px;
   }
-}
-@media (768px <= width <= 1023px) {
-  .faqEXTRAcontainer details[open] summary::before {
-    font-size: 16px;
-    padding-left: 6px;
-    padding-top: 1px;
-  }
-}
-@media (min-width: 1024px) {
-  .faqEXTRAcontainer details[open] summary::before {
-    font-size: 21px;
-    padding-left: 7px;
-    padding-top: 1px;
-  }
-}
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks) svg {
-  transform: rotate(0deg);
-  transition: all 0.3s ease-in-out;
-}
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:hover) svg,
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:focus) svg {
-  transform: rotate(90deg);
-  transition: all 0.3s ease-in-out;
-}
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:hover) svg,
-.faqEXTRApdfbtn:has(.faqEXTRApdflinks a:first-child:focus) svg {
-  transform: rotate(-90deg);
-  transition: all 0.3s ease-in-out;
-}
-@media (550px <= width <= 767px) {
   .faqEXTRAcontainer {
     width: 70vw;
     min-width: 450px;
   }
-}
-.faqGRIDcontactContainer {
-  display: grid;
-  box-sizing: border-box;
-  gap: 20px;
-  margin-right: 5%;
-  padding-right: 2.5%;
-  margin-bottom: 20px;
-}
-@media (max-width: 549px) {
-  .faqGRIDcontactContainer {
-    width: 99%;
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media (550px <= width <= 767px) {
   .faqGRIDcontactContainer {
     width: calc(50cqw + 275px);
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
   }
-}
-@media (768px <= width <= 1023px) {
-  .faqGRIDcontactContainer {
-    width: calc(50cqw + 384px);
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (1024px <= width <= 1279px) {
-  .faqGRIDcontactContainer {
-    width: calc(50cqw + 512px);
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (1280px <= width <= 1749px) {
-  .faqGRIDcontactContainer {
-    width: calc(50cqw + 640px);
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (min-width: 1750px) {
-  .faqGRIDcontactContainer {
-    width: 99%;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(clamp(100px, 15vw, 180px), 1fr)
-  );
-  max-width: min(calc((200px * 8) + (16px * 7)), 100%);
-  margin: 0 10px 0 0;
-  width: 100%;
-  gap: clamp(10px, 1.2vw, 16px);
-  }
-}
-.faqCONTACTicon svg {
-  color: #ff8819;
-  transition: all 0.3s ease-in-out;
-}
-.faqGRIDcontactcard {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  color: #404041;
-  fill: #404041;
-  font-weight: 500;
-  line-height: 1.4;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-.faqCONTACTtext {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.faqCONTACTheader {
-  display: flex;
-  flex-direction: column;
-}
-.faqCONTACThead {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 600;
-  text-wrap: balance;
-}
-.faqCONTACTurl a,
-.faqCONTACTurl {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 600;
-  color: #404041;
-  transition: all 0.3s ease-in-out;
-}
-.faqCONTACTaddress {
-  display: flex;
-  flex-direction: column;
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 500;
-}
-.faqCONTACTlinks {
-  display: flex;
-  flex-direction: column;
-}
-.faqCONTACTlinks div a {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.faqCONTACTlinks div a svg {
-  fill: #6b6a69;
-}
-@media (max-width: 549px) {
-  .faqGRIDcontactContainer {
-    gap: 10px !important;
-  }
-  .faqCONTACTurl p {
-    font-weight: 600 !important;
-  }
-  .faqCONTACTicon {
-    position: absolute;
-  }
-  .faqCONTACTicon svg {
-    width: 40px;
-    height: 40px;
-  }
-  .faqGRIDcontactcard {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .faqCONTACTtext {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .faqCONTACTheader {
-    display: flex;
-    flex-direction: column;
-    margin-left: 40px;
-    padding-left: 10px;
-    gap: 0;
-  }
-  .faqCONTACTlinks {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    font-size: 12px;
-  }
-  .faqCONTACTlinks div a {
-    gap: 4px;
-  }
-  .faqCONTACTlinks div a p, .faqCONTACTaddress div {
-    font-size: 12px;
-  }
-  .faqCONTACTheader,
-  .faqCONTACTurl,
-  .faqCONTACTurl a,
-  .faqCONTACTurl a p {
-    font-size: 16px !important;
-  }
-  .faqCONTACTtext {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .faqCONTACThead {
-    font-weight: 800;
-  }
-  .faqCONTACTaddress {
-    display: block;
-    text-wrap: balance;
-    text-align: left;
-    margin-bottom: 2px;
-  }
-  .faqCONTACTaddress div {
-    display: inline !important;
-  }
-  .faqCONTACTaddress div:not(:last-child)::after {
-    content: " ";
-  }
-}
-@media (550px <= width <= 767px) {
   .faqCONTACTicon svg {
     width: 70px;
     height: 70px;
@@ -1809,27 +1483,137 @@ summary.faqTXTextras span {
     font-size: 16px;
     flex-direction: row;
   }
+} /* Widescreen Displays & Workstations */
+@media (min-width: 768px) {
+  .faqQUESTIONwrapper details[open] .faqQUESTIONmain {
+    padding-top: 16px;
+  }
+  .faqQUESTIONwrapper .faqQUESTIONmain svg {
+    align-self: center;
+    transform: translateY(0px);
+  }
+  .faqSUBaccordian summary svg {
+    align-self: center;
+    transform: translate(0px, 0px) rotate(0deg) scale(1, 1);
+  }
+  .faqSUBaccordian[open] summary svg {
+    transform: translate(0px, 0px) rotate(90deg) scale(1, 1.2);
+  }
+  .faqRESETaccordian details summary svg {
+    align-self: center;
+    transform: translate(0px, 0px);
+  }
+  .faqLOGOdot {
+    width: 24px;
+    height: 24px;
+  }
+  .faqMOBnav {
+    display: none;
+  }
 }
 @media (768px <= width <= 1023px) {
+  .faqBODYwrapper {
+    padding-left: calc((100vw - 768px) / 2 + 5%);
+  }
+  .faqHEADbig {
+    font-size: 44px;
+  }
+  .faqBODYnav {
+    margin-left: calc((100cqw - 768px) / 2 + 5%);
+  }
+  .faqBODYnavitem {
+    font-size: 17px;
+  }
+  .faqARTcontainer {
+    margin-left: calc(((100vw - 768px) / 2) - 100px);
+    margin-top: 85px;
+  }
+  .faqTXTquestion {
+    font-size: 22px;
+  }
+  .faqTXTanswer {
+    font-size: 19px;
+  }
+  .faqASSETSbox span,
+  .faqTXTsub,
+  .faqTXTsub p {
+    font-size: 16px;
+  }
+  .faqQUESTIONwrapper {
+    width: 768px;
+  }
+  .faqEXTRAcontainer details[open] summary::before {
+    font-size: 16px;
+    padding-left: 6px;
+    padding-top: 1px;
+  }
+  .faqGRIDcontactContainer {
+    width: calc(50cqw + 384px);
+    grid-template-columns: repeat(2, 1fr);
+  }
   .faqCONTACTheader,
   .faqCONTACTurl,
   .faqCONTACTurl a,
   .faqCONTACTurl a p {
     font-size: 22px !important;
   }
-  .faqCONTACTaddress {
-    font-size: 16px;
-    flex-direction: row;
-  }
+  .faqCONTACTaddress,
   .faqCONTACTlinks {
     font-size: 16px;
+  }
+  .faqCONTACTlinks {
     gap: 8px;
   }
   .faqCONTACTlinks div a {
     gap: 8px;
+  }
+}
+@media (min-width: 1024px) {
+  .faqLOGOdot {
+    width: 30px;
+    height: 30px;
   }
 }
 @media (1024px <= width <= 1279px) {
+  .faqBODYwrapper {
+    padding-left: calc((100vw - 1024px) / 2 + 5%);
+  }
+  .faqHEADbig {
+    font-size: 54px;
+  }
+  .faqBODYnav {
+    margin-left: calc((100cqw - 1024px) / 2 + 5%);
+  }
+  .faqBODYnavitem {
+    font-size: 18px;
+  }
+  .faqARTcontainer {
+    margin-left: calc(((100vw - 1024px) / 2) - 111px);
+    margin-top: 65px;
+  }
+  .faqTXTquestion {
+    font-size: 24px;
+  }
+  .faqTXTanswer {
+    font-size: 20px;
+  }
+  .faqASSETSbox span,
+  .faqTXTsub,
+  .faqTXTsub p {
+    font-size: 18px;
+  }
+  .faqQUESTIONwrapper {
+    width: 1024px;
+  }
+  .faqEXTRAcontainer details[open] summary::before {
+    font-size: 21px;
+    padding-left: 7px;
+    padding-top: 1px;
+  }
+  .faqGRIDcontactContainer {
+    width: calc(50cqw + 512px);
+    grid-template-columns: repeat(3, 1fr);
+  }
   .faqCONTACTheader,
   .faqCONTACTurl,
   .faqCONTACTurl a,
@@ -1854,75 +1638,55 @@ summary.faqTXTextras span {
     gap: 8px;
   }
 }
-@media (1280px <= width <= 1749px) {
-  .faqCONTACTlinks div a svg {
-    display: none;
-    fill: #6b6a69;
+@media (max-width: 1279px) {
+  .faqCONTACTlinks:hover div a svg {
+    fill: #c1bfb9;
+    transition: fill 0.3s ease-in-out;
   }
-  .faqCONTACTheader,
-  .faqCONTACTurl,
-  .faqCONTACTurl a,
-  .faqCONTACTurl a p {
-    font-size: 22px !important;
+  .faqCONTACTlinks:hover div a p {
+    color: #c1bfb9;
+    transition: color 0.3s ease-in-out;
   }
-  .faqCONTACTaddress {
-    font-size: 18px;
-    display: inline;
+  .faqCONTACTlinks div:hover a svg {
+    fill: #404041;
+    transition: fill 0.3s ease-in-out;
   }
-  .faqCONTACTaddress div {
-    display: inline;
-  }
-  .faqCONTACTaddress div:first-child {
-    display: block;
-  }
-  .faqCONTACTlinks {
-    font-size: 16px;
-  }
-}
-@media (min-width: 1750px) {
-  .faqCONTACTlinks div a svg {
-    display: none;
-    fill: #6b6a69;
-  }
-  .faqCONTACTheader {
-    width: 140px;
-  }
-  .faqCONTACTlinks {
-    font-size: 14px;
-  }
-  .faqCONTACTaddress {
-    font-size: 14px;
-    display: inline;
-    text-wrap: balance;
-  }
-  .faqCONTACTaddress div {
-    display: inline;
-  }
-  .faqCONTACTaddress div:first-child {
-    display: inline;
-  }
-}
-.faqGRIDcontactContainer .faqGRIDcontactcard {
-  filter: grayscale(0);
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-@media (hover: hover) and (pointer: fine) {
-  .faqGRIDcontactContainer:hover .faqGRIDcontactcard {
-    filter: grayscale(100%);
-    opacity: 0.5;
-  }
-  .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
-    filter: grayscale(0);
-    opacity: 1;
-  }
-}
-@media (hover: none) {
-  .faqGRIDcontactContainer .faqGRIDcontactcard:active {
-    opacity: 0.7; 
+  .faqCONTACTlinks div:hover a p {
+    color: #404041;
+    transition: color 0.3s ease-in-out;
   }
 }
 @media (min-width: 1280px) {
+  .faqBODYwrapper {
+    margin-left: calc((100cqw - 1280px) / 2 + 5%);
+  }
+  .faqHEADbig {
+    font-size: 54px;
+  }
+  .faqBODYnav {
+    margin-left: calc((100cqw - 1280px) / 2 + 5%);
+  }
+  .faqBODYnavitem {
+    font-size: 18px;
+  }
+  .faqARTcontainer {
+    margin-left: calc(((100vw - 1280px) / 2) - 111px);
+    margin-top: 65px;
+  }
+  .faqTXTquestion {
+    font-size: 26px;
+  }
+  .faqTXTanswer {
+    font-size: 22px;
+  }
+  .faqASSETSbox span,
+  .faqTXTsub,
+  .faqTXTsub p {
+    font-size: 20px;
+  }
+  .faqQUESTIONwrapper {
+    width: 1280px;
+  }
   .faqCONTACTlinks div a svg {
     display: none;
     fill: #c1bfb9;
@@ -1953,295 +1717,182 @@ summary.faqTXTextras span {
     transition: color 0.3s ease-in-out;
   }
 }
-@media (max-width: 1279px) {
-  .faqCONTACTlinks:hover div a svg {
-    fill: #c1bfb9;
-    transition: fill 0.3s ease-in-out;
+@media (1280px <= width <= 1749px) {
+  .faqCONTACTlinks div a svg {
+    display: none;
+    fill: #6b6a69;
   }
-  .faqCONTACTlinks:hover div a p {
-    color: #c1bfb9;
-    transition: color 0.3s ease-in-out;
+  .faqGRIDcontactContainer {
+    width: calc(50cqw + 640px);
+    grid-template-columns: repeat(4, 1fr);
   }
-  .faqCONTACTlinks div:hover a svg {
-    fill: #404041;
-    transition: fill 0.3s ease-in-out;
+  .faqCONTACTheader,
+  .faqCONTACTurl,
+  .faqCONTACTurl a,
+  .faqCONTACTurl a p {
+    font-size: 22px !important;
   }
-  .faqCONTACTlinks div:hover a p {
-    color: #404041;
-    transition: color 0.3s ease-in-out;
-  }
-}
-@media (min-width: 768px) {
-  .faqMOBnav {
-    display: none; 
-  }}
-  .faqMOBnav label {
-            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    transform-origin: center;
-    animation: lineSlideIn linear both;
-    animation-timeline: scroll(root);
-    animation-range: normal 30% normal 45%;
-  }
-@media (max-width: 767px) {
-  .faqMOBnav {
-    display: block; 
-  }
-  .faqMOBnav .hamburgerFAQlabel {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-    top: 120px;
-    right: 20px;
-    width: 30px;
-    height: 21px;
-    z-index: 1001;
-    cursor: pointer;
-  }
-  .faqMOBnav .hamburgerFAQline {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #a6a49f;
-    border-radius: 2px;
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-  .faqMOBnav .faqBODYnav {
-    display: flex; 
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: auto;
-    background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-    flex-direction: column;
-    align-content: flex-start;
-    justify-content: flex-start;
-    padding: 130px 24px 40px 24px;
-    margin-bottom: 0;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    white-space: normal;
-    z-index: 100;
-    transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-    .faqMOBnav .faqBODYnav a {
-      border: 0 !important;
-    outline: 0 !important;}
-    
-  .faqMOBnav .faqBODYnavitem {
-    width: 100%;
-    height: auto;
-    margin-right: 0;
-    padding: 15px 0;
-    align-items: center;
-  }
-  .faqMOBnav .faqBODYnavitem:last-child { margin-right: 0; }
-  .faqMOBnav .faqBODYnavitem a {
-    display: block;
-    width: 100%;
+  .faqCONTACTaddress {
     font-size: 18px;
+    display: inline;
   }
-  .faqMOBnav .faqBODYnav::-webkit-scrollbar { display: none; }
-  .toggleFAQnavcheckbox:checked ~ .faqBODYnav { 
-    right: 0 !important; 
+  .faqCONTACTaddress div {
+    display: inline;
   }
-  .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(1) { 
-    transform: translateY(9px) rotate(45deg); 
-        background-color: #00b7ff;
+  .faqCONTACTaddress div:first-child {
+    display: block;
   }
-  .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(2) { 
-    opacity: 0; 
-        background-color: #00b7ff;
-  }
-  .toggleFAQnavcheckbox:checked + .hamburgerFAQlabel .hamburgerFAQline:nth-child(3) { 
-    transform: translateY(-9px) rotate(-45deg); 
-        background-color: #00b7ff;
-  }
-  .toggleFAQnavcheckbox {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
+  .faqCONTACTlinks {
+    font-size: 16px;
   }
 }
-  @keyframes lineSlideIn {
-    0% {
-      transform: translateX(100vw);
-      opacity: 1;
-    }
-    21% {
-      transform: translateX(0);
-      opacity: 1;
-    }
+@media (min-width: 1750px) {
+  .faqGRIDcontactContainer {
+    width: 100%;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(clamp(100px, 15vw, 180px), 1fr)
+    );
+    max-width: min(calc((200px * 8) + (16px * 7)), 100%);
+    margin: 0 10px 0 0;
+    gap: clamp(10px, 1.2vw, 16px);
   }
-
-@keyframes faqNAVSCROLLnonhover {
+  .faqCONTACTheader {
+    width: 140px;
+  }
+  .faqCONTACTlinks,
+  .faqCONTACTaddress {
+    font-size: 14px;
+  }
+  .faqCONTACTaddress {
+    display: inline;
+    text-wrap: balance;
+  }
+  .faqCONTACTaddress div {
+    display: inline;
+  }
+  .faqCONTACTaddress div:first-child {
+    display: inline;
+  }
+}
+@media (width <= 990px) {
+  .faqEXTRApdfbtn {
+    position: relative;
+  }
+} /* Pointer interaction rulesets */
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .faqQUESTIONwrapper:has(details[open]) details:not([open]):hover {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .faqQUESTIONwrapper:has(details[open]) details:not([open]):active,
+  .faqQUESTIONwrapper:has(details[open]) details:not([open]):focus {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+.faqGRIDcontactContainer .faqGRIDcontactcard {
+  filter: grayscale(0);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .faqGRIDcontactContainer:hover .faqGRIDcontactcard {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+  .faqGRIDcontactContainer .faqGRIDcontactcard:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .faqGRIDcontactContainer .faqGRIDcontactcard:active {
+    opacity: 0.7;
+  }
+} /* --------------------------------------------------------10. HARD KEYFRAME SCROLL SCROLLTIMING SCHEMES-------------------------------------------------------- */
+@keyframes faqNAVSCROLL {
   0% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 14% 10px;
-    background-position: left bottom;
+    background: linear-gradient(#969491) no-repeat left bottom / 14% 10px;
   }
   1% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 1% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 1% bottom / 10% 10px;
   }
   10% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 14% 10px;
-    background-position: 10% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 10% bottom / 14% 10px;
   }
   20% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 28% 10px;
-    background-position: 20% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 20% bottom / 28% 10px;
   }
   30% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 40% 10px;
-    background-position: 30% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 30% bottom / 40% 10px;
   }
   40% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 45% 10px;
-    background-position: 40% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 40% bottom / 45% 10px;
   }
   50% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 50% 10px;
-    background-position: 50% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 50% bottom / 50% 10px;
   }
   60% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 50% 10px;
-    background-position: 60% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 60% bottom / 50% 10px;
   }
   70% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 45% 10px;
-    background-position: 70% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 70% bottom / 45% 10px;
   }
   80% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 40% 10px;
-    background-position: 80% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 80% bottom / 40% 10px;
   }
   90% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 35% 10px;
-    background-position: 90% bottom;
-  }
-  99% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 33% 10px;
-    background-position: 98% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 90% bottom / 35% 10px;
   }
   100% {
-    background: linear-gradient(#c1bfb9);
-    background-repeat: no-repeat;
-    background-size: 33% 10px;
-    background-position: 98% bottom;
+    background: linear-gradient(#c1bfb9) no-repeat 98% bottom / 33% 10px;
   }
 }
 @keyframes faqNAVSCROLLhover {
   0% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 14% 10px;
-    background-position: left bottom;
+    background: linear-gradient(#969491) no-repeat left bottom / 14% 10px;
   }
   1% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 10% 10px;
-    background-position: 1% bottom;
+    background: linear-gradient(#969491) no-repeat 1% bottom / 10% 10px;
   }
   10% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 14% 10px;
-    background-position: 10% bottom;
+    background: linear-gradient(#969491) no-repeat 10% bottom / 14% 10px;
   }
   20% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 28% 10px;
-    background-position: 20% bottom;
+    background: linear-gradient(#969491) no-repeat 20% bottom / 28% 10px;
   }
   30% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 40% 10px;
-    background-position: 30% bottom;
+    background: linear-gradient(#969491) no-repeat 30% bottom / 40% 10px;
   }
   40% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 45% 10px;
-    background-position: 40% bottom;
+    background: linear-gradient(#969491) no-repeat 40% bottom / 45% 10px;
   }
   50% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 50% 10px;
-    background-position: 50% bottom;
+    background: linear-gradient(#969491) no-repeat 50% bottom / 50% 10px;
   }
   60% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 50% 10px;
-    background-position: 60% bottom;
+    background: linear-gradient(#969491) no-repeat 60% bottom / 50% 10px;
   }
   70% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 45% 10px;
-    background-position: 70% bottom;
+    background: linear-gradient(#969491) no-repeat 70% bottom / 45% 10px;
   }
   80% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 40% 10px;
-    background-position: 80% bottom;
+    background: linear-gradient(#969491) no-repeat 80% bottom / 40% 10px;
   }
   90% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 35% 10px;
-    background-position: 90% bottom;
-  }
-  99% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 33% 10px;
-    background-position: 98% bottom;
+    background: linear-gradient(#969491) no-repeat 90% bottom / 35% 10px;
   }
   100% {
-    background: linear-gradient(#969491);
-    background-repeat: no-repeat;
-    background-size: 33% 10px;
-    background-position: 98% bottom;
+    background: linear-gradient(#969491) no-repeat 98% bottom / 33% 10px;
   }
 }
 @keyframes navScroll01 {
-  0.01% {
-    color: #404041;
-  }
+  0.01%,
   20% {
-    color: #404041;
+    color: var(--arc-palette-foregroundPrimary, #404041);
   }
   25% {
     color: #969491;
@@ -2251,11 +1902,9 @@ summary.faqTXTextras span {
   1% {
     color: #969491;
   }
-  5% {
-    color: #404041;
-  }
+  5%,
   25% {
-    color: #404041;
+    color: var(--arc-palette-foregroundPrimary, #404041);
   }
   30% {
     color: #969491;
@@ -2265,11 +1914,9 @@ summary.faqTXTextras span {
   20% {
     color: #969491;
   }
-  25% {
-    color: #404041;
-  }
+  25%,
   65% {
-    color: #404041;
+    color: var(--arc-palette-foregroundPrimary, #404041);
   }
   70% {
     color: #969491;
@@ -2279,11 +1926,9 @@ summary.faqTXTextras span {
   30% {
     color: #969491;
   }
-  35% {
-    color: #404041;
-  }
+  35%,
   85% {
-    color: #404041;
+    color: var(--arc-palette-foregroundPrimary, #404041);
   }
   90% {
     color: #969491;
@@ -2293,11 +1938,9 @@ summary.faqTXTextras span {
   65% {
     color: #969491;
   }
-  70% {
-    color: #404041;
-  }
+  70%,
   100% {
-    color: #404041;
+    color: var(--arc-palette-foregroundPrimary, #404041);
   }
 }
 @keyframes faqscaleAndMove {
@@ -2327,12 +1970,12 @@ summary.faqTXTextras span {
       translateZ(2000px) scale(2);
     opacity: 1;
   }
-
   100% {
     transform: rotate(45deg) translateY(-1000px) translateX(7000px) scale(2);
     opacity: 0;
   }
 }
+
 </style>
 <div style="display: none;">
         <svg xmlns="http://www.w3.org/2000/svg">
@@ -2447,7 +2090,7 @@ summary.faqTXTextras span {
                 </div>
                 <div class="faqHEROtext">
                     <h1 class="faqHEADbig">How can we help you?</h1>
-                    <h1 class="faqHEADbig hoverGold"><a href="#Register">How do I register/sign in?</a></h1>
+                    <h1 class="faqHEADbig hoverGold"><a href="#Register"><strong>How do I register/sign in?</strong></a></h1>
                     <h1 class="faqHEADbig hoverRed"><a href="#Access">How do I access the paper?</a></h1>
                     <h1 class="faqHEADbig hoverGreen"><a href="#Navigate">How do I navigate the paper?</a></h1>
                     <h1 class="faqHEADbig hoverViolet"><a href="#Account">How do I manage my account?</a></h1>
@@ -2489,31 +2132,31 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount.mlive.com/bc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Bay City Times logo"><use xlink:href="#BayCityTimesSolid"></use></svg>
-                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount.mlive.com/fj">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Flint Journal logo"><use xlink:href="#FlintJournalSolid"></use></svg>
-                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount.mlive.com/gr">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Grand Rapids Press logo"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
-                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Jackson Citizen Patriot logo"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
-                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                         </a></div>
                                     </div>
                                 </details></div>
@@ -2561,36 +2204,36 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount.mlive.com/bc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Bay City Times logo"><use xlink:href="#BayCityTimesSolid"></use></svg>
-                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount.mlive.com/fj">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Flint Journal logo"><use xlink:href="#FlintJournalSolid"></use></svg>
-                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount.mlive.com/gr">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Grand Rapids Press logo"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
-                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Jackson Citizen Patriot logo"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.comjp</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
-                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                         </a></div>
                                     </div>
                                 </details></div>
                                 <div><p>●&nbsp;  If already signed in, Sign Out before proceeding.</p></div>
-                                <div><p>●&nbsp; Tap on &lsquo;REGISTER.&rsquo; Once registered, your subscription will be activated and you&rsquo;ll have immediate access to the online newspaper. Remember you can add up to four additional family or friends email addresses!</p></div>
+                                <div><p>●&nbsp; Tap on the big &lsquo;REGISTER&rsquo; button. Once registered, your subscription will be activated and you&rsquo;ll have immediate access to the online newspaper. Remember you can add up to four additional family or friends email addresses!</p></div>
                                 <div><p>●&nbsp; Tap Go or Enter to open the page.</p></div>
                                 <div><p>●&nbsp; Click the big &lsquo;ACTIVATE&rsquo; button.</p></div>
                                 <div><p>●&nbsp; Click the &lsquo;CONTINUE&rsquo; button.</p></div>
@@ -2720,31 +2363,31 @@ summary.faqTXTextras span {
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount.mlive.com/bc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Bay City Times logo"><use xlink:href="#BayCityTimesSolid"></use></svg>
-                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount.mlive.com/fj">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Flint Journal logo"><use xlink:href="#FlintJournalSolid"></use></svg>
-                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount.mlive.com/gr">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Grand Rapids Press logo"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
-                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Jackson Citizen Patriot logo"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
-                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span>
                                         </a></div>
                                         <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                             <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
+                                            <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                         </a></div>
                                     </div>
                                 </details></div>
@@ -3335,7 +2978,6 @@ summary.faqTXTextras span {
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>    
                             </div>
                             <hr class="faqHR">
@@ -3888,15 +3530,15 @@ summary.faqTXTextras span {
                             How can I sign up for Easy Pay?
                             <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg>
                         </summary>
-                        <div class="faqANSWERbox">
+                        <div class="faqANSWERbox faqRESETaccordian">
                             <div class="faqTXTanswer"><strong>You can sign up for Easy Pay</strong>&nbsp; at any time online or by phone! </div>
-                            <div class="faqBOXlogofirst faqTXTsub">
+                            <div class="faqBOXlogofirst">
                                 <div>
-                                    <details class="faqSUBaccordian" style="margin: 0 !important; padding: 0 !important;">
+                                    <details class="faqSUBaccordian">
                                         <summary>
-                                            <span>
+                                            <span style="margin: 0 !important; padding: 0 !important;">
                                                 <svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
-                                                <span><strong>Online.</strong> Visit your myAccount page. <span>Tap here to find yours.</span></span>
+                                                <span class="faqTXTsub"><strong>Online.</strong> Visit your myAccount page. Tap here to find yours.</span>
                                             </span>
                                             <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg>
                                         </summary>
@@ -3907,31 +3549,31 @@ summary.faqTXTextras span {
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/bc/home" target="_blank" aria-label="myAccount.mlive.com/bc">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Bay City Times logo"><use xlink:href="#BayCityTimesSolid"></use></svg>
-                                                <span><strong>The Bay City Times.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Bay City Times.</strong> myaccount.mlive.com/bc</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/fj/home" target="_blank" aria-label="myAccount.mlive.com/fj">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Flint Journal logo"><use xlink:href="#FlintJournalSolid"></use></svg>
-                                                <span><strong>The Flint Journal.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Flint Journal.</strong> myaccount.mlive.com/fj</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/gr/home" target="_blank" aria-label="myAccount.mlive.com/gr">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Grand Rapids Press logo"><use xlink:href="#GrandRapidsPressSolid"></use></svg>
-                                                <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Grand Rapids Press.</strong> myaccount.mlive.com/gr</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/jp/home" target="_blank" aria-label="myAccount.mlive.com/jp">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Jackson Citizen Patriot logo"><use xlink:href="#JacksonCitizenPatriotSolid"></use></svg>
-                                                <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>Jackson Citizen Patriot.</strong> myaccount.mlive.com/jp</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/kg/home" target="_blank" aria-label="myAccount.mlive.com/kg">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Kalamazoo Gazette logo"><use xlink:href="#KalamazooGazetteSolid"></use></svg>
-                                                <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>Kalamazoo Gazette.</strong> myaccount.mlive.com/kg</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/mc/home" target="_blank" aria-label="myAccount.mlive.com/mc">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Muskegon Chronicle logo"><use xlink:href="#MuskegonChronicleSolid"></use></svg>
-                                                <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>Muskegon Chronicle.</strong> myaccount.mlive.com/mc</span>
                                             </a></div>
                                             <div><a href="https://myaccount.mlive.com/sn/home" target="_blank" aria-label="myAccount.mlive.com/sn">
                                                 <svg class="faqLOGOdot" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="The Saginaw News logo"><use xlink:href="#SaginawNewsSolid"></use></svg>
-                                                <span><strong>The Saginaw News.</strong> myaccount.mlive.com/aa</span>
+                                                <span><strong>The Saginaw News.</strong> myaccount.mlive.com/sn</span>
                                             </a></div>
                                         </div>
                                     </details>
@@ -3940,8 +3582,8 @@ summary.faqTXTextras span {
                                     <details class="faqSUBaccordian"  style="margin: 0 !important; padding: 0 !important;">
                                         <summary style="margin: 0 !important; padding: 0 !important;">
                                             <span style="margin: 0 !important; padding: 0 !important;">
-                                                <svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
-                                                <span><strong>By phone.</strong> Call your customer service department from the list below.</span>
+                                                <svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#CallSolid"></use></svg>
+                                                <span class="faqTXTsub"><strong>By phone.</strong> Call your customer service department from the list below.</span>
                                             </span>
                                             <svg class="faqTOGGLEicon" aria-hidden="false" tabindex="0" role="graphics-symbol" aria-label="Toggle"><use xlink:href="#faqCaret"></use></svg>
                                         </summary>
@@ -3986,17 +3628,14 @@ summary.faqTXTextras span {
                                         <summary class="faqHOVERemail">
                                             <a href="mailto:customercare@mlive.com?subject=Help%20me%20sign%20up%20for%20Easy%20Pay!&body=I'd%20like%20to%20sign%20up%20for%20Easy%20Pay%2C%20save%20money%20and%20save%20the%20hassle%20of%20paying%20my%20monthly%20bill.%0AMy%20name%20is%3A%0AMy%20account%20number%20is%3A%0APlease%20contact%20me%20at%3A" target="_blank" aria-label="Email us at customercare@mlive.com" style="text-decoration: none;">
                                                 <span>
-                                                    <svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#Clicky"></use></svg>
-                                                    <span><strong>By email.</strong> Send us a message <span>by tapping this link.</span></span>
+                                                    <svg class="faqLOGOdot faqInitial" width="30px" height="30px" aria-hidden="true"><use xlink:href="#EmailSolid"></use></svg>
+                                                    <span class="faqTXTsub"><strong>By email.</strong> Send us a message <span>by tapping this link.</span></span>
                                                 </span>
                                             </a>
                                         </summary>
                                     </details>
                                 </div>
                             </div>
-
-                            
-
                         </div>
                     </details>
                     <details>
@@ -4304,3 +3943,7 @@ summary.faqTXTextras span {
         </div>
     </section>
 </main>
+
+
+</body>
+</html>
