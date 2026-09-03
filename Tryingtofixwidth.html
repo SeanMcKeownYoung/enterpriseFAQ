@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 <body>
 <style>
@@ -50,9 +49,31 @@
   font-weight: 900;
   font-stretch: normal;
 }
+/* Target the overall vertical scrollbar width */
+body::-webkit-scrollbar {
+  width: 16px; /* Controls vertical scrollbar thickness */
+}
+
+/* Style the track (background) */
+body::-webkit-scrollbar-track {
+  background: #262626;
+}
+
+/* Style the draggable thumb */
+body::-webkit-scrollbar-thumb {
+  background: #969491;
+  border-radius: 8px;
+}
+
+/* Style thumb on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #c1bfb9;
+}
+
 .faqALL {
   color: #404041;
   font-weight: 500;
+  font: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -69,23 +90,39 @@
 .faqALL button {
   color: inherit;
 }
-.faqALL {
-  width: 105%;
+
+.faqALLZ {
+  width: 100% !;
   display: flex;
   flex-direction: column;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
-  transform: translateX(-5%);
   overflow: hidden;
   margin: 0;
   padding: 0;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
   box-sizing: border-box;
-  font: inherit;
 }
+
+.faqALL {
+    width: 100dvw; 
+    margin-top: -8px;
+    margin-left: calc((50% - 50dvw) - 8px);
+    margin-right: calc((50% - 50dvw) - 8px);
+    padding-left: calc((50% - 50dvw) + 8px);
+    padding-right: calc((50% - 50dvw) + 8px);
+    box-sizing: border-box;
+    max-width: calc(16px + 100dvw) !important;
+    overflow-x: hidden !important;
+  }
+  
+.faqARTcontainer, 
+.faqBODYcontainer  {
+  display: none !important;
+}
+
+.faqBODYcontainer 
 .faqALL a {
   border: 0 !important;
   color: inherit;
@@ -150,12 +187,57 @@
   background-image: linear-gradient(165deg, #0d0d0d, #262626, #262626);
   filter: drop-shadow(0px 5px 10px #00000080);
 }
+.faqBETTERwrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    border: 3px solid crimson;
+}
+.faqBETTERwrapper  > * >  div{
+    padding-left: clamp(20px, 10vw, 150px);
+    border: 3px solid rgb(0, 170, 255);
+}
+@media (max-width: 549px) {
+    .faqBETTERwrapper > div{
+    width: calc(((100vw - 300px) / 2) + 300px);
+    border: 3px solid violet;
+}
+}
+@media (550px <= width <= 767px) {
+.faqBETTERwrapper > div{
+    width: 100dvw;
+    border: 3px solid rgb(0, 255, 128);
+}
+.faqBETTERwrapper  > * >  div{
+    padding-left: 0px;
+    border: 3px solid rgb(0, 170, 255);
+}
+}
+@media (768px <= width <= 1023px) {
+.faqBETTERwrapper > div{
+    width: calc(((100vw - 768px) / 2) + 768px);
+    border: 3px solid yellow;
+}
+}
+@media (1024px <= width <= 1279px) {
+.faqBETTERwrapper > div{
+    width: calc(((100vw - 1024px) / 2) + 1024px);
+    border: 3px solid cyan;
+}
+}
+@media (min-width: 1280px) {
+.faqBETTERwrapper > div{
+    width: calc(((100vw - 1280px) / 2) + 1280px);
+    border: 3px solid chartreuse;
+}
+}
 .faqHEROwrapper {
   display: grid;
   grid-template-rows: auto auto 1fr;
   gap: 80px;
   overflow: hidden;
-  padding: 300px 0 40px 0;
+  padding-top: 300px;
+  border: 3px solid coral;
 }
 .faqHEROimg {
   grid-row-start: 1;
@@ -1176,8 +1258,126 @@ summary.faqTXTextras span {
 }
 }
 @media (max-width: 549px) {
-
-  .faqBOXlogofirst div {
+  .faqBODYcontainer {
+    padding-bottom: 10%;
+  }
+  .faqQUESTIONwrapper details::before,
+  .faqQUESTIONwrapper details::after {
+    margin-bottom: 2px;
+  }
+  .faqHEADbig {
+    font-size: clamp(16px, 5.7cqi, 32px);
+  }
+  .faqBODYnav {
+    margin-left: 0;
+    display: none;
+  }
+  .faqARTcontainer {
+    width: 160%;
+    margin-left: -50px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  .faqHEROwrapper {
+    padding: calc(15vh + 50px) 20px 0 20px;
+    margin-bottom: -20px;
+    gap: 50px;
+  }
+  .faqBODYwrapper {
+    padding-left: 0;
+  }
+  .faqHEROgrid {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    aspect-ratio: 1 / 1;
+  }
+  .faqQUESTIONcontainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .faqQUESTIONwrapper details summary {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: start;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+    text-wrap: pretty;
+  }
+  .faqQUESTIONwrapper .faqANSWERbox details summary {
+    display: flex;
+    flex-direction: row;
+    align-content: start;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+  }
+  .faqQUESTIONwrapper .faqANSWERbox {
+    position: relative;
+    margin-left: 16px;
+    width: 80%;
+  }
+  .faqBOXindent {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 6px 0;
+  }
+  .faqBOXindent p {
+    padding-left: 12px;
+    text-indent: -12px;
+  }
+  .faqBOXindent details summary {
+    flex-direction: row;
+    padding: 0 0 0 16px;
+    width: 100%;
+    margin: 0;
+    text-indent: -15px;
+    align-items: center;
+  }
+  .faqSUBindent {
+    padding-left: 0 !important;
+  }
+  .faqSUBindent div a span strong {
+    display: block;
+  }
+  .faqSUBaccordian summary {
+    text-wrap: wrap !important;
+  }
+  .faqTXTquestion {
+    font-size: 16px;
+  }
+  .faqTXTanswer {
+    font-size: 14px;
+  }
+  .faqBODYlistitem > :first-child {
+    display: none;
+  }
+  .faqGRIDlistcontainGrid .faqGRIDlistcard {
+    margin: 5px 0;
+  }
+  .faqGRIDlistcontainFlex .faqGRIDlistcard {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  .faqGRIDlistcontainFlex .faqGRIDlistcardSub01 div {
+    margin: 2px 0 !important;
+  }
+  .faqGRIDlistcontainFlex .faqGRIDlistcard:has(.faqGRIDlistcardSub01) {
+    display: flex;
+    flex-direction: column;
+    gap: 6px !important;
+    margin: 5px 0 !important;
+  }
+  .faqBODYlist strong {
+    display: block;
+  }
+ .faqBOXlogofirst div {
     display: flex;
     flex-direction: column;
     align-content: start;
@@ -1196,9 +1396,8 @@ summary.faqTXTextras span {
     text-wrap: pretty;
   }
   .faqBOXlogofirst summary span svg {
-    align-self: start !important;
-    margin-right: 4px;
-  }
+  align-self: start !important;
+  margin-right: 4px;}
   .faqBOXlogofirst summary span {
     gap: 0;
   }
@@ -1206,15 +1405,112 @@ summary.faqTXTextras span {
     display: inline-block;
     text-wrap: wrap;
   }
-  .faqBOXlogofirst details[open] .faqBODYlist div {
+  .faqBOXlogofirst details[open] .faqBODYlist div   {
     margin: 0 0 0 16px;
   }
 }
-
-@media (max-width: 767px) {
-
+@media (550px <= width <= 767px) {
+  .faqBODYwrapper {
+    padding-left: 5%;
+  }
+  .faqHEADbig {
+    font-size: 36px;
+  }
+  .faqBODYnav {
+    margin-left: calc(5% + 35px);
+  }
+  .faqARTcontainer {
+    width: 100%;
+    margin-left: calc(((100vw - 549px) / 2) - 40px);
+    margin-top: 0;
+  }
+  .faqQUESTIONcontainer {
+    padding-left: 2.25rem;
+  }
+  .faqHEROwrapper {
+    padding: 150px 0 20px 36px;
+    gap: 80px;
+  }
+  .faqTXTquestion {
+    font-size: 20px;
+  }
+  .faqTXTanswer {
+    font-size: 17px;
+  }
+  .faqASSETSbox span,
+  .faqTXTsub,
+  .faqTXTsub p {
+    font-size: 16px;
+  }
 }
-
+@media (max-width: 767px) {
+  .faqBODYcontainer .faqHEADbig {
+    padding-top: clamp(10px, 10vh, 100px);
+    padding-bottom: clamp(10px, 10%, 40px);
+  }
+  .faqALL {
+    max-width: 100vw !important;
+    width: 100% !important;
+    height: auto;
+    transform: translateX(0%);
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+}
+  .faqMOBhide {
+    display: none;
+  }
+  .faqBODYnavitem {
+    font-size: 16px;
+  }
+  .faqQUESTIONwrapper {
+    width: 100%;
+  }
+  .faqGRIDlistcontainFlex,
+  .faqGRIDlistcard .faqGRIDlistcardSub01 {
+    flex-direction: column;
+  }
+  .faqGRIDlistcard .faqGRIDlistcardSub01 div,
+  .faqGRIDlistcardSub01 div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .faqQUESTIONwrapper details[open]::before {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #c1bfb9;
+    margin-bottom: 24px;
+  }
+  .faqQUESTIONwrapper details[open]::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #c1bfb9;
+    margin-top: 24px;
+  }
+  .faqASSETSbox span,
+  .faqTXTsub,
+  .faqTXTsub p {
+    font-size: 12px;
+  }
+  .faqBODYlistapp {
+    margin: 10px 0;
+    gap: 6px;
+  }
+  .faqBODYlistitem {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: start;
+  }
+  .faqHIDEdescription .faqHIDEapple,
+  .faqHIDEdescription .faqHIDEgoogle {
+    display: none;
+  }
+}
 @media (width <= 990px) {
   .faqEXTRApdfbtn {
     position: relative;
@@ -2239,7 +2535,7 @@ summary.faqTXTextras span {
     </div>
 </header>
     <div class="faqHEROcontainer faqHEROback">
-        <section class="faqBODYwrapper" id="Home">
+        <section class="faqBETTERwrapper" id="Home">
             <div class="faqHEROwrapper">
                 <div class="faqHEROimg">
                     <div class="faqHEROgrid">
