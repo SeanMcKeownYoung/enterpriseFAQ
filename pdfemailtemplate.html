@@ -59,7 +59,6 @@
     </style>
 
 <!-- CORE - no animations -->
-    <!-- STYLE BLOCK 1: Core resets and layout rules -->
     <style id="main-styles">
         img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
         table, td { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
@@ -77,8 +76,8 @@
 			.g-text-resize { font-size: 16px !important; line-height:24px !important;}
             .mobile-400 { width:400px!important; padding: 0 !important; }
 			.mobile-320 { width:320px!important; padding: 0 !important; }
-			.mobile-300 { width:300px!important;  padding: 0 !important;}
-            .mobile-200 { width:200px!important;  padding: 0 !important; }
+			.mobile-300 { width:300px!important; padding: 0 !important;}
+            .mobile-200 { width:200px!important; padding: 0 !important; }
 			.imgresize80 img {width:80% !important; height:auto !important;}
 			.imgresize70 img {width:70% !important; height:auto !important;}
 			.imgresize60 img {width:60% !important; height:auto !important; max-width: 350px !important;}
@@ -93,63 +92,8 @@
 			.logoStack img {width:240px !important; height:auto !important;}
             .heroDots td {width: 10px !important; height: 10px !important;}
             .stack {display: block !important;width: 100% !important;max-width: 100% !important;text-align: center !important;}
-
-.dropCap {
-    font-size: 34px !important; 
-    line-height: 34px !important;
-    text-align: center !important; 
-    padding-top: 0px !important;
-
-}
-      /* Force horizontal table columns to stack vertically on mobile screens */
-      .responsive-stack {
-        display: block !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        padding-bottom: 10px !important; /* Forces the requested 10px vertical gap on mobile */
-      }
-      /* Remove bottom spacing on the final stacked element to protect footer layout grids */
-      .responsive-stack-last {
-        display: block !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        padding-bottom: 0 !important;
-      }
-      /* Expand internal button wrapper width fluidly to fill mobile screen widths */
-      .button-fluid-table {
-        width: 100% !important;
-      }
-          /* Hide the branching tree chart on small mobile viewports */
-    .branch-diagram-row {
-      display: none !important;
-    }
-    .responsive-stack {
-      display: block !important;
-      width: 100% !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      padding-bottom: 10px !important;
-    }
-    .responsive-stack-last {
-      display: block !important;
-      width: 100% !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      padding-bottom: 0 !important;
-    }
-    .button-fluid-table {
-      width: 100% !important;
-    }
-    .btn-box {
-      height: auto !important;
-      padding: 15px 10px !important;
-    }
+            .dropCap {font-size: 34px !important; line-height: 34px !important; text-align: center !important; padding-top: 0px !important;}
         }
-
-
-    
     </style>
 
     <style>
@@ -166,26 +110,11 @@
     </xml>
     <![endif]-->
 
-
 <!-- ANIMATIONS -->
    <style>
-        /* Interactive hover state for links */
-        .faq-link:hover span {
-        text-decoration: underline !important;
+        .heroHover:hover .animate-top {
+            transform: translateY(-600px) rotate(-75deg) scale(2.5) !important;
         }
-    /* Hover Animation (Supported primarily in Apple Mail / iOS) */
-    .heroHover:hover .animate-top {
-      transform: translateY(-600px) rotate(-75deg) scale(2.5) !important;
-    }
-    @media only screen and (max-width: 600px) {
-    .heroHover:active .animate-top {
-      transform: translateY(-300px) rotate(-75deg) scale(1.5) !important;
-    }
-    .heroHover:focus .animate-top {
-      transform: translateY(-300px) rotate(-75deg) scale(1.5) !important;
-    }
-        }
-
         .faqBTTNgroup .CTAbttn {
             background-color: #1C1E22; 
             border: 2px solid #00b8ff;
@@ -200,6 +129,9 @@
             background-color: #1C1E22; 
             border: 2px solid #e9e9e9 !important;
             box-shadow: 0px 10px 20px 0px #1d1e22, 0px 30px 10px -15px #aaaaaa41
+        }
+        .list-item td, .list-item .link-text {
+            transition: all 0.3s ease;
         }
         .CTAbttn:is(:hover, :active, :focus) a {
             color: #e9e9e9 !important;
@@ -220,7 +152,37 @@
             background-color: #00b8ff !important;
             box-shadow: 0 0 10px #00b8ff, 0 0 40px #1d1e22, 0 0 80px #00b8ff;
         }
+        .hoverBlue:hover {
+            color: #00b7ff !important;
+            text-shadow: 0 0 30px #00b7ff !important;
+        }
+        .hoverGold:hover {
+            color: #f7be00 !important;
+            text-shadow: 0 0 30px #f7be00 !important;
+        }
+        .hoverRed:hover {
+            color: #ff5e5e !important;
+            text-shadow: 0 0 30px #ff5e5e !important;
+        }
+        .hoverGreen:hover {
+            color: #84cc16 !important;
+            text-shadow: 0 0 30px #84cc16 !important;
+        }
+        .hoverViolet:hover {
+            color: #bc69ff !important;
+            text-shadow: 0 0 30px #bc69ff !important;
+        }
+        .hoverOrange:hover {
+            color: #ff8819 !important;
+            text-shadow: 0 0 30px #ff8819 !important;
+        }
     @media only screen and (max-width: 600px) {
+        .heroHover:active .animate-top {
+            transform: translateY(-300px) rotate(-75deg) scale(1.5) !important;
+        }
+        .heroHover:focus .animate-top {
+            transform: translateY(-300px) rotate(-75deg) scale(1.5) !important;
+        }
         .list-Parent:active  {
             z-index: -500 !important;
         }
@@ -238,38 +200,6 @@
             box-shadow: 0 0 10px #00b8ff, 0 0 40px #1d1e22, 0 0 80px #00b8ff;
         }
     }
- /* Sibling dimming structure: Dims everything to gray when the container is hovered */
-  .button-group:hover .btn-box {
-    border-color: #777777 !important;
-  }
-  .button-group:hover .btn-link {
-    color: #777777 !important;
-  }
-  
-.hoverBlue:hover {
-  color: #00b7ff !important;
-  text-shadow: 0 0 30px #00b7ff !important;
-}
-.hoverGold:hover {
-  color: #f7be00 !important;
-  text-shadow: 0 0 30px #f7be00 !important;
-}
-.hoverRed:hover {
-  color: #ff5e5e !important;
-  text-shadow: 0 0 30px #ff5e5e !important;
-}
-.hoverGreen:hover {
-  color: #84cc16 !important;
-  text-shadow: 0 0 30px #84cc16 !important;
-}
-.hoverViolet:hover {
-  color: #bc69ff !important;
-  text-shadow: 0 0 30px #bc69ff !important;
-}
-.hoverOrange:hover {
-  color: #ff8819 !important;
-  text-shadow: 0 0 30px #ff8819 !important;
-}
   </style>
 
 </head>
@@ -291,8 +221,6 @@
         </td>
     </tr>
 </table>
-
-
 
 <table class="bodyBack heroHover" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#17181c; overflow: hidden;" bgcolor="17181c">
     <tr>
@@ -350,7 +278,9 @@
                             <tr>
                                 <td align="center">
                                     <table class="mobile-300" role="presentation" width="400" cellpadding="0" cellspacing="0" border="0">
-                                        <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                        <tr>
+                                            <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                        </tr>
                                         <tr>
                                             <td align="center" valign="top">
                                                 <h3 class="h3-text-resize" style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 30px; line-height: 40px; color: #e7e7e7; letter-spacing: -0.25px; -webkit-font-smoothing: antialiased;">
@@ -358,20 +288,24 @@
                                                 </h3>
                                             </td>
                                         </tr>
-                                        <tr><td height="60" style="font-size: 60px; line-height: 60px; height: 60px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                        <tr><td height="60" style="font-size: 60px; line-height: 60px; height: 60px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                         <tr>
                                             <td align="center" valign="top">
                                                 <h1 class="h1-text-resize" style="margin: 0; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 56px; line-height: 56px; color: #e7e7e7; letter-spacing: -0.25px; text-wrap: balance; -webkit-font-smoothing: antialiased;">How do I get access to the online newspaper?
                                                 </h1>
                                             </td>
                                         </tr>
-                                        <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                        <tr>
+                                            <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                        </tr>
                                         <tr>
                                             <td align="center" valign="top">
                                                 <p class="intro-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 22px; line-height: 36px; color: #e7e7e7; text-wrap: balance;"><strong>Setting up and registering your account is quick and easy. </strong>  &nbsp; Simply log in from your phone, tablet, or computer. &nbsp; Follow the steps below to get started.</p>
                                             </td>
                                         </tr>
-                                        <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                        <tr>
+                                            <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                        </tr>
                                     </table>
                                 </td>
                             </tr>
@@ -398,14 +332,17 @@
                                             <!-- STEP 1 START -->                                
                                             <td class="stack" align="center" valign="top">
                                                 <table class="mobile-100" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
-                                                    <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td class="imgresize50" align="center" valign="top">
-                                                            <!-- STEP 2 IMG (eliminate the 'style' items to remove circle crop or change to 10% for a rounded square) -->
                                                             <img src="https://placehold.co/400x400?text=Step+1" alt="Step 1" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td align="center" valign="top">
                                                             <table class="mobile-600" role="presentation" width="450" cellpadding="0" cellspacing="0" border="0" style="width: 450px; max-width: 450px; margin: 0 auto;">
@@ -431,77 +368,221 @@
                                                                 <tr>
                                                                     <td>
                                                                         <table class="list-Parent" border="0" cellpadding="0" cellspacing="0" width="400px" style="max-width: 500px; margin: 0 auto; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-                                                                            <tr><td height="30" style="font-size: 30px; line-height: 30px; height: 30px; padding: 0; margin: 0;">&nbsp;</td></tr>
-                                                                            <tr class="list-item">
-                                                                                <td valign="middle" align="center" style="text-align: center; border-radius: 20px; height: 40px; background-color: #333333; transition: all 0.3s ease;" bgcolor="#333333">
-                                                                                    <a href="https://myaccount.mlive.com/aa/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; display: block; white-space: nowrap; transition: all 0.3s ease;">
-                                                                                    <strong>The Ann Arbor News. </strong>myaccount.mlive.com/aa
-                                                                                    </a>
+                                                                            <tr><td height="30" style="font-size: 30px; line-height: 30px; height: 30px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                                            <tr>
+                                                                                <td align="center" valign="middle">
+                                                                                    <!--[if mso]>
+                                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://myaccount.mlive.com/aa/home" style="height:40px;v-text-anchor:middle;width:320px;" arcsize="50%" stroke="f" fillcolor="#333333">
+                                                                                        <w:anchorlock/>
+                                                                                        <center style="color:#e7e7e7;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;">
+                                                                                            <strong>The Ann Arbor News. </strong>myaccount.mlive.com/aa
+                                                                                        </center>
+                                                                                    </v:roundrect>
+                                                                                    <![endif]-->
+                                                                                    
+                                                                                    <!--[if !mso]><!-->
+                                                                                    <table class="list-item" cellspacing="0" cellpadding="0" border="0" role="presentation">
+                                                                                        <tr>
+                                                                                            <td valign="middle" align="center" height="40" width="320"  style="text-align: center; border-radius: 20px; height: 40px; width: 320px; background-color: #333333; padding: 0 20px;" bgcolor="#333333">
+                                                                                                <a href="https://myaccount.mlive.com/aa/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap;">
+                                                                                                    <strong>The Ann Arbor News. </strong>myaccount.mlive.com/aa
+                                                                                                </a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <!--<![endif]-->
                                                                                 </td>
                                                                             </tr>
-                                                                            <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
-                                                                            <tr class="list-item">
-                                                                                <td valign="middle" align="center" style="text-align: center; border-radius: 20px; height: 40px;" bgcolor="#333333">
-                                                                                    <a href="https://myaccount.mlive.com/bc/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; display: block; white-space: nowrap; transition: all 0.3s ease;">
-                                                                                    <strong>The Bay City Times. </strong>myaccount.mlive.com/bc
-                                                                                    </a>
+                                                                            <tr>
+                                                                                <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center" valign="middle">
+                                                                                    <!--[if mso]>
+                                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://myaccount.mlive.com/bc/home" style="height:40px;v-text-anchor:middle;width:320px;" arcsize="50%" stroke="f" fillcolor="#333333">
+                                                                                        <w:anchorlock/>
+                                                                                        <center style="color:#e7e7e7;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;">
+                                                                                            <strong>The Bay City Times. </strong>myaccount.mlive.com/bc
+                                                                                        </center>
+                                                                                    </v:roundrect>
+                                                                                    <![endif]-->
+                                                                                    
+                                                                                    <!--[if !mso]><!-->
+                                                                                    <table class="list-item" cellspacing="0" cellpadding="0" border="0" role="presentation">
+                                                                                        <tr>
+                                                                                            <td valign="middle" align="center" height="40" width="320"  style="text-align: center; border-radius: 20px; height: 40px; width: 320px; background-color: #333333; padding: 0 20px;" bgcolor="#333333">
+                                                                                                <a href="https://myaccount.mlive.com/bc/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap;">
+                                                                                                    <strong>The Bay City Times. </strong>myaccount.mlive.com/bc
+                                                                                                </a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <!--<![endif]-->
                                                                                 </td>
                                                                             </tr>
-                                                                            <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
-                                                                            <tr class="list-item">
-                                                                                <td valign="middle" align="center" style="text-align: center; border-radius: 20px; height: 40px;" bgcolor="#333333">
-                                                                                    <a href="https://myaccount.mlive.com/fj/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; display: block; white-space: nowrap; transition: all 0.3s ease;">
-                                                                                    <strong>The Flint Journal. </strong> myaccount.mlive.com/fj
-                                                                                    </a>
+                                                                            <tr>
+                                                                                <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center" valign="middle">
+                                                                                    <!--[if mso]>
+                                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://myaccount.mlive.com/fj/home" style="height:40px;v-text-anchor:middle;width:320px;" arcsize="50%" stroke="f" fillcolor="#333333">
+                                                                                        <w:anchorlock/>
+                                                                                        <center style="color:#e7e7e7;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;">
+                                                                                            <strong>The Flint Journal. </strong> myaccount.mlive.com/fj
+                                                                                        </center>
+                                                                                    </v:roundrect>
+                                                                                    <![endif]-->
+                                                                                    <!--[if !mso]><!-->
+                                                                                    <table class="list-item" cellspacing="0" cellpadding="0" border="0" role="presentation">
+                                                                                        <tr>
+                                                                                            <td valign="middle" align="center" height="40" width="320"  style="text-align: center; border-radius: 20px; height: 40px; width: 320px; background-color: #333333; padding: 0 20px;" bgcolor="#333333">
+                                                                                                <a href="https://myaccount.mlive.com/fj/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap;">
+                                                                                                    <strong>The Flint Journal. </strong> myaccount.mlive.com/fj
+                                                                                                </a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <!--<![endif]-->
                                                                                 </td>
                                                                             </tr>
-                                                                            <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
-                                                                            <tr class="list-item">
-                                                                                <td valign="middle" align="center" style="text-align: center; border-radius: 20px; height: 40px;" bgcolor="#333333">
-                                                                                    <a href="https://myaccount.mlive.com/gr/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; display: block; white-space: nowrap; transition: all 0.3s ease;">
-                                                                                    <strong>The Grand Rapids Press. </strong>myaccount.mlive.com/gr
-                                                                                    </a>
+                                                                            <tr>
+                                                                                <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center" valign="middle">
+                                                                                    <!--[if mso]>
+                                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://myaccount.mlive.com/gr/home" style="height:40px;v-text-anchor:middle;width:320px;" arcsize="50%" stroke="f" fillcolor="#333333">
+                                                                                        <w:anchorlock/>
+                                                                                        <center style="color:#e7e7e7;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;">
+                                                                                            <strong>The Grand Rapids Press. </strong>myaccount.mlive.com/gr
+                                                                                        </center>
+                                                                                    </v:roundrect>
+                                                                                    <![endif]-->
+                                                                                    <!--[if !mso]><!-->
+                                                                                    <table class="list-item" cellspacing="0" cellpadding="0" border="0" role="presentation">
+                                                                                        <tr>
+                                                                                            <td valign="middle" align="center" height="40" width="320" style="text-align: center; border-radius: 20px; height: 40px; background-color: #333333; padding: 0 20px; width: 320px;" bgcolor="#333333">
+                                                                                                <a href="https://myaccount.mlive.com/gr/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap;">
+                                                                                                    <strong>The Grand Rapids Press. </strong>myaccount.mlive.com/gr
+                                                                                                </a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <!--<![endif]-->
                                                                                 </td>
                                                                             </tr>
-                                                                            <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
-                                                                            <tr class="list-item">
-                                                                                <td valign="middle" align="center" style="text-align: center; border-radius: 20px; height: 40px;" bgcolor="#333333">
-                                                                                    <a href="https://myaccount.mlive.com/jp/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; display: block; white-space: nowrap; transition: all 0.3s ease;">
-                                                                                    <strong>Jackson Citizen Patriot. </strong>myaccount.mlive.com/jp
-                                                                                    </a>
+                                                                            <tr>
+                                                                                <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center" valign="middle">
+                                                                                    <!--[if mso]>
+                                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://myaccount.mlive.com/jp/home" style="height:40px;v-text-anchor:middle;width:320px;" arcsize="50%" stroke="f" fillcolor="#333333">
+                                                                                        <w:anchorlock/>
+                                                                                        <center style="color:#e7e7e7;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;">
+                                                                                            <strong>Jackson Citizen Patriot. </strong>myaccount.mlive.com/jp
+                                                                                        </center>
+                                                                                    </v:roundrect>
+                                                                                    <![endif]-->
+                                                                                    <!--[if !mso]><!-->
+                                                                                    <table class="list-item" cellspacing="0" cellpadding="0" border="0" role="presentation">
+                                                                                        <tr>
+                                                                                            <td valign="middle" align="center" height="40" width="320"  style="text-align: center; border-radius: 20px; height: 40px; width: 320px; background-color: #333333; padding: 0 20px;" bgcolor="#333333">
+                                                                                                <a href="https://myaccount.mlive.com/jp/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap;">
+                                                                                                    <strong>Jackson Citizen Patriot. </strong>myaccount.mlive.com/jp
+                                                                                                </a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <!--<![endif]-->
                                                                                 </td>
                                                                             </tr>
-                                                                            <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
-                                                                            <tr class="list-item">
-                                                                                <td valign="middle" align="center" style="text-align: center; border-radius: 20px; height: 40px;" bgcolor="#333333">
-                                                                                    <a href="https://myaccount.mlive.com/kg/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; display: block; white-space: nowrap; transition: all 0.3s ease;">
-                                                                                    <strong>Kalamazoo Gazette. </strong>myaccount.mlive.com/kg
-                                                                                    </a>
+                                                                            <tr>
+                                                                                <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center" valign="middle">
+                                                                                    <!--[if mso]>
+                                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://myaccount.mlive.com/kg/home" style="height:40px;v-text-anchor:middle;width:320px;" arcsize="50%" stroke="f" fillcolor="#333333">
+                                                                                        <w:anchorlock/>
+                                                                                        <center style="color:#e7e7e7;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;">
+                                                                                            <strong>Kalamazoo Gazette. </strong>myaccount.mlive.com/kg
+                                                                                        </center>
+                                                                                    </v:roundrect>
+                                                                                    <![endif]-->
+                                                                                    <!--[if !mso]><!-->
+                                                                                    <table class="list-item" cellspacing="0" cellpadding="0" border="0" role="presentation">
+                                                                                        <tr>
+                                                                                            <td valign="middle" align="center" height="40" width="320"  style="text-align: center; border-radius: 20px; height: 40px; width: 320px; background-color: #333333; padding: 0 20px;" bgcolor="#333333">
+                                                                                                <a href="https://myaccount.mlive.com/kg/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap;">
+                                                                                                    <strong>Kalamazoo Gazette. </strong>myaccount.mlive.com/kg
+                                                                                                </a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <!--<![endif]-->
                                                                                 </td>
                                                                             </tr>
-                                                                            <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
-                                                                            <tr class="list-item">
-                                                                                <td valign="middle" align="center" style="text-align: center; border-radius: 20px; height: 40px;" bgcolor="#333333">
-                                                                                    <a href="https://myaccount.mlive.com/mc/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; display: block; white-space: nowrap; transition: all 0.3s ease;">
-                                                                                    <strong>Muskegon Chronicle. </strong>myaccount.mlive.com/mc
-                                                                                    </a>
+                                                                            <tr>
+                                                                                <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center" valign="middle">
+                                                                                    <!--[if mso]>
+                                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://myaccount.mlive.com/mc/home" style="height:40px;v-text-anchor:middle;width:320px;" arcsize="50%" stroke="f" fillcolor="#333333">
+                                                                                        <w:anchorlock/>
+                                                                                        <center style="color:#e7e7e7;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;">
+                                                                                            <strong>Muskegon Chronicle. </strong>myaccount.mlive.com/mc
+                                                                                        </center>
+                                                                                    </v:roundrect>
+                                                                                    <![endif]-->
+                                                                                    <!--[if !mso]><!-->
+                                                                                    <table class="list-item" cellspacing="0" cellpadding="0" border="0" role="presentation">
+                                                                                        <tr>
+                                                                                            <td valign="middle" align="center" height="40" width="320"  style="text-align: center; border-radius: 20px; height: 40px; background-color: #333333; padding: 0 20px; width: 320px;" bgcolor="#333333">
+                                                                                                <a href="https://myaccount.mlive.com/mc/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap;">
+                                                                                                    <strong>Muskegon Chronicle. </strong>myaccount.mlive.com/mc
+                                                                                                </a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <!--<![endif]-->
                                                                                 </td>
-                                                                            </tr>     
-                                                                            <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
-                                                                            <tr class="list-item">
-                                                                                <td valign="middle" align="center" style="text-align: center; border-radius: 20px; height: 40px;" bgcolor="#333333">
-                                                                                    <a href="https://myaccount.mlive.com/sn/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; display: block; white-space: nowrap; transition: all 0.3s ease;">
-                                                                                    <strong>The Saginaw News. </strong>myaccount.mlive.com/sn
-                                                                                    </a>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center" valign="middle">
+                                                                                    <!--[if mso]>
+                                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://myaccount.mlive.com/sn/home" style="height:40px; v-text-anchor:middle;width:320px;" arcsize="50%" stroke="f" fillcolor="#333333">
+                                                                                        <w:anchorlock/>
+                                                                                        <center style="color:#e7e7e7;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;">
+                                                                                            <strong>The Saginaw News. </strong>myaccount.mlive.com/sn
+                                                                                        </center>
+                                                                                    </v:roundrect>
+                                                                                    <![endif]-->
+                                                                                    <!--[if !mso]><!-->
+                                                                                    <table class="list-item" cellspacing="0" cellpadding="0" border="0" role="presentation">
+                                                                                        <tr>
+                                                                                            <td valign="middle" align="center" height="40" width="320"  style="text-align: center; border-radius: 20px; height: 40px; background-color: #333333; padding: 0 20px; width: 320px;" bgcolor="#333333">
+                                                                                                <a href="https://myaccount.mlive.com/sn/home" target="_blank" class="link-text g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap;">
+                                                                                                    <strong>The Saginaw News. </strong>myaccount.mlive.com/sn
+                                                                                                </a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <!--<![endif]-->
                                                                                 </td>
-                                                                            </tr>                       
+                                                                            </tr>                
                                                                         </table>
                                                                     </td>
                                                                 </tr>
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="40" style="font-size: 40px; line-height: 40px; height: 40px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr><td height="40" style="font-size: 40px; line-height: 40px; height: 40px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                                 </table>
                                             </td>
                                             <!-- STEP 1 END  -->    
@@ -514,13 +595,17 @@
                                             <!-- STEP 2 START -->                                
                                             <td class="stack" align="center" valign="top">
                                                 <table class="mobile-100" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0" style="width: 220px;">
-                                                    <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td class="imgresize50" align="center" valign="top">
                                                             <img src="https://placehold.co/400x400?text=Step+2" alt="Step 2" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td align="center" valign="top" class="mobile-center" >
                                                             <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
@@ -538,7 +623,9 @@
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                 </table>
                                             </td>
                                             <!-- STEP 2 END  -->    
@@ -546,13 +633,17 @@
                                             <!-- STEP 3 START -->                                
                                             <td class="stack" align="center" valign="top">
                                                 <table class="mobile-100" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0" style="width: 220px;">
-                                                    <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td class="imgresize50" align="center" valign="top">
                                                             <img src="https://placehold.co/400x400?text=Step+2" alt="Step 2" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td align="center" valign="top">
                                                             <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
@@ -570,7 +661,9 @@
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                 </table>
                                             </td>
                                             <!-- STEP 3 END  -->      
@@ -583,13 +676,17 @@
                                             <!-- STEP 456 START -->                                
                                             <td class="stack" align="center" valign="top">
                                                 <table class="mobile-100" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0" style="width: 220px;">
-                                                    <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td class="imgresize50" align="center" valign="top">
                                                             <img src="https://placehold.co/400x400?text=Step+2" alt="Step 2" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td align="center" valign="top" class="mobile-center" >
                                                             <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
@@ -607,7 +704,9 @@
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td align="center" valign="top" class="mobile-center" >
                                                             <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
@@ -625,7 +724,9 @@
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td align="center" valign="top" class="mobile-center" >
                                                             <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
@@ -643,7 +744,9 @@
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                 </table>
                                             </td>
                                             <!-- STEP 456 END  -->    
@@ -651,13 +754,17 @@
                                             <!-- STEP 789 START -->                                
                                             <td class="stack" align="center" valign="top">
                                                 <table class="mobile-100" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0" style="width: 220px;">
-                                                    <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td class="imgresize50" align="center" valign="top">
                                                             <img src="https://placehold.co/400x400?text=Step+2" alt="Step 2" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td align="center" valign="top" class="mobile-center" >
                                                             <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
@@ -675,7 +782,9 @@
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td align="center" valign="top" class="mobile-center" >
                                                             <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
@@ -693,7 +802,9 @@
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td align="center" valign="top" class="mobile-center" >
                                                             <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
@@ -711,7 +822,9 @@
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                 </table>
                                             </td>
                                             <!-- STEP 789 END  -->        
@@ -724,14 +837,18 @@
                                             <!-- STEP 1 START -->                                
                                             <td class="stack" align="center" valign="top">
                                                 <table class="mobile-100" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
-                                                    <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td class="imgresize50" align="center" valign="top">
-                                                            <!-- STEP 2 IMG (eliminate the 'style' items to remove circle crop or change to 10% for a rounded square) -->
+
                                                             <img src="https://placehold.co/400x400?text=Step+1" alt="Step 1" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                    </tr>
                                                     <tr>
                                                         <td align="center" valign="top">
                                                             <table class="mobile-300" role="presentation" width="300" cellpadding="0" cellspacing="0" border="0" style="width: 300px; max-width: 450px; margin: 0 auto;">
@@ -745,7 +862,9 @@
                                                                                     </h2>
                                                                                 </td>
                                                                             </tr>
-                                                                            <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                                            <tr>
+                                                                                <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                                                            </tr>
                                                                             <tr >
                                                                                 <td class="stack" align="center" valign="top">
                                                                                     <p class="g-text-resize center-align" style="margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; text-align: center;">
@@ -784,7 +903,7 @@
                             <tr>
                                 <td>
                                     <table role="presentation" class="heroDots" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: 0 auto;">
-                                        <tr><td height="80" style="font-size: 80px; line-height: 80px; height: 80px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                        <tr><td height="80" style="font-size: 80px; line-height: 80px; height: 80px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                         <tr>
                                             <td class="hoverFAQdots" style="width: 20px; height: 20px; background-color: #00b8ff; border-radius: 50%; font-size: 1px; line-height: 1px;">&nbsp;</td>
                                             <td style="width: 10px; font-size: 1px; line-height: 1px;">&nbsp;</td>
@@ -792,7 +911,7 @@
                                             <td style="width: 10px; font-size: 1px; line-height: 1px;">&nbsp;</td>
                                             <td class="hoverFAQdots" style="width: 20px; height: 20px; background-color: #00b8ff; border-radius: 50%; font-size: 1px; line-height: 1px;">&nbsp;</td>
                                         </tr>
-                                        <tr><td height="40" style="font-size: 40px; line-height: 40px; height: 40px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                        <tr><td height="40" style="font-size: 40px; line-height: 40px; height: 40px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                     </table>                                          
                                 </td>
                             </tr>
@@ -805,7 +924,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td height="16" style="font-size: 16px; line-height: 16px; height: 16px; padding: 0; margin: 0;">
+                                            <td height="16" style="font-size: 16px; line-height: 16px; height: 16px; mso-line-height-rule: exactly; padding: 0; margin: 0;">
                                                 &nbsp;
                                             </td>
                                         </tr>
@@ -815,7 +934,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">
+                                            <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">
                                                 &nbsp;
                                             </td>
                                         </tr>
@@ -845,7 +964,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">
+                                            <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">
                                                 &nbsp;
                                             </td>
                                         </tr>
@@ -855,7 +974,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td height="40" style="font-size: 40px; line-height: 40px; height: 40px; padding: 0; margin: 0;">
+                                            <td height="40" style="font-size: 40px; line-height: 40px; height: 40px; mso-line-height-rule: exactly; padding: 0; margin: 0;">
                                                 &nbsp;
                                             </td>
                                         </tr>
@@ -883,15 +1002,14 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td height="20" style="font-size:20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">
+                                            <td height="20" style="font-size:20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">
                                                 &nbsp;
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
                             </tr>
-
-                        <tr><td height="100" style="font-size: 100px; line-height: 100px; height: 100px; padding: 0; margin: 0;">&nbsp;</td></tr>
+                        <tr><td height="100" style="font-size: 100px; line-height: 100px; height: 100px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                     </td>
                 </tr>
             </table>
@@ -903,13 +1021,10 @@
     <table class="footerBackFrame" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#dfdfdf;" bgcolor="#dfdfdf">
 		<tr>
 			<td align="center" valign="top">
-
-
-
                 <!-- START FOOTER MAIN TOP 600-->
 				<table class="mobile-100" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#e7e7e5; width: 600px;table-layout: fixed; border-collapse: collapse;" bgcolor="#e7e7e5">
                     <tr>
-                        <td height="60" style="font-size: 60px; line-height: 60px; height: 60px; padding: 0; margin: 0;">
+                        <td height="60" style="font-size: 60px; line-height: 60px; height: 60px; mso-line-height-rule: exactly; padding: 0; margin: 0;">
                             &nbsp;
                         </td>
                     </tr>
@@ -919,7 +1034,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; padding: 0; margin: 0;">
+                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">
                             &nbsp;
                         </td>
                     </tr>
@@ -950,7 +1065,11 @@
                                                 Click&nbsp;here&nbsp;to&nbsp;<a rel="noopener" href="{optout_confirm_url + '&list_param=' + blast.list}" class="hoverText" target="_blank" style="color:#868686; text-decoration:underline;">Unsubscribe.</a></span></p>
                                     </td>
                                 </tr>
-                                <!--SPACER--><tr><td height="20" style="font-size:10px; line-height:1px; mso-line-height-rule:exactly;">&nbsp;<br></td></tr>
+                                <tr>
+                                    <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">
+                                         &nbsp;
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td align="center" valign="top">
                                         <p style="color:#5d5d5d; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:20px; font-weight: 500; ">
@@ -964,7 +1083,11 @@
                             <!-- END FOOTER ADDRESS 400-->
                             <!-- START FOOTER COPYRIGHT 400-->
                             <table class="mobile-300" role="presentation" width="400" cellpadding="0" cellspacing="0" border="0">
-                                <tr><td height="20" style="font-size:10px; line-height:1px; mso-line-height-rule:exactly;">&nbsp;<br></td></tr>
+                                    <tr>
+                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
                                     <tr>
 						                <td align="center" valign="top">
                                             <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size:10px; line-height:14px; -webkit-text-size-adjust: none; color: #868686;">©2026. Advance Local. All rights reserved.</p>
@@ -974,11 +1097,11 @@
                             <!-- END FOOTER COPYRIGHT 400-->
                             <!-- START ACCENT RULE /COPYRIGHT  -->
                             <table role="presentation" class="mobile-320" width="400" cellpadding="0" cellspacing="0" border="0">
-                                <!--SPACER--><tr><td height="80" style="font-size:10px; line-height:1px; mso-line-height-rule:exactly;">&nbsp;<br></td></tr>
+                                <!--SPACER--><tr><td height="80" style="font-size:80px; line-height:80px;  mso-line-height-rule:exactly; height: 80px; margin: 0; padding: 0;">&nbsp;</td></tr>
                                 <tr>
 						            <td align="center" valign="top">
                                         <table class="mobile-flogorule" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0"  style="background-color:#00b8ff;" bgcolor="#00b8ff">
-                                            <tr><td height="20" style="font-size:10px; line-height:1px; mso-line-height-rule:exactly;">&nbsp;<br></td></tr>
+                                            <tr><td height="20" style="font-size:20px; line-height:20px; height: 20px; mso-line-height-rule:exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                         </table>
                                     </td>
                                 </tr>
