@@ -1,0 +1,35 @@
+        .hoverBlue:hover {
+            color: #00b7ff !important;
+            text-shadow: 0 0 30px #00b7ff !important;
+        }
+        .hoverGold:hover {
+            color: #f7be00 !important;
+            text-shadow: 0 0 30px #f7be00 !important;
+        }
+        .hoverRed:hover {
+            color: #ff5e5e !important;
+            text-shadow: 0 0 30px #ff5e5e !important;
+        }
+        .hoverGreen:hover {
+            color: #84cc16 !important;
+            text-shadow: 0 0 30px #84cc16 !important;
+        }
+        .hoverViolet:hover {
+            color: #bc69ff !important;
+            text-shadow: 0 0 30px #bc69ff !important;
+        }
+        .hoverOrange:hover {
+            color: #ff8819 !important;
+            text-shadow: 0 0 30px #ff8819 !important;
+        }
+
+
+/* Topper addresses
+Blue - https://media.sailthru.com/fss/fld6i8/ec445346-cbc4-4396-853c-504b71680a4c/LogoBullets_Blue.png
+Gold - https://media.sailthru.com/fss/fld6i8/a3f5aed2-8ea0-4dc2-9c71-4b370d73bb86/LogoBullets_Gold.png
+Red - https://media.sailthru.com/fss/fld6i8/2c17852f-3a70-4610-b5c5-d82ef9173e8e/LogoBullets_Red.png
+Green - https://media.sailthru.com/fss/fld6i8/b4950bb4-991c-47d7-af2c-a5246674ea8d/LogoBullets_Green.png
+Violet - https://media.sailthru.com/fss/fld6i8/0eb3a9b5-bf6a-43ad-8688-bf22f0f8f8fc/LogoBullets_Violet.png
+Orange - https://media.sailthru.com/fss/fld6i8/db44f97a-ae6e-40ff-bcbe-0035b458f918/LogoBullets_Orange.png
+
+*/
