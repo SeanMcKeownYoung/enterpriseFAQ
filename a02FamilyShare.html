@@ -3,15 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:office" lang="en">
     <head>
     <meta charset="utf-8" />
-    <title>Let us help! How to access the online newspaper.</title>
+    <title>Let us help! How to share your subscription with family.</title>
     <!-- add icon link -->
     <link rel="icon" href="https://media.sailthru.com/fss/fld6ib/cb3bd49f-4874-4a96-9a9b-bf1dafeeb25e/FAVICON-Mich.png"type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="x-apple-disable-message-reformatting">
 <!-- FONTS -->
     <style>
+    		/* Outlines the grids, remove when sending
+		table td { border: 1px solid rgb(0, 217, 255); }*/
             @font-face {
             font-family: "neue-haas-grotesk-display";
             src:
@@ -70,7 +73,7 @@
 			.mobile-100 { width:100%!important; padding: 0 !important; max-width: none !important;}
 			.mobile-100-400 { width:100%!important; padding: 0 !important; max-width: 400px !important; min-width: none !important;}
             .h1-text-resize { font-size: 42px !important; line-height:40px !important; }
-            .h2-text-resize { font-size: 26px !important; line-height:38px !important;}
+            .h2-text-resize { font-size: 36px !important; line-height:38px !important;}
             .h3-text-resize { font-size: 22px !important; line-height:34px !important;}
 			.intro-text-resize { font-size: 20px !important; line-height:30px !important;}
 			.g-text-resize { font-size: 16px !important; line-height:24px !important;}
@@ -89,11 +92,22 @@
             .bottom-image-cell { padding-top: 90px !important; }
             .top-image-cell {width: 400px !important; display: inline-block !important; transform: translateX(calc(-50% - 108px)) translateY(-18px) !important; left: 50% !important; }
             .top-image {width: 260px !important;}
-			.logoStack img {width:240px !important; height:auto !important;}
+			.logoStack img {width:200px !important; height:auto !important;}
             .heroDots td {width: 10px !important; height: 10px !important;}
             .heroDots td.spacer-cell {width: 6px !important;}
             .stack {display: block !important;width: 100% !important;max-width: 100% !important;text-align: center !important;}
             .dropCap {font-size: 34px !important; line-height: 34px !important; text-align: center !important; padding-top: 0px !important;}
+        /* Forces the table wrapper to scale to the exact width of the mobile viewport */
+    .w-full-mobile {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Scales the image smoothly while maintaining its true aspect ratio */
+    .img-fluid-mobile {
+        width: 100% !important;
+        height: auto !important;
+    }
         }
     </style>
 
@@ -118,25 +132,25 @@
         }
         .faqBTTNgroup .CTAbttn {
             background-color: #1C1E22; 
-            border: 2px solid #00b8ff;
-            box-shadow: 0px 10px 20px 0px #1d1e22, 0px 30px 10px -15px #00b7ff41;
+            border: 2px solid #f7be00;
+            box-shadow: 0px 10px 20px 0px #1d1e22, 0px 30px 10px -15px #f7be0041;
             transition: border 0.3s ease-in-out, box-shadow 0.5s ease-in-out, ;
         }
         .faqBTTNgroup .CTAbttn a {
-            color: #00b8ff;
+            color: #f7be00;
             transition: color 0.3s ease-in-out;
         }
         .CTAbttn:is(:hover, :active, :focus) {
-            background-color: #1C1E22; 
-            border: 2px solid #e9e9e9 !important;
-            box-shadow: 0px 10px 20px 0px #1d1e22, 0px 30px 10px -15px #aaaaaa41
-        }
-        .list-item td, .list-item .link-text {
-            transition: all 0.3s ease;
+            background-color: #f7be00 !important; 
+            border: 2px solid #f7be00 !important;
+            box-shadow: 0px 10px 20px 0px #1d1e22, 0px 30px 10px -15px #f7be00, 0px 0px 20px 0px #f7be00
         }
         .CTAbttn:is(:hover, :active, :focus) a {
-            color: #e9e9e9 !important;
-        }   
+            color: #1C1E22 !important;
+        } 
+        .list-item td, .list-item .link-text {
+            transition: all 0.3s ease;
+        }  
         .list-Parent:hover  {
             z-index: -500 !important;
         }
@@ -147,11 +161,11 @@
             z-index: 500 !important;
         }
         .list-Parent .list-item:hover .link-text {
-            color: #fff !important;
+            color: #1d1e22 !important;
             }  
         .list-Parent .list-item:hover td {
-            background-color: #00b8ff !important;
-            box-shadow: 0 0 10px #00b8ff, 0 0 40px #1d1e22, 0 0 80px #00b8ff;
+            background-color: #f7be00 !important;
+            box-shadow: 0 0 10px #f7be00, 0 0 40px #1d1e22, 0 0 80px #f7be00;
         }
         .hoverBlue:hover {
             color: #00b7ff !important;
@@ -197,8 +211,8 @@
             color: #fff !important;
             }  
         .list-Parent .list-item:active td, .list-Parent .list-item:focus td {
-            background-color: #00b8ff !important;
-            box-shadow: 0 0 10px #00b8ff, 0 0 40px #1d1e22, 0 0 80px #00b8ff;
+            background-color: #f7be00 !important;
+            box-shadow: 0 0 10px #f7be00, 0 0 40px #1d1e22, 0 0 80px #f7be00;
         }
     }
   </style>
@@ -218,7 +232,7 @@
 		max-width:0px;
 		opacity:0;
 		overflow:hidden;">
-        Let us help! How to access the online newspaper.
+        Let us help! How to share your subscription with family.
         </td>
     </tr>
 </table>
@@ -261,7 +275,7 @@
                                             style="display: inline-block; width: 240px; max-width: none !important; height: auto; border: 0; pointer-events: none; margin: 0 auto; transition: transform 0.8s ease-in-out; transform-origin: center center;" />
                                     </div>
                                     <div class="bottom-image-cell imgresize60" style="position: relative; z-index: 1; display: inline-block; padding-top: 70px; margin: 0 auto;">
-                                        <img src="https://media.sailthru.com/fss/fld6ib/cd862560-801f-4762-b53f-4499480609ef/LogoBullets.png" 
+                                        <img src="https://media.sailthru.com/fss/fld6i8/a3f5aed2-8ea0-4dc2-9c71-4b370d73bb86/LogoBullets_Gold.png" 
                                             alt="Bottom Layer" 
                                             class="bottom-image"
                                             width="300" 
@@ -285,14 +299,14 @@
                                         <tr>
                                             <td align="center" valign="top">
                                                 <h3 class="h3-text-resize" style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 30px; line-height: 40px; color: #e7e7e7; letter-spacing: -0.25px; -webkit-font-smoothing: antialiased;">
-                                                    How can we help <span style="color: #00b8ff;">you?</span>
+                                                    How can we help <span style="color: #f7be00;">you?</span>
                                                 </h3>
                                             </td>
                                         </tr>
                                         <tr><td height="60" style="font-size: 60px; line-height: 60px; height: 60px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                         <tr>
                                             <td align="center" valign="top">
-                                                <h1 class="h1-text-resize" style="margin: 0; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 56px; line-height: 56px; color: #e7e7e7; letter-spacing: -0.25px; text-wrap: balance; -webkit-font-smoothing: antialiased;">How do I get access to the online newspaper?
+                                                <h1 class="h1-text-resize" style="margin: 0; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 56px; line-height: 56px; color: #e7e7e7; letter-spacing: -0.25px; text-wrap: balance; -webkit-font-smoothing: antialiased;">How do I <span style="color: #f7be00;">share my subscription with family?</span>
                                                 </h1>
                                             </td>
                                         </tr>
@@ -301,11 +315,8 @@
                                         </tr>
                                         <tr>
                                             <td align="center" valign="top">
-                                                <p class="intro-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 22px; line-height: 36px; color: #e7e7e7; text-wrap: balance;"><strong>Setting up and registering your account is quick and easy. </strong>  &nbsp; Simply log in from your phone, tablet, or computer. &nbsp; Follow the steps below to get started.</p>
+                                                <p class="intro-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 22px; line-height: 36px; color: #e7e7e7; text-wrap: balance;"><strong>Add up to four more individual logins at no additional cost.</strong>  Share your subscription with family and friends. It's your choice.</p>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
                                         </tr>
                                     </table>
                                 </td>
@@ -313,6 +324,22 @@
                         </table>
                     </td>
                 </tr>
+                <tr>
+                    <td align="center" valign="top">
+                        <!-- ADDED: w-full-mobile class to fluidly resize the container -->
+                        <table class="w-full-mobile" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width: 600px; border-collapse: collapse;">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <!-- ADDED: img-fluid-mobile class to auto-calculate height based on width aspect ratio -->
+                                        <img class="img-fluid-mobile" src="https://media.sailthru.com/fss/fld6ib/f88001c2-2e90-46a2-9b87-3ebe905ed7dd/a02familyshare.gif" width="600" height="300" style="margin:0; padding:0; border:none; display: block; width: 600px; height: auto;" border="0" alt="Share your subscription!"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
             </table>
         </td>
     </tr>
@@ -334,17 +361,6 @@
                                             <td class="stack" align="center" valign="top">
                                                 <table class="mobile-100" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
                                                     <tr>
-                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="imgresize50" align="center" valign="top">
-                                                            <img src="https://placehold.co/400x400?text=Step+1" alt="Step 1" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
                                                         <td align="center" valign="top">
                                                             <table class="mobile-600" role="presentation" width="450" cellpadding="0" cellspacing="0" border="0" style="width: 450px; max-width: 450px; margin: 0 auto;">
                                                                 <tr>
@@ -352,7 +368,7 @@
                                                                         <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto; display: inline-block;">
                                                                             <tr>
                                                                                 <td class="stack" align="left" valign="top">
-                                                                                    <h2 class="dropCap" style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 52px; line-height: 36px; font-weight: 500; color: #00b8ff; text-align: left; padding-top: 4px;"> 
+                                                                                    <h2 class="dropCap" style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 52px; line-height: 36px; font-weight: 500; color: #f7be00; text-align: left; padding-top: 4px;"> 
                                                                                     <span>1</span>
                                                                                     </h2>
                                                                                 </td>
@@ -583,308 +599,153 @@
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td height="40" style="font-size: 40px; line-height: 40px; height: 40px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                                    <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                                 </table>
                                             </td>
                                             <!-- STEP 1 END  -->    
                                         </tr>
                                     </table>
                                     <!-- END STEPS - FIRST ROW   -->
-                                    <!-- START STEPS - SECOND ROW OF 2  -->
-                                    <table class="mobile-100-400" role="presentation" width="450" cellpadding="0" cellspacing="0" border="0" style="width: 450px;">
-                                        <tr>
-                                            <!-- STEP 2 START -->                                
-                                            <td class="stack" align="center" valign="top">
-                                                <table class="mobile-100" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0" style="width: 220px;">
-                                                    <tr>
-                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="imgresize50" align="center" valign="top">
-                                                            <img src="https://placehold.co/400x400?text=Step+2" alt="Step 2" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center" valign="top" class="mobile-center" >
-                                                            <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
-                                                                <tr>
-                                                                    <td align="right" valign="top" width="40" style="width: 40px" class="stack center-align">
-                                                                        <h2 class="dropCap" style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 52px; line-height: 36px; font-weight: 500; color: #00b8ff; text-align: left; padding-top: 4px;">
-                                                                            <span>2</span>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <!-- COLUMN SPACER --><td class="stack" width="8" height="10" align="center" valign="top" style="font-size: 10px; line-height: 1px;">&nbsp;</td>
-                                                                    <td align="left" valign="top" width="160" style="width: 160px" class="stack center-align mobile-300" >
-                                                                        <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #e7e7e7; text-wrap: balance;">Click the &lsquo;REGISTER&rsquo; button.</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <!-- STEP 2 END  -->    
-                                            <!-- COLUMN SPACER --><td class="stack" width="10" height="10" align="center" valign="top" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
-                                            <!-- STEP 3 START -->                                
-                                            <td class="stack" align="center" valign="top">
-                                                <table class="mobile-100" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0" style="width: 220px;">
-                                                    <tr>
-                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="imgresize50" align="center" valign="top">
-                                                            <img src="https://placehold.co/400x400?text=Step+2" alt="Step 2" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center" valign="top">
-                                                            <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
-                                                                <tr>
-                                                                    <td align="right" valign="top" width="40" style="width: 40px" class="stack center-align">
-                                                                        <h2 class="dropCap" style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 52px; line-height: 36px; font-weight: 500; color: #00b8ff; text-align: left; padding-top: 4px;"> 
-                                                                            <span>3</span>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <!-- COLUMN SPACER --><td class="stack" width="8" height="10" align="center" valign="top" style="font-size: 10px; line-height: 1px;">&nbsp;</td>
-                                                                    <td align="left" valign="top" width="160" style="width: 160px" class="stack center-align mobile-300" >
-                                                                        <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #e7e7e7; text-wrap: balance;">Click the &lsquo;CONTINUE&rsquo; button.</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <!-- STEP 3 END  -->      
-                                        </tr>
-                                    </table>
-                                    <!-- END STEPS - SECOND ROW OF 2  -->
-                                    <!-- START STEPS - THIRD ROW OF 2  -->
-                                    <table class="mobile-100-400" role="presentation" width="450" cellpadding="0" cellspacing="0" border="0" style="width: 450px;">
-                                        <tr>
-                                            <!-- STEP 456 START -->                                
-                                            <td class="stack" align="center" valign="top">
-                                                <table class="mobile-100" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0" style="width: 220px;">
-                                                    <tr>
-                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="imgresize50" align="center" valign="top">
-                                                            <img src="https://placehold.co/400x400?text=Step+2" alt="Step 2" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center" valign="top" class="mobile-center" >
-                                                            <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
-                                                                <tr>
-                                                                    <td align="right" valign="top" width="40" style="width: 40px" class="stack center-align">
-                                                                        <h2 class="dropCap" style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 52px; line-height: 36px; font-weight: 500; color: #00b8ff; text-align: left; padding-top: 4px;"> 
-                                                                            <span>4</span>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <!-- COLUMN SPACER --><td class="stack" width="8" height="10" align="center" valign="top" style="font-size: 10px; line-height: 1px;">&nbsp;</td>
-                                                                    <td align="left" valign="top" width="160" style="width: 160px" class="stack center-align mobile-300" >
-                                                                        <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #e7e7e7; text-wrap: balance;">Enter your email address. This will be used as your username.</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center" valign="top" class="mobile-center" >
-                                                            <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
-                                                                <tr>
-                                                                    <td align="right" valign="top" width="40" style="width: 40px" class="stack center-align">
-                                                                        <h2 class="dropCap" style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 52px; line-height: 36px; font-weight: 500; color: #00b8ff; text-align: left; padding-top: 4px;"> 
-                                                                            <span>5</span>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <!-- COLUMN SPACER --><td class="stack" width="8" height="10" align="center" valign="top" style="font-size: 10px; line-height: 1px;">&nbsp;</td>
-                                                                    <td align="left" valign="top" width="160" style="width: 160px" class="stack center-align mobile-300" >
-                                                                        <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #e7e7e7; text-wrap: balance;">Create a password that you'll remember.</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center" valign="top" class="mobile-center" >
-                                                            <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
-                                                                <tr>
-                                                                    <td align="right" valign="top" width="40" style="width: 40px" class="stack center-align">
-                                                                        <h2 class="dropCap" style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 52px; line-height: 36px; font-weight: 500; color: #00b8ff; text-align: left; padding-top: 4px;"> 
-                                                                            <span>6</span>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <!-- COLUMN SPACER --><td class="stack" width="8" height="10" align="center" valign="top" style="font-size: 10px; line-height: 1px;">&nbsp;</td>
-                                                                    <td align="left" valign="top" width="160" style="width: 160px" class="stack center-align mobile-300" >
-                                                                        <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #e7e7e7; text-wrap: balance;">Click the &lsquo;Create Account&rsquo; button.</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <!-- STEP 456 END  -->    
-                                            <!-- COLUMN SPACER --><td class="stack" width="10" height="10" align="center" valign="top" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
-                                            <!-- STEP 789 START -->                                
-                                            <td class="stack" align="center" valign="top">
-                                                <table class="mobile-100" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0" style="width: 220px;">
-                                                    <tr>
-                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="imgresize50" align="center" valign="top">
-                                                            <img src="https://placehold.co/400x400?text=Step+2" alt="Step 2" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center" valign="top" class="mobile-center" >
-                                                            <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
-                                                                <tr>
-                                                                    <td align="right" valign="top" width="40" style="width: 40px" class="stack center-align">
-                                                                        <h2 class="dropCap" style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 52px; line-height: 36px; font-weight: 500; color: #00b8ff; text-align: left; padding-top: 4px;"> 
-                                                                            <span>7</span>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <!-- COLUMN SPACER --><td class="stack" width="8" height="10" align="center" valign="top" style="font-size: 10px; line-height: 1px;">&nbsp;</td>
-                                                                    <td align="left" valign="top" width="160" style="width: 160px" class="stack center-align mobile-300" >
-                                                                        <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #e7e7e7; text-wrap: balance;">Select a primary look up option from the pulldown and enter it.</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center" valign="top" class="mobile-center" >
-                                                            <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
-                                                                <tr>
-                                                                    <td align="right" valign="top" width="40" style="width: 40px" class="stack center-align">
-                                                                        <h2 class="dropCap" style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 52px; line-height: 36px; font-weight: 500; color: #00b8ff; text-align: left; padding-top: 4px;"> 
-                                                                            <span>8</span>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <!-- COLUMN SPACER --><td class="stack" width="8" height="10" align="center" valign="top" style="font-size: 10px; line-height: 1px;">&nbsp;</td>
-                                                                    <td align="left" valign="top" width="160" style="width: 160px" class="stack center-align mobile-300" >
-                                                                        <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #e7e7e7; text-wrap: balance;">Select a look up option from the pulldown and enter it.</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center" valign="top" class="mobile-center" >
-                                                            <table class="mobile-300" role="presentation" width="200" cellpadding="0" cellspacing="0" border="0" style="width: 200px;">
-                                                                <tr>
-                                                                    <td align="right" valign="top" width="40" style="width: 40px" class="stack center-align">
-                                                                        <h2 class="dropCap" style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 52px; line-height: 36px; font-weight: 500; color: #00b8ff; text-align: left; padding-top: 4px;"> 
-                                                                            <span>9</span>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <!-- COLUMN SPACER --><td class="stack" width="8" height="10" align="center" valign="top" style="font-size: 10px; line-height: 1px;">&nbsp;</td>
-                                                                    <td align="left" valign="top" width="160" style="width: 160px" class="stack center-align mobile-300" >
-                                                                        <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #e7e7e7; text-wrap: balance;">Click the &lsquo;Link Subscription&rsquo;.</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <!-- STEP 789 END  -->        
-                                        </tr>
-                                    </table>
-                                    <!-- END STEPS - THIRD ROW OF 2  -->
-                                    <!-- START STEPS - FIRST ROW -->
-                                    <table class="mobile-100-400" role="presentation" width="450" cellpadding="0" cellspacing="0" border="0" style="width: 450px;">
-                                        <tr>
-                                            <!-- STEP 1 START -->                                
-                                            <td class="stack" align="center" valign="top">
-                                                <table class="mobile-100" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
-                                                    <tr>
-                                                        <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="imgresize50" align="center" valign="top">
 
-                                                            <img src="https://placehold.co/400x400?text=Step+1" alt="Step 1" width="220" height="auto" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 200px;">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center" valign="top">
-                                                            <table class="mobile-300" role="presentation" width="300" cellpadding="0" cellspacing="0" border="0" style="width: 300px; max-width: 450px; margin: 0 auto;">
-                                                                <tr>
-                                                                    <td align="center" valign="middle" style="text-align: center;">
-                                                                        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto; display: inline-block;">
-                                                                            <tr>
-                                                                                <td align="center" valign="top">
-                                                                                    <h2 style="margin: 0; padding: 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 36px; line-height: 36px; font-weight: 900; color: #e7e7e7; text-align: center;"> 
-                                                                                    <span>Success!</span>
-                                                                                    </h2>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
-                                                                            </tr>
-                                                                            <tr >
-                                                                                <td class="stack" align="center" valign="top">
-                                                                                    <p class="g-text-resize center-align" style="margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; text-align: center;">
-                                                                                    Feel free to explore all that your online newspaper has to offer!
-                                                                                    </p>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
+
+                                <!-- STEP 1 -->
+                                <table role="presentation" class="imgresize80" width="260" cellpadding="0" cellspacing="0" border="0">
+                                    <!--SPACER--><tr><td height="30" style="font-size: 30px; line-height: 30px; height: 30px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center">
+                                            <img src="https://media.sailthru.com/fss/fld6ib/e82bec3e-9577-4c36-8be3-e21af4c2150f/FAMSHARE+how+tos_Step+01.png" alt="2. If already signed in, Sign Out before proceeding." width="260" height="auto" class="imgresize80">
+                                        </td>
+                                    </tr>
+                                    <!--SPACER--><tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; text-wrap: balance;"><strong>2. If already signed in,</strong> Sign Out before proceeding.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- END STEP 1 -->
+
+                                <!-- STEP 2 -->
+                                <table role="presentation" class="imgresize80" width="260" cellpadding="0" cellspacing="0" border="0">
+                                    <!--SPACER--><tr><td height="30" style="font-size: 30px; line-height: 30px; height: 30px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center">
+                                            <img src="https://media.sailthru.com/fss/fld6ib/6b7fc667-71c2-4325-9ded-7a4cf5ac2fed/FAMSHARE+how+tos_Step+02.png" alt="3. Click the big 'REGISTER' button" width="260" height="auto" class="imgresize80">
+                                        </td>
+                                    </tr>
+                                    <!--SPACER--><tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; text-wrap: balance;"><strong>3. Click the big 'REGISTER'</strong> button.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- END STEP 2 -->
+
+                                <!-- STEP 3 -->
+                                <table role="presentation" class="imgresize80" width="260" cellpadding="0" cellspacing="0" border="0">
+                                    <!--SPACER--><tr><td height="30" style="font-size: 30px; line-height: 30px; height: 30px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center">
+                                            <img src="https://media.sailthru.com/fss/fld6ib/895c067a-6619-446b-89f7-9554ca6df563/FAMSHARE+how+tos_Step+03.png" alt="4. Click the big 'CONTINUE' button" width="260" height="auto" class="imgresize80">
+                                        </td>
+                                    </tr>
+                                    <!--SPACER--><tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; text-wrap: balance;"><strong>4. Click the big 'CONTINUE'</strong> button.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- END STEP 3 -->
+
+                                <!-- STEP 4 -->
+                                <table role="presentation" class="imgresize80" width="280" cellpadding="0" cellspacing="0" border="0">
+                                    <!--SPACER--><tr><td height="30" style="font-size: 30px; line-height: 30px; height: 30px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center">
+                                            <img src="https://media.sailthru.com/fss/fld6ib/d8e4b45d-1095-4c35-b6c8-694a0f646f44/FAMSHARE+how+tos_Step+04.png" alt="5. Enter the email for each account. 6. Set up a password for each account then click 'Create Account'." width="260" height="auto" class="imgresize80">
+                                        </td>
+                                    </tr>
+                                    <!--SPACER--><tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; "><strong>5. Enter the email</strong> for each account.</p>
+                                        </td>
+                                    </tr>
+                                    <!--SPACER--><tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; text-wrap: balance;"><strong>6. Set up a password</strong> for each account then click 'Create Account'.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- END STEP 4 -->
+
+                                <!-- STEP 5 -->
+                                <table role="presentation" class="imgresize80" width="280" cellpadding="0" cellspacing="0" border="0">
+                                    <!--SPACER--><tr><td height="30" style="font-size: 30px; line-height: 30px; height: 30px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center">
+                                            <img src="https://media.sailthru.com/fss/fld6ib/854588c4-2a44-4cc5-9a79-054db8e0a63b/FAMSHARE+how+tos_Step+05.png" alt="7. Select a primary look up option from the pulldown AND enter it below. 8. Select a look up option from the pulldown AND enter it below." width="260" height="auto" class="imgresize80">
+                                        </td>
+                                    </tr>
+                                    <!--SPACER--><tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; text-wrap: balance;"><strong>7. Select a primary look up option</strong> from the pulldown AND enter it below.</p>
+                                        </td>
+                                    </tr>
+                                    <!--SPACER--><tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; text-wrap: balance;"><strong>8. Select a look up option</strong> from the pulldown AND enter it below.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- END STEP 5 -->
+
+                                <!-- STEP 6 -->
+                                <table role="presentation" class="imgresize80" width="260" cellpadding="0" cellspacing="0" border="0">
+                                    <!--SPACER--><tr><td height="30" style="font-size: 30px; line-height: 30px; height: 30px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center">
+                                            <img src="https://media.sailthru.com/fss/fld6ib/04c406b6-81a8-43dd-82a6-546bab57bf14/FAMSHARE+how+tos_Step+06.png" alt="9. Click 'Link Subscription.' 10. Don't forget to share this information with that family member." width="260" height="auto" class="imgresize80">
+                                        </td>
+                                    </tr>
+                                    <!--SPACER--><tr><td height="20" class="spacer-resize20" style="font-size:10px; line-height:1px; mso-line-height-rule:exactly;">&nbsp;<br></td></tr>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; text-wrap: balance;"><strong>9. Click 'Link Subscription.'</strong> </p>
+                                        </td>
+                                    </tr>
+                                    <!--SPACER--><tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; text-wrap: balance;"><strong>10. Don't forget </strong>to share this information with that family member.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- END STEP 6 -->
+                                <!-- START FAM SHARE CUSTOMER EMAIL BUTTON -->
+                                <table class="mobile-280" role="presentation" width="400" cellpadding="0" cellspacing="0" border="0">
+                                    <!--SPACER--><tr><td height="30" style="font-size: 30px; line-height: 30px; height: 30px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <table class="mobile-300" role="presentation" width="400" cellpadding="0" cellspacing="0" border="0" style="width: 400px; border-collapse: collapse;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center" class="CTAbttn" valign="middle" height="60" width="400" style="background-color: #1C1E22; border: 2px solid #f7be00; width: 400px; height: 60px; padding: 0;">
+                                                                <a href="mailto:?subject=I%27m%20Sharing%20my%20Online%20Newspaper%20Subscription%20with%20you%21&body=My%20Michigan%20Online%20newspaper%20has%20so%20much%20to%20offer%2C%20I%27m%20choosing%20to%20share%20my%20subscription%20with%20you%21%0D%0A%0D%0AYour%20username%20is%3A%20%28enter%20the%20username%20you%20created%20to%20share%29%0D%0AYour%20password%20is%3A%20%28enter%20the%20password%20for%20that%20username%29%0D%0AI%20subscribe%20to%3A%20%28enter%20the%20name%20of%20your%20newspaper%29%0D%0A%0D%0A-%20The%20Ann%20Arbor%20News%3A%20https%3A%2F%2Freader.aa.mlive.com%0D%0A-%20The%20Bay%20City%20Times%3A%20https%3A%2F%2Freader.bc.mlive.com%0D%0A-%20The%20Flint%20Journal%3A%20https%3A%2F%2Freader.fj.mlive.com%0D%0A-%20The%20Grand%20Rapids%20Press%3A%20https%3A%2F%2Freader.gr.mlive.com%0D%0A-%20Jackson%20Citizen%20Patriot%3A%20https%3A%2F%2Freader.jp.mlive.com%0D%0A-%20Kalamazoo%20Gazette%3A%20https%3A%2F%2Freader.kg.mlive.com%0D%0A-%20Muskegon%20Chronicle%3A%20https%3A%2F%2Freader.mc.mlive.com%0D%0A-%20The%20Saginaw%20News%3A%20https%3A%2F%2Freader.sn.mlive.com%0D%0A%0D%0A%0D%0A%0D%0AHere%27s%20just%20some%20of%20the%20content%20you%20can%20look%20forward%20to%3A%0D%0A-%20Later%20news%20updates%20%26%20sports%20scores.%0D%0A-%20Extra%20In-depth%20pages%20of%20news%2C%20sports%2C%20opinion%2C%20books%2C%20health%2C%20food%2C%20money%20%26%20culture.%0D%0A-%20Daily%20full-page%20primetime%20TV%20grid.%0D%0A-%20Weekly%20TV%20Best%20Bets%20section.%0D%0A-%20Special%20sections%20on%20food%2C%20travel%2C%20health%2C%20sports%2C%20%26%20more.%0D%0A-%20NYT%20Book%20Review.%0D%0A-%20And%20Live%20Updates%20on%20Big%20Local%20stories%20as%20they%20happen.%0D%0A-%20As%20well%20as%20MLive.com%27s%20exclusive%20newsletters%2C%20breaking%20news%20alerts%20and%20exclusive%20stories.%0D%0A%0D%0APlease%20enjoy%20The%20Ann%20Arbor%20News%20Online%21%0D%0AP.S.%20If%20you%20need%20any%20help%2C%20they%27re%20happy%20to%20help.%0D%0AEmail%20them%20at%20customercare%40mlive.com%20or%20visit%20https%3A%2F%2Fwww.mlive.com%2Fnewspaper%2Ffaq%2F%23Contacts." target="_blank" class="button-text-resize g-text-resize" style="display: block; width: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-decoration: none; text-align: center; color: #f7be00; font-size: 16px; line-height: 56px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px;">
+                                                                    <span style="color: #f7be00;" class="fa fa-envelope"></span>&nbsp; Send an email.
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
                                                 </table>
                                             </td>
-                                            <!-- STEP 1 END  -->    
                                         </tr>
-                                    </table>
-                                    <!-- END STEPS - FIRST ROW   -->
+                                </table>
                                 </td>
                             </tr>
                         </table>
@@ -904,24 +765,29 @@
                             <tr>
                                 <td>
                                     <table role="presentation" class="heroDots" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: 0 auto;">
-                                        <tr><td height="80" style="font-size: 80px; line-height: 80px; height: 80px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                         <tr>
-                                            <td class="hoverFAQdots" style="width: 20px; height: 20px; background-color: #00b8ff; border-radius: 50%; font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                            <td style="width: 10px; font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                            <td class="hoverFAQdots" style="width: 20px; height: 20px; background-color: #00b8ff; border-radius: 50%; font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                            <td style="width: 10px; font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                            <td class="hoverFAQdots" style="width: 20px; height: 20px; background-color: #00b8ff; border-radius: 50%; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                            <td colspan="5" height="80" style="font-size: 80px; line-height: 80px; height: 80px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
                                         </tr>
-                                        <tr><td height="40" style="font-size: 40px; line-height: 40px; height: 40px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
-                                    </table>                                          
+                                        <tr>
+                                            <td class="hoverFAQdots dot" style="width: 20px; height: 20px; background-color: #f7be00; border-radius: 50%; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                            <td class="spacer-cell" style="width: 10px; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                            <td class="hoverFAQdots dot" style="width: 20px; height: 20px; background-color: #f7be00; border-radius: 50%; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                            <td class="spacer-cell" style="width: 10px; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                            <td class="hoverFAQdots dot" style="width: 20px; height: 20px; background-color: #f7be00; border-radius: 50%; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" height="40" style="font-size: 40px; line-height: 40px; height: 40px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                        </tr>
+                                    </table> 
+                                        
                                 </td>
                             </tr>
                             <tr>
                                 <td align="center" valign="top">
-                                    <table role="presentation" class="mobile-300" width="400" cellpadding="0" cellspacing="0" border="0">
+                                    <table role="presentation" class="mobile-320" width="400" cellpadding="0" cellspacing="0" border="0">
                                         <tr>
                                             <td align="center" valign="top">
-                                                <h1 class="h2-text-resize" style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 42px; line-height: 42px; color: #e7e7e7; letter-spacing: -0.25px; -webkit-font-smoothing: antialiased;">Your questions <span style="color: #00b8ff;">answered!</span></h1>
+                                                <h2 class="h2-text-resize" style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 42px; line-height: 42px; color: #e7e7e7; letter-spacing: -0.25px; -webkit-font-smoothing: antialiased;">Your questions <span style="color: #f7be00;">answered!</span></h2>
                                             </td>
                                         </tr>
                                         <tr>
@@ -982,7 +848,7 @@
                                         <tr>
                                             <td align="center" valign="top">
 												<!--[if mso]>
-														<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.mlive.com/newspaper/faq/" style="height:60px;v-text-anchor:middle;width:400px;" strokecolor="#00b8ff" stroke="v:true" strokeweight="2pt" fillcolor="#1C1E22">
+														<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.mlive.com/newspaper/faq/" style="height:60px;v-text-anchor:middle;width:400px;" strokecolor="#f7be00" stroke="v:true" strokeweight="2pt" fillcolor="#1C1E22">
 														<w:anchorlock/>
 														<center style="color:#e7e7e6;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:2px;">LET US HELP!</center>
 														</v:rect>
@@ -991,8 +857,8 @@
 												<table class="mobile-300" role="presentation" width="400" cellpadding="0" cellspacing="0" style="width: 400px; border-collapse: collapse;">
 												    <tbody>
 														<tr>
-															<td align="center" class="CTAbttn" valign="middle" height="60" width="400" style="background-color: #1C1E22; border: 2px solid #00b8ff; width: 400px; height: 60px; padding: 0;">
-																<a href="https://www.mlive.com/newspaper/faq/" target="_blank" class="button-text-resize" style="display: block; width: 100%; height: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-decoration: none; text-align: center; color: #00b8ff; font-size: 16px; line-height: 56px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px;">
+															<td align="center" class="CTAbttn" valign="middle" height="60" width="400" style="background-color: #1C1E22; border: 2px solid #f7be00; width: 400px; height: 60px; padding: 0;">
+																<a href="https://www.mlive.com/newspaper/faq/" target="_blank" class="button-text-resize" style="display: block; width: 100%; height: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-decoration: none; text-align: center; color: #f7be00; font-size: 16px; line-height: 56px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px;">
 																Visit the FAQ!
 																</a>
 															</td>
@@ -1101,7 +967,7 @@
                                 <!--SPACER--><tr><td height="80" style="font-size:80px; line-height:80px;  mso-line-height-rule:exactly; height: 80px; margin: 0; padding: 0;">&nbsp;</td></tr>
                                 <tr>
 						            <td align="center" valign="top">
-                                        <table class="mobile-flogorule" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0"  style="background-color:#00b8ff;" bgcolor="#00b8ff">
+                                        <table class="mobile-flogorule" role="presentation" width="220" cellpadding="0" cellspacing="0" border="0"  style="background-color:#f7be00;" bgcolor="#f7be00">
                                             <tr><td height="20" style="font-size:20px; line-height:20px; height: 20px; mso-line-height-rule:exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                         </table>
                                     </td>
