@@ -43,41 +43,13 @@ h1, h2, h3, h4, h5, h6, p, a { margin: 0 !important; -webkit-font-smoothing: ant
 .list-app-child, .list-app-child table {width: 40px !important;}
 .w-full-mobile {width: 100% !important;max-width: 100% !important;}
 .img-fluid-mobile {width: 100% !important;height: auto !important;}
-.stack {display: block !important; width: 100% !important;max-width: 100% !important;text-align: center !important;}
 .stack {display: block !important; width: 100% !important;text-align: center !important;max-width: 100% !important; box-sizing: border-box !important;}
-.stack-glossary {display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;padding-top: 4px !important;}
-    .mobile-side-by-side {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: table !important;
-    }
-
-    /* 3. Converts table rows into side-by-side cells on mobile */
-    .mobile-row-to-cell {
-        display: table-cell !important;
-        vertical-align: top !important;
-    }
-    
-    /* 4. Aligns the image left and forces the 16px space to its right */
-    .mobile-img-cell {
-        width: 80px !important;
-        padding-right: 16px !important;
-        text-align: left !important;
-    }
-    
-    /* 5. Aligns the text left and pushes it down 20px from the top */
-    .mobile-text-cell {
-        padding-top: 20px !important;
-        text-align: left !important;
-    }
-    
-    /* 6. Forces paragraph text alignment left on mobile */
-    .mobile-text-cell p {
-        text-align: left !important;
-    }
-
-
-
+.stack-glossary {display: block !important;width: 100% !important;max-width: 100% !important;box-sizing: border-box !important;padding-top: 20px !important;}
+.mobile-side-by-side {display: table !important;width: 100% !important;max-width: 100% !important;}
+.mobile-img-cell {display: table-cell !important;vertical-align: top !important;width: 80px !important;padding-right: 16px !important;text-align: left !important;}
+.mobile-img-cell table {margin: 0 !important;}
+.mobile-text-cell {display: table-cell !important;vertical-align: top !important;text-align: left !important;padding-top: 10px !important; padding-right: 40px !important;}
+.mobile-text-cell p {text-align: left !important;}
 .dropCap {font-size: 34px !important; line-height: 34px !important; text-align: center !important; padding-top: 0px !important;}}
 </style>
 <style>:root { color-scheme: light dark; supported-color-schemes: light dark; } .bodyBack { color-scheme: only dark !important; }</style>
@@ -87,6 +59,12 @@ h1, h2, h3, h4, h5, h6, p, a { margin: 0 !important; -webkit-font-smoothing: ant
 .faqBTTNgroup .CTAbttn a{color:#84cc16;transition:color .3s ease-in-out}
 .CTAbttn:is(:hover,:active,:focus){background-color:#84cc16!important;border:2px solid #84cc16!important;box-shadow:0 10px 20px 0 #1d1e22,0 30px 10px -15px #84cc16,0 0 20px 0 #84cc16}
 .CTAbttn:is(:hover,:active,:focus) a{color:#1c1e22!important}
+.glossaryHover {transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;}
+.glossaryChild p  {transition: color 0.2s ease-in-out}
+.glossaryParent:hover .glossaryHover {background-color: #444444 !important}
+.glossaryParent:hover .glossaryChild p {color: #555555 !important;}
+.glossaryParent .glossaryChild:hover .glossaryHover {background-color: #84cc16 !important; box-shadow: 0 0 20px 0 #1d1e22, 0 0 20px 4px #84cc16 !important;}
+.glossaryParent .glossaryChild:hover p {color: #fff !important;}
 .list-item .link-text,.list-item td{transition:all .3s ease}
 .list-Parent:hover{z-index:-500!important}
 .list-Parent:hover .list-item .link-text{color:#1d1e22!important}
@@ -123,7 +101,6 @@ Let us help! How to find your way around the online newspaper.
                                                 <p class="intro-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 22px; line-height: 36px; color: #e7e7e7; text-wrap: balance;"><strong>The definitive guide</strong>&nbsp;to the buttons and what they can do.</p>
                                             </td>
                                         </tr>
-                                        <tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                     </table>
                                 </td>
                             </tr>
@@ -138,76 +115,827 @@ Let us help! How to find your way around the online newspaper.
 <table class="bodyBack bodyHover" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#17181c; overflow: hidden;" bgcolor="17181c">
     <tr>
         <td align="center" valign="top">
-            <table border="0" cellpadding="0" cellspacing="0" width="600" class="mobile-600" align="center" style="margin:0 auto; width:600px; table-layout: fixed; border-collapse:collapse; background-color:#1d1e22;" bgcolor="#1d1e22">
+            <table class="glossaryParent" border="0" cellpadding="0" cellspacing="0" width="600" class="mobile-600" align="center" style="margin:0 auto; width:600px; table-layout: fixed; border-collapse:collapse; background-color:#1d1e22;" bgcolor="#1d1e22">
                 <tr>
                     <td align="center">
                         <!-- START STEPS - FIRST ROW-->
-                        <table class="mobile-300" role="presentation" width="460" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; width:460px; border-collapse:collapse">
+                        <table class="mobile-320" role="presentation" width="500" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; width:500px; border-collapse:collapse">
                             <tr>
                                 <!-- STEP 1 START -->                                
-                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 20px; width: 25%;">
-                                    <table class="mobile-side-by-side" role="presentation" width="100" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; width:100px; border-collapse:collapse;">
-                                        <tr class="mobile-row-to-cell mobile-img-cell">
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
                                             <td align="center" valign="top" style="padding-bottom: 16px;">
-                                                <img src="https://placehold.co/400x400?text=Step+1" alt="Step 1" width="80" height="80" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 80px; height: 80px; border: 0; display: block; margin: 0 auto;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/21e1099f-944a-4e54-86cd-850450eabf93/c01glossary_Back.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
                                             </td>
                                         </tr>
-                                        <tr class="mobile-row-to-cell mobile-text-cell">
+                                        <tr>
                                             <td align="center" valign="top">
-                                                <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center;"><strong>ZZZ.</strong>&nbsp;Step 01 text replace.</p>
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Back.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Previous page or article. <i>Sits left of content.</i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
                                             </td>
                                         </tr>
                                     </table>
+                                    <![endif]-->
                                 </td>
                                 <!-- STEP 1 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
                                 <!-- STEP 2 START -->                                
-                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 20px; width: 25%;">
-                                    <table class="mobile-side-by-side" role="presentation" width="100" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; width:100px; border-collapse:collapse;">
-                                        <tr class="mobile-row-to-cell mobile-img-cell">
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
                                             <td align="center" valign="top" style="padding-bottom: 16px;">
-                                                <img src="https://placehold.co/400x400?text=Step+1" alt="Step 1" width="80" height="80" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 80px; height: 80px; border: 0; display: block; margin: 0 auto;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/5fd1bd6b-9d62-4f15-9d11-922ec0ea378c/c01glossary_Next.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
                                             </td>
                                         </tr>
-                                        <tr class="mobile-row-to-cell mobile-text-cell">
+                                        <tr>
                                             <td align="center" valign="top">
-                                                <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center;"><strong>ZZZ.</strong>&nbsp;Step 01 text replace.</p>
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Next.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Next page or article. <i>Sits right of content.</i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
                                             </td>
                                         </tr>
                                     </table>
+                                    <![endif]-->
                                 </td>
                                 <!-- STEP 2 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
                                 <!-- STEP 3 START -->                                
-                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 20px; width: 25%;">
-                                    <table class="mobile-side-by-side" role="presentation" width="100" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; width:100px; border-collapse:collapse;">
-                                        <tr class="mobile-row-to-cell mobile-img-cell">
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
                                             <td align="center" valign="top" style="padding-bottom: 16px;">
-                                                <img src="https://placehold.co/400x400?text=Step+1" alt="Step 1" width="80" height="80" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 80px; height: 80px; border: 0; display: block; margin: 0 auto;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/bd73fca6-7384-4f6b-bad6-384e20a5d1f3/c01glossary_TOC.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
                                             </td>
                                         </tr>
-                                        <tr class="mobile-row-to-cell mobile-text-cell">
+                                        <tr>
                                             <td align="center" valign="top">
-                                                <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center;"><strong>ZZZ.</strong>&nbsp;Step 01 text replace.</p>
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Table of Contents.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                A list of pages.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
                                             </td>
                                         </tr>
                                     </table>
+                                    <![endif]-->
                                 </td>
                                 <!-- STEP 3 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
                                 <!-- STEP 4 START -->                                
-                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 20px; width: 25%;">
-                                    <table class="mobile-side-by-side" role="presentation" width="100" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; width:100px; border-collapse:collapse;">
-                                        <tr class="mobile-row-to-cell mobile-img-cell">
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
                                             <td align="center" valign="top" style="padding-bottom: 16px;">
-                                                <img src="https://placehold.co/400x400?text=Step+1" alt="Step 1" width="80" height="80" style="-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 80px; height: 80px; border: 0; display: block; margin: 0 auto;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/5d5f12ff-258f-4e97-994c-6fb05a67004b/c01glossary_Lock.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
                                             </td>
                                         </tr>
-                                        <tr class="mobile-row-to-cell mobile-text-cell">
+                                        <tr>
                                             <td align="center" valign="top">
-                                                <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center;"><strong>ZZZ.</strong>&nbsp;Step 01 text replace.</p>
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Lock.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Locks the zoom. <i>Default state.</i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
                                             </td>
                                         </tr>
                                     </table>
+                                    <![endif]-->
                                 </td>
                                 <!-- STEP 4 END  -->
+                            </tr>
+                        </table>
+                        <!-- END STEPS - FIRST ROW  -->
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <!-- START STEPS - FIRST ROW-->
+                        <table class="mobile-320" role="presentation" width="500" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; width:500px; border-collapse:collapse">
+                            <tr>
+                                <!-- STEP 1 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/ef73b9b3-c89e-418f-8df3-c0d00af04b90/c01glossary_Zoom+out.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Zoom out.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Minimizes content. <i>First click the ‘Lock’ button to unlock.</i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 1 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 2 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/ed3cb625-7887-4c52-b340-1f6fe25b56c9/c01glossary_Zoom+in.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Zoom in.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Magnifies content. <i>First click the ‘Lock’ button to unlock.</i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 2 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 3 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/ca95e8f5-b04a-4edd-bbbc-e3792b5c4cea/c01glossary_Fit+to+Window.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Fit to Window.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Make content width fill the browser window.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 3 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 4 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/32031e68-281b-4eca-892b-70fcd84f28da/c01glossary_Fullscreen+Mode.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Full screen mode.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Maximize the content to fill your full screen. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 4 END  -->
+                            </tr>
+                        </table>
+                        <!-- END STEPS - FIRST ROW  -->
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <!-- START STEPS - FIRST ROW-->
+                        <table class="mobile-320" role="presentation" width="500" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; width:500px; border-collapse:collapse">
+                            <tr>
+                                <!-- STEP 1 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/7926d029-fdee-46fd-904e-a3c377ada8e0/c01glossary_Single+or+Double.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Single or Double page.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Double page layout feels like an unfolded newspaper spread.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 1 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 2 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/d0dc608d-378c-4365-ac4e-5db89d754107/c01glossary_Navigator.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Navigator.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Opens a scrollable page-by-page view.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 2 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 3 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/7d39889f-28e0-477b-adea-c2afc2e5f83d/c01glossary_First+page.png" alt="Step 1" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>First page.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                First page of the edition. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 3 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 4 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/98508aed-5dd7-4e7f-9bc8-271940ff669f/c01glossary_Previous+page.png" alt="Previous page icon" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Previous page.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                One page back from the current page.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 4 END  -->
+                            </tr>
+                        </table>
+                        <!-- END STEPS - FIRST ROW  -->
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <!-- START STEPS - FIRST ROW-->
+                        <table class="mobile-320" role="presentation" width="500" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; width:500px; border-collapse:collapse">
+                            <tr>
+                                <!-- STEP 1 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/4acae507-47db-48d2-8d79-a90fd48e35bc/c01glossary_Next+page.png" alt="Next page icon" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Next page.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                One page forward from the current page.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 1 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 2 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/57df7631-7c29-4a90-8892-41f9b26c495c/c01glossary_Last+page.png" alt="Last page icon" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Last page.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Last page of the edition.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 2 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 3 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/77a05917-5d35-4356-9047-8296573a491e/c01glossary_Save.png" alt="Save icon" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Save.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Save the page to your library.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 3 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 4 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 25%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/dd257dc7-b5a5-494d-ab57-396385b035b1/c01glossary_Download.png" alt="Download icon" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Download.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Save the page to your desktop.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 4 END  -->
+                            </tr>
+                        </table>
+                        <!-- END STEPS - FIRST ROW  -->
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <!-- START STEPS - FIRST ROW-->
+                        <table class="mobile-320" role="presentation" width="370" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; width:370px; border-collapse:collapse">
+                            <tr>
+                                <!-- STEP 1 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 33.3%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/f35cb57e-330d-4dbd-90eb-c43f61f13dfd/c01glossary_Print.png" alt="Print icon" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Print.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Print the page, or select the clip icon to print part of a page.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 1 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 2 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 33.3%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/1de16316-3def-4c0d-af2a-ac4a9fa59f66/c01glossary_Clip.png" alt="Clip icon" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Clip.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Select a portion of the page to print.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 2 END  -->
+                                <td class="mobile-hide" width="20" height="10" style="width: 20px; height: 10px; min-width: 20px; font-size: 20px; line-height: 20px;">&nbsp;</td>
+                                <!-- STEP 3 START -->                                
+                                <td class="stack-glossary" align="center" valign="top" style="padding-top: 30px; width: 33.3%;">
+                                    <!--[if mso]>
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100" style="width: 100px; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding-bottom: 16px;">
+                                    <![endif]-->
+                                    <div class="mobile-side-by-side glossaryChild" style="margin: 0 auto;">
+                                        <!-- padding-bottom here creates the 16px gap for web-based desktop email clients -->
+                                        <div class="mobile-img-cell" style="text-align: center; padding-bottom: 16px;">
+                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="80" style="width: 80px; margin: 0 auto;">
+                                                <tr>
+                                                    <td class="glossaryHover" align="center" valign="middle" bgcolor="#777777" height="80" width="80" style="width: 80px; height: 80px; background-color: #777777; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;">
+                                                        <img src="https://media.sailthru.com/fss/fld6ib/4c2ffe9c-2ea7-4c93-8165-e329a6ee993a/c01glossary_Share.png" alt="Share icon" width="80" height="80" style="display: block; width: 80px; height: 80px; border: 0;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                        <![endif]-->
+                                        <div class="mobile-text-cell" style="text-align: center;">
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                <strong>Share.</strong></i>
+                                            </p>
+                                            <p class="g-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 20px; color: #e7e7e7; margin: 0; text-align: center; text-wrap: balance; text-wrap: balance;">
+                                                Click to share the page with others.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                                <!-- STEP 3 END  -->
+
                             </tr>
                         </table>
                         <!-- END STEPS - FIRST ROW  -->
