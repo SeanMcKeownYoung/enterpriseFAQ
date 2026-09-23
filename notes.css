@@ -23,7 +23,8 @@
             text-shadow: 0 0 30px #ff8819 !important;
         }
 
-
+    		/* Outlines the grids, remove when sending*/
+		table td tr { border: 1px solid rgb(0, 217, 255); }
 /* Topper addresses
 Blue - https://media.sailthru.com/fss/fld6i8/ec445346-cbc4-4396-853c-504b71680a4c/LogoBullets_Blue.png
 Gold - https://media.sailthru.com/fss/fld6i8/a3f5aed2-8ea0-4dc2-9c71-4b370d73bb86/LogoBullets_Gold.png
