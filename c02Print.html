@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6, p, a { margin: 0 !important; -webkit-font-smoothing: ant
 .g-text-resize { font-size: 16px !important; line-height:24px !important;}
 .b-text-resize  { font-size: 12px !important; line-height:40px !important;}
 .mobile-400 { width:400px!important; padding: 0 !important; }
+.mobile-320 { width:320px!important; padding: 0 !important; }
 .mobile-350 { width:350px!important; padding: 0 !important; }
 .mobile-300 { width:300px!important; padding: 0 !important;}
 .mobile-200 { width:200px!important; padding: 0 !important; }
@@ -41,7 +42,7 @@ h1, h2, h3, h4, h5, h6, p, a { margin: 0 !important; -webkit-font-smoothing: ant
 .logoStack img {width:200px !important; height:auto !important;}
 .heroDots td {width: 10px !important; height: 10px !important;}
 .heroDots td.spacer-cell {width: 6px !important;}
-.list-app-child, .list-app-child table {width: 40px !important;}
+.list-app-child, .list-app-child table, .list-app-child a {width: 40px !important; max-width: 40px !important;}
 .w-full-mobile {width: 100% !important;max-width: 100% !important;}
 .img-fluid-mobile {width: 100% !important;height: auto !important;}
 .stack {display: block !important; width: 100% !important;text-align: center !important;max-width: 100% !important; box-sizing: border-box !important;}
@@ -60,6 +61,11 @@ h1, h2, h3, h4, h5, h6, p, a { margin: 0 !important; -webkit-font-smoothing: ant
 .list-Parent .list-item:hover{z-index:500!important}
 .list-Parent .list-item:hover .link-text{color:#1d1e22!important}
 .list-Parent .list-item:hover td{background-color:#84cc16!important;box-shadow:0 0 10px #84cc16,0 0 40px #1d1e22,0 0 80px #84cc16}
+.list-Parent .list-app-parent td {transition:all .3s ease}
+.list-Parent:hover .list-app-parent td {color:#a0a0a0!important}
+.list-Parent .list-app-parent:hover td {color:#fff!important}
+.list-Parent .list-app-parent .list-app-child img {transition:all .3s ease}
+.list-Parent .list-app-parent .list-app-child:hover img {background-color:#84cc16!important;box-shadow:0 0 10px #84cc16,0 0 40px #1d1e22,0 0 80px #84cc16}
 .hoverBlue:hover{color:#00b7ff!important;text-shadow:0 0 30px #00b7ff!important}.hoverGold:hover{color:#f7be00!important;text-shadow:0 0 30px #f7be00!important}.hoverRed:hover{color:#ff5e5e!important;text-shadow:0 0 30px #ff5e5e!important}.hoverGreen:hover{color:#84cc16!important;text-shadow:0 0 30px #84cc16!important}.hoverViolet:hover{color:#bc69ff!important;text-shadow:0 0 30px #bc69ff!important}.hoverOrange:hover{color:#ff8819!important;text-shadow:0 0 30px #ff8819!important}@media only screen and (max-width:600px){.heroHover:active .animate-top{transform:translateY(-300px) rotate(-75deg) scale(1.5)!important}.heroHover:focus .animate-top{transform:translateY(-300px) rotate(-75deg) scale(1.5)!important}.list-Parent:active{z-index:-500!important}.list-Parent:active .list-item .link-text{color:#1d1e22!important}.list-Parent .list-item:active,.list-Parent .list-item:focus{z-index:500!important}.list-Parent .list-item:active .link-text,.list-Parent .list-item:focus .link-text{color:#fff!important}
 .list-Parent .list-item:active td,.list-Parent .list-item:focus td{background-color:#84cc16!important;box-shadow:0 0 10px #84cc16,0 0 40px #1d1e22,0 0 80px #84cc16}}</style>
 </head>
@@ -628,8 +634,8 @@ Let us help! How to print an article or crossword puzzle.
                                                                         <table class="list-Parent" border="0" cellpadding="0" cellspacing="0" width="400px" style="max-width: 500px; margin: 0 auto; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
                                                                             <tr><td height="30" style="font-size: 30px; line-height: 30px; height: 30px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                                                             <tr>
-                                                                                <td align="center" valign="middle">
-                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-300" style="width: 450px; border-collapse: collapse; background-color: transparent;">
+                                                                                <td align="left" valign="middle">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-320" style="width: 450px; border-collapse: collapse; background-color: transparent;">
                                                                                     <tr>
                                                                                         <td align="right" valign="middle" class="link-text b-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap; padding-right: 20px; text-align: right;">
                                                                                             The&nbsp;Ann&nbsp;Arbor&nbsp;News.
@@ -706,8 +712,8 @@ Let us help! How to print an article or crossword puzzle.
                                                                             </tr>
                                                                             <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                                                             <tr>
-                                                                                <td align="center" valign="middle">
-                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-300" style="width: 450px; border-collapse: collapse; background-color: transparent;">
+                                                                                <td align="left" valign="middle">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-320" style="width: 450px; border-collapse: collapse; background-color: transparent;">
                                                                                     <tr>
                                                                                         <td align="right" valign="middle" class="link-text b-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap; padding-right: 20px; text-align: right;">
                                                                                             The&nbsp;Bay&nbsp;City&nbsp;Times.
@@ -784,8 +790,8 @@ Let us help! How to print an article or crossword puzzle.
                                                                             </tr>
                                                                             <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                                                             <tr>
-                                                                                <td align="center" valign="middle">
-                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-300" style="width: 450px; border-collapse: collapse; background-color: transparent;">
+                                                                                <td align="left" valign="middle">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-320" style="width: 450px; border-collapse: collapse; background-color: transparent;">
                                                                                     <tr>
                                                                                         <td align="right" valign="middle" class="link-text b-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap; padding-right: 20px; text-align: right;">
                                                                                             The&nbsp;Flint&nbsp;Journal.
@@ -862,8 +868,8 @@ Let us help! How to print an article or crossword puzzle.
                                                                             </tr>
                                                                             <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                                                             <tr>
-                                                                                <td align="center" valign="middle">
-                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-300" style="width: 450px; border-collapse: collapse; background-color: transparent;">
+                                                                                <td align="left" valign="middle">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-320" style="width: 450px; border-collapse: collapse; background-color: transparent;">
                                                                                     <tr>
                                                                                         <td align="right" valign="middle" class="link-text b-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap; padding-right: 20px; text-align: right;">
                                                                                             The&nbsp;Grand&nbsp;Rapids&nbsp;Press.
@@ -940,8 +946,8 @@ Let us help! How to print an article or crossword puzzle.
                                                                             </tr>
                                                                             <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                                                             <tr>
-                                                                                <td align="center" valign="middle">
-                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-300" style="width: 450px; border-collapse: collapse; background-color: transparent;">
+                                                                                <td align="left" valign="middle">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-320" style="width: 450px; border-collapse: collapse; background-color: transparent;">
                                                                                     <tr>
                                                                                         <td align="right" valign="middle" class="link-text b-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap; padding-right: 20px; text-align: right;">
                                                                                             Jackson&nbsp;Citizen&nbsp;Patriot.
@@ -1018,8 +1024,8 @@ Let us help! How to print an article or crossword puzzle.
                                                                             </tr>
                                                                             <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                                                             <tr>
-                                                                                <td align="center" valign="middle">
-                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-300" style="width: 450px; border-collapse: collapse; background-color: transparent;">
+                                                                                <td align="left" valign="middle">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-320" style="width: 450px; border-collapse: collapse; background-color: transparent;">
                                                                                     <tr>
                                                                                         <td align="right" valign="middle" class="link-text b-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap; padding-right: 20px; text-align: right;">
                                                                                             Kalamazoo&nbsp;Gazette.
@@ -1096,8 +1102,8 @@ Let us help! How to print an article or crossword puzzle.
                                                                             </tr>
                                                                             <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                                                             <tr>
-                                                                                <td align="center" valign="middle">
-                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-300" style="width: 450px; border-collapse: collapse; background-color: transparent;">
+                                                                                <td align="left" valign="middle">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-320" style="width: 450px; border-collapse: collapse; background-color: transparent;">
                                                                                     <tr>
                                                                                         <td align="right" valign="middle" class="link-text b-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap; padding-right: 20px; text-align: right;">
                                                                                             Muskegon&nbsp;Chronicle.
@@ -1174,8 +1180,8 @@ Let us help! How to print an article or crossword puzzle.
                                                                             </tr>
                                                                             <tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
                                                                             <tr>
-                                                                                <td align="center" valign="middle">
-                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-300" style="width: 450px; border-collapse: collapse; background-color: transparent;">
+                                                                                <td align="left" valign="middle">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="450" class="list-app-parent mobile-320" style="width: 450px; border-collapse: collapse; background-color: transparent;">
                                                                                     <tr>
                                                                                         <td align="right" valign="middle" class="link-text b-text-resize" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 40px; color: #e7e7e7; text-decoration: none; white-space: nowrap; padding-right: 20px; text-align: right;">
                                                                                             The&nbsp;Saginaw&nbsp;News.
