@@ -9,6 +9,10 @@
 <meta name="x-apple-disable-message-reformatting">
 <style>@font-face {font-family: "neue-haas-grotesk-display";src:url("https://use.typekit.net/af/174ae3/00000000000000007735bb5a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")format("woff2"),url("https://use.typekit.net/af/174ae3/00000000000000007735bb5a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")format("woff"),url("https://use.typekit.net/af/174ae3/00000000000000007735bb5a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")format("opentype");font-display: auto;font-style: normal;font-weight: 500;font-stretch: normal;}@font-face {font-family: "neue-haas-grotesk-display";src:url("https://use.typekit.net/af/c7a282/00000000000000007735bb62/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")format("woff2"),url("https://use.typekit.net/af/c7a282/00000000000000007735bb62/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")format("woff"),url("https://use.typekit.net/af/c7a282/00000000000000007735bb62/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")format("opentype");font-display: auto;font-style: normal;font-weight: 600;font-stretch: normal;}@font-face {font-family: "neue-haas-grotesk-display";src:url("https://use.typekit.net/af/bbb0f9/00000000000000007735bb6e/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")format("woff2"), url("https://use.typekit.net/af/bbb0f9/00000000000000007735bb6e/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")format("woff"),url("https://use.typekit.net/af/bbb0f9/00000000000000007735bb6e/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")format("opentype");font-display: auto;font-style: normal;font-weight: 900; font-stretch: normal;}</style>
 <style id="main-styles">
+                    		/* Outlines the grids, remove when sending*/
+		table, td, tr { border: 1px solid rgb(0, 217, 255) !important; }
+        		div { border: 1px solid rgb(255, 0, 251) !important; }
+                        		img { border: 1px solid rgb(0, 255, 68) !important; }
 img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
 table, td { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
 body { margin: 0 !important; padding: 0 !important; width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
@@ -19,7 +23,7 @@ h1, h2, h3, h4, h5, h6, p, a { margin: 0 !important; -webkit-font-smoothing: ant
 .mobile-100-400 { width:100%!important; padding: 0 !important; max-width: 400px !important; min-width: none !important;}
 .h1-text-resize { font-size: 42px !important; line-height:40px !important; }
 .h2-text-resize { font-size: 36px !important; line-height:38px !important;}
-.h3-text-resize { font-size: 22px !important; line-height:34px !important;}
+.h3-text-resize { font-size: 16px !important; line-height:34px !important;}
 .intro-text-resize { font-size: 20px !important; line-height:30px !important;}
 .g-text-resize { font-size: 16px !important; line-height:24px !important;}
 .mobile-400 { width:400px!important; padding: 0 !important; }
@@ -35,8 +39,9 @@ h1, h2, h3, h4, h5, h6, p, a { margin: 0 !important; -webkit-font-smoothing: ant
 .right-align { text-align: right !important; }
 .mobile-hide {display: none !important;}
 .bottom-image-cell { padding-top: 90px !important; }
-.top-image-cell {width: 400px !important; display: inline-block !important; transform: translateX(calc(-50% - 108px)) translateY(-18px) !important; left: 50% !important; }
-.top-image {width: 260px !important;}
+.bottom-image {width: 150px !important;}
+.top-image-cell {width: 320px !important; left: 0% !important; }
+.top-image {width: 100% !important;}
 .logoStack img {width:200px !important; height:auto !important;}
 .heroDots td {width: 10px !important; height: 10px !important;}
 .heroDots td.spacer-cell {width: 6px !important;}
@@ -48,7 +53,7 @@ h1, h2, h3, h4, h5, h6, p, a { margin: 0 !important; -webkit-font-smoothing: ant
 </style>
 <style>:root { color-scheme: light dark; supported-color-schemes: light dark; } .bodyBack { color-scheme: only dark !important; }</style>
 <!--[if gte mso]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
-<style>.heroHover:hover .animate-top{transform:translateY(-600px) rotate(-75deg) scale(2.5)!important}
+<style>.heroHover:hover .animate-top{transform:translateY(-550px) rotate(-35deg) scale(2.5)!important}
 .CTAbttn{background-color:#1c1e22;border:2px solid #f7be00;box-shadow:0 10px 20px 0 #1d1e22,0 30px 10px -15px #f7be0041;transition: border .3s ease-in-out, background-color .3s ease-in-out, box-shadow .5s ease-in-out;}
 .CTAbttn a{color:#f7be00;transition:color .3s ease-in-out}
 .CTAbttn:is(:hover,:active,:focus){background-color:#f7be00!important;border:2px solid #f7be00!important;box-shadow:0 10px 20px 0 #1d1e22,0 30px 10px -15px #f7be00,0 0 20px 0 #f7be00}
@@ -59,7 +64,13 @@ h1, h2, h3, h4, h5, h6, p, a { margin: 0 !important; -webkit-font-smoothing: ant
 .list-Parent .list-item:hover{z-index:500!important}
 .list-Parent .list-item:hover .link-text{color:#1d1e22!important}
 .list-Parent .list-item:hover td{background-color:#f7be00!important;box-shadow:0 0 10px #f7be00,0 0 40px #1d1e22,0 0 80px #f7be00}
-.hoverBlue:hover{color:#00b7ff!important;text-shadow:0 0 30px #00b7ff!important}.hoverGold:hover{color:#f7be00!important;text-shadow:0 0 30px #f7be00!important}.hoverRed:hover{color:#ff5e5e!important;text-shadow:0 0 30px #ff5e5e!important}.hoverGreen:hover{color:#84cc16!important;text-shadow:0 0 30px #84cc16!important}.hoverViolet:hover{color:#bc69ff!important;text-shadow:0 0 30px #bc69ff!important}.hoverOrange:hover{color:#ff8819!important;text-shadow:0 0 30px #ff8819!important}@media only screen and (max-width:600px){.heroHover:active .animate-top{transform:translateY(-300px) rotate(-75deg) scale(1.5)!important}.heroHover:focus .animate-top{transform:translateY(-300px) rotate(-75deg) scale(1.5)!important}.list-Parent:active{z-index:-500!important}.list-Parent:active .list-item .link-text{color:#1d1e22!important}.list-Parent .list-item:active,.list-Parent .list-item:focus{z-index:500!important}.list-Parent .list-item:active .link-text,.list-Parent .list-item:focus .link-text{color:#fff!important}
+.hoverBlue:hover{color:#00b7ff!important;text-shadow:0 0 30px #00b7ff!important}.hoverGold:hover{color:#f7be00!important;text-shadow:0 0 30px #f7be00!important}.hoverRed:hover{color:#ff5e5e!important;text-shadow:0 0 30px #ff5e5e!important}.hoverGreen:hover{color:#84cc16!important;text-shadow:0 0 30px #84cc16!important}.hoverViolet:hover{color:#bc69ff!important;text-shadow:0 0 30px #bc69ff!important}.hoverOrange:hover{color:#ff8819!important;text-shadow:0 0 30px #ff8819!important}
+
+@media only screen and (max-width:600px){
+    .heroHover:active .animate-top{transform:translateY(-300px) rotate(-75deg) scale(1.5)!important}
+    .heroHover:focus .animate-top{transform:translateY(-300px) rotate(-75deg) scale(1.5)!important}
+    .list-Parent:active{z-index:-500!important}
+    .list-Parent:active .list-item .link-text{color:#1d1e22!important}.list-Parent .list-item:active,.list-Parent .list-item:focus{z-index:500!important}.list-Parent .list-item:active .link-text,.list-Parent .list-item:focus .link-text{color:#fff!important}
 .list-Parent .list-item:active td,.list-Parent .list-item:focus td{background-color:#f7be00!important;box-shadow:0 0 10px #f7be00,0 0 40px #1d1e22,0 0 80px #f7be00}}</style>
 </head>
 <body style="margin:0; padding:0; mso-line-height-rule: exactly; width: 100%;">
@@ -67,9 +78,64 @@ h1, h2, h3, h4, h5, h6, p, a { margin: 0 !important; -webkit-font-smoothing: ant
 visibility:hidden;mso-hide:all;font-size:1px;color:#1C1E22;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
 Let us help! How to access the online newspaper.
 </td></tr></table>
-<table class="bodyBack heroHover" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#17181c; overflow: hidden;" bgcolor="17181c"><tr><td align="center" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="600" class="mobile-600" align="center" style="margin:0 auto; width:600px; table-layout: fixed; border-collapse:collapse; background-color:#1d1e22;" bgcolor="#1d1e22"><tr><td align="center" style="position: relative; padding: 0"><table class="mobile-600" style="position: relative; width: 100%; overflow: visible; text-align: center;"><tr><td align="center" style="position: relative; padding: 0"><table class="mobile-600" role="presentation" width="600" style="width: 600px;" cellpadding="0" cellspacing="0" border="0"><tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr><tr><td align="center" valign="top"><p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size:8px; line-height:18px; color: #e7e7e7; text-decoration: none; text-align: center; text-transform: uppercase; letter-spacing: 0.6px;">Having&nbsp;trouble&nbsp;viewing&nbsp;this&nbsp;email?&nbsp;<a rel="noopener" href="{view_url}" target="_blank" style="color:#e7e7e7; text-decoration:underline;">View&nbsp;in&nbsp;your&nbsp;browser</a></p></td></tr><tr><td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td></tr></table><div class="top-image-cell" style="position: absolute; top: 0; left: 0; transform: translateX(-22%) translateY(-20px); width: 600px; height: 0; padding-left: 0; box-sizing: border-box; pointer-events: none; z-index: 2; overflow: visible; text-align: center;"><img src="https://media.sailthru.com/fss/fld6ib/498cc84a-cbbf-4475-8fa9-5ac42f7d0a28/MAGglass2.png" alt="Top Layer" class="animate-top top-image"width="240" style="display: inline-block; width: 240px; max-width: none !important; height: auto; border: 0; pointer-events: none; margin: 0 auto; transition: transform 0.8s ease-in-out; transform-origin: center center;" /></div><div class="bottom-image-cell imgresize60" style="position: relative; z-index: 1; display: inline-block; padding-top: 70px; margin: 0 auto;"><img src="https://media.sailthru.com/fss/fld6i8/a3f5aed2-8ea0-4dc2-9c71-4b370d73bb86/LogoBullets_Gold.png" alt="Bottom Layer" class="bottom-image"width="300" height="auto" style="display: inline-block; width: 300px; height: auto; border: 0;" /></div></td></tr></table></td></tr><tr>
-<td align="center"><table role="presentation" class="mobile-300" width="400" cellpadding="0" cellspacing="0" border="0"><tr><td align="center"><table class="mobile-300" role="presentation" width="400" cellpadding="0" cellspacing="0" border="0">
-<tr><td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr><tr><td align="center" valign="top"><h3 class="h3-text-resize" style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 30px; line-height: 40px; color: #e7e7e7; letter-spacing: -0.25px; -webkit-font-smoothing: antialiased;">How can we help <span style="color: #f7be00;">you?</span></h3></td></tr><tr><td height="60" style="font-size: 60px; line-height: 60px; height: 60px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td></tr>
+<table class="bodyBack heroHover" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#17181c; overflow: hidden;" bgcolor="17181c">
+    <tr>
+        <td align="center" valign="top">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="mobile-600" align="center" style="margin:0 auto; width:600px; table-layout: fixed; border-collapse:collapse; background-color:#1d1e22;" bgcolor="#1d1e22">
+                <tr>
+                    <td align="center" style="position: relative; padding: 0">
+                        <table class="mobile-600" style="position: relative; width: 100%; overflow: visible; text-align: center;">
+                            <tr>
+                                <td align="center" style="position: relative; padding: 0">
+                                    <table class="mobile-600" role="presentation" width="600" style="width: 600px;" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size:8px; line-height:18px; color: #e7e7e7; text-decoration: none; text-align: center; text-transform: uppercase; letter-spacing: 0.6px;">Having&nbsp;trouble&nbsp;viewing&nbsp;this&nbsp;email?&nbsp;<a rel="noopener" href="{view_url}" target="_blank" style="color:#e7e7e7; text-decoration:underline;">View&nbsp;in&nbsp;your&nbsp;browser</a></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="10" style="font-size: 10px; line-height: 10px; height: 10px; padding: 0; margin: 0;">&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                    <table class="mobile-320" role="presentation" width="600" style="width: 600px;" cellpadding="0" cellspacing="0" border="0" class="top-image-cell" style="position: absolute; top: 0; left: 0; width: 600px; height: 0; padding-left: 0; box-sizing: border-box; pointer-events: none; z-index: 2; overflow: visible; text-align: center;">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                    <img src="IMGs/MAGglass3.png" alt="Top Layer" class="animate-top top-image"width="500" style="display: inline-block; width: 500px; max-width: none !important; height: auto; border: 0; pointer-events: none; margin: 0 auto; transition: transform 0.8s ease-in-out; transform-origin: center center;" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="mobile-320" role="presentation" width="600" style="width: 600px;" cellpadding="0" cellspacing="0" border="0" class="bottom-image-cell imgresize60" style="position: relative; z-index: 1; display: inline-block; padding: 0; margin: 0 auto;">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                    <img src="IMGs/LOGO_MSTACK Gold.png" alt="Bottom Layer" class="bottom-image"width="200" height="auto" style="display: inline-block; width: 200px; height: auto; border: 0;" />
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                <td align="center">
+                    <table role="presentation" class="mobile-300" width="400" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td align="center"><table class="mobile-300" role="presentation" width="400" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td height="20" style="font-size: 20px; line-height: 20px; height: 20px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top">
+                                        <h3 class="h3-text-resize" style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 20px; line-height: 40px; color: #e7e7e7; letter-spacing: -0.25px; -webkit-font-smoothing: antialiased;">How can we help <span style="color: #f7be00;">you?</span></h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="60" style="font-size: 60px; line-height: 60px; height: 60px; mso-line-height-rule: exactly; padding: 0; margin: 0;">&nbsp;</td>
+                                </tr>
                                         <tr>
                                             <td align="center" valign="top">
                                                 <h1 class="h1-text-resize" style="margin: 0; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; font-size: 56px; line-height: 56px; color: #e7e7e7; letter-spacing: -0.25px; text-wrap: balance; -webkit-font-smoothing: antialiased;">How do I <span style="color: #f7be00;">get access to the online newspaper?</span>
